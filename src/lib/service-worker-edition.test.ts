@@ -26,6 +26,8 @@ const manifest = {
 		'/artifacts/canon/en.json',
 		'/artifacts/dismissal/pl.json',
 		'/artifacts/dismissal/en.json',
+		'/artifacts/commemorationes/pl.json',
+		'/artifacts/commemorationes/en.json',
 		'/pl',
 		'/pl/__data.json',
 		'/sitemap.xml'
@@ -85,7 +87,9 @@ describe('the worker derives its promises from the served edition', () => {
 			'/artifacts/canon/pl.json',
 			'/artifacts/canon/en.json',
 			'/artifacts/dismissal/pl.json',
-			'/artifacts/dismissal/en.json'
+			'/artifacts/dismissal/en.json',
+			'/artifacts/commemorationes/pl.json',
+			'/artifacts/commemorationes/en.json'
 		]);
 		expect(lists.everything).toEqual([
 			...lists.shell,
@@ -100,7 +104,9 @@ describe('the worker derives its promises from the served edition', () => {
 			'/artifacts/canon/pl.json',
 			'/artifacts/canon/en.json',
 			'/artifacts/dismissal/pl.json',
-			'/artifacts/dismissal/en.json'
+			'/artifacts/dismissal/en.json',
+			'/artifacts/commemorationes/pl.json',
+			'/artifacts/commemorationes/en.json'
 		]);
 		for (const pack of lists.days) {
 			expect(lists.shell).not.toContain(pack);

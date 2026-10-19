@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Fifth Sunday after Easter” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Christ has risen and has shone upon us, whom He redeemed by His Blood. Alleluia. I came forth from the Father and came into the world; again I leave the world and go to the Father. Alleluia.","g":["Alleluia","alleluia","Has risen","Christ","and","has shone upon","us","whom","He redeemed","by Blood","His","Alleluia","I came forth","from","the Father","and","I came","into","the world","again","I leave","the world","and","I go","to","the Father","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Christ has risen and has shone upon us, whom He redeemed by His Blood. Alleluia. I came forth from the Father and came into the world; again I leave the world and go to the Father. Alleluia.","g":["Alleluia","alleluia",null,null,"and","has shone upon","us","whom","He redeemed",null,null,"Alleluia","I came forth","from","the Father","and","I came","into","the world","again","I leave","the world","and","I go","to","the Father","Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"Christ has risen"},{"s":9,"n":2,"a":0,"g":"by His Blood"}]}
   ]
 }

@@ -22,6 +22,49 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "pp. xxix, lii",
+    "scan": "leaves n34, n57 / PDF pp. 35, 58",
+    "section": "Rubricae generales 427; Ritus servandus IV 2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-pascha-introitus.introit-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Rubricae generales 427 prescribes the Introit antiphon, psalm verse, Gloria Patri and repeated antiphon. Ritus servandus IV 2 also describes the Introit, Gloria Patri and repeated antiphon before Kyrie. These same-edition rubrics support the reader expansion and reprise at w028–w066, not their exact accidentals, a continuous full transcription of the proper page, or a new claim about all performers. The proper antiphon itself remains supported by the proper-page use."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 225",
+    "scan": "leaf n304 / PDF p. 305",
+    "section": "Ordo Missae, Lavabo: Gloria Patri",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n304/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-post-pascha-introitus.expanded-doxology.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w028"
+     },
+     "claim": "The common Ordo Missae prints the complete twenty-word Gloria Patri through Amen corresponding to w028–w047. The proper Introit page prints only its cue. This supports the common Latin wording, not the proper antiphon, Introit performer, or exact reader typography; the printed colon after semper differs from the reader comma."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 338",
@@ -34,7 +77,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page prints the proper antiphon and psalm verse of this Introit, with cues for the common doxology and antiphon reprise. It does not print those expansions in full. The reader supplies them with its own accentuation, capitalization and punctuation."
     }
    ],
    "verified_on": "2026-09-12"

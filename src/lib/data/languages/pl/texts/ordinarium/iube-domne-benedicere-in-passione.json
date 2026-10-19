@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.iube-domne-benedicere-in-passione",
+  "language":"pl",
+  "about":"W Niedzielę Palmową ta formuła jest przeznaczona dla wykonujących śpiew Męki Pańskiej duchownych, którzy przyjęli przynajmniej święcenia diakonatu. Po modlitwie „Munda cor meum” proszą oni celebransa o błogosławieństwo. Celebrans zwraca się do nich w liczbie mnogiej, a oni odpowiadają „Amen”.",
+  "seg":[
+    {"id":"s01","tr":"Udziel, księże, błogosławieństwa.","g":[null,null,null],"a":[{"s":0,"n":3,"a":0,"g":"Udziel, księże, błogosławieństwa"}],"ex":{"w001":"To prośba skierowana do celebransa o udzielenie błogosławieństwa. W łacinie po „iube” stoi „benedicere”, ale wykonawca i odbiorca czynności nie są osobno wyrażeni.","w002":"„Domne” jest skróconą formą zwrotu do ludzkiego adresata. Tutaj adresatem jest celebrans, dlatego w przekładzie pojawia się „księże”, a nie wezwanie do Boga."}},
+    {"id":"s02","tr":"Niech Pan będzie w waszych sercach i na waszych ustach, abyście godnie i należycie głosili Jego Ewangelię:","g":[null,null,"w",null,null,"i","na",null,null,"abyście","godnie","i","należycie","głosili",null,null],"a":[{"s":0,"n":2,"a":1,"g":"Niech Pan będzie"},{"s":3,"n":2,"a":0,"g":"waszych sercach"},{"s":7,"n":2,"a":0,"g":"waszych ustach"},{"s":14,"n":2,"a":0,"g":"Jego Ewangelię"}],"ex":{"w005":"„Sit” wyraża życzenie, aby Pan był obecny w sercach i na ustach otrzymujących błogosławieństwo.","w019":"Ewangelia jest tutaj Ewangelią Pana. „Suum” odnosi się do „Dominus”, a nie do osób, które będą ją głosić."}},
+    {"id":"s03","tr":"w imię Ojca i Syna, i Ducha Świętego.","tb":"normalized","g":["w","imię","Ojca","i","Syna","i","Ducha","Świętego"],"ex":{"w021":"Łacińskie „in nomine” oddaje tu stała polska formuła „w imię”. Wezwanie Trójcy Świętej dopełnia błogosławieństwo."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"],"ex":{"w028":"„Amen” potwierdza poprzedzające błogosławieństwo. W tym miejscu odpowiadają nim duchowni, którzy poprosili o błogosławieństwo."}}
+  ]
+}

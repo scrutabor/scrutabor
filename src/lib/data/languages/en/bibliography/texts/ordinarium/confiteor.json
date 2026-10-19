@@ -6,8 +6,8 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 12–13",
-    "scan": "scan pp. 25–26"
+    "printed": "p. 12",
+    "scan": "DJVU physical pages 25 (one-based); indices 24 (zero-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+     "claim": "Historical English source expression: “through my fault, through my fault, through my most grievous fault.” This supplies the corresponding English expression at the addressed scope."
     },
     {
      "id": "use.en.410223cd2722146b350e",
@@ -24,21 +24,33 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
-    },
-    {
-     "id": "use.en.4cb2b9c00b4b1b4b7173",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
+     "claim": "Historical English source expression: “Therefore I beseech blessed Mary ever Virgin, blessed Michael the Archangel, blessed John the Baptist, the holy Apostles Peter and Paul, and all the Saints, (and you, Father,) to pray to the Lord our God for me.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.8ab4aefff694cfc0e41a",
      "address": {
       "kind": "segment",
       "segment": "s03"
+     },
+     "claim": "Historical English source expression: “that I have sinned exceedingly in thought, word, and deed” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 12–13",
+    "scan": "scan pp. 25–26"
+   },
+   "entries": [
+    {
+     "id": "use.en.4cb2b9c00b4b1b4b7173",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
     }

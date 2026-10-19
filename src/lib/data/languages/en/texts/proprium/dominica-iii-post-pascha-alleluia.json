@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Third Sunday after Easter” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The Lord sent redemption to His people. Alleluia. Christ had to suffer and to rise from the dead, and so to enter into His glory. Alleluia.","g":["Alleluia","alleluia","Redemption","sent","the Lord","to the people","His","Alleluia","It was necessary","to suffer","Christ","and","to rise","from","the dead","and","so","to enter","into","glory","His","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. The Lord sent redemption to His people. Alleluia. Christ had to suffer and to rise from the dead, and so to enter into His glory. Alleluia.","g":["Alleluia","alleluia",null,null,null,null,null,"Alleluia",null,null,null,"and","to rise","from","the dead","and","so","to enter","into",null,null,"Alleluia"],"a":[{"s":2,"n":3,"a":1,"g":"the Lord sent redemption"},{"s":5,"n":2,"a":0,"g":"to His people"},{"s":8,"n":3,"a":0,"g":"It was necessary for Christ to suffer"},{"s":19,"n":2,"a":0,"g":"His glory"}]}
   ]
 }

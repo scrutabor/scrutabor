@@ -1,0 +1,66 @@
+{
+ "id": "ordinarium.munda-cor-meum",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt; priest branch !*RnD at line 118, # Evangelium at line 119; complete prayer body at line 121"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.munda-cor-meum.do44667ff-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 34-word prayer in the priest branch, excluding the separate blessing on the following line. Compared with the selected print, it omits one comma, capitalizes two nouns, and adds one comma. It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "222",
+    "scan": "IA leaf n301; one-based PDF page 302",
+    "section": "Ordo Missae; prayer before the Gospel",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n301/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.munda-cor-meum.mr1962-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 34-word prayer, including its short conclusion and Amen, with the spelling, accents, ligatures, capitalization, and punctuation selected here. The paragraph is printed in the solemn deacon context; priest reuse is established separately on the following page."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "223",
+    "scan": "IA leaf n302; one-based PDF page 303",
+    "section": "Ordo Missae; priest without deacon and subdeacon, and Masses of the dead",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n302/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.munda-cor-meum.mr1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directs the priest without deacon and subdeacon to say the preceding Munda cor meum before a separate request for blessing and blessing. In Masses of the dead the prayer is retained but the blessing is not requested. The separate blessing is not part of this text."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  }
+ ],
+ "witnesses": []
+}

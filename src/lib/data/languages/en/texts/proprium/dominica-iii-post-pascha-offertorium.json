@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Third Sunday after Easter” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Praise the Lord, my soul; I will praise the Lord all my life, I will sing to my God as long as I live, alleluia.","g":["Praise","soul","my","the Lord","I will praise","the Lord",null,null,null,"I will sing","to God","my","as long as","I live","alleluia"],"a":[{"s":6,"n":3,"a":1,"g":"all my life"}]}
+    {"id":"s01","tr":"Praise the Lord, my soul; I will praise the Lord all my life, I will sing to my God as long as I live, alleluia.","g":["Praise",null,null,"the Lord","I will praise","the Lord",null,null,null,"I will sing",null,null,null,null,"alleluia"],"a":[{"s":1,"n":2,"a":0,"g":"my soul"},{"s":6,"n":3,"a":1,"g":"all my life"},{"s":10,"n":2,"a":0,"g":"to my God"},{"s":12,"n":2,"a":1,"g":"as long as I live"}]}
   ]
 }

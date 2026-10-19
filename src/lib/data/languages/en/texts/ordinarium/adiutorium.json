@@ -5,6 +5,6 @@
   "seg":[
     {"id":"s01","nr":"The priest makes the sign of the cross."},
     {"id":"s02","tr":"Our help is in the name of the Lord.","tc":[125,126],"tb":"exact","g":["help","our","in","the name","of the Lord"],"ex":{"w001":"Latin leaves “est” unspoken: “Adiutórium nostrum [est] in nómine Dómini” — “our help [is] in the name of the Lord”."}},
-    {"id":"s03","tr":"Who made heaven and earth.","tc":[125,126],"tb":"exact","g":["who","made","heaven","and","earth"]}
+    {"id":"s03","tr":"Who made heaven and earth.","tc":[126],"tb":"exact","g":["who","made","heaven","and","earth"]}
   ]
 }

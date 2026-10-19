@@ -24,13 +24,21 @@
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import { isCanonRole } from '$lib/canon';
+	import { ordinaryApplicability } from '$lib/ordinary-applicability';
 	import { DISMISSAL_ROLE } from '$lib/dismissal';
-	import { ordoContext } from '$lib/ordo-context';
+	import {
+		ordoBlessingContext,
+		ordoContext,
+		ordoEntryVisibility,
+		ordoMinisterBlessingContext,
+		ordoResponseContext
+	} from '$lib/ordo-context';
 	import DayPicker from '$lib/components/DayPicker.svelte';
 	import FormularyScopeNote from '$lib/components/FormularyScopeNote.svelte';
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { textHref } from '$lib/content-url';
+	import { commemorationTitle } from '$lib/corpus-metadata';
 	import { textAnchor } from '$lib/text-anchor';
 	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
 	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
@@ -115,6 +123,8 @@
 				slug: part.slug,
 				anchor: part.anchor,
 				condition: part.condition,
+				commemoration: part.commemoration,
+				nonfinal: part.nonfinal,
 				doc: part.doc as TextDocument,
 				gloss: part.gloss as GlossDocument,
 				bibliography: part.bibliography
@@ -131,6 +141,8 @@
 							slug: e.text.split('/')[1],
 							anchor: textAnchor(e.text),
 							condition: undefined,
+							commemoration: undefined,
+							nonfinal: undefined,
 							...entry
 						}
 					]
@@ -140,20 +152,68 @@
 		return [];
 	});
 
-	const showsEntryWords = $derived((entry: OrdoEntry) =>
-		showsWords(
-			bodiesFor(entry).flatMap((body) =>
-				body.doc.segments
-					.filter((segment) => segment.type === 'verse')
-					.map((segment) => inMassForm(segment, massForm.value).voice)
+	const applicabilityState = $derived({
+		date: proper.date,
+		mass: proper.day,
+		loadedMass: proper.payload?.day ?? null,
+		loadedLanguage: proper.payload?.lang ?? null,
+		loading: proper.loading,
+		failed: proper.failed,
+		unwritten: proper.unwritten
+	});
+
+	// Only the matching, settled payload may describe the selected Gospel.
+	const settledGospelKeys = $derived(
+		!proper.loading &&
+			!proper.failed &&
+			!proper.unwritten &&
+			proper.payload?.day === proper.day &&
+			proper.payload?.lang === lang
+			? proper.forSlot('evangelium').map((part) => part.key)
+			: []
+	);
+
+	const entryContext = $derived((entry: OrdoEntry) => {
+		const ministerial = ordoMinisterBlessingContext(
+			entry.id,
+			applicabilityState,
+			settledGospelKeys,
+			lang
+		);
+		if (ministerial)
+			return {
+				...ministerial,
+				note: ministerial.note + ' ' + entry.note[lang]
+			};
+		return (
+			ordinaryApplicability(entry.id, applicabilityState, lang) ??
+			ordoBlessingContext(entry.id, applicabilityState, lang) ??
+			ordoResponseContext(
+				entry.id,
+				proper.day,
+				proper.forSlot('evangelium').map((part) => part.key),
+				lang
+			)
+		);
+	});
+	const entryVisibility = $derived((entry: OrdoEntry) =>
+		ordoEntryVisibility(
+			entryContext(entry)?.referenceOnly ?? false,
+			showsWords(
+				bodiesFor(entry).flatMap((body) =>
+					body.doc.segments
+						.filter((segment) => segment.type === 'verse')
+						.map((segment) => inMassForm(segment, massForm.value).voice)
+				),
+				partVoice(entry.id),
+				role.value
 			),
-			partVoice(entry.id),
-			role.value
+			!!unfolded[entry.id]
 		)
 	);
 	const silent = $derived(
 		entries
-			.filter((entry) => bodiesFor(entry).length > 0 && !showsEntryWords(entry))
+			.filter((entry) => bodiesFor(entry).length > 0 && entryVisibility(entry).silent)
 			.map((e) => e.id)
 	);
 
@@ -356,27 +416,37 @@
 	{/if}
 	<main class:panel-open={picked !== null || panel.keepPad} aria-busy={hasProper && proper.loading}>
 		{#each entries as e, idx (e.id)}
-			{@const context = ordoContext(e.id, proper.day, proper.paschalDismissal, lang)}
+			{@const responseContext = entryContext(e)}
+			{@const referenceOnly = responseContext?.referenceOnly ?? false}
+			{@const context = responseContext
+				? responseContext.note
+				: ordoContext(e.id, proper.day, proper.paschalDismissal, lang)}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
 			<!-- Several bodies in one slot (the Gradual and the Alleluia) are one
 			     text to the eye: each learns the row its neighbour renders at
 			     their seam, so the seam is priced like any row boundary. -->
 			{@const edges = bodies.map((body) => ({
-				...textFlowFor(body.doc, body.gloss, { helpLevel }, massForm.value, role.value),
+				...textFlowFor(
+					body.doc,
+					body.gloss,
+					{ helpLevel, referenceOnly },
+					massForm.value,
+					role.value
+				),
 				// A body that shows its translation sources on screen stays linked to
 				// the body after it, and the body after it learns that the block stands
 				// between them, so its first margin yields to the block's on screen
 				// and prices the seam on paper, where the block is not printed.
 				sources: helpLevel >= 2 && body.bibliography.translation.length > 0
 			}))}
-			{@const words = showsEntryWords(e)}
-			{@const folded = !!entry && !words && !unfolded[e.id]}
+			{@const visibility = entryVisibility(e)}
+			{@const folded = !!entry && visibility.folded}
 			{#if silent.includes(e.id) && !silent.includes(entries[idx - 1]?.id ?? '')}
 				<!-- Said once over the run, not on every line of it. -->
-				<p class="silent-run smallcaps">{msgs.quietCollapsed}</p>
+				<p class="silent-run smallcaps">{e.quietLabel?.[lang] ?? msgs.quietCollapsed}</p>
 			{/if}
-			{@const revealed = !!entry && !words && !!unfolded[e.id]}
+			{@const revealed = !!entry && visibility.revealed}
 			{@const variantPending = proper.variantRequired(e.id)}
 			{@const partLoading =
 				(e.kind === 'proper' && proper.loading) ||
@@ -404,7 +474,7 @@
 						     arrived inline with nothing to mark it as an aside and
 						     no way back (owner, 2026-08-09). -->
 						{#if revealed}
-							<span class="aside-mark smallcaps">{msgs.quietAside}</span>
+							<span class="aside-mark smallcaps">{e.quietLabel?.[lang] ?? msgs.quietAside}</span>
 							<button class="refold smallcaps" onclick={() => (unfolded[e.id] = false)}
 								>{msgs.quietHide}</button
 							>
@@ -420,6 +490,11 @@
 							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 						{/if}
 					</p>
+					<!-- RG 480–481: a Secret followed by a commemoration's Secret keeps its
+					     words and loses only its audible ending; the mark says so. -->
+					{#if entry?.nonfinal}
+						<p class="part-note quiet-note">{msgs.commemorationQuiet}</p>
+					{/if}
 				{/snippet}
 				{#snippet partLayout(
 					opening: Snippet,
@@ -440,11 +515,25 @@
 						<div class="part-text part-continuation">
 							{@render continuation()}
 							{#each bodies.slice(1) as body, j (body.slug)}
+								{#if body.commemoration}
+									<!-- The commemoration's oration follows the Mass oration it answers
+									     to, under its own conclusion (RG 436–437). -->
+									<p class="commemoration-head">
+										<a class="part-title" href={textHref(lang, body.key)} lang="la">{e.title}</a>
+										<span class="mark smallcaps"
+											>{msgs.ordoCommemoration}: {commemorationTitle(
+												body.commemoration,
+												lang
+											)}</span
+										>
+									</p>
+								{/if}
 								{#if body.condition && !proper.date}
 									<ComponentConditionNote condition={body.condition} {lang} />
 								{/if}
 								<TextBody
 									doc={body.doc}
+									{referenceOnly}
 									gloss={body.gloss}
 									{lang}
 									{helpLevel}
@@ -487,6 +576,7 @@
 					{#key entry.slug}
 						<TextBody
 							doc={entry.doc}
+							{referenceOnly}
 							gloss={entry.gloss}
 							{lang}
 							{helpLevel}
@@ -716,6 +806,23 @@
 		color: var(--ink-soft);
 		font-size: 0.98rem;
 		line-height: 1.5;
+	}
+
+	/* A commemoration's oration opens like a part of its own inside the slot:
+	   the same title, and the mark that names whose oration it is. */
+	.commemoration-head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 0.2rem 1rem;
+		margin: 1.4rem 0 0;
+		padding-top: 0.8rem;
+		border-top: 1px dotted var(--border);
+	}
+
+	.quiet-note {
+		font-style: italic;
 	}
 
 	/* The condition is a footnote to the part, not a clause of its

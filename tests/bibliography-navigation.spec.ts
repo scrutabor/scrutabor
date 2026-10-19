@@ -86,15 +86,31 @@ for (const transport of ['', '@static-host '] as const) {
 		});
 		await source.locator('summary').click();
 		const slug = 'dominica-i-adventus-alleluia';
-		await source
-			.locator(
-				`.uses a[href="/app/en/formularium/dominica-i-adventus?s=${slug}.s02-s04#text-proprium-${slug}"]`
-			)
-			.click();
+		const href = (segments: string) =>
+			`/app/en/formularium/dominica-i-adventus?s=${slug}.${segments}#text-proprium-${slug}`;
+		// The bibliography cites p. 88 of this Missal under two scan locators: s02 under
+		// "PDF p. 100" and the re-verified s03–s04 under "PDF pages 100 (one-based)". Distinct
+		// locators are distinct evidence groups, so the uses are one verse and one verse range.
+		const uses = source.locator(
+			`.uses a[href^="/app/en/formularium/dominica-i-adventus?s=${slug}."]`
+		);
+		await expect(uses).toHaveCount(2);
+		expect(
+			await uses.evaluateAll((links) => links.map((link) => link.getAttribute('href')))
+		).toEqual([href('s02'), href('s03-s04')]);
+		const group = (segments: string) =>
+			source.locator('.evidence-group').filter({
+				has: page.locator(`.uses a[href="${href(segments)}"]`)
+			});
+		await expect(group('s02').locator('.locator')).toHaveText('p. 88 · PDF p. 100');
+		await expect(group('s03-s04').locator('.locator')).toHaveText(
+			'p. 88 · PDF pages 100 (one-based)'
+		);
+		await source.locator(`.uses a[href="${href('s03-s04')}"]`).click();
 		const selected = page.locator('.segment-selected');
-		await expect(selected).toHaveCount(3);
+		await expect(selected).toHaveCount(2);
 		expect(await selected.evaluateAll((nodes) => nodes.map((node) => node.id))).toEqual(
-			['s02', 's03', 's04'].map((id) => `${slug}-${id}`)
+			['s03', 's04'].map((id) => `${slug}-${id}`)
 		);
 	});
 }

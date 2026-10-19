@@ -67,6 +67,10 @@ export interface Messages {
 	lemmaLoading: string;
 	lemmaLoadFailed: string;
 	lemmaPageHint: string;
+	lemmaSourcesLabel: string;
+	lemmaSourcesScope: string;
+	lemmaSourcesLoading: string;
+	lemmaSourcesFailed: string;
 	occurrences: string;
 	externalDict: string;
 	notFound: string;
@@ -95,6 +99,12 @@ export interface Messages {
 	ordoSubtitle: string;
 	ordoDescription: string;
 	ordoProper: string;
+	/** A commemoration's oration, joined after the Mass oration it follows. */
+	ordoCommemoration: string;
+	/** RG 480–481: a Secret that is not the last keeps its words but not its audible ending. */
+	commemorationQuiet: string;
+	/** A commemoration falls on the chosen date while its Mass of the day is not in the edition. */
+	dayCommemorationOnly: string;
 	/** Capability limit, not a claim that every date needs an additional prayer. */
 	formularyScope: string;
 	dayLabel: string;
@@ -299,6 +309,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		lemmaLoading: 'Wczytywanie hasła…',
 		lemmaLoadFailed: 'Nie udało się wczytać hasła.',
 		lemmaPageHint: 'otwórz hasło',
+		lemmaSourcesLabel: 'źródła hasła',
+		lemmaSourcesScope: 'Źródła do wybranych objaśnień znaczenia i gramatyki.',
+		lemmaSourcesLoading: 'Wczytywanie źródeł…',
+		lemmaSourcesFailed: 'Źródła niedostępne.',
 		occurrences: 'w tekstach',
 		externalDict: 'słownik zewnętrzny',
 		notFound: 'Nie ma takiego hasła.',
@@ -337,8 +351,12 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
 		ordoProper: 'z formularza dnia',
+		ordoCommemoration: 'wspomnienie',
+		commemorationQuiet:
+			'Zakończenie i Amen tej sekrety kapłan odmawia po cichu. Głośno kończy się tylko ostatnia sekreta.',
+		dayCommemorationOnly: 'tego dnia przypada {title}. Mszy tego dnia nie ma jeszcze w tym wydaniu',
 		formularyScope:
-			'Dobór modlitw nie uwzględnia jeszcze wspomnień liturgicznych ani kalendarzy lokalnych.',
+			'Dobór modlitw uwzględnia wspomnienie Litanii Większych, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
@@ -518,6 +536,10 @@ const MESSAGES: Record<Lang, Messages> = {
 		lemmaLoading: 'Loading entry…',
 		lemmaLoadFailed: 'The entry could not be loaded.',
 		lemmaPageHint: 'open the entry',
+		lemmaSourcesLabel: 'dictionary sources',
+		lemmaSourcesScope: 'References for selected explanations of meaning and grammar.',
+		lemmaSourcesLoading: 'Loading sources…',
+		lemmaSourcesFailed: 'Sources unavailable.',
 		occurrences: 'in the texts',
 		externalDict: 'external dictionary',
 		notFound: 'No such entry.',
@@ -556,8 +578,13 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoDescription:
 			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
 		ordoProper: 'from the day’s formulary',
+		ordoCommemoration: 'commemoration',
+		commemorationQuiet:
+			'The celebrant says this Secret’s conclusion and Amen quietly. Only the last Secret ends aloud.',
+		dayCommemorationOnly:
+			'the {title} fall on this day. Its Mass of the day is not yet in this edition',
 		formularyScope:
-			'The selection of prayers does not yet account for liturgical commemorations or local calendars.',
+			'The selection of prayers accounts for the commemoration of the Greater Litanies, but not yet for other liturgical commemorations or local calendars.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',

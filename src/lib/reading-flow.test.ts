@@ -72,3 +72,39 @@ describe('the flow binding', () => {
 		expect(flow.last).toBeUndefined();
 	});
 });
+
+describe('retained reference words', () => {
+	it.each(['lecta', 'cantu'] as const)(
+		'removes current actor cues without changing %s segments',
+		(form) => {
+			const source = doc([
+				{
+					...verse('s01', 'minister'),
+					voice: 'submissa',
+					participation: {
+						lecta: { gradus: 1, source: 'DMS 31 a' },
+						cantu: { gradus: 1, source: 'DMS 25 a' }
+					}
+				}
+			]);
+			const before = structuredClone(source);
+			for (const who of ['populus', 'minister', 'sacerdos'] as const) {
+				const active = flowBinding(source, gloss(), { helpLevel: 0 }, form, who);
+				const reference = flowBinding(
+					source,
+					gloss(),
+					{ helpLevel: 0, referenceOnly: true },
+					form,
+					who
+				);
+				expect(active.options.namesWho(0)).toBe(true);
+				expect(active.options.response(0)).toBe(true);
+				expect(reference.options.namesWho(0)).toBe(false);
+				expect(reference.options.response(0)).toBe(false);
+				expect(reference.sharedPrayer).toBe(false);
+				expect(reference.segs).toEqual(active.segs);
+			}
+			expect(source).toEqual(before);
+		}
+	);
+});

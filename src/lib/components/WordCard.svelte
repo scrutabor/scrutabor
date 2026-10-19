@@ -5,6 +5,7 @@
 	// landing page; there is deliberately only one information layout.
 	import AnalysisRow from '$lib/components/AnalysisRow.svelte';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
+	import LemmaSources from '$lib/components/LemmaSources.svelte';
 	import type { Analysis, Lexicon, Word, WordGloss } from '$lib/corpus';
 	import { lemmaHref } from '$lib/lemma-url';
 	import { M, type Lang } from '$lib/i18n';
@@ -113,6 +114,9 @@
 		<p class="note">{senseEntry.note}</p>
 		<SourceNotes citations={senseEntry.note_citations} {lang} />
 	{/if}
+	{#key `${lang}:${item.lemma}`}
+		<LemmaSources lemma={item.lemma} {lang} />
+	{/key}
 {/snippet}
 
 {#snippet grammar(item: Word)}

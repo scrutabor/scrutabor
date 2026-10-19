@@ -85,7 +85,7 @@ const readings = [
 		3
 	],
 	['pl', 'formularium/omnium-sanctorum', 'omnium-sanctorum-graduale.', 'w008', 'nie brakuje', 1],
-	['en', 'orationes/te-deum', '', 'w166', 'this day', 2],
+	// en orationes/te-deum w166 is pinned in its clause group below.
 	[
 		'en',
 		'formularium/dominica-ii-passionis',
@@ -139,6 +139,41 @@ for (const [language, path, prefix, word, gloss, members] of readings) {
 		await expect(page.locator('aside .morph')).toHaveCount(members);
 	});
 }
+
+// The English renders die isto sine peccáto nos custodíre (w166–w171) as one group, "to keep
+// us free from sin this day": w166 keeps its contextual realization inside that clause, and
+// no member keeps a caption of its own. The s26 translation is unchanged.
+test('en orationes/te-deum w166 preserves contextual realization and help in its clause group', async ({
+	page
+}) => {
+	const route = '/app/en/orationes/te-deum';
+	await page.goto(route);
+	await setHelp(page, 1);
+	const group = page.locator('button[id="w171"]');
+	await expect(group).toHaveClass(/\bword-construction\b/);
+	await expect(group.locator('..')).toHaveClass(/\btoken-group\b/);
+	await expect(group.locator('rt')).toHaveText('to keep us free from sin this day');
+	await expect(group.locator('.token')).toHaveCount(6);
+	expect(
+		await group.locator('.token[id]').evaluateAll((tokens) => tokens.map((token) => token.id))
+	).toEqual(['w166', 'w167', 'w168', 'w169', 'w170']);
+	for (const word of ['w166', 'w167', 'w168', 'w169', 'w170'])
+		await expect(page.locator(`button[id="${word}"]`)).toHaveCount(0);
+	await group.click();
+	await expect(page.locator('aside .construction-title')).toHaveText([
+		'die',
+		'isto',
+		'sine',
+		'peccáto',
+		'nos',
+		'custodíre'
+	]);
+	await expect(page.locator('aside .construction-card .morph')).toHaveCount(6);
+	await page.keyboard.press('Escape');
+	await expect(page.locator('aside')).toHaveCount(0);
+	await page.goto(`${route}?w=w166`);
+	await expect(page.locator('aside .morph')).toHaveCount(6);
+});
 
 test('Passion testimony remains stable at narrow widths and the largest reading size', async ({
 	page

@@ -8,6 +8,7 @@
 // no content, exactly as the catalog holds none.
 
 import type { Lang } from './i18n';
+import type { OrdinaryPrescriptions } from './ordinary-prescriptions';
 import { FORMULARY_METADATA, formularyTitle, type ComponentCondition } from './corpus-metadata';
 import { bindPlFields } from './polish';
 import { dayOf, dayOn, isCivilDate, isoDate, type Kalendar } from './kalendarium';
@@ -94,6 +95,8 @@ export type Season = (typeof SEASONS)[number];
 const POST_SEPTUAGESIMAM: readonly Season[] = ['septuagesima', 'quadragesima', 'passionis'];
 
 export interface ProperDay {
+	/** Source-derived branches transported unchanged from the neutral catalogue. */
+	ordinary: OrdinaryPrescriptions;
 	/** Stable identity of this particular Mass, including any variant. */
 	id: string;
 	/** Stable liturgical order for the picker and concordance. */
@@ -168,6 +171,7 @@ const PROPER_DAYS_SOURCE: ProperDay[] = FORMULARY_METADATA.map((formulary) => {
 		};
 	});
 	return {
+		ordinary: formulary.ordinary,
 		id: formulary.id,
 		order: formulary.order,
 		collection: formulary.collection,

@@ -22,6 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a, conclusion addressed to the Father; literal list punctuation retained",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-pascha-collecta.conclusion-expansion.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w034"
+     },
+     "claim": "This same-edition common passage supplies the full literal w034–w055 expansion of its Per Dóminum cue. RG 115 a applies to an oration addressed to the Father in Mass or Office; its unaccented word forms, tuum, qui and final list semicolon remain literal in mr, while canonical house typography is declared in apparatus. This is not an independent edition."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 225–226",
@@ -54,10 +76,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger proper page prints the complete petition/body through w033 and its abbreviation control Per Dóminum. The full w034–w055 conclusion is supplied by the separately cited RG 115 a, not printed on this proper leaf."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": []

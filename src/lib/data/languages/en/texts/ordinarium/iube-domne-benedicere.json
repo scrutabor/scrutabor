@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.iube-domne-benedicere",
+  "language":"en",
+  "about":"Before the Gospel at solemn Mass, the deacon says Munda cor meum and asks the celebrant for this blessing. The celebrant’s response includes the Amen. At Masses for the Dead, the deacon still says Munda cor meum but does not ask for the blessing.",
+  "seg":[
+    {"id":"s01","tr":"Please give your blessing, sir.","g":[null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"please give your blessing, sir"}],"ex":{"w001":"The rubric identifies a request for the celebrant’s blessing. Iube introduces benedicere in that request.","w002":"Domne respectfully addresses the celebrant. The following Dominus names the divine Lord."}},
+    {"id":"s02","tr":"May the Lord be in your heart and on your lips, so that you may proclaim His Gospel worthily and fittingly:","g":[null,null,"in",null,null,"and","on",null,null,"so that",null,null,null,null,null,null],"a":[{"s":0,"n":2,"a":1,"g":"may the Lord be"},{"s":3,"n":2,"a":0,"g":"your heart"},{"s":7,"n":2,"a":0,"g":"your lips"},{"s":10,"n":4,"a":3,"g":"you may worthily and fittingly proclaim"},{"s":14,"n":2,"a":0,"g":"His Gospel"}],"ex":{"w019":"His refers to the Lord, not to the deacon who proclaims the Gospel."}},
+    {"id":"s03","tr":"in the name of the Father, and of the Son, and of the Holy Spirit.","tb":"revised","g":["in","the name","of the Father","and","of the Son","and",null,null],"a":[{"s":6,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s04","tr":"Amen.","g":["amen"],"ex":{"w028":"The missal includes this Amen in the celebrant’s response."}}
+  ]
+}

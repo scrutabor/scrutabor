@@ -16,6 +16,7 @@
 	} from '$lib/ordo-choice';
 	import { isCivilDate, isoDate } from '$lib/kalendarium';
 	import { dayById } from '$lib/proprium';
+	import { commemorationTitle } from '$lib/corpus-metadata';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
@@ -164,6 +165,18 @@
 				<span class="state smallcaps">{msgs.dayUnwritten}</span>
 			{:else if chosen && proper.payload?.day === chosen}
 				<span class="sr-only">{shown} — {msgs.dayInPlace}</span>
+			{/if}
+			<!-- An occurrence the corpus acknowledges on this date without a
+			     represented Mass: said, never assembled or substituted. -->
+			{#if !proper.loading && !proper.commemorations.length}
+				{#each proper.occurrences as occurrence (occurrence.id)}
+					<span class="state commemoration-only"
+						>{msgs.dayCommemorationOnly.replace(
+							'{title}',
+							commemorationTitle(occurrence.id, lang)
+						)}</span
+					>
+				{/each}
 			{/if}
 		{/if}
 	</span>

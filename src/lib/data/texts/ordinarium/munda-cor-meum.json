@@ -1,0 +1,15 @@
+{
+  "id":"ordinarium.munda-cor-meum",
+  "title":"Munda cor meum",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Munda","l":"mundo","m":41},{"i":"w002","f":"cor","l":"cor","m":136},{"i":"w003","f":"meum","l":"meus","p":",","m":137,"h":"w002"},{"i":"w004","f":"ac","l":"ac","m":15},{"i":"w005","f":"lábia","l":"labium","m":85},{"i":"w006","f":"mea","l":"meus","p":",","m":129,"h":"w005"},{"i":"w007","f":"omnípotens","l":"omnipotens","m":56,"h":"w008"},{"i":"w008","f":"Deus","l":"deus","p":",","m":5},{"i":"w009","f":"qui","l":"qui","m":18,"h":"w014"},{"i":"w010","f":"lábia","l":"labium","m":85},{"i":"w011","f":"Isaíæ","l":"Isaias","m":261,"a":7},{"i":"w012","f":"prophétæ","l":"propheta","m":261},{"i":"w013","f":"cálculo","l":"calculus","m":29},{"i":"w014","f":"mundásti","l":"mundo","m":283,"a":7},{"i":"w015","f":"igníto","l":"ignio","p":":","m":746,"h":"w013","a":25},{"i":"w016","f":"ita","l":"ita","m":32},{"i":"w017","f":"me","l":"ego","m":4},{"i":"w018","f":"tua","l":"tuus","m":31,"h":"w020"},{"i":"w019","f":"grata","l":"gratus","m":31,"h":"w020"},{"i":"w020","f":"miseratióne","l":"miseratio","m":45},{"i":"w021","f":"dignáre","l":"dignor","m":237},{"i":"w022","f":"mundáre","l":"mundo","p":",","m":239},{"i":"w023","f":"ut","l":"ut","m":15},{"i":"w024","f":"sanctum","l":"sanctus","m":137,"h":"w025"},{"i":"w025","f":"evangélium","l":"evangelium","m":82},{"i":"w026","f":"tuum","l":"tuus","m":137,"h":"w025"},{"i":"w027","f":"digne","l":"digne","m":32},{"i":"w028","f":"váleam","l":"valeo","m":570},{"i":"w029","f":"nuntiáre","l":"nuntio","p":".","m":239}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w030","f":"Per","l":"per","m":3,"h":"w031"},{"i":"w031","f":"Christum","l":"Christus","m":35},{"i":"w032","f":"Dóminum","l":"dominus","m":35},{"i":"w033","f":"nostrum","l":"noster","p":".","m":96,"h":"w032"},{"i":"w034","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

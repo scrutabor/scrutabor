@@ -32,6 +32,12 @@ import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF } from './proprium';
 import { CANON_VARIANTS, CANON_ROLES, canonKey, validateCanonPack } from './canon';
 import { DISMISSAL_ROLE, PASCHAL_DISMISSAL, validateDismissalPack } from './dismissal';
+import {
+	COMMEMORATION_DECLARATIONS,
+	commemorationLookup,
+	validateCommemorationPack
+} from './commemorationes';
+import { commemorationTitle } from './corpus-metadata';
 import type { VariantPack } from './variant-resource';
 import pkg from '../../package.json' with { type: 'json' };
 
@@ -215,6 +221,43 @@ export async function canonData(lang: Lang) {
 		return { key, slot };
 	});
 	return variantData(lang, declarations, validateCanonPack);
+}
+
+/** The commemoration orations, once per language, joined to any Mass the corpus pairs them with. */
+export async function commemorationData(lang: Lang) {
+	return variantData(lang, COMMEMORATION_DECLARATIONS, validateCommemorationPack);
+}
+
+/** A commemoration's orations read as one document, the way a formulary's parts are. */
+export async function commemorationPageData(id: string, lang: Lang) {
+	const entry = commemorationLookup?.commemorations.find((candidate) => candidate.id === id);
+	if (!entry) return null;
+	const pack = await commemorationData(lang);
+	const parts = entry.slots.map((slot) => {
+		const body = pack.parts.find((part) => part.key === slot.text);
+		if (!body || body.slot !== slot.after) throw new Error('commemoration body absent');
+		return {
+			key: body.key,
+			part: body.part,
+			condition: undefined,
+			slot: body.slot,
+			doc: body.doc,
+			gloss: body.gloss,
+			bibliography: body.bibliography
+		};
+	});
+	return {
+		day: entry.id,
+		title: {
+			la: entry.title,
+			...Object.fromEntries(LANGS.map((language) => [language, commemorationTitle(id, language)]))
+		},
+		partial: false,
+		around: {},
+		lang,
+		parts,
+		lex: pack.lex
+	};
 }
 
 /** One shared Easter dismissal body per language, not a copy in each Mass. */

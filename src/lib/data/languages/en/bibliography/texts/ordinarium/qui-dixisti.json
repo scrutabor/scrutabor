@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 73",
-    "scan": "scan p. 85"
+    "scan": "PDF pages 85 (one-based)"
    },
    "entries": [
     {
@@ -16,37 +16,33 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
-    {
-     "id": "use.en.2db1771e6f194ea42a2e",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
-    {
-     "id": "use.en.747b9551591a3bba2246",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
-    {
-     "id": "use.en.e696eebaa2eface38580",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+     "claim": "Historical English source expression: “regard not my sins, but the faith of thy church” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.fc236d5faf11faffb15c",
      "address": {
       "kind": "segment",
       "segment": "s03"
+     },
+     "claim": "Historical English source expression: “I leave you peace, I give you my peace” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 73",
+    "scan": "scan p. 85"
+   },
+   "entries": [
+    {
+     "id": "use.en.2db1771e6f194ea42a2e",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "Lord Jesus Christ, who said to Your Apostles:"
     }
@@ -79,24 +75,16 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 30",
-    "scan": "scan p. 57"
+    "scan": "PDF pages 57 (one-based)"
    },
    "entries": [
-    {
-     "id": "use.en.1d6301426e814d830374",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
     {
      "id": "use.en.96e6284bcd460fa3c275",
      "address": {
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+     "claim": "Historical English wording for the divine life and reign concluding with Amen; the current wording recasts the divine predication and replaces “world without end” with “for ever and ever”."
     },
     {
      "id": "use.en.ae0b5f6ed7029fdf5c02",
@@ -104,18 +92,10 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
-    },
-    {
-     "id": "use.en.da81b049b83190dabeee",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Lord Jesus Christ, who said to Your Apostles:"
+     "claim": "Historical English wording for the request to pacify and unite the Church according to God’s will; the current wording recasts “vouchsafe to pacify” as graciously granting peace and revises the pronouns."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",

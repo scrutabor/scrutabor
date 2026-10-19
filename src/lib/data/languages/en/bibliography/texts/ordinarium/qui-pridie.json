@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 65",
-    "scan": "scan p. 77"
+    "scan": "PDF pages 77 (one-based)"
    },
    "entries": [
     {
@@ -16,15 +16,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
-    {
-     "id": "use.en.7333e3fc5d6fef674713",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
+     "claim": "Historical English source expression: “Take and eat ye all of this” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.86b791aa4756388b79f3",
@@ -32,7 +24,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
+     "claim": "Historical English source expression: “giving thanks to thee” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.956db5d223ed94bdf7b4",
@@ -40,7 +32,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
+     "claim": "Historical English source expression: “blessed, brake, and gave to his disciples, saying” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.e56f3dea835dcd4706b5",
@@ -48,8 +40,20 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
+     "claim": "Historical English source expression: “FOR THIS IS MY BODY.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 65",
+    "scan": "scan p. 77"
+   },
+   "entries": [
     {
      "id": "use.en.fd454a801ae34848a048",
      "address": {
@@ -67,7 +71,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
-    "scan": "scan p. 52"
+    "scan": "PDF pages 52 (one-based)"
    },
    "entries": [
     {
@@ -76,40 +80,20 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
-    {
-     "id": "use.en.669d0c4971233f4f7cd5",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
-    {
-     "id": "use.en.6ffff631b4bfa763f28d",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
-    {
-     "id": "use.en.77458dbc4291c51dca44",
-     "address": {
-      "kind": "segment",
-      "segment": "s11"
-     },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
-    {
-     "id": "use.en.bd409380442995d10f6c",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
-    },
+     "claim": "Historical English wording for the raising of the eyes to heaven and address to God, His almighty Father; the current wording recasts the introductory construction and modernizes the address."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 25",
+    "scan": "scan p. 52"
+   },
+   "entries": [
     {
      "id": "use.en.cec54d3bbed071abd734",
      "address": {

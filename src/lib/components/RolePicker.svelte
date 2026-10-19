@@ -63,6 +63,7 @@
 			<button
 				type="button"
 				role="radio"
+				aria-label={word(r)}
 				aria-checked={current === r}
 				tabindex={current === r ? 0 : -1}
 				class="option"

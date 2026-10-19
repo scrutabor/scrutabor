@@ -1,0 +1,9 @@
+{
+  "id":"proprium.litaniae-maiores-collecta",
+  "language":"pl",
+  "about":"Kolekta wspomnienia Litanii Większych w Mszale Rzymskim z 1962 roku.",
+  "seg":[
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy my, którzy w naszym utrapieniu ufamy Twojej dobroci, byli zawsze osłaniani Twoją opieką przed wszelkimi przeciwnościami. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy","wszechmogący","Boże","abyśmy","my, którzy","w",null,null,null,null,null,"ufamy","przed",null,null,null,null,null,"byli osłaniani","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":7,"n":2,"a":0,"g":"naszym utrapieniu"},{"s":9,"n":3,"a":2,"g":"Twojej dobroci"},{"s":14,"n":2,"a":0,"g":"wszelkimi przeciwnościami"},{"s":16,"n":3,"a":2,"g":"zawsze Twoją opieką"}]},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

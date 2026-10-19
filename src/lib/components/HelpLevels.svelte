@@ -78,6 +78,7 @@
 			<button
 				type="button"
 				role="radio"
+				aria-label={M[lang].levels[level]}
 				aria-checked={value === level}
 				tabindex={value === level ? 0 : -1}
 				class="option"

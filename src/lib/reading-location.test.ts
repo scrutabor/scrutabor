@@ -13,7 +13,7 @@ afterEach(() => {
 it.each([
 	[{ segments: ['s02', 's03'] }, 's02'],
 	[{ segments: ['s02'], part: 'prayer~communio' }, 'prayer~communio-s02']
-])('scrolls to the first selected line of its exact reading occurrence', (selection, id) => {
+])('scrolls to the first selected line of reading occurrence %#', (selection, id) => {
 	const scrollIntoView = vi.fn();
 	const getElementById = vi.fn(() => ({ scrollIntoView }));
 	vi.stubGlobal('document', { getElementById });

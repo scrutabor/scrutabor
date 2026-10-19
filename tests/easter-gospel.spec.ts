@@ -7,20 +7,26 @@ for (const language of ['pl', 'en']) {
 	test(`${language}: the Easter Gospel keeps the disciples' perfect of exeo`, async ({ page }) => {
 		await page.goto(`/app/${language}/formularium/${formulary}?w=${text}.w137`);
 		const panel = page.locator('aside');
-		await expect(panel.locator('.form')).toHaveText('exísti');
-		await expect(panel.getByRole('link', { name: 'éxeo, exíre, éxii, éxitum' })).toBeVisible();
-		await expect(panel.locator('.gloss')).toHaveText(
-			language === 'pl' ? 'wyszedłeś' : 'You came forth'
-		);
-		await expect(panel.locator('.morph')).toContainText(
-			language === 'pl' ? 'perfectum' : 'perfect'
-		);
-		await expect(panel.locator('.morph')).toContainText(
-			language === 'pl' ? '2. os.' : '2nd person'
-		);
-		await expect(panel.locator('.meta')).toContainText('Collatinus');
-		await expect(panel.locator('.meta')).not.toContainText('Whitaker');
-		await expect(panel.locator('.meta')).toContainText(
+		let verb = panel;
+		if (language === 'en') {
+			// The delivered English glosses the phrase a Deo exísti as one unit; the verb keeps its card.
+			await expect(panel.locator('.form')).toHaveText('a Deo exísti');
+			await expect(panel.locator('.construction-title')).toHaveText(['a', 'Deo', 'exísti']);
+			await expect(panel.locator('.gloss')).toHaveText('You came forth from God');
+			verb = panel.locator('.construction-card').filter({
+				has: page.locator('.construction-title').filter({ hasText: /^exísti$/ })
+			});
+			await expect(verb).toHaveCount(1);
+		} else {
+			await expect(panel.locator('.form')).toHaveText('exísti');
+			await expect(panel.locator('.gloss')).toHaveText('wyszedłeś');
+		}
+		await expect(verb.getByRole('link', { name: 'éxeo, exíre, éxii, éxitum' })).toBeVisible();
+		await expect(verb.locator('.morph')).toContainText(language === 'pl' ? 'perfectum' : 'perfect');
+		await expect(verb.locator('.morph')).toContainText(language === 'pl' ? '2. os.' : '2nd person');
+		await expect(verb.locator('.meta')).toContainText('Collatinus');
+		await expect(verb.locator('.meta')).not.toContainText('Whitaker');
+		await expect(verb.locator('.meta')).toContainText(
 			language === 'pl' ? 'do przeglądu' : 'awaiting review'
 		);
 

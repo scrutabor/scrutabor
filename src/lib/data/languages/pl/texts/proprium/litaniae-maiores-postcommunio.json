@@ -1,0 +1,9 @@
+{
+  "id":"proprium.litaniae-maiores-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa po Komunii wspomnienia Litanii Większych w Mszale Rzymskim z 1962 roku.",
+  "seg":[
+    {"id":"s01","tr":"Przychyl się łaskawie, prosimy, Panie, do naszych próśb, abyśmy, przyjmując w utrapieniu Twoje dary, dzięki otrzymanej pociesze wzrastali w miłości do Ciebie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,"prosimy","Panie",null,null,null,"abyśmy","gdy",null,null,"w","utrapieniu","przyjmujemy",null,null,null,null,null,null,"wzrastali","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":0,"n":2,"a":0,"g":"do naszych próśb"},{"s":4,"n":3,"a":2,"g":"przychyl się łaskawie"},{"s":9,"n":2,"a":0,"g":"Twoje dary"},{"s":14,"n":3,"a":1,"g":"dzięki naszej pociesze"},{"s":17,"n":3,"a":2,"g":"w miłości do Ciebie"}],"ex":{"w020":"Przyjmowane dary i doświadczana pociecha uzasadniają prośbę o wzrost miłości do Boga. Samo tuo nie rozstrzyga, czy chodzi o miłość do Boga, czy o Jego miłość."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

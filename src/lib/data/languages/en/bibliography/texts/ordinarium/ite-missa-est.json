@@ -11,22 +11,6 @@
    },
    "entries": [
     {
-     "id": "use.en.09fd570c7a32c177e98a",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "The Lord be with you."
-    },
-    {
-     "id": "use.en.13ecc8118d0dbd92210e",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "The Lord be with you."
-    },
-    {
      "id": "use.en.92a0a164d64a8d0f3e1a",
      "address": {
       "kind": "segment",
@@ -36,6 +20,34 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 78",
+    "scan": "PDF pages 90 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.09fd570c7a32c177e98a",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English source expression: “Thanks be to God.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.13ecc8118d0dbd92210e",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “And with thy spirit.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

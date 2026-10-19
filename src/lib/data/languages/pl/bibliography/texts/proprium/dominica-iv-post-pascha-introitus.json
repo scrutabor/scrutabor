@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-iv-post-pascha-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 12",
+    "scan": "PDF s. 14",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.proprium.dominica-iv-post-pascha-introitus.gloria-skowronek-1907",
+     "address": {
+      "kind": "word",
+      "word": "w028"
+     },
+     "claim": "Wyłącznie ciągły polski tekst doksologii odpowiadający w028–w047 opiera się na historycznym brzmieniu Gloria Patri. Zachowano słownictwo. Znormalizowano interpunkcję, wielką literę rozpoczynającą „Jak” oraz układ druku. Antyfona, werset psalmu, powtórzenie antyfony i glosy międzywierszowe nie są przypisane temu źródłu."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -244,7 +244,10 @@
 		panel.toggle(id);
 	}
 
-	function toggleAbout() {
+	function toggleAbout(event: MouseEvent) {
+		if (event.currentTarget instanceof HTMLElement) {
+			event.currentTarget.focus({ preventScroll: true });
+		}
 		legendOpen = false;
 		if (!aboutOpen && panel.id !== null) panel.close();
 		aboutOpen = !aboutOpen;

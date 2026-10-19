@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 55",
-    "scan": "scan p. 68"
+    "scan": "DJVU physical pages 68 (one-based); indices 67 (zero-based)"
    },
    "entries": [
     {
@@ -16,8 +16,20 @@
       "kind": "segment",
       "segment": "s12"
      },
-     "claim": "Glory be to the Father, and to the Son, and to the Holy Spirit."
-    },
+     "claim": "Historical English source expression: “As it was in the beginning, is now, and ever shall be, world without end. Amen.” This supplies the corresponding English expression at the addressed scope. The cited occurrence is the Ordinary’s Psalm42doxology, not the Magnificat."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68"
+   },
+   "entries": [
     {
      "id": "use.en.f9925498255e94ecc3a7",
      "address": {
@@ -85,7 +97,7 @@
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
    "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_comparator",
+   "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 346",
     "scan": "PDF p. 373",
@@ -98,7 +110,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+     "claim": "Historical basis for the revised English verse. The source prints both showing might in his arm and scattering the proud in the conceit of their heart. The selected wording uses has shown and with His arm, with divine capitalization and punctuation changes. The conceit-of-their-heart expression is materially printed; the whole verse is revised rather than verbatim."
     },
     {
      "id": "use.en.187222f69552357689e2",
@@ -106,7 +118,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+     "claim": "Historical basis for the revised English verse. The source prints Because he that is mighty hath done great things to me: and holy is his name. The selected wording uses For, who, has and for me, with divine capitalization and punctuation changes. Both complete predicates remain materially attested; the current verse is not verbatim."
     },
     {
      "id": "use.en.c1bf1b3d4d5d50fac3c2",
@@ -114,7 +126,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+     "claim": "Historical basis for the revised English mercy verse. The source prints from generation unto generations to them that fear him; the selected wording uses from generation to generation for those who fear Him, with divine capitalization. The complete mercy-and-fear relation is materially supported, but this is not exact or spelling-only retention."
     },
     {
      "id": "use.en.c851cc4624ad0c9b8e90",
@@ -122,7 +134,7 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+     "claim": "Historical basis for the revised English verse. The source prints the complete regard-for-the-handmaid and future-blessedness clauses. The selected wording changes Because to For, hath to has, humility to lowliness, henceforth to from now on, and shall to will, and omits the source’s for before behold. Divine capitalization and punctuation are normalized. This is revised wording, not a verbatim quotation."
     },
     {
      "id": "use.en.fccee24c364e44f09cac",
@@ -130,10 +142,10 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+     "claim": "Historical basis for the revised English verse. The source prints filling the hungry with good things and the rich he hath sent empty away. The selected wording changes hath to has and coordinates sent the rich away empty, with capitalization changes. Both sides of the contrast are materially attested; the current word order is revised."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

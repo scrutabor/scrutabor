@@ -66,7 +66,9 @@ export function editionLists({ build, files, prerendered }: EditionManifest): Ed
 	const lazyCorpus = build.filter((path) => path.includes('/immutable/corpus/'));
 	const shellBuild = build.filter((path) => !path.includes('/immutable/corpus/'));
 	const shell = [...shellBuild, ...served, ...pages.filter((path) => SHELL_PAGE.test(path))];
-	const days = pages.filter((path) => /^\/artifacts\/(proprium|canon|dismissal)\//.test(path));
+	const days = pages.filter((path) =>
+		/^\/artifacts\/(proprium|canon|dismissal|commemorationes)\//.test(path)
+	);
 	const everything = [
 		...shell,
 		...lazyCorpus,

@@ -1,0 +1,27 @@
+{
+ "id": "ordinarium.munda-cor-meum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "45",
+    "scan": "PDF page 48"
+   },
+   "entries": [
+    {
+     "id": "use.pl.munda-cor-meum.short-conclusion",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Dokładne historyczne brzmienie krótkiego zakończenia: „Przez Chrystusa, Pana naszego. Amen.”."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

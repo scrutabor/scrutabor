@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
+import { COMMEMORATION_TEXT_KEYS } from './commemorationes';
 import { PROPER_DAYS, properRank } from './proprium';
 import { everyTextInOrder, occurrencesOf, textsForLatinForm } from './concordance';
 import { TEXT_KEYS } from './corpus';
@@ -104,8 +105,13 @@ describe('what the concordance is built from', () => {
 			expect([...ranks], `${day} is out of rite order`).toEqual([...ranks].sort((a, b) => a - b));
 		}
 		// The days themselves keep the order the table declares.
+		// Commemoration orations belong to no day of their own: the concordance keeps
+		// them after every day, in their resource order.
 		const days = [...byDay.keys()];
-		expect(days).toEqual(PROPER_DAYS.map(({ id }) => id).filter((id) => byDay.has(id)));
+		expect(days).toEqual([
+			...PROPER_DAYS.map(({ id }) => id).filter((id) => byDay.has(id)),
+			...COMMEMORATION_TEXT_KEYS.map((key) => key.split('/')[1]).filter((slug) => byDay.has(slug))
+		]);
 	});
 
 	it('opens with the prayers and reaches the last Gospel at the end', () => {

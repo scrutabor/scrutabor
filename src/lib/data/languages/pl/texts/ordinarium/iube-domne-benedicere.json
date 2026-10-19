@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.iube-domne-benedicere",
+  "language":"pl",
+  "about":"W uroczystej Mszy diakon po modlitwie „Munda cor meum” prosi celebransa o błogosławieństwo przed Ewangelią. Celebrans zwraca się do niego w liczbie pojedynczej i sam wypowiada końcowe „Amen”. We Mszy za zmarłych diakon odmawia „Munda cor meum”, ale nie prosi o to błogosławieństwo.",
+  "seg":[
+    {"id":"s01","tr":"Udziel, księże, błogosławieństwa.","g":[null,null,null],"a":[{"s":0,"n":3,"a":0,"g":"Udziel, księże, błogosławieństwa"}],"ex":{"w001":"To prośba skierowana do celebransa o udzielenie błogosławieństwa. W łacinie po „iube” stoi „benedicere”, ale wykonawca i odbiorca czynności nie są osobno wyrażeni.","w002":"„Domne” jest skróconą formą zwrotu do ludzkiego adresata. Tutaj adresatem jest celebrans, dlatego w przekładzie pojawia się „księże”, a nie wezwanie do Boga."}},
+    {"id":"s02","tr":"Niech Pan będzie w twoim sercu i na twoich ustach, abyś godnie i należycie głosił Jego Ewangelię:","g":[null,null,"w",null,null,"i","na",null,null,"abyś","godnie","i","należycie","głosił",null,null],"a":[{"s":0,"n":2,"a":1,"g":"Niech Pan będzie"},{"s":3,"n":2,"a":0,"g":"twoim sercu"},{"s":7,"n":2,"a":0,"g":"twoich ustach"},{"s":14,"n":2,"a":0,"g":"Jego Ewangelię"}],"ex":{"w005":"„Sit” wyraża życzenie, aby Pan był obecny w sercu i na ustach otrzymującego błogosławieństwo.","w019":"Ewangelia jest tutaj Ewangelią Pana. „Suum” odnosi się do „Dominus”, a nie do osoby, która będzie ją głosić."}},
+    {"id":"s03","tr":"w imię Ojca i Syna, i Ducha Świętego.","tb":"normalized","g":["w","imię","Ojca","i","Syna","i","Ducha","Świętego"],"ex":{"w021":"Łacińskie „in nomine” oddaje tu stała polska formuła „w imię”. Wezwanie Trójcy Świętej dopełnia błogosławieństwo."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"],"ex":{"w028":"„Amen” potwierdza poprzedzające błogosławieństwo. W tym miejscu wypowiada je celebrans."}}
+  ]
+}

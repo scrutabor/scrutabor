@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import type { Segment } from './corpus';
 import { isEveryonesResponse, isYours, mayJoin, showsWords } from './role.svelte';
 import { inMassForm, marked } from './speaker-marks';
+import pater from './data/texts/ordinarium/pater-noster.json';
 
 const segment = (conditional = false): Segment =>
 	({
@@ -102,4 +103,18 @@ describe('folding wholly silent prayers', () => {
 			expect(marked(effective, 2)).toBe(true);
 		}
 	});
+});
+
+it('keeps the final Pater Amen’s ordinary actor separate from the low-Mass faculty', () => {
+	// The compact artifact keeps these role fields verbatim; no word expansion is needed.
+	const amen = pater.seg.find((segment) => segment.id === 's14') as unknown as Segment;
+	expect(amen.participation?.lecta).toEqual({ source: 'DMS 32', conditional: true });
+	expect(amen.speaker).toBe('sacerdos');
+	expect(amen.participation?.cantu).toBeUndefined();
+	expect(mayJoin(amen, 'lecta')).toBe(true);
+	expect(isEveryonesResponse(amen, 'lecta')).toBe(false);
+	expect(isYours(amen, 'populus', 'lecta')).toBe(false);
+	expect(isYours(amen, 'sacerdos', 'lecta')).toBe(true);
+	expect(mayJoin(amen, 'cantu')).toBe(false);
+	expect(amen.voice).toBe('secreto');
 });

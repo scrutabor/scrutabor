@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 28",
-    "scan": "scan p. 41"
+    "scan": "DJVU physical pages 41 (one-based); indices 40 (zero-based)"
    },
    "entries": [
     {
@@ -16,15 +16,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Queen of heaven, rejoice, alleluia;"
-    },
-    {
-     "id": "use.en.2332edd0e0e880da5b7c",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Queen of heaven, rejoice, alleluia;"
+     "claim": "Historical English source expression: “Rejoice and be glad, O Virgin Mary. Alleluia.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.86a24c693c7451d54838",
@@ -32,7 +24,7 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Queen of heaven, rejoice, alleluia;"
+     "claim": "Historical English source expression: “Hath arisen, as He said, Alleluia.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.a1cc152204d61f707e5b",
@@ -40,13 +32,33 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Queen of heaven, rejoice, alleluia;"
+     "claim": "Historical English source expression: “Pray for us to God. Alleluia.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.b3745c4e32031c68a52b",
      "address": {
       "kind": "segment",
       "segment": "s02"
+     },
+     "claim": "Historical English source expression: “For He whom thou didst merit to bear, Alleluia,” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 28",
+    "scan": "scan p. 41"
+   },
+   "entries": [
+    {
+     "id": "use.en.2332edd0e0e880da5b7c",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
      },
      "claim": "Queen of heaven, rejoice, alleluia;"
     }

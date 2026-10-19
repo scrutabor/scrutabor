@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest';
 import { buildBibliography, loadBibliographySource } from './bibliography';
 import { loadedTextKeys } from './corpus';
 import { PROPER_DAYS } from './proprium';
+import { commemorationForText } from './content-url';
 
 describe('bibliography destinations in the complete reader', () => {
 	test.each(['pl', 'en'] as const)(
@@ -31,12 +32,20 @@ describe('bibliography destinations in the complete reader', () => {
 							const candidates = PROPER_DAYS.filter((day) =>
 								day.components.some((part) => part.text === textKey)
 							);
-							expect(candidates.length, textId).toBeGreaterThan(0);
-							const owner =
-								candidates.find((day) =>
-									day.components.some((part) => part.text === textKey && part.relation === 'proper')
-								) ?? candidates[0];
-							expect(url.pathname, use.key).toBe(`/app/${lang}/formularium/${owner.id}`);
+							if (candidates.length) {
+								const owner =
+									candidates.find((day) =>
+										day.components.some(
+											(part) => part.text === textKey && part.relation === 'proper'
+										)
+									) ?? candidates[0];
+								expect(url.pathname, use.key).toBe(`/app/${lang}/formularium/${owner.id}`);
+							} else {
+								// A commemoration's own oration reads inside its set of orations.
+								const commemoration = commemorationForText(textKey);
+								expect(commemoration, textId).toBeDefined();
+								expect(url.pathname, use.key).toBe(`/app/${lang}/commemoratio/${commemoration}`);
+							}
 							expect(url.hash, use.key).toBe(`#text-proprium-${slug}`);
 						} else {
 							counts.ordinary++;

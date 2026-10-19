@@ -178,6 +178,27 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.iube-domine-benedicere",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.munda-cor-meum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-apostolorum",
        "roles": [
         "derived_digital_collation_aid"
@@ -7397,6 +7418,7 @@
     {
      "edition": "edition.missale-romanum.1962-typica",
      "roles": [
+      "corroborating_latin_witness",
       "direct_approved_print",
       "official_text"
      ],
@@ -7605,6 +7627,27 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.iube-domine-benedicere",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.iudica-me",
        "roles": [
         "official_text"
@@ -7657,6 +7700,13 @@
        "id": "ordinarium.misereatur-tui",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.munda-cor-meum",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -9801,9 +9851,10 @@
       {
        "id": "proprium.dominica-iii-post-pascha-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-pascha-communio",
@@ -9829,9 +9880,10 @@
       {
        "id": "proprium.dominica-iii-post-pascha-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-pascha-offertorium",
@@ -9843,16 +9895,18 @@
       {
        "id": "proprium.dominica-iii-post-pascha-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-pascha-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-post-pentecosten-alleluia",
@@ -10407,7 +10461,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-post-pascha-communio",
@@ -10435,7 +10489,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-post-pascha-offertorium",
@@ -10449,14 +10503,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-post-pascha-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-post-pentecosten-alleluia",
@@ -10821,7 +10875,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pascha-communio",
@@ -10849,7 +10903,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pascha-offertorium",
@@ -10863,14 +10917,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pascha-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pentecosten-alleluia",
@@ -12083,7 +12137,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-xxii-post-pentecosten-secreta",
@@ -12440,7 +12494,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.immaculata-conceptio-offertorium",
@@ -12585,6 +12639,20 @@
         "official_text"
        ],
        "uses": 3
+      },
+      {
+       "id": "proprium.litaniae-maiores-collecta",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.maternitas-beatae-mariae-virginis-alleluia",
@@ -13551,7 +13619,7 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 3
+       "uses": 4
       },
       {
        "id": "proprium.sancti-iacobi-apostoli-offertorium",
@@ -14004,7 +14072,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-marci-evangelistae-communio",
@@ -14032,14 +14100,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-marci-evangelistae-secreta",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-alleluia",
@@ -14373,7 +14441,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimae-trinitatis-communio",
@@ -14408,7 +14476,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctissimae-trinitatis-offertorium",
@@ -15182,6 +15250,20 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.iube-domne-benedicere",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-paschalis",
        "roles": [
         "corroborating_latin_witness"
@@ -15192,6 +15274,20 @@
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
        ],
        "uses": 1
       },
@@ -15370,14 +15466,14 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 124
+       "uses": 4
       },
       {
        "id": "litaniae.sacratissimi-cordis-iesu",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 87
+       "uses": 7
       },
       {
        "id": "litaniae.sanctissimi-nominis-iesu",
@@ -15405,7 +15501,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 1
       },
       {
        "id": "orationes.salve-regina",
@@ -15496,6 +15592,20 @@
         "historical_wording_basis"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -15510,8 +15620,7 @@
       {
        "id": "orationes.magnificat",
        "roles": [
-        "historical_wording_basis",
-        "historical_wording_comparator"
+        "historical_wording_basis"
        ],
        "uses": 10
       },
@@ -15527,7 +15636,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 1
       },
       {
        "id": "ordinarium.corpus-tuum",
@@ -15535,7 +15644,7 @@
         "historical_wording_basis",
         "historical_wording_comparator"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.credo",
@@ -15564,7 +15673,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.laus-tibi-christe",
@@ -15585,21 +15694,21 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 2
       },
       {
        "id": "ordinarium.memento-defunctorum",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 1
       },
       {
        "id": "ordinarium.nobis-quoque",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.offerimus-tibi",
@@ -15614,14 +15723,14 @@
         "historical_wording_basis",
         "historical_wording_comparator"
        ],
-       "uses": 5
+       "uses": 2
       },
       {
        "id": "ordinarium.per-quem-haec-omnia",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 1
       },
       {
        "id": "ordinarium.perceptio-corporis",
@@ -15642,7 +15751,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 2
       },
       {
        "id": "ordinarium.qui-dixisti",
@@ -15650,14 +15759,14 @@
         "historical_wording_basis",
         "historical_wording_comparator"
        ],
-       "uses": 6
+       "uses": 4
       },
       {
        "id": "ordinarium.qui-pridie",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 2
       },
       {
        "id": "ordinarium.qui-pridie-in-cena-domini",
@@ -15671,21 +15780,21 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 7
+       "uses": 2
       },
       {
        "id": "ordinarium.supplices-te-rogamus",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 4
       },
       {
        "id": "ordinarium.supra-quae",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 1
       },
       {
        "id": "ordinarium.te-igitur",
@@ -15699,7 +15808,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-post-epiphaniam-introitus",
@@ -15875,14 +15984,13 @@
     {
      "edition": "edition.the-family-prayer-book-1839",
      "roles": [
-      "historical_wording_basis",
-      "historical_wording_comparator"
+      "historical_wording_basis"
      ],
      "texts": [
       {
        "id": "litaniae.lauretanae",
        "roles": [
-        "historical_wording_comparator"
+        "historical_wording_basis"
        ],
        "uses": 1
       },
@@ -16020,14 +16128,14 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 124
+       "uses": 122
       },
       {
        "id": "litaniae.sacratissimi-cordis-iesu",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 87
+       "uses": 82
       },
       {
        "id": "litaniae.sanctissimi-nominis-iesu",
@@ -16220,6 +16328,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-iv-post-pascha-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-introitus",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.visitatio-beatae-mariae-virginis-introitus",
        "roles": [
         "historical_wording_basis"
@@ -16256,7 +16378,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 1
       },
       {
        "id": "ordinarium.gloria",
@@ -16402,7 +16524,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 7
+       "uses": 6
       },
       {
        "id": "ordinarium.memento-defunctorum",
@@ -16431,6 +16553,13 @@
         "historical_wording_basis"
        ],
        "uses": 2
+      },
+      {
+       "id": "ordinarium.munda-cor-meum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       },
       {
        "id": "ordinarium.nobis-quoque",
@@ -16503,14 +16632,14 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 3
       },
       {
        "id": "ordinarium.qui-pridie",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 6
+       "uses": 5
       },
       {
        "id": "ordinarium.quid-retribuam",
@@ -16533,7 +16662,7 @@
         "historical_wording_basis",
         "historical_wording_comparator"
        ],
-       "uses": 6
+       "uses": 4
       },
       {
        "id": "ordinarium.supra-quae",
@@ -16556,7 +16685,7 @@
         "historical_wording_basis",
         "historical_wording_comparator"
        ],
-       "uses": 5
+       "uses": 4
       },
       {
        "id": "proprium.dominica-i-adventus-alleluia",
@@ -17410,6 +17539,34 @@
       },
       {
        "id": "ordinarium.ite-missa-est-paschale",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domine-benedicere",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.munda-cor-meum",
        "roles": [
         "rubric_control"
        ],
@@ -18411,6 +18568,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-iv-post-pascha-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-iv-post-pascha-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -18532,6 +18696,13 @@
       },
       {
        "id": "proprium.dominica-v-post-pascha-collecta",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-introitus",
        "roles": [
         "official_liturgical_context"
        ],
@@ -19063,6 +19234,13 @@
        "uses": 3
       },
       {
+       "id": "proprium.immaculata-conceptio-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.immaculata-conceptio-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -19117,6 +19295,20 @@
         "official_liturgical_context"
        ],
        "uses": 2
+      },
+      {
+       "id": "proprium.litaniae-maiores-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.maternitas-beatae-mariae-virginis-collecta",
@@ -19442,6 +19634,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-iacobi-apostoli-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-iacobi-apostoli-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -19591,23 +19790,26 @@
       {
        "id": "proprium.sancti-marci-evangelistae-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-marci-evangelistae-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-marci-evangelistae-secreta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-collecta",
@@ -20006,7 +20208,35 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.iube-domne-benedicere",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.qui-pridie-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.litaniae-maiores-postcommunio",
        "roles": [
         "rubric_control"
        ],
@@ -21464,6 +21694,35 @@
        ]
       },
       {
+       "id": "credo",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n11525, personal dative and ecclesiastical in with accusative constructions",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L11904"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.credo.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "credo"
+           },
+           "claim": "The entry attests credere with a personal dative in believing someone, and ecclesiastical credere in with the accusative in believing or trusting in someone. These examples do not classify every participial or passive occurrence."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
        "id": "crepito",
        "roles": [
         "lexical_support"
@@ -21828,6 +22087,35 @@
        ]
       },
       {
+       "id": "dignor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n13933, deponent head, dignus derivation and infinitival construction",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L14318"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dignor.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dignor"
+           },
+           "claim": "The entry identifies dignor as deponent, relates it to dignus and attests the deigning construction with an infinitive, including si digneris audire. The polite English example is not an analysis of the distinct imperative dignare."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
        "id": "dolor",
        "roles": [
         "lexical_support"
@@ -22082,6 +22370,35 @@
        ]
       },
       {
+       "id": "facio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n17516, introductory passive forms, before sense n17516.1",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L17916"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.facio.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "facio"
+           },
+           "claim": "The introductory grammatical information gives fio, factus and fieri as passive forms of facio, supporting the usual present-system and perfect-participle distinction in the note. The same introduction records archaic alternatives; the summary is not an exceptionless claim for all periods."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
        "id": "felix",
        "roles": [
         "lexical_support"
@@ -22190,6 +22507,35 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "fio",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n17516, introductory passive forms; fio n18209 cross-reference to facio init.",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L17916"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.fio.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "fio"
+           },
+           "claim": "The fio entry directs the reader to the beginning of facio, where fio, factus and fieri are given as its passive forms. This supports the irregular passive counterpart in the usual system, without denying independent intransitive uses of fio."
+          }
+         ],
+         "verified_on": "2026-10-17"
         }
        ]
       },
@@ -22952,6 +23298,35 @@
        ]
       },
       {
+       "id": "iste",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n25082, opening description of the second-person demonstrative, with wider uses",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L25493"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.iste.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "iste"
+           },
+           "claim": "The entry characterizes iste as especially associated with the person addressed, while also recording more general demonstrative uses. The note is a Classical tendency, not an ownership rule for every liturgical isto."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
        "id": "iusiurandum",
        "roles": [
         "lexical_support"
@@ -23288,6 +23663,35 @@
        ]
       },
       {
+       "id": "orbis",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n32899, literal senses, orbis terrarum/terrae idiom",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L33340"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.orbis.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "orbis"
+           },
+           "claim": "The entry gives the circular-shape sense of orbis and the established orbis terrarum/terrae expression for the world. The idiom does not impose a geometrical interpretation on every occurrence."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
        "id": "organum",
        "roles": [
         "lexical_support"
@@ -23396,6 +23800,35 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "propheta",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n38894, propheta/prophetes head and grammatical information",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L39347"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.propheta.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "propheta"
+           },
+           "claim": "The entry marks propheta/prophetes with genitive -ae and masculine gender, supporting the masculine first-declension noun described in the shared note."
+          }
+         ],
+         "verified_on": "2026-10-17"
         }
        ]
       },
@@ -23564,6 +23997,35 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "quoque",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n40282, additive quoque, opening construction statement",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L40738"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.quoque.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "quoque"
+           },
+           "claim": "The additive quoque is described as following the emphasized word. The separate quoque homograph formed from quo and -que is not the subject of this positional note."
+          }
+         ],
+         "verified_on": "2026-10-17"
         }
        ]
       },
@@ -23816,6 +24278,35 @@
           }
          ],
          "verified_on": "2026-09-19"
+        }
+       ]
+      },
+      {
+       "id": "sine",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.lewis-short.1879",
+         "digital_item": "item.lewis-short.perseus.40038e4.eng2",
+         "role": "lexical_support",
+         "locator": {
+          "section": "Perseus TEI entry n44372, prepositional head and governed-case examples",
+          "page_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml#L44839"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.sine.shared-note.lewis-short.1879",
+           "address": {
+            "kind": "lemma",
+            "lemma": "sine"
+           },
+           "claim": "The entry identifies sine as a preposition with the ablative and supplies corresponding examples. Elliptical and idiomatic constructions do not turn the ordinary government into an accusative rule."
+          }
+         ],
+         "verified_on": "2026-10-17"
         }
        ]
       },
@@ -24438,6 +24929,108 @@
      ]
     },
     {
+     "edition": "edition.britt.dictionary-psalter.1928",
+     "roles": [
+      "lexical_support"
+     ],
+     "texts": [],
+     "lemmas": [
+      {
+       "id": "cherubim",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.britt.dictionary-psalter.1928",
+         "digital_item": "item.britt.dictionary-psalter.1928.cmaa426cb896",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "pp. xxxvi and 39",
+          "scan": "Physical PDF pages 36 and 75 (one-based)",
+          "section": "Abbreviation table indecl.; s.v. Cherub, head and plural identification",
+          "page_url": "https://media.musicasacra.com/pdf/dictionarypsalter.pdf#page=75"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.cherubim.shared-note.britt.1928",
+           "address": {
+            "kind": "lemma",
+            "lemma": "cherubim"
+           },
+           "claim": "The Latin dictionary marks the Cherub entry indeclinable and identifies Cherubim as its Hebrew plural; the abbreviation table explicitly expands indecl. This supports that entry treatment, not an invented full Latin paradigm, speculative etymology or classification of angelic choirs."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
+       "id": "misereor",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.britt.dictionary-psalter.1928",
+         "digital_item": "item.britt.dictionary-psalter.1928.cmaa426cb896",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "p. 167",
+          "scan": "Physical PDF page 201 (one-based)",
+          "section": "s.v. misereor, complete entry",
+          "page_url": "https://media.musicasacra.com/pdf/dictionarypsalter.pdf#page=201"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.misereor.shared-note.britt.1928",
+           "address": {
+            "kind": "lemma",
+            "lemma": "misereor"
+           },
+           "claim": "The entry records both genitive and dative government and specifically identifies the dative as familiar from the Mass and litanies. It does not say the dative is exclusive to liturgical Latin."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
+       "id": "spero",
+       "roles": [
+        "lexical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.britt.dictionary-psalter.1928",
+         "digital_item": "item.britt.dictionary-psalter.1928.cmaa426cb896",
+         "role": "lexical_support",
+         "locator": {
+          "printed": "p. 259",
+          "scan": "Physical PDF page 293 (one-based)",
+          "section": "s.v. spero, complete entry",
+          "page_url": "https://media.musicasacra.com/pdf/dictionarypsalter.pdf#page=293"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.spero.shared-note.britt.1928",
+           "address": {
+            "kind": "lemma",
+            "lemma": "spero"
+           },
+           "claim": "The entry attests spero with in and the ablative in the hope or trust sense, while also allowing accusative government. This supports a possible construction, not an exclusive case rule."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      }
+     ]
+    },
+    {
      "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
      "roles": [
       "lexical_support"
@@ -24488,6 +25081,99 @@
           }
          ],
          "verified_on": "2026-10-05"
+        }
+       ]
+      },
+      {
+       "id": "dies",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.allen-greenough.1903",
+         "digital_item": "item.allen-greenough.1903.commons",
+         "role": "grammatical_support",
+         "locator": {
+          "printed": "pp. 39–40",
+          "scan": "Physical PDF pages 57–58 (one-based)",
+          "section": "§§95–98, especially §97a",
+          "page_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=58"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.dies.shared-note.allen-greenough.1903",
+           "address": {
+            "kind": "lemma",
+            "lemma": "dies"
+           },
+           "claim": "The grammar gives the fifth-declension paradigm of dies and says it is usually masculine, with feminine singular especially in fixed-time expressions. A reference to an appointed day does not by itself force feminine agreement."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
+       "id": "quaeso",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.allen-greenough.1903",
+         "digital_item": "item.allen-greenough.1903.commons",
+         "role": "grammatical_support",
+         "locator": {
+          "printed": "p. 119",
+          "scan": "Physical PDF page 137 (one-based)",
+          "section": "§206e and its note",
+          "page_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=137"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.quaeso.shared-note.allen-greenough.1903",
+           "address": {
+            "kind": "lemma",
+            "lemma": "quaeso"
+           },
+           "claim": "The defective-verb discussion gives quaeso and quaesumus as request forms and notes occasional other forms in early Latin. The learner summary does not deny those exceptions."
+          }
+         ],
+         "verified_on": "2026-10-17"
+        }
+       ]
+      },
+      {
+       "id": "veneror",
+       "roles": [
+        "grammatical_support"
+       ],
+       "uses": 1,
+       "source_groups": [
+        {
+         "edition": "edition.allen-greenough.1903",
+         "digital_item": "item.allen-greenough.1903.commons",
+         "role": "grammatical_support",
+         "locator": {
+          "printed": "pp. 103–105",
+          "scan": "Physical PDF pages 121–123 (one-based)",
+          "section": "§190 and §190d",
+          "page_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=123"
+         },
+         "entries": [
+          {
+           "id": "use.lemma.veneror.shared-note.allen-greenough.1903",
+           "address": {
+            "kind": "lemma",
+            "lemma": "veneror"
+           },
+           "claim": "The deponent paradigm has passive forms with normally active or reflexive meaning; its gerundive retains passive meaning. This distinguishes the gerundive from the active gerund and does not make every form ending in -ndo passive."
+          }
+         ],
+         "verified_on": "2026-10-17"
         }
        ]
       }

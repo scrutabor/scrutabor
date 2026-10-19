@@ -44,6 +44,48 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up",
+    "section": "Postcommunion, top-right: complete first17 formula words through Deus."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-marci-evangelistae-postcommunio.conclusion-middle.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Postcommunion on printed p.123 prints Per Dominum nostrum ... Deus. in full. Only the middle wording nostrum through Deus (w023–w037) is supplied from this locus; the proper cue supplies Per Dominum. Current Deus, instead of the printed Deus. is declared editorial assembly."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up",
+    "section": "First chant line: terminal four words and response Amen; later dialogue excluded"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-marci-evangelistae-postcommunio.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The first chant line on printed p.226 prints Per omnia saecula saeculorum followed by the marked response Amen. This supports the terminal wording w038–w042 after joining chant syllables; current lowercase per is an editorial join. No Mark-specific response actor or first/last commemoration position is inferred."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
     "printed": "p. 512",
     "scan": "leaf n593 / PDF p. 594",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n593/mode/1up"
@@ -54,10 +96,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited Benziger proper page prints the 20-word prayer body (w001–w020) and the abbreviated Per Dominum cue (w021–w022). The supplied middle and terminal conclusion wording and Amen are not printed in full on this proper page and have separate same-edition dependencies."
     }
    ],
    "verified_on": "2026-08-31"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up",
+    "section": "Rubricae generales115a, Father-directed conclusion"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-marci-evangelistae-postcommunio.conclusion-rule.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a prescribes the full Father-directed conclusion, including Amen. It supports the common wording supplied after this proper page’s abbreviated cue; its own punctuation/case/accent treatment is not the current continuous reader typography."
+    }
+   ],
+   "verified_on": "2026-10-18"
   }
  ],
  "witnesses": []

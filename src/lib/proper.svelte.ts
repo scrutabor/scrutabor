@@ -18,7 +18,7 @@
 
 import { browser, dev } from '$app/environment';
 import { readStored, writeStored } from '$lib/storage';
-import { localDay, localCanon, localDismissal } from '$lib/proper-local';
+import { localDay, localCanon, localDismissal, localCommemoration } from '$lib/proper-local';
 import {
 	canonLookup,
 	CANON_ROLES,
@@ -38,6 +38,15 @@ import {
 	type DismissalProfile,
 	type DismissalPack
 } from '$lib/dismissal';
+import {
+	commemorationLookup,
+	selectedCommemorations,
+	validateCommemorationPack,
+	type ActiveCommemoration,
+	type CommemorationEntry,
+	type CommemorationPack,
+	type SelectedCommemorationBody
+} from '$lib/commemorationes';
 import type { VariantPack } from '$lib/variant-resource';
 import { object, validateLocalizedBody } from '$lib/localized-body';
 import { artifactRequestPath, componentApplies, dayById, SLOT_OF } from '$lib/proprium';
@@ -47,13 +56,17 @@ import type { Lang } from '$lib/i18n';
 import type { ComponentCondition } from '$lib/corpus-metadata';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
-import type { Lexicon } from '$lib/corpus';
+import type { Lexicon, Segment, TextDocument } from '$lib/corpus';
 
 export interface ProperPartPayload {
 	key: string;
 	part: string;
 	slot: string;
 	condition?: ComponentCondition;
+	/** The commemoration this oration belongs to; absent for the Mass's own parts. */
+	commemoration?: string;
+	/** A Secret followed by a commemoration's Secret: its ending is said quietly (RG 480–481). */
+	nonfinal?: boolean;
 	doc: unknown;
 	gloss: unknown;
 	bibliography: TextBibliographyEvidence;
@@ -135,6 +148,7 @@ let failed = $state(false);
 let unwritten = $state(false);
 let canonProfile = $state<CanonProfile | null>(null);
 let dismissalProfile = $state<DismissalProfile | null>(null);
+let commemorations = $state<ActiveCommemoration[]>([]);
 
 // Choices supersede one another. Two picks can be in flight at once — the
 // second is the reader correcting themselves — and the responses come back in
@@ -182,10 +196,44 @@ const held: Record<string, ProperPayload> = {};
 const heldPacks: Record<string, Promise<Record<string, ProperPayload>>> = {};
 const heldCanon: Partial<Record<Lang, Promise<CanonPack>>> = {};
 const heldDismissal: Partial<Record<Lang, Promise<DismissalPack>>> = {};
+const heldCommemoration: Partial<Record<Lang, Promise<CommemorationPack>>> = {};
 
 function forDate(source: ProperPayload, selectedDate: string): ProperPayload {
 	const parts = source.parts.filter((part) => componentApplies(part.condition, selectedDate));
 	return parts.length === source.parts.length ? source : { ...source, parts };
+}
+
+/** RG 480–481: when a commemoration's Secret follows, the Mass's own Secret keeps every word
+ * and id, but the celebrant says its ending and Amen secreto, with no response and no
+ * participation. Only the last Secret keeps the audible terminal. The canonical text is not
+ * changed; the standalone page still shows it as printed. */
+function quietConclusion(doc: unknown): unknown {
+	const text = doc as TextDocument;
+	let first = true;
+	const segments = text.segments.map((segment: Segment) => {
+		if (segment.type !== 'verse') return segment;
+		if (first) {
+			first = false;
+			return segment;
+		}
+		const quiet: Segment = { ...segment, speaker: 'sacerdos', voice: 'secreto' };
+		delete quiet.delivery;
+		delete quiet.participation;
+		return quiet;
+	});
+	return { ...text, segments };
+}
+
+function withNonfinalSecret(
+	parts: ProperPartPayload[],
+	additions: SelectedCommemorationBody[]
+): ProperPartPayload[] {
+	if (!additions.some((body) => body.slot === 'secreta')) return parts;
+	return parts.map((part) =>
+		part.slot === 'secreta' && !part.commemoration
+			? { ...part, nonfinal: true, doc: quietConclusion(part.doc) }
+			: part
+	);
 }
 
 function assembled(
@@ -194,12 +242,20 @@ function assembled(
 	profile: CanonProfile,
 	pack: CanonPack | null,
 	dismissal: DismissalProfile,
-	dismissalPack: DismissalPack | null
+	dismissalPack: DismissalPack | null,
+	active: ActiveCommemoration[] = [],
+	commemorationPack: CommemorationPack | null = null
 ): ProperPayload {
 	const filtered = forDate(source, selectedDate);
-	const parts = [...selectedCanon(profile, pack), ...selectedDismissal(dismissal, dismissalPack)];
+	const additions = selectedCommemorations(active, commemorationPack);
+	const principal = withNonfinalSecret(filtered.parts, additions);
+	const parts = [
+		...additions.map(({ commemoration, ...body }) => ({ ...body, commemoration })),
+		...selectedCanon(profile, pack),
+		...selectedDismissal(dismissal, dismissalPack)
+	];
 	let lex = filtered.lex;
-	for (const extra of [pack, dismissalPack]) {
+	for (const extra of [pack, dismissalPack, commemorationPack]) {
 		if (extra) {
 			lex = {
 				lemmata: { ...lex.lemmata, ...extra.lex.lemmata },
@@ -209,7 +265,7 @@ function assembled(
 	}
 	return {
 		...filtered,
-		parts: [...filtered.parts, ...parts],
+		parts: [...principal, ...parts],
 		lex
 	};
 }
@@ -244,6 +300,14 @@ export const proper = {
 	get paschalDismissal(): boolean {
 		return dismissalProfile?.id === 'paschale';
 	},
+	/** The commemorations the corpus pairs with the chosen date and Mass. */
+	get commemorations(): ActiveCommemoration[] {
+		return commemorations;
+	},
+	/** Occurrences acknowledged on the chosen date even when no Mass is represented. */
+	get occurrences(): CommemorationEntry[] {
+		return date && commemorationLookup ? commemorationLookup.occurrencesOn(date) : [];
+	},
 
 	/** An unresolved initial choice is not permission to render an Ordinary formula. */
 	variantRequired(slot: string): boolean {
@@ -277,6 +341,7 @@ export const proper = {
 		unwritten = false;
 		canonProfile = null;
 		dismissalProfile = null;
+		commemorations = [];
 		loading = false;
 		stopTiming();
 	}
@@ -293,6 +358,7 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	const selected = resolveOrdoChoice(choice.date, choice.mass ?? 'none');
 	canonProfile = null;
 	dismissalProfile = null;
+	commemorations = [];
 	date = selected?.date ?? null;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
@@ -318,20 +384,33 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	loading = true;
 	startTiming();
 	try {
-		if (!canonLookup || !dismissalLookup) throw new Error('dated text resource unavailable');
+		if (!canonLookup || !dismissalLookup || !commemorationLookup)
+			throw new Error('dated text resource unavailable');
 		const profile = canonLookup.resolve(selected.date, next);
 		const dismissal = dismissalLookup.resolve(selected.date, next);
+		const active = commemorationLookup.resolve(selected.date, next);
 		canonProfile = profile;
 		dismissalProfile = dismissal;
+		commemorations = active;
 		const needsPack = CANON_ROLES.some((role) => profile.texts[role] !== ordinaryCanon(role));
-		const [body, pack, dismissalPack] = await Promise.all([
+		const [body, pack, dismissalPack, commemorationPack] = await Promise.all([
 			held[key] ?? load(next, lang),
 			needsPack ? loadCanon(lang) : null,
-			dismissal.text !== ORDINARY_DISMISSAL ? loadDismissal(lang) : null
+			dismissal.text !== ORDINARY_DISMISSAL ? loadDismissal(lang) : null,
+			active.length ? loadCommemoration(lang) : null
 		]);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = assembled(body, selected.date, profile, pack, dismissal, dismissalPack);
+		payload = assembled(
+			body,
+			selected.date,
+			profile,
+			pack,
+			dismissal,
+			dismissalPack,
+			active,
+			commemorationPack
+		);
 	} catch {
 		if (mine !== current) return;
 		failed = true;
@@ -416,9 +495,19 @@ async function loadDismissal(lang: Lang): Promise<DismissalPack> {
 	return loadVariant(lang, 'dismissal', localDismissal, validateDismissalPack, heldDismissal);
 }
 
+async function loadCommemoration(lang: Lang): Promise<CommemorationPack> {
+	return loadVariant(
+		lang,
+		'commemorationes',
+		localCommemoration,
+		validateCommemorationPack,
+		heldCommemoration
+	);
+}
+
 async function loadVariant<Role extends string>(
 	lang: Lang,
-	resource: 'canon' | 'dismissal',
+	resource: 'canon' | 'dismissal' | 'commemorationes',
 	local: (lang: Lang) => Promise<unknown | null>,
 	validate: (value: unknown, lang: Lang) => VariantPack<Role>,
 	cache: Partial<Record<Lang, Promise<VariantPack<Role>>>>

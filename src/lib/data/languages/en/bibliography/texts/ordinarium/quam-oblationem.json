@@ -7,6 +7,26 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 64–65",
+    "scan": "PDF pages 76, 77 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.24e6a5eadd315d87fe80",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “that it may be made for us the body and blood of thy most beloved Son” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 64–65",
     "scan": "scan pp. 76–77"
    },
    "entries": [
@@ -15,14 +35,6 @@
      "address": {
       "kind": "segment",
       "segment": "s01"
-     },
-     "claim": "O God, we ask You graciously to make this offering in all respects"
-    },
-    {
-     "id": "use.en.24e6a5eadd315d87fe80",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
      },
      "claim": "O God, we ask You graciously to make this offering in all respects"
     }
@@ -55,6 +67,26 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
+    "scan": "PDF pages 52 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.b0a45364a3ac58ce052b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historical English source expression: “our Lord Jesus Christ.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 25",
     "scan": "scan p. 52"
    },
    "entries": [
@@ -63,22 +95,6 @@
      "address": {
       "kind": "segment",
       "segment": "s01"
-     },
-     "claim": "O God, we ask You graciously to make this offering in all respects"
-    },
-    {
-     "id": "use.en.4ae28b4b0d6538c60756",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "O God, we ask You graciously to make this offering in all respects"
-    },
-    {
-     "id": "use.en.b0a45364a3ac58ce052b",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
      },
      "claim": "O God, we ask You graciously to make this offering in all respects"
     }

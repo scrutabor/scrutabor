@@ -121,6 +121,7 @@ export default defineConfig({
 				'octave-secret-constructions.spec.ts',
 				'pronoun-context.spec.ts',
 				'ordo-chant-guidance.spec.ts',
+				'munda-ordo.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,
@@ -165,6 +166,7 @@ export default defineConfig({
 				'octave-secret-constructions.spec.ts',
 				'pronoun-context.spec.ts',
 				'ordo-chant-guidance.spec.ts',
+				'munda-ordo.spec.ts',
 				'fonts.spec.ts'
 			],
 			grep: /@reader/,

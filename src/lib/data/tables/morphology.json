@@ -745,7 +745,7 @@
   {"conj":3,"mood":"ind","number":"pl","person":2,"pos":"verb","tense":"impf","voice":"act"},
   {"conj":4,"mood":"ind","number":"pl","person":2,"pos":"verb","tense":"impf","voice":"act"},
   null,
-  null,
+  {"case":"abl","conj":4,"gender":"m","mood":"part","number":"sg","pos":"verb","tense":"perf","voice":"pass"},
   null,
   null,
   null,

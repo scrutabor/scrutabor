@@ -26,6 +26,7 @@
 {#if word && details}
 	<WordPanel
 		{word}
+		{idPrefix}
 		gloss={details.gloss}
 		analysis={details.analysis}
 		{lex}

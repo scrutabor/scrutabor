@@ -1,0 +1,15 @@
+{
+  "id":"proprium.litaniae-maiores-postcommunio",
+  "title":"Vota nostra, quǽsumus, Dómine",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"litaniae-maiores",
+  "sung":false,
+  "st":"working-edition",
+  "ad":18,
+  "adw":16,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w001","f":"Vota","l":"votum","m":85},{"i":"w002","f":"nostra","l":"noster","p":",","m":129,"h":"w001"},{"i":"w003","f":"quǽsumus","l":"quaeso","p":",","m":92,"a":18},{"i":"w004","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w005","f":"pio","l":"pius","m":101,"h":"w006"},{"i":"w006","f":"favóre","l":"favor","m":109},{"i":"w007","f":"proséquere","l":"prosequor","p":":","m":783},{"i":"w008","f":"ut","l":"ut","p":",","m":15},{"i":"w009","f":"dum","l":"dum","m":15},{"i":"w010","f":"dona","l":"donum","m":85},{"i":"w011","f":"tua","l":"tuus","m":129,"h":"w010"},{"i":"w012","f":"in","l":"in","m":0,"h":"w013"},{"i":"w013","f":"tribulatióne","l":"tribulatio","m":45},{"i":"w014","f":"percípimus","l":"percipio","p":",","m":92},{"i":"w015","f":"de","l":"de","m":0,"h":"w016"},{"i":"w016","f":"consolatióne","l":"consolatio","m":45},{"i":"w017","f":"nostra","l":"noster","m":31,"h":"w016"},{"i":"w018","f":"in","l":"in","m":0,"h":"w020"},{"i":"w019","f":"tuo","l":"tuus","m":101,"h":"w020"},{"i":"w020","f":"amóre","l":"amor","m":109},{"i":"w021","f":"crescámus","l":"cresco","p":".","m":161},{"i":"w022","f":"Per","l":"per","m":3,"h":"w023"},{"i":"w023","f":"Dóminum","l":"dominus","m":35},{"i":"w024","f":"nostrum","l":"noster","m":96,"h":"w023"},{"i":"w025","f":"Iesum","l":"Iesus","m":38},{"i":"w026","f":"Christum","l":"Christus","p":",","m":35},{"i":"w027","f":"Fílium","l":"filius","m":35},{"i":"w028","f":"tuum","l":"tuus","p":",","m":96,"h":"w027"},{"i":"w029","f":"qui","l":"qui","m":18,"h":"w031"},{"i":"w030","f":"tecum","l":"tu","m":131},{"i":"w031","f":"vivit","l":"vivo","m":140},{"i":"w032","f":"et","l":"et","m":15},{"i":"w033","f":"regnat","l":"regno","m":119},{"i":"w034","f":"in","l":"in","m":0,"h":"w035"},{"i":"w035","f":"unitáte","l":"unitas","m":45},{"i":"w036","f":"Spíritus","l":"spiritus","m":250},{"i":"w037","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w036"},{"i":"w038","f":"Deus","l":"deus","p":",","m":60},{"i":"w039","f":"per","l":"per","m":3,"h":"w041"},{"i":"w040","f":"ómnia","l":"omnis","m":129,"h":"w041"},{"i":"w041","f":"sǽcula","l":"saeculum","m":85},{"i":"w042","f":"sæculórum","l":"saeculum","p":".","m":145}]},
+    {"id":"s02","type":"verse","speaker":"minister","voice":"clara","delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w043","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

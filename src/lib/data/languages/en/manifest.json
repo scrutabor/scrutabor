@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.10.0",
+  "schema_version": "5.12.0",
   "corpus_schema": "0.21.0",
   "language": "en",
   "direction": "ltr",
@@ -359,6 +359,23 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/ite-missa-est.json"
     },
     {
+      "id": "ordinarium.iube-domine-benedicere",
+      "path": "languages/en/texts/ordinarium/iube-domine-benedicere.json",
+      "title": "Prayer for a blessing before the Gospel"
+    },
+    {
+      "id": "ordinarium.iube-domne-benedicere-in-passione",
+      "path": "languages/en/texts/ordinarium/iube-domne-benedicere-in-passione.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/iube-domne-benedicere-in-passione.json",
+      "title": "Request and blessing before the Passion"
+    },
+    {
+      "id": "ordinarium.iube-domne-benedicere",
+      "path": "languages/en/texts/ordinarium/iube-domne-benedicere.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/iube-domne-benedicere.json",
+      "title": "Request and blessing before the Gospel"
+    },
+    {
       "id": "ordinarium.iudica-me",
       "path": "languages/en/texts/ordinarium/iudica-me.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/iudica-me.json"
@@ -403,6 +420,11 @@
       "id": "ordinarium.misereatur",
       "path": "languages/en/texts/ordinarium/misereatur.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/misereatur.json"
+    },
+    {
+      "id": "ordinarium.munda-cor-meum",
+      "path": "languages/en/texts/ordinarium/munda-cor-meum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/munda-cor-meum.json"
     },
     {
       "id": "ordinarium.nobis-quoque",
@@ -2087,7 +2109,8 @@
     },
     {
       "id": "proprium.dominica-iv-post-pascha-introitus",
-      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-post-pascha-introitus.json"
     },
     {
       "id": "proprium.dominica-iv-post-pascha-offertorium",
@@ -2323,7 +2346,8 @@
     },
     {
       "id": "proprium.dominica-v-post-pascha-introitus",
-      "path": "languages/en/texts/proprium/dominica-v-post-pascha-introitus.json"
+      "path": "languages/en/texts/proprium/dominica-v-post-pascha-introitus.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-v-post-pascha-introitus.json"
     },
     {
       "id": "proprium.dominica-v-post-pascha-offertorium",
@@ -3318,6 +3342,14 @@
     {
       "id": "proprium.in-octava-nativitatis-secreta",
       "path": "languages/en/texts/proprium/in-octava-nativitatis-secreta.json"
+    },
+    {
+      "id": "proprium.litaniae-maiores-collecta",
+      "path": "languages/en/texts/proprium/litaniae-maiores-collecta.json"
+    },
+    {
+      "id": "proprium.litaniae-maiores-postcommunio",
+      "path": "languages/en/texts/proprium/litaniae-maiores-postcommunio.json"
     },
     {
       "id": "proprium.maternitas-beatae-mariae-virginis-alleluia",
@@ -4784,6 +4816,7 @@
   "citations": "languages/en/citations.json",
   "concordance": "languages/en/concordance.json",
   "formularies": "languages/en/formularies.json",
+  "commemorationes": "languages/en/commemorationes.json",
   "bibliography": {
     "catalog": "languages/en/bibliography/catalog.json",
     "index": "languages/en/bibliography/index.json"

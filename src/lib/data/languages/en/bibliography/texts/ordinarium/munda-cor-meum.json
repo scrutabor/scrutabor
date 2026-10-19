@@ -1,0 +1,27 @@
+{
+ "id": "ordinarium.munda-cor-meum",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "40",
+    "scan": "PDF page 52"
+   },
+   "entries": [
+    {
+     "id": "use.en.munda-cor-meum.short-conclusion",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English attestation of the short conclusion “Through Christ our Lord. Amen.”, printed verbatim here."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

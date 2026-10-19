@@ -77,6 +77,7 @@ describe('the downloaded copy covers the whole site', () => {
 			['/pl/lemma', 'lemma'],
 			['/pl/formularium', 'formularies'],
 			['/pl/formularium/dominica-i-adventus', 'formularium'],
+			['/pl/commemoratio/litaniae-maiores', 'commemoratio'],
 			['/pl/bibliographia', 'bibliographia'],
 			['/pl/editio', 'editio'],
 			['/pl/orationes/pater-noster', 'reading']

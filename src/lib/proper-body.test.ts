@@ -1,7 +1,7 @@
 import { expect, it, vi } from 'vitest';
 vi.mock('$app/environment', () => ({ browser: true, dev: false }));
 vi.mock('$lib/storage', () => ({ readStored: () => null, writeStored: () => {} }));
-import { properData, canonData, dismissalData } from './loaders';
+import { properData, canonData, dismissalData, commemorationData } from './loaders';
 import type { Lang } from './i18n';
 import { PROPER_DAYS, artifactPath } from './proprium';
 import canonTable from './data/canon.json';
@@ -192,6 +192,7 @@ async function transport(lang: Lang, mutate?: (p: Payload) => void) {
 			json: async () => {
 				if (url.includes('/canon/')) return canonData(lang);
 				if (url.includes('/dismissal/')) return dismissalData(lang);
+				if (url.includes('/commemorationes/')) return commemorationData(lang);
 				const body = structuredClone(original!);
 				if (++n === 1) mutate?.(body);
 				return { days: { [choice.mass]: body } };
@@ -232,7 +233,9 @@ it.each(['pl', 'en'] as const)(
 						? canonData(lang)
 						: url.includes('/dismissal/')
 							? dismissalData(lang)
-							: { days }
+							: url.includes('/commemorationes/')
+								? commemorationData(lang)
+								: { days }
 			}))
 		);
 		expect(PROPER_DAYS).toHaveLength(113);
@@ -287,6 +290,7 @@ for (const lateBad of [false, true])
 					json: async () => {
 						if (url.includes('/canon/')) return canonData('en');
 						if (url.includes('/dismissal/')) return dismissalData('en');
+						if (url.includes('/commemorationes/')) return commemorationData('en');
 						if (url === artifactPath(choice.mass, 'en'))
 							return { days: { [choice.mass]: await pending } };
 						return { days: { [newer.mass]: await properData(newer.mass, 'en') } };

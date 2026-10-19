@@ -5,6 +5,10 @@ import manifestData from './data/manifest.json';
 import formularyData from './data/formularies.json';
 import metricsData from './data/metrics.json';
 import { LANGS, type Lang } from './i18n';
+import {
+	validateOrdinaryPrescriptions,
+	type OrdinaryPrescriptions
+} from './ordinary-prescriptions';
 
 export interface TextMetadata {
 	id: string;
@@ -36,6 +40,7 @@ interface LanguageManifest {
 	citations: string;
 	concordance: string;
 	formularies: string;
+	commemorationes: string;
 	bibliography: BibliographyResources;
 }
 
@@ -80,6 +85,7 @@ export interface FormularyComponentMetadata {
 }
 
 export interface FormularyMetadata {
+	ordinary: OrdinaryPrescriptions;
 	id: string;
 	order: number;
 	collection: string;
@@ -98,6 +104,12 @@ interface FormularyCatalog {
 }
 
 interface LanguageFormularyCatalog {
+	schema_version: string;
+	language: Lang;
+	titles: { id: string; title: string }[];
+}
+
+interface LanguageCommemorationCatalog {
 	schema_version: string;
 	language: Lang;
 	titles: { id: string; title: string }[];
@@ -122,6 +134,9 @@ const LANGUAGE_MANIFESTS = Object.fromEntries(
 const LANGUAGE_FORMULARY_MODULES = import.meta.glob('./data/languages/*/formularies.json', {
 	eager: true
 }) as Record<string, JsonModule>;
+const LANGUAGE_COMMEMORATION_MODULES = import.meta.glob('./data/languages/*/commemorationes.json', {
+	eager: true
+}) as Record<string, JsonModule>;
 
 if (ROOT_MANIFEST.languages.map(({ id }) => id).join(',') !== LANGS.join(',')) {
 	throw new Error('the reader-edition languages and the interface-language registry differ');
@@ -135,6 +150,19 @@ if (ROOT_MANIFEST.base.metrics !== 'metrics.json') {
 }
 
 const FORMULARY_CATALOG = formularyData as unknown as FormularyCatalog;
+if (
+	!FORMULARY_CATALOG ||
+	typeof FORMULARY_CATALOG !== 'object' ||
+	FORMULARY_CATALOG.schema_version !== '1.3.0' ||
+	!Array.isArray(FORMULARY_CATALOG.formularies) ||
+	!FORMULARY_CATALOG.formularies.length
+)
+	throw new Error('invalid neutral formulary catalogue');
+for (const formulary of FORMULARY_CATALOG.formularies) {
+	if (!formulary || typeof formulary !== 'object' || Array.isArray(formulary))
+		throw new Error('invalid neutral formulary record');
+	validateOrdinaryPrescriptions(formulary.ordinary);
+}
 export const FORMULARY_METADATA = FORMULARY_CATALOG.formularies;
 export const CORPUS_METRICS = metricsData as unknown as CorpusMetrics;
 const FORMULARY_IDS = new Set(FORMULARY_METADATA.map(({ id }) => id));
@@ -144,7 +172,8 @@ const FORMULARY_TITLES = Object.fromEntries(
 		const module = LANGUAGE_FORMULARY_MODULES[`./data/${path}`];
 		if (!module) throw new Error(`${language} names ${path}, which was not vendored`);
 		const catalog = module.default as LanguageFormularyCatalog;
-		if (catalog.language !== language) throw new Error(`${path} calls itself ${catalog.language}`);
+		if (catalog.schema_version !== '1.2.0' || catalog.language !== language)
+			throw new Error(`${path} has an invalid localized title contract`);
 		const titles = new Map(catalog.titles.map((entry) => [entry.id, entry.title]));
 		if (titles.size !== FORMULARY_IDS.size || [...FORMULARY_IDS].some((id) => !titles.has(id))) {
 			throw new Error(`${path} does not title the neutral formulary catalogue exactly`);
@@ -156,6 +185,28 @@ const FORMULARY_TITLES = Object.fromEntries(
 export function formularyTitle(id: string, language: Lang): string {
 	const title = FORMULARY_TITLES[language].get(id);
 	if (!title) throw new Error(`${language} has no title for formulary ${id}`);
+	return title;
+}
+
+if (ROOT_MANIFEST.base.commemorationes !== 'commemorationes.json') {
+	throw new Error(`the root manifest names an unexpected commemoration resource`);
+}
+const COMMEMORATION_TITLES = Object.fromEntries(
+	LANGS.map((language) => {
+		const path = LANGUAGE_MANIFESTS[language].commemorationes;
+		const module = LANGUAGE_COMMEMORATION_MODULES[`./data/${path}`];
+		if (!module) throw new Error(`${language} names ${path}, which was not vendored`);
+		const catalog = module.default as LanguageCommemorationCatalog;
+		if (catalog.schema_version !== '1.0.0' || catalog.language !== language)
+			throw new Error(`${path} has an invalid localized commemoration title contract`);
+		return [language, new Map(catalog.titles.map((entry) => [entry.id, entry.title]))];
+	})
+) as Record<Lang, Map<string, string>>;
+
+/** The localized name of a commemoration, from its language package alone. */
+export function commemorationTitle(id: string, language: Lang): string {
+	const title = COMMEMORATION_TITLES[language].get(id);
+	if (!title) throw new Error(`${language} has no title for commemoration ${id}`);
 	return title;
 }
 

@@ -11,6 +11,7 @@ import {
 	appLayoutData,
 	ordoData,
 	properData,
+	commemorationPageData,
 	readingData
 } from '$lib/loaders';
 import type { Lang } from '$lib/i18n';
@@ -90,6 +91,12 @@ export const ROUTES: { name: string; key: string; pattern: RegExp; params: strin
 		params: ['lang', 'formulary']
 	},
 	{
+		name: 'commemoratio',
+		key: '/app/[lang=lang]/commemoratio/[commemoration]',
+		pattern: route('/commemoratio/([^/]+)'),
+		params: ['lang', 'commemoration']
+	},
+	{
 		name: 'bibliographia',
 		key: '/app/[lang=lang]/bibliographia',
 		pattern: route('/bibliographia'),
@@ -147,6 +154,8 @@ export async function pageData(found: RouteMatch): Promise<Record<string, unknow
 			return await ordoData(lang, found.params.movement);
 		case 'formularium':
 			return await properData(found.params.formulary, lang);
+		case 'commemoratio':
+			return await commemorationPageData(found.params.commemoration, lang);
 		case 'concept':
 			return conceptData(lang, found.params.concept);
 		case 'bibliographia':

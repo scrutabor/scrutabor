@@ -6,6 +6,1054 @@
    "digital_item": "item.catholic-girls-guide-1906.scan",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "p. 543",
+    "scan": "PDF pages 551 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.04062b03ddd431537cc0",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.09fa136d31ece027be8c",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Historical English source expression: “Jesus most amiable” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.0c52c03a4d85ab6d8822",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.21d88e0cf86311b954e8",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.2b1d5d4f334c97fe2637",
+     "address": {
+      "kind": "segment",
+      "segment": "s034"
+     },
+     "claim": "Historical English source expression: “Jesus, Angel of the great council” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.37ef9c01157487d8a242",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "Historical English source expression: “Jesus most admirable” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.40d315ea2783cefec927",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Historical English source expression: “Holy Trinity, one God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.4aa6292e911b277d3757",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.4fd499813af1303f0cf2",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.56cdda2d0571ee49f497",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.5a08d4bd1b4eb798972f",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.65ddd045cc7f91a34b7b",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Historical English source expression: “Christ, have mercy on us” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.696405bcb9be5b4b987e",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.716199dc8478e7593195",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Historical English source expression: “God the Holy Ghost” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.7197d95174cccd8f115e",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Historical English source expression: “Jesus, splendor of the Father” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.72721e327391bb62fc9d",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Historical English source expression: “God the Father of heaven” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.75423223a75b5a1f189f",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9005b7915e82f042cadf",
+     "address": {
+      "kind": "segment",
+      "segment": "s015"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.97851d0df2982546322c",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9d28d24d54a6ed7bdfb8",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Historical English source expression: “Jesus, King of glory” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.a18550f948433b00897f",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "Historical English source expression: “Jesus, Son of the Virgin Mary” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.a287a5b220b373145d6d",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Historical English source expression: “Jesus, hear us.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.b4718d754417af26a28f",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.b7059959693155eb5488",
+     "address": {
+      "kind": "segment",
+      "segment": "s005"
+     },
+     "claim": "Historical English source expression: “Jesus, graciously hear us.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.bb4f4bba4ed7b0e39094",
+     "address": {
+      "kind": "segment",
+      "segment": "s014"
+     },
+     "claim": "Historical English source expression: “Jesus, Son of the living God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.bddf40ca462d947cdd1e",
+     "address": {
+      "kind": "segment",
+      "segment": "s018"
+     },
+     "claim": "Historical English source expression: “Jesus, brightness of eternal light” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.c1ee6d5919e2a27e384f",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.cc4207273fd070e92dcf",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Historical English source expression: “Jesus most powerful” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d26cb5c678118e237359",
+     "address": {
+      "kind": "segment",
+      "segment": "s032"
+     },
+     "claim": "Historical English source expression: “Jesus, Father of the world to come” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d46203495d4a8fd94fac",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.e6e2d325676725c06a20",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Historical English source expression: “God the Son, Redeemer of the world” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.e71cad3270944d504bca",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.ea67f3646c57dd454afc",
+     "address": {
+      "kind": "segment",
+      "segment": "s030"
+     },
+     "claim": "Historical English source expression: “Jesus, mighty God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.f954fc906e14ab513ed5",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 544",
+    "scan": "PDF pages 552 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.03b51329a713e48201ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s054"
+     },
+     "claim": "Historical English source expression: “Jesus, zealous for souls” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.10776c4c0e86595d810e",
+     "address": {
+      "kind": "segment",
+      "segment": "s073"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.1c336f673068ee92159c",
+     "address": {
+      "kind": "segment",
+      "segment": "s042"
+     },
+     "claim": "Historical English source expression: “Jesus meek and humble of heart” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.217e7e8b6146469aaed4",
+     "address": {
+      "kind": "segment",
+      "segment": "s077"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.23b1792454db8c029dd4",
+     "address": {
+      "kind": "segment",
+      "segment": "s076"
+     },
+     "claim": "Historical English source expression: “Jesus, King of patriarchs” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.2812d4572f8c02ca1e5f",
+     "address": {
+      "kind": "segment",
+      "segment": "s069"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.313aa215447d31997694",
+     "address": {
+      "kind": "segment",
+      "segment": "s072"
+     },
+     "claim": "Historical English source expression: “Jesus, our way and our life” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.332e728d1553ba68bb84",
+     "address": {
+      "kind": "segment",
+      "segment": "s051"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.3cfeecafd9bdb99cc7e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s075"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.3d6648a85cf8a61a4ab5",
+     "address": {
+      "kind": "segment",
+      "segment": "s087"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.406027c5a18968fba6a7",
+     "address": {
+      "kind": "segment",
+      "segment": "s088"
+     },
+     "claim": "Historical English source expression: “Jesus, crown of all saints” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.418f3ea2866f3419d0d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s086"
+     },
+     "claim": "Historical English source expression: “Jesus, purity of virgins” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.423ba5fbb8038ffaf21b",
+     "address": {
+      "kind": "segment",
+      "segment": "s071"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.52941e4b2a51bac8b6b1",
+     "address": {
+      "kind": "segment",
+      "segment": "s084"
+     },
+     "claim": "Historical English source expression: “Jesus, light of confessors” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.53e777a98d57ab167adc",
+     "address": {
+      "kind": "segment",
+      "segment": "s070"
+     },
+     "claim": "Historical English source expression: “Jesus, infinite goodness” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.587d9ba1e299aab8795e",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.5b7ad71d1009a167e143",
+     "address": {
+      "kind": "segment",
+      "segment": "s065"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.5bb7abe59f3bc5036cb5",
+     "address": {
+      "kind": "segment",
+      "segment": "s083"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.61dd036864bada34b8d3",
+     "address": {
+      "kind": "segment",
+      "segment": "s060"
+     },
+     "claim": "Historical English source expression: “Jesus, Father of the poor” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.6294df7e893893ffb700",
+     "address": {
+      "kind": "segment",
+      "segment": "s038"
+     },
+     "claim": "Historical English source expression: “Jesus most patient” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.65f29e62a8633bf4abbc",
+     "address": {
+      "kind": "segment",
+      "segment": "s056"
+     },
+     "claim": "Historical English source expression: “Jesus, our God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.692f34de03f53879b54d",
+     "address": {
+      "kind": "segment",
+      "segment": "s058"
+     },
+     "claim": "Historical English source expression: “Jesus, our refuge” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.82f7e4417fb6d2f6fe99",
+     "address": {
+      "kind": "segment",
+      "segment": "s055"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.8811c9dc67dd301727f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s085"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.88457c8c1104cd4de8f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s057"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.88c932f54026a9d2636f",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.89bfe452241d6c3c6626",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.8d80a765080753e08ebd",
+     "address": {
+      "kind": "segment",
+      "segment": "s082"
+     },
+     "claim": "Historical English source expression: “Jesus, strength of martyrs” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.8dd09133528b6d9fb6a9",
+     "address": {
+      "kind": "segment",
+      "segment": "s080"
+     },
+     "claim": "Historical English source expression: “Jesus, Teacher of Evangelists”. The addressed English wording adds “the” before “Evangelists” and changes capitalization and terminal punctuation; it is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.8fdcf0dde4e0eb4e4cf4",
+     "address": {
+      "kind": "segment",
+      "segment": "s074"
+     },
+     "claim": "Historical English source expression: “Jesus, joy of angels” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.9259cd3975f236a86857",
+     "address": {
+      "kind": "segment",
+      "segment": "s089"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9507590ba94be72be242",
+     "address": {
+      "kind": "segment",
+      "segment": "s049"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9b0243d5bb5bbfaa9126",
+     "address": {
+      "kind": "segment",
+      "segment": "s067"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9d9e55a26f78dac19fec",
+     "address": {
+      "kind": "segment",
+      "segment": "s078"
+     },
+     "claim": "Historical English source expression: “Jesus, Master of the apostles” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.a2870a537fb2dfccb912",
+     "address": {
+      "kind": "segment",
+      "segment": "s066"
+     },
+     "claim": "Historical English source expression: “Jesus, true light” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.a8f656952f633f759205",
+     "address": {
+      "kind": "segment",
+      "segment": "s039"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.bb7c930374d965e0c98b",
+     "address": {
+      "kind": "segment",
+      "segment": "s050"
+     },
+     "claim": "Historical English source expression: “Jesus, author of life” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.bc3a4d92a39dfb11f6aa",
+     "address": {
+      "kind": "segment",
+      "segment": "s062"
+     },
+     "claim": "Historical English source expression: “Jesus, treasure of the faithful” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.bf6d93c5a0fdcb405657",
+     "address": {
+      "kind": "segment",
+      "segment": "s068"
+     },
+     "claim": "Historical English source expression: “Jesus, eternal wisdom” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.c3ca0480c61ff2065fa7",
+     "address": {
+      "kind": "segment",
+      "segment": "s059"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.c80c4047dcd8dd3bdb5e",
+     "address": {
+      "kind": "segment",
+      "segment": "s044"
+     },
+     "claim": "Historical English source expression: “Jesus, lover of chastity” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.ca370c4065675e20b7e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.cc10f7f2e255ee803383",
+     "address": {
+      "kind": "segment",
+      "segment": "s064"
+     },
+     "claim": "Historical English source expression: “Jesus, Good Shepherd” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d620146b69885b993eb9",
+     "address": {
+      "kind": "segment",
+      "segment": "s040"
+     },
+     "claim": "Historical English source expression: “Jesus most obedient” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d6393cef4fca2ce37863",
+     "address": {
+      "kind": "segment",
+      "segment": "s061"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.e50de8320c019cf4abde",
+     "address": {
+      "kind": "segment",
+      "segment": "s053"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.e6c84cbfe580cf699a21",
+     "address": {
+      "kind": "segment",
+      "segment": "s063"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.ef80ac9fcb3517c3cf2b",
+     "address": {
+      "kind": "segment",
+      "segment": "s081"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.f70d50c0bf0e5da8fd4d",
+     "address": {
+      "kind": "segment",
+      "segment": "s079"
+     },
+     "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.fccc4c01a991af40e336",
+     "address": {
+      "kind": "segment",
+      "segment": "s048"
+     },
+     "claim": "Historical English source expression: “Jesus, God of peace” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 545",
+    "scan": "PDF pages 553 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.01564e1c0d6955073739",
+     "address": {
+      "kind": "segment",
+      "segment": "s111"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.02f6a8f516cc5a4cf655",
+     "address": {
+      "kind": "segment",
+      "segment": "s129"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.07580d6984219115341a",
+     "address": {
+      "kind": "segment",
+      "segment": "s091"
+     },
+     "claim": "Historical English source expression: “spare us, O Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.078d8f57dd6702138b1a",
+     "address": {
+      "kind": "segment",
+      "segment": "s106"
+     },
+     "claim": "Historical English source expression: “From the neglect of Thy inspirations” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.167a734d471fc4301e73",
+     "address": {
+      "kind": "segment",
+      "segment": "s113"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.23dccce7a5e43ec3f6d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s131"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.27cc0eff4ad0cc5a96c9",
+     "address": {
+      "kind": "segment",
+      "segment": "s101"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.3c79962b70d4a21224da",
+     "address": {
+      "kind": "segment",
+      "segment": "s099"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.42480176912a93343883",
+     "address": {
+      "kind": "segment",
+      "segment": "s103"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.9368e3ca21374ffbecc7",
+     "address": {
+      "kind": "segment",
+      "segment": "s130"
+     },
+     "claim": "Historical English source expression: “By Thy institution of the Most Holy Eucharist” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.939680fdb3ce1d0cd233",
+     "address": {
+      "kind": "segment",
+      "segment": "s098"
+     },
+     "claim": "Historical English source expression: “From Thy wrath” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.9608f03a2467aaaf3c85",
+     "address": {
+      "kind": "segment",
+      "segment": "s123"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.a3fd6598fb8f87061b7a",
+     "address": {
+      "kind": "segment",
+      "segment": "s119"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.a422bd0a2a289bc3e4d7",
+     "address": {
+      "kind": "segment",
+      "segment": "s121"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.a44e25b974a46e584bf2",
+     "address": {
+      "kind": "segment",
+      "segment": "s105"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.a6ff5031cde342fb0c14",
+     "address": {
+      "kind": "segment",
+      "segment": "s135"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.abda17e1f51932dcf408",
+     "address": {
+      "kind": "segment",
+      "segment": "s125"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.adeb8d6f50508f1f1c94",
+     "address": {
+      "kind": "segment",
+      "segment": "s115"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.b7d797794bc1cb1d3d66",
+     "address": {
+      "kind": "segment",
+      "segment": "s096"
+     },
+     "claim": "Historical English source expression: “From all sin” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.c2501692ce712eb848a5",
+     "address": {
+      "kind": "segment",
+      "segment": "s094"
+     },
+     "claim": "Historical English source expression: “From all evil” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.c46d7bec8c0e27e51082",
+     "address": {
+      "kind": "segment",
+      "segment": "s093"
+     },
+     "claim": "Historical English source expression: “graciously hear us, O Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d03caecbe2c404008388",
+     "address": {
+      "kind": "segment",
+      "segment": "s133"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.d65cd41b6e4a51d9875c",
+     "address": {
+      "kind": "segment",
+      "segment": "s097"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.e0c275aa04ab5931f3d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s109"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.e5f60243452c26f09c92",
+     "address": {
+      "kind": "segment",
+      "segment": "s127"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.ea98afed88fe7bc5a019",
+     "address": {
+      "kind": "segment",
+      "segment": "s102"
+     },
+     "claim": "Historical English source expression: “From the spirit of fornication” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.edbf815bc347467ada81",
+     "address": {
+      "kind": "segment",
+      "segment": "s107"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.ee67e3784a26fcb252fb",
+     "address": {
+      "kind": "segment",
+      "segment": "s117"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.f30316c0b5adee2f6385",
+     "address": {
+      "kind": "segment",
+      "segment": "s100"
+     },
+     "claim": "Historical English source expression: “From the snares of the devil” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.f71eef86b992f2e50981",
+     "address": {
+      "kind": "segment",
+      "segment": "s095"
+     },
+     "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 546",
+    "scan": "PDF pages 554 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.1219e1ac25fe2c4e40d5",
+     "address": {
+      "kind": "segment",
+      "segment": "s140"
+     },
+     "claim": "Historical English source expression: “Lamb of God, etc.” The addressed English expands an explicitly abbreviated or instructed repetition; it is not a separately printed full repetition."
+    },
+    {
+     "id": "use.en.202f461db9fde3da8f9c",
+     "address": {
+      "kind": "segment",
+      "segment": "s145"
+     },
+     "claim": "Historical English source expression: “O Lord Jesus Christ, Who hast said: Ask, and ye shall receive; seek, and ye shall find; knock, and it shall be opened unto you; mercifully attend to our supplications, and grant us the gift of Thy divine charity, that we may ever love Thee with our whole hearts and never desist from Thy praise” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.2415845343bd18a78332",
+     "address": {
+      "kind": "segment",
+      "segment": "s142"
+     },
+     "claim": "Historical English source expression: “Jesus, hear us.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.27ebdfd16dd9e34cd60b",
+     "address": {
+      "kind": "segment",
+      "segment": "s144"
+     },
+     "claim": "Historical English source expression: “Let us pray.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.655efce3e73d0f144047",
+     "address": {
+      "kind": "segment",
+      "segment": "s143"
+     },
+     "claim": "Historical English source expression: “Jesus, graciously hear us.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.6a471cb3df13b4d26f76",
+     "address": {
+      "kind": "segment",
+      "segment": "s146"
+     },
+     "claim": "Historical English source expression: “Give us, O Lord, a perpetual fear and love of Thy holy name, for Thou never ceasest to direct and govern by Thy grace those whom Thou instructest in the solidity of Thy love. Who livest and reignest world without end. Amen.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.7ccb42abd0200e11a68b",
+     "address": {
+      "kind": "segment",
+      "segment": "s141"
+     },
+     "claim": "Historical English source expression: “have mercy on us, O Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.bd162ee912dddd55f439",
+     "address": {
+      "kind": "segment",
+      "segment": "s139"
+     },
+     "claim": "Historical English source expression: “graciously hear us, O Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.c6d8a6629b00bd3a9411",
+     "address": {
+      "kind": "segment",
+      "segment": "s137"
+     },
+     "claim": "Historical English source expression: “spare us, O Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d6ea88a2965d88832340",
+     "address": {
+      "kind": "segment",
+      "segment": "s136"
+     },
+     "claim": "Historical English source expression: “Lamb of God, Who takest away the sins of the world” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.e11572740b1a7afeb077",
+     "address": {
+      "kind": "segment",
+      "segment": "s138"
+     },
+     "claim": "Historical English source expression: “Lamb of God, etc.” The addressed English expands an explicitly abbreviated or instructed repetition; it is not a separately printed full repetition."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 553",
     "scan": "scan 561"
    },
@@ -103,358 +1151,6 @@
    },
    "entries": [
     {
-     "id": "use.en.01564e1c0d6955073739",
-     "address": {
-      "kind": "segment",
-      "segment": "s111"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.02f6a8f516cc5a4cf655",
-     "address": {
-      "kind": "segment",
-      "segment": "s129"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.03b51329a713e48201ba",
-     "address": {
-      "kind": "segment",
-      "segment": "s054"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.04062b03ddd431537cc0",
-     "address": {
-      "kind": "segment",
-      "segment": "s007"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.07580d6984219115341a",
-     "address": {
-      "kind": "segment",
-      "segment": "s091"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.078d8f57dd6702138b1a",
-     "address": {
-      "kind": "segment",
-      "segment": "s106"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.09fa136d31ece027be8c",
-     "address": {
-      "kind": "segment",
-      "segment": "s026"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.0c52c03a4d85ab6d8822",
-     "address": {
-      "kind": "segment",
-      "segment": "s021"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.10776c4c0e86595d810e",
-     "address": {
-      "kind": "segment",
-      "segment": "s073"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.1219e1ac25fe2c4e40d5",
-     "address": {
-      "kind": "segment",
-      "segment": "s140"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.167a734d471fc4301e73",
-     "address": {
-      "kind": "segment",
-      "segment": "s113"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.1c336f673068ee92159c",
-     "address": {
-      "kind": "segment",
-      "segment": "s042"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.202f461db9fde3da8f9c",
-     "address": {
-      "kind": "segment",
-      "segment": "s145"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.217e7e8b6146469aaed4",
-     "address": {
-      "kind": "segment",
-      "segment": "s077"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.21d88e0cf86311b954e8",
-     "address": {
-      "kind": "segment",
-      "segment": "s037"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.23b1792454db8c029dd4",
-     "address": {
-      "kind": "segment",
-      "segment": "s076"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.23dccce7a5e43ec3f6d9",
-     "address": {
-      "kind": "segment",
-      "segment": "s131"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.2415845343bd18a78332",
-     "address": {
-      "kind": "segment",
-      "segment": "s142"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.27cc0eff4ad0cc5a96c9",
-     "address": {
-      "kind": "segment",
-      "segment": "s101"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.27ebdfd16dd9e34cd60b",
-     "address": {
-      "kind": "segment",
-      "segment": "s144"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.2812d4572f8c02ca1e5f",
-     "address": {
-      "kind": "segment",
-      "segment": "s069"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.2b1d5d4f334c97fe2637",
-     "address": {
-      "kind": "segment",
-      "segment": "s034"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.313aa215447d31997694",
-     "address": {
-      "kind": "segment",
-      "segment": "s072"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.332e728d1553ba68bb84",
-     "address": {
-      "kind": "segment",
-      "segment": "s051"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.37ef9c01157487d8a242",
-     "address": {
-      "kind": "segment",
-      "segment": "s028"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.3c79962b70d4a21224da",
-     "address": {
-      "kind": "segment",
-      "segment": "s099"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.3cfeecafd9bdb99cc7e4",
-     "address": {
-      "kind": "segment",
-      "segment": "s075"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.3d6648a85cf8a61a4ab5",
-     "address": {
-      "kind": "segment",
-      "segment": "s087"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.406027c5a18968fba6a7",
-     "address": {
-      "kind": "segment",
-      "segment": "s088"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.40d315ea2783cefec927",
-     "address": {
-      "kind": "segment",
-      "segment": "s012"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.418f3ea2866f3419d0d9",
-     "address": {
-      "kind": "segment",
-      "segment": "s086"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.423ba5fbb8038ffaf21b",
-     "address": {
-      "kind": "segment",
-      "segment": "s071"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.42480176912a93343883",
-     "address": {
-      "kind": "segment",
-      "segment": "s103"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.4aa6292e911b277d3757",
-     "address": {
-      "kind": "segment",
-      "segment": "s033"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.4fd499813af1303f0cf2",
-     "address": {
-      "kind": "segment",
-      "segment": "s009"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.52941e4b2a51bac8b6b1",
-     "address": {
-      "kind": "segment",
-      "segment": "s084"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.53e777a98d57ab167adc",
-     "address": {
-      "kind": "segment",
-      "segment": "s070"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.56cdda2d0571ee49f497",
-     "address": {
-      "kind": "segment",
-      "segment": "s027"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.587d9ba1e299aab8795e",
-     "address": {
-      "kind": "segment",
-      "segment": "s047"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.5a08d4bd1b4eb798972f",
-     "address": {
-      "kind": "segment",
-      "segment": "s023"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.5b7ad71d1009a167e143",
-     "address": {
-      "kind": "segment",
-      "segment": "s065"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.5bb7abe59f3bc5036cb5",
-     "address": {
-      "kind": "segment",
-      "segment": "s083"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.61dd036864bada34b8d3",
-     "address": {
-      "kind": "segment",
-      "segment": "s060"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.6294df7e893893ffb700",
-     "address": {
-      "kind": "segment",
-      "segment": "s038"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.633be948085f59444a29",
      "address": {
       "kind": "segment",
@@ -463,658 +1159,10 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.655efce3e73d0f144047",
-     "address": {
-      "kind": "segment",
-      "segment": "s143"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.65ddd045cc7f91a34b7b",
-     "address": {
-      "kind": "segment",
-      "segment": "s002"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.65f29e62a8633bf4abbc",
-     "address": {
-      "kind": "segment",
-      "segment": "s056"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.692f34de03f53879b54d",
-     "address": {
-      "kind": "segment",
-      "segment": "s058"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.696405bcb9be5b4b987e",
-     "address": {
-      "kind": "segment",
-      "segment": "s031"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.6a471cb3df13b4d26f76",
-     "address": {
-      "kind": "segment",
-      "segment": "s146"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.716199dc8478e7593195",
-     "address": {
-      "kind": "segment",
-      "segment": "s010"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.7197d95174cccd8f115e",
-     "address": {
-      "kind": "segment",
-      "segment": "s016"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.72721e327391bb62fc9d",
-     "address": {
-      "kind": "segment",
-      "segment": "s006"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.75423223a75b5a1f189f",
-     "address": {
-      "kind": "segment",
-      "segment": "s025"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.7ccb42abd0200e11a68b",
-     "address": {
-      "kind": "segment",
-      "segment": "s141"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.82f7e4417fb6d2f6fe99",
-     "address": {
-      "kind": "segment",
-      "segment": "s055"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8811c9dc67dd301727f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s085"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.88457c8c1104cd4de8f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s057"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.88c932f54026a9d2636f",
-     "address": {
-      "kind": "segment",
-      "segment": "s041"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.89bfe452241d6c3c6626",
-     "address": {
-      "kind": "segment",
-      "segment": "s045"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.8cdb2f18663753068b05",
      "address": {
       "kind": "segment",
       "segment": "s003"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8d80a765080753e08ebd",
-     "address": {
-      "kind": "segment",
-      "segment": "s082"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8dd09133528b6d9fb6a9",
-     "address": {
-      "kind": "segment",
-      "segment": "s080"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8fdcf0dde4e0eb4e4cf4",
-     "address": {
-      "kind": "segment",
-      "segment": "s074"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9005b7915e82f042cadf",
-     "address": {
-      "kind": "segment",
-      "segment": "s015"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9259cd3975f236a86857",
-     "address": {
-      "kind": "segment",
-      "segment": "s089"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9368e3ca21374ffbecc7",
-     "address": {
-      "kind": "segment",
-      "segment": "s130"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.939680fdb3ce1d0cd233",
-     "address": {
-      "kind": "segment",
-      "segment": "s098"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9507590ba94be72be242",
-     "address": {
-      "kind": "segment",
-      "segment": "s049"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9608f03a2467aaaf3c85",
-     "address": {
-      "kind": "segment",
-      "segment": "s123"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.97851d0df2982546322c",
-     "address": {
-      "kind": "segment",
-      "segment": "s035"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9b0243d5bb5bbfaa9126",
-     "address": {
-      "kind": "segment",
-      "segment": "s067"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9d28d24d54a6ed7bdfb8",
-     "address": {
-      "kind": "segment",
-      "segment": "s020"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.9d9e55a26f78dac19fec",
-     "address": {
-      "kind": "segment",
-      "segment": "s078"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a18550f948433b00897f",
-     "address": {
-      "kind": "segment",
-      "segment": "s024"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a2870a537fb2dfccb912",
-     "address": {
-      "kind": "segment",
-      "segment": "s066"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a287a5b220b373145d6d",
-     "address": {
-      "kind": "segment",
-      "segment": "s004"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a3fd6598fb8f87061b7a",
-     "address": {
-      "kind": "segment",
-      "segment": "s119"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a422bd0a2a289bc3e4d7",
-     "address": {
-      "kind": "segment",
-      "segment": "s121"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a44e25b974a46e584bf2",
-     "address": {
-      "kind": "segment",
-      "segment": "s105"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a6ff5031cde342fb0c14",
-     "address": {
-      "kind": "segment",
-      "segment": "s135"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.a8f656952f633f759205",
-     "address": {
-      "kind": "segment",
-      "segment": "s039"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.abda17e1f51932dcf408",
-     "address": {
-      "kind": "segment",
-      "segment": "s125"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.adeb8d6f50508f1f1c94",
-     "address": {
-      "kind": "segment",
-      "segment": "s115"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.b4718d754417af26a28f",
-     "address": {
-      "kind": "segment",
-      "segment": "s013"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.b7059959693155eb5488",
-     "address": {
-      "kind": "segment",
-      "segment": "s005"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.b7d797794bc1cb1d3d66",
-     "address": {
-      "kind": "segment",
-      "segment": "s096"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bb4f4bba4ed7b0e39094",
-     "address": {
-      "kind": "segment",
-      "segment": "s014"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bb7c930374d965e0c98b",
-     "address": {
-      "kind": "segment",
-      "segment": "s050"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bc3a4d92a39dfb11f6aa",
-     "address": {
-      "kind": "segment",
-      "segment": "s062"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bd162ee912dddd55f439",
-     "address": {
-      "kind": "segment",
-      "segment": "s139"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bddf40ca462d947cdd1e",
-     "address": {
-      "kind": "segment",
-      "segment": "s018"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.bf6d93c5a0fdcb405657",
-     "address": {
-      "kind": "segment",
-      "segment": "s068"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c1ee6d5919e2a27e384f",
-     "address": {
-      "kind": "segment",
-      "segment": "s011"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c2501692ce712eb848a5",
-     "address": {
-      "kind": "segment",
-      "segment": "s094"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c3ca0480c61ff2065fa7",
-     "address": {
-      "kind": "segment",
-      "segment": "s059"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c46d7bec8c0e27e51082",
-     "address": {
-      "kind": "segment",
-      "segment": "s093"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c6d8a6629b00bd3a9411",
-     "address": {
-      "kind": "segment",
-      "segment": "s137"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.c80c4047dcd8dd3bdb5e",
-     "address": {
-      "kind": "segment",
-      "segment": "s044"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.ca370c4065675e20b7e4",
-     "address": {
-      "kind": "segment",
-      "segment": "s043"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.cc10f7f2e255ee803383",
-     "address": {
-      "kind": "segment",
-      "segment": "s064"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.cc4207273fd070e92dcf",
-     "address": {
-      "kind": "segment",
-      "segment": "s036"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d03caecbe2c404008388",
-     "address": {
-      "kind": "segment",
-      "segment": "s133"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d26cb5c678118e237359",
-     "address": {
-      "kind": "segment",
-      "segment": "s032"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d46203495d4a8fd94fac",
-     "address": {
-      "kind": "segment",
-      "segment": "s017"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d620146b69885b993eb9",
-     "address": {
-      "kind": "segment",
-      "segment": "s040"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d6393cef4fca2ce37863",
-     "address": {
-      "kind": "segment",
-      "segment": "s061"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d65cd41b6e4a51d9875c",
-     "address": {
-      "kind": "segment",
-      "segment": "s097"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d6ea88a2965d88832340",
-     "address": {
-      "kind": "segment",
-      "segment": "s136"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e0c275aa04ab5931f3d9",
-     "address": {
-      "kind": "segment",
-      "segment": "s109"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e11572740b1a7afeb077",
-     "address": {
-      "kind": "segment",
-      "segment": "s138"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e50de8320c019cf4abde",
-     "address": {
-      "kind": "segment",
-      "segment": "s053"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e5f60243452c26f09c92",
-     "address": {
-      "kind": "segment",
-      "segment": "s127"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e6c84cbfe580cf699a21",
-     "address": {
-      "kind": "segment",
-      "segment": "s063"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e6e2d325676725c06a20",
-     "address": {
-      "kind": "segment",
-      "segment": "s008"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.e71cad3270944d504bca",
-     "address": {
-      "kind": "segment",
-      "segment": "s019"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.ea67f3646c57dd454afc",
-     "address": {
-      "kind": "segment",
-      "segment": "s030"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.ea98afed88fe7bc5a019",
-     "address": {
-      "kind": "segment",
-      "segment": "s102"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.edbf815bc347467ada81",
-     "address": {
-      "kind": "segment",
-      "segment": "s107"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.ee67e3784a26fcb252fb",
-     "address": {
-      "kind": "segment",
-      "segment": "s117"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.ef80ac9fcb3517c3cf2b",
-     "address": {
-      "kind": "segment",
-      "segment": "s081"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.f30316c0b5adee2f6385",
-     "address": {
-      "kind": "segment",
-      "segment": "s100"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.f70d50c0bf0e5da8fd4d",
-     "address": {
-      "kind": "segment",
-      "segment": "s079"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.f71eef86b992f2e50981",
-     "address": {
-      "kind": "segment",
-      "segment": "s095"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.f954fc906e14ab513ed5",
-     "address": {
-      "kind": "segment",
-      "segment": "s029"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.fccc4c01a991af40e336",
-     "address": {
-      "kind": "segment",
-      "segment": "s048"
      },
      "claim": "Lord, have mercy."
     }

@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 588",
-    "scan": "scan p. 596"
+    "scan": "PDF pages 596 (one-based)"
    },
    "entries": [
     {
@@ -16,15 +16,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
-    },
-    {
-     "id": "use.en.85c25d6871519d6458ce",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+     "claim": "Historical English source expression: “To thee I come; before thee I stand, sinful and sorrowful” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.8bf5d9ad8aa8b5d39888",
@@ -32,7 +24,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+     "claim": "Historical English source expression: “O Mother of the Word Incarnate! despise not my petitions” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.db1f328137dba202c1b1",
@@ -40,13 +32,33 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
+     "claim": "Historical English source expression: “Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.f1abc8bddee64a1f5d12",
      "address": {
       "kind": "segment",
       "segment": "s02"
+     },
+     "claim": "Historical English source expression: “that never was it known that any one who fled to thy protection, implored thy help, and sought thy intercession, was left unaided” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 588",
+    "scan": "scan p. 596"
+   },
+   "entries": [
+    {
+     "id": "use.en.85c25d6871519d6458ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
      },
      "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
     }
@@ -64,42 +76,10 @@
    },
    "entries": [
     {
-     "id": "use.en.19b5fe67add4f92c6064",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
-    },
-    {
-     "id": "use.en.83842a350ce99f2f74c6",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
-    },
-    {
      "id": "use.en.9226ccccfab8ace54e85",
      "address": {
       "kind": "segment",
       "segment": "s01"
-     },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
-    },
-    {
-     "id": "use.en.a32cbd19bb96eb87df01",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
-    },
-    {
-     "id": "use.en.a796efa439a0b807b7e2",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
      },
      "claim": "Remember, O most gracious Virgin Mary, that it has never been heard"
     }

@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 37",
-    "scan": "PDF p. 49"
+    "scan": "PDF pages 49 (one-based)"
    },
    "entries": [
     {
@@ -16,10 +16,10 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
+     "claim": "Historical English source expression: “Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.” The addressed English wording is revised, not a verbatim quotation. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -39,14 +39,6 @@
      "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
     },
     {
-     "id": "use.en.ad26f1fb105257ad220a",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "O people of Sion, behold, the Lord will come to save the nations; the Lord will make the glory of His voice heard for the joy of your hearts."
-    },
-    {
      "id": "use.en.c40d4ecf34249c94edec",
      "address": {
       "kind": "segment",
@@ -56,6 +48,26 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 90",
+    "scan": "PDF pages 102 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.ad26f1fb105257ad220a",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English source expression: “Give ear, O thou that rulest Israel; thou that leadest Joseph like a sheep.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

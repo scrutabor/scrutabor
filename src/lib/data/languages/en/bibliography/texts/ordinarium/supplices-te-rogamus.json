@@ -6,8 +6,8 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 67–68",
-    "scan": "scan pp. 79–80"
+    "printed": "p. 68",
+    "scan": "PDF pages 80 (one-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+     "claim": "Historical English source expression: “may be filled with every heavenly grace and blessing.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.9e710d91ab99e504f231",
@@ -24,29 +24,25 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
-    {
-     "id": "use.en.9ead528cbe397fa73c7b",
-     "address": {
-      "kind": "segment",
-      "segment": "s11"
-     },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
+     "claim": "Historical English source expression: “Through the same Christ our Lord. Amen.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 67–68",
+    "scan": "scan pp. 79–80"
+   },
+   "entries": [
     {
      "id": "use.en.bbeeba177bd06fdba1c9",
      "address": {
       "kind": "segment",
       "segment": "s02"
-     },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
-    {
-     "id": "use.en.d5500526890c50057d88",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
      },
      "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
     }
@@ -78,8 +74,8 @@
    "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 26–27",
-    "scan": "scan pp. 53–54"
+    "printed": "p. 27",
+    "scan": "PDF pages 54 (one-based)"
    },
    "entries": [
     {
@@ -88,23 +84,7 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
-    {
-     "id": "use.en.676771ab2f1f8c060e85",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
-    {
-     "id": "use.en.88ef30c592b1fb99208d",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
+     "claim": "Historical English wording for this altar-participation clause; the current wording revises its instrumental and altar prepositions and is not a verbatim quotation."
     },
     {
      "id": "use.en.b0cddfe68c2307556081",
@@ -112,21 +92,45 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
-    {
-     "id": "use.en.d3f7c90e5ae89ba855e9",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
-    },
+     "claim": "Historical English source expression: “shall receive the most holy body and blood of thy Son” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 26–27",
+    "scan": "PDF pages 53, 54 (one-based)"
+   },
+   "entries": [
     {
      "id": "use.en.e0d2b52eaa17dc16e0ca",
      "address": {
       "kind": "segment",
       "segment": "s04"
+     },
+     "claim": "Historical English wording for the inclusive relative fragment, with “that” where the current wording has “so that”; this is a revised excerpt."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 26–27",
+    "scan": "scan pp. 53–54"
+   },
+   "entries": [
+    {
+     "id": "use.en.88ef30c592b1fb99208d",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "We humbly ask You, almighty God: command that Your holy Angel carry these offerings in his hands to Your altar on high, before Your divine majesty:"
     }

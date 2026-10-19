@@ -6,8 +6,8 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 69–70",
-    "scan": "scan pp. 81–82"
+    "printed": "p. 70",
+    "scan": "PDF pages 82 (one-based)"
    },
    "entries": [
     {
@@ -16,8 +16,20 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "To us also, sinners,"
-    },
+     "claim": "Historical English source expression: “Through Christ our Lord.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 69–70",
+    "scan": "scan pp. 81–82"
+   },
+   "entries": [
     {
      "id": "use.en.d4dda4cb4d19c51fe655",
      "address": {
@@ -55,30 +67,34 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 27–28",
-    "scan": "scan pp. 54–55"
+    "scan": "PDF pages 54, 55 (one-based)"
    },
    "entries": [
-    {
-     "id": "use.en.1b8166868438cf0ea7e6",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "To us also, sinners,"
-    },
-    {
-     "id": "use.en.d594d7c53f2d4f489f62",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "To us also, sinners,"
-    },
     {
      "id": "use.en.f6d49342c23313a0a3de",
      "address": {
       "kind": "segment",
       "segment": "s05"
+     },
+     "claim": "Historical English source expression: “with John, Stephen, Matthias, Barnabas, Ignatius, Alexander, Marcellinus, Peter, Felicitas, Perpetua, Agatha, Lucy, Agnes, Cecilia, Anastasia, and all thy saints” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 27–28",
+    "scan": "scan pp. 54–55"
+   },
+   "entries": [
+    {
+     "id": "use.en.d594d7c53f2d4f489f62",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "To us also, sinners,"
     }

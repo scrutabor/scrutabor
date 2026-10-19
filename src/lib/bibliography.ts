@@ -445,22 +445,48 @@ function uniqueCitations(citations: Citation[]): Citation[] {
 	return [...found.values()];
 }
 
+function citationMapper(catalog: Catalog): (group: EvidenceSourceGroup) => Citation {
+	const editions = new Map(catalog.editions.map((record) => [record.id, record]));
+	const items = new Map(catalog.digital_items.map((record) => [record.id, record]));
+	return (group) => evidenceCitation(group, editions, items);
+}
+
+function lemmaSourceGroups(index: BibliographyIndex, lemma: string): EvidenceSourceGroup[] {
+	return index.sections.flatMap((section) =>
+		section.entries.flatMap((entry) =>
+			entry.lemmas.filter(({ id }) => id === lemma).flatMap((record) => record.source_groups)
+		)
+	);
+}
+
+/** Neutral lexical/grammatical support for a dictionary entry, never a token gloss. */
+export async function loadLemmaSupport(lang: Lang, lemma: string): Promise<Citation[]> {
+	const paths = bibliographyResourcePaths(lang).root;
+	const [catalog, index] = await Promise.all([
+		loadResource<Catalog>(paths.catalog),
+		loadResource<BibliographyIndex>(paths.index)
+	]);
+	const cite = citationMapper(catalog);
+	return uniqueCitations(
+		lemmaSourceGroups(index, lemma)
+			.filter(({ role }) => role === 'lexical_support' || role === 'grammatical_support')
+			.map((group) => {
+				if (
+					!group.entries.length ||
+					group.entries.some(({ address }) => address.kind !== 'lemma' || address.lemma !== lemma)
+				) {
+					throw new Error('Dictionary support has a different or missing lemma address');
+				}
+				return cite(group);
+			})
+	);
+}
+
 /** Dictionary-level support is not evidence for an entire prayer or translation. */
 export async function loadLemmaBibliography(lang: Lang, lemma: string): Promise<Citation[]> {
 	const { catalog, index } = await resources(lang);
-	const editions = new Map(catalog.editions.map((record) => [record.id, record]));
-	const items = new Map(catalog.digital_items.map((record) => [record.id, record]));
-	return uniqueCitations(
-		index.sections.flatMap((section) =>
-			section.entries.flatMap((entry) =>
-				entry.lemmas
-					.filter(({ id }) => id === lemma)
-					.flatMap((record) =>
-						record.source_groups.map((group) => evidenceCitation(group, editions, items))
-					)
-			)
-		)
-	);
+	const cite = citationMapper(catalog);
+	return uniqueCitations(lemmaSourceGroups(index, lemma).map(cite));
 }
 
 /** Verified source disclosures for one reading page.

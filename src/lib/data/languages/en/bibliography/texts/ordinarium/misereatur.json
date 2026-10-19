@@ -27,7 +27,27 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 38",
-    "scan": "PDF p. 50"
+    "scan": "PDF pages 50 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.3a15554da62506a3e4c8",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 39",
+    "scan": "PDF pages 51 (one-based)"
    },
    "entries": [
     {
@@ -36,18 +56,10 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
-    },
-    {
-     "id": "use.en.3a15554da62506a3e4c8",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
+     "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -55,7 +67,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 38–39",
-    "scan": "PDF pp. 50–51"
+    "scan": "PDF pages 50, 51 (one-based)"
    },
    "entries": [
     {
@@ -64,10 +76,10 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
+     "claim": "Historical English source expression: “May the almighty and merciful Lord grant us pardon, absolution and remission of our sins.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 26",
-    "scan": "scan p. 39"
+    "scan": "DJVU physical pages 39 (one-based); indices 38 (zero-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "The Angel of the Lord declared unto Mary."
+     "claim": "Historical English source expression: “That we may be made worthy of the promises of Christ.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading."
     },
     {
      "id": "use.en.7bf4685135f5e5593ac5",
@@ -24,7 +24,7 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "The Angel of the Lord declared unto Mary."
+     "claim": "Historical English source expression: “Pray for us, O holy Mother of God.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading."
     },
     {
      "id": "use.en.d90d59f5d6e2c0b6ffd2",
@@ -32,8 +32,20 @@
       "kind": "segment",
       "segment": "s02"
      },
-     "claim": "The Angel of the Lord declared unto Mary."
-    },
+     "claim": "Historical English source expression: “And she conceived by the Holy Ghost.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 26",
+    "scan": "scan p. 39"
+   },
+   "entries": [
     {
      "id": "use.en.f52662261fbda1a05672",
      "address": {
@@ -51,7 +63,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 27",
-    "scan": "scan p. 40"
+    "scan": "DJVU physical pages 40 (one-based); indices 39 (zero-based)"
    },
    "entries": [
     {
@@ -60,7 +72,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Behold the handmaid of the Lord."
+     "claim": "Historical English source expression: “And dwelt among us.” This supplies the corresponding English expression at the addressed scope."
     },
     {
      "id": "use.en.6ecfa002f1baba23ca91",
@@ -68,7 +80,7 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Behold the handmaid of the Lord."
+     "claim": "Historical English source expression: “AND THE WORD WAS MADE FLESH.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.c0d1ee6035e1572da352",
@@ -76,21 +88,33 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Behold the handmaid of the Lord."
-    },
-    {
-     "id": "use.en.cd6c7884c6ad1fc687ba",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Behold the handmaid of the Lord."
+     "claim": "Historical English source expression: “Be it done unto me according to Thy word.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.f0191584feca0c7a8f4b",
      "address": {
       "kind": "segment",
       "segment": "s12"
+     },
+     "claim": "Historical English source expression: “Let us pray.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 27",
+    "scan": "scan p. 40"
+   },
+   "entries": [
+    {
+     "id": "use.en.cd6c7884c6ad1fc687ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
      },
      "claim": "Behold the handmaid of the Lord."
     }

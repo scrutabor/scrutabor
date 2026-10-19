@@ -22,6 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 219",
+    "scan": "leaf n298 / PDF p. 299",
+    "section": "Ordo Missae, full Gloria Patri wording; role signs excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iii-post-pascha-introitus.gloria-expansion.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w034"
+     },
+     "claim": "This same-edition common passage supplies the full literal w034–w053 expansion of the proper page’s Glória Patri cue. The following repeated antiphon comes from the proper page’s Iubiláte cue, not from the Ordo’s different antiphon. Reuse of the wording does not import the Ordo role distribution or constitute an independent edition."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 337",
@@ -34,10 +56,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The approved Benziger proper page prints the complete petition/body through w033 and its abbreviation controls Glória Patri and Iubiláte. The latter directs repetition of w001–w017; the former is expanded from the separately cited common Gloria. This leaf does not print the full expanded 70-word component."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": []

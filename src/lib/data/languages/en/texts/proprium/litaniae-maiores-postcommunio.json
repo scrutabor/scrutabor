@@ -1,0 +1,9 @@
+{
+  "id":"proprium.litaniae-maiores-postcommunio",
+  "language":"en",
+  "about":"The postcommunion for the commemoration of the Greater Litanies in the 1962 Roman Missal.",
+  "seg":[
+    {"id":"s01","tr":"Lord, we pray, attend to our prayers with loving favor, so that, as we receive Your gifts amid tribulation, we may grow in love for You through our consolation. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,"so that","while",null,null,null,null,null,"through",null,null,null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":7,"a":6,"g":"Attend to our prayers with loving favor, we pray, O Lord"},{"s":9,"n":5,"a":4,"g":"we receive Your gifts in tribulation"},{"s":15,"n":2,"a":0,"g":"our consolation"},{"s":17,"n":4,"a":3,"g":"we may grow in love for You"},{"s":22,"n":2,"a":0,"g":"our Lord"},{"s":26,"n":2,"a":0,"g":"Your Son"},{"s":35,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":38,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w020":"Receiving God’s gifts amid tribulation and experiencing consolation support the petition for growth in love for God. The possessive tuo alone does not decide between love for God and God’s love."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

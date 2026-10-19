@@ -118,7 +118,8 @@ for (const language of ['pl', 'en']) {
 			'dominica-iv-post-pascha',
 			'alleluia',
 			'w007',
-			'déxtera',
+			// English renders the subject with its genitive as one phrase.
+			language === 'pl' ? 'déxtera' : 'déxtera Dómini',
 			language === 'pl' ? 'mianownik' : 'nominative',
 			language === 'pl' ? 'prawica' : 'right hand'
 		],
@@ -126,8 +127,8 @@ for (const language of ['pl', 'en']) {
 			'dominica-iv-post-pascha',
 			'alleluia',
 			'w023',
-			// English joins the negation to the verb in one construction.
-			language === 'pl' ? 'dominábitur' : 'non dominábitur',
+			// English joins the dative, the adverb and the negation to the verb in one construction.
+			language === 'pl' ? 'dominábitur' : 'illi ultra non dominábitur',
 			language === 'pl' ? 'czas przyszły' : 'future',
 			'dóminor'
 		]
@@ -144,6 +145,15 @@ for (const language of ['pl', 'en']) {
 				await expect(card.locator('.construction-title')).toHaveText(['manum', 'déxteram', 'meam']);
 				analysis = card.locator('.construction-card').filter({
 					has: page.locator('.construction-title').filter({ hasText: /^déxteram$/ })
+				});
+				await expect(analysis).toHaveCount(1);
+			} else if (formulary === 'dominica-iv-post-pascha' && language === 'en') {
+				const members = latin.split(' ');
+				const head = word === 'w007' ? 'déxtera' : 'dominábitur';
+				await expect(card.locator('.form')).toHaveText(latin);
+				await expect(card.locator('.construction-title')).toHaveText(members);
+				analysis = card.locator('.construction-card').filter({
+					has: page.locator('.construction-title').filter({ hasText: new RegExp(`^${head}$`) })
 				});
 				await expect(analysis).toHaveCount(1);
 			} else {

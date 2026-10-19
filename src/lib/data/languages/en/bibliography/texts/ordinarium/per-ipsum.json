@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 70",
-    "scan": "scan p. 82"
+    "scan": "PDF pages 82 (one-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Through Him, and with Him, and in Him,"
+     "claim": "Historical English source expression: “For ever and ever.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.3fbb4f17213179f0a1df",
@@ -24,7 +24,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "Through Him, and with Him, and in Him,"
+     "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
     },
     {
      "id": "use.en.8d197ec36144ddae09dc",
@@ -32,7 +32,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Through Him, and with Him, and in Him,"
+     "claim": "Historical English source expression: “all honour and glory” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.ad3e7eba0e4a382380c5",
@@ -40,10 +40,10 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Through Him, and with Him, and in Him,"
+     "claim": "Historical English source expression: “is to thee, God the Father, Almighty, in the unity of the Holy Ghost” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -74,30 +74,6 @@
     "scan": "scan p. 55"
    },
    "entries": [
-    {
-     "id": "use.en.0d9f89fe928338e00e25",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Through Him, and with Him, and in Him,"
-    },
-    {
-     "id": "use.en.7b2042f389aff38aedbf",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Through Him, and with Him, and in Him,"
-    },
-    {
-     "id": "use.en.c4cfb4e3392a8b21b298",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Through Him, and with Him, and in Him,"
-    },
     {
      "id": "use.en.f7fd677afb8aae5af7d7",
      "address": {

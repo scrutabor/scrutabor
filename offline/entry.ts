@@ -98,7 +98,7 @@ const stores = { page: store<unknown>(null), navigating: store(null), updated: s
 // The shared lemma document loads the selected entry after mount. It needs no
 // route data; treating its deliberate null like a missing server payload sent
 // every offline dictionary address to the not-found page.
-const NEEDS_DATA = new Set(['reading', 'movement', 'formularium', 'concept']);
+const NEEDS_DATA = new Set(['reading', 'movement', 'formularium', 'commemoratio', 'concept']);
 
 /**
  * What to mount, and what to give it.

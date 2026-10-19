@@ -44,8 +44,31 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 366 and Rubricae generales p. xvii",
-    "scan": "leaf n447 / PDF p. 448; leaf n22 / PDF p. 23",
+    "printed": "p.xvii",
+    "scan": "n22/PDF23",
+    "section": "RG115a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctissimae-trinitatis-collecta.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "Prescribed full conclusion or its explicit reference to the preceding formula. The composite witness retains literal unaccented RG spelling and list punctuation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 366",
+    "scan": "leaf n447 / PDF p. 448",
+    "section": "Proper Collect body and abbreviated conclusion cue",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n447/mode/1up"
    },
    "entries": [
@@ -54,10 +77,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The proper page prints the body and an abbreviated conclusion, not the expanded formula. The full conclusion is separately bound to RG115a in the declared composite witness."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": []

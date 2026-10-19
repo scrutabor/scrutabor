@@ -7,6 +7,42 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 67",
+    "scan": "DJVU physical pages 80 (one-based); indices 79 (zero-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.6f6f19606be8bd4adfb3",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English source expression: “Christ, have mercy.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.7c8e2ab6f40c69f1bde5",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historical English source expression: “Christ, have mercy.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.d221e43a3cb377a97499",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “Christ, have mercy.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 67",
     "scan": "scan p. 80"
    },
    "entries": [
@@ -35,22 +71,6 @@
      "claim": "Lord, have mercy."
     },
     {
-     "id": "use.en.6f6f19606be8bd4adfb3",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.7c8e2ab6f40c69f1bde5",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
      "id": "use.en.84dea758cc94c0389330",
      "address": {
       "kind": "segment",
@@ -71,14 +91,6 @@
      "address": {
       "kind": "segment",
       "segment": "s02"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.d221e43a3cb377a97499",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
      },
      "claim": "Lord, have mercy."
     }

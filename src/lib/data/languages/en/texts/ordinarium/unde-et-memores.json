@@ -5,11 +5,11 @@
   "seg":[
     {"id":"s01","nr":"The priest parts his hands."},
     {"id":"s02","tr":"Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:","tc":[345,359],"tb":"revised","g":["therefore","too","mindful","Lord","we","servants","Your","but","also","people","Your","holy","of the same","Christ","Son","Your","Lord","our","both","of the blessed","Passion",null,null,null,"from","the dead","Resurrection","and","also","into","heaven","of the glorious","Ascension"],"a":[{"s":21,"n":3,"a":0,"g":"as well as"}]},
-    {"id":"s03","tr":"offer to Your excellent majesty, from Your own gifts and all that You have bestowed upon us,","tc":[345,359],"tb":"revised","g":["we offer","most excellent","majesty","Your","of","Your own","gifts","and","things bestowed"]},
+    {"id":"s03","tr":"offer to Your excellent majesty, from Your own gifts and all that You have bestowed upon us,","tc":[359],"tb":"revised","g":["we offer","most excellent","majesty","Your","of","Your own","gifts","and","things bestowed"]},
     {"id":"s04","nr":"The priest joins his hands and makes three signs of the cross over the Host and chalice together."},
-    {"id":"s05","tr":"a pure Victim, a holy Victim, a spotless Victim,","tc":[345,359],"tb":"revised","g":["victim","pure","victim","holy","victim","unspotted"]},
+    {"id":"s05","tr":"a pure Victim, a holy Victim, a spotless Victim,","tc":[345],"tb":"revised","g":["victim","pure","victim","holy","victim","unspotted"]},
     {"id":"s06","nr":"The priest makes one sign of the cross over the Host."},
-    {"id":"s07","tr":"the holy Bread of eternal life","tc":[345,359],"tb":"normalized","g":["Bread","holy","of life","eternal"]},
+    {"id":"s07","tr":"the holy Bread of eternal life","tc":[359],"tb":"normalized","g":["Bread","holy","of life","eternal"]},
     {"id":"s08","nr":"The priest makes one sign of the cross over the chalice."},
     {"id":"s09","tr":"and the Chalice of everlasting salvation.","tc":[345,359],"tb":"normalized","g":["and","Chalice","of salvation","everlasting"]}
   ]

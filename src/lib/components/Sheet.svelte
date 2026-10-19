@@ -22,6 +22,7 @@
 		max = '55vh',
 		extra = '',
 		inline = false,
+		returnFocusId,
 		title,
 		lead,
 		children
@@ -37,6 +38,8 @@
 		 * landing specimen, where the analysis is permanent content rather
 		 * than a dismissible overlay. */
 		inline?: boolean;
+		/** The current opener's exact DOM address, including any surface prefix. */
+		returnFocusId?: string;
 		/** the small label at the top left, for a sheet that wants one */
 		title?: string;
 		/** …or the whole left side of the header, for one that does not */
@@ -98,6 +101,9 @@
 	// the page's position. Non-modal on purpose: the prayer stays readable
 	// and reachable behind it, so there is no aria-modal and no focus trap.
 	let frame = $state<HTMLElement | null>(null);
+	// Selection changes keep the frame mounted. Derive the latest address
+	// without focusing or rerunning the mount cleanup.
+	const latestReturnFocusId = $derived(returnFocusId);
 	$effect(() => {
 		if (inline || !frame) return;
 		const sheet = frame;
@@ -109,12 +115,21 @@
 			// yank them back to the first word they tapped.
 			const now = document.activeElement;
 			const inSheet = now === sheet || sheet.contains(now);
+			// A construction member has an address on an inner span. Return
+			// to its actual control, not that non-focusable anchor. A missing
+			// newest target must never fall back to the stale initial word.
+			const target =
+				latestReturnFocusId === undefined
+					? invoker
+					: document
+							.getElementById(latestReturnFocusId)
+							?.closest<HTMLElement>('button, a[href], input, select, textarea, [tabindex]');
 			if (
 				(inSheet || now === document.body) &&
-				invoker instanceof HTMLElement &&
-				invoker.isConnected
+				target instanceof HTMLElement &&
+				target.isConnected
 			) {
-				invoker.focus({ preventScroll: true });
+				target.focus({ preventScroll: true });
 			}
 		};
 	});

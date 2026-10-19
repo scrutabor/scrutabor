@@ -28,6 +28,34 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 65",
+    "scan": "PDF pages 96 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.a69bf2aaa2325fe0c523",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historical English source expression: “who takest away the sins of the world, have mercy on us.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.b5e5bca4c13e97340ef7",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historical English source expression: “O Lord God, Lamb of God, Son of the Father” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 65",
     "scan": "scan p. 96"
    },
    "entries": [
@@ -36,22 +64,6 @@
      "address": {
       "kind": "segment",
       "segment": "s05"
-     },
-     "claim": "We give You thanks for Your great glory."
-    },
-    {
-     "id": "use.en.a69bf2aaa2325fe0c523",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "We give You thanks for Your great glory."
-    },
-    {
-     "id": "use.en.b5e5bca4c13e97340ef7",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
      },
      "claim": "We give You thanks for Your great glory."
     }

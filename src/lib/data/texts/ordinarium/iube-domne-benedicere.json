@@ -1,0 +1,17 @@
+{
+  "id":"ordinarium.iube-domne-benedicere",
+  "title":"Iube, domne, benedícere",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"minister","w":[{"i":"w001","f":"Iube","l":"iubeo","p":",","m":190},{"i":"w002","f":"domne","l":"dominus","p":",","m":5,"a":5},{"i":"w003","f":"benedícere","l":"benedico","p":".","m":185}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","w":[{"i":"w004","f":"Dóminus","l":"dominus","m":60},{"i":"w005","f":"sit","l":"sum","m":198},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"corde","l":"cor","m":135},{"i":"w008","f":"tuo","l":"tuus","p":",","m":149,"h":"w007"},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"lábiis","l":"labium","m":1},{"i":"w012","f":"tuis","l":"tuus","p":":","m":126,"h":"w011"},{"i":"w013","f":"ut","l":"ut","m":15},{"i":"w014","f":"digne","l":"digne","m":32},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"competénter","l":"competenter","m":32},{"i":"w017","f":"annúnties","l":"annuntio","m":286},{"i":"w018","f":"evangélium","l":"evangelium","m":82},{"i":"w019","f":"suum","l":"suus","p":":","m":137,"h":"w018"}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","w":[{"i":"w020","f":"in","l":"in","m":0,"h":"w021"},{"i":"w021","f":"nómine","l":"nomen","m":135},{"i":"w022","f":"Patris","l":"pater","p":",","m":69},{"i":"w023","f":"et","l":"et","m":15},{"i":"w024","f":"Fílii","l":"filius","p":",","m":54,"a":7},{"i":"w025","f":"et","l":"et","m":15},{"i":"w026","f":"Spíritus","l":"spiritus","m":250},{"i":"w027","f":"Sancti","l":"sanctus","p":".","m":99,"h":"w026"}]},
+    {"id":"s04","type":"verse","speaker":"sacerdos","w":[{"i":"w028","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

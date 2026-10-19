@@ -1,0 +1,88 @@
+{
+ "id": "proprium.litaniae-maiores-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 512",
+    "scan": "leaf n593 / PDF p. 594",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n593/mode/1up",
+    "section": "Pro Rogationibus, Postcommunio"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.litaniae-maiores-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This proper page prints the 21-word Postcommunion body (w001–w021) and the abbreviated Per Dominum cue. The full w022–w043 conclusion and Amen are not printed in full on this proper page; the same-edition RG115a dependency supplies them. Headings and adjoining rubrics are excluded. This is a narrow textual source claim, not complete commemoration/calendar or actor approval."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up",
+    "section": "Rubricae generales115a, full Father-directed conclusion; neighbouring115b–e excluded"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.litaniae-maiores-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a prescribes the 21-word Father-directed conclusion and Amen (w022–w043). This formula is supplied after the proper body’s abbreviated cue, not printed continuously on the proper page. The unaccented rubric prints no comma after Christum and ends with the rubric enumeration punctuation “Amen;”. Its literal accidentals differ from the selected accented reader setting. The rule does not assign a response actor; two loci of one edition are not two independent witnesses."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 511",
+    "scan": "PDF physical p. 592",
+    "section": "no.2451, Pro Rogationibus, Postcommunio"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.litaniae-maiores-postcommunio.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This proper page prints the 21-word Postcommunion body (w001–w021) and the abbreviated Per Dominum cue. The full w022–w043 conclusion and Amen are not printed in full on this proper page; the same-edition RG115a dependency supplies them. Headings and adjoining rubrics are excluded. This is a narrow textual source claim, not complete commemoration/calendar or actor approval."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical p. 17",
+    "section": "Rubricae generales115a, full Father-directed conclusion; neighbouring115b–e excluded"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.litaniae-maiores-postcommunio.conclusion-rg115a.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a prescribes the 21-word Father-directed conclusion and Amen (w022–w043). This formula is supplied after the proper body’s abbreviated cue, not printed continuously on the proper page. The rubric prints a comma after Christum, lowercase qui, the seven selected house stress accents and terminal “Amen;”. The selected response period is an editorial setting. The rule does not assign a response actor; two loci of one edition are not two independent witnesses."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  }
+ ],
+ "witnesses": []
+}

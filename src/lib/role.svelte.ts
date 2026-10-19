@@ -52,8 +52,8 @@ export function loadRole(): void {
  * what is happening?
  *
  * Only wholly silent prayers fold, and only for the pew: a server answers
- * through them and a priest says them. `submissa` never folds — the raised
- * voice exists precisely so that the people can hear it.
+ * through them and a priest says them. `submissa` is a genuinely lowered
+ * voice, not the `secreto` category this folding rule hides.
  *
  * A prayer is wholly silent only if the CORPUS says every one of its lines
  * is (schema 0.9.0, sourced from Rubricae generales 511). That distinction

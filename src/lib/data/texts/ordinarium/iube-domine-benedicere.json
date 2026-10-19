@@ -1,0 +1,16 @@
+{
+  "id":"ordinarium.iube-domine-benedicere",
+  "title":"Iube, Dómine, benedícere",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w001","f":"Iube","l":"iubeo","p":",","m":190},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w003","f":"benedícere","l":"benedico","p":".","m":185}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w004","f":"Dóminus","l":"dominus","m":60},{"i":"w005","f":"sit","l":"sum","m":198},{"i":"w006","f":"in","l":"in","m":0,"h":"w007"},{"i":"w007","f":"corde","l":"cor","m":135},{"i":"w008","f":"meo","l":"meus","p":",","m":149,"h":"w007"},{"i":"w009","f":"et","l":"et","m":15},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"lábiis","l":"labium","m":1},{"i":"w012","f":"meis","l":"meus","p":":","m":126,"h":"w011"},{"i":"w013","f":"ut","l":"ut","m":15},{"i":"w014","f":"digne","l":"digne","m":32},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"competénter","l":"competenter","m":32},{"i":"w017","f":"annúntiem","l":"annuntio","m":205},{"i":"w018","f":"Evangélium","l":"evangelium","m":82},{"i":"w019","f":"suum","l":"suus","p":".","m":137,"h":"w018"}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"secreto","w":[{"i":"w020","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

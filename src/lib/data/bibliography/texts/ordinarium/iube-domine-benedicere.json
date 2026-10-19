@@ -1,0 +1,124 @@
+{
+ "id": "ordinarium.iube-domine-benedicere",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt. Branch !*RnD at line 118, # Evangelium at line 119, exact priest-alone rubric at line 120, preceding Munda at line 121 and complete blessing body at line 122."
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domine-benedicere.do44667ff-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 20-word priest-alone request and blessing through Amen, after the separate Munda. Compared with the selected Benziger print, it writes Jube in place of Iube and omits the comma after meo. This is derived digital textual comparison, not an independent print family or performer or voice proof."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "223",
+    "scan": "IA leaf n302; one-based PDF page 303",
+    "section": "Ordo Missae; priest without deacon and subdeacon, Gospel preparation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n302/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domine-benedicere.mr1962-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 20-word priest-alone request and blessing through its Amen, after the separate Munda and before the Gospel greeting. The selected spelling, accents, capitalization and comma after meo follow this printing."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "223",
+    "scan": "IA leaf n302; one-based PDF page 303",
+    "section": "Ordo Missae; priest-alone branch and following Masses of the dead rubric",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n302/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domine-benedicere.mr1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Places the request and blessing after the separate Munda in the priest-without-deacon-and-subdeacon branch. The following rubric retains Munda but says that blessing is not requested in Masses of the dead."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "LIII",
+    "scan": "IA leaf n58; one-based PDF page 59",
+    "section": "Ritus servandus VI.2; celebrant’s Gospel preparation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n58/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domine-benedicere.mr1962-ritual-voice",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directs the celebrant, after the preceding chants and before the Gospel greeting, to say Munda cor meum, Iube Domine benedicere and Dominus sit in corde meo secreto. This supports the priest actor, quiet voice and placement, not a full-body transcription or a general omission rule."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.ordinarium.iube-domine-benedicere.do44667ff",
+   "text": "ordinarium.iube-domine-benedicere",
+   "use": "use.ordinarium.iube-domine-benedicere.do44667ff-body",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "One pinned derived digital comparison in the same Roman liturgical tradition. This record does not claim another independent print setting or a separate manuscript family."
+  },
+  {
+   "id": "witness.ordinarium.iube-domine-benedicere.mr1962",
+   "text": "ordinarium.iube-domine-benedicere",
+   "use": "use.ordinarium.iube-domine-benedicere.mr1962-body",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription of the approved Benziger 1962 printing selected here. This record does not claim a separate manuscript family from the derived digital comparison."
+  }
+ ],
+ "collation": {
+  "id": "collation.ordinarium.iube-domine-benedicere.mr1962-do44667ff",
+  "text": "ordinarium.iube-domine-benedicere",
+  "recension": "Roman Missal governed by the 1960 Code of Rubrics; Benziger Brothers 1962 editio iuxta typicam selected accidentals",
+  "witnesses": [
+   "witness.ordinarium.iube-domine-benedicere.do44667ff",
+   "witness.ordinarium.iube-domine-benedicere.mr1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
+}

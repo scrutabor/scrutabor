@@ -1,0 +1,174 @@
+{
+ "id": "ordinarium.iube-domne-benedicere-in-passione",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt [Munda Cor Passionis], heading240, separate preceding spoken Munda241, complete request/blessing/Amen242-244."
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere-in-passione.do44667ff-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Contains the complete 28-word plural request, blessing and Amen. The pinned digital body writes Jube, lacks the first vestris comma, has a colon after the second vestris and capital In. D./S. labels and + are source actor/action framing, not additional spoken tokens. This is derived digital comparison, not an independent genealogical print or preparation voice authority."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "139",
+    "scan": "IA leaf n218; one-based PDF page 219",
+    "section": "Palm Passion preparation, rubric 8; fully visible blessing start",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n218/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere-in-passione.mr1962-partial-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly corroborates only the complete visible local words w004-w018, Dóminus through evangélium. Its lower-case evangélium differs from selected V. The unresolved request accent and clipped w019-w024 receive no full diplomatic collation credit. This is not a complete second print witness."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "139",
+    "scan": "IA leaf n218; one-based PDF page 219",
+    "section": "Palm Passion preparation, rubric 8, left and right columns",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n218/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere-in-passione.mr1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The visible rubric identifies the qualified ministers and the celebrant's media voce response, followed by Et illi dicunt Amen. The right-column continuation et Spíritus Sancti and Amen is visible but is not stitched across the clipped line into a complete Benziger transcript."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "136",
+    "scan": "IA leaf n216; one-based PDF page 217",
+    "section": "Dominica II Passionis seu in palmis; Passion preparation, rubric 8",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n216/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere-in-passione.vatican1962-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 28-word request, plural blessing and Amen selected here, including the visible Trinitarian ending and non-spoken cross between local w024 and w025. The underlying Latin rite is distinguished from the unproved reproduction date and scan rights."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "136",
+    "scan": "IA leaf n216; one-based PDF page 217",
+    "section": "Dominica II Passionis seu in palmis; full rubric 8 and following Et illi dicunt",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n216/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere-in-passione.vatican1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Qualified ministers at least in the diaconate recite Munda and request the celebrant's blessing. Submissa voce immediately modifies recitant and naturally extends in context to the conjoined request, without a separately repeated request label. The celebrant explicitly responds media voce. Et illi dicunt assigns Amen to the ministers, without a separate Amen voice label. No app enum equivalence is established."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.ordinarium.iube-domne-benedicere-in-passione.do44667ff",
+   "text": "ordinarium.iube-domne-benedicere-in-passione",
+   "use": "use.ordinarium.iube-domne-benedicere-in-passione.do44667ff-body",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct excerpt of the already registered pinned derived digital archive, not a second independent print tradition or a repair of Benziger's clipped line."
+  },
+  {
+   "id": "witness.ordinarium.iube-domne-benedicere-in-passione.mr1962-partial",
+   "text": "ordinarium.iube-domne-benedicere-in-passione",
+   "use": "use.ordinarium.iube-domne-benedicere-in-passione.mr1962-partial-body",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "words",
+    "words": [
+     "w004",
+     "w005",
+     "w006",
+     "w007",
+     "w008",
+     "w009",
+     "w010",
+     "w011",
+     "w012",
+     "w013",
+     "w014",
+     "w015",
+     "w016",
+     "w017",
+     "w018"
+    ]
+   },
+   "independence_basis": "Direct transcription of the separately set Benziger print at the recorded page, not derived from the other transcript. No independent genealogical text tradition is established."
+  },
+  {
+   "id": "witness.ordinarium.iube-domne-benedicere-in-passione.vatican1962",
+   "text": "ordinarium.iube-domne-benedicere-in-passione",
+   "use": "use.ordinarium.iube-domne-benedicere-in-passione.vatican1962-body",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription of the separately set Vatican manifestation at the recorded page, not derived from Benziger. Underlying 1962 recension is distinguished from unproved reproduction date and rights. No independent genealogical text tradition is established."
+  }
+ ],
+ "collation": {
+  "id": "collation.ordinarium.iube-domne-benedicere-in-passione.vatican1962-mr1962-do44667ff",
+  "text": "ordinarium.iube-domne-benedicere-in-passione",
+  "recension": "Roman Missal governed by the 1960 Code of Rubrics; complete Vatican Palm body and accidentals selected, Benziger partial and pinned derived DO compared",
+  "witnesses": [
+   "witness.ordinarium.iube-domne-benedicere-in-passione.do44667ff",
+   "witness.ordinarium.iube-domne-benedicere-in-passione.mr1962-partial",
+   "witness.ordinarium.iube-domne-benedicere-in-passione.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 5,
+   "classes": [
+    "capitalization",
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
+}

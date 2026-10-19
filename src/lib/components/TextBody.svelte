@@ -41,6 +41,7 @@
 		collapsedSegments = [],
 		litanyColumns = false,
 		showSpeakerNames = true,
+		referenceOnly = false,
 		hideOpeningRubric = false,
 		showTranslationSources = true,
 		verifiedTranslationCitations = [],
@@ -77,6 +78,8 @@
 		litanyColumns?: boolean;
 		/** Some devotional dialogues are already clear from V./R. alone. */
 		showSpeakerNames?: boolean;
+		/** Retained for study in this context, not a current part to say. */
+		referenceOnly?: boolean;
 		/** A standalone Mass prayer keeps the opening rubric's deep-link
 		 * anchor, while leaving its continuous-rite direction to the Ordo. */
 		hideOpeningRubric?: boolean;
@@ -109,7 +112,14 @@
 		// every visible part of a line a possible endpoint without opening a
 		// word panel or adding a redundant ?w= to the citation.
 		if (event.shiftKey && onsegmentselect) onsegmentselect(segmentId, true);
-		else ontap?.(wordId);
+		else {
+			// Pointer activation need not focus a button in every browser. The
+			// sheet must capture this control, not an earlier focused element.
+			if (event.currentTarget instanceof HTMLElement) {
+				event.currentTarget.focus({ preventScroll: true });
+			}
+			ontap?.(wordId);
+		}
 	}
 
 	// V. and R. — versiculus and responsum — in red, the marks the 1962
@@ -151,7 +161,7 @@
 		flowBinding(
 			doc,
 			gloss,
-			{ helpLevel, showSpeakerNames, hideOpeningRubric, litanyColumns },
+			{ helpLevel, showSpeakerNames, hideOpeningRubric, litanyColumns, referenceOnly },
 			massForm.value,
 			role.value
 		)
@@ -159,16 +169,18 @@
 	const segs = $derived(binding.segs);
 	// A one-line fixed response has only one rubrical speaker, but its
 	// participation still makes it an answer the reader needs identified.
-	const answers = $derived(marks.hasAnswers(segs) || marks.hasParticipation(segs));
+	const answers = $derived(
+		!referenceOnly && (marks.hasAnswers(segs) || marks.hasParticipation(segs))
+	);
 	// In a continuous shared prayer (Credo, Gloria, Sanctus, Agnus Dei,
 	// and the ministers' Confiteor at low Mass) V./R. would pretend that a
 	// dialogue exists. Name the shared participation in words instead.
 	const firstSharedVerse = $derived(binding.firstSharedVerse);
 	const sharedSpeaker = $derived(binding.sharedSpeaker);
 	const sharedPrayer = $derived(binding.sharedPrayer);
-	const namesSpeaker = (i: number) => marks.namesSpeaker(segs, i);
-	const marked = (i: number) => marks.marked(segs, i);
-	const namesVoice = (i: number) => marks.namesVoice(segs, i);
+	const namesSpeaker = (i: number) => !referenceOnly && marks.namesSpeaker(segs, i);
+	const marked = (i: number) => !referenceOnly && marks.marked(segs, i);
+	const namesVoice = (i: number) => !referenceOnly && marks.namesVoice(segs, i);
 	const firstVerse = $derived(marks.firstVerseWithInitial(segs));
 	const segmentId = (id: string) => (idPrefix ? `${idPrefix}-${id}` : id);
 	const rows = $derived(binding.rows);
@@ -445,9 +457,11 @@
 		     viewpoint. Conditional participation stays in the separate
 		     “may join” note below. -->
 		{@const faithfulShare = sharedWithFaithful(seg, massForm.value)}
-		{@const everyones = isEveryonesResponse(seg, massForm.value)}
+		{@const everyones = !referenceOnly && isEveryonesResponse(seg, massForm.value)}
 		{@const joinable =
-			mayJoin(seg, massForm.value) && marks.namesConditionalParticipation(segs, i, massForm.value)}
+			!referenceOnly &&
+			mayJoin(seg, massForm.value) &&
+			marks.namesConditionalParticipation(segs, i, massForm.value)}
 		{@const nameSpeaker = sharedPrayer ? i === firstSharedVerse : namesSpeaker(i)}
 		{@const speakerName =
 			marks.isSharedPrayer(segs, massForm.value) && !sharedSpeaker
@@ -508,7 +522,7 @@
 			style:--print-initial-reserve={fit0 ? `calc(var(--reading) * ${fit0.reserve})` : null}
 			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
-			class:quiet={seg.voice === 'secreto'}
+			class:quiet={!referenceOnly && seg.voice === 'secreto'}
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined || repeated}
 			class:repeated

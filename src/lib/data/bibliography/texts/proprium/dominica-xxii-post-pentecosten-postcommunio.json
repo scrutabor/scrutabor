@@ -46,6 +46,28 @@
    "locator": {
     "printed": "p. xviii",
     "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 d, terminal Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-xxii-post-pentecosten-postcommunio.expanded-response.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w037"
+     },
+     "claim": "The same-edition Son-directed common conclusion in Rubricae generales 115 d ends with the printed word Amen. It supplies the Latin wording of the reader’s separate w037 response after the expanded Qui vivis conclusion. This use does not establish the response performer, voice or date-specific liturgical applicability; those are distinct ritual claims."
+    }
+   ],
+   "verified_on": "2026-10-18"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
     "section": "Rubricae generales, 115 d",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
@@ -76,7 +98,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page prints this Postcommunion’s proper body and the abbreviated conclusion “Qui vivis”. The full conclusion follows Rubricae generales 115 d, with reader-supplied accentuation. Amen is shown separately as a response. The proper page does not print the full conclusion or that response."
     }
    ],
    "verified_on": "2026-08-31"

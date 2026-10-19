@@ -42,8 +42,8 @@
    "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 32–33",
-    "scan": "PDF pp. 59–60"
+    "printed": "p. 33",
+    "scan": "PDF pages 60 (one-based)"
    },
    "entries": [
     {
@@ -52,8 +52,20 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Behold the Lamb of God, behold Him who takes away the sins of the world."
-    },
+     "claim": "Historical English source expression: “May the body of our Lord Jesus Christ preserve thy soul to life everlasting, Amen.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 32–33",
+    "scan": "PDF pp. 59–60"
+   },
+   "entries": [
     {
      "id": "use.en.96db86afb339024340e9",
      "address": {

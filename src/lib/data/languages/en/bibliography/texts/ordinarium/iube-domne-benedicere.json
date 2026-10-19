@@ -1,0 +1,27 @@
+{
+ "id": "ordinarium.iube-domne-benedicere",
+ "source_groups": [
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 630",
+    "scan": "scan p. 638"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.iube-domne-benedicere.s03.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical basis of the fixed English Trinitarian formula only: printed in the name of the Father, and of the Son, and of the Holy Ghost. The selected Holy Spirit is a disclosed Latin-controlled revision of Holy Ghost. The devotional lead-in, cross sign and following Amen are outside this segment's wording scope. Not a witness for the surrounding ministerial blessing or its actors."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

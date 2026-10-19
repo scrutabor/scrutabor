@@ -248,11 +248,20 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 			const sources = page.getByRole('dialog').locator('details.source-notes');
 			await sources.locator('summary').click();
 			await expect(sources).toContainText(new RegExp(`Rubricae generales,? ${conclusion.section}`));
-			await expect(
-				sources.locator(
-					`a[href="https://archive.org/details/missale-romanum-1962/page/n${conclusion.leaf}/mode/1up"]`
-				)
-			).toHaveCount(1);
+			const conclusionLeaf = `a[href="https://archive.org/details/missale-romanum-1962/page/n${conclusion.leaf}/mode/1up"]`;
+			if (formulary === 'dominica-xxii-post-pentecosten') {
+				// The conclusion and its terminal Amen (w037) are separately declared parts of the
+				// same leaf, so this composite conclusion cites leaf n23 twice.
+				await expect(sources.locator(conclusionLeaf)).toHaveCount(2);
+				await expect(
+					sources.locator('li').filter({ has: page.locator(conclusionLeaf) })
+				).toHaveText([
+					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, Rubricae generales 115 d, terminal Amen · p. xviii · leaf n23 / PDF p. 24',
+					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, Rubricae generales, 115 d · p. xviii · leaf n23 / PDF p. 24'
+				]);
+			} else {
+				await expect(sources.locator(conclusionLeaf)).toHaveCount(1);
+			}
 			if (formulary === 'sancti-laurentii-martyris') {
 				await expect(sources).toContainText('S. Laurentii Martyris, Postcommunio');
 				await expect(

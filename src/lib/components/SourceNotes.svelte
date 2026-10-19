@@ -6,12 +6,16 @@
 		citations,
 		relationships,
 		lang,
-		centered = false
+		centered = false,
+		label,
+		scope
 	}: {
 		citations?: Citation[];
 		relationships?: TranslationRelationship[];
 		lang: Lang;
 		centered?: boolean;
+		label?: string;
+		scope?: string;
 	} = $props();
 </script>
 
@@ -20,8 +24,9 @@
 		<summary class="smallcaps"
 			><svg class="disclosure" viewBox="0 0 8 8" aria-hidden="true"
 				><path d="M2 1l4 3-4 3z"></path></svg
-			>{M[lang].sourcesLabel}</summary
+			>{label ?? M[lang].sourcesLabel}</summary
 		>
+		{#if scope}<p class="source-scope">{scope}</p>{/if}
 		{#if relationships?.length}
 			<div class="relationships">
 				<p class="relationship-label smallcaps">{M[lang].translationRelationshipLabel}</p>
@@ -96,6 +101,10 @@
 
 	.centered summary {
 		margin-inline: auto;
+	}
+
+	.source-scope {
+		margin: 0.5rem 0 0;
 	}
 
 	ol {

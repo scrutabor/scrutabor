@@ -8,6 +8,7 @@
 // back to the first formulary that uses it.
 import type { Lang } from './i18n';
 import { PROPER_DAYS } from './proprium';
+import { commemorationLookup } from './commemorationes';
 export { textAnchor } from './text-anchor';
 import { textAnchor } from './text-anchor';
 
@@ -22,6 +23,13 @@ export function formularyForText(textKey: string): string | undefined {
 		?.id;
 }
 
+/** A Proper text no formulary owns may belong to a commemoration's set of orations. */
+export function commemorationForText(textKey: string): string | undefined {
+	return commemorationLookup?.commemorations.find((entry) =>
+		entry.slots.some((slot) => slot.text === textKey)
+	)?.id;
+}
+
 export interface TextAddress {
 	word?: string;
 	segment?: string;
@@ -29,14 +37,19 @@ export interface TextAddress {
 
 /** The page that reads a corpus text, with an optional exact place in it. */
 export function textHref(lang: Lang, textKey: string, address: TextAddress = {}): string {
-	const formulary = textKey.startsWith('proprium/') ? formularyForText(textKey) : undefined;
-	const base = formulary
-		? `/app/${lang}/formularium/${encodeURIComponent(formulary)}`
-		: `/app/${lang}/${textKey}`;
+	const proper = textKey.startsWith('proprium/');
+	const formulary = proper ? formularyForText(textKey) : undefined;
+	const commemoration = proper && !formulary ? commemorationForText(textKey) : undefined;
+	const owner = formulary
+		? `formularium/${encodeURIComponent(formulary)}`
+		: commemoration
+			? `commemoratio/${encodeURIComponent(commemoration)}`
+			: undefined;
+	const base = owner ? `/app/${lang}/${owner}` : `/app/${lang}/${textKey}`;
 	const query = new URLSearchParams();
-	const prefix = formulary ? `${textKey.split('/')[1]}.` : '';
+	const prefix = owner ? `${textKey.split('/')[1]}.` : '';
 	if (address.word) query.set('w', `${prefix}${address.word}`);
 	if (address.segment) query.set('s', `${prefix}${address.segment}`);
 	const suffix = query.size ? `?${query}` : '';
-	return `${base}${suffix}${formulary ? `#${textAnchor(textKey)}` : ''}`;
+	return `${base}${suffix}${owner ? `#${textAnchor(textKey)}` : ''}`;
 }

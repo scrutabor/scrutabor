@@ -11,22 +11,6 @@
    },
    "entries": [
     {
-     "id": "use.en.5344712b484a41bca7eb",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Alleluia, alleluia."
-    },
-    {
-     "id": "use.en.76c14c27a651babcf02a",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Alleluia, alleluia."
-    },
-    {
      "id": "use.en.f94cb2344e2b3aced681",
      "address": {
       "kind": "segment",
@@ -36,6 +20,34 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 88",
+    "scan": "PDF pages 100 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.5344712b484a41bca7eb",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “Show us, O Lord, thy mercy, and grant us thy salvation.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.76c14c27a651babcf02a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English source expression: “Alleluia.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

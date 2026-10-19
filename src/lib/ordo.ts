@@ -38,6 +38,8 @@ export interface OrdoEntry {
 	text?: string;
 	/** Show this addition only when the selected canonical assembly contains it. */
 	onlyWhenPresent?: boolean;
+	/** A neutral label where the preparation has more than one permitted minister. */
+	quietLabel?: Record<Lang, string>;
 	note: Record<Lang, string>;
 	when?: Record<Lang, string>;
 }
@@ -64,10 +66,9 @@ export interface OrdoMovement {
  * secreto, the dialogues and the lessons aloud — and it is the claim a
  * Latinist should check first, because it is what the role filter acts on.
  *
- * `submissa` is the raised-but-not-full voice the rubrics call *elata
- * aliquantulum voce*: the first Dómine non sum dignus, the opening words
- * of Nobis quoque and of Orate fratres, where the priest lets the server
- * hear him and then drops back into silence.
+ * `submissa` is a genuinely lowered voice, as at the priest's Amen after
+ * the Suscípiat. The rubrics' *elata aliquantulum voce* is a manner of
+ * `clara`, not `submissa` (corpus SCHEMA).
  *
  * A part named nowhere here is said aloud. Where the CORPUS has read a
  * voice from the rubrics (SCHEMA.md 0.9.0) that reading governs the text
@@ -79,6 +80,9 @@ const QUIET: Record<string, 'secreto' | 'submissa'> = {
 	// preparation: the psalm and its versicles are said with the server;
 	// these two the priest says going up to the altar
 	'aufer-a-nobis': 'secreto',
+	// before the Mass Gospel, in the priest-alone base
+	'munda-cor-meum': 'secreto',
+	'iube-domine-benedicere': 'secreto',
 	// offertory: every one of these prayers is said silently
 	'suscipe-sancte-pater': 'secreto',
 	'deus-qui-humanae': 'secreto',
@@ -312,6 +316,54 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				when: {
 					pl: 'traktus śpiewa się tylko wtedy, gdy przewiduje go formularz dnia. Podobnie sekwencję dodaje się zgodnie z jego rubrykami',
 					en: "the Tract is sung only when prescribed by the day's formulary. The Sequence is likewise included according to its rubrics"
+				}
+			},
+			{
+				id: 'munda-cor-meum',
+				title: 'Munda cor meum',
+				kind: 'text',
+				text: 'ordinarium/munda-cor-meum',
+				quietLabel: {
+					pl: 'przygotowanie do Ewangelii',
+					en: 'preparation for the Gospel'
+				},
+				note: {
+					pl: 'W przedstawionym tu wariancie bez diakona kapłan przed Ewangelią Mszy odmawia tę modlitwę po cichu, także gdy sam śpiewa Ewangelię. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. We Mszach za zmarłych opuszcza się odrębną prośbę o błogosławieństwo i samo błogosławieństwo, ale Munda cor meum wraz ze swoim zakończeniem pozostaje. Nie odmawia się jej przed ostatnią Ewangelią.',
+					en: 'In the priest-alone form shown here, the priest says this prayer silently before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon says it, and the celebrant does not repeat it. The separate blessing request and blessing are omitted at Masses for the Dead, but Munda cor meum and its own conclusion remain. It is not said before the Last Gospel.'
+				}
+			},
+			{
+				id: 'iube-domine-benedicere',
+				title: 'Iube, Dómine, benedícere',
+				kind: 'text',
+				text: 'ordinarium/iube-domine-benedicere',
+				quietLabel: {
+					pl: 'prośba o błogosławieństwo',
+					en: 'prayer for a blessing'
+				},
+				note: {
+					pl: 'Po Munda cor meum kapłan odprawiający bez diakona i subdiakona odmawia po cichu tę prośbę i błogosławieństwo przed Ewangelią Mszy, także gdy sam śpiewa Ewangelię. We Mszy uroczystej diakon ma odrębny obrzęd. Sam wybór Mszy śpiewanej nie oznacza jego obecności. We Mszach za zmarłych opuszcza się obie części. Nie odmawia się ich przed ostatnią Ewangelią.',
+					en: 'After Munda cor meum, the priest celebrating without a deacon and subdeacon says this request and blessing silently before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon has a separate rite. Selecting sung Mass alone does not imply his presence. Both parts are omitted at Masses for the Dead. They are not said before the Last Gospel.'
+				}
+			},
+			{
+				id: 'iube-domne-benedicere',
+				title: 'Iube, domne, benedícere (Diáconi)',
+				kind: 'text',
+				text: 'ordinarium/iube-domne-benedicere',
+				note: {
+					pl: 'Odrębna forma przygotowania do Ewangelii z udziałem diakona. Prośbę wypowiada diakon. Celebrans udziela błogosławieństwa i sam mówi końcowe Amen. Nie odmawia się tej formuły po przygotowaniu kapłana odprawiającego bez diakona i subdiakona. Opuszcza się ją we Mszach za zmarłych. Nie stosuje się jej przed ostatnią Ewangelią.',
+					en: 'A separate form of preparation for the Gospel with a deacon. The deacon makes the request. The celebrant gives the blessing and says the final Amen himself. This formula is not said after the preparation of the priest celebrating without a deacon and subdeacon. It is omitted at Masses for the Dead and is not used before the Last Gospel.'
+				}
+			},
+			{
+				id: 'iube-domne-benedicere-in-passione',
+				title: 'Iube, domne, benedícere (in Passióne)',
+				kind: 'text',
+				text: 'ordinarium/iube-domne-benedicere-in-passione',
+				note: {
+					pl: 'Gdy w Niedzielę Palmową Pasję śpiewają wyznaczeni duchowni mający co najmniej święcenia diakonatu, po Munda cor meum proszą celebransa o błogosławieństwo. Celebrans udziela im błogosławieństwa w liczbie mnogiej, głosem umiarkowanym (media voce). Ci duchowni odpowiadają Amen. Jest to odrębna forma od przygotowania kapłana wykonującego Pasję sam. Nie dotyczy Ewangelii w obrzędach palm przed Mszą.',
+					en: 'When appointed clergy who are at least deacons sing the Palm Sunday Passion, they request the celebrant’s blessing after Munda cor meum. The celebrant gives them the plural blessing in a moderate voice (media voce). Those ministers answer Amen. This is distinct from the preparation of a priest delivering the Passion alone. It is not the preparation for the Gospel in the palm ceremonies before Mass.'
 				}
 			},
 			{
@@ -647,8 +699,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/pater-noster',
 				note: {
-					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi, a usługujący odpowiada Sed líbera nos a malo. We Mszy cichej lud może odmówić z nim całą modlitwę.',
-					en: 'The priest sings or says the Lord’s Prayer and the server answers Sed líbera nos a malo. At low Mass the people may say the whole prayer with him.'
+					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi, a usługujący odpowiada Sed líbera nos a malo. Choć kapłan mówi końcowe Amen po cichu, we Mszy cichej lud może odmówić z nim całą modlitwę po łacinie, dodając wspólnie Amen.',
+					en: 'The priest sings or says the Lord’s Prayer and the server answers Sed líbera nos a malo. Although the priest’s final Amen is said quietly, at low Mass the people may say the whole prayer with him in Latin, all adding Amen.'
 				}
 			},
 			{

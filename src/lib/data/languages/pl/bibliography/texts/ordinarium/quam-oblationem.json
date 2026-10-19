@@ -4,7 +4,7 @@
   {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
-   "role": "historical_wording_comparator",
+   "role": "historical_wording_basis",
    "locator": {
     "printed": "druk. s. 58",
     "scan": "PDF s. 61",
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „naszego Pana Jezusa Chrystusa.”"
+     "claim": "Historyczna podstawa zrewidowanego polskiego tytułu „naszego Pana Jezusa Chrystusa”. Druk ma „Pana naszego, Jezusa Chrystusa”. Wybrane brzmienie zmienia szyk i interpunkcję, zachowując cały tytuł. Teza dotyczy tylko tego segmentu."
     },
     {
      "id": "use.pl.5f5e1d491387644bdcd2",
@@ -25,10 +25,10 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „aby dla nas stała się Ciałem i Krwią Twojego najmilszego Syna,”"
+     "claim": "Historyczna podstawa zrewidowanej polskiej prośby, aby ofiara stała się dla nas Ciałem i Krwią najmilszego Syna. Druk ma „aby się stała dla nas Ciałem i Krwią najmilszego Syna Twego”. Wybrane brzmienie przestawia szyk i oddaje Twego jako Twojego. Ta lokalna teza nie obejmuje wcześniejszych pięciu określeń ofiary."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

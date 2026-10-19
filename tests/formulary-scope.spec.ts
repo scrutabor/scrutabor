@@ -6,8 +6,8 @@ for (const language of ['pl', 'en'] as const) {
 	}) => {
 		const message =
 			language === 'pl'
-				? 'Dobór modlitw nie uwzględnia jeszcze wspomnień liturgicznych ani kalendarzy lokalnych.'
-				: 'The selection of prayers does not yet account for liturgical commemorations or local calendars.';
+				? 'Dobór modlitw uwzględnia wspomnienie Litanii Większych, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.'
+				: 'The selection of prayers accounts for the commemoration of the Greater Litanies, but not yet for other liturgical commemorations or local calendars.';
 		await page.setViewportSize({ width: 320, height: 900 });
 		await page.goto(`/app/${language}/ordo/offertorium?dies=2049-07-25`);
 		await expect(page.locator('.page > header .formulary-scope')).toHaveText(message);

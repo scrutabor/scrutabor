@@ -6,6 +6,26 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "p. 69",
+    "scan": "PDF pages 81 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.5aed40d65d7f79afd3f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “through the same Christ our Lord. Amen.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "pp. 68–69",
     "scan": "scan pp. 80–81"
    },
@@ -15,14 +35,6 @@
      "address": {
       "kind": "segment",
       "segment": "s01"
-     },
-     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
-    },
-    {
-     "id": "use.en.5aed40d65d7f79afd3f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
      },
      "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
     }
@@ -38,14 +50,6 @@
     "scan": "scan p. 54"
    },
    "entries": [
-    {
-     "id": "use.en.92d6ba4b00b41d6cbce0",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Remember also, O Lord, Your servants, men and women, who went before us bearing the sign of faith and now sleep the sleep of peace."
-    },
     {
      "id": "use.en.9890b901a26341381cda",
      "address": {

@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.iube-domne-benedicere-in-passione",
+  "language":"en",
+  "about":"Before the Passion, ministers who are at least deacons ask the celebrant for this blessing after Munda cor meum. The blessing addresses them together, and they say Amen. This is distinct from the priest’s preparation when he proclaims the Passion alone.",
+  "seg":[
+    {"id":"s01","tr":"Please give your blessing, sir.","g":[null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"please give your blessing, sir"}],"ex":{"w001":"The rubric identifies a request for the celebrant’s blessing. Iube introduces benedicere in that request.","w002":"Domne respectfully addresses the celebrant. The following Dominus names the divine Lord."}},
+    {"id":"s02","tr":"May the Lord be in your hearts and on your lips, so that you may proclaim His Gospel worthily and fittingly:","g":[null,null,"in",null,null,"and","on",null,null,"so that",null,null,null,null,null,null],"a":[{"s":0,"n":2,"a":1,"g":"may the Lord be"},{"s":3,"n":2,"a":0,"g":"your hearts"},{"s":7,"n":2,"a":0,"g":"your lips"},{"s":10,"n":4,"a":3,"g":"you may worthily and fittingly proclaim"},{"s":14,"n":2,"a":0,"g":"His Gospel"}],"ex":{"w017":"The blessing addresses the ministers together. They are the ones who will proclaim the Passion.","w019":"His refers to the Lord, not to the ministers who proclaim the Gospel."}},
+    {"id":"s03","tr":"in the name of the Father, and of the Son, and of the Holy Spirit.","tb":"revised","g":["in","the name","of the Father","and","of the Son","and",null,null],"a":[{"s":6,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s04","tr":"Amen.","g":["amen"],"ex":{"w028":"The rubric assigns this Amen to the ministers receiving the blessing."}}
+  ]
+}

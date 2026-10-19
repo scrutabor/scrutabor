@@ -18,14 +18,6 @@
       "segment": "s02"
      },
      "claim": "Our help is in the name of the Lord."
-    },
-    {
-     "id": "use.en.b291904bdf88b045b7ad",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Our help is in the name of the Lord."
     }
    ],
    "verified_on": "2026-08-28"
@@ -36,7 +28,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 4",
-    "scan": "scan p. 31"
+    "scan": "PDF pages 31 (one-based)"
    },
    "entries": [
     {
@@ -45,8 +37,20 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Our help is in the name of the Lord."
-    },
+     "claim": "Historical English source expression: “Who made heaven and earth.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 4",
+    "scan": "scan p. 31"
+   },
+   "entries": [
     {
      "id": "use.en.a14988cccfb488b75c29",
      "address": {

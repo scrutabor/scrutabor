@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.10.0",
+  "schema_version": "5.12.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -351,6 +351,24 @@
       "evidence": "bibliography/texts/ordinarium/ite-missa-est.json"
     },
     {
+      "id": "ordinarium.iube-domine-benedicere",
+      "path": "texts/ordinarium/iube-domine-benedicere.json",
+      "title": "Iube, Dómine, benedícere",
+      "evidence": "bibliography/texts/ordinarium/iube-domine-benedicere.json"
+    },
+    {
+      "id": "ordinarium.iube-domne-benedicere-in-passione",
+      "path": "texts/ordinarium/iube-domne-benedicere-in-passione.json",
+      "title": "Iube, domne, benedícere",
+      "evidence": "bibliography/texts/ordinarium/iube-domne-benedicere-in-passione.json"
+    },
+    {
+      "id": "ordinarium.iube-domne-benedicere",
+      "path": "texts/ordinarium/iube-domne-benedicere.json",
+      "title": "Iube, domne, benedícere",
+      "evidence": "bibliography/texts/ordinarium/iube-domne-benedicere.json"
+    },
+    {
       "id": "ordinarium.iudica-me",
       "path": "texts/ordinarium/iudica-me.json",
       "title": "Psalmus Iúdica me",
@@ -402,6 +420,12 @@
       "path": "texts/ordinarium/misereatur.json",
       "title": "Misereátur",
       "evidence": "bibliography/texts/ordinarium/misereatur.json"
+    },
+    {
+      "id": "ordinarium.munda-cor-meum",
+      "path": "texts/ordinarium/munda-cor-meum.json",
+      "title": "Munda cor meum",
+      "evidence": "bibliography/texts/ordinarium/munda-cor-meum.json"
     },
     {
       "id": "ordinarium.nobis-quoque",
@@ -4595,6 +4619,18 @@
       "evidence": "bibliography/texts/proprium/in-octava-nativitatis-secreta.json"
     },
     {
+      "id": "proprium.litaniae-maiores-collecta",
+      "path": "texts/proprium/litaniae-maiores-collecta.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/litaniae-maiores-collecta.json"
+    },
+    {
+      "id": "proprium.litaniae-maiores-postcommunio",
+      "path": "texts/proprium/litaniae-maiores-postcommunio.json",
+      "title": "Vota nostra, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/litaniae-maiores-postcommunio.json"
+    },
+    {
       "id": "proprium.maternitas-beatae-mariae-virginis-alleluia",
       "path": "texts/proprium/maternitas-beatae-mariae-virginis-alleluia.json",
       "title": "Allelúia, allelúia. Virgo Dei Génitrix, quem totus",
@@ -6739,6 +6775,7 @@
     "calendar": "calendar.json",
     "canon": "canon.json",
     "dismissal": "dismissal.json",
+    "commemorationes": "commemorationes.json",
     "lexicon": "lexicon/heads.json",
     "morphology": "tables/morphology.json",
     "analysis": "tables/analysis.json",
@@ -6752,7 +6789,7 @@
     2026,
     2101
   ],
-  "analyses": 25,
+  "analyses": 26,
   "citations": 456,
   "bibliography_schema": "1.5.0"
 }

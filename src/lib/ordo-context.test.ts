@@ -1,8 +1,14 @@
+import { readFileSync } from 'node:fs';
 import { expect, it } from 'vitest';
-import { ordoContext } from './ordo-context';
+import {
+	ordoBlessingContext,
+	ordoContext,
+	ordoMinisterBlessingContext,
+	ordoResponseContext
+} from './ordo-context';
 import { ORDO } from './ordo';
 import { PROPER_DAYS } from './proprium';
-import { bindPlFields } from './polish';
+import { bindOrphans, bindPlFields } from './polish';
 
 const entries = [
 	'introibo',
@@ -37,7 +43,7 @@ it.each(['pl', 'en'] as const)(
 	(lang) => {
 		const note =
 			lang === 'pl'
-				? 'W Wigilię Zesłania Ducha Świętego Credo się nie odmawia.'
+				? bindOrphans('W Wigilię Zesłania Ducha Świętego Credo się nie odmawia.')
 				: 'The Creed is omitted at the Vigil of Pentecost.';
 		for (const dismissal of [false, true])
 			expect(ordoContext('credo', 'vigilia-pentecostes', dismissal, lang)).toBe(note);
@@ -139,3 +145,158 @@ it.each(['pl', 'en'] as const)(
 		}
 	}
 );
+
+it.each(['pl', 'en'] as const)('scopes the %s Palm response to its loaded Gospel', (lang) => {
+	const passion = ['proprium/dominica-ii-passionis-evangelium'];
+	const entry = 'laus-tibi-christe',
+		mass = 'dominica-ii-passionis';
+	expect(ordoResponseContext(entry, mass, passion, lang)).toEqual({
+		referenceOnly: true,
+		note: ordoContext(entry, mass, false, lang)
+	});
+	for (const keys of [[], [...passion, 'proprium/other-evangelium']]) {
+		const state = ordoResponseContext(entry, mass, keys, lang);
+		expect(state?.referenceOnly).toBe(true);
+		expect(state?.note).toContain(lang === 'pl' ? 'tylko do wglądu' : 'reference only');
+		expect(state?.note).toContain(
+			lang === 'pl' ? 'nie ma jednoznacznie wczytanej' : 'no single Gospel is loaded'
+		);
+	}
+	// A future loaded ordinary-Gospel alternative must not receive the
+	// Passion-specific note. This does not add such an assembly to the corpus.
+	expect(ordoResponseContext(entry, mass, ['proprium/other-evangelium'], lang)).toEqual({
+		referenceOnly: false
+	});
+	for (const other of [
+		null,
+		'dominica-iii-post-pascha',
+		'vigilia-paschalis',
+		'vigilia-pentecostes'
+	])
+		expect(ordoResponseContext(entry, other, passion, lang)).toBeUndefined();
+	for (const other of ORDO.flatMap((movement) => movement.entries).filter(
+		(part) => part.id !== entry
+	))
+		expect(ordoResponseContext(other.id, mass, passion, lang), other.id).toBeUndefined();
+});
+
+it('explains the Latin Pater faculty without cancelling the priest’s quiet Amen', () => {
+	const note = ORDO.flatMap((movement) => movement.entries).find(
+		(entry) => entry.id === 'pater-noster'
+	)!.note;
+	expect(note.en).toContain('priest’s final Amen is said quietly');
+	expect(note.en).toContain('may say the whole prayer with him in Latin, all adding Amen');
+	expect(note.pl).toContain('kapłan mówi końcowe Amen po cichu');
+	expect(note.pl).toContain('całą modlitwę po łacinie, dodając wspólnie Amen');
+});
+
+// Independent of lib/polish's own pattern: a one-letter Polish word followed by any
+// whitespace other than U+00A0 may be left hanging at the end of a line.
+const BREAKABLE_ORPHAN = /(?:^|[\s„“"(])[aiouwz](?=[^\S\u00a0])/i;
+const BOUND_ORPHAN = /(?:^|[\s„“"(])[aiouwz]\u00a0/gi;
+const preparation = (date: string | null, mass: string | null, lang: 'pl' | 'en') => ({
+	...{ date, mass, loading: false, failed: false, unwritten: false },
+	...{ loadedMass: mass, loadedLanguage: mass && lang }
+});
+
+it('binds the one-letter words of the two Ordinary-alone Gospel-blessing notes', () => {
+	const blessing = ordoBlessingContext(
+		'iube-domine-benedicere',
+		preparation('2026-04-26', null, 'pl'),
+		'pl'
+	)!.note!;
+	const deacon = ordoMinisterBlessingContext(
+		'iube-domne-benedicere',
+		preparation('2026-04-26', null, 'pl'),
+		[],
+		'pl'
+	)!.note;
+	for (const [note, bound] of [
+		[
+			blessing,
+			[
+				'prośba i\u00a0błogosławieństwo',
+				'diakona i\u00a0subdiakona',
+				'z\u00a0wyjątkiem',
+				'o\u00a0obecności'
+			]
+		],
+		[deacon, ['z\u00a0udziałem', 'z\u00a0wyjątkiem']]
+	] as const) {
+		expect(note).not.toMatch(BREAKABLE_ORPHAN);
+		expect(note.match(BOUND_ORPHAN)).toHaveLength(bound.length);
+		for (const pair of bound) expect(note).toContain(pair);
+	}
+	expect(blessing.replaceAll('\u00a0', ' ')).toContain(
+		'Ta prośba i błogosławieństwo należą do wariantu bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych. Sam wybór Mszy śpiewanej nie rozstrzyga o obecności tych posługujących.'
+	);
+	expect(deacon.replaceAll('\u00a0', ' ')).toContain(
+		'Ten wariant dotyczy Ewangelii z udziałem diakona, z wyjątkiem Mszy za zmarłych.'
+	);
+});
+
+// Every literal of the module, read from its source without comments: the notes must be
+// these strings verbatim, joined by spaces, with only their one-letter words bound.
+const SOURCE_LITERALS = [
+	...readFileSync(new URL('./ordo-context.ts', import.meta.url), 'utf-8')
+		.replace(/\/\*[\s\S]*?\*\//g, '')
+		.replace(/^\s*\/\/.*$/gm, '')
+		.matchAll(/'((?:[^'\\\n]|\\.)*)'/g)
+].map((match) => match[1]);
+const POLISH_LITERALS = SOURCE_LITERALS.filter((text) => /[ąćęłńóśźż]/i.test(text));
+function sourceSentences(note: string): string[] | undefined {
+	const plain = note.replaceAll('\u00a0', ' ');
+	if (!plain) return [];
+	for (const literal of [...POLISH_LITERALS].sort((a, b) => b.length - a.length))
+		if (plain === literal || plain.startsWith(literal + ' ')) {
+			const rest = sourceSentences(plain.slice(literal.length + 1));
+			if (rest) return [literal, ...rest];
+		}
+	return undefined;
+}
+
+it('binds every Polish note of every context helper without changing its wording', () => {
+	const occasions: [string | null, string | null, string[]][] = [
+		['2026-04-26', null, []],
+		[null, 'dominica-iii-post-pascha', []],
+		['2026-04-26', 'dominica-iii-post-pascha', ['proprium/dominica-iii-post-pascha-evangelium']],
+		['2026-03-29', 'dominica-ii-passionis', ['proprium/dominica-ii-passionis-evangelium']],
+		['2026-03-29', 'dominica-ii-passionis', ['proprium/dominica-iii-post-pascha-evangelium']],
+		['2026-03-29', 'dominica-ii-passionis', []],
+		['2026-04-04', 'vigilia-paschalis', ['proprium/vigilia-paschalis-evangelium']],
+		['2026-05-23', 'vigilia-pentecostes', ['proprium/vigilia-pentecostes-evangelium']],
+		[
+			'2026-11-02',
+			'commemoratio-omnium-fidelium-defunctorum',
+			['proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-evangelium']
+		]
+	];
+	const ids = ORDO.flatMap((movement) => movement.entries.map((entry) => entry.id));
+	const notes = { pl: new Set<string>(), en: new Set<string>() };
+	for (const lang of ['pl', 'en'] as const)
+		for (const [date, mass, keys] of occasions) {
+			const state = preparation(date, mass, lang);
+			for (const id of ids)
+				for (const note of [
+					ordoContext(id, mass, false, lang),
+					ordoContext(id, mass, true, lang),
+					ordoResponseContext(id, mass, keys, lang)?.note,
+					ordoBlessingContext(id, state, lang)?.note,
+					ordoMinisterBlessingContext(id, state, keys, lang)?.note
+				])
+					if (note) notes[lang].add(note);
+		}
+	const used = new Set<string>();
+	for (const note of notes.pl) {
+		expect(note).not.toMatch(BREAKABLE_ORPHAN);
+		expect(note).toBe(bindOrphans(note.replaceAll('\u00a0', ' ')));
+		const sentences = sourceSentences(note);
+		expect(sentences, note).toBeDefined();
+		for (const sentence of sentences!) used.add(sentence);
+	}
+	// The occasions reach every Polish note the module declares, so none escapes the check.
+	expect([...POLISH_LITERALS].filter((literal) => !used.has(literal))).toEqual([]);
+	expect(used.size).toBe(new Set(POLISH_LITERALS).size);
+	expect(used.size).toBeGreaterThanOrEqual(39);
+	for (const note of notes.en) expect(note).not.toContain('\u00a0');
+});

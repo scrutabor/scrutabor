@@ -7,6 +7,26 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 61–62",
+    "scan": "PDF pages 73, 74 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.93eeeec463cfdb1d84c8",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historical English source expression: “which in the first place we offer thee for thy holy catholic Church, to which vouchsafe to grant peace, as also to preserve, unite, and govern it throughout the world” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 61–62",
     "scan": "scan pp. 73–74"
    },
    "entries": [
@@ -15,14 +35,6 @@
      "address": {
       "kind": "segment",
       "segment": "s02"
-     },
-     "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
-    },
-    {
-     "id": "use.en.93eeeec463cfdb1d84c8",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
      },
      "claim": "Therefore, most merciful Father, through Jesus Christ, Your Son, our Lord, we humbly pray and beseech You"
     }

@@ -17,7 +17,8 @@
 		onclose,
 		onnavigate,
 		construction = null,
-		inline = false
+		inline = false,
+		idPrefix = ''
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
@@ -30,6 +31,8 @@
 		/** The landing keeps the panel open as part of the page; every other
 		 * surface uses the dismissible bottom-sheet placement. */
 		inline?: boolean;
+		/** The same namespace used for this word's reading-surface address. */
+		idPrefix?: string;
 	} = $props();
 </script>
 
@@ -47,6 +50,7 @@
 <Sheet
 	{lang}
 	{onclose}
+	returnFocusId={idPrefix ? `${idPrefix}.${word.id}` : word.id}
 	label={construction ? M[lang].constructionPanelAria : M[lang].panelAria}
 	extra={inline ? 'panel word-panel-inline' : 'panel'}
 	max="45vh"

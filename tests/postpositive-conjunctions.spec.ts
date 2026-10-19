@@ -8,7 +8,7 @@ const contrasts = [
 	['proprium/dominica-ii-passionis-tractus', ['w032', 'w062']],
 	['proprium/dominica-ii-post-epiphaniam-evangelium', ['w137']],
 	['proprium/dominica-iii-in-quadragesima-evangelium', ['w044']],
-	['proprium/dominica-iii-post-pascha-evangelium', ['w105']],
+	// dominica-iii-post-pascha-evangelium w105 is pinned in its clause group below.
 	['proprium/dominica-in-albis-evangelium', ['w105']],
 	['proprium/dominica-ix-post-pentecosten-evangelium', ['w103']],
 	['proprium/dominica-xii-post-pentecosten-evangelium', ['w105']],
@@ -47,6 +47,44 @@ for (const [text, words] of contrasts) {
 		}
 	});
 }
+
+// The English renders vos autem contristabímini (w104–w106) as one group, "but you will be
+// sorrowful". Its postpositive autem is still the contrast, rendered clause-initially: the
+// caption leads with "but" while autem stays second in the Latin, and no member keeps a
+// caption of its own.
+test('English proprium/dominica-iii-post-pascha-evangelium renders its postpositive contrast clause-initially', async ({
+	page
+}) => {
+	const { route, prefix } = destination('proprium/dominica-iii-post-pascha-evangelium');
+	await page.goto(route);
+	await setHelp(page, 1);
+	const group = page.locator(`button[id="${prefix}w106"]`);
+	await expect(group).toHaveClass(/\bword-construction\b/);
+	await expect(group.locator('..')).toHaveClass(/\btoken-group\b/);
+	await expect(group.locator('rt')).toHaveText('but you will be sorrowful');
+	await expect(group.locator('rt')).toHaveText(/^but\b/);
+	await expect(group.locator('.token')).toHaveCount(3);
+	await expect(group.locator('.token').nth(0)).toHaveAttribute('id', `${prefix}w104`);
+	await expect(group.locator('.token').nth(1)).toHaveAttribute('id', `${prefix}w105`);
+	for (const word of ['w104', 'w105'])
+		await expect(page.locator(`button[id="${prefix}${word}"]`)).toHaveCount(0);
+	await group.focus();
+	await group.press('Enter');
+	await expect(page.locator('aside .form')).toHaveText('vos autem contristabímini');
+	await expect(page.locator('aside .gloss')).toHaveText('but you will be sorrowful');
+	const members = page.locator('aside .construction-title');
+	await expect(members).toHaveText(['vos', 'autem', 'contristabímini']);
+	await expect(members.first()).not.toHaveText('autem');
+	await expect(page.locator('aside .construction-card .morph')).toHaveCount(3);
+	const autem = page.locator('aside .construction-card').filter({
+		has: page.locator('.construction-title').filter({ hasText: /^autem$/ })
+	});
+	await expect(autem).toHaveCount(1);
+	await expect(autem.locator('.morph')).toHaveCount(1);
+	await expect(autem).toContainText('however');
+	await page.keyboard.press('Escape');
+	await expect(page.locator('aside')).toHaveCount(0);
+});
 
 for (const [text, first, second, next, predicate] of [
 	['proprium/ascensio-domini-evangelium', 'w097', 'w098', 'w099', 'going forth'],

@@ -4,6 +4,8 @@ import TextBody from './TextBody.svelte';
 import TextBodyLayout from './TextBodyLayout.fixture.svelte';
 import type { GlossDocument, Segment, TextDocument } from '../corpus';
 import { textFlowFor } from '../reading-flow';
+import { massForm } from '../mass-form.svelte';
+import { role } from '../role.svelte';
 
 const defaults = { confidence: 'editorial', sources: [], review: 'pending' };
 const text = (segments: Segment[]): TextDocument => ({
@@ -159,5 +161,136 @@ describe('a body that follows another body in one Ordo slot', () => {
 		const html = rendered({ helpLevel: 2, preceding: neighbour.last, precededBySources: true });
 		expect(html).toMatch(/class="flow-row[^"]*\bsources-before\b[^"]*"/);
 		expect(rendered({ helpLevel: 2, preceding: neighbour.last })).not.toMatch(/sources-before/);
+	});
+});
+
+describe.each([0, 1, 2])('a reference response at help level %i', (helpLevel) => {
+	const response: Segment = {
+		id: 's01',
+		type: 'verse',
+		speaker: 'minister',
+		participation: { lecta: { gradus: 1, source: 'DMS 31 a' } },
+		words: [
+			{ id: 'w001', form: 'Laus', lemma: 'laus', morph: { pos: 'noun' } },
+			{ id: 'w002', form: 'tibi', lemma: 'tu', morph: { pos: 'pron' } },
+			{ id: 'w003', form: 'Christe', lemma: 'Christus', morph: { pos: 'noun' } }
+		]
+	};
+	const responseGloss: GlossDocument = {
+		...gloss,
+		segments: { s01: { translation: 'Praise to You, O Christ.' } },
+		words: {
+			w001: { gloss: 'praise' },
+			w002: { gloss: 'to You' },
+			w003: { gloss: 'O Christ' }
+		}
+	};
+	// Deliberately inert fixture URL. No request is needed for server markup.
+	const witness = [
+		{
+			title: 'Test witness',
+			locator: 'Test location',
+			url: 'https://example.invalid/response-witness'
+		}
+	];
+	const rendered = (referenceOnly: boolean, segments = [response]) =>
+		render(TextBody, {
+			props: {
+				doc: text(segments),
+				gloss: responseGloss,
+				lang: 'en',
+				helpLevel,
+				idPrefix: 'retained',
+				ontap: () => {},
+				referenceOnly,
+				verifiedTranslationCitations: witness
+			}
+		}).body;
+	const verseClasses = (html: string) => {
+		const opening = html.match(/<p\b[^>]*\bid="retained-s01"[^>]*>/)?.[0];
+		expect(opening).toBeDefined();
+		const classes = opening!.match(/\bclass="([^"]*)"/)?.[1];
+		expect(classes).toBeDefined();
+		return classes!.split(/\s+/);
+	};
+	const retained = (html: string) => {
+		// The decorative initial splits a Latin word across tags. Inspect
+		// this controlled ASCII fixture’s text, not an aria-label substring.
+		const content = html.replace(/<[^>]*>/g, '');
+		for (const id of ['retained-s01', 'retained.w001', 'retained.w002', 'retained.w003'])
+			expect(html.match(new RegExp('id="' + id.replaceAll('.', '\\.') + '"', 'g'))).toHaveLength(1);
+		for (const word of ['Laus', 'tibi', 'Christe']) expect(content).toContain(word);
+		if (helpLevel === 1)
+			for (const caption of ['praise', 'to You', 'O Christ']) expect(content).toContain(caption);
+		if (helpLevel === 2) expect(content).toContain('Praise to You, O Christ.');
+		for (const href of ['https://example.invalid/response-witness', '/app/en/bibliographia'])
+			expect(html.split('href="' + href + '"').length - 1).toBe(helpLevel === 2 ? 1 : 0);
+	};
+	it.each(['lecta', 'cantu'] as const)(
+		'retains words and anchors without active %s actor cues',
+		(form) => {
+			const before = structuredClone(response),
+				beforeGloss = structuredClone(responseGloss);
+			const oldForm = massForm.value,
+				oldRole = role.value;
+			try {
+				massForm.set(form);
+				for (const who of ['populus', 'minister', 'sacerdos'] as const) {
+					role.set(who);
+					const active = rendered(false),
+						reference = rendered(true);
+					expect(active).toContain('class="who');
+					expect(active).toContain('class="mark');
+					if (form === 'lecta') expect(active).toContain('everyone answers');
+					expect(verseClasses(active)).not.toContain('quiet');
+					expect(verseClasses(active).includes('answer')).toBe(
+						who === 'minister' || (form === 'lecta' && who === 'populus')
+					);
+					expect(reference).not.toContain('class="who');
+					expect(reference).not.toContain('class="mark');
+					expect(verseClasses(reference)).not.toContain('quiet');
+					expect(verseClasses(reference)).not.toContain('answer');
+					retained(active);
+					retained(reference);
+				}
+			} finally {
+				massForm.set(oldForm);
+				role.set(oldRole);
+			}
+			expect(response).toEqual(before);
+			expect(responseGloss).toEqual(beforeGloss);
+		}
+	);
+	it('does not leak a conditional faculty, quiet styling, or voice instruction into reference mode', () => {
+		const oldForm = massForm.value,
+			oldRole = role.value;
+		const faculty: Segment = {
+			...response,
+			speaker: 'sacerdos',
+			voice: 'secreto',
+			participation: { lecta: { source: 'DMS 32', conditional: true } }
+		};
+		const before = structuredClone(faculty);
+		try {
+			massForm.set('lecta');
+			role.set('sacerdos');
+			const active = rendered(false, [faculty]),
+				reference = rendered(true, [faculty]);
+			expect(active).toContain('the faithful may join');
+			expect(active).toContain('silently');
+			expect(verseClasses(active)).toContain('quiet');
+			expect(verseClasses(active)).toContain('answer');
+			expect(reference).not.toContain('the faithful may join');
+			expect(reference).not.toContain('silently');
+			expect(reference).not.toContain('class="who');
+			expect(verseClasses(reference)).not.toContain('quiet');
+			expect(verseClasses(reference)).not.toContain('answer');
+			retained(active);
+			retained(reference);
+		} finally {
+			massForm.set(oldForm);
+			role.set(oldRole);
+		}
+		expect(faculty).toEqual(before);
 	});
 });

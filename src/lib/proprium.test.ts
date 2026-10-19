@@ -16,6 +16,7 @@ import {
 } from './proprium';
 import { ORDO } from './ordo';
 import { properData } from './loaders';
+import { COMMEMORATION_TEXT_KEYS } from './commemorationes';
 
 const properKeys = TEXT_KEYS.filter((k) => k.startsWith('proprium/'));
 
@@ -24,9 +25,12 @@ describe('the days table and the corpus agree', () => {
 		// A text whose day is not in the table can never be chosen, so it is
 		// vendored for nobody — the same defect the shelf test catches for
 		// every other category.
-		const assembled = new Set(
-			PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text))
-		);
+		// A commemoration's oration joins the Mass of the day the corpus pairs it with;
+		// its slot reaches the text exactly as a formulary component does.
+		const assembled = new Set([
+			...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text)),
+			...COMMEMORATION_TEXT_KEYS
+		]);
 		const orphans = properKeys.filter((key) => !assembled.has(key));
 		expect(orphans, 'proprium texts belonging to no named day').toEqual([]);
 	});

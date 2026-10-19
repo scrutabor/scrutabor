@@ -6,8 +6,8 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 75–76",
-    "scan": "PDF pp. 87–88"
+    "printed": "p. 75",
+    "scan": "PDF pages 87 (one-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+     "claim": "Historical English source expression: “Lord, I am not worthy” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.52b69a0397f3dcb539b1",
@@ -24,7 +24,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+     "claim": "Historical English source expression: “that thou shouldst enter under my roof: but only say the word, and my soul shall be healed.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.9943efb91cf9c251bfa8",
@@ -32,23 +32,7 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
-    },
-    {
-     "id": "use.en.b41e616fce21ed6e3667",
-     "address": {
-      "kind": "segment",
-      "segment": "s14"
-     },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
-    },
-    {
-     "id": "use.en.b45de02944085115238d",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+     "claim": "Historical English source expression: “Lord, I am not worthy” The addressed English expands an explicitly abbreviated or instructed repetition; it is not a separately printed full repetition."
     },
     {
      "id": "use.en.e1b07c0efb03be54a030",
@@ -56,7 +40,7 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+     "claim": "Historical English source expression: “Lord, I am not worthy” The addressed English expands an explicitly abbreviated or instructed repetition; it is not a separately printed full repetition."
     },
     {
      "id": "use.en.ee3999ab907b3ec9a2a2",
@@ -64,13 +48,53 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
+     "claim": "Historical English source expression: “that thou shouldst enter under my roof: but only say the word, and my soul shall be healed.” The addressed English wording is revised, not a verbatim quotation. This occurrence expands the source’s explicit repetition instruction rather than another full printed formula."
     },
     {
      "id": "use.en.f5305156610fd58d1052",
      "address": {
       "kind": "segment",
       "segment": "s12"
+     },
+     "claim": "Historical English source expression: “that thou shouldst enter under my roof: but only say the word, and my soul shall be healed.” The addressed English wording is revised, not a verbatim quotation. This occurrence expands the source’s explicit repetition instruction rather than another full printed formula."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 75–76",
+    "scan": "PDF pages 87, 88 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.b41e616fce21ed6e3667",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historical English source expression: “May the body of our Lord Jesus Christ preserve my soul to life everlasting. Amen.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 75–76",
+    "scan": "PDF pp. 87–88"
+   },
+   "entries": [
+    {
+     "id": "use.en.b45de02944085115238d",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "I will receive the Bread of heaven and call upon the name of the Lord."
     }

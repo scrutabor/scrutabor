@@ -11,22 +11,6 @@
    },
    "entries": [
     {
-     "id": "use.en.37939bc2389783777c1c",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "May almighty God bless you,"
-    },
-    {
-     "id": "use.en.4144b5078351fcac0f1b",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "May almighty God bless you,"
-    },
-    {
      "id": "use.en.ce15d6b240d314747bf9",
      "address": {
       "kind": "segment",
@@ -36,6 +20,34 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "PDF pages 91 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.37939bc2389783777c1c",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English source expression: “the Father, Son, and Holy Ghost” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.4144b5078351fcac0f1b",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
+    }
+   ],
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

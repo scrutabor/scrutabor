@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 48",
-    "scan": "scan p. 60"
+    "scan": "PDF pages 60 (one-based)"
    },
    "entries": [
     {
@@ -16,8 +16,20 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
-    },
+     "claim": "Historical English source expression: “Come, O almighty and eternal God, the sanctifier” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 48",
+    "scan": "scan p. 60"
+   },
+   "entries": [
     {
      "id": "use.en.46d01326682a67afed5d",
      "address": {
@@ -65,14 +77,6 @@
       "segment": "s02"
      },
      "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
-    },
-    {
-     "id": "use.en.fac787b37f1449464834",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
     }
    ],
    "verified_on": "2026-09-26"
@@ -83,7 +87,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 12",
-    "scan": "scan p. 39"
+    "scan": "PDF pages 39 (one-based)"
    },
    "entries": [
     {
@@ -92,10 +96,10 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
+     "claim": "Historical English source expression: “and bless this sacrifice prepared for thy holy name.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
   }
  ],
  "witnesses": [],

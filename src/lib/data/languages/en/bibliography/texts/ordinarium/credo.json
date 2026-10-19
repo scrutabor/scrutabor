@@ -6,8 +6,28 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 79–83",
-    "scan": "scan pp. 92–96"
+    "printed": "p. 79",
+    "scan": "DJVU physical pages 92 (one-based); indices 91 (zero-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.d5d7c1fdfccc2a146e60",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “And in one Lord Jesus Christ, the only begotten Son of God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 81",
+    "scan": "DJVU physical pages 94 (one-based); indices 93 (zero-based)"
    },
    "entries": [
     {
@@ -16,7 +36,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “begotten, not made; consubstantial to the Father, by whom all things were made” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.236898b6cb5354e70d60",
@@ -24,7 +44,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “and was incarnate by the Holy Ghost, of the Virgin Mary: AND WAS MADE MAN.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.35c48805314b36c93e81",
@@ -32,47 +52,7 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.50fa5d3bab122090e176",
-     "address": {
-      "kind": "segment",
-      "segment": "s15"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.6be9cf82a03c136cceb3",
-     "address": {
-      "kind": "segment",
-      "segment": "s19"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.732113010bef11dbc094",
-     "address": {
-      "kind": "segment",
-      "segment": "s18"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.7ec4ad6b5db0257ae331",
-     "address": {
-      "kind": "segment",
-      "segment": "s13"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.8aadaa22e95dfeed99a8",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “and the third day He rose again, according to the Scriptures.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.989e46b24dc12d61c262",
@@ -80,23 +60,7 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.b59e891045219996a176",
-     "address": {
-      "kind": "segment",
-      "segment": "s16"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
-    {
-     "id": "use.en.c2a4d53c1039a76cc278",
-     "address": {
-      "kind": "segment",
-      "segment": "s14"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “Was crucified also for us, suffered under Pontius Pilate, and was buried” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.ce8210cab437a6d05382",
@@ -104,23 +68,75 @@
       "kind": "segment",
       "segment": "s12"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “And ascended into heaven, sitteth at the right hand of the Father” The addressed English wording is revised, not a verbatim quotation."
     },
     {
-     "id": "use.en.d5d7c1fdfccc2a146e60",
+     "id": "use.en.e25c4b6e4e478e07f79c",
      "address": {
       "kind": "segment",
-      "segment": "s03"
+      "segment": "s07"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “Who for us men, and for our salvation, came down from heaven” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 83",
+    "scan": "DJVU physical pages 96 (one-based); indices 95 (zero-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.50fa5d3bab122090e176",
+     "address": {
+      "kind": "segment",
+      "segment": "s15"
+     },
+     "claim": "Historical English source expression: “who together with the Father and the Son is adored and glorified; who spoke by the Prophets.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
-     "id": "use.en.d6adfbc856dec9592b3f",
+     "id": "use.en.6be9cf82a03c136cceb3",
      "address": {
       "kind": "segment",
-      "segment": "s02"
+      "segment": "s19"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
+     "claim": "Historical English source expression: “and the life of the world to come. Amen.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.732113010bef11dbc094",
+     "address": {
+      "kind": "segment",
+      "segment": "s18"
+     },
+     "claim": "Historical English source expression: “And I look for the resurrection of the dead” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.7ec4ad6b5db0257ae331",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historical English source expression: “and He shall come again with glory to judge both the living and the dead: of whose kingdom there shall be no end.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.b59e891045219996a176",
+     "address": {
+      "kind": "segment",
+      "segment": "s16"
+     },
+     "claim": "Historical English source expression: “And one holy Catholic and Apostolic Church.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.c2a4d53c1039a76cc278",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historical English source expression: “And I believe in the Holy Ghost, the Lord and Giver of Life, who proceedeth from the Father and the Son” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.da113ca8311b427a8961",
@@ -128,13 +144,45 @@
       "kind": "segment",
       "segment": "s17"
      },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    },
+     "claim": "Historical English source expression: “I confess one Baptism for the remission of sins.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79,81",
+    "scan": "DJVU physical pages 92, 94 (one-based); indices 91, 93 (zero-based)"
+   },
+   "entries": [
     {
-     "id": "use.en.e25c4b6e4e478e07f79c",
+     "id": "use.en.8aadaa22e95dfeed99a8",
      "address": {
       "kind": "segment",
-      "segment": "s07"
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “God of God; Light of Light; true God of true God” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79–83",
+    "scan": "scan pp. 92–96"
+   },
+   "entries": [
+    {
+     "id": "use.en.d6adfbc856dec9592b3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
      },
      "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
     }

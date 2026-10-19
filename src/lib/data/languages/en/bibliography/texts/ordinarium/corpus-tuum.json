@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 73",
-    "scan": "scan p. 85"
+    "scan": "PDF pages 85 (one-based)"
    },
    "entries": [
     {
@@ -16,10 +16,30 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
+     "claim": "Historical English source expression: “who livest and reignest for ever and ever. Amen.” The addressed English wording is revised, not a verbatim quotation. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 77",
+    "scan": "PDF pages 89 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.729d19c569b04a22896e",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English wording for the petition that no stain of sin remain in the recipient nourished by the pure and holy sacrament; the current wording recasts the recipient clause and uses plural “sacraments” rather than this source’s singular."
+    }
+   ],
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -37,14 +57,6 @@
       "segment": "s02"
      },
      "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
-    },
-    {
-     "id": "use.en.729d19c569b04a22896e",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
     }
    ],
    "verified_on": "2026-08-28"
@@ -58,14 +70,6 @@
     "scan": "scan p. 60"
    },
    "entries": [
-    {
-     "id": "use.en.8432da9b47f4b725c003",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "May Your Body, Lord, which I have received, and the Blood which I have drunk, cling to my inmost being:"
-    },
     {
      "id": "use.en.d936c4753788c278c717",
      "address": {

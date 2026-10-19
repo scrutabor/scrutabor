@@ -27,7 +27,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 79",
-    "scan": "scan p. 110"
+    "scan": "PDF pages 110 (one-based)"
    },
    "entries": [
     {
@@ -36,21 +36,33 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Lift up your hearts."
-    },
-    {
-     "id": "use.en.471af456fd95ecf08b1a",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Lift up your hearts."
+     "claim": "Historical English source expression: “Let us give thanks to the Lord our God.” This supplies the corresponding English expression at the addressed scope."
     },
     {
      "id": "use.en.bb05a3edd2f1dd55306b",
      "address": {
       "kind": "segment",
       "segment": "s05"
+     },
+     "claim": "Historical English source expression: “We have lifted them up to the Lord.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "scan p. 110"
+   },
+   "entries": [
+    {
+     "id": "use.en.471af456fd95ecf08b1a",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
      },
      "claim": "Lift up your hearts."
     }

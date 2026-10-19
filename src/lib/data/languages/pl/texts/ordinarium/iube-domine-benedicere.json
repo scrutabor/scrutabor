@@ -1,0 +1,10 @@
+{
+  "id":"ordinarium.iube-domine-benedicere",
+  "language":"pl",
+  "about":"Przed Ewangelią Mszy kapłan, który odprawia bez diakona i subdiakona, po modlitwie „Munda cor meum” prosi Pana o błogosławieństwo dla siebie. We Mszy za zmarłych opuszcza tę prośbę i następującą po niej modlitwę.",
+  "seg":[
+    {"id":"s01","tr":"Panie, udziel błogosławieństwa.","g":[null,null,null],"a":[{"s":0,"n":3,"a":0,"g":"Panie, udziel błogosławieństwa"}],"ex":{"w001":"„Iube” jest trybem rozkazującym czasownika „iubeo”, po którym występuje bezokolicznik „benedícere”. Cała formuła jest prośbą kapłana o Boże błogosławieństwo przed głoszeniem Ewangelii."}},
+    {"id":"s02","tr":"Niech Pan będzie w moim sercu i na moich ustach, abym godnie i należycie głosił Jego Ewangelię.","g":[null,null,"w",null,null,"i","na",null,null,"abym","godnie","i","należycie","głosił",null,null],"a":[{"s":0,"n":2,"a":1,"g":"Niech Pan będzie"},{"s":3,"n":2,"a":0,"g":"moim sercu"},{"s":7,"n":2,"a":0,"g":"moich ustach"},{"s":14,"n":2,"a":0,"g":"Jego Ewangelię"}],"ex":{"w005":"„Sit” wyraża tutaj prośbę, aby Pan był obecny w sercu i na ustach kapłana.","w017":"„Ut annúntiem” oznacza cel: „abym głosił”. Mówiącym jest kapłan.","w019":"„Suum” odnosi się tutaj do Pana, choć podmiotem „annúntiem” jest kapłan. Chodzi o Ewangelię Pana, nie o własną ewangelię głoszącego."}},
+    {"id":"s03","tr":"Amen.","g":["Amen"]}
+  ]
+}

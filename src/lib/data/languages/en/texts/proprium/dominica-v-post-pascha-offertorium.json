@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Fifth Sunday after Easter” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Bless the Lord our God, you nations, and hear the voice of His praise: He has set my soul in life and has not allowed my feet to be moved. Blessed be the Lord, who has not turned away my prayer nor His mercy from me, alleluia.","g":["Bless","nations","the Lord","God","our","and","listen to","the voice","of praise","His","who","has set","soul","my","to","life","and",null,null,"to be moved","feet","my","Blessed","the Lord","who",null,null,"prayer","my","nor","mercy","His","from","me","alleluia"],"a":[{"s":17,"n":2,"a":1,"g":"has not allowed"},{"s":25,"n":2,"a":1,"g":"has not turned away"}]}
+    {"id":"s01","tr":"Bless the Lord our God, you nations, and hear the voice of His praise: He has kept me alive and has not let my feet falter. Blessed be the Lord, who has not turned away my prayer nor His mercy from me, alleluia.","g":["Bless","nations","the Lord",null,null,"and","listen to","the voice",null,null,"who",null,null,null,null,null,"and",null,null,null,null,null,"Blessed be","the Lord","who",null,null,null,null,"nor",null,null,"from","me","alleluia"],"a":[{"s":3,"n":2,"a":0,"g":"our God"},{"s":8,"n":2,"a":0,"g":"of His praise"},{"s":11,"n":5,"a":0,"g":"has kept me alive"},{"s":17,"n":2,"a":1,"g":"has not allowed"},{"s":19,"n":3,"a":0,"g":"my feet to falter"},{"s":25,"n":2,"a":1,"g":"has not turned away"},{"s":27,"n":2,"a":0,"g":"my prayer"},{"s":30,"n":2,"a":0,"g":"His mercy"}]}
   ]
 }

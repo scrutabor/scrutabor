@@ -7,7 +7,7 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 37",
-    "scan": "PDF p. 49"
+    "scan": "PDF pages 49 (one-based)"
    },
    "entries": [
     {
@@ -16,7 +16,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+     "claim": "Historical English source expression: “Glory be to the Father, and to the Son, and to the Holy Ghost.” The addressed English wording is revised, not a verbatim quotation. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     },
     {
      "id": "use.en.cfde609872e277252288",
@@ -24,10 +24,66 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+     "claim": "Historical English source expression: “As it was in the beginning, is now, and ever shall be, world without end. Amen.” This supplies the corresponding English expression at the addressed scope. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 50",
+    "scan": "PDF pages 62 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.03e91ce0001c33ff55b2",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “Take not away my soul with the wicked, nor my life with bloody men.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.7e5b8ac0316f0022fbde",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “That I may hear the voice of thy praise; and tell of all thy wondrous works.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 51",
+    "scan": "PDF pages 63 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.117f0efe32870afb6bcf",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historical English source expression: “My foot hath stood in the direct way: in the churches I will bless thee, O Lord.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.d764faf69a1fc67526ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historical English source expression: “But as for me I have walked in my innocence: redeem me, and have mercy on me.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -39,42 +95,10 @@
    },
    "entries": [
     {
-     "id": "use.en.03e91ce0001c33ff55b2",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
-    },
-    {
-     "id": "use.en.117f0efe32870afb6bcf",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
-    },
-    {
-     "id": "use.en.7e5b8ac0316f0022fbde",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
-    },
-    {
      "id": "use.en.9fe2cd4a45aba81c3238",
      "address": {
       "kind": "segment",
       "segment": "s02"
-     },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
-    },
-    {
-     "id": "use.en.d764faf69a1fc67526ce",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
      },
      "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
     }

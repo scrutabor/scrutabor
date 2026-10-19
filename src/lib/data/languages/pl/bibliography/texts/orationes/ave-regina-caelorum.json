@@ -4,36 +4,7 @@
   {
    "edition": "edition.katolik-w-modlitwie-1902",
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
-   "role": "historical_wording_comparator",
-   "locator": {
-    "printed": "druk. s. 130",
-    "scan": "PDF s. 144",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13065/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
-   },
-   "entries": [
-    {
-     "id": "use.pl.889d0b8c94319f3489ce",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „bądź pozdrowiona, Pani Aniołów:”"
-    },
-    {
-     "id": "use.pl.a9e8eb327d2b26261368",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Bądź pozdrowiona, Królowo niebios,”"
-    }
-   ],
-   "verified_on": "2026-09-26"
-  },
-  {
-   "edition": "edition.katolik-w-modlitwie-1902",
-   "digital_item": "item.katolik-w-modlitwie-1902.obc",
-   "role": "historical_wording_comparator",
+   "role": "historical_wording_basis",
    "locator": {
     "printed": "druk. s. 139",
     "scan": "PDF s. 153",
@@ -46,8 +17,37 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „raduj się, Panno chwalebna,”"
+     "claim": "Historyczna podstawa wybranego „raduj się, Panno chwalebna”. Druk ma „Wesel się, raduj się Panno chwalebna!”. Wybrany segment pomija początkowe Wesel się i zachowuje pozostałe wyrażenie z normalizacją interpunkcji. Całe brzmienie pozostaje oznaczone jako zrewidowane."
     },
+    {
+     "id": "use.pl.889d0b8c94319f3489ce",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa zrewidowanego polskiego powitania i tytułu Pani Aniołów. Druk ma „Witaj Marya, Pani anielska!”. Wybrany segment przekształca powitanie, pomija dodane imię Marya i oddaje tytuł jako „Pani Aniołów”. Związek brzmienia jest zrewidowany, nie dosłowny."
+    },
+    {
+     "id": "use.pl.a9e8eb327d2b26261368",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa zrewidowanego polskiego powitania i tytułu Królowej. Druk ma „Witaj, Królowo, Gwiazdo niebieska!”. Wybrane „Bądź pozdrowiona, Królowo niebios” oddaje łacińskie Ave Regina caelorum bez dodanej w druku Gwiazdy. Nie jest to świadectwo dosłownej zgodności całego współczesnego segmentu."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 139",
+    "scan": "PDF s. 153",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
     {
      "id": "use.pl.477462c4d74deb53f20e",
      "address": {

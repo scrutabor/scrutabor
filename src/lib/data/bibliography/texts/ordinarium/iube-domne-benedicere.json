@@ -1,0 +1,148 @@
+{
+ "id": "ordinarium.iube-domne-benedicere",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "222",
+    "scan": "IA leaf n301; one-based PDF page 302",
+    "section": "Ordo Missae; ministerial Gospel preparation",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n301/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere.mr1962-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 28-word ministerial request and singular blessing including Amen. The selected accents, punctuation and capitalization retain this printing. The cross between local w024 and w025 is a non-spoken action sign, not a lexical word."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "222",
+    "scan": "IA leaf n301; one-based PDF page 302",
+    "section": "Ordo Missae; request and Sacerdos respondet speech block",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n301/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere.mr1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The deacon requests the celebrant's blessing. Sacerdos respondet introduces the whole singular blessing through Amen before the next action rubric. No preparation voice category is independently specified at this locus."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "223",
+    "scan": "IA leaf n302; one-based PDF page 303",
+    "section": "Ordo Missae; continuation and Masses of the dead exception",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n302/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere.mr1962-requiem-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The continuation distinguishes the ministerial Gospel preparation from the priest-without-deacon-and-subdeacon branch. In Masses of the dead Munda is retained but the blessing is not requested. This is not permission to omit Munda."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "219",
+    "scan": "IA leaf n299; one-based PDF page 300",
+    "section": "Ordo Missae; ministerial Gospel preparation",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n299/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere.vatican1962-body",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete same 28 lexical words with three selected-accidental differences: no comma after tuo, capital Evangélium and capital In after suum. A separately set print of this rite, not proof of another genealogical tradition or of scan redistribution rights."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "219",
+    "scan": "IA leaf n299; one-based PDF page 300",
+    "section": "Ordo Missae; deacon request and Sacerdos respondet speech block",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n299/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iube-domne-benedicere.vatican1962-ritual-boundary",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Attributes the request to the deacon and introduces the singular blessing with Sacerdos respondet. Amen remains inside that introduced speech block with no intervening actor change. No Ordinary preparation voice category is supplied by this paragraph."
+    }
+   ],
+   "verified_on": "2026-10-17"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.ordinarium.iube-domne-benedicere.mr1962",
+   "text": "ordinarium.iube-domne-benedicere",
+   "use": "use.ordinarium.iube-domne-benedicere.mr1962-body",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription of the separately set Benziger print at the recorded page, not derived from the other transcript. No independent genealogical text tradition is established."
+  },
+  {
+   "id": "witness.ordinarium.iube-domne-benedicere.vatican1962",
+   "text": "ordinarium.iube-domne-benedicere",
+   "use": "use.ordinarium.iube-domne-benedicere.vatican1962-body",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription of the separately set Vatican manifestation at the recorded page, not derived from Benziger. Underlying 1962 recension is distinguished from unproved reproduction date and rights. No independent genealogical text tradition is established."
+  }
+ ],
+ "collation": {
+  "id": "collation.ordinarium.iube-domne-benedicere.mr1962-vatican1962",
+  "text": "ordinarium.iube-domne-benedicere",
+  "recension": "Roman Missal governed by the 1960 Code of Rubrics; Benziger 1962 selected complete ministerial body and accidentals",
+  "witnesses": [
+   "witness.ordinarium.iube-domne-benedicere.mr1962",
+   "witness.ordinarium.iube-domne-benedicere.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 3,
+   "classes": [
+    "capitalization",
+    "punctuation"
+   ]
+  }
+ }
+}

@@ -27,6 +27,82 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 9",
+    "scan": "DJVU physical pages 22 (one-based); indices 21 (zero-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.3559b962f69c49632368",
+     "address": {
+      "kind": "segment",
+      "segment": "s14"
+     },
+     "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.5fccdb6561f89a672406",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "Historical English source expression: “but deliver us from evil.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.6b50b1347c913f8f35eb",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English source expression: “hallowed be Thy name” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.7bf15439202c84a8b328",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historical English source expression: “and forgive us our trespasses, as we forgive those who trespass against us” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.81ea86c4d00cd879dac4",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historical English source expression: “Give us this day our daily bread” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.ba0515697e662af0e1a2",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historical English source expression: “Thy will be done on earth, as it is in heaven.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.cdd1db9c8264db2f88f0",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historical English source expression: “Thy kingdom come” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.df1ba061996b507d91e6",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "Historical English source expression: “and lead us not into temptation” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 9",
     "scan": "scan p. 22"
    },
    "entries": [
@@ -35,70 +111,6 @@
      "address": {
       "kind": "segment",
       "segment": "s05"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.3559b962f69c49632368",
-     "address": {
-      "kind": "segment",
-      "segment": "s14"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.5fccdb6561f89a672406",
-     "address": {
-      "kind": "segment",
-      "segment": "s12"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.6b50b1347c913f8f35eb",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.7bf15439202c84a8b328",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.81ea86c4d00cd879dac4",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.ba0515697e662af0e1a2",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.cdd1db9c8264db2f88f0",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
-     },
-     "claim": "Our Father, who art in heaven,"
-    },
-    {
-     "id": "use.en.df1ba061996b507d91e6",
-     "address": {
-      "kind": "segment",
-      "segment": "s11"
      },
      "claim": "Our Father, who art in heaven,"
     }

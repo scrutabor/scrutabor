@@ -22,6 +22,11 @@
    "title": "Breviarium Romanum"
   },
   {
+   "id": "work.britt.dictionary-psalter",
+   "responsible": "Dom Matthew Britt, O.S.B.",
+   "title": "A Dictionary of the Psalter"
+  },
+  {
    "id": "work.catechismus-catholicae-ecclesiae",
    "responsible": "Catholic Church",
    "title": "Catechismus Catholicae Ecclesiae"
@@ -166,6 +171,29 @@
    "rights": {
     "status": "public-domain",
     "basis": "The identified 1902 edition is in the public domain."
+   }
+  },
+  {
+   "id": "edition.britt.dictionary-psalter.1928",
+   "work": "work.britt.dictionary-psalter",
+   "title": "A Dictionary of the Psalter",
+   "edition_statement": "1928 Benziger Brothers printing",
+   "contributors": [
+    "Dom Matthew Britt, O.S.B.",
+    "John B. Peterson (preface)"
+   ],
+   "place": "New York / Cincinnati / Chicago",
+   "publisher": "Benziger Brothers",
+   "year": "1928",
+   "publication_type": "lexicon",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and narrow grammatical reference to the consulted 1928 printing only. No scan, dictionary prose, English translation wording or worldwide republication permission is supplied by this reference."
    }
   },
   {
@@ -493,6 +521,15 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/breviariumromanu04cath",
    "scan_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.britt.dictionary-psalter.1928.cmaa426cb896",
+   "edition": "edition.britt.dictionary-psalter.1928",
+   "repository": "Church Music Association of America",
+   "kind": "scan",
+   "record_url": "https://churchmusicassociation.org/resources/resource-list-complete/",
+   "scan_url": "https://media.musicasacra.com/pdf/dictionarypsalter.pdf",
    "access": "open"
   },
   {

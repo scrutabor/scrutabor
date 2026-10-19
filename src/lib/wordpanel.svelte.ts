@@ -93,6 +93,7 @@ export function docWordPanel(
 export function wordPanel(host: WordPanelHost) {
 	let selectedId = $state<string | null>(null);
 	let keepPad = $state(false);
+	let padMayRelax = false;
 	// A deep link is still landing: content arriving may shift its word,
 	// and until the reader acts the centering promise is ours to keep
 	// (see applyFromLocation).
@@ -115,20 +116,28 @@ export function wordPanel(host: WordPanelHost) {
 	let pinTimer: ReturnType<typeof setTimeout> | null = null;
 	let pinRaf = 0;
 	function cancelPin() {
+		popPin = null;
 		if (pinTimer !== null) clearTimeout(pinTimer);
 		pinTimer = null;
 		if (pinRaf) cancelAnimationFrame(pinRaf);
 		pinRaf = 0;
 	}
-	$effect(() => cancelPin);
+	$effect(() => () => {
+		cancelPin();
+		cancelClosePop();
+	});
 
 	// The reader's first own gesture ends the settling window (see
 	// applyFromLocation): these are exactly the inputs a programmatic
 	// scrollIntoView cannot fire, so the two scroll promises never fight.
 	$effect(() => {
-		const acts = () => {
+		const acts = (event: Event) => {
 			settling = false;
 			positionFrame.cancel();
+			// A close's own Escape must not release padding or cancel its pins.
+			if (event?.type === 'keydown' && (event as KeyboardEvent).key === 'Escape') return;
+			padMayRelax = true;
+			cancelPin();
 		};
 		const kinds = ['wheel', 'touchstart', 'pointerdown', 'keydown'] as const;
 		for (const kind of kinds) window.addEventListener(kind, acts, { passive: true });
@@ -141,8 +150,9 @@ export function wordPanel(host: WordPanelHost) {
 	// zone the sheet's padding made reachable; the moment they scroll back
 	// above it, the page can give the space up without moving under them.
 	$effect(() => {
-		if (!keepPad) return;
 		const relax = () => {
+			// History restoration is not a reader scroll back out of this zone.
+			if (!keepPad || !padMayRelax) return;
 			const pad = window.innerHeight * 0.45;
 			const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
 			if (window.scrollY <= maxAfter) keepPad = false;
@@ -159,10 +169,22 @@ export function wordPanel(host: WordPanelHost) {
 	// returns to the page the reader came from, and closing it merely
 	// strips ?w= from the current entry.
 	let openedByPush = false;
+	// The current selection’s exact logical address without its word. A Forward
+	// can restore that selection without proving this panel pushed its entry.
+	let selectionBase: string | null = null;
 	// What to do once a close's own pop has landed (see closeThen). One slot:
 	// a second gesture before the pop replaces the first, so the last thing
 	// the reader asked for is what the settled address shows.
 	let afterPop: (() => void) | null = null;
+	let popPin: (() => void) | null = null;
+	let closePop: (() => void) | null = null;
+
+	function cancelClosePop() {
+		if (closePop !== null) removeEventListener('popstate', closePop);
+		closePop = null;
+		popPin = null;
+		afterPop = null;
+	}
 
 	function urlWith(id: string | null): URL {
 		// A throwaway value handed straight to the router — never held in
@@ -177,25 +199,60 @@ export function wordPanel(host: WordPanelHost) {
 	// position recorded when the panel's history entry was pushed (before
 	// any tap-scroll shift), and dropping the sheet padding can clamp a
 	// near-end position. Pin the current position across both.
-	function preserveScroll() {
+	function preserveScroll(waitForPop = false) {
+		padMayRelax = false;
 		const y = window.scrollY;
+		const pathname = pageUrl().pathname;
 		const pad = window.innerHeight * 0.45;
 		const maxAfter = document.documentElement.scrollHeight - pad - window.innerHeight;
 		if (y > maxAfter) keepPad = true;
-		const pin = () => window.scrollTo({ top: y, behavior: 'auto' });
-		cancelPin();
-		pinTimer = setTimeout(pin, 0);
-		pinRaf = requestAnimationFrame(() => {
-			pinRaf = requestAnimationFrame(pin);
-		});
+		const pin = () => {
+			if (pageUrl().pathname === pathname) window.scrollTo({ top: y, behavior: 'auto' });
+		};
+		const schedule = () => {
+			cancelPin();
+			pinTimer = setTimeout(pin, 0);
+			pinRaf = requestAnimationFrame(() => {
+				// A native smooth-scroll step can still arrive after the close.
+				// Correct it in this frame, before retaining the next-frame fallback.
+				pin();
+				pinRaf = requestAnimationFrame(pin);
+			});
+		};
+		schedule();
+		if (waitForPop) {
+			// The traversal may arrive after both early pins. Its actual event,
+			// not a longer timeout, completes this close at the original position.
+			popPin = schedule;
+			closePop = () => {
+				const completePin = popPin;
+				const action = afterPop;
+				cancelClosePop();
+				if (pageUrl().pathname !== pathname) return;
+				completePin?.();
+				// An ordinary close has no queued intent. Consume its re-armed
+				// timer in this dispatch, after the router's shallow restoration,
+				// while retaining the frame fallback and closeThen cancellation.
+				if (completePin && action === null && pinTimer !== null) {
+					clearTimeout(pinTimer);
+					pinTimer = null;
+					pin();
+				}
+				action?.();
+			};
+			addEventListener('popstate', closePop);
+		}
 	}
 
 	function open(id: string) {
+		cancelClosePop();
 		positionFrame.cancel();
+		cancelPin();
 		// The sheet's own padding is back — the kept one has done its work.
 		keepPad = false;
 		settlingWord = id;
 		settling = false;
+		selectionBase = urlWith(null).href;
 		if (selectedId === null) {
 			pushState(urlWith(id), {});
 			openedByPush = true;
@@ -208,7 +265,7 @@ export function wordPanel(host: WordPanelHost) {
 	function close() {
 		if (selectedId === null && !openedByPush) return;
 		positionFrame.cancel();
-		preserveScroll();
+		preserveScroll(openedByPush);
 		settlingWord = null;
 		settling = false;
 		if (openedByPush) {
@@ -218,7 +275,29 @@ export function wordPanel(host: WordPanelHost) {
 			replaceState(urlWith(null), {});
 		}
 		selectedId = null;
+		selectionBase = null;
 	}
+
+	// Capture a same-address word dismissal before the router restores scroll.
+	// It may follow Forward or a deep link, not only our own push. Entry ownership
+	// still controls explicit close(); here the exact selection address suffices.
+	// Clear selection now so a deferred host refresh cannot resample restored Y.
+	$effect(() => {
+		const closeFromHistory = () => {
+			const url = pageUrl();
+			if (selectedId === null || url.searchParams.has('w')) return;
+			if (url.href !== selectionBase) return;
+			positionFrame.cancel();
+			preserveScroll();
+			openedByPush = false;
+			selectionBase = null;
+			settlingWord = null;
+			settling = false;
+			selectedId = null;
+		};
+		addEventListener('popstate', closeFromHistory, true);
+		return () => removeEventListener('popstate', closeFromHistory, true);
+	});
 
 	// A member deep link still selects one indivisible construction. Measure
 	// its whole reading surface, including the shared translation.
@@ -267,9 +346,11 @@ export function wordPanel(host: WordPanelHost) {
 		if (!target && applied !== null) preserveScroll();
 		if (!w) {
 			openedByPush = false;
+			selectionBase = null;
 			settling = false;
 		}
 		selectedId = target;
+		selectionBase = target ? urlWith(null).href : null;
 		// The router resets scroll AFTER this runs on client-side
 		// navigations — schedule the centering behind it, or deep links into
 		// long texts land at the top.
@@ -310,25 +391,13 @@ export function wordPanel(host: WordPanelHost) {
 		 * pop is awaited exactly when it happens, and never inferred from the
 		 * address, which the downloaded edition keeps in the hash. */
 		closeThen(action: () => void) {
-			const popping = selectedId !== null && openedByPush;
 			close();
-			if (afterPop !== null) {
-				// A pop is already on its way; this later gesture takes its place.
+			if (closePop !== null) {
+				// The last requested action wins while the same close is pending.
 				afterPop = action;
 				return;
 			}
-			if (!popping) {
-				action();
-				return;
-			}
-			afterPop = action;
-			const once = () => {
-				removeEventListener('popstate', once);
-				const settled = afterPop;
-				afterPop = null;
-				settled?.();
-			};
-			addEventListener('popstate', once);
+			action();
 		},
 		raise,
 		applyFromLocation,

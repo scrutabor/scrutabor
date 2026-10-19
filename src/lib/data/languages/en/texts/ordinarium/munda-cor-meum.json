@@ -1,0 +1,9 @@
+{
+  "id":"ordinarium.munda-cor-meum",
+  "language":"en",
+  "about":"In the priest-alone form of Mass, this prayer is said quietly before the first Gospel. It connects the request for a purified heart and lips with the cleansing of Isaiah’s lips.",
+  "seg":[
+    {"id":"s01","tr":"Cleanse my heart and my lips, almighty God, who cleansed the lips of the prophet Isaiah with a glowing stone. In the same way, be pleased to cleanse me through Your gracious mercy, so that I can proclaim Your holy Gospel worthily.","g":["cleanse",null,null,"and",null,null,"almighty","God","who",null,null,null,null,null,null,"likewise",null,null,null,null,null,null,"so that",null,null,null,null,null,null],"a":[{"s":1,"n":2,"a":0,"g":"my heart"},{"s":4,"n":2,"a":0,"g":"my lips"},{"s":9,"n":6,"a":4,"g":"cleansed the lips of Isaiah the prophet with a glowing stone"},{"s":16,"n":6,"a":4,"g":"be pleased to cleanse me through Your gracious mercy"},{"s":23,"n":6,"a":4,"g":"I can proclaim Your holy Gospel worthily"}],"ex":{"w013":"The Latin text of Isaiah 6:6–7 describes a seraph taking a stone from the altar with tongs and touching the prophet’s lips. The prayer recalls that cleansing as the model for the minister’s petition.","w019":"Grata describes the mercy being sought as welcome and favorable, not as grateful. It does not portray God as thanking the person who prays.","w021":"The petition appeals to God’s willingness to cleanse. It does not claim that the speaker has earned cleansing."},"nt":{"w015":"Igníto can be read either as a participle of ígnio, “to make red-hot,” or as the adjective ignítus, “glowing.” The stone’s heated state is clear in either reading. The phrase does not narrate a separate act of heating or identify its agent."}},
+    {"id":"s02","tr":"Through Christ our Lord. Amen.","tb":"exact","g":["through","Christ",null,null,"amen"],"a":[{"s":2,"n":2,"a":0,"g":"our Lord"}]}
+  ]
+}

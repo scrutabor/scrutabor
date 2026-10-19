@@ -6,25 +6,17 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 66–67",
-    "scan": "scan pp. 78–79"
+    "printed": "p. 67",
+    "scan": "PDF pages 79 (one-based)"
    },
    "entries": [
-    {
-     "id": "use.en.296545a5cbd862aad128",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
     {
      "id": "use.en.9b3310e82e49809732ba",
      "address": {
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
+     "claim": "Historical English source expression: “the holy bread of eternal life” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.9d707b8f7c9bceaff4c0",
@@ -32,8 +24,20 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
+     "claim": "Historical English source expression: “offer unto thy most excellent Majesty of thy gifts bestowed upon us” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 66–67",
+    "scan": "scan pp. 78–79"
+   },
+   "entries": [
     {
      "id": "use.en.d326503e0dcee4dccb86",
      "address": {
@@ -71,6 +75,34 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 26",
+    "scan": "PDF pages 53 (one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.4aaca37b326e606ddf4b",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English wording for the threefold description of the Victim; the current wording uses “spotless” where this source has “unspotted” and revises capitalization and punctuation."
+    },
+    {
+     "id": "use.en.d3e145df338256077399",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historical English source expression: “and the chalice of everlasting salvation.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-10-16"
+  },
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 26",
     "scan": "scan p. 53"
    },
    "entries": [
@@ -79,38 +111,6 @@
      "address": {
       "kind": "segment",
       "segment": "s02"
-     },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
-    {
-     "id": "use.en.4aaca37b326e606ddf4b",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
-    {
-     "id": "use.en.59c13043914751155ba9",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
-     },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
-    {
-     "id": "use.en.d3e145df338256077399",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
-    },
-    {
-     "id": "use.en.e77e9e85f9de16d2e24f",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
      },
      "claim": "Therefore, O Lord, we, Your servants, and likewise Your holy people, mindful of the blessed Passion of the same Christ, Your Son, our Lord, of His Resurrection from the dead, and of His glorious Ascension into heaven:"
     }

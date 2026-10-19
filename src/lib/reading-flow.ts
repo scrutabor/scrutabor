@@ -13,6 +13,8 @@ export interface FlowSettings {
 	hideOpeningRubric?: boolean;
 	/** Prayer-book setting: pair each litany invocation with its response. */
 	litanyColumns?: boolean;
+	/** Retained words are reference material, not current actor instructions. */
+	referenceOnly?: boolean;
 }
 
 export interface FlowBinding {
@@ -45,7 +47,9 @@ export function flowBinding(
 	const firstSharedVerse = segs.findIndex((segment) => segment.type === 'verse');
 	const sharedSpeaker = marks.sharedSpeaker(segs);
 	const sharedPrayer =
-		marks.isSharedPrayer(segs, form) && (who === 'populus' || sharedSpeaker !== undefined);
+		!settings.referenceOnly &&
+		marks.isSharedPrayer(segs, form) &&
+		(who === 'populus' || sharedSpeaker !== undefined);
 	const rows: LitanyRow[] = settings.litanyColumns
 		? litanyRows(segs)
 		: segs.map((_, primary) => ({ primary }));
@@ -58,12 +62,13 @@ export function flowBinding(
 		options: {
 			hideOpeningRubric: settings.hideOpeningRubric ?? false,
 			namesWho: (i) =>
-				(showSpeakerNames &&
+				!settings.referenceOnly &&
+				((showSpeakerNames &&
 					(sharedPrayer ? i === firstSharedVerse : marks.namesSpeaker(segs, i))) ||
-				marks.namesVoice(segs, i) ||
-				(mayJoin(segs[i], form) && marks.namesConditionalParticipation(segs, i, form)),
+					marks.namesVoice(segs, i) ||
+					(mayJoin(segs[i], form) && marks.namesConditionalParticipation(segs, i, form))),
 			translated: (i) => settings.helpLevel >= 2 && !!gloss.segments[segs[i].id]?.translation,
-			response: (i) => isEveryonesResponse(segs[i], form)
+			response: (i) => !settings.referenceOnly && isEveryonesResponse(segs[i], form)
 		}
 	};
 }

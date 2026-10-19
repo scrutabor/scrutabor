@@ -1,0 +1,9 @@
+{
+  "id":"ordinarium.munda-cor-meum",
+  "language":"pl",
+  "about":"Modlitwa przed Ewangelią łączy prośbę o oczyszczenie serca i warg z przypomnieniem oczyszczenia warg proroka Izajasza. Przygotowuje głoszącego Ewangelię do godnego przekazania świętego słowa.",
+  "seg":[
+    {"id":"s01","tr":"Oczyść moje serce i moje wargi, wszechmogący Boże, który oczyściłeś wargi proroka Izajasza rozżarzonym kamieniem. Tak też w Twoim łaskawym miłosierdziu racz oczyścić mnie, abym mógł godnie głosić Twoją świętą Ewangelię.","g":["Oczyść",null,null,"i",null,null,"wszechmogący","Boże","który","wargi",null,null,null,null,null,"tak","mnie","Twoim","łaskawym","miłosierdziem","racz","oczyścić","abym",null,null,null,"godnie","mógł","głosić"],"a":[{"s":1,"n":2,"a":0,"g":"moje serce"},{"s":4,"n":2,"a":0,"g":"moje wargi"},{"s":10,"n":2,"a":0,"g":"proroka Izajasza"},{"s":12,"n":3,"a":1,"g":"oczyściłeś rozżarzonym kamieniem"},{"s":23,"n":3,"a":1,"g":"Twoją świętą Ewangelię"}],"ex":{"w013":"Modlitwa nawiązuje do Iz 6, 6–7: serafin dotyka ust proroka kamieniem wziętym z ołtarza. W łacińskim tekście tego opisu występuje właśnie słowo „calculus”.","w019":"„Grata” określa tu miłosierdzie jako łaskawe, przychylne proszącemu. Nie oznacza wdzięczności Boga."},"nt":{"w015":"„Ignítus” występuje również jako przymiotnik „rozżarzony”. Możliwa jest więc analiza przymiotnikowa zamiast imiesłowowej. W obu wypadkach określa stan kamienia."}},
+    {"id":"s02","tr":"Przez Chrystusa, Pana naszego. Amen.","tb":"exact","g":["Przez","Chrystusa","Pana","naszego","Amen"]}
+  ]
+}
