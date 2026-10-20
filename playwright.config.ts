@@ -19,9 +19,10 @@ export default defineConfig({
 	// and reports green. Vitest refuses that under CI by its own default;
 	// Playwright only when told.
 	forbidOnly: !!process.env.CI,
-	// A CI failure is otherwise only its message: keep the trace of a failed
-	// test so the uploaded results show what the page actually did.
-	use: process.env.CI ? { trace: 'retain-on-failure' } : {},
+	// A CI failure is otherwise only its message: keep a screenshot of a failed
+	// test so the uploaded results show what the page looked like. Recording a
+	// trace for every test slowed the CI runners into timeouts.
+	use: process.env.CI ? { screenshot: 'only-on-failure' } : {},
 	webServer: noServer
 		? undefined
 		: [
