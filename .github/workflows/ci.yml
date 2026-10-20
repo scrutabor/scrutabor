@@ -135,6 +135,17 @@ jobs:
         env:
           SCRUTABOR_E2E_PREBUILT: '1'
           SCRUTABOR_E2E_NO_SERVER: ${{ matrix.no_server }}
+      # A failed shard keeps its own evidence (error contexts, traces and any
+      # report) under its matrix name, so the page state is not lost with it.
+      - if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: e2e-results-${{ matrix.name }}
+          path: |
+            test-results/
+            playwright-report/
+          if-no-files-found: ignore
+          retention-days: 3
 
   green:
     needs: [quality, build-artifacts, e2e]

@@ -750,13 +750,39 @@ async function measure(
 	await expect(page.locator('html')).toHaveAttribute('data-help', String(mode));
 	await expect(page.locator('html')).toHaveAttribute('data-reading', step);
 	await expect(page.locator('main')).toBeVisible();
+	// A dated cell must show the proper its address names. "Nothing is loading"
+	// is also true before the day picker has chosen and on a page showing another
+	// day, so the whole state is polled together; a failure prints what the page
+	// showed instead (address, day label, picker, loading and failure counts).
+	const named = DAY_PROPERS[new URL(url, 'http://localhost').searchParams.get('dies') ?? ''];
+	if (named) {
+		await expect
+			.poll(
+				() =>
+					page.evaluate((prefix) => {
+						const state = {
+							href: location.href,
+							day: document.querySelector('#day-value')?.textContent?.trim() ?? null,
+							applied: document.querySelector('.day-open')?.getAttribute('aria-busy') === 'false',
+							busy: document.querySelector('main')?.getAttribute('aria-busy') === 'true',
+							loading: document.querySelectorAll('.part-loading, .part.loading').length,
+							failed: document.querySelectorAll('main p.part-note[role="status"]').length,
+							named: document.querySelector(`main .part [id^="${prefix}-"]`) !== null
+						};
+						const shown =
+							state.applied && !state.busy && !state.loading && !state.failed && state.named;
+						return shown ? 'shows its proper' : JSON.stringify(state);
+					}, named),
+				{ timeout: 20_000, message: `${url} must show the proper of ${named}` }
+			)
+			.toBe('shows its proper');
+	}
 	// An Ordo slot's proper arrives after hydration. Measure only once the
 	// page itself says nothing is still loading and no slot has given up;
 	// other pages carry no such state and pass at once.
 	await expect(page.locator('main')).not.toHaveAttribute('aria-busy', 'true');
 	await expect(page.locator('.part-loading, .part.loading')).toHaveCount(0);
 	await expect(page.locator('main p.part-note[role="status"]')).toHaveCount(0);
-	const named = DAY_PROPERS[new URL(url, 'http://localhost').searchParams.get('dies') ?? ''];
 	if (named) await expect(page.locator(`main .part [id^="${named}-"]`).first()).toBeAttached();
 	await page.evaluate(() => document.fonts.ready);
 	const data = await page.evaluate(probeGeometry, boundariesFor(url));
