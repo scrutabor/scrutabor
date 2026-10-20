@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 511–512",
+    "scan": "leaves n592–n593 / PDF pp. 593–594",
+    "section": "S. Marci Evangelistæ, Sequéntia sancti Evangélii secúndum Lucam, Luc. 10, 1-9",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n592/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-lucae-evangelistae-evangelium.mark-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of St Mark prints this Gospel in full across pages 511 and 512. Its words equal page 705 and the selected text. It has four accidental differences: lower-case dóminum and no comma after messis (Rogáte ergo dóminum messis ut mittat), no comma after ecce (Ite: ecce ego mitto) and none after manéte (manéte edéntes), where page 705 and the selected text have Dóminum messis, ut, ecce, ego and manéte, edéntes. The shared text follows page 705."
+    }
+   ],
+   "verified_on": "2026-10-20"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 705",

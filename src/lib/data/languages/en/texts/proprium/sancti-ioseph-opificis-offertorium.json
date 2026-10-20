@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Saint Joseph the Worker” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May the goodness of the Lord our God be upon us, and prosper for us the work of our hands, and prosper the work of our hands. Alleluia.","g":["Goodness","of the Lord","of God","our","let be","upon","us","and","the work","of hands","our","prosper","for us","and","the work","of hands","our","prosper","Alleluia"]}
+    {"id":"s01","tr":"May the goodness of the Lord our God be upon us, and prosper for us the work of our hands, and prosper the work of our hands. Alleluia.","g":["Goodness","of the Lord",null,null,"let be","upon","us","and","the work",null,null,"prosper","for us","and","the work",null,null,"prosper","Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"our God"},{"s":9,"n":2,"a":0,"g":"of our hands"},{"s":15,"n":2,"a":0,"g":"of our hands"}]}
   ]
 }

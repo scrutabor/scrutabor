@@ -44,7 +44,7 @@ const constructions = [
 		part: 'postcommunio',
 		first: 3,
 		lemmata: ['nos', 'deus', 'ab', 'delectatio', 'terrenus', 'expedio'],
-		gloss: 'may free us, O God, from earthly delights'
+		gloss: 'may free us, God, from earthly delights'
 	}
 ] as const;
 
@@ -86,6 +86,24 @@ for (const { language, part, first, lemmata, gloss } of constructions) {
 		}
 	}
 }
+
+// The caption names the addressee without the vocative "O", and the continuous translation
+// keeps it. Both are pinned, so a caption change cannot reach the translation unnoticed.
+test('en fourth Epiphany postcommunio caption leaves the vocative O to its translation', async ({
+	page
+}) => {
+	await page.goto(`/app/en/formularium/${day}`);
+	await setHelp(page, 1);
+	const group = page
+		.locator('.token-group')
+		.filter({ has: page.locator('[id="dominica-iv-post-epiphaniam-postcommunio.w003"]') });
+	await expect(group.locator('rt')).toHaveText('may free us, God, from earthly delights');
+	await expect(group.locator('rt')).not.toContainText(/\bO (Lord|God)\b/);
+	await setHelp(page, 2);
+	await expect(
+		page.locator('[id="dominica-iv-post-epiphaniam-postcommunio-s01"] + .seg-extra .translation')
+	).toContainText('May Your gifts, O God, free us from earthly delights');
+});
 
 const whyNotes = {
 	pl: 'Quid jest biernikiem liczby pojedynczej rodzaju nijakiego zaimka quis, użytym pytająco w znaczeniu „dlaczego”. Nie jest dopełnieniem oznaczającym rzecz, której uczniowie się boją.',

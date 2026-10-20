@@ -103,7 +103,7 @@ export interface Messages {
 	ordoCommemoration: string;
 	/** RG 480–481: a Secret that is not the last keeps its words but not its audible ending. */
 	commemorationQuiet: string;
-	/** A commemoration falls on the chosen date while its Mass of the day is not in the edition. */
+	/** A commemoration falls on the chosen date while the Mass of that day is not in the edition. */
 	dayCommemorationOnly: string;
 	/** Capability limit, not a claim that every date needs an additional prayer. */
 	formularyScope: string;
@@ -354,7 +354,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoCommemoration: 'wspomnienie',
 		commemorationQuiet:
 			'Zakończenie i Amen tej sekrety kapłan odmawia po cichu. Głośno kończy się tylko ostatnia sekreta.',
-		dayCommemorationOnly: 'tego dnia przypada {title}. Mszy tego dnia nie ma jeszcze w tym wydaniu',
+		dayCommemorationOnly:
+			'tego dnia przypada wspomnienie: {title}. Mszy tego dnia nie ma jeszcze w tym wydaniu',
 		formularyScope:
 			'Dobór modlitw uwzględnia wspomnienie Litanii Większych, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.',
 		dayLabel: 'dzień',
@@ -582,7 +583,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		commemorationQuiet:
 			'The celebrant says this Secret’s conclusion and Amen quietly. Only the last Secret ends aloud.',
 		dayCommemorationOnly:
-			'the {title} fall on this day. Its Mass of the day is not yet in this edition',
+			'a commemoration falls on this day: {title}. The Mass of this day is not yet in this edition',
 		formularyScope:
 			'The selection of prayers accounts for the commemoration of the Greater Litanies, but not yet for other liturgical commemorations or local calendars.',
 		dayLabel: 'day',

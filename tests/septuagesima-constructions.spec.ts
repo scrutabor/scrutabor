@@ -37,7 +37,7 @@ const cases = [
 		part: 'collecta',
 		first: 1,
 		lemmata: ['prex', 'populus', 'tuus', 'quaeso', 'dominus', 'clementer', 'exaudio'],
-		gloss: 'We beseech You, O Lord, graciously hear the prayers of Your people'
+		gloss: 'We beseech You, Lord, graciously hear the prayers of Your people'
 	},
 	{
 		language: 'pl',
@@ -189,3 +189,23 @@ for (const { language, part, first, lemmata, gloss } of cases) {
 		}
 	});
 }
+
+// The caption names the addressee without the vocative "O", and the continuous translation
+// keeps it. Both are pinned, so a caption change cannot reach the translation unnoticed.
+test('en Septuagesima collecta caption leaves the vocative O to its translation', async ({
+	page
+}) => {
+	await page.goto(`/app/en/formularium/${day}`);
+	await setHelp(page, 1);
+	const group = page
+		.locator('.token-group')
+		.filter({ has: page.locator('[id="dominica-in-septuagesima-collecta.w001"]') });
+	await expect(group.locator('rt')).toHaveText(
+		'We beseech You, Lord, graciously hear the prayers of Your people'
+	);
+	await expect(group.locator('rt')).not.toContainText(/\bO (Lord|God)\b/);
+	await setHelp(page, 2);
+	await expect(
+		page.locator('[id="dominica-in-septuagesima-collecta-s01"] + .seg-extra .translation')
+	).toContainText('We beseech You, O Lord, graciously hear the prayers of Your people');
+});

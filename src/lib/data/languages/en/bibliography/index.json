@@ -9173,7 +9173,7 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 3
+       "uses": 5
       },
       {
        "id": "proprium.dominica-i-passionis-tractus",
@@ -12643,9 +12643,10 @@
       {
        "id": "proprium.litaniae-maiores-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.litaniae-maiores-postcommunio",
@@ -14035,9 +14036,10 @@
       {
        "id": "proprium.sancti-lucae-evangelistae-evangelium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-lucae-evangelistae-graduale",
@@ -14133,9 +14135,10 @@
       {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-epistola",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-matthaei-apostoli-et-evangelistae-evangelium",

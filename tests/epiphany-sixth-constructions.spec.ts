@@ -56,7 +56,7 @@ const cases = [
 		part: 'secreta',
 		first: 1,
 		lemmata: ['hic', 'nos', 'oblatio', 'deus', 'mundo', 'quaeso'],
-		gloss: 'May this offering, O God, we beseech You, cleanse us'
+		gloss: 'May this offering, God, we beseech You, cleanse us'
 	},
 	{
 		language: 'pl',
@@ -106,3 +106,23 @@ for (const { language, part, first, lemmata, gloss } of cases) {
 		}
 	});
 }
+
+// The caption names the addressee without the vocative "O", and the continuous translation
+// keeps it. Both are pinned, so a caption change cannot reach the translation unnoticed.
+test('en sixth Epiphany secreta caption leaves the vocative O to its translation', async ({
+	page
+}) => {
+	await page.goto(`/app/en/formularium/${day}`);
+	await setHelp(page, 1);
+	const group = page
+		.locator('.token-group')
+		.filter({ has: page.locator('[id="dominica-vi-post-epiphaniam-secreta.w001"]') });
+	await expect(group.locator('rt')).toHaveText(
+		'May this offering, God, we beseech You, cleanse us'
+	);
+	await expect(group.locator('rt')).not.toContainText(/\bO (Lord|God)\b/);
+	await setHelp(page, 2);
+	await expect(
+		page.locator('[id="dominica-vi-post-epiphaniam-secreta-s01"] + .seg-extra .translation')
+	).toContainText('May this offering, O God, we beseech You, cleanse');
+});

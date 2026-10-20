@@ -4,6 +4,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 341",
+    "scan": "leaf n422 / PDF p. 423",
+    "section": "In Litaniis maioribus et minoribus, Missa de Rogationibus, Oratio",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n422/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.litaniae-maiores-collecta.rogation-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Rogations prints this Collect's 20-word body in full with the abbreviated conclusion cue Per Dóminum. Its letters and accents equal page 511 and the selected body. It has a comma after ut (ut, qui), where page 511 and the selected text have ut qui."
+    }
+   ],
+   "verified_on": "2026-10-20"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 511",

@@ -88,10 +88,23 @@ test('the transferred Tuesday is acknowledged without a Mass and without substit
 }) => {
 	await page.goto('/app/pl/ordo/catechumenorum?dies=2038-04-27');
 	await expect(page.locator('.picker .state.commemoration-only')).toContainText('Litanie Większe');
+	// The notice names the commemoration after a colon, so neither the verb nor the second
+	// sentence depends on the number of its title (a plural one here), and the Mass it says is
+	// missing is the Mass of the day, not a Mass of the commemoration.
+	await expect(page.locator('.picker .state.commemoration-only')).toHaveText(
+		'tego dnia przypada wspomnienie: Litanie Większe. Mszy tego dnia nie ma jeszcze w tym wydaniu'
+	);
+	await expect(page.locator('.picker .state.commemoration-only')).not.toContainText(
+		'przypada Litanie'
+	);
 	await expect(page.locator('[id="litaniae-maiores-collecta.w001"]')).toHaveCount(0);
 	await expect(page.locator('[id="sancti-marci-evangelistae-collecta.w001"]')).toHaveCount(0);
 	await page.goto('/app/en/ordo/catechumenorum?dies=2030-04-25');
 	await expect(page.locator('.picker .state.commemoration-only')).toContainText('Greater Litanies');
+	await expect(page.locator('.picker .state.commemoration-only')).toHaveText(
+		'a commemoration falls on this day: Greater Litanies. The Mass of this day is not yet in this edition'
+	);
+	await expect(page.locator('.picker .state.commemoration-only')).not.toContainText('Its Mass');
 	await expect(page.locator('.commemoration-head')).toHaveCount(0);
 });
 
