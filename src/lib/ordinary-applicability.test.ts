@@ -11,6 +11,7 @@ import { flowBinding } from './reading-flow';
 import { massForm } from './mass-form.svelte';
 import { role, ROLES } from './role.svelte';
 import { expectParagraphLatin } from './ordo-test-context';
+import { findOrphans } from './polish';
 
 const settled = (date: string, mass: string | null, lang: 'pl' | 'en'): GospelPreparationState => ({
 	date,
@@ -22,6 +23,7 @@ const settled = (date: string, mass: string | null, lang: 'pl' | 'en'): GospelPr
 	unwritten: false
 });
 const actual = [
+	['2026-11-29', 'dominica-i-adventus', 'omitted', 'required'],
 	['2026-04-26', 'dominica-iii-post-pascha', 'required', 'required'],
 	['2026-03-29', 'dominica-ii-passionis', 'omitted', 'required'],
 	['2026-04-02', 'feria-v-in-cena-domini', 'required', 'omitted'],
@@ -50,6 +52,8 @@ it.each(actual)('uses only the owned settled branches at %s/%s', (date, mass, gl
 			const result = ordinaryApplicability(entry, settled(date, mass, lang), lang)!;
 			expect(result.applicability).toBe(expected);
 			expect(result.referenceOnly).toBe(expected !== 'required');
+			if (lang === 'pl') expect(findOrphans(result.note ?? '')).toEqual([]);
+			else expect(result.note ?? '').not.toContain('\u00a0');
 			if (expected === 'omitted') {
 				expect(result.note).toContain(lang === 'pl' ? 'wglądu' : 'reference only');
 				expect(result.note).not.toContain(';');
@@ -79,6 +83,8 @@ it.each(unsettled)('retains conditional reference words for %s', (name, patch) =
 			expect(result.applicability).toBe('unresolved');
 			expect(result.referenceOnly).toBe(true);
 			expect(result.note).toContain(lang === 'pl' ? 'wglądu' : 'reference only');
+			if (lang === 'pl') expect(findOrphans(result.note ?? '')).toEqual([]);
+			else expect(result.note ?? '').not.toContain('\u00a0');
 		}
 });
 

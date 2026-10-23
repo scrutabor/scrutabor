@@ -3,6 +3,7 @@ import type { GospelPreparationState } from './ordo-context';
 import { ordoContext } from './ordo-context';
 import { resolveOrdoChoice } from './ordo-choice';
 import { dayById } from './proprium';
+import { bindOrphans } from './polish';
 
 import { ordinaryStateFor, type OrdinaryState } from './ordinary-prescriptions';
 
@@ -25,10 +26,14 @@ export function ordinaryApplicability(
 		lang === 'pl'
 			? 'Pełny tekst zachowano tylko do wglądu.'
 			: 'The complete text is retained for reference only.';
+	const referenceNote = (note: string): string => {
+		const text = `${note} ${reference}`;
+		return lang === 'pl' ? bindOrphans(text) : text;
+	};
 	const unresolved = (note: string): OrdinaryApplicability => ({
 		applicability: 'unresolved',
 		referenceOnly: true,
-		note: `${note} ${reference}`
+		note: referenceNote(note)
 	});
 	if (!state.date || state.loading || state.failed || state.unwritten)
 		return unresolved(
@@ -70,7 +75,7 @@ export function ordinaryApplicability(
 			(lang === 'pl'
 				? `W tej Mszy nie odmawia się ${name}.`
 				: `${entry === 'gloria' ? 'The Gloria' : 'The Creed'} is omitted at this Mass.`);
-		return { applicability, referenceOnly: true, note: `${note} ${reference}` };
+		return { applicability, referenceOnly: true, note: referenceNote(note) };
 	}
 	return unresolved(
 		lang === 'pl'

@@ -116,6 +116,18 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      - name: align browser home ownership
+        # GitHub mounts a host-owned home into the root-run test container.
+        # Firefox requires that directory to belong to its current user.
+        run: |
+          test "$(id -u)" -eq 0
+          test "$HOME" = /github/home
+          test -d /github/home
+          test ! -L /github/home
+          chown --no-dereference 0:0 -- /github/home
+          test -d /github/home
+          test ! -L /github/home
+          test "$(stat -c '%u' /github/home)" -eq "$(id -u)"
       - name: verify browser image version and record inputs
         run: |
           node -e "const actual = require('@playwright/test/package.json').version; if (actual !== '1.63.0') throw new Error('Playwright image/package mismatch: ' + actual)"
