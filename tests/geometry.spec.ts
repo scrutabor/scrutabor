@@ -27,6 +27,9 @@ const PAGES = [
 	'/pl'
 ];
 const WIDTHS = [1512, 900, 390];
+// Widths generate the tests below: an empty inventory must fail collection,
+// not silently remove every screen and paper sweep from the suite.
+if (WIDTHS.length === 0) throw new Error('Geometry sweep requires at least one width');
 const MODES = [0, 2, 1];
 // The proper an Ordo address names by its day. A cell that names a day must
 // show that day's proper; its identity is evidence, not an assumption.
@@ -793,15 +796,17 @@ async function measure(
 	return data;
 }
 
-/** The whole matrix at one reading size. */
+/** All pages and modes at one width and reading size. Every batch retains
+ * the complete seam inventory and all of its non-vacuity checks. */
 async function sweep(
 	page: import('@playwright/test').Page,
+	width: number,
 	step: 'normal' | 'larger' | 'largest',
 	normal: Scale | null
 ) {
-	const expectedRuns = PAGES.length * WIDTHS.length * MODES.length;
+	const expectedRuns = PAGES.length * MODES.length;
 	const expectedBoundaries =
-		PAGES.reduce((sum, url) => sum + boundariesFor(url).length, 0) * WIDTHS.length * MODES.length;
+		PAGES.reduce((sum, url) => sum + boundariesFor(url).length, 0) * MODES.length;
 	const findings: string[] = [];
 	const emptyRuns: string[] = [];
 	let runs = 0;
@@ -820,43 +825,41 @@ async function sweep(
 	let judgedBoundaries = 0;
 	let judgedSeams = 0;
 
+	await page.setViewportSize({ width, height: 1000 });
 	for (const url of PAGES) {
-		for (const width of WIDTHS) {
-			await page.setViewportSize({ width, height: 1000 });
-			const perMode: Record<number, GeometryProbe> = {};
+		const perMode: Record<number, GeometryProbe> = {};
 
-			for (const mode of MODES) {
-				const data = await measure(page, url, mode, step);
-				if (normal) {
-					// The larger steps scale the root; every token follows it.
-					const ratio = parseFloat(data.scale.rootFontSize) / parseFloat(normal.rootFontSize);
-					expect(ratio, 'the page applies a larger root size').toBeGreaterThan(1);
-					expect(Math.abs(data.scale.reading - normal.reading * ratio)).toBeLessThan(EXACT);
-				}
-				runs += 1;
-				gapProbes += data.gaps.length;
-				controlProbes += data.controls;
-				duplicates += data.duplicates;
-				repeated += data.repeated;
-				partitions += data.partitions;
-				projected += data.projected;
-				trailing += data.trailing;
-				bodySeams += data.bodySeams;
-				projectedBodies += data.projectedBodies;
-				blockedBodies += data.blockedBodies;
-				sourcesBetweenBodies += data.sourcesBetweenBodies;
-				sourcedPartitions += data.sourcedPartitions;
-				if (!data.gaps.length) emptyRuns.push(`${url} @${width} m${mode}`);
-				perMode[mode] = data;
-				for (const issue of [...data.overflow, ...data.targets, ...data.overlaps]) {
-					findings.push(`${url} @${width} m${mode}: ${issue}`);
-				}
+		for (const mode of MODES) {
+			const data = await measure(page, url, mode, step);
+			if (normal) {
+				// The larger steps scale the root; every token follows it.
+				const ratio = parseFloat(data.scale.rootFontSize) / parseFloat(normal.rootFontSize);
+				expect(ratio, 'the page applies a larger root size').toBeGreaterThan(1);
+				expect(Math.abs(data.scale.reading - normal.reading * ratio)).toBeLessThan(EXACT);
 			}
-
-			const judged = compareModes(url, width, perMode, findings);
-			judgedBoundaries += judged.boundaries;
-			judgedSeams += judged.seams;
+			runs += 1;
+			gapProbes += data.gaps.length;
+			controlProbes += data.controls;
+			duplicates += data.duplicates;
+			repeated += data.repeated;
+			partitions += data.partitions;
+			projected += data.projected;
+			trailing += data.trailing;
+			bodySeams += data.bodySeams;
+			projectedBodies += data.projectedBodies;
+			blockedBodies += data.blockedBodies;
+			sourcesBetweenBodies += data.sourcesBetweenBodies;
+			sourcedPartitions += data.sourcedPartitions;
+			if (!data.gaps.length) emptyRuns.push(`${url} @${width} m${mode}`);
+			perMode[mode] = data;
+			for (const issue of [...data.overflow, ...data.targets, ...data.overlaps]) {
+				findings.push(`${url} @${width} m${mode}: ${issue}`);
+			}
 		}
+
+		const judged = compareModes(url, width, perMode, findings);
+		judgedBoundaries += judged.boundaries;
+		judgedSeams += judged.seams;
 	}
 
 	expect(runs, 'page-width-mode coverage').toBe(expectedRuns);
@@ -897,50 +900,45 @@ async function sweep(
 	expect(findings, findings.join('\n')).toEqual([]);
 }
 
-test('reading modes preserve the book geometry @online @sweep', async ({ page }) => {
-	test.setTimeout(240_000);
-	expect(PAGES.length).toBeGreaterThan(0);
-	expect(WIDTHS.length).toBeGreaterThan(0);
-	expect(MODES.length).toBeGreaterThan(0);
-	expect(Object.keys(BOUNDARIES).every((url) => PAGES.includes(url))).toBe(true);
-
-	// Establish the origin once so the mode can be selected in localStorage
-	// before each measured navigation.
-	await page.goto('/app/pl');
-	await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
-	await sweep(page, 'normal', null);
-});
-
 // The priced constants are multiples of --reading, so every seam and voice
 // change must hold at every size the reader can choose, not only at the
 // default. The page's own root size, measured at the default first, says
-// what the larger steps are.
-for (const step of ['larger', 'largest'] as const) {
-	test(`reading modes preserve the book geometry at the ${step} size @online @sweep`, async ({
-		page
-	}) => {
-		test.setTimeout(240_000);
-		await page.goto('/app/pl');
-		await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
-		await page.setViewportSize({ width: WIDTHS[0], height: 1000 });
-		const normal = await measure(page, PAGES[0], MODES[0], 'normal');
-		await sweep(page, step, normal.scale);
-	});
+// what the larger steps are. Width-sized batches give each scenario its own
+// timeout and let existing sweep shards balance the same complete matrix.
+for (const step of ['normal', 'larger', 'largest'] as const) {
+	for (const width of WIDTHS) {
+		test(`reading modes preserve the book geometry (${step}, ${width}px) @online @sweep`, async ({
+			page
+		}) => {
+			test.setTimeout(240_000);
+			expect(PAGES.length).toBeGreaterThan(0);
+			expect(WIDTHS.length).toBeGreaterThan(0);
+			expect(MODES.length).toBeGreaterThan(0);
+			expect(Object.keys(BOUNDARIES).every((url) => PAGES.includes(url))).toBe(true);
+			await page.goto('/app/pl');
+			await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
+			await page.setViewportSize({ width, height: 1000 });
+			const normal = step === 'normal' ? null : await measure(page, PAGES[0], MODES[0], 'normal');
+			await sweep(page, width, step, normal?.scale ?? null);
+		});
+	}
 }
 
 // On paper the translation sources are not printed, so the seam between the
 // Gradual and the Alleluia of the First Sunday of Advent (a direction head
 // after a body that shows its sources on screen) must be priced by the link
 // between the two bodies, not left at zero as the slot's edges are.
-test('paper keeps the seam between two bodies of a slot @online @sweep', async ({ page }) => {
-	test.setTimeout(120_000);
-	await page.goto('/app/pl');
-	await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
-	await page.emulateMedia({ media: 'print' });
-	let judged = 0;
-	for (const url of PRINT_PAGES) {
-		for (const width of WIDTHS) {
-			await page.setViewportSize({ width, height: 1000 });
+for (const width of WIDTHS) {
+	test(`paper keeps the seam between two bodies of a slot (${width}px) @online @sweep`, async ({
+		page
+	}) => {
+		test.setTimeout(120_000);
+		await page.goto('/app/pl');
+		await page.evaluate(() => localStorage.setItem('scrutabor-theme', 'light'));
+		await page.emulateMedia({ media: 'print' });
+		let judged = 0;
+		await page.setViewportSize({ width, height: 1000 });
+		for (const url of PRINT_PAGES) {
 			const data = await measure(page, url, 2, 'normal');
 			expect(
 				data.bodySeams,
@@ -968,9 +966,9 @@ test('paper keeps the seam between two bodies of a slot @online @sweep', async (
 				judged += 1;
 			}
 		}
-	}
-	expect(judged, 'paper body seams judged').toBe(PRINT_PAGES.length * WIDTHS.length);
-});
+		expect(judged, 'paper body seams judged').toBe(PRINT_PAGES.length);
+	});
+}
 
 // A shared gloss under a construction that OPENS the verse sits on the same
 // row as every other gloss of that verse, at every reading size. The raised

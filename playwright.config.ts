@@ -15,6 +15,11 @@ const noServer = process.env.SCRUTABOR_E2E_NO_SERVER === '1';
 // second run, or it rots the first time someone touches a route.
 export default defineConfig({
 	testDir: 'tests',
+	metadata: { revision: process.env.GITHUB_SHA ?? 'local' },
+	// Keep successful durations and exact scenario counts as well as failures.
+	reporter: process.env.CI
+		? [['dot'], ['json', { outputFile: 'playwright-report/timings.json' }]]
+		: 'list',
 	// A stray .only left in a spec narrows CI to one test of five hundred
 	// and reports green. Vitest refuses that under CI by its own default;
 	// Playwright only when told.
