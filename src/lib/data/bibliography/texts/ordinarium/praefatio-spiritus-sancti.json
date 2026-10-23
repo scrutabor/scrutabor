@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Prefationes.txt (section [Praefatio]); resolved spans: Divinum Officium [Spiritu] runtime resolution at revision 44667ff: `* *` = `hodiérna die`"
+    "section": "web/www/missa/Latin/Ordo/Prefationes.txt [Spiritu] (lines 49-49); literal * * template, with the separate Vigil Rule assignment"
    },
    "entries": [
     {
@@ -14,10 +14,29 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Spiritu template contributes the complete Latin Preface around its literal temporal placeholder. The separately bound Vigil Rule supplies unaccented hodierna die. This is an explicit data composition, not authenticated upstream runtime output or performer evidence."
     }
    ],
    "verified_on": "2026-09-12"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "rubric_control",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Pasc6-6r.txt [Rule] (line 11): Prefatio=Spiritu=hodierna die;"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-spiritus-sancti.vigil-variant-rule.do44667ff",
+     "address": {
+      "kind": "word",
+      "word": "w038"
+     },
+     "claim": "The pinned Vigil Rule assigns the literal value hodierna die to the Spiritu Preface placeholder. This source is selection data for the derived witness, not a normative printed rubric or performer/voice evidence."
+    }
+   ],
+   "verified_on": "2026-10-21"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

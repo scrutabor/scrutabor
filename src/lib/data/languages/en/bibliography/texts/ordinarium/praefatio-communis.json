@@ -7,6 +7,35 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 79",
+    "scan": "PDF p. 110",
+    "section": "The Common Preface"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.praefatio-communis.s02.family1839-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English basis of the shared opening through gratias agere, revised into contemporary vocabulary, address and word order while preserving the four predicates and always and everywhere. Other parts of this Preface are outside this use."
+    },
+    {
+     "id": "use.en.ordinarium.praefatio-communis.s06.family1839-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English basis of the shared concluding petition, revised against the Latin: the divine grant of admission, the voices joining the heavenly company, explicit additive too, and humble proclamation before the Sanctus. Contemporary syntax and address are revisions, not exact printed wording. Other parts of this Preface are outside this use."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
     "scan": "scan p. 110"
    },
    "entries": [
@@ -17,14 +46,6 @@
       "segment": "s04"
      },
      "claim": "by whom the angels praise thy Majesty, the dominations adore it, the powers tremble before it,"
-    },
-    {
-     "id": "use.en.a9d7d67773e326dd60dd",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "O holy Lord, Father Almighty, eternal God. Through Christ our Lord."
     },
     {
      "id": "use.en.f5f9a53e7c9593fbebb9",

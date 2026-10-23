@@ -14,10 +14,119 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Latin Mass data supply a derived digital comparison reading for this component. They are not an independent printed witness of the controlling 1962 edition. Exact source readings and declared framing remain separately attributable."
     }
    ],
    "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Postcommunion above the new Feria Tertia heading; full accented relative conclusion through Deus",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-pentecostes-postcommunio.conclusion-middle.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w016"
+     },
+     "claim": "The printed accented middle supplies w016–w025 and corroborates the relative formula. It has no comma after Christum, has tuum: Qui and Sancti, Deus. The selected same-Spirit wording is positively supplied by the Vigil proper cue and RG 115 e, not by an unprinted eiusdem on p. 123. Printed Deus. is reintegrated as Deus, before the terminal duration."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Top chant line: Per omnia saecula saeculorum and response Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-pentecostes-postcommunio.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "The printed terminal formula and response supply w032–w036. Chant syllable divisions are joined, the response marker omitted and uppercase printed Per becomes house per. Source words do not by themselves determine the independent selected speaker/voice boundaries."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 349",
+    "scan": "leaf n430 / PDF p. 431",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n430/mode/1up",
+    "section": "Proper body w001–w013; abbreviated Per Dominum cue w014–w015 and the printed in unitate eiusdem tail w026–w031; intervening and terminal formula words are separately expanded."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-pentecostes-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The identified proper page prints the bounded body and abbreviated cues described in the locator, not the whole contiguous expanded selected text. Formula/rule dependencies and house reintegration are separately declared in the witness record."
+    }
+   ],
+   "verified_on": "2026-09-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a; full Father-addressed conclusion and Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-pentecostes-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w014"
+     },
+     "claim": "RG 115 a supplies the complete Father-addressed expansion rule and Amen. Its rubric typography is not an independent attestation of every selected accent or house punctuation seam."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 e; same Spirit in the conclusion when named in the oration",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-pentecostes-postcommunio.conclusion-rg115e.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w026"
+     },
+     "claim": "All three Vigil orations name the Holy Spirit in their body; RG 115 e requires in unitate eiusdem Spiritus Sancti. The proper cue itself positively prints accented eiusdem; the rule is applicability evidence, not an invented accent witness."
+    }
+   ],
+   "verified_on": "2026-10-21"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -38,26 +147,6 @@
     }
    ],
    "verified_on": "2026-10-07"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
-    "printed": "p. 349",
-    "scan": "leaf n430 / PDF p. 431",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n430/mode/1up"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.vigilia-pentecostes-postcommunio.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
-    }
-   ],
-   "verified_on": "2026-09-12"
   }
  ],
  "witnesses": []

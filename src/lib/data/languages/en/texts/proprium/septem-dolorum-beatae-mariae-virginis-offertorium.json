@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Seven Sorrows of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Remember, O Virgin Mother of God, when you stand in the sight of the Lord, to speak good things in our behalf, so that He may turn away His wrath from us.","g":["Remember","Virgin","Mother","of God","when","you stand","in","the sight","of the Lord","that","you may speak","for","us","good things","and","that","He may turn away","wrath","His","from","us"]}
+    {"id":"s01","tr":"Virgin Mother of God, when you stand before the Lord, remember to speak in our favor; and may He turn His wrath away from us.","g":["Remember","Virgin",null,null,"when","you stand",null,null,"of the Lord",null,null,null,null,"good things","and",null,null,null,null,null,null],"a":[{"s":2,"n":2,"a":0,"g":"Mother of God"},{"s":6,"n":2,"a":1,"g":"in the presence"},{"s":9,"n":2,"a":1,"g":"to speak"},{"s":11,"n":2,"a":1,"g":"on our behalf"},{"s":15,"n":2,"a":1,"g":"that He may turn away"},{"s":17,"n":2,"a":0,"g":"His wrath"},{"s":19,"n":2,"a":1,"g":"from us"}],"ex":{"w021":"The form looks ahead to a time when Mary will already be standing before the Lord. English normally uses a present-tense verb in such a future time clause: “when you stand.”","w014":"Mary is to speak on our behalf. The Lord is to turn His wrath away. The possessive refers back to the Lord as the subject of this second petition."}}
   ]
 }

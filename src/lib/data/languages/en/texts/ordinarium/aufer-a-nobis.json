@@ -1,16 +1,16 @@
 {
   "id":"ordinarium.aufer-a-nobis",
   "language":"en",
-  "about":"As he ascends the altar steps, the priest asks God to take away iniquity so that we may enter the “Sancta sanctórum”, the holy of holies. In the second prayer he asks, in his own name, that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints, kissing the altar as he names them.",
+  "about":"As he ascends the altar steps, the priest asks God to take away iniquity so that we may enter the “Sancta sanctórum,” the holy of holies. In the second prayer he asks, in his own name, that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints, kissing the altar as he names them.",
   "seg":[
     {"id":"s01","nr":"The priest extends and joins his hands, then says one word aloud."},
-    {"id":"s02","tr":"Let us pray.","tc":[134,135],"tb":"exact","g":["let us pray"]},
+    {"id":"s02","tr":"Let us pray.","tc":[134],"tb":"exact","g":["Let us pray"]},
     {"id":"s03","nr":"The priest ascends the steps to the altar and continues silently."},
-    {"id":"s04","tr":"Lord, we ask You to take away our iniquities, so that with pure minds we may be worthy to enter the Holy of Holies.","tc":[135],"tb":"revised","g":["take away","from","us","we beseech","Lord","iniquities","our","that","into","the holy","of holies","pure","may we be worthy","minds","to enter"]},
-    {"id":"s05","tr":"Through Christ our Lord. Amen.","tc":[135],"tb":"exact","g":["through","Christ","Lord","our","amen"]},
+    {"id":"s04","tr":"Lord, we ask You to take away our iniquities, so that with pure minds we may be worthy to enter the Holy of Holies.","tc":[135],"tb":"revised","g":["Take away","from","us","we beseech","Lord",null,null,"that","into",null,null,null,null,null,"to enter"],"a":[{"s":5,"n":2,"a":0,"g":"our iniquities"},{"s":9,"n":2,"a":0,"g":"the Holy of Holies"},{"s":11,"n":3,"a":1,"g":"with pure minds we may be worthy"}],"ex":{"w011":"“Sancta sanctórum” means “the Holy of Holies.” Both words are neuter here and refer to a holy place, not to saints.","w014":"After “ut,” “mereámur” takes the infinitive “introíre”: “that we may be worthy to enter.” It stands between “puris” and “méntibus,” which belong together: “with pure minds.”"}},
+    {"id":"s05","tr":"Through Christ our Lord. Amen.","tc":[135],"tb":"exact","g":["Through","Christ",null,null,"Amen"],"a":[{"s":2,"n":2,"a":0,"g":"our Lord"}]},
     {"id":"s06","nr":"With joined hands resting on the altar the priest bows over it and begins the second prayer."},
-    {"id":"s07","tr":"We ask You, Lord, by the merits of Your saints,","tc":[135],"tb":"revised","g":["we beseech","You","Lord","by","the merits","of the Saints","Your"]},
+    {"id":"s07","tr":"We ask You, Lord, by the merits of Your saints,","tc":[135],"tb":"revised","g":["We beseech","You","Lord","by","the merits",null,null],"a":[{"s":5,"n":2,"a":0,"g":"of Your saints"}]},
     {"id":"s08","nr":"The priest kisses the middle of the altar."},
-    {"id":"s09","tr":"whose relics are here, and by the merits of all the saints, that You may be pleased to forgive all my sins. Amen.","tc":[135],"tb":"revised","g":["whose","relics","here","are","and","of all","the Saints","that","to forgive","You would deign","all","sins","my","amen"]}
+    {"id":"s09","tr":"whose relics are here, and by the merits of all the saints, that You may be pleased to forgive all my sins. Amen.","tc":[135],"tb":"revised","g":["whose","relics",null,null,"and","of all","the saints","that",null,null,"all",null,null,"Amen"],"a":[{"s":2,"n":2,"a":1,"g":"are here"},{"s":8,"n":2,"a":1,"g":"You may be pleased to forgive"},{"s":11,"n":2,"a":0,"g":"my sins"}],"ex":{"w038":"After “ut,” “dignéris” with the preceding infinitive “indulgére” expresses a deferential request: “that You may be pleased to forgive.”"}}
   ]
 }

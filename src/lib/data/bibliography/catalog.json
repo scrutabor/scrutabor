@@ -52,6 +52,11 @@
    "title": "Enchiridion Indulgentiarum"
   },
   {
+   "id": "work.extraordinaryform.handmissal-chant",
+   "responsible": "ExtraordinaryForm.org",
+   "title": "Latin-English Hand Missal for the Traditional Latin Mass (with Kyriale for 4 Masses)"
+  },
+  {
    "id": "work.katolik-w-modlitwie",
    "responsible": "ks. Józef Kühn",
    "title": "Katolik w modlitwie czyli książka do nabożeństwa oraz śpiewnik kościelny"
@@ -327,6 +332,25 @@
    "rights": {
     "status": "unverified",
     "basis": "No republication licence is asserted; the graph exposes only bibliographic facts and locators."
+   }
+  },
+  {
+   "id": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+   "work": "work.extraordinaryform.handmissal-chant",
+   "recension": "Cover revision 12/12/2025 of the hand missal first issued at Epiphany 2020",
+   "title": "Latin-English Hand Missal for the Traditional Latin Mass (with Kyriale for 4 Masses)",
+   "edition_statement": "First edition Epiphany 2020; revised 12/12/2025",
+   "publisher": "ExtraordinaryForm.org",
+   "year": "2025",
+   "publication_type": "missal",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Retained for private Latin comparison. No permission for public PDF redistribution or reuse of its modern English wording is established by this bibliographic record."
    }
   },
   {
@@ -638,6 +662,15 @@
    "access": "open"
   },
   {
+   "id": "item.divinum-officium-missa.44667ff.ordo",
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
    "id": "item.divinum-officium-missa.b5e250b.advent-i",
    "edition": "edition.divinum-officium-missa.b5e250b",
    "repository": "GitHub",
@@ -661,6 +694,14 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/enchiridion_indulgentiarum_1952",
    "scan_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.extraordinaryform.handmissal-chant.2025-12-12.pdf",
+   "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+   "repository": "ExtraordinaryForm.org",
+   "kind": "born-digital",
+   "record_url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf",
    "access": "open"
   },
   {

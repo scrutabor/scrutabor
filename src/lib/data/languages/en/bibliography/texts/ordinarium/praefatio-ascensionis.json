@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.praefatio-ascensionis",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 15, 17 and 19",
+    "scan": "PDF pp. 42, 44 and 46",
+    "section": "Shared Vere dignum opening through aeterne Deus and Et ideo ending on p. 15; per Christum Dominum nostrum bridge on p. 17; specific Ascension Qui post resurrectionem middle on p. 19"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.praefatio-ascensionis.s02.husenbeth1853-revised-composite",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English basis of the complete Ascension Preface as an explicit three-locus contemporary revision: shared opening and Et ideo ending on p. 15, through-Christ bridge on p. 17, and specific Ascension middle on p. 19. The intervening Nativity and Lenten proper bodies and the Communicantes are excluded. The selected Latin controls assembly, address, the participation grant and source wording revisions; no single page is claimed to print the whole contemporary Preface."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

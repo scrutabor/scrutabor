@@ -1,6 +1,7 @@
 // UI strings live here; corpus content lives in the gloss layers.
 import { bindProse } from './polish';
 import type { Season } from './proprium';
+import type { Situation } from './commemorationes';
 import type { ConstructionParticipleKind } from './word-construction';
 
 export type Lang = 'pl' | 'en';
@@ -105,6 +106,17 @@ export interface Messages {
 	commemorationQuiet: string;
 	/** A commemoration falls on the chosen date while the Mass of that day is not in the edition. */
 	dayCommemorationOnly: string;
+	/** A required commemoration of the season that the edition cannot yet supply; '{where}'
+	 * names the Mass that owes it and '{title}' the commemoration omitted for it. */
+	dayCommemorationUnavailable: string;
+	/** Who owes it: the one determinate Mass, or one of the two described sung Masses. */
+	commemorationWhere: Record<'mass' | Exclude<Situation, 'lecta'>, string>;
+	/** The same, in the slot where its orations would follow the Mass's own. */
+	commemorationUnavailable: string;
+	/** Why a slot shows two sung sequences: the low/sung choice cannot settle conventual status. */
+	commemorationVariants: string;
+	/** The label of each described sequence. */
+	commemorationSituations: Record<Situation, string>;
 	/** Capability limit, not a claim that every date needs an additional prayer. */
 	formularyScope: string;
 	dayLabel: string;
@@ -356,8 +368,24 @@ const MESSAGES: Record<Lang, Messages> = {
 			'Zakończenie i Amen tej sekrety kapłan odmawia po cichu. Głośno kończy się tylko ostatnia sekreta.',
 		dayCommemorationOnly:
 			'tego dnia przypada wspomnienie: {title}. Mszy tego dnia nie ma jeszcze w tym wydaniu',
+		dayCommemorationUnavailable:
+			'{where} wymaga wspomnienia okresowego (de Tempore), którego nie ma jeszcze w tym wydaniu. Pomija się inne wspomnienie: {title}',
+		commemorationWhere: {
+			mass: 'ta Msza',
+			'cantu-conventualis': 'śpiewana Msza konwentualna',
+			'cantu-non-conventualis': 'śpiewana Msza niekonwentualna'
+		},
+		commemorationUnavailable:
+			'Po modlitwie z formularza dnia następuje wymagane wspomnienie okresowe (de Tempore), którego nie ma jeszcze w tym wydaniu.',
+		commemorationVariants:
+			'We Mszy śpiewanej wspomnienie zależy od tego, czy jest to Msza konwentualna. Pokazano oba warianty.',
+		commemorationSituations: {
+			lecta: 'we Mszy cichej',
+			'cantu-conventualis': 'we Mszy śpiewanej konwentualnej',
+			'cantu-non-conventualis': 'we Mszy śpiewanej niekonwentualnej'
+		},
 		formularyScope:
-			'Dobór modlitw uwzględnia wspomnienie Litanii Większych, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.',
+			'Dobór modlitw uwzględnia wspomnienia Litanii Większych i świętej Petroneli, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
@@ -584,8 +612,24 @@ const MESSAGES: Record<Lang, Messages> = {
 			'The celebrant says this Secret’s conclusion and Amen quietly. Only the last Secret ends aloud.',
 		dayCommemorationOnly:
 			'a commemoration falls on this day: {title}. The Mass of this day is not yet in this edition',
+		dayCommemorationUnavailable:
+			'{where} requires a commemoration of the season (de Tempore) that is not yet in this edition. The other commemoration is omitted: {title}',
+		commemorationWhere: {
+			mass: 'this Mass',
+			'cantu-conventualis': 'a sung conventual Mass',
+			'cantu-non-conventualis': 'a sung Mass that is not conventual'
+		},
+		commemorationUnavailable:
+			'The prayer of the day is followed by a required commemoration of the season (de Tempore), which is not yet in this edition.',
+		commemorationVariants:
+			'In a sung Mass the commemoration depends on whether the Mass is conventual. Both forms are shown.',
+		commemorationSituations: {
+			lecta: 'in a low Mass',
+			'cantu-conventualis': 'in a sung conventual Mass',
+			'cantu-non-conventualis': 'in a sung Mass that is not conventual'
+		},
 		formularyScope:
-			'The selection of prayers accounts for the commemoration of the Greater Litanies, but not yet for other liturgical commemorations or local calendars.',
+			'The selection of prayers accounts for the commemorations of the Greater Litanies and Saint Petronilla, but not yet for other liturgical commemorations or local calendars.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',

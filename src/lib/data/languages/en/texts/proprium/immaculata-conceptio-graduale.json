@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Immaculate Conception of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Blessed are you, O Virgin Mary, by the Lord the most high God, above all women upon the earth. You are the glory of Jerusalem, you are the joy of Israel, you are the honor of our people.","g":["Blessed","are","you","Virgin","Mary","by","the Lord","God","Most High","above","all","women","upon","the earth","You","the glory","of Jerusalem","you","the joy","of Israel","you","the honor",null,null],"a":[{"s":22,"n":2,"a":0,"g":"of our people"}]}
+    {"id":"s01","tr":"Virgin Mary, you are blessed by the Lord, God Most High, above all women on earth. You are the glory of Jerusalem, you are the joy of Israel, you are the honor of our people.","g":[null,null,null,null,null,"by","the Lord",null,null,"above",null,null,null,null,"You are",null,null,"you are",null,null,"you are","the honor",null,null],"a":[{"s":0,"n":3,"a":0,"g":"You are blessed"},{"s":3,"n":2,"a":1,"g":"Virgin Mary"},{"s":7,"n":2,"a":0,"g":"God Most High"},{"s":10,"n":2,"a":1,"g":"all women"},{"s":12,"n":2,"a":1,"g":"on earth"},{"s":15,"n":2,"a":0,"g":"Jerusalem’s glory"},{"s":18,"n":2,"a":0,"g":"Israel’s joy"},{"s":22,"n":2,"a":0,"g":"of our people"}]}
   ]
 }

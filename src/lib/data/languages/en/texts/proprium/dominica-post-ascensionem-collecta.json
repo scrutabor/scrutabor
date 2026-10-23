@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-post-ascensionem-collecta",
   "language":"en",
-  "about":"The collecta of the formulary “Sunday after Ascension” in the 1962 Roman Missal.",
+  "about":"The collecta of the formulary “Sunday after the Ascension” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Almighty and everlasting God, make us ever bear a devoted will toward You and serve Your majesty with a sincere heart. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Almighty","everlasting","God","make","us","toward You","ever",null,"devoted","bear","a will","and","majesty","Your","with a sincere","heart","to serve","Through","Lord","our","Jesus","Christ","Son","Your","who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":7,"n":1,"r":"idiom"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}]},
+    {"id":"s01","tr":"Almighty and everlasting God, grant that our will may always be devoted to You and that we may always serve Your majesty with a sincere heart. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","tb":"revised","g":["Almighty","everlasting","God","make","us",null,null,null,null,null,null,"and",null,null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":5,"n":6,"a":4,"g":"ever have a will devoted to You"},{"s":12,"n":5,"a":4,"g":"serve Your majesty with a sincere heart"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

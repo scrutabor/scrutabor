@@ -35,7 +35,7 @@ const actual = [
 	['2027-07-26', 'sanctae-annae-matris-beatae-mariae-virginis', 'required', 'omitted'],
 	['2027-08-16', 'sancti-ioachim-confessoris', 'required', 'omitted'],
 	['2026-08-10', 'sancti-laurentii-martyris', 'required', 'omitted'],
-	['2033-12-30', 'dominica-infra-octavam-nativitatis', 'required', 'required'],
+	['2029-12-30', 'dominica-infra-octavam-nativitatis', 'required', 'required'],
 	['2026-11-09', 'dedicatio-archibasilicae-sanctissimi-salvatoris', 'required', 'required'],
 	['2026-01-11', 'sancta-familia', 'required', 'required']
 ] as const;

@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.12.0",
+  "schema_version": "6.1.0",
   "corpus_schema": "0.21.0",
   "language": "pl",
   "direction": "ltr",
@@ -485,31 +485,38 @@
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-annuntiatione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-assumptione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-conceptione-immaculata.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-nativitate.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-transfixione",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-transfixione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis-in-visitatione.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis",
-      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-beatae-mariae-virginis.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-beatae-mariae-virginis.json"
     },
     {
       "id": "ordinarium.praefatio-communis",
@@ -552,7 +559,8 @@
     },
     {
       "id": "ordinarium.praefatio-quadragesimae",
-      "path": "languages/pl/texts/ordinarium/praefatio-quadragesimae.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-quadragesimae.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-quadragesimae.json"
     },
     {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
@@ -560,15 +568,18 @@
     },
     {
       "id": "ordinarium.praefatio-sanctae-crucis",
-      "path": "languages/pl/texts/ordinarium/praefatio-sanctae-crucis.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-sanctae-crucis.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-sanctae-crucis.json"
     },
     {
       "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
-      "path": "languages/pl/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-sancti-ioseph-in-festivitate.json"
     },
     {
       "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
-      "path": "languages/pl/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json"
+      "path": "languages/pl/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/praefatio-sancti-ioseph-in-solemnitate.json"
     },
     {
       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
@@ -1037,7 +1048,8 @@
     },
     {
       "id": "proprium.corporis-christi-introitus",
-      "path": "languages/pl/texts/proprium/corporis-christi-introitus.json"
+      "path": "languages/pl/texts/proprium/corporis-christi-introitus.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/corporis-christi-introitus.json"
     },
     {
       "id": "proprium.corporis-christi-offertorium",
@@ -3615,7 +3627,8 @@
     },
     {
       "id": "proprium.sacratissimi-cordis-iesu-introitus",
-      "path": "languages/pl/texts/proprium/sacratissimi-cordis-iesu-introitus.json"
+      "path": "languages/pl/texts/proprium/sacratissimi-cordis-iesu-introitus.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sacratissimi-cordis-iesu-introitus.json"
     },
     {
       "id": "proprium.sacratissimi-cordis-iesu-offertorium",
@@ -3712,6 +3725,21 @@
     {
       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-tractus",
       "path": "languages/pl/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-collecta",
+      "path": "languages/pl/texts/proprium/sanctae-petronillae-collecta.json",
+      "title": "Kolekta na wspomnienie św. Petroneli"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-postcommunio",
+      "path": "languages/pl/texts/proprium/sanctae-petronillae-postcommunio.json",
+      "title": "Pokomunia na wspomnienie św. Petroneli"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-secreta",
+      "path": "languages/pl/texts/proprium/sanctae-petronillae-secreta.json",
+      "title": "Sekreta na wspomnienie św. Petroneli"
     },
     {
       "id": "proprium.sancti-andreae-apostoli-alleluia",
@@ -4279,7 +4307,8 @@
     },
     {
       "id": "proprium.sanctissimae-trinitatis-introitus",
-      "path": "languages/pl/texts/proprium/sanctissimae-trinitatis-introitus.json"
+      "path": "languages/pl/texts/proprium/sanctissimae-trinitatis-introitus.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sanctissimae-trinitatis-introitus.json"
     },
     {
       "id": "proprium.sanctissimae-trinitatis-offertorium",

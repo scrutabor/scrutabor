@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.12.0",
+  "schema_version": "6.1.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -5315,6 +5315,24 @@
       "evidence": "bibliography/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.sanctae-petronillae-collecta",
+      "path": "texts/proprium/sanctae-petronillae-collecta.json",
+      "title": "Exáudi nos, Deus salutáris noster",
+      "evidence": "bibliography/texts/proprium/sanctae-petronillae-collecta.json"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-postcommunio",
+      "path": "texts/proprium/sanctae-petronillae-postcommunio.json",
+      "title": "Satiásti, Dómine, famíliam tuam munéribus sacris",
+      "evidence": "bibliography/texts/proprium/sanctae-petronillae-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-secreta",
+      "path": "texts/proprium/sanctae-petronillae-secreta.json",
+      "title": "Accépta tibi sit, Dómine",
+      "evidence": "bibliography/texts/proprium/sanctae-petronillae-secreta.json"
+    },
+    {
       "id": "proprium.sancti-andreae-apostoli-alleluia",
       "path": "texts/proprium/sancti-andreae-apostoli-alleluia.json",
       "title": "Allelúia, allelúia. Diléxit Andréam Dóminus in odórem",
@@ -6776,6 +6794,7 @@
     "canon": "canon.json",
     "dismissal": "dismissal.json",
     "commemorationes": "commemorationes.json",
+    "introductiones": "introductiones.json",
     "lexicon": "lexicon/heads.json",
     "morphology": "tables/morphology.json",
     "analysis": "tables/analysis.json",

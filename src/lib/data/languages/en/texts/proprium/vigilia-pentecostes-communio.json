@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Vigil of Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"On the last day of the feast Jesus said: He who believes in Me, from his inmost being will flow rivers of living water. Now this He said of the Spirit which those who believed in Him were to receive, alleluia, alleluia.","g":["On the last","of the feast","day","said","Jesus","He who","in","Me","believes","rivers","from","inmost being","his","will flow","of water","living","This","Now","He said","of","the Spirit","which",null,null,"those who believed","in","Him","alleluia","alleluia"],"a":[{"s":22,"n":2,"a":0,"g":"were to receive"}]}
+    {"id":"s01","tr":"On the last day of the feast Jesus said: Rivers of living water will flow from within the one who believes in Me. Now this He said of the Spirit whom those who believed in Him were to receive, alleluia, alleluia.","g":[null,null,null,null,null,"He who",null,null,null,"rivers","from",null,null,"will flow",null,null,"this","however","He said","of","the Spirit","whom",null,null,null,null,null,"alleluia","alleluia"],"a":[{"s":0,"n":3,"a":2,"g":"On the last day of the feast"},{"s":3,"n":2,"a":0,"g":"Jesus was saying"},{"s":6,"n":3,"a":2,"g":"believes in Me"},{"s":11,"n":2,"a":0,"g":"his inmost being"},{"s":14,"n":2,"a":0,"g":"of living water"},{"s":22,"n":5,"a":0,"g":"those who believed in Him were to receive"}],"ex":{"w014":"Jesus promises that rivers of living water will flow from within the one who believes in Him."}}
   ]
 }

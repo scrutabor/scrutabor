@@ -1,0 +1,16 @@
+{
+  "id":"proprium.sanctae-petronillae-postcommunio",
+  "title":"Satiásti, Dómine, famíliam tuam munéribus sacris",
+  "category":"proprium",
+  "section":"missa-fidelium",
+  "variant":"sanctae-petronillae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w001","f":"Satiásti","l":"satio","p":",","m":283,"a":0},{"i":"w002","f":"Dómine","l":"dominus","p":",","m":5,"a":2},{"i":"w003","f":"famíliam","l":"familia","m":141,"a":2},{"i":"w004","f":"tuam","l":"tuus","m":8,"h":"w003","a":2},{"i":"w005","f":"munéribus","l":"munus","m":319,"a":2},{"i":"w006","f":"sacris","l":"sacer","p":":","m":126,"h":"w005","a":2},{"i":"w007","f":"eius","l":"is","p":",","m":213,"a":6},{"i":"w008","f":"quǽsumus","l":"quaeso","p":",","m":92,"a":1},{"i":"w009","f":"semper","l":"semper","m":32,"a":2},{"i":"w010","f":"interventióne","l":"interventio","m":45,"a":0},{"i":"w011","f":"nos","l":"nos","m":49,"a":2},{"i":"w012","f":"réfove","l":"refoveo","p":",","m":190,"a":2},{"i":"w013","f":"cuius","l":"qui","m":192,"a":2},{"i":"w014","f":"solémnia","l":"sollemne","m":128,"a":6},{"i":"w015","f":"celebrámus","l":"celebro","p":".","m":241,"a":2}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w016","f":"Per","l":"per","m":3,"h":"w017","a":6},{"i":"w017","f":"Dóminum","l":"dominus","m":35,"a":6},{"i":"w018","f":"nostrum","l":"noster","m":96,"h":"w017","a":6},{"i":"w019","f":"Iesum","l":"Iesus","m":38,"a":6},{"i":"w020","f":"Christum","l":"Christus","m":35,"a":6},{"i":"w021","f":"Fílium","l":"filius","m":35,"a":6},{"i":"w022","f":"tuum","l":"tuus","p":",","m":96,"h":"w021","a":6},{"i":"w023","f":"qui","l":"qui","m":18,"h":"w025","a":6},{"i":"w024","f":"tecum","l":"tu","m":131,"a":6},{"i":"w025","f":"vivit","l":"vivo","m":140,"a":6},{"i":"w026","f":"et","l":"et","m":15,"a":6},{"i":"w027","f":"regnat","l":"regno","m":119,"a":6},{"i":"w028","f":"in","l":"in","m":0,"h":"w029","a":6},{"i":"w029","f":"unitáte","l":"unitas","m":45,"a":6},{"i":"w030","f":"Spíritus","l":"spiritus","m":250,"a":6},{"i":"w031","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w030","a":6},{"i":"w032","f":"Deus","l":"deus","p":",","m":60,"a":6}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w033","f":"per","l":"per","m":3,"h":"w035","a":6},{"i":"w034","f":"ómnia","l":"omnis","m":129,"h":"w035","a":6},{"i":"w035","f":"sǽcula","l":"saeculum","m":85,"a":6},{"i":"w036","f":"sæculórum","l":"saeculum","p":".","m":145,"a":6}]},
+    {"id":"s04","type":"verse","speaker":"minister","voice":"clara","delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w037","f":"Amen","l":"amen","p":".","m":46,"a":6}]}
+  ]
+}

@@ -127,11 +127,13 @@ for (const language of ['pl', 'en'] as const) {
 		await setHelp(page, 1);
 		const reading = page.locator(`#text-proprium-${text}`);
 		await expect(reading.locator('.token')).toHaveCount(120);
-		await expect(reading.locator('rt')).toHaveCount(language === 'pl' ? 112 : 94);
+		// The delivered Vigil captions (corpus bf312db5): Polish groups "Jakim chrztem" (w044–w045), so two
+		// fewer Polish captions than the 0e32c812 vendor showed; English keeps 94.
+		await expect(reading.locator('rt')).toHaveCount(language === 'pl' ? 110 : 94);
 		const direct =
 			language === 'pl'
 				? [
-						['w045', 'czym'],
+						['w044', 'Jakim chrztem'],
 						['w047', 'ochrzczeni'],
 						['w048', 'zostaliście'],
 						['w076', 'Gdy tego'],
@@ -140,7 +142,7 @@ for (const language of ['pl', 'en'] as const) {
 				: [
 						['w029', 'But'],
 						['w030', 'they'],
-						['w051', 'In'],
+						['w051', 'Into'],
 						['w052', 'John’s'],
 						['w096', 'they spoke'],
 						['w102', 'in all']

@@ -81,7 +81,7 @@ export function createCanonLookup(
 
 function declaredLookup() {
 	try {
-		if (ROOT_MANIFEST.schema_version !== '5.12.0' || ROOT_MANIFEST.base.canon !== 'canon.json')
+		if (ROOT_MANIFEST.schema_version !== '6.1.0' || ROOT_MANIFEST.base.canon !== 'canon.json')
 			throw new Error('undeclared Canon resource');
 		return createCanonLookup(tableData);
 	} catch {

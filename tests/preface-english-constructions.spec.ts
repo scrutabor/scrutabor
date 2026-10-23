@@ -8,7 +8,8 @@ const subjects: Record<string, [string, number, string][]> = {
 		['w027', 3, 'keep it under continual protection'],
 		['w035', 3, 'as vicars of Your work']
 	],
-	ascensionis: [['w046', 7, 'that He might grant us a share in His divinity']],
+	// The delivered caption gives ut its own word ("that") and groups the six that follow.
+	ascensionis: [['w046', 6, 'He might grant us a share in His divinity']],
 	epiphaniae: [['w036', 6, 'He renewed us by the new light of His immortality']],
 	nativitatis: [['w034', 8, 'a new light of Your glory has shone upon the eyes of our mind']],
 	'paschalis-in-die': [['w024', 6, 'for Christ, our Passover, has been sacrificed']],
@@ -59,6 +60,20 @@ for (const [subject, groups] of Object.entries(subjects)) {
 		}
 	});
 }
+
+test('English Ascension preface keeps ut on its own caption before the shared construction', async ({
+	page
+}) => {
+	await page.goto('/app/en/ordinarium/praefatio-ascensionis');
+	await setHelp(page, 1);
+	await expect(page.locator('button#w042 rt')).toHaveText('that');
+	await expect(
+		page
+			.locator('.token-group')
+			.filter({ has: page.locator('button#w046') })
+			.locator('.token')
+	).toHaveCount(6);
+});
 
 for (const [subject, occasion, expected] of [
 	[

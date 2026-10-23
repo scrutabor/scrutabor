@@ -25,7 +25,28 @@
        "uses": 1
       },
       {
+       "id": "proprium.ascensio-domini-offertorium",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.cathedra-sancti-petri-introitus",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-communio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-introitus",
        "roles": [
         "direct_approved_print"
        ],
@@ -177,6 +198,13 @@
       "derived_digital_collation_aid"
      ],
      "texts": [
+      {
+       "id": "ordinarium.aufer-a-nobis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
       {
        "id": "ordinarium.iube-domine-benedicere",
        "roles": [
@@ -1204,7 +1232,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-secreta",
@@ -7440,7 +7468,7 @@
       {
        "id": "ordinarium.aufer-a-nobis",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8175,16 +8203,17 @@
       {
        "id": "proprium.ascensio-domini-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.ascensio-domini-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.ascensio-domini-secreta",
@@ -8245,7 +8274,7 @@
       {
        "id": "proprium.assumptio-beatae-mariae-virginis-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8883,9 +8912,9 @@
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-secreta",
@@ -10656,56 +10685,56 @@
       {
        "id": "proprium.dominica-pentecostes-alleluia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-pentecostes-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-pentecostes-communio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-pentecostes-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-pentecostes-evangelium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-pentecostes-introitus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-pentecostes-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-pentecostes-sequentia",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -10719,9 +10748,10 @@
       {
        "id": "proprium.dominica-post-ascensionem-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-post-ascensionem-communio",
@@ -10749,21 +10779,23 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-post-ascensionem-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-post-ascensionem-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-resurrectionis-alleluia",
@@ -12485,7 +12517,7 @@
       {
        "id": "proprium.immaculata-conceptio-graduale",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12643,15 +12675,14 @@
       {
        "id": "proprium.litaniae-maiores-collecta",
        "roles": [
-        "direct_approved_print",
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 2
       },
       {
        "id": "proprium.litaniae-maiores-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -13464,6 +13495,27 @@
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-tractus",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-secreta",
        "roles": [
         "direct_approved_print"
        ],
@@ -14795,7 +14847,7 @@
       {
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-offertorium",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -15035,9 +15087,10 @@
       {
        "id": "proprium.vigilia-pentecostes-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-pentecostes-communio",
@@ -15063,9 +15116,10 @@
       {
        "id": "proprium.vigilia-pentecostes-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.vigilia-pentecostes-offertorium",
@@ -15077,16 +15131,16 @@
       {
        "id": "proprium.vigilia-pentecostes-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-pentecostes-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-pentecostes-tractus",
@@ -15295,6 +15349,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.sanctae-petronillae-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.vigilia-paschalis-laudes-canticum",
        "roles": [
         "corroborating_latin_witness"
@@ -15303,6 +15378,22 @@
       },
       {
        "id": "proprium.vigilia-paschalis-laudes-psalmus",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+     "roles": [
+      "corroborating_latin_witness"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.aufer-a-nobis",
        "roles": [
         "corroborating_latin_witness"
        ],
@@ -15750,6 +15841,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-ascensionis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.quam-oblationem",
        "roles": [
         "historical_wording_basis"
@@ -15843,6 +15941,13 @@
       },
       {
        "id": "proprium.dominica-infra-octavam-nativitatis-secreta",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-collecta",
        "roles": [
         "historical_wording_basis"
        ],
@@ -16019,60 +16124,81 @@
        "uses": 7
       },
       {
+       "id": "ordinarium.praefatio-apostolorum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-beatae-mariae-virginis",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-assumptione",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-conceptione-immaculata",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-nativitate",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-transfixione",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-communis",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 3
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.praefatio-d-n-iesu-christi-regis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-defunctorum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       },
       {
        "id": "ordinarium.praefatio-dialogus",
@@ -16082,32 +16208,60 @@
        "uses": 5
       },
       {
+       "id": "ordinarium.praefatio-epiphaniae",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-nativitatis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-quadragesimae",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       },
       {
        "id": "ordinarium.praefatio-sanctae-crucis",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-sancti-ioseph-in-festivitate",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
       },
       {
        "id": "ordinarium.praefatio-sancti-ioseph-in-solemnitate",
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 2
+       "uses": 4
+      },
+      {
+       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -16391,6 +16545,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-iv-post-pascha-communio",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-post-pascha-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-evangelium",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancta-familia-alleluia",
        "roles": [
         "historical_wording_basis"
@@ -16431,10 +16606,9 @@
       {
        "id": "ordinarium.aufer-a-nobis",
        "roles": [
-        "historical_wording_basis",
-        "historical_wording_comparator"
+        "historical_wording_basis"
        ],
-       "uses": 5
+       "uses": 4
       },
       {
        "id": "ordinarium.benedictio",
@@ -17438,6 +17612,20 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.vigilia-paschalis-alleluia",
        "roles": [
         "rubric_control"
@@ -17760,9 +17948,10 @@
       {
        "id": "proprium.ascensio-domini-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.ascensio-domini-secreta",
@@ -17991,9 +18180,10 @@
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-secreta",
@@ -18638,12 +18828,26 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.dominica-pentecostes-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
        "uses": 1
       },
       {
        "id": "proprium.dominica-post-ascensionem-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-post-ascensionem-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18652,14 +18856,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-post-ascensionem-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-resurrectionis-collecta",
@@ -19588,6 +19792,27 @@
        "uses": 1
       },
       {
+       "id": "proprium.sanctae-petronillae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-andreae-apostoli-collecta",
        "roles": [
         "official_liturgical_context"
@@ -20150,6 +20375,13 @@
        "roles": [
         "official_liturgical_context"
        ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.vigilia-pentecostes-introitus",
+       "roles": [
+        "official_liturgical_context"
+       ],
        "uses": 1
       },
       {
@@ -20157,14 +20389,14 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.vigilia-pentecostes-secreta",
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.visitatio-beatae-mariae-virginis-collecta",
@@ -20240,6 +20472,27 @@
       },
       {
        "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-petronillae-secreta",
        "roles": [
         "rubric_control"
        ],

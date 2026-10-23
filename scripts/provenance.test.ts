@@ -60,7 +60,9 @@ describe('the corpus this app ships', () => {
 		expect(provenance.schema_version).toBe('0.21.0');
 		// 5.11 adds explicit Ordinary branches to the neutral formulary catalogue; row keys are unchanged.
 		// 5.12 adds the commemoration occurrence/activation resource and its localized titles.
-		expect(provenance.edition).toBe('5.12.0');
+		// 6.0 replaces the commemoration selection with schema 2.0.0 (one decision per Mass
+		// situation) and 6.1 adds the Ordo introductions resource; text row keys are unchanged.
+		expect(provenance.edition).toBe('6.1.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

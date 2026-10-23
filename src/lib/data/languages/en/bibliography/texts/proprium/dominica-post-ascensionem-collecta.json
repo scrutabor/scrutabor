@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-post-ascensionem-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
+   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 393 and 29",
+    "scan": "PDF pp. 420 and 56",
+    "section": "Sunday-within-the-Octave proper and Through our Lord cue on p. 393; ordinary Libera nos conclusion from Jesus Christ, thy Son through the duration formula on p. 29, excluding its same-Lord prefix and Libera nos body"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-post-ascensionem-collecta.s01.husenbeth1853-revised-composite",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the complete Collect as a declared two-locus revision: the proper and Through our Lord cue on p. 393, completed by the ordinary conclusion on p. 29. Contemporary address, will-oriented request, coordinated service and duration are revised against the selected Latin. The different same-Lord prefix and the Libera nos body are not imported; neither page is claimed to print this entire contemporary Collect."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

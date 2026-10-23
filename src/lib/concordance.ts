@@ -14,6 +14,7 @@ import { PROPER_DAYS, SLOT_OF, properRank } from './proprium';
 import { TEXT_KEYS, hasText, loadCoreTexts } from './corpus';
 import { ORDO } from './ordo';
 import { DISMISSAL_ROLE, DISMISSAL_TEXT_KEYS } from './dismissal';
+import { commemorationLookup } from './commemorationes';
 import concordance from './data/concordance.json';
 
 export interface Occurrence {
@@ -137,7 +138,12 @@ export function everyTextInOrder(): string[] {
 		const referenced = PROPER_DAYS.findIndex((day) =>
 			day.components.some((component) => component.text === key)
 		);
-		return referenced === -1 ? PROPER_DAYS.length : referenced;
+		if (referenced !== -1) return referenced;
+		// A commemoration's orations belong to no day. They follow every day, each set
+		// together in the resource's order, so two commemorations never interleave.
+		const commemorations = commemorationLookup?.commemorations ?? [];
+		const set = commemorations.findIndex((entry) => entry.slots.some((slot) => slot.text === key));
+		return PROPER_DAYS.length + (set === -1 ? commemorations.length : set);
 	};
 	const tail = [...TEXT_KEYS].sort((a, b) => {
 		const [ca, sa] = a.split('/');

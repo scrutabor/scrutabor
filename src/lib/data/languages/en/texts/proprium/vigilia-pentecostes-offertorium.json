@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Vigil of Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Send forth Your Spirit, and they will be created, and You will renew the face of the earth; may the glory of the Lord endure forever, alleluia.","g":["Send forth","Spirit","Your","and","they will be created","and","You will renew","the face","of the earth","may endure","the glory","of the Lord","for","ever","alleluia"]}
+    {"id":"s01","tr":"Send forth Your Spirit, and they will be created, and You will renew the face of the earth; may the glory of the Lord endure forever, alleluia.","g":["Send forth",null,null,"and","they will be created","and","You will renew","the face","of the earth",null,null,null,"for","ever","alleluia"],"a":[{"s":1,"n":2,"a":0,"g":"Your Spirit"},{"s":9,"n":3,"a":0,"g":"may the glory of the Lord endure"}],"ex":{"w005":"The implied plural subject is the creatures, not the Holy Spirit. The prayer recalls God’s creation and renewal of the earth."}}
   ]
 }

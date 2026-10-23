@@ -1,5 +1,5 @@
 {
-  "schema_version": "5.12.0",
+  "schema_version": "6.1.0",
   "corpus_schema": "0.21.0",
   "language": "en",
   "direction": "ltr",
@@ -478,11 +478,13 @@
     },
     {
       "id": "ordinarium.praefatio-apostolorum",
-      "path": "languages/en/texts/ordinarium/praefatio-apostolorum.json"
+      "path": "languages/en/texts/ordinarium/praefatio-apostolorum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-apostolorum.json"
     },
     {
       "id": "ordinarium.praefatio-ascensionis",
-      "path": "languages/en/texts/ordinarium/praefatio-ascensionis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-ascensionis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-ascensionis.json"
     },
     {
       "id": "ordinarium.praefatio-beatae-mariae-virginis-in-annuntiatione",
@@ -526,11 +528,13 @@
     },
     {
       "id": "ordinarium.praefatio-d-n-iesu-christi-regis",
-      "path": "languages/en/texts/ordinarium/praefatio-d-n-iesu-christi-regis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-d-n-iesu-christi-regis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-d-n-iesu-christi-regis.json"
     },
     {
       "id": "ordinarium.praefatio-defunctorum",
-      "path": "languages/en/texts/ordinarium/praefatio-defunctorum.json"
+      "path": "languages/en/texts/ordinarium/praefatio-defunctorum.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-defunctorum.json"
     },
     {
       "id": "ordinarium.praefatio-dialogus",
@@ -539,11 +543,13 @@
     },
     {
       "id": "ordinarium.praefatio-epiphaniae",
-      "path": "languages/en/texts/ordinarium/praefatio-epiphaniae.json"
+      "path": "languages/en/texts/ordinarium/praefatio-epiphaniae.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-epiphaniae.json"
     },
     {
       "id": "ordinarium.praefatio-nativitatis",
-      "path": "languages/en/texts/ordinarium/praefatio-nativitatis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-nativitatis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-nativitatis.json"
     },
     {
       "id": "ordinarium.praefatio-paschalis-in-die",
@@ -565,7 +571,8 @@
     },
     {
       "id": "ordinarium.praefatio-sacratissimi-cordis-iesu",
-      "path": "languages/en/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json"
+      "path": "languages/en/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-sacratissimi-cordis-iesu.json"
     },
     {
       "id": "ordinarium.praefatio-sanctae-crucis",
@@ -584,7 +591,8 @@
     },
     {
       "id": "ordinarium.praefatio-sanctissimae-trinitatis",
-      "path": "languages/en/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
+      "path": "languages/en/texts/ordinarium/praefatio-sanctissimae-trinitatis.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/praefatio-sanctissimae-trinitatis.json"
     },
     {
       "id": "ordinarium.praefatio-spiritus-sancti",
@@ -2097,7 +2105,8 @@
     },
     {
       "id": "proprium.dominica-iv-post-pascha-communio",
-      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-communio.json"
+      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-communio.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-post-pascha-communio.json"
     },
     {
       "id": "proprium.dominica-iv-post-pascha-epistola",
@@ -2105,7 +2114,8 @@
     },
     {
       "id": "proprium.dominica-iv-post-pascha-evangelium",
-      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-iv-post-pascha-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-iv-post-pascha-evangelium.json"
     },
     {
       "id": "proprium.dominica-iv-post-pascha-introitus",
@@ -2242,7 +2252,8 @@
     },
     {
       "id": "proprium.dominica-post-ascensionem-collecta",
-      "path": "languages/en/texts/proprium/dominica-post-ascensionem-collecta.json"
+      "path": "languages/en/texts/proprium/dominica-post-ascensionem-collecta.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-post-ascensionem-collecta.json"
     },
     {
       "id": "proprium.dominica-post-ascensionem-communio",
@@ -2342,7 +2353,8 @@
     },
     {
       "id": "proprium.dominica-v-post-pascha-evangelium",
-      "path": "languages/en/texts/proprium/dominica-v-post-pascha-evangelium.json"
+      "path": "languages/en/texts/proprium/dominica-v-post-pascha-evangelium.json",
+      "evidence": "languages/en/bibliography/texts/proprium/dominica-v-post-pascha-evangelium.json"
     },
     {
       "id": "proprium.dominica-v-post-pascha-introitus",
@@ -3827,6 +3839,21 @@
     {
       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-tractus",
       "path": "languages/en/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-collecta",
+      "path": "languages/en/texts/proprium/sanctae-petronillae-collecta.json",
+      "title": "Collect for Saint Petronilla"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-postcommunio",
+      "path": "languages/en/texts/proprium/sanctae-petronillae-postcommunio.json",
+      "title": "Postcommunion for Saint Petronilla"
+    },
+    {
+      "id": "proprium.sanctae-petronillae-secreta",
+      "path": "languages/en/texts/proprium/sanctae-petronillae-secreta.json",
+      "title": "Secret for Saint Petronilla"
     },
     {
       "id": "proprium.sancti-andreae-apostoli-alleluia",

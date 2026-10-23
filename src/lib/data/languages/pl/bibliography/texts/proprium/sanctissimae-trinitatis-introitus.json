@@ -1,0 +1,28 @@
+{
+ "id": "proprium.sanctissimae-trinitatis-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 12",
+    "scan": "PDF s. 14",
+    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+   },
+   "entries": [
+    {
+     "id": "use.pl.proprium.sanctissimae-trinitatis-introitus.s03.skowronek1907",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.”"
+    }
+   ],
+   "verified_on": "2026-10-20"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

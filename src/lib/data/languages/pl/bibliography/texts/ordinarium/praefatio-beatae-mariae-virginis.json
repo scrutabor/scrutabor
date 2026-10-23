@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.praefatio-beatae-mariae-virginis",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 55",
+    "scan": "PDF s. 58",
+    "section": "Prefacja zwykła"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ordinarium.praefatio-beatae-mariae-virginis.s08.pamiatka1903-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna polska podstawa wspólnej końcowej prośby prefacji. Brzmienie zrewidowano według łaciny: wyraźnie oddano prośbę i „także”, zmieniono składnię oraz „wołali” na „wyznajemy”. Źródło nie obejmuje pozostałych części tej prefacji."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

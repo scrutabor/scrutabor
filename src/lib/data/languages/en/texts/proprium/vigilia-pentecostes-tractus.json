@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Vigil of Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Praise the Lord, all you nations; praise Him together, all you peoples. For His mercy has been confirmed upon us, and the truth of the Lord remains forever.","g":["Praise","the Lord","all","nations","and","praise together","Him","all","peoples","For",null,null,"upon","us","mercy","His","and","the truth","of the Lord","remains","for","ever"],"a":[{"s":10,"n":2,"a":0,"g":"has been confirmed"}]}
+    {"id":"s01","tr":"Praise the Lord, all you nations; praise Him together, all you peoples. For His mercy toward us has proved strong, and the truth of the Lord remains forever.","g":["Praise","the Lord","all","nations","and","praise together","Him","all","peoples","For",null,null,"toward","us",null,null,"and","the truth","of the Lord","remains","for","ever"],"a":[{"s":10,"n":2,"a":0,"g":"has proved strong"},{"s":14,"n":2,"a":0,"g":"His mercy"}],"ex":{"w011":"The verse gives God’s mercy toward us as a reason for praising Him."}}
   ]
 }

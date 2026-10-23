@@ -23,7 +23,8 @@ import {
 	loadTexts,
 	narrowLexicon,
 	textKeysFor,
-	type TextDocument
+	type TextDocument,
+	type TextEntry
 } from './corpus';
 import { LANGS, type Lang } from './i18n';
 import { conceptById } from './grammar';
@@ -38,6 +39,7 @@ import {
 	validateCommemorationPack
 } from './commemorationes';
 import { commemorationTitle } from './corpus-metadata';
+import { introductionBodies, introductionEventsFor, introductionOwners } from './introductiones';
 import type { VariantPack } from './variant-resource';
 import pkg from '../../package.json' with { type: 'json' };
 
@@ -98,6 +100,26 @@ export async function ordoData(lang: Lang, movement: string) {
 	const found = movementById(movement);
 	if (!found) return null;
 
+	const events = introductionEventsFor(found.entries.map((entry) => entry.id));
+	const owners: Record<string, TextEntry> = Object.keys(events).length
+		? await loadTexts(introductionOwners(), lang)
+		: {};
+	// The introductions belong to the spine and are the same on every day: read from their
+	// owner texts here, at prerender, and never fetched again with the day.
+	const introductions = Object.fromEntries(
+		Object.entries(events).map(([part, event]) => [
+			part,
+			introductionBodies(
+				event,
+				Object.fromEntries(
+					Object.entries(owners).map(([key, entry]) => [
+						key,
+						{ doc: entry.text, gloss: entry.gloss }
+					])
+				)
+			)
+		])
+	);
 	const loaded = await loadTexts(
 		found.entries.flatMap((entry) => (entry.text ? [entry.text] : [])),
 		lang
@@ -122,7 +144,8 @@ export async function ordoData(lang: Lang, movement: string) {
 		};
 		docs.push(entry.text);
 	}
-	return { movement, texts, lex: await narrowLexicon(docs, lang) };
+	for (const bodies of Object.values(introductions)) docs.push(...bodies.map(({ doc }) => doc));
+	return { movement, texts, introductions, lex: await narrowLexicon(docs, lang) };
 }
 
 export function conceptData(lang: Lang, concept: string) {

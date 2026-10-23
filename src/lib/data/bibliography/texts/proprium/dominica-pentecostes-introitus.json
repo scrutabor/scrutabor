@@ -14,7 +14,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Latin Mass data supply a derived digital comparison reading for this component. They are not an independent printed witness of the controlling 1962 edition. Exact source readings and declared framing remain separately attributable."
     }
    ],
    "verified_on": "2026-10-07"
@@ -22,11 +22,12 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 350",
     "scan": "leaf n431 / PDF p. 432",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n431/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n431/mode/1up",
+    "section": "Proper antiphon w001–w017 and Psalm w018–w031, followed by abbreviated Gloria Patri and Spiritus reprise cues; complete doxology w032–w051 and antiphon w052–w068 are separately expanded."
    },
    "entries": [
     {
@@ -34,10 +35,54 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The identified proper page prints the bounded body and abbreviated cues described in the locator, not the whole contiguous expanded selected text. Same-edition formula/rule dependencies and house reintegration are separately declared in the witness record."
     }
    ],
    "verified_on": "2026-09-12"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "First Sunday of Advent Introit; complete Gloria Patri through Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-pentecostes-introitus.doxology.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "The complete same-edition doxology supplies w032–w051 for the Pentecost Gloria Patri cue. This Introit occurrence prints semper, matching the selected comma. Its unrelated antiphon and speaker framing are not imported."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales 427–429; complete Introit reprise",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-pentecostes-introitus.reprise-rg427.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w052"
+     },
+     "claim": "RG 427 prescribes the complete w001–w017 antiphon repeated as w052–w068 after the doxology. The abbreviated Spiritus cue on p350 identifies this reprise, not another complete printing of it. RG 428 omission exceptions do not apply here; RG 429 does not add Alleluias already printed."
+    }
+   ],
+   "verified_on": "2026-10-21"
   }
  ],
  "witnesses": []

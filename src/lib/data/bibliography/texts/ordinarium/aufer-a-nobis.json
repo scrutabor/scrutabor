@@ -2,9 +2,47 @@
  "id": "ordinarium.aufer-a-nobis",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Ordo Missae, Incipit; spoken lines 55–56 and 58 within complete local context 53–61 at the pinned revision"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.aufer-a-nobis.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact retained pinned Latin Ordo supplies these 42 spoken words after exclusion of its literal v. markers and the two explicitly bound inline rubrics. This is a derived digital comparison, not independent transmission or ritual-performance evidence."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+   "digital_item": "item.extraordinaryform.handmissal-chant.2025-12-12.pdf",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 4",
+    "scan": "physical PDF p. 6, left half",
+    "section": "Orémus, Aufer a nobis and Orámus te, including their conclusions, on the left half of physical PDF page 6"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.aufer-a-nobis.handmissal-eo2025",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The left half of physical PDF page 6, printed page 4, of the hand missal revised 12/12/2025 prints the invitation Orémus, Aufer a nobis and Orámus te with their conclusions. The 42 Latin spoken words were checked manually against the page image. This is not an English wording basis or a claim of genealogical independence."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 220",
     "scan": "leaf n299 / PDF p. 300",
@@ -16,10 +54,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited approved 1962 printing contains the invitation Orémus, both prayers, their conclusions, and the accompanying rubrics. Its comma after Orémus differs from the selected full stop, as recorded in the apparatus."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-22"
   }
  ],
  "witnesses": []

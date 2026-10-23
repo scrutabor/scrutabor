@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Pentecost Sunday” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Confirm, O God, what You have wrought in us; from Your temple, which is in Jerusalem, kings will offer gifts to You, alleluia.","g":["Confirm","this","God","what",null,null,"in","us","from","temple","Your","which","is","in","Jerusalem","to You","will offer","kings","gifts","alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"You have wrought"}]}
+    {"id":"s01","tr":"Confirm, O God, what You have done in us; because of Your temple, which is in Jerusalem, kings will offer gifts to You, alleluia.","g":["Confirm","this","God","what",null,null,"in","us","because of",null,null,"which","is","in","Jerusalem","to You","will offer","kings","gifts","alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"You have done"},{"s":9,"n":2,"a":0,"g":"Your temple"}]}
   ]
 }

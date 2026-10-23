@@ -6,7 +6,25 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-09; resolved section [Postcommunio] with declared inherited references"
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum] (lines 95-97)"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.mass-conclusion.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo prayer file expands the body's $Per Dominum cue: its [Per Dominum] section supplies the 21-word conclusion and Amen, read without the line-initial r. and R. This is a derived digital comparison; those letters are textual framing, not performer or voice evidence."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/11-09.txt [Rank] (lines 1-2) and [Rule] (lines 4-5) declare ex C8 and the file has no [Postcommunio]; web/www/horas/Latin/Commune/C8.txt [Postcommunio] (lines 640-642) supplies the body and its $Per Dominum cue; web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum] (lines 95-97) supplies the conclusion and Amen"
    },
    "entries": [
     {
@@ -14,7 +32,87 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Common C8 file, which the Mass data inherit for this feast, supplies the 26-word body and its $Per Dominum cue; the Mass Ordo formula completes the reading. The witness keeps the literal source spelling, accents, capitalization and punctuation, and its six accidental differences from the selected text, two in the body and four in the conclusion, are recorded in the apparatus. This is a derived digital comparison, not an independent page image or ritual evidence."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "rubric_control",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/11-09.txt [Rank] (lines 1-2) and [Rule] (lines 4-5): ex C8; no [Postcommunio] section"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.feast-selection.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned feast file's Rank and Rule lines declare ex C8, and the file has no Postcommunio of its own, so the Mass data take this prayer from the Common C8 file. This is selection data for the derived witness, not a normative printed rubric or performer/voice evidence."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Feria III post dominicam I Passionis, Postcommunio; seventeen-word conclusion prefix",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.conclusion-prefix.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The accented printed example has seventeen words through Deus, ending with a full stop. It supports no comma after Christum, tuum: Qui and Sancti, Deus. It does not print the final four words per omnia saecula saeculorum or Amen at this locus."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.conclusion-formula.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The unaccented rubric prints the ordinary Father-directed conclusion: twenty-one Latin words followed by Amen. It supplies the lexical expansion of the proper page's Per Dominum cue; it prints tuum, qui rather than the selected accented prefix's tuum: Qui."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. (43)",
+    "scan": "leaf n870 / PDF p. 871",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n870/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited proper page prints the 26-word prayer body and its abbreviated Per Dóminum cue. The selected standalone long conclusion and response are supplied by the separately declared shared formula, variant-rule and printed-prefix sources."
     }
    ],
    "verified_on": "2026-08-31"
@@ -42,22 +140,23 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 43",
-    "scan": "leaf n870 / PDF p. 871",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n870/mode/1up"
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 b–e and 116",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.mr1962",
+     "id": "use.proprium.dedicatio-archibasilicae-sanctissimi-salvatoris-postcommunio.conclusion-variants.mr1962",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "These rules prescribe the different conclusions for references or addresses to the Son, mention of the Holy Spirit, and specially printed endings. This prayer's body addresses the Father without mentioning the Son or Holy Spirit, so the ordinary conclusion applies."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-22"
   }
  ],
  "witnesses": []

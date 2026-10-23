@@ -7,16 +7,13 @@ for (const language of ['pl', 'en']) {
 	test(`${language}: the Easter Gospel keeps the disciples' perfect of exeo`, async ({ page }) => {
 		await page.goto(`/app/${language}/formularium/${formulary}?w=${text}.w137`);
 		const panel = page.locator('aside');
-		let verb = panel;
+		const verb = panel;
 		if (language === 'en') {
-			// The delivered English glosses the phrase a Deo exísti as one unit; the verb keeps its card.
-			await expect(panel.locator('.form')).toHaveText('a Deo exísti');
-			await expect(panel.locator('.construction-title')).toHaveText(['a', 'Deo', 'exísti']);
-			await expect(panel.locator('.gloss')).toHaveText('You came forth from God');
-			verb = panel.locator('.construction-card').filter({
-				has: page.locator('.construction-title').filter({ hasText: /^exísti$/ })
-			});
-			await expect(verb).toHaveCount(1);
+			// The delivered English captions a and Deo on their own words now, so the verb is a
+			// single word with its own card, as in Polish, and no construction remains around it.
+			await expect(panel.locator('.form')).toHaveText('exísti');
+			await expect(panel.locator('.gloss')).toHaveText('You came forth');
+			await expect(panel.locator('.construction-card')).toHaveCount(0);
 		} else {
 			await expect(panel.locator('.form')).toHaveText('exísti');
 			await expect(panel.locator('.gloss')).toHaveText('wyszedłeś');
@@ -51,8 +48,12 @@ for (const language of ['pl', 'en']) {
 				: 'does not directly say that He will never intercede'
 		);
 		await page.goto(`/app/${language}/formularium/${formulary}?w=${text}.w039`);
+		// The delivered English explanation now says the figurative sense in its own words.
 		await expect(page.locator('aside .explanation')).toContainText(
-			language === 'pl' ? 'wypowiedź obrazową' : 'rather than simply familiar maxims'
+			language === 'pl' ? 'wypowiedź obrazową' : 'convey their meaning indirectly'
+		);
+		await expect(page.locator('aside .explanation')).toContainText(
+			language === 'pl' ? 'otwartemu mówieniu o Ojcu' : 'speaking openly about the Father'
 		);
 	});
 

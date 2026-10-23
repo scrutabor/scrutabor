@@ -2,7 +2,8 @@ import { expect, setTheme, test } from './fixtures';
 
 const notes = {
 	pl: 'Czasownik ułomny. Formy perfectum często wyrażają stan teraźniejszy, np. odi: „nienawidzę”. W późniejszej łacinie występują też formy czasu teraźniejszego, w tym imiesłów odientes. Znaczenie czasowe konkretnej formy wynika z jej kontekstu.',
-	en: 'A defective verb. Perfect forms often express a present state, as in odi, “I hate”. Later Latin also has present forms, including the participle odientes. The time reference of a particular form depends on its context.'
+	// The delivered English note sets the full stop inside the closing quotation mark.
+	en: 'A defective verb. Perfect forms often express a present state, as in odi, “I hate.” Later Latin also has present forms, including the participle odientes. The time reference of a particular form depends on its context.'
 } as const;
 
 const cases = [

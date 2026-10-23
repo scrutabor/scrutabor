@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.praefatio-apostolorum",
+ "source_groups": [
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "PDF p. 110",
+    "section": "The Common Preface"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.praefatio-apostolorum.s02.family1839-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English basis of the shared opening through aequum et salutare, revised into contemporary English. The Common Preface thanksgiving clause is not imported into this shorter Apostles opening, and the remaining Apostles Preface is outside this use."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

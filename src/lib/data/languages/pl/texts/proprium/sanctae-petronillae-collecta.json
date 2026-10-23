@@ -1,0 +1,10 @@
+{
+  "id":"proprium.sanctae-petronillae-collecta",
+  "language":"pl",
+  "about":"Kolekta na wspomnienie św. Petroneli. Radując się jej świętem, prosimy Boga, aby kształtował nas w duchu pobożnego oddania.",
+  "seg":[
+    {"id":"s01","tr":"Wysłuchaj nas, Boże, nasz Zbawicielu, abyśmy, jak radujemy się świętem błogosławionej Petroneli, Twojej dziewicy, tak też byli kształtowani w duchu pobożnego oddania.","g":["Wysłuchaj","nas","Boże",null,null,"abyśmy","jak",null,null,null,null,null,null,"radujemy się","tak",null,null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"nasz Zbawicielu"},{"s":7,"n":6,"a":5,"g":"świętem błogosławionej Petroneli, Twojej dziewicy"},{"s":15,"n":4,"a":2,"g":"byli kształtowani w duchu pobożnego oddania"}],"ex":{"w004":"„Salutaris” jest tu tytułem Boga: „Zbawiciel”. Przymiotnik występuje w użyciu rzeczownikowym, a całe wyrażenie jest bezpośrednim zwrotem do Boga.","w009":"„Beatae” to pochwalne określenie świętej. Nie oznacza tu rozróżnienia między beatyfikacją a kanonizacją.","w018":"„Erudiamur” wyraża prośbę o kształtowanie nas w pobożnym usposobieniu. Jest to forma bierna: nie opisuje nauczania innych ani działania już dokonanego.","w019":"„Piae devotionis affectu” nazywa wewnętrzną postawę pobożnego oddania. Wyrażenie łączy tę postawę z prośbą o kształtowanie nas. Nie wskazuje świętej jako osoby, która nas uczy."}},
+    {"id":"s02","tr":"Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"ex":{"w036":"„Deus” odnosi się tu do Chrystusa, Syna, który żyje i króluje z Ojcem w jedności Ducha Świętego. Jest mianownikiem, a nie kolejnym zwrotem do Boga Ojca."}},
+    {"id":"s03","tr":"Amen.","g":["Amen"]}
+  ]
+}

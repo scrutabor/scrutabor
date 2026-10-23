@@ -11,7 +11,9 @@ for (const language of ['pl', 'en'] as const) {
 		await page.goto(
 			`/app/${language}/ordo/canon?dies=2026-04-02&w=hanc-igitur-in-cena-domini.w043`
 		);
-		await expect(page.locator('aside .construction-card')).toHaveCount(12);
+		// English keeps the whole petition as one construction; Polish now captions its two
+		// members apart (wyrwanie… and zaliczenie… nakazał), so w043 opens the first of five.
+		await expect(page.locator('aside .construction-card')).toHaveCount(language === 'pl' ? 5 : 12);
 		for (const slug of [
 			'communicantes-in-cena-domini',
 			'hanc-igitur-in-cena-domini',

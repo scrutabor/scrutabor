@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-iv-post-pascha-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "New Testament pp. 125–126",
+    "scan": "PDF pp. 1228–1229",
+    "section": "John 16:5b–14"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-post-pascha-evangelium.s01.douay1914-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of John 16:5b–14, revised against the liturgical Latin for contemporary syntax and address, including advantage, exposing the world’s error concerning sin, justice and judgment, and speaking on one’s own authority. The Mass introductory formula follows the liturgical Latin and is not attributed to the Bible page."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

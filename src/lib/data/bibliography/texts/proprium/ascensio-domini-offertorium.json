@@ -20,6 +20,46 @@
    "verified_on": "2026-10-07"
   },
   {
+   "edition": "edition.liber-usualis.1961",
+   "digital_item": "item.liber-usualis.1961.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 849",
+    "scan": "PDF p. 1037"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.ascensio-domini-offertorium.lu1961",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The chant book prints the complete Offertory of the Ascension without et before Dóminus. The directly viewed page forms this declared complete comparison; the edition follows the Missal."
+    }
+   ],
+   "verified_on": "2026-10-20"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 347",
+    "scan": "leaf n428 / PDF p. 429",
+    "section": "Dominica post Ascensionem Domini, Antiphona ad Offertorium, Ps. 46, 6",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n428/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.ascensio-domini-offertorium.sunday-after-ascension-reprint.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Mass of the Sunday after the Ascension prints this Offertory in full, identical in letters, accents and punctuation to page 346 and the selected text."
+    }
+   ],
+   "verified_on": "2026-10-20"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",

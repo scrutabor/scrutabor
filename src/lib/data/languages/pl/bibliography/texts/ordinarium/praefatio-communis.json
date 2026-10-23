@@ -6,21 +6,21 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 55",
+    "printed": "s. 55",
     "scan": "PDF s. 58",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "section": "Prefacja zwykła"
    },
    "entries": [
     {
-     "id": "use.pl.064b8b0eaee700ff322c",
+     "id": "use.pl.ordinarium.praefatio-communis.s06.pamiatka1903-revised",
      "address": {
       "kind": "segment",
-      "segment": "s03"
+      "segment": "s06"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie święty, Ojcze wszechmogący, wieczny Boże: przez Chrystusa Pana naszego.”"
+     "claim": "Historyczna polska podstawa wspólnej końcowej prośby prefacji. Brzmienie zrewidowano według łaciny: wyraźnie oddano prośbę i „także”, zmieniono składnię oraz „wołali” na „wyznajemy”. Źródło nie obejmuje pozostałych części tej prefacji."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-21"
   }
  ],
  "witnesses": [],

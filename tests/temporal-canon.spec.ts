@@ -9,8 +9,16 @@ const texts = [
 	{ slug: 'communicantes-in-nativitate-domini-in-nocte', verses: 10, words: 95, pl: 76, en: 71 },
 	{ slug: 'communicantes-in-nocte-paschae', verses: 10, words: 92, pl: 71, en: 69 },
 	{ slug: 'communicantes-in-pentecoste', verses: 9, words: 92, pl: 70, en: 66 },
-	{ slug: 'hanc-igitur-paschale', verses: 5, words: 59, pl: 35, en: 27 }
+	// Its s03 and s04 are now retired into s02: one verse for the whole first sentence, the same
+	// 59 words, and captions recounted from the delivered groups.
+	{ slug: 'hanc-igitur-paschale', verses: 3, words: 59, pl: 43, en: 35 }
 ];
+
+test('@reader the paschal Hanc igitur keeps its first sentence in one verse', async ({ page }) => {
+	await page.goto('/app/pl/ordinarium/hanc-igitur-paschale');
+	await expect(page.locator('main .verse[id="s02"] .base')).toHaveCount(35);
+	await expect(page.locator('main [id="s03"], main [id="s04"]')).toHaveCount(0);
+});
 
 for (const language of ['pl', 'en'] as const) {
 	for (const item of texts) {

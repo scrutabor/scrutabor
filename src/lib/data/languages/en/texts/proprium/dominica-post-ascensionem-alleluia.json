@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-post-ascensionem-alleluia",
   "language":"en",
-  "about":"The alleluia of the formulary “Sunday after Ascension” in the 1962 Roman Missal.",
+  "about":"The alleluia of the formulary “Sunday after the Ascension” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The Lord has reigned over all the nations; God sits upon His holy throne. Alleluia. I will not leave you orphans; I go, and I come to you, and your heart will rejoice. Alleluia.","g":["Alleluia","alleluia","has reigned","the Lord","over","all","the nations","God","sits","upon","throne","holy","His","Alleluia",null,null,null,"orphans","I go","and","I come","to","you","and","will rejoice","heart","your","Alleluia"],"a":[{"s":14,"n":3,"a":2,"g":"I will not leave you"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. The Lord has reigned over all the nations; God sits upon His holy throne. Alleluia. I will not leave you orphans; I go, and I come to you, and your heart will rejoice. Alleluia.","g":["Alleluia","alleluia",null,null,"over","all","the nations","God","sits","upon",null,null,null,"Alleluia",null,null,null,"orphans","I go","and","I come","to","you","and",null,null,null,"Alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"The Lord has reigned"},{"s":10,"n":3,"a":0,"g":"His holy throne"},{"s":14,"n":3,"a":2,"g":"I will not leave you"},{"s":24,"n":3,"a":0,"g":"your heart will rejoice"}]}
   ]
 }

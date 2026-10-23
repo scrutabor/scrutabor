@@ -29,7 +29,16 @@ for (const language of ['pl', 'en'] as const) {
 	}
 }
 
-const constructions = [
+// A row names the language it pins; one realization may be shared where both languages group alike.
+const constructions: {
+	slug: string;
+	first: string;
+	last: string;
+	anchor: string;
+	count: number;
+	pl?: string;
+	en?: string;
+}[] = [
 	{
 		slug: 'communicantes-in-cena-domini',
 		first: 'w013',
@@ -40,12 +49,13 @@ const constructions = [
 		en: 'was handed over'
 	},
 	{
+		// The divine reflexive is lowercase in the working Polish (owner, 2026-10-21).
 		slug: 'hanc-igitur-in-cena-domini',
 		first: 'w025',
 		last: 'w030',
 		anchor: 'w029',
 		count: 6,
-		pl: 'tajemnice Swojego Ciała i Krwi do sprawowania',
+		pl: 'tajemnice swojego Ciała i Krwi do sprawowania',
 		en: 'the mysteries of His Body and Blood to be celebrated'
 	},
 	{
@@ -54,8 +64,24 @@ const constructions = [
 		last: 'w054',
 		anchor: 'w052',
 		count: 12,
-		pl: 'nakazał, byśmy zostali wyrwani z wiecznego potępienia i zaliczeni do trzody Twoich wybranych',
 		en: 'command that we be delivered from eternal condemnation and counted in the flock of Your elect'
+	},
+	// The delivered Polish captions the petition's two members apart, joined by et (w048).
+	{
+		slug: 'hanc-igitur-in-cena-domini',
+		first: 'w043',
+		last: 'w047',
+		anchor: 'w047',
+		count: 5,
+		pl: 'wyrwanie nas z wiecznego potępienia'
+	},
+	{
+		slug: 'hanc-igitur-in-cena-domini',
+		first: 'w049',
+		last: 'w054',
+		anchor: 'w052',
+		count: 6,
+		pl: 'zaliczenie do trzody Twoich wybranych nakazał'
 	},
 	{
 		slug: 'qui-pridie-in-cena-domini',
@@ -70,6 +96,8 @@ const constructions = [
 
 for (const language of ['pl', 'en'] as const) {
 	for (const item of constructions) {
+		const gloss = item[language];
+		if (!gloss) continue;
 		for (const member of [item.first, item.last]) {
 			test(`@reader ${language}: ${item.slug} shared construction from ${member}`, async ({
 				page
@@ -78,7 +106,7 @@ for (const language of ['pl', 'en'] as const) {
 				await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
 				await page.goto(`/app/${language}/ordinarium/${item.slug}?w=${member}`);
 				const panel = page.locator('aside.panel[role="dialog"]');
-				await expect(panel.locator('.context-layer > .gloss')).toHaveText(item[language]);
+				await expect(panel.locator('.context-layer > .gloss')).toHaveText(gloss);
 				await expect(panel.locator('.construction-card')).toHaveCount(item.count);
 				await expect
 					.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))
@@ -86,7 +114,7 @@ for (const language of ['pl', 'en'] as const) {
 				await page.keyboard.press('Escape');
 				await expect(panel).toHaveCount(0);
 				await setHelp(page, 1);
-				await expect(page.locator(`button[id="${item.anchor}"] rt`)).toHaveText(item[language]);
+				await expect(page.locator(`button[id="${item.anchor}"] rt`)).toHaveText(gloss);
 			});
 		}
 	}
@@ -105,3 +133,12 @@ for (const language of ['pl', 'en'] as const) {
 		);
 	});
 }
+
+test('@reader pl: the conjunction stands between the two Polish members of the petition', async ({
+	page
+}) => {
+	await page.goto('/app/pl/ordinarium/hanc-igitur-in-cena-domini');
+	await setHelp(page, 1);
+	await expect(page.locator('button[id="w048"] rt')).toHaveText('i');
+	await expect(page.locator('main')).not.toContainText('nakazał, byśmy zostali wyrwani');
+});

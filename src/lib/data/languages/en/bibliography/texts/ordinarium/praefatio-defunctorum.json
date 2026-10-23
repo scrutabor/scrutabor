@@ -1,0 +1,28 @@
+{
+ "id": "ordinarium.praefatio-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 79",
+    "scan": "PDF p. 110",
+    "section": "The Common Preface"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.praefatio-defunctorum.s02.family1839-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English basis of the shared opening through gratias agere, revised into contemporary vocabulary, address and word order while preserving the four predicates and always and everywhere. Other parts of this Preface are outside this use."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

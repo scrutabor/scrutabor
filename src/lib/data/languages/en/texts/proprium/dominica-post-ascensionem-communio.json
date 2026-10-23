@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-post-ascensionem-communio",
   "language":"en",
-  "about":"The communio of the formulary “Sunday after Ascension” in the 1962 Roman Missal.",
+  "about":"The communio of the formulary “Sunday after the Ascension” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Father, while I was with them, I kept those whom You gave Me, alleluia. But now I come to You. I do not pray that You take them out of the world, but that You keep them from evil, alleluia, alleluia.","g":["Father","when","I was","with","them","I","kept","those","whom","You gave","Me","alleluia","now","but","to","You","I come",null,null,"that You","take","them","out of","the world","but","that You","keep","them","from","evil","alleluia","alleluia"],"a":[{"s":17,"n":2,"a":1,"g":"I do not pray"}]}
+    {"id":"s01","tr":"Father, while I was with them, I kept those whom You gave Me, alleluia. But now I come to You. I do not pray that You take them out of the world, but that You keep them from evil, alleluia, alleluia.","g":["Father","when","I was","with","them","I","kept","those","whom","You gave","Me","alleluia",null,null,"to","You","I come",null,null,"that You","take","them","out of","the world","but","that You","keep","them","from","evil","alleluia","alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"But now"},{"s":17,"n":2,"a":1,"g":"I do not pray"}],"nt":{"w030":"After the preposition “a,” the noun “malum,” evil, and “malus” used as a noun, the Evil One, share the ablative form “malo.” A neuter noun analysis represents “evil.” The form alone neither excludes the personal sense nor settles the interpretation of this Gospel passage."}}
   ]
 }

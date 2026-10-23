@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Offertorium formularza „Wniebowzięcie Najświętszej Maryi Panny” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Położę nieprzyjaźń między tobą, a między Niewiastą i między potomstwem twoim, a potomstwem jej.","g":["nieprzyjaźń","położę","między","tobą","i","Niewiastą","i","potomstwem","twoim","i","potomstwem","jej"]}
+    {"id":"s01","tr":"Wprowadzę nieprzyjaźń między tobą a Niewiastą i między twoim potomstwem a jej Potomstwem.","g":["Nieprzyjaźń","wprowadzę",null,null,"a","Niewiastą","i",null,null,"a",null,null],"a":[{"s":2,"n":2,"a":1,"g":"między tobą"},{"s":7,"n":2,"a":0,"g":"twoim potomstwem"},{"s":10,"n":2,"a":0,"g":"jej Potomstwem"}],"ex":{"w012":"Zaimek „tuum” odnosi się do węża, a „illíus” do Niewiasty. „Semen” może oznaczać potomstwo zbiorowo. W kontekście tego święta Niewiasta i jej Potomstwo wskazują też na Maryję i Chrystusa."}}
   ]
 }

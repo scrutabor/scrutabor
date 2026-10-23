@@ -15,11 +15,20 @@ import { resolveCompositeAddress } from './reading-address';
 describe('source-owned Canon table', () => {
 	it('reads every real date/Mass pair, not a calendar reimplementation', () => {
 		const lookup = createCanonLookup(table);
-		expect(table.pairs).toHaveLength(7619);
+		expect(table.pairs).toHaveLength(7610);
 		for (const [date, mass, profile] of table.pairs)
 			expect(lookup.resolve(String(date), table.masses[Number(mass)])).toEqual(
 				table.profiles[Number(profile)]
 			);
+	});
+	it('follows the repaired calendar: St Matthias on 25 February of a leap year, no Friday Sunday', () => {
+		const lookup = createCanonLookup(table);
+		expect(lookup.resolve('2028-02-25', 'sancti-matthiae-apostoli').id).toBe('ordinary');
+		expect(() => lookup.resolve('2028-02-24', 'sancti-matthiae-apostoli')).toThrow();
+		expect(() => lookup.resolve('2033-12-30', 'dominica-infra-octavam-nativitatis')).toThrow();
+		expect(lookup.resolve('2029-12-30', 'dominica-infra-octavam-nativitatis').id).toBe(
+			'nativitas-in-die'
+		);
 	});
 	it.each([
 		['2026-04-02', 'feria-v-in-cena-domini', 'in-cena-domini'],

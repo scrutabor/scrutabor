@@ -1,0 +1,10 @@
+{
+  "id":"proprium.sanctae-petronillae-collecta",
+  "language":"en",
+  "about":"Collect for the commemoration of Saint Petronilla. Rejoicing in her feast, we ask God to form us in a spirit of reverent devotion.",
+  "seg":[
+    {"id":"s01","tr":"Hear us, God our Savior, so that, as we rejoice in the feast of blessed Petronilla, Your virgin, we may likewise be formed in a spirit of reverent devotion.","g":[null,null,"God",null,null,"so that","as","in",null,null,null,null,null,"we rejoice","so",null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Hear us"},{"s":3,"n":2,"a":0,"g":"our Savior"},{"s":8,"n":5,"a":4,"g":"the feast of blessed Petronilla, Your virgin"},{"s":15,"n":4,"a":2,"g":"we may be formed in a spirit of reverent devotion"}],"ex":{"w004":"God is addressed as our Savior. Salutaris is used as a title here, not as the neuter word for salvation.","w009":"The prayer calls Saint Petronilla blessed. This is an epithet, not a separate claim about her beatification status.","w018":"The prayer asks that we be formed, rather than saying that we are already formed. The rejoicing, by contrast, is stated as a present fact.","w019":"Affectu names an inward disposition of reverent devotion. The ablative links this disposition to the formation, with a possible nuance of manner or means."}},
+    {"id":"s02","tr":"Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":1,"n":2,"a":0,"g":"our Lord"},{"s":3,"n":2,"a":0,"g":"Jesus Christ"},{"s":5,"n":2,"a":0,"g":"Your Son"},{"s":7,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":12,"n":2,"a":1,"g":"in the unity"},{"s":14,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":17,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w036":"God describes Christ, the Son, not the Father being addressed. The Son lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s03","tr":"Amen.","g":["Amen"]}
+  ]
+}

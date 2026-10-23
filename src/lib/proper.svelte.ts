@@ -39,24 +39,29 @@ import {
 	type DismissalPack
 } from '$lib/dismissal';
 import {
+	COMMEMORATION_SLOTS,
 	commemorationLookup,
 	selectedCommemorations,
+	SITUATIONS,
 	validateCommemorationPack,
-	type ActiveCommemoration,
+	type CommemorationDecision,
 	type CommemorationEntry,
 	type CommemorationPack,
-	type SelectedCommemorationBody
+	type CommemorationPlan,
+	type SelectedCommemorationBody,
+	type Situation
 } from '$lib/commemorationes';
 import type { VariantPack } from '$lib/variant-resource';
 import { object, validateLocalizedBody } from '$lib/localized-body';
 import { artifactRequestPath, componentApplies, dayById, SLOT_OF } from '$lib/proprium';
 import { dayOn, isoDate } from '$lib/kalendarium';
-import { resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
+import { massesOn, resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
+import { massForm } from '$lib/mass-form.svelte';
 import type { Lang } from '$lib/i18n';
 import type { ComponentCondition } from '$lib/corpus-metadata';
 import type { TextBibliographyEvidence } from '$lib/bibliography';
 import { properOccurrences } from '$lib/proper-occurrences';
-import type { Lexicon, Segment, TextDocument } from '$lib/corpus';
+import type { Lexicon, MassForm, Segment, TextDocument } from '$lib/corpus';
 
 export interface ProperPartPayload {
 	key: string;
@@ -67,9 +72,51 @@ export interface ProperPartPayload {
 	commemoration?: string;
 	/** A Secret followed by a commemoration's Secret: its ending is said quietly (RG 480–481). */
 	nonfinal?: boolean;
+	/** The sung situation this occurrence belongs to, where the two sung decisions differ and
+	 * both are shown as described alternatives; absent where the sequence is determinate. */
+	situation?: Situation;
 	doc: unknown;
 	gloss: unknown;
 	bibliography: TextBibliographyEvidence;
+}
+
+/** One situation's complete sequence of the Mass, with what it owes but cannot yet show. */
+interface Assembly {
+	parts: ProperPartPayload[];
+	unavailable: CommemorationEntry[];
+	/** Which commemorations it makes and lacks, to tell two sung decisions apart. */
+	plan: string;
+}
+
+/** A sequence the selected form of Mass makes of the commemoration slots. */
+export interface CommemorationVariant {
+	situation: Situation;
+	/** The two sung decisions differ and the reader's low/sung choice cannot settle which
+	 * applies: this sequence is one of two described alternatives, never a guessed default. */
+	described: boolean;
+	/** Required here and not yet in this edition (decision omitted-required-de-tempore-unavailable). */
+	unavailable: CommemorationEntry[];
+}
+
+const COMMEMORATED_SLOTS: readonly string[] = COMMEMORATION_SLOTS;
+
+function variantsOf(
+	current: Record<Situation, Assembly> | null,
+	form: MassForm
+): CommemorationVariant[] {
+	if (!current) return [];
+	if (form === 'lecta')
+		return [{ situation: 'lecta', described: false, unavailable: current.lecta.unavailable }];
+	const conventual = current['cantu-conventualis'];
+	const other = current['cantu-non-conventualis'];
+	if (conventual.plan === other.plan)
+		return [
+			{ situation: 'cantu-conventualis', described: false, unavailable: conventual.unavailable }
+		];
+	return [
+		{ situation: 'cantu-conventualis', described: true, unavailable: conventual.unavailable },
+		{ situation: 'cantu-non-conventualis', described: true, unavailable: other.unavailable }
+	];
 }
 
 export interface ProperPayload {
@@ -148,7 +195,9 @@ let failed = $state(false);
 let unwritten = $state(false);
 let canonProfile = $state<CanonProfile | null>(null);
 let dismissalProfile = $state<DismissalProfile | null>(null);
-let commemorations = $state<ActiveCommemoration[]>([]);
+let decisions = $state<CommemorationDecision[]>([]);
+// Replaced whole, never edited in place: the three sequences need no deep proxy.
+let assemblies = $state.raw<Record<Situation, Assembly> | null>(null);
 
 // Choices supersede one another. Two picks can be in flight at once — the
 // second is the reader correcting themselves — and the responses come back in
@@ -224,11 +273,10 @@ function quietConclusion(doc: unknown): unknown {
 	return { ...text, segments };
 }
 
-function withNonfinalSecret(
-	parts: ProperPartPayload[],
-	additions: SelectedCommemorationBody[]
-): ProperPartPayload[] {
-	if (!additions.some((body) => body.slot === 'secreta')) return parts;
+/** The Mass's own Secret is not the last when a commemoration's Secret follows it, whether
+ * this edition carries that Secret or the plan owes one it cannot yet supply. */
+function withNonfinalSecret(parts: ProperPartPayload[], followed: boolean): ProperPartPayload[] {
+	if (!followed) return parts;
 	return parts.map((part) =>
 		part.slot === 'secreta' && !part.commemoration
 			? { ...part, nonfinal: true, doc: quietConclusion(part.doc) }
@@ -243,17 +291,11 @@ function assembled(
 	pack: CanonPack | null,
 	dismissal: DismissalProfile,
 	dismissalPack: DismissalPack | null,
-	active: ActiveCommemoration[] = [],
+	plans: Record<Situation, CommemorationPlan>,
 	commemorationPack: CommemorationPack | null = null
-): ProperPayload {
+): { payload: ProperPayload; assemblies: Record<Situation, Assembly> } {
 	const filtered = forDate(source, selectedDate);
-	const additions = selectedCommemorations(active, commemorationPack);
-	const principal = withNonfinalSecret(filtered.parts, additions);
-	const parts = [
-		...additions.map(({ commemoration, ...body }) => ({ ...body, commemoration })),
-		...selectedCanon(profile, pack),
-		...selectedDismissal(dismissal, dismissalPack)
-	];
+	const fixed = [...selectedCanon(profile, pack), ...selectedDismissal(dismissal, dismissalPack)];
 	let lex = filtered.lex;
 	for (const extra of [pack, dismissalPack, commemorationPack]) {
 		if (extra) {
@@ -263,11 +305,60 @@ function assembled(
 			};
 		}
 	}
+	// Each situation is assembled whole from the unmodified bodies: a change of the reader's
+	// low/sung choice selects another sequence and never carries the previous one's prayers.
+	const situations = Object.fromEntries(
+		SITUATIONS.map((situation) => {
+			const { admitted, unavailable } = plans[situation];
+			const additions: SelectedCommemorationBody[] = selectedCommemorations(
+				admitted,
+				commemorationPack
+			);
+			const followed = additions.some((body) => body.slot === 'secreta') || unavailable.length > 0;
+			return [
+				situation,
+				{
+					parts: [
+						...withNonfinalSecret(filtered.parts, followed),
+						...additions.map(({ commemoration, ...body }) => ({ ...body, commemoration })),
+						...fixed
+					],
+					unavailable,
+					plan: JSON.stringify([
+						admitted.map(({ commemoration }) => commemoration.id),
+						unavailable.map(({ id }) => id)
+					])
+				}
+			];
+		})
+	) as Record<Situation, Assembly>;
 	return {
-		...filtered,
-		parts: [...principal, ...parts],
-		lex
+		payload: { ...filtered, parts: [...filtered.parts, ...fixed], lex },
+		assemblies: situations
 	};
+}
+
+/** The occurrences of one slot in the selected form. A described pair of sung sequences is
+ * shown whole, one after the other: the first keeps the plain occurrence addresses and the
+ * second names its situation, so repeated words never share a DOM or citation address. */
+function occurrencesFor(slot: string, form: MassForm) {
+	if (!payload) return [];
+	const variants = variantsOf(assemblies, form);
+	if (!assemblies || !variants.length)
+		return properOccurrences(payload.parts).filter((p) => p.slot === slot);
+	if (!variants[0].described || !COMMEMORATED_SLOTS.includes(slot))
+		return properOccurrences(assemblies[variants[0].situation].parts).filter(
+			(p) => p.slot === slot
+		);
+	return variants.flatMap(({ situation }, index) =>
+		properOccurrences(assemblies![situation].parts)
+			.filter((p) => p.slot === slot)
+			.map((p) =>
+				index === 0
+					? { ...p, situation }
+					: { ...p, situation, slug: `${p.slug}~${situation}`, anchor: `${p.anchor}~${situation}` }
+			)
+	);
 }
 
 export const proper = {
@@ -300,13 +391,22 @@ export const proper = {
 	get paschalDismissal(): boolean {
 		return dismissalProfile?.id === 'paschale';
 	},
-	/** The commemorations the corpus pairs with the chosen date and Mass. */
-	get commemorations(): ActiveCommemoration[] {
-		return commemorations;
+	/** Every decision the corpus publishes for the chosen date and Mass, in all situations. */
+	get decisions(): CommemorationDecision[] {
+		return decisions;
 	},
-	/** Occurrences acknowledged on the chosen date even when no Mass is represented. */
+	/** The sequences the selected form makes of the commemoration slots: one, or the two
+	 * described sung alternatives. Empty until the chosen Mass is assembled. */
+	get commemorationVariants(): CommemorationVariant[] {
+		return payload ? variantsOf(assemblies, massForm.value) : [];
+	},
+	/** Occurrences to acknowledge on a date that has no represented Mass. Only a privileged
+	 * commemoration is made in every Mass of its date, so only it may be announced without a
+	 * pair; an ordinary one may be impeded there, and a represented Mass, even when the
+	 * Ordinary alone was chosen, is not missing coverage. */
 	get occurrences(): CommemorationEntry[] {
-		return date && commemorationLookup ? commemorationLookup.occurrencesOn(date) : [];
+		if (!date || !commemorationLookup || massesOn(date).length) return [];
+		return commemorationLookup.occurrencesOn(date).filter(({ rank }) => rank === 'privileged');
 	},
 
 	/** An unresolved initial choice is not permission to render an Ordinary formula. */
@@ -328,20 +428,21 @@ export const proper = {
 			) ?? false
 		);
 	},
-	/** Loaded texts for one Ordo slot, in rite order. */
+	/** Loaded texts for one Ordo slot, in rite order, for the selected form of Mass. */
 	forSlot(slot: string) {
-		return properOccurrences(payload?.parts ?? []).filter((p) => p.slot === slot);
+		return occurrencesFor(slot, massForm.value);
 	},
 	clear(): void {
 		current += 1;
 		day = null;
 		date = null;
 		payload = null;
+		assemblies = null;
 		failed = false;
 		unwritten = false;
 		canonProfile = null;
 		dismissalProfile = null;
-		commemorations = [];
+		decisions = [];
 		loading = false;
 		stopTiming();
 	}
@@ -358,7 +459,8 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	const selected = resolveOrdoChoice(choice.date, choice.mass ?? 'none');
 	canonProfile = null;
 	dismissalProfile = null;
-	commemorations = [];
+	decisions = [];
+	assemblies = null;
 	date = selected?.date ?? null;
 	// Superseding a flight also takes over its notices: the superseded
 	// finally below declines to touch shared state, so it is settled here.
@@ -388,33 +490,44 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 			throw new Error('dated text resource unavailable');
 		const profile = canonLookup.resolve(selected.date, next);
 		const dismissal = dismissalLookup.resolve(selected.date, next);
-		const active = commemorationLookup.resolve(selected.date, next);
+		const found = commemorationLookup.resolve(selected.date, next);
+		const plans = Object.fromEntries(
+			SITUATIONS.map((situation) => [
+				situation,
+				commemorationLookup!.plan(selected.date, next, situation)
+			])
+		) as Record<Situation, CommemorationPlan>;
 		canonProfile = profile;
 		dismissalProfile = dismissal;
-		commemorations = active;
+		decisions = found;
 		const needsPack = CANON_ROLES.some((role) => profile.texts[role] !== ordinaryCanon(role));
 		const [body, pack, dismissalPack, commemorationPack] = await Promise.all([
 			held[key] ?? load(next, lang),
 			needsPack ? loadCanon(lang) : null,
 			dismissal.text !== ORDINARY_DISMISSAL ? loadDismissal(lang) : null,
-			active.length ? loadCommemoration(lang) : null
+			SITUATIONS.some((situation) => plans[situation].admitted.length)
+				? loadCommemoration(lang)
+				: null
 		]);
 		held[key] = body;
 		if (mine !== current) return;
-		payload = assembled(
+		const result = assembled(
 			body,
 			selected.date,
 			profile,
 			pack,
 			dismissal,
 			dismissalPack,
-			active,
+			plans,
 			commemorationPack
 		);
+		assemblies = result.assemblies;
+		payload = result.payload;
 	} catch {
 		if (mine !== current) return;
 		failed = true;
 		payload = null;
+		assemblies = null;
 	} finally {
 		if (mine === current) {
 			loading = false;

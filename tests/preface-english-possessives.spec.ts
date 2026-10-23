@@ -11,7 +11,8 @@ const subjects: Record<string, [string, number, string][]> = {
 	ascensionis: [
 		['w024', 2, 'our Lord'],
 		['w028', 2, 'His resurrection'],
-		['w031', 3, 'to all His disciples'],
+		// ómnibus now carries its own caption ("to all"); the possessive keeps its noun.
+		['w031', 2, 'His disciples'],
 		['w065', 2, 'of Your glory']
 	],
 	'beatae-mariae-virginis-in-annuntiatione': [
@@ -109,6 +110,15 @@ const subjects: Record<string, [string, number, string][]> = {
 		['w061', 2, 'of Your glory']
 	]
 };
+
+test('English Ascension preface captions ómnibus apart from His disciples', async ({ page }) => {
+	await page.goto('/app/en/ordinarium/praefatio-ascensionis');
+	await setHelp(page, 1);
+	await expect(page.locator('button#w030 rt')).toHaveText('to all');
+	await expect(
+		page.locator('.token-group').filter({ has: page.locator('button#w030') })
+	).toHaveCount(0);
+});
 
 for (const [subject, groups] of Object.entries(subjects)) {
 	test(`English ${subject} keeps possessives with their full constituents`, async ({ page }) => {

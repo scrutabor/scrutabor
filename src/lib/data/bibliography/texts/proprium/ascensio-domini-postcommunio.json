@@ -14,10 +14,72 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned two-archive plan supplies the sixteen-word body from Tempora/Pasc5-4 [Postcommunio] and the ordinary conclusion and response from Ordo/Prayers [Per Dominum]. It is a derived digital comparison, not independently established transmission or ritual-performance evidence."
     }
    ],
    "verified_on": "2026-10-07"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Feria III post dominicam I Passionis, Postcommunio; seventeen-word conclusion prefix",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.ascensio-domini-postcommunio.conclusion-prefix.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The accented printed example has seventeen words through Deus, ending with a full stop. It supports no comma after Christum, tuum: Qui and Sancti, Deus. It does not print the final four words per omnia saecula saeculorum or Amen at this locus."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "Rubricae generales 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.ascensio-domini-postcommunio.conclusion-formula.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The unaccented rubric prints the ordinary Father-directed conclusion: twenty-one Latin words followed by Amen. It supplies the lexical expansion of the proper page's Per Dominum cue; it prints tuum, qui rather than the selected accented prefix's tuum: Qui."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 346",
+    "scan": "leaf n427 / PDF p. 428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n427/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.ascensio-domini-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited proper page prints the 16-word prayer body and its abbreviated Per Dóminum cue. The selected standalone long conclusion and response are supplied by the separately declared shared formula, variant-rule and printed-prefix sources."
+    }
+   ],
+   "verified_on": "2026-09-12"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -42,22 +104,23 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 346",
-    "scan": "leaf n427 / PDF p. 428",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n427/mode/1up"
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 b–e and 116",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.ascensio-domini-postcommunio.mr1962",
+     "id": "use.proprium.ascensio-domini-postcommunio.conclusion-variants.mr1962",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "These rules prescribe the different conclusions for references or addresses to the Son, mention of the Holy Spirit, and specially printed endings. This prayer's body addresses the Father without mentioning the Son or Holy Spirit, so the ordinary conclusion applies."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-10-22"
   }
  ],
  "witnesses": []

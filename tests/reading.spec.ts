@@ -1233,11 +1233,12 @@ test('closing the panel leaves the page where it is', async ({ page }) => {
 });
 
 test('the part control appears only where it changes something', async ({ page }) => {
-	// A Mass dialogue needs the reader's role, but its wording and delivery
-	// need not differ between sung and low Mass.
+	// A Mass dialogue needs the reader's role, and since corpus bf312db5 the Preface
+	// dialogue's delivery differs between sung and low Mass (the celebrant sings the
+	// three invitations), so the form control appears there too.
 	await page.goto('/app/en/ordinarium/praefatio-dialogus');
 	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
-	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
+	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(1);
 
 	// One missal speaker, but a real participation change: at Low Mass the
 	// faithful may say the ministers' Confiteor with the server (DMS 31 b).

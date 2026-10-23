@@ -13,6 +13,7 @@
 	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
 	import { textFlowFor } from '$lib/reading-flow';
+	import type { FlowRow } from '$lib/text-flow';
 	import { M, type Lang } from '$lib/i18n';
 	import { openPage } from '$lib/page-navigation';
 	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
@@ -44,6 +45,11 @@
 	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
 	import { indexOccurrenceWords } from '$lib/proper-occurrences';
 	import { DAY_PARAM, MASS_PARAM, resolveOrdoChoice, writeOrdoChoice } from '$lib/ordo-choice';
+	import { COMMEMORATION_SLOTS, type Situation } from '$lib/commemorationes';
+
+	/** The commemoration body a variant head labels: its situation and whether its Secret ends aloud. */
+	type VariantBody = { situation?: Situation; nonfinal?: boolean };
+	import type { IntroductionBody } from '$lib/introductiones';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -53,6 +59,13 @@
 			{ doc: TextDocument; gloss: GlossDocument; bibliography: TextBibliographyEvidence }
 		>
 	);
+
+	// The greeting, its answer and Orémus that open a part, the same on every day: read on the
+	// server from their owner texts, independent of whatever the day supplies for that part.
+	const introductions = $derived(
+		(data.introductions ?? {}) as unknown as Record<string, IntroductionBody[]>
+	);
+	const introductionsFor = (e: OrdoEntry) => introductions[e.id] ?? [];
 
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -125,6 +138,7 @@
 				condition: part.condition,
 				commemoration: part.commemoration,
 				nonfinal: part.nonfinal,
+				situation: part.situation,
 				doc: part.doc as TextDocument,
 				gloss: part.gloss as GlossDocument,
 				bibliography: part.bibliography
@@ -143,6 +157,7 @@
 							condition: undefined,
 							commemoration: undefined,
 							nonfinal: undefined,
+							situation: undefined,
 							...entry
 						}
 					]
@@ -200,7 +215,7 @@
 		ordoEntryVisibility(
 			entryContext(entry)?.referenceOnly ?? false,
 			showsWords(
-				bodiesFor(entry).flatMap((body) =>
+				[...introductionsFor(entry), ...bodiesFor(entry)].flatMap((body) =>
 					body.doc.segments
 						.filter((segment) => segment.type === 'verse')
 						.map((segment) => inMassForm(segment, massForm.value).voice)
@@ -223,7 +238,7 @@
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
 		entries.flatMap((e) =>
-			bodiesFor(e).map(({ key, slug, anchor, doc, gloss }) => ({
+			[...introductionsFor(e), ...bodiesFor(e)].map(({ key, slug, anchor, doc, gloss }) => ({
 				slug,
 				key,
 				anchor,
@@ -233,6 +248,12 @@
 			}))
 		)
 	);
+
+	// Where the reader's low/sung choice cannot settle a commemoration (an ordinary one is
+	// admitted in a sung conventual Mass and not in one that is not conventual), the three
+	// orations' slots show both sequences, each labelled, and no setting chooses between them.
+	const variants = $derived(proper.commemorationVariants);
+	const commemorated = (e: OrdoEntry) => (COMMEMORATION_SLOTS as readonly string[]).includes(e.id);
 
 	const wordsById = $derived(indexOccurrenceWords(inlined));
 
@@ -440,6 +461,11 @@
 				// and prices the seam on paper, where the block is not printed.
 				sources: helpLevel >= 2 && body.bibliography.translation.length > 0
 			}))}
+			{@const openers = introductionsFor(e)}
+			{@const openerEdges = openers.map((run) =>
+				textFlowFor(run.doc, run.gloss, { helpLevel }, massForm.value, role.value)
+			)}
+			{@const variantsShown = commemorated(e) && bodies.length > 0 ? variants : []}
 			{@const visibility = entryVisibility(e)}
 			{@const folded = !!entry && visibility.folded}
 			{#if silent.includes(e.id) && !silent.includes(entries[idx - 1]?.id ?? '')}
@@ -492,8 +518,49 @@
 					</p>
 					<!-- RG 480–481: a Secret followed by a commemoration's Secret keeps its
 					     words and loses only its audible ending; the mark says so. -->
-					{#if entry?.nonfinal}
+					{#if entry?.nonfinal && !entry.situation}
 						<p class="part-note quiet-note">{msgs.commemorationQuiet}</p>
+					{/if}
+					{#if variantsShown.some((variant) => variant.described)}
+						<p class="part-note variants-note">{msgs.commemorationVariants}</p>
+					{:else if variantsShown.some((variant) => variant.unavailable.length)}
+						<p class="part-note unavailable-note">{msgs.commemorationUnavailable}</p>
+					{/if}
+				{/snippet}
+				<!-- The greeting, its answer and Orémus open the part whether or not the day
+				     supplies its text: the Easter Vigil's Offertory has no antiphon and keeps
+				     them. They are the owner texts' own words, delivered as each occurrence of
+				     the corpus resource says, in both forms of Mass, and they share the part's
+				     opening text so that their seam with the day's text is priced like any
+				     seam between two bodies of a slot. -->
+				{#snippet introduction(next: FlowRow | undefined)}
+					{#each openers as run, k (run.slug)}
+						<TextBody
+							doc={run.doc}
+							gloss={run.gloss}
+							{lang}
+							{helpLevel}
+							idPrefix={run.slug}
+							selectedId={panel.id}
+							citedSegments={citedPart === run.slug ? citedSegments : []}
+							ontap={tapWord}
+							onmark={openLegend}
+							preceding={openerEdges[k - 1]?.last}
+							following={k === openers.length - 1 ? next : openerEdges[k + 1]?.first}
+						/>
+					{/each}
+				{/snippet}
+				<!-- One of the two described sung sequences begins: its label, what it lacks,
+				     and the quiet ending of a Secret that is not the last in it. -->
+				{#snippet variantHead(body: VariantBody)}
+					{#if body.situation}
+						<p class="variant-head smallcaps">{msgs.commemorationSituations[body.situation]}</p>
+						{#if variantsShown.some((variant) => variant.situation === body.situation && variant.unavailable.length)}
+							<p class="part-note unavailable-note">{msgs.commemorationUnavailable}</p>
+						{/if}
+						{#if body.nonfinal}
+							<p class="part-note quiet-note">{msgs.commemorationQuiet}</p>
+						{/if}
 					{/if}
 				{/snippet}
 				{#snippet partLayout(
@@ -505,6 +572,8 @@
 					<div class="print-opening" class:compact={compactOpening}>
 						{@render partLead()}
 						<div class="part-text">
+							{@render introduction(edges[0]?.first)}
+							{@render variantHead(entry)}
 							{#if entry.condition && !proper.date}
 								<ComponentConditionNote condition={entry.condition} {lang} />
 							{/if}
@@ -515,6 +584,11 @@
 						<div class="part-text part-continuation">
 							{@render continuation()}
 							{#each bodies.slice(1) as body, j (body.slug)}
+								{#if body.situation && body.situation !== bodies[j].situation}
+									{@render variantHead(body)}
+								{:else if body.nonfinal}
+									<p class="part-note quiet-note">{msgs.commemorationQuiet}</p>
+								{/if}
 								{#if body.commemoration}
 									<!-- The commemoration's oration follows the Mass oration it answers
 									     to, under its own conclusion (RG 436–437). -->
@@ -565,6 +639,9 @@
 					</button>
 				{:else if !inline}
 					{@render partLead()}
+					{#if openers.length}
+						<div class="part-text">{@render introduction(undefined)}</div>
+					{/if}
 				{/if}
 				{#if partLoading}
 					<div class="part-loading">
@@ -587,6 +664,7 @@
 							onmark={openLegend}
 							verifiedTranslationCitations={entry.bibliography.translation}
 							layout={partLayout}
+							preceding={openerEdges.at(-1)?.last}
 							following={edges[1]?.first}
 						/>
 					{/key}
@@ -823,6 +901,17 @@
 
 	.quiet-note {
 		font-style: italic;
+	}
+
+	/* A described sung sequence opens under its own label, the quiet mark the book's other
+	   labels use, so the two alternatives read as two and never as one sequence. */
+	.variant-head {
+		margin: 1.4rem 0 0;
+		padding-top: 0.8rem;
+		border-top: 1px dotted var(--border);
+		font-size: 0.72rem;
+		letter-spacing: 0.09em;
+		color: var(--rubric);
 	}
 
 	/* The condition is a footnote to the part, not a clause of its

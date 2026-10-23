@@ -166,9 +166,9 @@
 			{:else if chosen && proper.payload?.day === chosen}
 				<span class="sr-only">{shown} — {msgs.dayInPlace}</span>
 			{/if}
-			<!-- An occurrence the corpus acknowledges on this date without a
-			     represented Mass: said, never assembled or substituted. -->
-			{#if !proper.loading && !proper.commemorations.length}
+			<!-- An occurrence the corpus acknowledges on a date without a represented
+			     Mass: said, never assembled or substituted. -->
+			{#if !proper.loading}
 				{#each proper.occurrences as occurrence (occurrence.id)}
 					<span class="state commemoration-only"
 						>{msgs.dayCommemorationOnly.replace(
@@ -176,6 +176,22 @@
 							commemorationTitle(occurrence.id, lang)
 						)}</span
 					>
+				{/each}
+				<!-- A required commemoration this edition cannot yet supply makes the Mass
+				     incomplete: said as such, never shown as a Mass without commemoration. -->
+				{#each proper.commemorationVariants as variant (variant.situation)}
+					{#each variant.unavailable as omitted (omitted.id)}
+						<span class="state commemoration-unavailable"
+							>{msgs.dayCommemorationUnavailable
+								.replace(
+									'{where}',
+									variant.described && variant.situation !== 'lecta'
+										? msgs.commemorationWhere[variant.situation]
+										: msgs.commemorationWhere.mass
+								)
+								.replace('{title}', commemorationTitle(omitted.id, lang))}</span
+						>
+					{/each}
 				{/each}
 			{/if}
 		{/if}

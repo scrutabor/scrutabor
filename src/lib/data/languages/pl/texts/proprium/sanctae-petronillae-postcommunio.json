@@ -1,0 +1,11 @@
+{
+  "id":"proprium.sanctae-petronillae-postcommunio",
+  "language":"pl",
+  "about":"Pokomunia na wspomnienie św. Petroneli.",
+  "seg":[
+    {"id":"s01","tr":"Nasyciłeś, Panie, Twoją rodzinę świętymi darami; prosimy, umacniaj nas zawsze wstawiennictwem tej, której uroczystość obchodzimy.","g":["Nasyciłeś","Panie","rodzinę","Twoją","darami","świętymi","jej","prosimy","zawsze","wstawiennictwem","nas","pokrzepiaj","której","uroczystość","obchodzimy"]},
+    {"id":"s02","tr":"Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg,","g":["Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg"],"ex":{"w032":"„Deus” odnosi się tu do Chrystusa, Syna, który żyje i króluje z Ojcem w jedności Ducha Świętego. Jest mianownikiem, a nie kolejnym zwrotem do Boga Ojca."}},
+    {"id":"s03","tr":"na wieki wieków.","g":["na","wszystkie","wieki","wieków"]},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

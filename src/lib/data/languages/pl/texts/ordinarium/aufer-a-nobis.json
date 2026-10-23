@@ -4,13 +4,13 @@
   "about":"Wchodząc po stopniach ołtarza, kapłan prosi Boga o usunięcie nieprawości, abyśmy mogli wejść do „Sancta sanctórum”, miejsca najświętszego. W drugiej modlitwie prosi we własnym imieniu o odpuszczenie swoich grzechów przez zasługi świętych, których relikwie znajdują się w tym miejscu, oraz wszystkich świętych, całując ołtarz, gdy o nich mówi.",
   "seg":[
     {"id":"s01","nr":"Kapłan rozkłada i składa ręce, po czym mówi na głos jedno słowo."},
-    {"id":"s02","tr":"Módlmy się.","tc":[133],"tb":"exact","g":["módlmy się"]},
+    {"id":"s02","tr":"Módlmy się.","tc":[133],"tb":"exact","g":["Módlmy się"]},
     {"id":"s03","nr":"Kapłan wstępuje po stopniach do ołtarza i dalszy ciąg mówi po cichu."},
-    {"id":"s04","tr":"Panie, prosimy Cię, zabierz od nas nasze nieprawości, abyśmy z czystymi sercami byli godni wejść do Miejsca Najświętszego.","tc":[133],"tb":"revised","g":["zabierz","od","nas","prosimy","Panie","nieprawości","nasze","abyśmy","do","Świętych","Świętych","czystymi","zasłużyli","umysłami","wejść"]},
+    {"id":"s04","tr":"Panie, prosimy Cię, zabierz od nas nasze nieprawości, abyśmy z czystymi sercami byli godni wejść do Miejsca Najświętszego.","tc":[133],"tb":"revised","g":["Zabierz","od","nas","prosimy","Panie","nieprawości","nasze","abyśmy","do",null,null,null,null,null,"wejść"],"a":[{"s":9,"n":2,"a":0,"g":"Miejsca Najświętszego"},{"s":11,"n":3,"a":1,"g":"z czystymi umysłami byli godni"}],"ex":{"w011":"„Sancta sanctórum” to „Miejsce Najświętsze”. Oba słowa mają tu rodzaj nijaki. Nie oznaczają świętych osób.","w014":"Po „ut” czasownik „mereámur” łączy się z „introíre”: „abyśmy byli godni wejść”. Rozdziela on słowa „puris” i „méntibus”, które razem znaczą „z czystymi umysłami”."}},
     {"id":"s05","tr":"Przez Chrystusa, Pana naszego. Amen.","tc":[133],"tb":"normalized","g":["Przez","Chrystusa","Pana","naszego","Amen"]},
     {"id":"s06","nr":"Ze złożonymi rękami opartymi o ołtarz kapłan pochyla się nad nim i zaczyna drugą modlitwę."},
-    {"id":"s07","tr":"Prosimy Cię, Panie, przez zasługi Twoich świętych,","tc":[133],"tb":"revised","g":["prosimy","Cię","Panie","przez","zasługi","Świętych","Twoich"]},
+    {"id":"s07","tr":"Prosimy Cię, Panie, przez zasługi Twoich świętych,","tc":[133],"tb":"revised","g":["Prosimy","Cię","Panie","przez","zasługi","świętych","Twoich"]},
     {"id":"s08","nr":"Kapłan całuje środek ołtarza."},
-    {"id":"s09","tr":"których relikwie tu się znajdują, i wszystkich świętych, abyś raczył przebaczyć wszystkie grzechy moje. Amen.","g":["których","relikwie","tu","są","i","wszystkich","Świętych","abyś","odpuścić","raczył","wszystkie","grzechy","moje","Amen"]}
+    {"id":"s09","tr":"których relikwie tu się znajdują, i wszystkich świętych, abyś raczył przebaczyć wszystkie grzechy moje. Amen.","g":["których","relikwie","tu","są","i","wszystkich","świętych","abyś",null,null,"wszystkie","grzechy","moje","Amen"],"a":[{"s":8,"n":2,"a":1,"g":"raczył odpuścić"}],"ex":{"w038":"„Dignéris” łączy się z poprzedzającym je „indulgére”. Po „ut” całość wyraża pełną szacunku prośbę: „abyś raczył odpuścić”."}}
   ]
 }

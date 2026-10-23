@@ -18,7 +18,11 @@ describe('corpus-owned dismissal choices', () => {
 	});
 	it('resolves all emitted choices with no implicit ordinary default', () => {
 		const lookup = createDismissalLookup(table);
-		expect(table.pairs).toHaveLength(7619);
+		// 7619 before the calendar repair: St Matthias moved to 25 February in leap years and
+		// the Friday "Sunday within the octave" of 30 December removed.
+		expect(table.pairs).toHaveLength(7610);
+		expect(() => lookup.resolve('2033-12-30', 'dominica-infra-octavam-nativitatis')).toThrow();
+		expect(lookup.resolve('2028-02-25', 'sancti-matthiae-apostoli').id).toBe('ordinary');
 		let paschal = 0;
 		for (const [date, mass, index] of table.pairs) {
 			const profile = lookup.resolve(String(date), table.masses[Number(mass)]);

@@ -1,0 +1,90 @@
+{
+ "id": "proprium.sanctae-petronillae-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 544",
+    "scan": "PDF physical p. 626",
+    "section": "Pro S. Petronilla, Postcommunio",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n625/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctae-petronillae-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This proper page prints the 15-word body (w001–w015) and the abbreviated Per Dóminum cue. The full w016–w037 conclusion and Amen are not printed in full on this proper page; the same-edition RG 115 a dependency supplies them. Adjacent Queenship material, Common references and headings are excluded. This is a narrow textual source claim, not commemoration, calendar or actor approval."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "PDF physical p.23",
+    "section": "Rubricae generales 115 a; ordinary conclusion addressed to the Father, with Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctae-petronillae-postcommunio.conclusion-rg115a.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the ordinary 21-word conclusion and Amen, w016–w037, after the proper body’s abbreviated cue. Body and formula are separate loci, not one continuous proper-page printing or two independent witnesses. The rubric enumeration’s terminal Amen semicolon is retained in the literal witness and set as a response period in the selected text. This rule alone does not determine the response actor."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 541",
+    "scan": "PDF physical p. 622",
+    "section": "no.2696, Pro S. Petronilla, Postcommunio",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n621/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctae-petronillae-postcommunio.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This proper page prints the 15-word body (w001–w015) and the abbreviated Per Dóminum cue. The full w016–w037 conclusion and Amen are not printed in full on this proper page; the same-edition RG 115 a dependency supplies them. Adjacent Queenship material, Common references and headings are excluded. This is a narrow textual source claim, not commemoration, calendar or actor approval."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical p.17",
+    "section": "Rubricae generales 115 a; ordinary conclusion addressed to the Father, with Amen",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctae-petronillae-postcommunio.conclusion-rg115a.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the ordinary 21-word conclusion and Amen, w016–w037, after the proper body’s abbreviated cue. Body and formula are separate loci, not one continuous proper-page printing or two independent witnesses. The rubric enumeration’s terminal Amen semicolon is retained in the literal witness and set as a response period in the selected text. This rule alone does not determine the response actor."
+    }
+   ],
+   "verified_on": "2026-10-22"
+  }
+ ],
+ "witnesses": []
+}

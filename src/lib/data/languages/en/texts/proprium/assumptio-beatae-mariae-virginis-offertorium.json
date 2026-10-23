@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Assumption of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"I will put enmity between you and the Woman, and your seed and her Seed.","g":["enmity","I will put","between","you","and","the Woman","and","seed","your","and","seed","her"]}
+    {"id":"s01","tr":"I will put enmity between you and the Woman, and between your seed and her Seed.","g":["Enmity","I will put","between","you","and","the Woman","and",null,null,"and",null,null],"a":[{"s":7,"n":2,"a":0,"g":"your seed"},{"s":10,"n":2,"a":0,"g":"her Seed"}],"ex":{"w012":"The first possessive refers to the serpent addressed by God. The second refers to the Woman. The word seed can mean offspring collectively. In this Marian chant, the Woman and her Seed also point to Mary and Christ."}}
   ]
 }

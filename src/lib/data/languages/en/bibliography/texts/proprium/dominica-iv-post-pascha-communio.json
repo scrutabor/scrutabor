@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-iv-post-pascha-communio",
+ "source_groups": [
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "New Testament pp. 125–126",
+    "scan": "PDF pp. 1228–1229",
+    "section": "John 16:8; Paraclete and Spirit of truth expressions in John 15:26; 16:7, 13"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-post-pascha-communio.s01.douay1914-revised",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English basis of the biblical expressions, revised against the liturgical Latin, including exposing the world’s error concerning sin, justice and judgment. The chant combines expressions and adds its own alleluias; this page is not asserted to print the complete assembled chant."
+    }
+   ],
+   "verified_on": "2026-10-21"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}
