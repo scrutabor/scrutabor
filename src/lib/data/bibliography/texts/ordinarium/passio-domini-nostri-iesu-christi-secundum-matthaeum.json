@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt; [Evangelium1] section at line 220, heading at line 221"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading as its own line in the [Evangelium1] section of the pinned Palm Sunday file, which its [Evangelium] section calls; compared with the selected print it differs only in Jesu for Iesu (orthography). It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "139",
+    "scan": "IA leaf n218; one-based PDF page 219",
+    "section": "Proprium, heading of the Passion of proprium.dominica-ii-passionis-evangelium",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n218/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading over the Passion of proprium.dominica-ii-passionis-evangelium, without a closing full stop, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 218",
+    "section": "Dominica II Passionis seu in palmis; complete announcement heading; Matthaeum. 26, 36-75; 27, 1-60 (rubric above heading)",
+    "printed": "137"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 7-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

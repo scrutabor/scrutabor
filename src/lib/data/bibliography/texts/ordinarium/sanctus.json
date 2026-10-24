@@ -4,7 +4,7 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 286",
     "scan": "leaf n365 / PDF p. 366",
@@ -16,10 +16,179 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The page prints the complete five-verse Sanctus-Benedictus body s02-s06, with all 25 selected words. It supplies no separate s01 hand/cross rubric; that rubric is bound to p. 225. The preceding Nativity Preface and dialogue are not part of this selected body."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 225",
+    "scan": "leaf n304 / PDF p. 305",
+    "section": "Ordo Missae, complete Deinde disiungit manus rubric through Benedictus sign of the cross",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n304/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.hands-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "This separate rubric supplies s01: hands extended through the Preface, joined hands and bow at Sanctus, and the forehead-to-breast sign at Benedictus qui venit. It is not printed with the five-verse body on p. 286."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIII",
+    "scan": "leaf n38 / PDF p. 39",
+    "section": "Rubricae generales 500",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.canon-boundary.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Canon is said secreto after the Preface and Sanctus. This governs the priest's recitation sequence, not completion of every choral musical setting."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIV",
+    "scan": "leaf n39 / PDF p. 40",
+    "section": "Rubricae generales 511 h, 512, 513 e and 514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.recitation-voice.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Sanctus-Benedictus is clara at low Mass. At solemn and sung Mass the celebrant recites it secreto under RG 513 e and 514; RG 512 distinguishes self-audible recitation from an externally audible voice. The priest remains the reciter, separately from the sung participation."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LIV",
+    "scan": "leaf n59 / PDF p. 60",
+    "section": "Ritus servandus VII, 8",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n59/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.recitation-gestures.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The ordinary recitation account has the priest join his hands and bow for Sanctus while the minister rings the bell, then straighten and make the sign of the cross at Benedictus. Its recitation voice must be read with the distinct sung-Mass rule in RG 513 e and 514, not generalized to every Mass form."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LV",
+    "scan": "leaf n60 / PDF p. 61",
+    "section": "Ritus servandus VII, 11 and VIII, 1",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n60/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.recitation-canon.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "At solemn Mass the sacred ministers say Sanctus and what follows with the celebrant; the priest then begins the Canon secreto. This is a distinct priestly recitation, not replacement by the choir, word-by-word synchronization or an instruction for every lay server in Missa cantata."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "pp. 639–640",
+    "scan": "PDF pp. 639–640",
+    "section": "De musica sacra et sacra liturgia, 25 b and 26",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=639"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.sung-participation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The instruction includes Sanctus-Benedictus among the Ordinary chants in which the faithful may participate with the schola at solemn Mass and extends these sung-participation rules to Missa cantata. This grants participation; it does not assert that every faithful person actually sings or replace the priest's own recitation."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "pp. 642–643",
+    "scan": "PDF pp. 642–643",
+    "section": "De musica sacra et sacra liturgia, 31, introduction and c",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=642"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.low-recitation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "At the third degree of direct participation in low Mass, the faithful may recite Sanctus-Benedictus with the priest. This is low-Mass recitation, distinct from the sung participation of 25 b and 26 and from the priest's secreto recitation at sung Mass governed by the Missal."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 641",
+    "scan": "PDF p. 641",
+    "section": "De musica sacra et sacra liturgia, 27 d–f",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=641"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sanctus.chant-timing.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "In Gregorian chant Sanctus and Benedictus are sung continuously; with other musical settings Benedictus follows the Consecration. All singing ceases during the Consecration. Afterwards sacred silence is recommended unless Benedictus remains to be sung. These singing rules do not synchronize individual words with the priest or require him to await the choir before beginning the Canon."
+    }
+   ],
+   "verified_on": "2026-10-24"
   }
  ],
  "witnesses": []

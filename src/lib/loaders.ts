@@ -26,20 +26,22 @@ import {
 	type TextDocument,
 	type TextEntry
 } from './corpus';
-import { LANGS, type Lang } from './i18n';
+import { LANGS, M, type Lang } from './i18n';
 import { conceptById } from './grammar';
 export { lemmaData } from './lemma-data';
 import { movementById } from './ordo';
-import { PROPER_DAYS, SLOT_OF } from './proprium';
+import { PROPER_DAYS, SLOT_OF, dayById } from './proprium';
 import { CANON_VARIANTS, CANON_ROLES, canonKey, validateCanonPack } from './canon';
 import { DISMISSAL_ROLE, PASCHAL_DISMISSAL, validateDismissalPack } from './dismissal';
 import {
 	COMMEMORATION_DECLARATIONS,
 	commemorationLookup,
+	SITUATIONS,
 	validateCommemorationPack
 } from './commemorationes';
 import { commemorationTitle } from './corpus-metadata';
 import { introductionBodies, introductionEventsFor, introductionOwners } from './introductiones';
+import { announcementOwners } from './reading-announcements';
 import type { VariantPack } from './variant-resource';
 import pkg from '../../package.json' with { type: 'json' };
 
@@ -129,6 +131,24 @@ export async function ordoData(lang: Lang, movement: string) {
 		{ doc: unknown; gloss: unknown; bibliography: TextBibliographyEvidence }
 	> = {};
 	const docs: TextDocument[] = [];
+	const readingEntries = found.entries.some((e) => e.id === 'epistola' || e.id === 'evangelium')
+		? await loadTexts(announcementOwners(), lang)
+		: {};
+	const readingOwners = Object.fromEntries(
+		await Promise.all(
+			Object.entries(readingEntries).map(async ([key, entry]) => {
+				docs.push(entry.text);
+				return [
+					key,
+					{
+						doc: entry.text,
+						gloss: entry.gloss,
+						bibliography: await loadTextBibliography(lang, key)
+					}
+				];
+			})
+		)
+	);
 	const bibliography = Object.fromEntries(
 		await Promise.all(
 			Object.keys(loaded).map(async (key) => [key, await loadTextBibliography(lang, key)] as const)
@@ -145,7 +165,7 @@ export async function ordoData(lang: Lang, movement: string) {
 		docs.push(entry.text);
 	}
 	for (const bodies of Object.values(introductions)) docs.push(...bodies.map(({ doc }) => doc));
-	return { movement, texts, introductions, lex: await narrowLexicon(docs, lang) };
+	return { movement, texts, introductions, readingOwners, lex: await narrowLexicon(docs, lang) };
 }
 
 export function conceptData(lang: Lang, concept: string) {
@@ -251,10 +271,100 @@ export async function commemorationData(lang: Lang) {
 	return variantData(lang, COMMEMORATION_DECLARATIONS, validateCommemorationPack);
 }
 
-/** A commemoration's orations read as one document, the way a formulary's parts are. */
+/** Which formulary of a resolved commemoration's pair is the feast its page lists the dates
+ * under. The impeded Sunday and the Advent feria are commemorated in the feast's own Mass, so the
+ * feast is the pair's Mass; the impeded feast is commemorated in the Sunday's Mass, so the feast
+ * is the formulary the pair resolves to. Each date then names the pair's other formulary: the
+ * Sunday, or the Mass of an Ember day of Advent. */
+export const RESOLVED_FEAST_SIDE: Readonly<Record<string, 'mass' | 'formulary'>> = {
+	'dominica-impedita': 'mass',
+	'feria-adventus': 'mass',
+	'festum-impeditum': 'formulary'
+};
+
+/** How a resolved commemoration's page orders its feasts. The impeded feasts and the three feasts
+ * of the Advent feria read by the calendar, in civil order. The impeded Sunday's seven principal
+ * feasts keep the edition's formulary order. */
+export const RESOLVED_FEAST_ORDER: Readonly<Record<string, 'edition' | 'civil'>> = {
+	'dominica-impedita': 'edition',
+	'feria-adventus': 'civil',
+	'festum-impeditum': 'civil'
+};
+
+/** A commemoration's orations read as one document, the way a formulary's parts are. A
+ * commemoration resolved per date has none of its own: its page lists, under each feast, the
+ * dates this edition resolves and the Sunday of each, whose Mass makes the commemoration or
+ * whose orations it says. */
 export async function commemorationPageData(id: string, lang: Lang) {
 	const entry = commemorationLookup?.commemorations.find((candidate) => candidate.id === id);
 	if (!entry) return null;
+	const title = {
+		la: entry.title,
+		...Object.fromEntries(LANGS.map((language) => [language, commemorationTitle(id, language)]))
+	};
+	if (entry.resolved) {
+		// The rule is said in words before its dates, and the dates stand under their feast; a
+		// resolved commemoration without either would be a list nobody could read, so the page is
+		// not built.
+		if (
+			!LANGS.every((language) => Object.hasOwn(M[language].commemorationRules, id)) ||
+			!Object.hasOwn(RESOLVED_FEAST_SIDE, id) ||
+			!Object.hasOwn(RESOLVED_FEAST_ORDER, id)
+		)
+			throw new Error('resolved commemoration without its rule');
+		const side = RESOLVED_FEAST_SIDE[id];
+		// A Mass this edition does not author (an Ember day of Advent) is named and never linked,
+		// and only on a date where nothing is said from it. Any other would be a name invented here.
+		const absentMass = (other: string, said: boolean): Record<string, string> => {
+			if (
+				said ||
+				!LANGS.every((language) => Object.hasOwn(M[language].commemorationAbsentMasses, other))
+			)
+				throw new Error('resolved commemoration date names an unknown Mass');
+			return Object.fromEntries(
+				LANGS.map((language) => [language, M[language].commemorationAbsentMasses[other]])
+			);
+		};
+		const pairs = commemorationLookup!.datesOf(id).map(({ date, mass, formulary, decisions }) => ({
+			date,
+			feast: side === 'mass' ? mass : formulary,
+			other: side === 'mass' ? formulary : mass,
+			said: SITUATIONS.some((situation) => decisions[situation] === 'admitted')
+		}));
+		const feasts = PROPER_DAYS.filter((day) => pairs.some(({ feast }) => feast === day.id)).map(
+			(day) => ({
+				id: day.id,
+				title: day.title,
+				dates: pairs
+					.filter(({ feast }) => feast === day.id)
+					.map(({ date, other, said }) => {
+						const edition = (other && dayById(other)?.title) || null;
+						return {
+							date,
+							formulary: other,
+							title: edition ?? (other ? absentMass(other, said) : null),
+							authored: edition !== null,
+							said
+						};
+					})
+			})
+		);
+		// A date whose feast is not a formulary of this edition would drop out of the list unseen.
+		if (feasts.reduce((sum, { dates }) => sum + dates.length, 0) !== pairs.length)
+			throw new Error('resolved commemoration date without its feast');
+		// The impeded feasts and the Advent feria's feasts read by the calendar: a fixed feast's
+		// dates share their month and day (St Matthias's leap-year dates stay together), so the
+		// earliest date orders each group. The impeded Sunday's seven principal feasts keep the
+		// edition's formulary order.
+		if (RESOLVED_FEAST_ORDER[id] === 'civil') {
+			const civil = ({ dates }: { dates: { date: string }[] }) =>
+				Math.min(
+					...dates.map(({ date }) => Number(date.slice(5, 7)) * 100 + Number(date.slice(8, 10)))
+				);
+			feasts.sort((a, b) => civil(a) - civil(b));
+		}
+		return { kind: 'resolved' as const, day: entry.id, title, lang, feasts };
+	}
 	const pack = await commemorationData(lang);
 	const parts = entry.slots.map((slot) => {
 		const body = pack.parts.find((part) => part.key === slot.text);
@@ -270,11 +380,9 @@ export async function commemorationPageData(id: string, lang: Lang) {
 		};
 	});
 	return {
+		kind: 'orations' as const,
 		day: entry.id,
-		title: {
-			la: entry.title,
-			...Object.fromEntries(LANGS.map((language) => [language, commemorationTitle(id, language)]))
-		},
+		title,
 		partial: false,
 		around: {},
 		lang,

@@ -11,6 +11,7 @@
 import type { MassForm, Segment } from '$lib/corpus';
 import { isEveryonesResponse, isYours, mayJoin, ROLES, type Role } from '$lib/role.svelte';
 import * as marks from '$lib/speaker-marks';
+import { performanceFor } from './participation-performance';
 
 const MASS_FORMS = ['cantu', 'lecta'] as const satisfies readonly MassForm[];
 
@@ -36,7 +37,8 @@ function presentation(segments: Segment[], form: MassForm, role: Role): string {
 				!sharedPrayer && marks.marked(effective, index),
 				marks.namesVoice(effective, index),
 				sharedPrayer,
-				sharedSpeaker ?? null
+				sharedSpeaker ?? null,
+				performanceFor(segment, form) ?? null
 			];
 		})
 	);

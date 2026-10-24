@@ -10,7 +10,8 @@
 		preceding,
 		following,
 		sourcesAfter = false,
-		sourcesBefore = false
+		sourcesBefore = false,
+		referenceEdges = {}
 	}: {
 		units: FlowUnit[];
 		row: Snippet<[FlowRow]>;
@@ -32,6 +33,8 @@
 		 * not print the block, and the neighbour link prices the seam. */
 		sourcesAfter?: boolean;
 		sourcesBefore?: boolean;
+		/** A reading reference keeps its own spacing on screen and paper. */
+		referenceEdges?: { before?: boolean; after?: boolean };
 	} = $props();
 	const firstIndex = $derived(units[0]?.rows[0]?.index);
 </script>
@@ -52,6 +55,10 @@
 						preceding !== undefined &&
 						item.index === firstIndex}
 					class:sources-after={sourcesAfter && following !== undefined && item.last}
+					class:reference-before={referenceEdges.before &&
+						preceding !== undefined &&
+						item.index === firstIndex}
+					class:reference-after={referenceEdges.after && following !== undefined && item.last}
 					data-before={item.before ??
 						(preceding !== undefined && item.index === firstIndex ? rowEnd(preceding) : null)}
 					data-after={item.after ??
@@ -265,5 +272,15 @@
 				margin-top: calc(var(--reading) * 0.5) !important;
 			}
 		}
+	}
+	/* Reference metadata is printed too; its margins alone price both edges. */
+	.flow-row.reference-after > :global(:last-child),
+	.columns .flow-row.reference-after > :global(.verse:has(+ .seg-extra)) {
+		margin-bottom: 0;
+	}
+	.flow-row.reference-before > :global(:first-child),
+	.bilingual.partition .flow-row.partition-start.reference-before > :global(.rubric),
+	.bilingual.partition .flow-row.partition-start.reference-before > :global(.who) {
+		margin-top: 0 !important;
 	}
 </style>

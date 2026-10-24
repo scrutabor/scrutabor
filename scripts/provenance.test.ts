@@ -62,7 +62,13 @@ describe('the corpus this app ships', () => {
 		// 5.12 adds the commemoration occurrence/activation resource and its localized titles.
 		// 6.0 replaces the commemoration selection with schema 2.0.0 (one decision per Mass
 		// situation) and 6.1 adds the Ordo introductions resource; text row keys are unchanged.
-		expect(provenance.edition).toBe('6.1.0');
+		// 6.2 adds the impeded Sunday: selection 2.1.0 pair rows name a resolved formulary and a
+		// resolved commemoration's slots carry no text; text row keys are unchanged.
+		// 6.3 adds the impeded feast, an ordinary resolved commemoration in the same 2.1.0 rows;
+		// text row keys are unchanged.
+		// 6.4 adds the Advent feria, a privileged resolved commemoration whose Ember-day rows name a
+		// Mass this edition does not author; the 2.1.0 rows and the text row keys are unchanged.
+		expect(provenance.edition).toBe('6.6.0');
 	});
 
 	it('was vendored from a clean corpus', () => {

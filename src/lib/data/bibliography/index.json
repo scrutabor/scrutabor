@@ -206,6 +206,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.iube-domine-benedicere",
        "roles": [
         "derived_digital_collation_aid"
@@ -220,7 +227,154 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.lectio-actuum-apostolorum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-ezechielis-prophetae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-isaiae-prophetae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-iudith",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-machabaeorum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-sapientiae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-malachiae-prophetae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.munda-cor-meum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -284,6 +438,13 @@
       },
       {
        "id": "ordinarium.praefatio-beatae-mariae-virginis-in-visitatione",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-communis",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -375,6 +536,34 @@
       },
       {
        "id": "ordinarium.praefatio-spiritus-sancti",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -7634,6 +7823,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.introibo",
        "roles": [
         "official_text"
@@ -7693,6 +7889,146 @@
        "id": "ordinarium.lavabo",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-actuum-apostolorum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-ezechielis-prophetae",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-isaiae-prophetae",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-iudith",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-machabaeorum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-sapientiae",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-malachiae-prophetae",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7763,6 +8099,13 @@
        "id": "ordinarium.panem-caelestem",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8021,7 +8364,35 @@
       {
        "id": "ordinarium.sanctus",
        "roles": [
-        "official_text"
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8456,9 +8827,9 @@
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.beatae-mariae-virginis-a-rosario-secreta",
@@ -8977,7 +9348,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-offertorium",
@@ -8996,9 +9367,9 @@
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-secreta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 3
       },
       {
        "id": "proprium.dominica-i-adventus-alleluia",
@@ -11921,7 +12292,7 @@
       {
        "id": "proprium.dominica-xviii-post-pentecosten-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -12015,7 +12386,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-xx-post-pentecosten-offertorium",
@@ -12568,9 +12939,9 @@
       {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-collecta",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 4
       },
       {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-communio",
@@ -13111,7 +13482,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.omnium-sanctorum-offertorium",
@@ -13193,7 +13564,7 @@
       {
        "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -13470,7 +13841,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-offertorium",
@@ -14330,7 +14701,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-offertorium",
@@ -15300,6 +15671,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.ite-missa-est-paschale",
        "roles": [
         "corroborating_latin_witness"
@@ -15321,6 +15699,153 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.lectio-actuum-apostolorum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-ezechielis-prophetae",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-isaiae-prophetae",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-iudith",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-machabaeorum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-sapientiae",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-malachiae-prophetae",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-paschalis",
        "roles": [
         "corroborating_latin_witness"
@@ -15331,6 +15856,34 @@
        "id": "ordinarium.qui-pridie-in-cena-domini",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "corroborating_latin_witness"
        ],
        "uses": 1
       },
@@ -15394,6 +15947,34 @@
      "texts": [
       {
        "id": "ordinarium.aufer-a-nobis",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.confiteor",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.confiteor-sacerdotis",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.evangelium-ultimum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-communis",
        "roles": [
         "corroborating_latin_witness"
        ],
@@ -15810,6 +16391,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.lectio-libri-sapientiae",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 4
+      },
+      {
        "id": "ordinarium.munda-cor-meum",
        "roles": [
         "rubric_control"
@@ -15969,6 +16557,13 @@
         "rubric_control"
        ],
        "uses": 2
+      },
+      {
+       "id": "ordinarium.sanctus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 5
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-collecta",
@@ -16253,6 +16848,13 @@
        "uses": 3
       },
       {
+       "id": "proprium.dedicatio-sancti-michaelis-archangeli-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -16262,9 +16864,10 @@
       {
        "id": "proprium.dedicatio-sancti-michaelis-archangeli-secreta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-i-adventus-collecta",
@@ -17305,6 +17908,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.dominica-xx-post-pentecosten-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-xx-post-pentecosten-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -17517,9 +18127,10 @@
       {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-collecta",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.immaculatum-cor-beatae-mariae-virginis-postcommunio",
@@ -17718,6 +18329,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.omnium-sanctorum-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.omnium-sanctorum-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -17741,9 +18359,10 @@
       {
        "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio",
        "roles": [
-        "official_liturgical_context"
+        "official_liturgical_context",
+        "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-secreta",
@@ -17827,6 +18446,13 @@
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18138,6 +18764,13 @@
        "id": "proprium.sancti-petri-et-pauli-apostolorum-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-et-pauli-apostolorum-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18478,6 +19111,7 @@
     {
      "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
      "roles": [
+      "official_liturgical_context",
       "rubric_control"
      ],
      "texts": [
@@ -18508,6 +19142,13 @@
         "rubric_control"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.lectio-libri-sapientiae",
+       "roles": [
+        "official_liturgical_context"
+       ],
+       "uses": 4
       },
       {
        "id": "ordinarium.qui-pridie-in-cena-domini",
@@ -18652,6 +19293,24 @@
         "official_liturgical_context"
        ],
        "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+     "roles": [
+      "official_liturgical_context",
+      "rubric_control"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.sanctus",
+       "roles": [
+        "official_liturgical_context",
+        "rubric_control"
+       ],
+       "uses": 3
       }
      ],
      "lemmas": []

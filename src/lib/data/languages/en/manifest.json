@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.1.0",
+  "schema_version": "6.6.0",
   "corpus_schema": "0.21.0",
   "language": "en",
   "direction": "ltr",
@@ -345,6 +345,11 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/in-spiritu-humilitatis.json"
     },
     {
+      "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+      "path": "languages/en/texts/ordinarium/initium-sancti-evangelii-secundum-matthaeum.json",
+      "title": "The beginning of the holy Gospel according to Matthew"
+    },
+    {
       "id": "ordinarium.introibo",
       "path": "languages/en/texts/ordinarium/introibo.json"
     },
@@ -397,6 +402,106 @@
       "evidence": "languages/en/bibliography/texts/ordinarium/lavabo.json"
     },
     {
+      "id": "ordinarium.lectio-actuum-apostolorum",
+      "path": "languages/en/texts/ordinarium/lectio-actuum-apostolorum.json",
+      "title": "A reading from the Acts of the Apostles"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-iacobi-apostoli.json",
+      "title": "A reading from the Epistle of blessed James the Apostle"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-ioannis-apostoli.json",
+      "title": "A reading from the Epistle of blessed John the Apostle"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-colossenses.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Colossians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-corinthios.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Corinthians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-ephesios.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Ephesians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-galatas.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Galatians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-hebraeos.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Hebrews"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-philippenses.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Philippians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-romanos.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Romans"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to the Thessalonians"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-titum.json",
+      "title": "A reading from the Epistle of blessed Paul the Apostle to Titus"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+      "path": "languages/en/texts/ordinarium/lectio-epistolae-beati-petri-apostoli.json",
+      "title": "A reading from the Epistle of blessed Peter the Apostle"
+    },
+    {
+      "id": "ordinarium.lectio-ezechielis-prophetae",
+      "path": "languages/en/texts/ordinarium/lectio-ezechielis-prophetae.json",
+      "title": "A reading from Ezekiel the Prophet"
+    },
+    {
+      "id": "ordinarium.lectio-isaiae-prophetae",
+      "path": "languages/en/texts/ordinarium/lectio-isaiae-prophetae.json",
+      "title": "A reading from Isaiah the Prophet"
+    },
+    {
+      "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+      "path": "languages/en/texts/ordinarium/lectio-libri-apocalypsis-beati-ioannis-apostoli.json",
+      "title": "A reading from the book of Revelation of blessed John the Apostle"
+    },
+    {
+      "id": "ordinarium.lectio-libri-iudith",
+      "path": "languages/en/texts/ordinarium/lectio-libri-iudith.json",
+      "title": "A reading from the book of Judith"
+    },
+    {
+      "id": "ordinarium.lectio-libri-machabaeorum",
+      "path": "languages/en/texts/ordinarium/lectio-libri-machabaeorum.json",
+      "title": "A reading from the book of the Maccabees"
+    },
+    {
+      "id": "ordinarium.lectio-libri-sapientiae",
+      "path": "languages/en/texts/ordinarium/lectio-libri-sapientiae.json",
+      "title": "A reading from the book of Wisdom"
+    },
+    {
+      "id": "ordinarium.lectio-malachiae-prophetae",
+      "path": "languages/en/texts/ordinarium/lectio-malachiae-prophetae.json",
+      "title": "A reading from Malachi the Prophet"
+    },
+    {
       "id": "ordinarium.libera-nos",
       "path": "languages/en/texts/ordinarium/libera-nos.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/libera-nos.json"
@@ -445,6 +550,11 @@
       "id": "ordinarium.panem-caelestem",
       "path": "languages/en/texts/ordinarium/panem-caelestem.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/panem-caelestem.json"
+    },
+    {
+      "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+      "path": "languages/en/texts/ordinarium/passio-domini-nostri-iesu-christi-secundum-matthaeum.json",
+      "title": "The Passion of our Lord Jesus Christ according to Matthew"
     },
     {
       "id": "ordinarium.pater-noster",
@@ -633,6 +743,26 @@
       "path": "languages/en/texts/ordinarium/sanctus.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/sanctus.json",
       "title": "Holy, Holy, Holy"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+      "path": "languages/en/texts/ordinarium/sequentia-sancti-evangelii-secundum-ioannem.json",
+      "title": "The continuation of the holy Gospel according to John"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+      "path": "languages/en/texts/ordinarium/sequentia-sancti-evangelii-secundum-lucam.json",
+      "title": "The continuation of the holy Gospel according to Luke"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+      "path": "languages/en/texts/ordinarium/sequentia-sancti-evangelii-secundum-marcum.json",
+      "title": "The continuation of the holy Gospel according to Mark"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+      "path": "languages/en/texts/ordinarium/sequentia-sancti-evangelii-secundum-matthaeum.json",
+      "title": "The continuation of the holy Gospel according to Matthew"
     },
     {
       "id": "ordinarium.simili-modo",

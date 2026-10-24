@@ -1,5 +1,12 @@
 import type { Lang } from './i18n';
-import { dayById, PROPER_DAYS } from './proprium';
+import { componentApplies, dayById, PROPER_DAYS } from './proprium';
+import {
+	announcedReadings,
+	readingPayloadReady,
+	type AnnouncedReading,
+	type AnnouncementOwner
+} from './reading-announcements';
+import { validateLocalizedBody } from './localized-body';
 import { resolveOrdoChoice } from './ordo-choice';
 import { bindOrphans } from './polish';
 
@@ -132,32 +139,74 @@ export function ordoContext(
 	return lang === 'pl' ? bindOrphans(notes.join(' ')) : notes.join(' ');
 }
 
-/** Only the Palm response needs this selected-Gospel distinction. The words
- * remain available; an absent or ambiguous Gospel is not an active response. */
+export interface AfterReadingContext {
+	referenceOnly: boolean;
+	reason: 'ordinary-only' | 'unconfirmed' | 'ordinary-reading' | 'passion';
+	note?: string;
+}
+
+/** Fixed words remain readable until this selected reading is confirmed.
+ * Reference display is not a claim that the rite omits its response. */
 export function ordoResponseContext(
 	entry: string,
-	mass: string | null,
-	gospelKeys: readonly string[],
+	state: GospelPreparationState,
+	readings: readonly AnnouncedReading[],
+	owners: Record<string, AnnouncementOwner | undefined>,
+	lex: unknown,
 	lang: Lang
-): { referenceOnly: boolean; note?: string } | undefined {
-	if (entry !== 'laus-tibi-christe' || mass !== 'dominica-ii-passionis') return undefined;
-	// Polish guidance binds its one-letter words like the Ordo's own notes (lib/polish).
-	const reference = (note: string) => ({
+): AfterReadingContext | undefined {
+	if (entry !== 'deo-gratias-epistolae' && entry !== 'laus-tibi-christe') return undefined;
+	const reference = (reason: AfterReadingContext['reason'], note: string): AfterReadingContext => ({
 		referenceOnly: true,
+		reason,
 		note: lang === 'pl' ? bindOrphans(note) : note
 	});
-	if (gospelKeys.length !== 1) {
+	if (
+		state.date &&
+		state.mass === null &&
+		!state.loading &&
+		!state.failed &&
+		!state.unwritten &&
+		state.loadedMass === null &&
+		state.loadedLanguage === null &&
+		resolveOrdoChoice(state.date, 'none')
+	)
 		return reference(
+			'ordinary-only',
 			lang === 'pl'
-				? 'Wybrano Niedzielę Palmową, ale nie ma jednoznacznie wczytanej Ewangelii. Tę odpowiedź pokazano tylko do wglądu. Po Pasji się jej nie odmawia.'
-				: 'Palm Sunday is selected, but no single Gospel is loaded. This response is shown for reference only. It is omitted after the Passion.'
+				? 'Nie wybrano czytania. Pełny tekst odpowiedzi pokazano tylko do wglądu.'
+				: 'No reading has been selected. The complete response is shown for reference only.'
 		);
+	const unconfirmed = () =>
+		reference(
+			'unconfirmed',
+			lang === 'pl'
+				? 'Wybrane czytanie nie jest jeszcze dostępne. Pełny tekst odpowiedzi pokazano tylko do wglądu.'
+				: 'The selected reading is not yet available. The complete response is shown for reference only.'
+		);
+	if (!readingPayloadReady(state, lang) || !state.mass || !state.date) return unconfirmed();
+	const readingRole = entry === 'deo-gratias-epistolae' ? 'epistola' : 'evangelium';
+	const expected =
+		dayById(state.mass)?.components.filter(
+			(component) =>
+				component.role === readingRole && componentApplies(component.condition, state.date)
+		) ?? [];
+	if (expected.length !== 1 || readings.length !== 1 || readings[0].key !== expected[0].text)
+		return unconfirmed();
+	try {
+		validateLocalizedBody(readings[0], lang, lex);
+		// The same checked owner/body contract supplies the displayed announcement.
+		announcedReadings(readingRole, [...readings], owners);
+	} catch {
+		return unconfirmed();
 	}
-	if (gospelKeys[0] === 'proprium/dominica-ii-passionis-evangelium')
-		return reference(PALM['laus-tibi-christe'][lang]);
-	// A loaded ordinary Gospel is not the Passion. Do not suppress its normal
-	// response or leave the Passion-only note above it.
-	return { referenceOnly: false };
+	if (
+		readingRole === 'evangelium' &&
+		state.mass === 'dominica-ii-passionis' &&
+		readings[0].key === 'proprium/dominica-ii-passionis-evangelium'
+	)
+		return reference('passion', PALM['laus-tibi-christe'][lang]);
+	return { referenceOnly: false, reason: 'ordinary-reading' };
 }
 
 export interface GospelPreparationState {

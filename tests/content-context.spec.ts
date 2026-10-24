@@ -187,7 +187,7 @@ for (const language of ['pl', 'en']) {
 }
 
 for (const language of ['pl', 'en']) {
-	test(`${language}: the Seven Sorrows secret keeps Mary's companions and intercession together`, async ({
+	test(`${language}: the Seven Sorrows secret groups Mary's companions apart from her intercession`, async ({
 		page
 	}) => {
 		const slug = 'septem-dolorum-beatae-mariae-virginis-secreta';
@@ -197,11 +197,20 @@ for (const language of ['pl', 'en']) {
 		await page.reload();
 		await setHelp(page, 1);
 		const part = page.locator(`#text-proprium-${slug}`);
+		// The nine words that once shared one gloss read as two groups in both languages: Mary's
+		// holy companions beneath the Cross, and the multiplied intercession that follows them.
 		const group = part.locator('.token-group', { hasText: 'consórtium' });
 		await expect(group.locator('rt')).toHaveText(
 			language === 'pl'
-				? 'dzięki wzmożonemu, najłaskawszemu wstawiennictwu jej i jej świętych towarzyszy pod Krzyżem'
-				: 'through the multiplied, most loving intercession of her and her holy companions beneath the Cross'
+				? 'i jej świętych towarzyszy pod Krzyżem'
+				: 'and of her holy companions beneath the Cross'
+		);
+		if (language === 'pl')
+			await expect(part.locator(`button[id="${slug}.w022"] rt`)).toHaveText('dzięki jej');
+		await expect(part.locator('.token-group', { hasText: 'intervéntu' }).locator('rt')).toHaveText(
+			language === 'pl'
+				? 'wzmożonemu, najłaskawszemu wstawiennictwu'
+				: 'through the multiplied, most loving intercession'
 		);
 		await expect(group.locator('button')).toHaveCount(1);
 		await group.scrollIntoViewIfNeeded();
@@ -209,7 +218,8 @@ for (const language of ['pl', 'en']) {
 		await group.locator('button').hover();
 		expect(await group.boundingBox()).toEqual(box);
 		await group.locator('button').click();
-		await expect(page.locator('aside .construction-card')).toHaveCount(9);
+		// One card for each of the companions group's five words (suorúmque … consórtium).
+		await expect(page.locator('aside .construction-card')).toHaveCount(5);
 		const companion = page.locator('aside .construction-card', { hasText: 'consórtium' });
 		await expect(companion).toContainText('consors');
 		await expect(companion).toContainText(language === 'pl' ? 'dopełniacz' : 'genitive');

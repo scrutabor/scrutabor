@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+  "title":"Léctio Epístolæ beáti Pauli Apóstoli ad Titum",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20},{"i":"w002","f":"Epístolæ","l":"epistola","m":64,"a":13},{"i":"w003","f":"beáti","l":"beatus","m":99,"h":"w004"},{"i":"w004","f":"Pauli","l":"Paulus","m":54},{"i":"w005","f":"Apóstoli","l":"apostolus","m":54},{"i":"w006","f":"ad","l":"ad","m":3,"h":"w007"},{"i":"w007","f":"Titum","l":"Titus","m":35}]}
+  ]
+}

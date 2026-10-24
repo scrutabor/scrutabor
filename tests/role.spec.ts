@@ -137,7 +137,7 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	// gives the faithful the whole Ordinary too (25 b at sung Mass, 31 c at
 	// low Mass). Both are true. A V. plus the former label “wierni” made
 	// those truths look contradictory and called a profession a versicle.
-	for (const slug of ['gloria', 'credo', 'sanctus', 'agnus-dei']) {
+	for (const slug of ['gloria', 'credo', 'agnus-dei']) {
 		await page.goto(`/app/pl/ordinarium/${slug}`);
 		await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
 		await expect(page.locator('.verse .mark')).toHaveCount(0);
@@ -153,7 +153,10 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	await expect(page.locator('.verse .mark')).toHaveCount(0);
 	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'minister'));
 	await page.goto('/app/pl/ordinarium/sanctus');
-	await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
+	await expect(page.locator('.who-performance')).toHaveText(
+		'Schola śpiewa, a wierni mogą dołączyć. Kapłan odmawia ten sam tekst po cichu.'
+	);
+	await expect(page.locator('.who-name')).toHaveCount(0);
 	await expect(page.locator('.verse.answer')).toHaveCount(5);
 	await page.evaluate(() => localStorage.setItem('scrutabor-role', 'populus'));
 

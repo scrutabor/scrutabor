@@ -38,6 +38,11 @@ const DAY_PROPERS: Record<string, string> = {
 	'2026-11-29': 'dominica-i-adventus',
 	'2028-12-24': 'vigilia-nativitatis'
 };
+const READING_REFERENCES: Record<string, [string, string]> = {
+	'2026-04-05': ['1 Cor. 5, 7-8', 'Marc. 16, 1-7'],
+	'2026-11-29': ['Rom. 13, 11-14', 'Luc. 21, 25-33'],
+	'2028-12-24': ['Rom. 1, 1-6', 'Matth. 1, 18-21']
+};
 const TOLERANCE = 2.5;
 
 // These pairs deliberately change their adjacent geometry between reading
@@ -92,6 +97,8 @@ const GRID_TAIL = 0.55;
 // A translation-sources block between two bodies: its own margins (TextBody).
 const SOURCES_ABOVE = 1.1;
 const SOURCES_BELOW = 0.55;
+const REFERENCE_ABOVE = 0.55;
+const REFERENCE_BELOW = 0.35;
 // Browser layout quantises lengths to 1/64 px; a priced constant moves far more.
 const EXACT = 0.1;
 // Paper does not print the translation sources, so two bodies of a slot are
@@ -199,6 +206,13 @@ interface GeometryProbe {
 	sourcesBetweenBodies: number;
 	/** Partitions whose continuation opens with the opening body's sources block before the next body's rows. */
 	sourcedPartitions: number;
+	blockedPartitions: number;
+	referencePartitions: number;
+	referencesBetweenBodies: number;
+	interposedBodyBlocks: number;
+	/** An ordered sources→reference chain has one extra priced leg. */
+	doubleChains: number;
+	references: { reading: string; text: string; visible: boolean }[];
 	seams: Measured[];
 	scale: Scale;
 	boundaries: Measured[];
@@ -224,6 +238,7 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			'help-row',
 			'about-pill',
 			'translation-sources',
+			'reading-reference',
 			'pager',
 			'subtitle',
 			'movement-nav',
@@ -277,6 +292,9 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			const source = element.previousElementSibling;
 			return source?.classList.contains('verse') && source.id ? `translation:${source.id}` : '';
 		}
+		if (element.classList.contains('reading-reference')) {
+			return `reference:${element.getAttribute('data-reading') ?? ''}`;
+		}
 		return element.id;
 	};
 	// A rendered row is everything its flow row places; in the bilingual
@@ -318,6 +336,16 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		blockedBodies: 0,
 		sourcesBetweenBodies: 0,
 		sourcedPartitions: 0,
+		blockedPartitions: 0,
+		referencePartitions: 0,
+		referencesBetweenBodies: 0,
+		interposedBodyBlocks: 0,
+		doubleChains: 0,
+		references: [...document.querySelectorAll('.reading-reference')].map((element) => ({
+			reading: element.getAttribute('data-reading') ?? '',
+			text: element.textContent?.trim() ?? '',
+			visible: visible(element)
+		})),
 		seams: [],
 		scale,
 		boundaries: []
@@ -363,6 +391,51 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			projected
 		});
 	};
+	// Only these ordered metadata chains can stand between rendered rows.
+	// Keep every block: an unknown block before a reference must not disappear.
+	const metadataChain = (tail: Element, head: Element, blocks: Element[]) => {
+		const kinds = blocks.map(classify);
+		if (
+			![
+				'translation-sources',
+				'reading-reference',
+				'translation-sources|reading-reference'
+			].includes(kinds.join('|'))
+		) {
+			out.overlaps.push(`unexplained interposed blocks (${kinds.join('|')})`);
+			return;
+		}
+		if (blocks.length === 2) out.doubleChains += 1;
+		const points = [tail, ...blocks, head];
+		for (let i = 1; i < points.length; i++) {
+			const before = points[i - 1];
+			const after = points[i];
+			const fromSource = before.classList.contains('translation-sources');
+			const toSource = after.classList.contains('translation-sources');
+			const fromReference = before.classList.contains('reading-reference');
+			const toReference = after.classList.contains('reading-reference');
+			out.seams.push({
+				before: endpoint(before) || classify(before),
+				after: endpoint(after) || classify(after),
+				kind:
+					fromSource && toReference
+						? 'sources-reference'
+						: toSource
+							? 'sources-above'
+							: fromSource
+								? 'sources-below'
+								: fromReference
+									? 'reference-below'
+									: 'reference-above',
+				found: true,
+				gap:
+					after.getBoundingClientRect().top -
+					(i === 1 ? rowBottom(before) : before.getBoundingClientRect().bottom),
+				translated: i === 1 && translatedRow(before),
+				grid: inGrid(i === 1 ? before : after)
+			});
+		}
+	};
 	// The same two boxes are adjacent under every contents wrapper between
 	// them and their box ancestor; measure each physical pair once.
 	const seen = new Map<Element, Set<Element>>();
@@ -380,7 +453,13 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			// between their rows below; their edges hold the seam's margins
 			// inside or outside the box by face, like the partition wrappers.
 			if (isWrapper(first) && isWrapper(second)) continue;
-			if (first.classList.contains('part-text') && second.classList.contains('part-continuation')) {
+			const opening = first.classList.contains('print-opening')
+				? first.querySelector(':scope > .part-text')
+				: first;
+			if (
+				opening?.classList.contains('part-text') &&
+				second.classList.contains('part-continuation')
+			) {
 				// An Ordo part's opening and continuation are one text. Their
 				// wrappers keep margins inside or outside the box by mode, so
 				// the seam is the gap between the last row the opening renders
@@ -388,7 +467,7 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 				// rows are and judged below against the priced spacing. A
 				// partition without rows on one side is reported, never
 				// measured between its wrappers.
-				const tail = rows(first).at(-1)?.at(-1);
+				const tail = rows(opening).at(-1)?.at(-1);
 				if (!tail) {
 					out.overlaps.push('an Ordo part opening renders no row at its seam');
 					continue;
@@ -413,32 +492,20 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 					);
 					continue;
 				}
-				const leading = boxChildren(second).filter(visible)[0];
-				if (leading?.classList.contains('translation-sources') && !leading.contains(head)) {
-					// The opening's body ends at its sources block and the next body
-					// follows it: both halves are judged against the block's margins.
-					out.sourcedPartitions += 1;
-					const box = leading.getBoundingClientRect();
-					out.seams.push(
-						{
-							before: endpoint(tail) || classify(tail),
-							after: 'sources',
-							kind: 'sources-above',
-							found: true,
-							gap: box.top - rowBottom(tail),
-							translated: translatedRow(tail),
-							grid: inGrid(tail)
-						},
-						{
-							before: 'sources',
-							after: endpoint(head) || classify(head),
-							kind: 'sources-below',
-							found: true,
-							gap: head.getBoundingClientRect().top - box.bottom,
-							translated: false,
-							grid: inGrid(head)
-						}
-					);
+				const children = boxChildren(second).filter(visible);
+				const headIndex = children.findIndex((child) => child === head || child.contains(head));
+				const leading = children.slice(0, headIndex);
+				if (headIndex < 0) {
+					out.overlaps.push('partition head has no box ancestor');
+					continue;
+				}
+				if (leading.length) {
+					out.blockedPartitions += 1;
+					if (leading.some((block) => block.classList.contains('translation-sources')))
+						out.sourcedPartitions += 1;
+					if (leading.some((block) => block.classList.contains('reading-reference')))
+						out.referencePartitions += 1;
+					metadataChain(tail, head, leading);
 					continue;
 				}
 				out.projected += 1;
@@ -502,53 +569,24 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		);
 		out.bodySeams += Math.max(0, slugs.size - 1);
 		let previous: { slug: string; members: Element[] } | null = null;
-		let blocked: Element | null = null;
+		let blocked: Element[] = [];
 		for (const child of continuation.children) {
 			const childRows = /^(flow-unit|measure|bilingual)$/.test(child.className.split(' ')[0])
 				? rows(child)
 				: [];
 			if (!childRows.length) {
-				// A block without rows between two bodies keeps them apart; only
-				// the translation sources may do so. After the last body it is a tail.
+				// Sources and reading references can stand between two bodies.
+				// After the last body a block is a tail.
 				// A hidden block (the sources on paper) keeps nothing apart.
-				if (visible(child)) blocked = child;
+				if (visible(child)) blocked.push(child);
 				continue;
 			}
 			for (const members of childRows) {
 				const slug = slugOf(members);
-				if (previous && previous.slug !== slug && blocked) {
+				if (previous && previous.slug !== slug && blocked.length) {
 					out.blockedBodies += 1;
-					if (!blocked.classList.contains('translation-sources')) {
-						out.overlaps.push(
-							`two bodies of one slot are kept apart by an unexplained block (${blocked.className})`
-						);
-					} else {
-						// The sources block keeps its own margins above and below; both
-						// halves of the seam are judged against them.
-						const tail = previous.members.at(-1)!;
-						const head = members[0];
-						const box = blocked.getBoundingClientRect();
-						out.seams.push(
-							{
-								before: endpoint(tail) || classify(tail),
-								after: 'sources',
-								kind: 'sources-above',
-								found: true,
-								gap: box.top - rowBottom(tail),
-								translated: translatedRow(tail),
-								grid: inGrid(tail)
-							},
-							{
-								before: 'sources',
-								after: endpoint(head) || classify(head),
-								kind: 'sources-below',
-								found: true,
-								gap: head.getBoundingClientRect().top - box.bottom,
-								translated: false,
-								grid: inGrid(head)
-							}
-						);
-					}
+					out.interposedBodyBlocks += blocked.length;
+					metadataChain(previous.members.at(-1)!, members[0], blocked);
 				} else if (previous && previous.slug !== slug) {
 					const tail = previous.members.at(-1)!;
 					const head = members[0];
@@ -568,7 +606,7 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 					});
 				}
 				previous = { slug, members };
-				blocked = null;
+				blocked = [];
 			}
 		}
 		// Counted from the DOM alone: sources blocks with a row before and after.
@@ -579,6 +617,13 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		out.sourcesBetweenBodies += children.filter(
 			(child, index) =>
 				child.classList.contains('translation-sources') &&
+				visible(child) &&
+				children.slice(0, index).some(holdsRows) &&
+				children.slice(index + 1).some(holdsRows)
+		).length;
+		out.referencesBetweenBodies += children.filter(
+			(child, index) =>
+				child.classList.contains('reading-reference') &&
 				visible(child) &&
 				children.slice(0, index).some(holdsRows) &&
 				children.slice(index + 1).some(holdsRows)
@@ -636,12 +681,101 @@ function expectedBoundary(measured: Measured, mode: number, scale: Scale): numbe
 			? scale.reading * STUDY_RUBRIC_SEAM
 			: scale.reading * (RUBRIC_MARGIN + scale.glossGap);
 	}
+	if (measured.kind === 'reference-above') return scale.reading * REFERENCE_ABOVE;
+	if (measured.kind === 'reference-below') return scale.reading * REFERENCE_BELOW;
+	if (measured.kind === 'sources-reference')
+		return scale.reading * Math.max(SOURCES_BELOW, REFERENCE_ABOVE);
 	if (measured.kind === 'sources-above') return scale.reading * SOURCES_ABOVE;
 	if (measured.kind === 'sources-below') return scale.reading * SOURCES_BELOW;
 	if (measured.kind !== 'verse') return null;
 	if (mode === 1) return 0;
 	if (mode === 0) return scale.bare * VERSE_TAIL;
 	return measured.grid ? scale.bare * GRID_TAIL : tail;
+}
+
+/** Reference presence and both physical edges are checked independently of
+ * the row census; deleting a heading must not turn its seam into a false pass. */
+function referenceFindings(data: GeometryProbe, url: string, mode: number): string[] {
+	const issues = [...data.overlaps];
+	const day = new URL(url, 'http://localhost').searchParams.get('dies') ?? '';
+	const expected = READING_REFERENCES[day];
+	const visible = data.references.filter((reference) => reference.visible);
+	if (expected) {
+		const wanted = expected.map((text, index) => ({
+			reading: `${DAY_PROPERS[day]}-${index === 0 ? 'epistola' : 'evangelium'}`,
+			text,
+			visible: true
+		}));
+		if (JSON.stringify(visible) !== JSON.stringify(wanted))
+			issues.push('reading reference identities differ');
+	}
+	for (const reference of visible) {
+		const id = `reference:${reference.reading}`;
+		const above = data.seams.filter((seam) => seam.after === id);
+		const below = data.seams.filter((seam) => seam.before === id);
+		if (above.length !== 1 || below.length !== 1)
+			issues.push(`reading reference edges missing: ${id}`);
+		for (const seam of [...above, ...below]) {
+			const expected = expectedBoundary(seam, mode, data.scale);
+			if (expected === null || Math.abs(seam.gap - expected) > EXACT) {
+				issues.push(`reading reference spacing differs: ${id} (${seam.kind})`);
+			}
+		}
+	}
+	return issues;
+}
+
+async function referenceControls(page: import('@playwright/test').Page, url: string, mode: number) {
+	const probe = () => page.evaluate(probeGeometry, boundariesFor(url));
+	expect(referenceFindings(await probe(), url, mode), 'reference healthy-before').toEqual([]);
+	for (const mutation of ['missing', 'spacing', 'unknown'] as const) {
+		await page.evaluate((mutation) => {
+			const reference = document.querySelector<HTMLElement>(
+				'.reading-reference[data-reading="dominica-i-adventus-evangelium"]'
+			);
+			if (!reference) throw new Error('reference control requires a real heading');
+			reference.dataset.geometryStyle = reference.getAttribute('style') ?? '';
+			reference.dataset.geometryHadStyle = String(reference.hasAttribute('style'));
+			reference.dataset.geometryControl = 'reference';
+			if (mutation === 'missing') reference.style.display = 'none';
+			if (mutation === 'spacing')
+				reference.style.marginBottom = 'calc(var(--reading) * 0.35 + 8px)';
+			if (mutation === 'unknown') {
+				const block = document.createElement('p');
+				block.dataset.geometryControl = 'unknown';
+				block.textContent = 'Interposed block';
+				reference.before(block);
+			}
+		}, mutation);
+		try {
+			const issues = referenceFindings(await probe(), url, mode);
+			const diagnostic =
+				mutation === 'missing'
+					? 'reading reference identities differ'
+					: mutation === 'spacing'
+						? 'reading reference spacing differs:'
+						: 'unexplained interposed blocks';
+			expect(
+				issues.some((issue) => issue.includes(diagnostic)),
+				`${mutation}: intended reference diagnostic`
+			).toBe(true);
+		} finally {
+			await page.evaluate(() => {
+				document.querySelector('[data-geometry-control="unknown"]')?.remove();
+				const reference = document.querySelector<HTMLElement>(
+					'[data-geometry-control="reference"]'
+				);
+				if (!reference) throw new Error('reference control lost its restoration target');
+				if (reference.dataset.geometryHadStyle === 'true')
+					reference.setAttribute('style', reference.dataset.geometryStyle ?? '');
+				else reference.removeAttribute('style');
+				delete reference.dataset.geometryStyle;
+				delete reference.dataset.geometryHadStyle;
+				delete reference.dataset.geometryControl;
+			});
+		}
+		expect(referenceFindings(await probe(), url, mode), `${mutation}: healthy-after`).toEqual([]);
+	}
 }
 
 /** Compare one page at one width across the modes measured. Returns how many
@@ -793,6 +927,7 @@ async function measure(
 	expect(data.scale.reading, 'the reading token must resolve').toBeGreaterThan(0);
 	expect(data.scale.bare).toBeGreaterThan(0);
 	expect(data.scale.glossGap).toBeGreaterThan(0);
+	expect(referenceFindings(data, url, mode), `${url}: reading references`).toEqual([]);
 	return data;
 }
 
@@ -822,6 +957,11 @@ async function sweep(
 	let blockedBodies = 0;
 	let sourcesBetweenBodies = 0;
 	let sourcedPartitions = 0;
+	let blockedPartitions = 0;
+	let referencePartitions = 0;
+	let referencesBetweenBodies = 0;
+	let interposedBodyBlocks = 0;
+	let doubleChains = 0;
 	let judgedBoundaries = 0;
 	let judgedSeams = 0;
 
@@ -850,6 +990,19 @@ async function sweep(
 			blockedBodies += data.blockedBodies;
 			sourcesBetweenBodies += data.sourcesBetweenBodies;
 			sourcedPartitions += data.sourcedPartitions;
+			blockedPartitions += data.blockedPartitions;
+			referencePartitions += data.referencePartitions;
+			referencesBetweenBodies += data.referencesBetweenBodies;
+			interposedBodyBlocks += data.interposedBodyBlocks;
+			doubleChains += data.doubleChains;
+			if (
+				width === 1512 &&
+				step === 'normal' &&
+				mode === 2 &&
+				url === '/app/en/ordo/catechumenorum?dies=2026-11-29'
+			) {
+				await referenceControls(page, url, mode);
+			}
 			if (!data.gaps.length) emptyRuns.push(`${url} @${width} m${mode}`);
 			perMode[mode] = data;
 			for (const issue of [...data.overflow, ...data.targets, ...data.overlaps]) {
@@ -873,7 +1026,7 @@ async function sweep(
 	expect(partitions, 'Ordo partitions must be on the matrix').toBeGreaterThan(0);
 	expect(bodySeams, 'slots with several bodies must be on the matrix').toBeGreaterThan(0);
 	expect(
-		blockedBodies,
+		sourcesBetweenBodies,
 		'a seam kept apart by a sources block must be on the matrix'
 	).toBeGreaterThan(0);
 	expect(
@@ -881,7 +1034,7 @@ async function sweep(
 		'a partition opened by a sources block must be on the matrix'
 	).toBeGreaterThan(0);
 	expect(
-		projected + trailing + sourcedPartitions,
+		projected + trailing + blockedPartitions,
 		'every Ordo partition must be measured between rows'
 	).toBe(partitions);
 	expect(
@@ -889,11 +1042,14 @@ async function sweep(
 		'every seam between two bodies of a slot must be measured'
 	).toBe(bodySeams);
 	expect(
-		blockedBodies,
-		'a body seam is kept apart only by a sources block that is really there'
-	).toBe(sourcesBetweenBodies);
+		interposedBodyBlocks,
+		'every intervening source and reference block must be accounted for'
+	).toBe(sourcesBetweenBodies + referencesBetweenBodies);
+	expect(referencesBetweenBodies, 'body references must be on the matrix').toBeGreaterThan(0);
+	expect(referencePartitions, 'partition references must be on the matrix').toBeGreaterThan(0);
+	expect(doubleChains, 'sources→reference chains must be on the matrix').toBeGreaterThan(0);
 	expect(judgedSeams, 'every projected seam must be judged').toBe(
-		projected + projectedBodies + 2 * (blockedBodies + sourcedPartitions)
+		projected + projectedBodies + 2 * (blockedBodies + blockedPartitions) + doubleChains
 	);
 	expect(judgedBoundaries, 'named boundary coverage').toBe(expectedBoundaries);
 	expect(emptyRuns, 'every matrix cell must measure adjacent blocks').toEqual([]);
@@ -944,8 +1100,22 @@ for (const width of WIDTHS) {
 				data.bodySeams,
 				`${url} @${width}: the slot holds two bodies on paper`
 			).toBeGreaterThan(0);
-			expect(data.blockedBodies, `${url} @${width}: paper prints no block between bodies`).toBe(0);
-			expect(data.sourcesBetweenBodies).toBe(0);
+			expect(data.sourcesBetweenBodies, 'paper hides translation sources').toBe(0);
+			expect(data.sourcedPartitions).toBe(0);
+			expect(data.blockedBodies, 'paper retains reading references').toBe(
+				data.referencesBetweenBodies
+			);
+			expect(data.referencesBetweenBodies).toBeGreaterThan(0);
+			expect(data.referencePartitions).toBeGreaterThan(0);
+			expect(data.projected + data.trailing + data.blockedPartitions).toBe(data.partitions);
+			expect(data.projectedBodies + data.blockedBodies).toBe(data.bodySeams);
+			expect(data.seams.length).toBe(
+				data.projected +
+					data.projectedBodies +
+					2 * (data.blockedBodies + data.blockedPartitions) +
+					data.doubleChains
+			);
+			expect(data.overlaps, 'paper permits no unexplained interposed block').toEqual([]);
 			const seams = data.seams.filter(
 				(seam) =>
 					/dominica-i-adventus-graduale-s02$/.test(seam.before) &&

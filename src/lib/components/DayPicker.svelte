@@ -1,6 +1,7 @@
 <script lang="ts">
 	// Every Ordo occurrence has a date. Only a Mass belonging to that date can
 	// override its default; undated reading belongs to the formulary catalogue.
+	import { untrack } from 'svelte';
 	import { pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
@@ -17,6 +18,7 @@
 	import { isCivilDate, isoDate } from '$lib/kalendarium';
 	import { dayById } from '$lib/proprium';
 	import { commemorationTitle } from '$lib/corpus-metadata';
+	import { commemorationName } from '$lib/commemorationes';
 
 	let { lang }: { lang: Lang } = $props();
 	const msgs = $derived(M[lang]);
@@ -55,7 +57,24 @@
 		selectedDate = choice.date;
 		applied = true;
 		if (remember) rememberChoice(choice);
-		void chooseDay(choice, lang);
+		// Language remains a location-effect dependency even when the current
+		// body is already settled and no load is needed on this invocation.
+		const language = lang;
+		// Word/segment history changes do not choose a different Mass. Keep an
+		// already settled body mounted, including its focused word. Untracked:
+		// payload arrival must not become a dependency of the location effect.
+		const settled = untrack(
+			() =>
+				choice.mass !== null &&
+				proper.date === choice.date &&
+				proper.day === choice.mass &&
+				!proper.loading &&
+				!proper.failed &&
+				!proper.unwritten &&
+				proper.payload?.day === choice.mass &&
+				proper.payload?.lang === language
+		);
+		if (!settled) void chooseDay(choice, language);
 	}
 
 	// A deliberate URL wins, then today's unexpired memory, then today's civil
@@ -190,6 +209,17 @@
 										: msgs.commemorationWhere.mass
 								)
 								.replace('{title}', commemorationTitle(omitted.id, lang))}</span
+						>
+					{/each}
+					<!-- A required commemoration resolved to a formulary whose orations this edition
+					     does not yet carry: named as its heading names it, or by its own title where
+					     that formulary is not in this edition (an Ember day of Advent), never left out. -->
+					{#each variant.missing as owed (owed.commemoration.id)}
+						<span class="state commemoration-missing"
+							>{msgs.dayCommemorationMissing.replace(
+								'{title}',
+								commemorationName(owed.commemoration.id, owed.formulary, lang)
+							)}</span
 						>
 					{/each}
 				{/each}

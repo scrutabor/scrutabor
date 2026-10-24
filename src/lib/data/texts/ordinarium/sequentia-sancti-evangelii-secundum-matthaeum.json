@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+  "title":"Sequéntia sancti Evangélii secúndum Matthǽum",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Sequéntia","l":"sequentia","m":24},{"i":"w002","f":"sancti","l":"sanctus","m":67,"h":"w003"},{"i":"w003","f":"Evangélii","l":"evangelium","m":68},{"i":"w004","f":"secúndum","l":"secundum","m":3,"h":"w005"},{"i":"w005","f":"Matthǽum","l":"Matthaeus","m":35,"a":7}]}
+  ]
+}

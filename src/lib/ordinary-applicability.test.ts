@@ -1,3 +1,4 @@
+import { settledSelection as settled, unresolvedPayloadCases } from './ordinary-test-fixtures';
 import { expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { render } from 'svelte/server';
@@ -13,15 +14,6 @@ import { role, ROLES } from './role.svelte';
 import { expectParagraphLatin } from './ordo-test-context';
 import { findOrphans } from './polish';
 
-const settled = (date: string, mass: string | null, lang: 'pl' | 'en'): GospelPreparationState => ({
-	date,
-	mass,
-	loadedMass: mass,
-	loadedLanguage: mass ? lang : null,
-	loading: false,
-	failed: false,
-	unwritten: false
-});
 const actual = [
 	['2026-11-29', 'dominica-i-adventus', 'omitted', 'required'],
 	['2026-04-26', 'dominica-iii-post-pascha', 'required', 'required'],
@@ -64,11 +56,7 @@ it.each(actual)('uses only the owned settled branches at %s/%s', (date, mass, gl
 const unsettled: [string, Partial<GospelPreparationState>][] = [
 	['initial', { date: null, mass: null, loadedMass: null, loadedLanguage: null }],
 	['invalid date', { date: '2026-02-30' }],
-	['loading', { loading: true }],
-	['failure', { failed: true }],
-	['unwritten', { unwritten: true }],
-	['missing payload', { loadedMass: null, loadedLanguage: null }],
-	['stale Mass', { loadedMass: 'vigilia-paschalis' }],
+	...unresolvedPayloadCases,
 	['stale language', {}],
 	['foreign date', { date: '2026-04-04' }],
 	['unknown Mass', { mass: 'unknown', loadedMass: 'unknown' }],

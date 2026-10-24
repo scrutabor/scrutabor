@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.1.0",
+  "schema_version": "6.6.0",
   "corpus_schema": "0.21.0",
   "language": "pl",
   "direction": "ltr",
@@ -348,6 +348,11 @@
       "path": "languages/pl/texts/ordinarium/in-spiritu-humilitatis.json"
     },
     {
+      "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+      "path": "languages/pl/texts/ordinarium/initium-sancti-evangelii-secundum-matthaeum.json",
+      "title": "Początek świętej Ewangelii według Mateusza"
+    },
+    {
       "id": "ordinarium.introibo",
       "path": "languages/pl/texts/ordinarium/introibo.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/introibo.json"
@@ -399,6 +404,106 @@
       "evidence": "languages/pl/bibliography/texts/ordinarium/lavabo.json"
     },
     {
+      "id": "ordinarium.lectio-actuum-apostolorum",
+      "path": "languages/pl/texts/ordinarium/lectio-actuum-apostolorum.json",
+      "title": "Czytanie z Dziejów Apostolskich"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-iacobi-apostoli.json",
+      "title": "Czytanie z Listu świętego Jakuba Apostoła"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-ioannis-apostoli.json",
+      "title": "Czytanie z Listu świętego Jana Apostoła"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-colossenses.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Kolosan"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-corinthios.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Koryntian"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-ephesios.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Efezjan"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-galatas.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Galatów"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-hebraeos.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Hebrajczyków"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-philippenses.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Filipian"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-romanos.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Rzymian"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Tesaloniczan"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-titum.json",
+      "title": "Czytanie z Listu świętego Pawła Apostoła do Tytusa"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+      "path": "languages/pl/texts/ordinarium/lectio-epistolae-beati-petri-apostoli.json",
+      "title": "Czytanie z Listu świętego Piotra Apostoła"
+    },
+    {
+      "id": "ordinarium.lectio-ezechielis-prophetae",
+      "path": "languages/pl/texts/ordinarium/lectio-ezechielis-prophetae.json",
+      "title": "Czytanie z proroka Ezechiela"
+    },
+    {
+      "id": "ordinarium.lectio-isaiae-prophetae",
+      "path": "languages/pl/texts/ordinarium/lectio-isaiae-prophetae.json",
+      "title": "Czytanie z proroka Izajasza"
+    },
+    {
+      "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+      "path": "languages/pl/texts/ordinarium/lectio-libri-apocalypsis-beati-ioannis-apostoli.json",
+      "title": "Czytanie z Księgi Apokalipsy świętego Jana Apostoła"
+    },
+    {
+      "id": "ordinarium.lectio-libri-iudith",
+      "path": "languages/pl/texts/ordinarium/lectio-libri-iudith.json",
+      "title": "Czytanie z Księgi Judyty"
+    },
+    {
+      "id": "ordinarium.lectio-libri-machabaeorum",
+      "path": "languages/pl/texts/ordinarium/lectio-libri-machabaeorum.json",
+      "title": "Czytanie z Księgi Machabejskiej"
+    },
+    {
+      "id": "ordinarium.lectio-libri-sapientiae",
+      "path": "languages/pl/texts/ordinarium/lectio-libri-sapientiae.json",
+      "title": "Czytanie z Księgi Mądrości"
+    },
+    {
+      "id": "ordinarium.lectio-malachiae-prophetae",
+      "path": "languages/pl/texts/ordinarium/lectio-malachiae-prophetae.json",
+      "title": "Czytanie z proroka Malachiasza"
+    },
+    {
       "id": "ordinarium.libera-nos",
       "path": "languages/pl/texts/ordinarium/libera-nos.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/libera-nos.json"
@@ -446,6 +551,11 @@
       "id": "ordinarium.panem-caelestem",
       "path": "languages/pl/texts/ordinarium/panem-caelestem.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/panem-caelestem.json"
+    },
+    {
+      "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+      "path": "languages/pl/texts/ordinarium/passio-domini-nostri-iesu-christi-secundum-matthaeum.json",
+      "title": "Męka Pana naszego Jezusa Chrystusa według Mateusza"
     },
     {
       "id": "ordinarium.pater-noster",
@@ -624,6 +734,26 @@
       "path": "languages/pl/texts/ordinarium/sanctus.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/sanctus.json",
       "title": "Święty, Święty, Święty"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+      "path": "languages/pl/texts/ordinarium/sequentia-sancti-evangelii-secundum-ioannem.json",
+      "title": "Ciąg dalszy świętej Ewangelii według Jana"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+      "path": "languages/pl/texts/ordinarium/sequentia-sancti-evangelii-secundum-lucam.json",
+      "title": "Ciąg dalszy świętej Ewangelii według Łukasza"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+      "path": "languages/pl/texts/ordinarium/sequentia-sancti-evangelii-secundum-marcum.json",
+      "title": "Ciąg dalszy świętej Ewangelii według Marka"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+      "path": "languages/pl/texts/ordinarium/sequentia-sancti-evangelii-secundum-matthaeum.json",
+      "title": "Ciąg dalszy świętej Ewangelii według Mateusza"
     },
     {
       "id": "ordinarium.simili-modo",

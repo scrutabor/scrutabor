@@ -541,8 +541,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/sanctus',
 				note: {
-					pl: 'Ostatnie słowa prefacji przechodzą wprost w Sanctus. Zaraz po nim zaczyna się cichy Kanon.',
-					en: 'The Preface runs straight into the Sanctus. The silent Canon begins the moment it ends.'
+					pl: 'Po prefacji kapłan odmawia Sanctus i rozpoczyna cichy Kanon. We Mszy śpiewanej schola śpiewa ten sam tekst, a wierni mogą dołączyć. Śpiew może trwać już podczas Kanonu.',
+					en: 'After the Preface the priest recites the Sanctus and begins the silent Canon. At sung Mass the choir sings the same text and the faithful may join. The singing may continue during the Canon.'
 				}
 			},
 			{

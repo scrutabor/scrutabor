@@ -146,38 +146,27 @@ it.each(['pl', 'en'] as const)(
 	}
 );
 
-it.each(['pl', 'en'] as const)('scopes the %s Palm response to its loaded Gospel', (lang) => {
-	const passion = ['proprium/dominica-ii-passionis-evangelium'];
-	const entry = 'laus-tibi-christe',
-		mass = 'dominica-ii-passionis';
-	expect(ordoResponseContext(entry, mass, passion, lang)).toEqual({
-		referenceOnly: true,
-		note: ordoContext(entry, mass, false, lang)
-	});
-	for (const keys of [[], [...passion, 'proprium/other-evangelium']]) {
-		const state = ordoResponseContext(entry, mass, keys, lang);
-		expect(state?.referenceOnly).toBe(true);
-		expect(state?.note).toContain(lang === 'pl' ? 'tylko do wglądu' : 'reference only');
-		expect(state?.note).toContain(
-			lang === 'pl' ? 'nie ma jednoznacznie wczytanej' : 'no single Gospel is loaded'
-		);
+it.each(['pl', 'en'] as const)('keeps unconfirmed after-responses as %s references', (lang) => {
+	const state = {
+		date: '2026-03-29',
+		mass: 'dominica-ii-passionis',
+		loadedMass: 'dominica-ii-passionis',
+		loadedLanguage: lang,
+		loading: false,
+		failed: false,
+		unwritten: false
+	};
+	for (const entry of ['deo-gratias-epistolae', 'laus-tibi-christe']) {
+		const context = ordoResponseContext(entry, state, [], {}, undefined, lang);
+		expect(context?.reason).toBe('unconfirmed');
+		expect(context?.referenceOnly).toBe(true);
+		expect(context?.note).toContain(lang === 'pl' ? 'tylko do wglądu' : 'reference only');
+		expect(context?.note).not.toContain(lang === 'pl' ? 'Po Pasji' : 'After the Passion');
 	}
-	// A future loaded ordinary-Gospel alternative must not receive the
-	// Passion-specific note. This does not add such an assembly to the corpus.
-	expect(ordoResponseContext(entry, mass, ['proprium/other-evangelium'], lang)).toEqual({
-		referenceOnly: false
-	});
-	for (const other of [
-		null,
-		'dominica-iii-post-pascha',
-		'vigilia-paschalis',
-		'vigilia-pentecostes'
-	])
-		expect(ordoResponseContext(entry, other, passion, lang)).toBeUndefined();
 	for (const other of ORDO.flatMap((movement) => movement.entries).filter(
-		(part) => part.id !== entry
+		(entry) => !['deo-gratias-epistolae', 'laus-tibi-christe'].includes(entry.id)
 	))
-		expect(ordoResponseContext(other.id, mass, passion, lang), other.id).toBeUndefined();
+		expect(ordoResponseContext(other.id, state, [], {}, undefined, lang)).toBeUndefined();
 });
 
 it('explains the Latin Pater faculty without cancelling the priest’s quiet Amen', () => {
@@ -280,7 +269,7 @@ it('binds every Polish note of every context helper without changing its wording
 				for (const note of [
 					ordoContext(id, mass, false, lang),
 					ordoContext(id, mass, true, lang),
-					ordoResponseContext(id, mass, keys, lang)?.note,
+					ordoResponseContext(id, state, [], {}, undefined, lang)?.note,
 					ordoBlessingContext(id, state, lang)?.note,
 					ordoMinisterBlessingContext(id, state, keys, lang)?.note
 				])

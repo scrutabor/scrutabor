@@ -1,3 +1,4 @@
+import { readingIntroductionOwners } from './introductiones';
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
 import { CORPUS_METRICS, TEXT_KEYS, hasText } from './corpus';
@@ -26,7 +27,9 @@ describe('every vendored text is reachable, and every named text exists', () => 
 			.map((e) => e.text)
 			.filter((k): k is string => Boolean(k)),
 		...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text)),
-		...DISMISSAL_TEXT_KEYS
+		...DISMISSAL_TEXT_KEYS,
+		...readingIntroductionOwners('epistola'),
+		...readingIntroductionOwners('evangelium')
 	]);
 
 	// Reached by lemma pages and direct links instead of by a shelf.

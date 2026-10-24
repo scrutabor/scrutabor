@@ -9,6 +9,7 @@ import headsData from './data/lexicon/heads.json';
 import { LANGS, type Lang } from './i18n';
 import { bindProse } from './polish';
 import { remember } from './remember';
+import { validateParticipationPerformance } from './participation-performance';
 import {
 	ROOT_MANIFEST as manifest,
 	TEXT_KEYS,
@@ -93,6 +94,7 @@ export interface Participation {
 	gradus?: number;
 	source: string;
 	conditional?: true;
+	performance?: { speaker: 'schola'; voice: 'cantus'; source: 'DMS 25 b; 26' };
 }
 
 export interface Delivery {
@@ -384,6 +386,7 @@ export function expandDocument(
 		return segment;
 	});
 
+	validateParticipationPerformance(text, manifest.schema_version);
 	return {
 		text: text as unknown as TextDocument,
 		gloss: (languageArtifact.language === 'pl' ? bindProse(gloss) : gloss) as GlossDocument
@@ -495,6 +498,7 @@ export async function loadCoreText(key: string): Promise<TextDocument | undefine
 		}
 		return segment;
 	});
+	validateParticipationPerformance(text, manifest.schema_version);
 	return text as unknown as TextDocument;
 }
 

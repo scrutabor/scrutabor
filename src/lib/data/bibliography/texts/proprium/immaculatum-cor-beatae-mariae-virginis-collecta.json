@@ -14,10 +14,93 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital 51-word reading is a derived collation aid, not the controlling edition. It agrees with most of the body but omits eiusdem in the conclusion; the apparatus records that substantive omission and accidental variants."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 123",
+    "scan": "leaf n202 / PDF p. 203",
+    "section": "Feria II post dominicam I Passionis, Postcommunio (Sacramenti tui); seventeen-word conclusion prefix",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n202/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.conclusion-prefix.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The accented seventeen-word prefix through Deus supports tuum: Qui, no comma after Christum, and Sancti, Deus. It ends with a full stop here and does not print per omnia saecula saeculorum or Amen at this locus."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xvii",
+    "scan": "leaf n22 / PDF p. 23",
+    "section": "RG 115 a",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.conclusion-formula.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The unaccented ordinary full Father-directed formula supplies 21 words followed by Amen. The proper cue and RG 115 e add eiusdem; this locus alone does not establish the variant."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 226",
+    "scan": "leaf n305 / PDF p. 306",
+    "section": "Ordo Missae terminal chant and response",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n305/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.conclusion-terminal.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This chant prints Per omnia saecula saeculorum and Amen. The joined prose conclusion uses lower-case per after Deus; this is a declared presentation seam, not a continuous print locus for this prayer."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 647",
+    "scan": "leaf n728 / PDF p. 729",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n728/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This page identifies and prints the 29-word proper body and its short Per Dominum ... in unitate eiusdem conclusion. It does not print the expanded conclusion continuously; the declared shared uses supply that expansion."
+    }
+   ],
+   "verified_on": "2026-10-24"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -42,22 +125,23 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 647",
-    "scan": "leaf n728 / PDF p. 729",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n728/mode/1up"
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "RG 115 b-e and 116",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.mr1962",
+     "id": "use.proprium.immaculatum-cor-beatae-mariae-virginis-collecta.conclusion-variants.mr1962",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "RG 115 e requires in unitate eiusdem Spiritus Sancti when the Holy Spirit is mentioned. This prayer explicitly mentions Spiritus Sancti in its body and prints the eiusdem short cue; preserve that variant. RG 116 preserves peculiar proper conclusions."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-24"
   }
  ],
  "witnesses": []

@@ -1,0 +1,8 @@
+{
+  "id":"ordinarium.lectio-libri-sapientiae",
+  "language":"en",
+  "about":"The heading of a reading from the wisdom books of the Old Testament. The 1962 Roman Missal prints it over the Epistles of several feasts of the Blessed Virgin Mary, among them her Nativity and the Visitation, and over those of Saint Joseph, Spouse of the Blessed Virgin Mary, of Saint Anne, of Saint Joachim, of Saint John the Apostle and Evangelist and of Saints Philip and James.",
+  "seg":[
+    {"id":"s01","tr":"A reading from the book of Wisdom","g":["A reading","from the book","of Wisdom"],"ex":{"w003":"The missal sets this heading over readings from Proverbs, Ecclesiasticus and the Song of Songs as well as from the book of Wisdom itself, so “Wisdom” here is wider than the title of one book."}}
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "id":"ordinarium.lectio-libri-sapientiae",
+  "language":"pl",
+  "about":"Nagłówek, który mszał drukuje nad czytaniami z ksiąg mądrościowych Starego Testamentu.",
+  "seg":[
+    {"id":"s01","tr":"Czytanie z Księgi Mądrości","g":["Czytanie","z Księgi","Mądrości"],"ex":{"w003":"Tym nagłówkiem mszał zapowiada czytania nie tylko z Księgi Mądrości, lecz także z Księgi Przysłów, z Mądrości Syracha i z Pieśni nad Pieśniami. Księgę, z której pochodzi czytanie, wskazuje odnośnik wydrukowany pod nagłówkiem."}}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.lectio-actuum-apostolorum",
+  "title":"Léctio Áctuum Apostolórum",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20,"a":6},{"i":"w002","f":"Áctuum","l":"actus","m":361,"a":6},{"i":"w003","f":"Apostolórum","l":"apostolus","m":79,"a":6}]}
+  ]
+}

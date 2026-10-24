@@ -3,6 +3,18 @@
  "language": "pl",
  "titles": [
   {
+   "id": "dominica-impedita",
+   "title": "Niedziela przeszkodzona"
+  },
+  {
+   "id": "feria-adventus",
+   "title": "Dzień powszedni Adwentu"
+  },
+  {
+   "id": "festum-impeditum",
+   "title": "Święto przeszkodzone"
+  },
+  {
    "id": "litaniae-maiores",
    "title": "Litanie Większe"
   },

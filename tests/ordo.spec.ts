@@ -42,11 +42,11 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 		parts += await page.locator('.part-title, .unfold-title').count();
 	}
 	expect(parts).toBe(entries.filter((entry) => !entry.onlyWhenPresent).length);
-	await page.goto('/app/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum?missa=none');
 
 	// the texts this edition carries are inlined in full (read at the bare
 	// step, where the interlinear glosses do not interleave with the Latin)
-	await page.goto('/app/pl/ordo/praeparatio');
+	await page.goto('/app/pl/ordo/praeparatio?missa=none');
 	await setHelp(page, 0);
 	// two Confiteors stand here now; this is the ministers', the one the
 	// faithful say
@@ -69,10 +69,10 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 		['sanctus', 'canon'],
 		['agnus-dei', 'communio']
 	]) {
-		await page.goto(`/app/pl/ordo/${movement}`);
+		await page.goto(`/app/pl/ordo/${movement}?missa=none`);
 		await expect(page.locator(`.part a[href="/app/pl/ordinarium/${slug}"]`)).toHaveCount(1);
 	}
-	await page.goto('/app/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum?missa=none');
 
 	// the day's own texts are marked where they fall
 	await expect(page.locator('.mark', { hasText: 'z formularza dnia' }).first()).toBeVisible();
@@ -85,7 +85,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	// the spine names something new.
 	const remaining = ORDO.find((m) => m.entries.some((e) => e.kind === 'pending'));
 	if (remaining) {
-		await page.goto(`/app/pl/ordo/${remaining.id}`);
+		await page.goto(`/app/pl/ordo/${remaining.id}?missa=none`);
 		await expect(
 			page.locator('.mark', { hasText: 'jeszcze nie w tym wydaniu' }).first()
 		).toBeVisible();
@@ -214,13 +214,17 @@ bareTest(
 		await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
 		const seen = new Set<string>();
 		for (const m of ORDO) {
-			await page.goto(`/app/pl/ordo/${m.id}`);
+			await page.goto(`/app/pl/ordo/${m.id}?missa=none`);
 			const hrefs = await page.evaluate(() =>
 				[...document.querySelectorAll('a.part-title')].map((a) => a.getAttribute('href')!)
 			);
 			for (const href of hrefs) seen.add(href);
 		}
 		expect(seen.size, 'the Ordo links to its texts').toBeGreaterThan(30);
+		// Seasonal omission must not shrink this fixed-Ordinary route inventory.
+		for (const slug of ['gloria', 'credo']) {
+			expect(seen.has(`/app/pl/ordinarium/${slug}`)).toBe(true);
+		}
 
 		const missing: string[] = [];
 		for (const href of seen) {
@@ -322,7 +326,7 @@ test('an opened aside says it is one, and can be shut again', async ({ page }) =
 });
 
 test('the Ordo discloses only bibliography evidence accepted for that text', async ({ page }) => {
-	await page.goto('/app/pl/ordo/canon');
+	await page.goto('/app/pl/ordo/canon?missa=none');
 	await setHelp(page, 2);
 	const teIgitur = page.locator('.part', { hasText: 'Te ígitur' });
 	await teIgitur.locator('.unfold').click();
@@ -334,7 +338,7 @@ test('the Ordo discloses only bibliography evidence accepted for that text', asy
 	await expect(teIgitur.locator('.translation-sources')).toHaveCount(0);
 	await expect(teIgitur).not.toContainText('Powściągliwość i Praca');
 
-	await page.goto('/app/pl/ordo/catechumenorum');
+	await page.goto('/app/pl/ordo/catechumenorum?missa=none');
 	await setHelp(page, 2);
 	const gloria = page.locator('.part', {
 		has: page.locator('a.part-title[href="/app/pl/ordinarium/gloria"]')
@@ -392,7 +396,8 @@ test('the responses everyone makes are marked as such', async ({ page }) => {
 test('the responses after the readings follow the sourced participation lists', async ({
 	page
 }) => {
-	await page.goto('/app/pl/ordo/catechumenorum');
+	// Active attribution requires selected readings, not Ordinary-only reference text.
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-04-26');
 	await settled(page);
 	const deo = page.locator('.part', { hasText: 'Deo grátias' });
 	const laus = page.locator('.part', { hasText: 'Laus tibi, Christe' });

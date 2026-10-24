@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+  "title":"Léctio libri Apocalýpsis beáti Ioánnis Apóstoli",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20,"a":6},{"i":"w002","f":"libri","l":"liber_volumen","m":54,"a":6},{"i":"w003","f":"Apocalýpsis","l":"apocalypsis","m":13,"a":6},{"i":"w004","f":"beáti","l":"beatus","m":99,"h":"w005","a":6},{"i":"w005","f":"Ioánnis","l":"Ioannes","m":69,"a":6},{"i":"w006","f":"Apóstoli","l":"apostolus","m":54,"a":6}]}
+  ]
+}

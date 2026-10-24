@@ -8,155 +8,55 @@
 // stands whether or not the day supplies the part it opens (the Easter Vigil's Offertory keeps
 // its greeting and Orémus without an antiphon).
 import tableData from './data/introductiones.json';
-import { ROOT_MANIFEST, TEXT_KEYS } from './corpus-metadata';
-import type { GlossDocument, Segment, Speaker, TextDocument, Voice } from './corpus';
-import { object, exactKeys } from './variant-resource';
+import { ROOT_MANIFEST, TEXT_KEYS, FORMULARY_METADATA } from './corpus-metadata';
+import type { GlossDocument, Segment, TextDocument } from './corpus';
 import { textAnchor } from './text-anchor';
 
-export const INTRODUCTION_ROLES = [
-	'greeting',
-	'response',
-	'invitation',
-	'gospel-response'
-] as const;
-export type IntroductionRole = (typeof INTRODUCTION_ROLES)[number];
+export { INTRODUCTION_ROLES } from './introduction-contract';
+export type {
+	IntroductionRole,
+	IntroductionUnit,
+	IntroductionDelivery,
+	IntroductionOccurrence,
+	IntroductionEvent
+} from './introduction-contract';
+import { parseIntroductionResource, roleActor } from './introduction-contract';
+import type { IntroductionEvent, ReadingRole } from './introduction-contract';
 
-/** The events this edition of the Ordo renders. The Gospel greeting waits for the reading
- * announcements it belongs with, and for the Passion, which takes no greeting. */
+/** Fixed prayer introductions remain separate from reading-dependent events. */
 export const RENDERED_INTRODUCTIONS = [
 	'collecta-introductio',
 	'offertorium-introductio',
 	'postcommunio-introductio'
 ] as const;
 
-const DELIVERY = {
-	lecta: { voice: 'clara', speakers: ['sacerdos', 'minister'] },
-	cantu: { voice: 'cantus', speakers: ['sacerdos', 'schola'] }
-} as const;
-const IDENTITY = /^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/;
-const ADDRESS = /^[a-z]+\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const SEGMENT = /^s[0-9]{2,}$/;
-const WORD = /^w[0-9]{3,}$/;
-
-export interface IntroductionUnit {
-	id: string;
-	role: IntroductionRole;
-	/** The owner's slash address. */
-	text: string;
-	segment: string;
-	/** The owner's word ids of that segment, in stored order. */
-	words: string[];
-	source: string;
-}
-export interface IntroductionDelivery {
-	speaker: Speaker;
-	voice: Voice;
-	source: string;
-}
-export interface IntroductionOccurrence {
-	unit: string;
-	lecta: IntroductionDelivery;
-	cantu: IntroductionDelivery;
-}
-export interface IntroductionEvent {
-	id: string;
-	/** The Ordo part it opens. */
-	before: string;
-	source: string;
-	occurrences: IntroductionOccurrence[];
-}
-
-function nonempty(value: unknown): value is string {
-	return typeof value === 'string' && value.trim().length > 0;
-}
-
-function ordered(ids: string[]): boolean {
-	return ids.every((id, index) => index === 0 || ids[index - 1] < id);
-}
-
-/** Reject a broken resource rather than omit or invent an introduction. */
-export function createIntroductionLookup(value: unknown, knownTexts = new Set(TEXT_KEYS)) {
-	if (
-		!object(value) ||
-		!exactKeys(value, ['schema_version', 'units', 'events']) ||
-		value.schema_version !== '1.0.0' ||
-		!Array.isArray(value.units) ||
-		!value.units.length ||
-		!Array.isArray(value.events) ||
-		!value.events.length
-	)
-		throw new Error('invalid introduction resource');
-	const units = new Map<string, IntroductionUnit>();
-	for (const unit of value.units) {
-		if (
-			!object(unit) ||
-			!exactKeys(unit, ['id', 'role', 'text', 'segment', 'words', 'source']) ||
-			typeof unit.id !== 'string' ||
-			!IDENTITY.test(unit.id) ||
-			units.has(unit.id) ||
-			!(INTRODUCTION_ROLES as readonly unknown[]).includes(unit.role) ||
-			typeof unit.text !== 'string' ||
-			!ADDRESS.test(unit.text) ||
-			!knownTexts.has(unit.text) ||
-			typeof unit.segment !== 'string' ||
-			!SEGMENT.test(unit.segment) ||
-			!Array.isArray(unit.words) ||
-			!unit.words.length ||
-			new Set(unit.words).size !== unit.words.length ||
-			unit.words.some((word) => typeof word !== 'string' || !WORD.test(word)) ||
-			!nonempty(unit.source)
-		)
-			throw new Error('invalid introduction unit');
-		units.set(unit.id, unit as unknown as IntroductionUnit);
-	}
-	if (!ordered([...units.keys()])) throw new Error('introduction units out of order');
-	const events: IntroductionEvent[] = [];
-	for (const event of value.events) {
-		if (
-			!object(event) ||
-			!exactKeys(event, ['id', 'before', 'source', 'occurrences']) ||
-			typeof event.id !== 'string' ||
-			!IDENTITY.test(event.id) ||
-			events.some(({ id }) => id === event.id) ||
-			!nonempty(event.before) ||
-			!nonempty(event.source) ||
-			!Array.isArray(event.occurrences) ||
-			!event.occurrences.length
-		)
-			throw new Error('invalid introduction event');
-		for (const occurrence of event.occurrences) {
-			if (
-				!object(occurrence) ||
-				!exactKeys(occurrence, ['unit', 'lecta', 'cantu']) ||
-				typeof occurrence.unit !== 'string' ||
-				!units.has(occurrence.unit)
-			)
-				throw new Error('invalid introduction occurrence');
-			for (const form of ['lecta', 'cantu'] as const) {
-				const delivery = occurrence[form];
-				if (
-					!object(delivery) ||
-					!exactKeys(delivery, ['speaker', 'voice', 'source']) ||
-					delivery.voice !== DELIVERY[form].voice ||
-					!(DELIVERY[form].speakers as readonly unknown[]).includes(delivery.speaker) ||
-					!nonempty(delivery.source)
-				)
-					throw new Error('invalid introduction delivery');
-			}
+function readingRoleIndex(): Map<string, ReadingRole> {
+	const roles = new Map<string, ReadingRole>();
+	for (const formulary of FORMULARY_METADATA)
+		for (const component of formulary.components) {
+			if (component.role !== 'epistola' && component.role !== 'evangelium') continue;
+			const key = component.text.replace('.', '/');
+			const previous = roles.get(key);
+			if (previous && previous !== component.role)
+				throw new Error('reading has conflicting formulary roles');
+			roles.set(key, component.role);
 		}
-		events.push(event as unknown as IntroductionEvent);
-	}
-	if (!ordered(events.map(({ id }) => id))) throw new Error('introduction events out of order');
-	for (const id of RENDERED_INTRODUCTIONS)
-		if (!events.some((event) => event.id === id))
-			throw new Error(`introduction event ${id} is absent`);
-	return { units, events };
+	return roles;
+}
+
+/** Semantic relationships, not vocabulary membership alone, determine acceptance. */
+export function createIntroductionLookup(
+	value: unknown,
+	knownTexts = new Set(TEXT_KEYS),
+	roles = readingRoleIndex()
+) {
+	return parseIntroductionResource(value, knownTexts, roles);
 }
 
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.1.0' ||
+			ROOT_MANIFEST.schema_version !== '6.6.0' ||
 			ROOT_MANIFEST.base.introductiones !== 'introductiones.json'
 		)
 			throw new Error('undeclared introduction resource');
@@ -207,6 +107,7 @@ export function introductionBodies(
 	if (!lookup) throw new Error('introduction resource unavailable');
 	const runs: { key: string; segments: Segment[] }[] = [];
 	for (const occurrence of event.occurrences) {
+		if (!('unit' in occurrence)) throw new Error('unresolved announcement slot');
 		const unit = lookup.units.get(occurrence.unit);
 		const owner = unit && owners[unit.text];
 		if (!unit || !owner) throw new Error(`introduction ${occurrence.unit} has no owner text`);
@@ -219,6 +120,30 @@ export function introductionBodies(
 			!owner.gloss.segments[segment.id]?.translation?.trim()
 		)
 			throw new Error(`introduction ${unit.id} does not address one complete owner segment`);
+		if (
+			owner.doc.id !== unit.text.replace('/', '.') ||
+			owner.gloss.text !== owner.doc.id ||
+			segment.speaker !== roleActor(unit.role, 'lecta') ||
+			segment.voice !== 'clara' ||
+			occurrence.lecta.speaker !== roleActor(unit.role, 'lecta') ||
+			occurrence.lecta.voice !== 'clara' ||
+			occurrence.cantu.speaker !== roleActor(unit.role, 'cantu') ||
+			(unit.role !== 'announcement' && occurrence.cantu.voice !== 'cantus')
+		)
+			throw new Error(`introduction ${unit.id} owner or delivery conflicts with its role`);
+		const answered = unit.role === 'response' || unit.role === 'gospel-response';
+		if (
+			answered
+				? !segment.participation?.lecta || !segment.participation?.cantu
+				: !!segment.participation
+		)
+			throw new Error(`introduction ${unit.id} participation conflicts with its role`);
+		if (
+			segment.delivery?.cantu &&
+			(segment.delivery.cantu.speaker !== occurrence.cantu.speaker ||
+				segment.delivery.cantu.voice !== occurrence.cantu.voice)
+		)
+			throw new Error(`introduction ${unit.id} sung owner override differs`);
 		const cut: Segment = {
 			...structuredClone(segment),
 			speaker: occurrence.lecta.speaker,
@@ -256,7 +181,32 @@ export function introductionOwners(lookup = introductionLookup): string[] {
 		...new Set(
 			lookup.events
 				.filter(({ id }) => (RENDERED_INTRODUCTIONS as readonly string[]).includes(id))
-				.flatMap(({ occurrences }) => occurrences.map(({ unit }) => lookup.units.get(unit)!.text))
+				.flatMap(({ occurrences }) =>
+					occurrences.flatMap((occurrence) =>
+						'unit' in occurrence ? [lookup.units.get(occurrence.unit)!.text] : []
+					)
+				)
 		)
 	];
+}
+
+/** Owners of actual canonical readings at this slot, in formulary/component order.
+ * A shared owner may also have a full-text home elsewhere in the Ordo. */
+export function readingIntroductionOwners(
+	role: ReadingRole,
+	lookup = introductionLookup
+): string[] {
+	if (!lookup) throw new Error('introduction resource unavailable');
+	const owners = new Set<string>();
+	for (const formulary of [...FORMULARY_METADATA].sort((a, b) => a.order - b.order)) {
+		for (const component of formulary.components) {
+			if (component.role !== role) continue;
+			const binding = lookup.announcements.get(component.text.replace('.', '/'));
+			const unit = binding && lookup.units.get(binding.unit);
+			if (!unit || unit.role !== 'announcement')
+				throw new Error('reading introduction owner unavailable');
+			owners.add(unit.text);
+		}
+	}
+	return [...owners];
 }

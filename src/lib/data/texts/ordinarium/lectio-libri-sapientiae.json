@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.lectio-libri-sapientiae",
+  "title":"Léctio libri Sapiéntiæ",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20},{"i":"w002","f":"libri","l":"liber_volumen","m":54},{"i":"w003","f":"Sapiéntiæ","l":"sapientia","m":64}]}
+  ]
+}

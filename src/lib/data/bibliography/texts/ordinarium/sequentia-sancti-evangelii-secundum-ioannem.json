@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Pasc2-0.txt; [Evangelium] section at line 36, heading at line 37"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 5-word heading as its own line in the pinned file that the reading's own digital witness binds; compared with the selected print it differs only in Joánnem for Ioánnem (orthography), its ++ being the source's cross sign. It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "336",
+    "scan": "IA leaf n417; one-based PDF page 418",
+    "section": "Proprium, heading of the Gospel of proprium.dominica-ii-post-pascha-evangelium",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n417/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 5-word heading over the Gospel of proprium.dominica-ii-post-pascha-evangelium, without a closing full stop, with the red cross in the margin before it, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 424",
+    "section": "Dominica II post Pascha; complete announcement heading; Io. 10, 11-16",
+    "printed": "343"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 5-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

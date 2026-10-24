@@ -43,15 +43,16 @@ afterEach(() => massForm.set(before));
 describe('the corpus-owned Ordo introductions', () => {
 	it('validates the vendored resource and renders exactly the three opening events', () => {
 		expect(introductionLookup).not.toBeNull();
-		expect([...introductionLookup!.units.keys()]).toEqual([
-			'invitatio-oremus',
-			'responsio-gloria-tibi',
-			'responsio-salutationis',
-			'salutatio'
-		]);
+		expect(
+			[...introductionLookup!.units.values()]
+				.filter((u) => u.role !== 'announcement')
+				.map((u) => u.id)
+		).toEqual(['invitatio-oremus', 'responsio-gloria-tibi', 'responsio-salutationis', 'salutatio']);
 		expect(introductionLookup!.events.map(({ id, before }) => [id, before])).toEqual([
 			['collecta-introductio', 'collecta'],
+			['epistola-annuntiatio', 'epistola'],
 			['evangelium-salutatio', 'evangelium'],
+			['evangelium-annuntiatio', 'evangelium'],
 			['offertorium-introductio', 'offertorium'],
 			['postcommunio-introductio', 'postcommunio']
 		]);
@@ -176,7 +177,7 @@ describe('the corpus-owned Ordo introductions', () => {
 		[
 			'version',
 			(v) => {
-				v.schema_version = '2.0.0';
+				v.schema_version = '1.0.0';
 			},
 			/invalid introduction resource/
 		],
@@ -220,14 +221,14 @@ describe('the corpus-owned Ordo introductions', () => {
 			(v) => {
 				v.events.reverse();
 			},
-			/events out of order/
+			/event order or placement/
 		],
 		[
 			'a rendered event absent',
 			(v) => {
 				v.events = v.events.filter(({ id }) => id !== 'offertorium-introductio');
 			},
-			/offertorium-introductio is absent/
+			/events missing/
 		],
 		[
 			'a sung voice at a low Mass',
@@ -279,15 +280,29 @@ describe('the corpus-owned Ordo introductions', () => {
 			}
 		]
 	];
-	it.each(cuts)('refuses to cut %s out of its owner', async (_name, mutate) => {
+	it.each(cuts)('refuses to cut %s out of its owner', async (name, mutate) => {
 		const broken = structuredClone(table);
 		mutate(broken);
-		const lookup = createIntroductionLookup(broken);
-		const texts = await owners('en');
+		const original = await owners('en');
+		const saved = structuredClone(original);
+		const texts = structuredClone(original);
+		let lookup: ReturnType<typeof createIntroductionLookup>;
+		if (name === 'a foreign segment') {
+			// The closed resource rejects a foreign association before any slicing occurs.
+			expect(() => createIntroductionLookup(broken)).toThrow(
+				/invalid introduction unit role or owner/
+			);
+			lookup = createIntroductionLookup(structuredClone(table));
+			// Keep that valid contract and independently supply an owner with only the foreign segment.
+			const segment = texts[DIALOGUE]!.doc.segments.find((item) => item.id === 's02')!;
+			expect(segment).toBeDefined();
+			segment.id = 's04';
+		} else lookup = createIntroductionLookup(broken);
 		expect(() => introductionBodies(event('collecta-introductio', lookup), texts, lookup)).toThrow(
 			/does not address one complete owner segment/
 		);
-		expect(() => introductionBodies(event('collecta-introductio'), texts)).not.toThrow();
+		expect(() => introductionBodies(event('collecta-introductio'), original)).not.toThrow();
+		expect(original).toEqual(saved);
 	});
 	it('refuses an owner absent from the language package', async () => {
 		const texts = await owners('pl');

@@ -1,0 +1,237 @@
+{
+ "id": "ordinarium.lectio-libri-sapientiae",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/05-01.txt; [Lectio] section at line 24, heading at line 25"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 3-word heading as its own line in the pinned file that the reading's own digital witness binds; it agrees with the selected print letter for letter. It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "526",
+    "scan": "IA leaf n607; one-based PDF page 608",
+    "section": "Proprium, heading of the Epistle of proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n607/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 3-word heading over the Epistle of proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola, without a closing full stop, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "25",
+    "scan": "IA leaf n104; one-based PDF page 105",
+    "section": "Proprium, heading of the Epistle of proprium.sancti-ioannis-apostoli-et-evangelistae-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n104/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.mr1962-p25",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ over a lesson whose printed reference is Eccli. 15, 1-6: the heading that names the book of Wisdom announces a lesson from Ecclesiasticus."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "526",
+    "scan": "IA leaf n607; one-based PDF page 608",
+    "section": "Proprium, heading of the Epistle of proprium.sanctorum-philippi-et-iacobi-apostolorum-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n607/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.mr1962-p526",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ over a lesson whose printed reference is Sap. 5, 1-5: the heading that names the book of Wisdom announces a lesson from the book of Wisdom itself."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "584",
+    "scan": "IA leaf n665; one-based PDF page 666",
+    "section": "Proprium, heading of the Epistle of proprium.visitatio-beatae-mariae-virginis-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n665/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.mr1962-p584",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ over a lesson whose printed reference is Cant. 2, 8-14: the heading that names the book of Wisdom announces a lesson from the Song of Songs."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "664",
+    "scan": "IA leaf n745; one-based PDF page 746",
+    "section": "Proprium, heading of the Epistle of proprium.nativitas-beatae-mariae-virginis-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n745/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.mr1962-p664",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ over a lesson whose printed reference is Prov. 8, 22-35: the heading that names the book of Wisdom announces a lesson from Proverbs."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 610",
+    "section": "S. Roberti Bellarmino, May 13; complete announcement heading; Sap. 7, 7-14",
+    "printed": "529"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 3-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "25",
+    "scan": "PDF page 106",
+    "section": "S. Ioannis Ap. et Ev., December 27; complete lesson heading and adjacent attribution"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.vatican1962-p25",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ. over a lesson whose adjacent reference is Eccli. 15, 1-6, from Ecclesiasticus; complete heading and opening context checked, not a full-body lection audit."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "524",
+    "scan": "PDF page 605",
+    "section": "SS. Philippi et Iacobi Apostolorum, May 11; complete lesson heading and adjacent attribution"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.vatican1962-p524",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ. over a lesson whose adjacent reference is Sap. 5, 1-5, from Wisdom; complete heading and opening context checked, not a full-body lection audit."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "575",
+    "scan": "PDF page 656",
+    "section": "In Visitatione B. Mariae Virginis, July 2; complete lesson heading and adjacent attribution"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.vatican1962-p575",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ. over a lesson whose adjacent reference is Cant. 2, 8-14, from Song of Songs; complete heading and opening context checked, not a full-body lection audit."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_liturgical_context",
+   "locator": {
+    "printed": "650",
+    "scan": "PDF page 731",
+    "section": "In Nativitate B. Mariae Virginis, September 8; complete lesson heading and adjacent attribution"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-sapientiae.w003.vatican1962-p650",
+     "address": {
+      "kind": "word",
+      "word": "w003"
+     },
+     "claim": "Prints Léctio libri Sapiéntiæ. over a lesson whose adjacent reference is Prov. 8, 22-35, from Proverbs; complete heading and opening context checked, not a full-body lection audit."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

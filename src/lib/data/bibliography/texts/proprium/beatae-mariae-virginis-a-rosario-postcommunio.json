@@ -14,10 +14,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned digital body and resolved Qui vivis formula provide a derived comparison reading, including the substantive Sacratissimae opening against the selected printed Sanctissimae and the declared accidental differences."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "Rubricae generales 115 d",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.beatae-mariae-virginis-a-rosario-postcommunio.conclusion-rg115d.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w024"
+     },
+     "claim": "RG 115 d prints the 17-word Qui vivis conclusion and Amen for an oration directed to the Son, supplying selected w024-w040. It expands the proper page's two-word cue; stress accents and the response's final period follow house presentation."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 694",
+    "scan": "leaf n775 / PDF p. 776",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n775/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.beatae-mariae-virginis-a-rosario-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Benziger proper page prints the 23-word Sanctissimae body and the two-word Qui vivis cue. The complete selected conclusion and response are not fully printed here; RG 115 d supplies the separately declared expansion."
+    }
+   ],
+   "verified_on": "2026-10-24"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -38,26 +80,6 @@
     }
    ],
    "verified_on": "2026-10-07"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
-   "locator": {
-    "printed": "p. 694",
-    "scan": "leaf n775 / PDF p. 776",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n775/mode/1up"
-   },
-   "entries": [
-    {
-     "id": "use.proprium.beatae-mariae-virginis-a-rosario-postcommunio.mr1962",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
-    }
-   ],
-   "verified_on": "2026-08-31"
   }
  ],
  "witnesses": []

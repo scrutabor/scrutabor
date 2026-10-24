@@ -1,3 +1,4 @@
+import { selectedResponseFixture, responseFixtureContext } from './reading-test-fixtures';
 import { expect, it } from 'vitest';
 import { render } from 'svelte/server';
 import TextBody from './components/TextBody.svelte';
@@ -169,27 +170,41 @@ it.each(unresolved)('does not advertise applicability for %s', (_, patch) => {
 	}
 });
 
-it('does not alter other entries or the existing Palm response decision', () => {
+it('does not alter other entries or the existing Palm response decision', async () => {
 	for (const lang of ['pl', 'en'] as const) {
 		for (const entry of ORDO.flatMap((item) => item.entries).filter((entry) => entry.id !== id))
 			expect(ordoBlessingContext(entry.id, state(requiems[0], lang), lang)).toBeUndefined();
-		const palm = 'dominica-ii-passionis';
-		expect(
-			ordoResponseContext(
-				'laus-tibi-christe',
-				palm,
-				['proprium/dominica-ii-passionis-evangelium'],
-				lang
-			)
-		).toEqual({
+		const palm = { date: '2026-03-29', mass: 'dominica-ii-passionis' };
+		const fixture = await selectedResponseFixture(palm, lang, 'laus-tibi-christe');
+		const original = structuredClone(fixture);
+		const answer = () => responseFixtureContext('laus-tibi-christe', fixture, lang);
+		const expected = {
 			referenceOnly: true,
-			note: ordoContext('laus-tibi-christe', palm, false, lang)
+			reason: 'passion',
+			note: ordoContext('laus-tibi-christe', palm.mass, false, lang)
+		};
+		expect(answer()).toEqual(expected);
+		fixture.readings = [];
+		expect(answer()).toMatchObject({ referenceOnly: true, reason: 'unconfirmed' });
+		const foreign = await selectedResponseFixture(
+			{ date: '2026-04-26', mass: 'dominica-iii-post-pascha' },
+			lang,
+			'laus-tibi-christe'
+		);
+		expect(responseFixtureContext('laus-tibi-christe', foreign, lang)).toEqual({
+			referenceOnly: false,
+			reason: 'ordinary-reading'
 		});
-		expect(ordoResponseContext('laus-tibi-christe', palm, [], lang)?.referenceOnly).toBe(true);
+		fixture.readings = foreign.readings;
+		fixture.lex = foreign.lex;
+		expect(answer()).toMatchObject({ referenceOnly: true, reason: 'unconfirmed' });
+		fixture.readings = original.readings;
+		fixture.lex = original.lex;
+		expect(answer()).toEqual(expected);
 		expect(
-			ordoResponseContext('laus-tibi-christe', palm, ['proprium/other-evangelium'], lang)
-		).toEqual({ referenceOnly: false });
-		expect(ordoResponseContext(id, palm, [], lang)).toBeUndefined();
+			ordoResponseContext(id, fixture.state, [], fixture.owners, fixture.lex, lang)
+		).toBeUndefined();
+		expect(fixture).toEqual(original);
 	}
 });
 

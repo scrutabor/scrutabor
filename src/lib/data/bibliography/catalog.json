@@ -86,6 +86,11 @@
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
   },
   {
+   "id": "work.sacra-rituum-congregatio.de-musica-sacra-1958",
+   "responsible": "Sacra Rituum Congregatio",
+   "title": "Instructio de musica sacra et sacra liturgia"
+  },
+  {
    "id": "work.sacra-rituum-congregatio.de-s-ioseph",
    "responsible": "Sacra Rituum Congregatio",
    "title": "De S. Joseph nomine Canoni Missae inserendo"
@@ -477,6 +482,26 @@
    }
   },
   {
+   "id": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "work": "work.sacra-rituum-congregatio.de-musica-sacra-1958",
+   "recension": "Instruction of 3 September 1958, approved by Pius XII",
+   "title": "Instructio de musica sacra et sacra liturgia ad mentem litterarum encyclicarum Pii Papae XII Musicae sacrae disciplina et Mediator Dei",
+   "edition_statement": "Official printing in Acta Apostolicae Sedis 50 (1958), pp. 630–663",
+   "place": "Vatican City",
+   "publisher": "Typis Polyglottis Vaticanis",
+   "year": "1958",
+   "volume": "50",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and factual reference only. No permission to redistribute this PDF, its OCR or page images is asserted."
+   }
+  },
+  {
    "id": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
    "work": "work.sacra-rituum-congregatio.de-s-ioseph",
    "title": "Acta Apostolicae Sedis LIV (1962), De S. Joseph nomine Canoni Missae inserendo",
@@ -785,6 +810,16 @@
    "scan_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf",
    "access": "open",
    "digitization_rights": "Repository assertion CC BY-NC-ND 3.0 is retained as an assertion, not a new rights determination."
+  },
+  {
+   "id": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "repository": "Holy See",
+   "kind": "scan",
+   "record_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+   "scan_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf",
+   "access": "open",
+   "digitization_rights": "Unverified; original and page-image derivatives retained for private consultation, not redistribution."
   },
   {
    "id": "item.sacra-rituum-congregatio.de-s-ioseph.1962-aas54.vatican",

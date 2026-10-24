@@ -2,6 +2,26 @@
  "id": "ordinarium.confiteor",
  "source_groups": [
   {
+   "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+   "digital_item": "item.extraordinaryform.handmissal-chant.2025-12-12.pdf",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 4",
+    "scan": "physical PDF p. 6, left half",
+    "section": "Complete confiteor Latin body; nonverbal framing excluded"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.confiteor.handmissal-eo2025",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The retained revision12/12/2025 hand missal prints the complete 66-word Latin comparison. This is a separately identified current witness, not proof of the unretained August PDF or a modern English wording basis."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",

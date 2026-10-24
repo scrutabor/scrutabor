@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.1.0",
+  "schema_version": "6.6.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -288,7 +288,8 @@
     {
       "id": "ordinarium.evangelium-ultimum",
       "path": "texts/ordinarium/evangelium-ultimum.json",
-      "title": "Evangelium ultimum (Ioann. 1, 1-14)"
+      "title": "Evangelium ultimum (Ioann. 1, 1-14)",
+      "evidence": "bibliography/texts/ordinarium/evangelium-ultimum.json"
     },
     {
       "id": "ordinarium.fili-dei-vivi",
@@ -331,6 +332,12 @@
       "path": "texts/ordinarium/in-spiritu-humilitatis.json",
       "title": "In spíritu humilitátis",
       "evidence": "bibliography/texts/ordinarium/in-spiritu-humilitatis.json"
+    },
+    {
+      "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+      "path": "texts/ordinarium/initium-sancti-evangelii-secundum-matthaeum.json",
+      "title": "Inítium sancti Evangélii secúndum Matthǽum",
+      "evidence": "bibliography/texts/ordinarium/initium-sancti-evangelii-secundum-matthaeum.json"
     },
     {
       "id": "ordinarium.introibo",
@@ -392,6 +399,126 @@
       "evidence": "bibliography/texts/ordinarium/lavabo.json"
     },
     {
+      "id": "ordinarium.lectio-actuum-apostolorum",
+      "path": "texts/ordinarium/lectio-actuum-apostolorum.json",
+      "title": "Léctio Áctuum Apostolórum",
+      "evidence": "bibliography/texts/ordinarium/lectio-actuum-apostolorum.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+      "path": "texts/ordinarium/lectio-epistolae-beati-iacobi-apostoli.json",
+      "title": "Léctio Epístolæ beáti Iacóbi Apóstoli",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-iacobi-apostoli.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-ioannis-apostoli",
+      "path": "texts/ordinarium/lectio-epistolae-beati-ioannis-apostoli.json",
+      "title": "Léctio Epístolæ beáti Ioánnis Apóstoli",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-ioannis-apostoli.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-colossenses.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Colossénses",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-colossenses.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-corinthios.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Corínthios",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-corinthios.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-ephesios.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Ephésios",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-ephesios.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-galatas.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Gálatas",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-galatas.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-hebraeos.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Hebrǽos",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-hebraeos.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-philippenses.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Philippénses",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-philippenses.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-romanos.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Romános",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-romanos.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Thessalonicénses",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+      "path": "texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-titum.json",
+      "title": "Léctio Epístolæ beáti Pauli Apóstoli ad Titum",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-titum.json"
+    },
+    {
+      "id": "ordinarium.lectio-epistolae-beati-petri-apostoli",
+      "path": "texts/ordinarium/lectio-epistolae-beati-petri-apostoli.json",
+      "title": "Léctio Epístolæ beáti Petri Apóstoli",
+      "evidence": "bibliography/texts/ordinarium/lectio-epistolae-beati-petri-apostoli.json"
+    },
+    {
+      "id": "ordinarium.lectio-ezechielis-prophetae",
+      "path": "texts/ordinarium/lectio-ezechielis-prophetae.json",
+      "title": "Léctio Ezechiélis Prophétæ",
+      "evidence": "bibliography/texts/ordinarium/lectio-ezechielis-prophetae.json"
+    },
+    {
+      "id": "ordinarium.lectio-isaiae-prophetae",
+      "path": "texts/ordinarium/lectio-isaiae-prophetae.json",
+      "title": "Léctio Isaíæ Prophétæ",
+      "evidence": "bibliography/texts/ordinarium/lectio-isaiae-prophetae.json"
+    },
+    {
+      "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+      "path": "texts/ordinarium/lectio-libri-apocalypsis-beati-ioannis-apostoli.json",
+      "title": "Léctio libri Apocalýpsis beáti Ioánnis Apóstoli",
+      "evidence": "bibliography/texts/ordinarium/lectio-libri-apocalypsis-beati-ioannis-apostoli.json"
+    },
+    {
+      "id": "ordinarium.lectio-libri-iudith",
+      "path": "texts/ordinarium/lectio-libri-iudith.json",
+      "title": "Léctio libri Iudith",
+      "evidence": "bibliography/texts/ordinarium/lectio-libri-iudith.json"
+    },
+    {
+      "id": "ordinarium.lectio-libri-machabaeorum",
+      "path": "texts/ordinarium/lectio-libri-machabaeorum.json",
+      "title": "Léctio libri Machabæórum",
+      "evidence": "bibliography/texts/ordinarium/lectio-libri-machabaeorum.json"
+    },
+    {
+      "id": "ordinarium.lectio-libri-sapientiae",
+      "path": "texts/ordinarium/lectio-libri-sapientiae.json",
+      "title": "Léctio libri Sapiéntiæ",
+      "evidence": "bibliography/texts/ordinarium/lectio-libri-sapientiae.json"
+    },
+    {
+      "id": "ordinarium.lectio-malachiae-prophetae",
+      "path": "texts/ordinarium/lectio-malachiae-prophetae.json",
+      "title": "Léctio Malachíæ Prophétæ",
+      "evidence": "bibliography/texts/ordinarium/lectio-malachiae-prophetae.json"
+    },
+    {
       "id": "ordinarium.libera-nos",
       "path": "texts/ordinarium/libera-nos.json",
       "title": "Líbera nos",
@@ -450,6 +577,12 @@
       "path": "texts/ordinarium/panem-caelestem.json",
       "title": "Panem cæléstem",
       "evidence": "bibliography/texts/ordinarium/panem-caelestem.json"
+    },
+    {
+      "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+      "path": "texts/ordinarium/passio-domini-nostri-iesu-christi-secundum-matthaeum.json",
+      "title": "Pássio Dómini nostri Iesu Christi secúndum Matthǽum",
+      "evidence": "bibliography/texts/ordinarium/passio-domini-nostri-iesu-christi-secundum-matthaeum.json"
     },
     {
       "id": "ordinarium.pater-noster",
@@ -677,6 +810,30 @@
       "path": "texts/ordinarium/sanctus.json",
       "title": "Sanctus",
       "evidence": "bibliography/texts/ordinarium/sanctus.json"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+      "path": "texts/ordinarium/sequentia-sancti-evangelii-secundum-ioannem.json",
+      "title": "Sequéntia sancti Evangélii secúndum Ioánnem",
+      "evidence": "bibliography/texts/ordinarium/sequentia-sancti-evangelii-secundum-ioannem.json"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-lucam",
+      "path": "texts/ordinarium/sequentia-sancti-evangelii-secundum-lucam.json",
+      "title": "Sequéntia sancti Evangélii secúndum Lucam",
+      "evidence": "bibliography/texts/ordinarium/sequentia-sancti-evangelii-secundum-lucam.json"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-marcum",
+      "path": "texts/ordinarium/sequentia-sancti-evangelii-secundum-marcum.json",
+      "title": "Sequéntia sancti Evangélii secúndum Marcum",
+      "evidence": "bibliography/texts/ordinarium/sequentia-sancti-evangelii-secundum-marcum.json"
+    },
+    {
+      "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+      "path": "texts/ordinarium/sequentia-sancti-evangelii-secundum-matthaeum.json",
+      "title": "Sequéntia sancti Evangélii secúndum Matthǽum",
+      "evidence": "bibliography/texts/ordinarium/sequentia-sancti-evangelii-secundum-matthaeum.json"
     },
     {
       "id": "ordinarium.simili-modo",
@@ -1057,7 +1214,7 @@
     {
       "id": "proprium.beatae-mariae-virginis-a-rosario-postcommunio",
       "path": "texts/proprium/beatae-mariae-virginis-a-rosario-postcommunio.json",
-      "title": "Sacratíssimæ Genetrícis tuæ, cuius Rosárium celebrámus, quǽsumus",
+      "title": "Sanctíssimæ Genetrícis tuæ, cuius Rosárium celebrámus, quǽsumus",
       "evidence": "bibliography/texts/proprium/beatae-mariae-virginis-a-rosario-postcommunio.json"
     },
     {

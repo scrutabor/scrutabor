@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.lectio-isaiae-prophetae",
+  "title":"Léctio Isaíæ Prophétæ",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20,"a":6},{"i":"w002","f":"Isaíæ","l":"Isaias","m":261,"a":7},{"i":"w003","f":"Prophétæ","l":"propheta","m":261,"a":6}]}
+  ]
+}

@@ -91,17 +91,29 @@ export function printLeadPages(bbox: string, lead: PrintLead): number[] {
 			if (start < 0 || line[start].y <= guidanceEnd) continue;
 			let actual = line.slice(start).map((word) => word.text);
 			const sequence = actual[0] === source[0] ? source : expected;
-			// Poppler can isolate a raised initial token from the remaining
-			// Latin on the very same baseline. Join only that complete next
-			// fragment, requiring its entire text to continue the source prefix.
-			if (actual.length === 1) {
-				const next = lines.find(
+			// One visual baseline may occupy several extractor line records.
+			// Reunite only its adjacent, nonoverlapping left-to-right cluster.
+			// The gap limit scales with normal ink, never with the raised initial.
+			const normalHeight = line[start].yEnd - line[start].y;
+			const fragments = lines
+				.filter(
 					(fragment) =>
-						fragment[0]?.text === sequence[1] &&
+						fragment !== line &&
+						fragment.length > 0 &&
 						Math.abs(fragment[0].y - line[start].y) < 0.5 &&
-						fragment[0].x > line.at(-1)!.xEnd
-				);
-				if (next) actual = [...actual, ...next.map((word) => word.text)];
+						fragment.at(-1)!.xEnd > line[start].x
+				)
+				.sort((left, right) => left[0].x - right[0].x);
+			let right = line.at(-1)!.xEnd;
+			for (const fragment of fragments) {
+				if (fragment[0].x < right) {
+					actual = [];
+					break;
+				}
+				// A distant column is not a continuation of this line.
+				if (normalHeight <= 0 || fragment[0].x - right > normalHeight * 1.5) break;
+				actual.push(...fragment.map((word) => word.text));
+				right = fragment.at(-1)!.xEnd;
 			}
 			if (actual.length < Math.min(4, source.length)) continue;
 			if (!actual.every((word, i) => word === sequence[i])) continue;

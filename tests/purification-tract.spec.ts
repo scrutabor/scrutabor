@@ -8,7 +8,7 @@ const latin =
 		' '
 	);
 const readings = {
-	pl: 'Teraz | uwalniasz | sługę | Twego | Panie | według | słowa | Twego | w | pokoju | Albowiem | ujrzały | oczy | moje | zbawienie | Twoje | Które | przygotowałeś | przed | obliczem | wszystkich | ludów | Światłość | ku | objawieniu | poganom | i | chwałę | ludu | Twego | Izraela',
+	pl: 'Teraz | uwalniasz | sługę | Twego | Panie | według | słowa | Twego | w | pokoju | albowiem | ujrzały | oczy | moje | zbawienie | Twoje | które | przygotowałeś | przed | obliczem | wszystkich | ludów | światłość | ku | objawieniu | poganom | i | chwałę | ludu | Twego | Izraela',
 	en: 'Now | You release | Your servant | Lord | according to | Your word | in | peace | For | my eyes have seen | Your salvation | which | You have prepared | before | the face | of all | peoples | a light | for | revelation | to the Gentiles | and | glory | of Your people | Israel'
 };
 const gradual =
@@ -81,7 +81,7 @@ for (const language of ['pl', 'en'] as const) {
 		await page.goto(`/app/${language}/formularium/${day}?w=${text}.w049`);
 		const dialog = page.getByRole('dialog');
 		await expect(dialog.locator('.context-layer > .gloss')).toHaveText(
-			language === 'pl' ? 'Które' : 'which'
+			language === 'pl' ? 'które' : 'which'
 		);
 		await expect(dialog.locator('.morph')).toContainText(
 			language === 'pl' ? 'biernik' : 'accusative'

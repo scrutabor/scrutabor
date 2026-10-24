@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/01-01.txt; [Lectio] section at line 25, heading at line 26"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading as its own line in the pinned file that the reading's own digital witness binds; compared with the selected print it differs only in beati for beáti (accent). It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "17",
+    "scan": "IA leaf n96; one-based PDF page 97",
+    "section": "Proprium, heading of the Epistle of proprium.nativitas-domini-in-nocte-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n96/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading over the Epistle of proprium.nativitas-domini-in-nocte-epistola, without a closing full stop, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 98",
+    "section": "In Nativitate Domini; complete announcement heading; Tit. 2, 11-15",
+    "printed": "No printed page numeral (illustrated opening)"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-titum.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 7-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

@@ -180,7 +180,7 @@ test('Trinity Polish keeps revelation and repeated assent in the complete prose'
 	await page.goto('/app/pl/ordinarium/praefatio-sanctissimae-trinitatis');
 	await setHelp(page, 1);
 	for (const [word, gloss] of [
-		['w046', 'co'],
+		['w046', 'Co'],
 		['w053', 'przyjmujemy za prawdę'],
 		['w065', 'uznajemy za prawdę']
 	]) {

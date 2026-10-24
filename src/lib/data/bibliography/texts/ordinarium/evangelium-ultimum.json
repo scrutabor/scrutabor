@@ -1,0 +1,26 @@
+{
+ "id": "ordinarium.evangelium-ultimum",
+ "source_groups": [
+  {
+   "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
+   "digital_item": "item.extraordinaryform.handmissal-chant.2025-12-12.pdf",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 26",
+    "scan": "physical PDF p. 28, left half",
+    "section": "Complete evangelium-ultimum Latin body; nonverbal framing excluded"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.evangelium-ultimum.handmissal-eo2025",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The retained revision12/12/2025 hand missal prints the complete 189-word Latin comparison. This is a separately identified current witness, not proof of the unretained August PDF or a modern English wording basis."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

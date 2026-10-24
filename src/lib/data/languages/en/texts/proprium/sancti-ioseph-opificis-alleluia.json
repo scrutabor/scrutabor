@@ -1,8 +1,8 @@
 {
   "id":"proprium.sancti-ioseph-opificis-alleluia",
   "language":"en",
-  "about":"The alleluia of the formulary “Saint Joseph the Worker” in the 1962 Roman Missal.",
+  "about":"The alleluia of the formulary “Saint Joseph the Worker” in the 1962 Roman Missal. The first verse speaks in Saint Joseph’s voice. The second is the Church’s prayer addressed to him.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. From whatever tribulation they cry to Me, I will hear them and be their protector always. Alleluia. Grant us, Joseph, to live a blameless life, and may it always be safe under your patronage. Alleluia.","g":["Alleluia","alleluia","From","whatever","tribulation","they cry","to","Me","I will hear","them","and","I will be",null,null,"always","Alleluia","Grant","us","blameless","Joseph","to live","a life","and may it be","your","always","safe","under protection","Alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"their protector"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. From whatever tribulation they cry to me, I will hear them and be their protector always. Alleluia. Grant, Joseph, that we may live a blameless life, and may it always be safe under your patronage. Alleluia.","g":["Alleluia","alleluia","From","whatever","tribulation","they cry","to","me","I will hear","them","and","I will be",null,null,"always","Alleluia","Grant","us","blameless","Joseph","to live","a life","and may it be",null,null,null,null,"Alleluia"],"a":[{"s":12,"n":2,"a":0,"g":"their protector"},{"s":23,"n":4,"a":2,"g":"always safe under your protection"}]}
   ]
 }

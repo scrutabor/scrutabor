@@ -1,0 +1,13 @@
+{
+  "id":"ordinarium.lectio-epistolae-beati-iacobi-apostoli",
+  "title":"Léctio Epístolæ beáti Iacóbi Apóstoli",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20,"a":6},{"i":"w002","f":"Epístolæ","l":"epistola","m":64,"a":13},{"i":"w003","f":"beáti","l":"beatus","m":99,"h":"w004","a":6},{"i":"w004","f":"Iacóbi","l":"Iacobus","m":54,"a":7},{"i":"w005","f":"Apóstoli","l":"apostolus","m":54,"a":6}]}
+  ]
+}

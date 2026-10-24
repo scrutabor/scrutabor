@@ -19,13 +19,14 @@
 	import { movementById, movementNeighbors, partVoice, type OrdoEntry } from '$lib/ordo';
 	import { role, showsWords } from '$lib/role.svelte';
 	import { massForm } from '$lib/mass-form.svelte';
-	import { inMassForm } from '$lib/speaker-marks';
+	import { voicesInMassForm } from '$lib/participation-performance';
 	import { ribbon } from '$lib/ribbon.svelte';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 	import { proper } from '$lib/proper.svelte';
 	import { isCanonRole } from '$lib/canon';
 	import { ordinaryApplicability } from '$lib/ordinary-applicability';
+	import { ordinaryOmission } from '$lib/ordinary-omission';
 	import { DISMISSAL_ROLE } from '$lib/dismissal';
 	import {
 		ordoBlessingContext,
@@ -39,17 +40,22 @@
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { textHref } from '$lib/content-url';
-	import { commemorationTitle } from '$lib/corpus-metadata';
 	import { textAnchor } from '$lib/text-anchor';
 	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
 	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
 	import { indexOccurrenceWords } from '$lib/proper-occurrences';
 	import { DAY_PARAM, MASS_PARAM, resolveOrdoChoice, writeOrdoChoice } from '$lib/ordo-choice';
-	import { COMMEMORATION_SLOTS, type Situation } from '$lib/commemorationes';
+	import { COMMEMORATION_SLOTS, commemorationName, type Situation } from '$lib/commemorationes';
 
 	/** The commemoration body a variant head labels: its situation and whether its Secret ends aloud. */
 	type VariantBody = { situation?: Situation; nonfinal?: boolean };
 	import type { IntroductionBody } from '$lib/introductiones';
+	import type { CommemorationVariant } from '$lib/proper.svelte';
+	import {
+		announcedReadings,
+		readingPayloadReady,
+		type AnnouncementOwner
+	} from '$lib/reading-announcements';
 
 	// Only this movement's texts, from the server load — never the corpus.
 	let { data } = $props();
@@ -65,7 +71,8 @@
 	const introductions = $derived(
 		(data.introductions ?? {}) as unknown as Record<string, IntroductionBody[]>
 	);
-	const introductionsFor = (e: OrdoEntry) => introductions[e.id] ?? [];
+	const introductionsFor = (e: OrdoEntry) => (omissionFor(e) ? [] : (introductions[e.id] ?? []));
+	const readingOwners = $derived((data.readingOwners ?? {}) as Record<string, AnnouncementOwner>);
 
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
@@ -129,21 +136,42 @@
 	// Everything on this page goes through here. Before it existed, three
 	// places each wrote `e.text ? texts[e.text] : undefined` and a fourth
 	// looked words up under `ordinarium/`, which no proper slug matches.
-	const bodiesFor = $derived((e: OrdoEntry) => {
+	const selectedBodiesFor = $derived((slot: string) =>
+		proper.forSlot(slot).map((part) => ({
+			key: part.key,
+			slug: part.slug,
+			anchor: part.anchor,
+			condition: part.condition,
+			commemoration: part.commemoration,
+			formulary: part.formulary,
+			nonfinal: part.nonfinal,
+			situation: part.situation,
+			doc: part.doc as TextDocument,
+			gloss: part.gloss as GlossDocument,
+			bibliography: part.bibliography
+		}))
+	);
+
+	const applicabilityState = $derived({
+		date: proper.date,
+		mass: proper.day,
+		loadedMass: proper.payload?.day ?? null,
+		loadedLanguage: proper.payload?.lang ?? null,
+		loading: proper.loading,
+		failed: proper.failed,
+		unwritten: proper.unwritten
+	});
+
+	const availableBodiesFor = $derived((e: OrdoEntry) => {
 		if (e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE) {
-			const chosen = proper.forSlot(e.id).map((part) => ({
-				key: part.key,
-				slug: part.slug,
-				anchor: part.anchor,
-				condition: part.condition,
-				commemoration: part.commemoration,
-				nonfinal: part.nonfinal,
-				situation: part.situation,
-				doc: part.doc as TextDocument,
-				gloss: part.gloss as GlossDocument,
-				bibliography: part.bibliography
-			}));
-			if (chosen.length) return chosen;
+			const chosen = selectedBodiesFor(e.id);
+			if (chosen.length) {
+				if (e.id === 'epistola' || e.id === 'evangelium')
+					return readingPayloadReady(applicabilityState, lang)
+						? announcedReadings(e.id, chosen, readingOwners)
+						: [];
+				return chosen;
+			}
 			if (proper.variantRequired(e.id)) return [];
 		}
 		if (e.text) {
@@ -156,6 +184,7 @@
 							anchor: textAnchor(e.text),
 							condition: undefined,
 							commemoration: undefined,
+							formulary: undefined,
 							nonfinal: undefined,
 							situation: undefined,
 							...entry
@@ -167,15 +196,8 @@
 		return [];
 	});
 
-	const applicabilityState = $derived({
-		date: proper.date,
-		mass: proper.day,
-		loadedMass: proper.payload?.day ?? null,
-		loadedLanguage: proper.payload?.lang ?? null,
-		loading: proper.loading,
-		failed: proper.failed,
-		unwritten: proper.unwritten
-	});
+	const omissionFor = $derived((e: OrdoEntry) => ordinaryOmission(e.id, applicabilityState, lang));
+	const bodiesFor = $derived((e: OrdoEntry) => (omissionFor(e) ? [] : availableBodiesFor(e)));
 
 	// Only the matching, settled payload may describe the selected Gospel.
 	const settledGospelKeys = $derived(
@@ -205,8 +227,10 @@
 			ordoBlessingContext(entry.id, applicabilityState, lang) ??
 			ordoResponseContext(
 				entry.id,
-				proper.day,
-				proper.forSlot('evangelium').map((part) => part.key),
+				applicabilityState,
+				selectedBodiesFor(entry.id === 'deo-gratias-epistolae' ? 'epistola' : 'evangelium'),
+				readingOwners,
+				proper.payload?.lex,
 				lang
 			)
 		);
@@ -218,7 +242,7 @@
 				[...introductionsFor(entry), ...bodiesFor(entry)].flatMap((body) =>
 					body.doc.segments
 						.filter((segment) => segment.type === 'verse')
-						.map((segment) => inMassForm(segment, massForm.value).voice)
+						.flatMap((segment) => voicesInMassForm(segment, massForm.value))
 				),
 				partVoice(entry.id),
 				role.value
@@ -254,6 +278,8 @@
 	// orations' slots show both sequences, each labelled, and no setting chooses between them.
 	const variants = $derived(proper.commemorationVariants);
 	const commemorated = (e: OrdoEntry) => (COMMEMORATION_SLOTS as readonly string[]).includes(e.id);
+	const owesUnavailable = (variant: CommemorationVariant) =>
+		variant.unavailable.length > 0 || variant.missing.length > 0;
 
 	const wordsById = $derived(indexOccurrenceWords(inlined));
 
@@ -439,11 +465,15 @@
 		{#each entries as e, idx (e.id)}
 			{@const responseContext = entryContext(e)}
 			{@const referenceOnly = responseContext?.referenceOnly ?? false}
-			{@const context = responseContext
-				? responseContext.note
-				: ordoContext(e.id, proper.day, proper.paschalDismissal, lang)}
+			{@const context =
+				omissionFor(e)?.note ??
+				(responseContext
+					? responseContext.note
+					: ordoContext(e.id, proper.day, proper.paschalDismissal, lang))}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
+			{@const headingEntry =
+				bodies.find((body) => 'readingReference' in body && body.readingReference) ?? entry}
 			<!-- Several bodies in one slot (the Gradual and the Alleluia) are one
 			     text to the eye: each learns the row its neighbour renders at
 			     their seam, so the seam is priced like any row boundary. -->
@@ -459,7 +489,8 @@
 				// the body after it, and the body after it learns that the block stands
 				// between them, so its first margin yields to the block's on screen
 				// and prices the seam on paper, where the block is not printed.
-				sources: helpLevel >= 2 && body.bibliography.translation.length > 0
+				sources: helpLevel >= 2 && body.bibliography.translation.length > 0,
+				reference: 'readingReference' in body && !!body.readingReference
 			}))}
 			{@const openers = introductionsFor(e)}
 			{@const openerEdges = openers.map((run) =>
@@ -482,11 +513,19 @@
 				!folded &&
 				!partLoading &&
 				!((variantPending || e.kind === 'proper') && proper.failed)}
-			<section class="part" class:folded class:revealed class:loading={partLoading}>
+			<section
+				class="part"
+				class:omitted={!!omissionFor(e)}
+				class:folded
+				class:revealed
+				class:loading={partLoading}
+			>
 				{#snippet partLead()}
 					<div class="part-head">
 						{#if entry}
-							<a class="part-title" href={textHref(lang, entry.key)} lang="la">{e.title}</a>
+							<a class="part-title" href={textHref(lang, (headingEntry ?? entry).key)} lang="la"
+								>{e.title}</a
+							>
 						{:else}
 							<span class="part-title" lang="la">{e.title}</span>
 						{/if}
@@ -523,7 +562,7 @@
 					{/if}
 					{#if variantsShown.some((variant) => variant.described)}
 						<p class="part-note variants-note">{msgs.commemorationVariants}</p>
-					{:else if variantsShown.some((variant) => variant.unavailable.length)}
+					{:else if variantsShown.some(owesUnavailable)}
 						<p class="part-note unavailable-note">{msgs.commemorationUnavailable}</p>
 					{/if}
 				{/snippet}
@@ -555,7 +594,7 @@
 				{#snippet variantHead(body: VariantBody)}
 					{#if body.situation}
 						<p class="variant-head smallcaps">{msgs.commemorationSituations[body.situation]}</p>
-						{#if variantsShown.some((variant) => variant.situation === body.situation && variant.unavailable.length)}
+						{#if variantsShown.some((variant) => variant.situation === body.situation && owesUnavailable(variant))}
 							<p class="part-note unavailable-note">{msgs.commemorationUnavailable}</p>
 						{/if}
 						{#if body.nonfinal}
@@ -595,8 +634,9 @@
 									<p class="commemoration-head">
 										<a class="part-title" href={textHref(lang, body.key)} lang="la">{e.title}</a>
 										<span class="mark smallcaps"
-											>{msgs.ordoCommemoration}: {commemorationTitle(
+											>{msgs.ordoCommemoration}: {commemorationName(
 												body.commemoration,
+												body.formulary,
 												lang
 											)}</span
 										>
@@ -604,6 +644,24 @@
 								{/if}
 								{#if body.condition && !proper.date}
 									<ComponentConditionNote condition={body.condition} {lang} />
+								{/if}
+								{#if 'readingReference' in body && body.readingReference}
+									<p class="reading-reference" data-reading={body.slug} lang="la">
+										{body.readingReference}{#if 'referenceUncertain' in body && body.referenceUncertain}<span
+												{lang}
+												>{lang === 'pl'
+													? ' (odczyt ze skanu niepewny, czytanie: '
+													: ' (scan reading uncertain, passage: '}{'readingPericope' in body
+													? body.readingPericope
+													: ''})</span
+											>{:else if 'referenceMisprint' in body && body.referenceMisprint}<span {lang}
+												>{lang === 'pl'
+													? ' (jak w druku, czytanie: '
+													: ' (as printed, passage: '}{'readingPericope' in body
+													? body.readingPericope
+													: ''})</span
+											>{/if}
+									</p>
 								{/if}
 								<TextBody
 									doc={body.doc}
@@ -619,6 +677,10 @@
 									verifiedTranslationCitations={body.bibliography.translation}
 									preceding={edges[j].last}
 									precededBySources={edges[j].sources}
+									referenceEdges={{
+										before: edges[j + 1].reference,
+										after: edges[j + 2]?.reference
+									}}
 									following={edges[j + 2]?.first}
 								/>
 							{/each}
@@ -666,6 +728,7 @@
 							layout={partLayout}
 							preceding={openerEdges.at(-1)?.last}
 							following={edges[1]?.first}
+							referenceEdges={{ after: edges[1]?.reference }}
 						/>
 					{/key}
 				{/if}
@@ -1067,5 +1130,9 @@
 				break-inside: avoid;
 			}
 		}
+	}
+	.reading-reference {
+		margin: calc(var(--reading) * 0.55) 0 calc(var(--reading) * 0.35);
+		break-after: avoid;
 	}
 </style>

@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/11-02m3.txt; [Lectio] section at line 16, heading at line 17"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 6-word heading as its own line in the pinned file that the reading's own digital witness binds; compared with the selected print it differs only in Joánnis for Ioánnis (orthography). It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "726",
+    "scan": "IA leaf n807; one-based PDF page 808",
+    "section": "Proprium, heading of the Epistle of proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n807/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 6-word heading over the Epistle of proprium.commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola, without a closing full stop, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 790",
+    "section": "All Souls, ad tertiam Missam; complete announcement heading; Apoc. 14, 13",
+    "printed": "709"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-libri-apocalypsis-beati-ioannis-apostoli.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 6-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

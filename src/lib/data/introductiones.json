@@ -1,6 +1,34 @@
 {
- "schema_version": "1.0.0",
+ "schema_version": "2.0.0",
  "units": [
+  {
+   "id": "initium-sancti-evangelii-secundum-ioannem",
+   "role": "announcement",
+   "text": "ordinarium/evangelium-ultimum",
+   "segment": "s05",
+   "words": [
+    "w007",
+    "w008",
+    "w009",
+    "w010",
+    "w011"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over the bound reading"
+  },
+  {
+   "id": "initium-sancti-evangelii-secundum-matthaeum",
+   "role": "announcement",
+   "text": "ordinarium/initium-sancti-evangelii-secundum-matthaeum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over each bound reading"
+  },
   {
    "id": "invitatio-oremus",
    "role": "invitation",
@@ -10,6 +38,307 @@
     "w001"
    ],
    "source": "Ritus servandus V, 1; VII, 1"
+  },
+  {
+   "id": "lectio-actuum-apostolorum",
+   "role": "announcement",
+   "text": "ordinarium/lectio-actuum-apostolorum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-iacobi-apostoli",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-iacobi-apostoli",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-ioannis-apostoli",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-ioannis-apostoli",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-pauli-apostoli-ad-titum",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-pauli-apostoli-ad-titum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-epistolae-beati-petri-apostoli",
+   "role": "announcement",
+   "text": "ordinarium/lectio-epistolae-beati-petri-apostoli",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-ezechielis-prophetae",
+   "role": "announcement",
+   "text": "ordinarium/lectio-ezechielis-prophetae",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-isaiae-prophetae",
+   "role": "announcement",
+   "text": "ordinarium/lectio-isaiae-prophetae",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "role": "announcement",
+   "text": "ordinarium/lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-libri-iudith",
+   "role": "announcement",
+   "text": "ordinarium/lectio-libri-iudith",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-libri-machabaeorum",
+   "role": "announcement",
+   "text": "ordinarium/lectio-libri-machabaeorum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-libri-sapientiae",
+   "role": "announcement",
+   "text": "ordinarium/lectio-libri-sapientiae",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "lectio-malachiae-prophetae",
+   "role": "announcement",
+   "text": "ordinarium/lectio-malachiae-prophetae",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003"
+   ],
+   "source": "the Proper's heading over each bound reading"
+  },
+  {
+   "id": "passio-domini-nostri-iesu-christi-secundum-matthaeum",
+   "role": "announcement",
+   "text": "ordinarium/passio-domini-nostri-iesu-christi-secundum-matthaeum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005",
+    "w006",
+    "w007"
+   ],
+   "source": "RG 472; the Proper's heading over the bound reading"
   },
   {
    "id": "responsio-gloria-tibi",
@@ -46,6 +375,62 @@
     "w002"
    ],
    "source": "Ritus servandus V, 1; VI, 2; VII, 1; XI, 1"
+  },
+  {
+   "id": "sequentia-sancti-evangelii-secundum-ioannem",
+   "role": "announcement",
+   "text": "ordinarium/sequentia-sancti-evangelii-secundum-ioannem",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over each bound reading"
+  },
+  {
+   "id": "sequentia-sancti-evangelii-secundum-lucam",
+   "role": "announcement",
+   "text": "ordinarium/sequentia-sancti-evangelii-secundum-lucam",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over each bound reading"
+  },
+  {
+   "id": "sequentia-sancti-evangelii-secundum-marcum",
+   "role": "announcement",
+   "text": "ordinarium/sequentia-sancti-evangelii-secundum-marcum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over each bound reading"
+  },
+  {
+   "id": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "role": "announcement",
+   "text": "ordinarium/sequentia-sancti-evangelii-secundum-matthaeum",
+   "segment": "s01",
+   "words": [
+    "w001",
+    "w002",
+    "w003",
+    "w004",
+    "w005"
+   ],
+   "source": "RG 471; Ritus servandus VI, 2; the Proper's heading over each bound reading"
   }
  ],
  "events": [
@@ -96,6 +481,26 @@
    ]
   },
   {
+   "id": "epistola-annuntiatio",
+   "before": "epistola",
+   "source": "Ritus servandus VI, 1; the Proper's heading over each reading",
+   "occurrences": [
+    {
+     "slot": "announcement",
+     "lecta": {
+      "speaker": "sacerdos",
+      "voice": "clara",
+      "source": "RG 511 e; Ritus servandus VI, 1"
+     },
+     "cantu": {
+      "speaker": "sacerdos",
+      "voice": "clara",
+      "source": "RG 514"
+     }
+    }
+   ]
+  },
+  {
    "id": "evangelium-salutatio",
    "before": "evangelium",
    "source": "Ritus servandus VI, 2",
@@ -115,6 +520,39 @@
     },
     {
      "unit": "responsio-salutationis",
+     "lecta": {
+      "speaker": "minister",
+      "voice": "clara",
+      "source": "Ritus servandus VI, 2"
+     },
+     "cantu": {
+      "speaker": "schola",
+      "voice": "cantus",
+      "source": "DMS 16 b, 25 a, 26"
+     }
+    }
+   ]
+  },
+  {
+   "id": "evangelium-annuntiatio",
+   "before": "evangelium",
+   "source": "RG 471; Ritus servandus VI, 2",
+   "occurrences": [
+    {
+     "slot": "announcement",
+     "lecta": {
+      "speaker": "sacerdos",
+      "voice": "clara",
+      "source": "RG 511 e; Ritus servandus VI, 2"
+     },
+     "cantu": {
+      "speaker": "sacerdos",
+      "voice": "cantus",
+      "source": "RG 473, 514; Ritus servandus VI, 5"
+     }
+    },
+    {
+     "unit": "responsio-gloria-tibi",
      "lecta": {
       "speaker": "minister",
       "voice": "clara",
@@ -219,6 +657,4037 @@
      }
     }
    ]
+  }
+ ],
+ "passion": {
+  "units": [
+   "passio-domini-nostri-iesu-christi-secundum-matthaeum"
+  ],
+  "omitted_events": [
+   "evangelium-salutatio"
+  ],
+  "omitted_units": [
+   "responsio-gloria-tibi"
+  ],
+  "lecta": {
+   "speaker": "sacerdos",
+   "voice": "clara",
+   "source": "Dominica II Passionis, n. 8 a"
+  },
+  "cantu": {
+   "speaker": "sacerdos",
+   "voice": "cantus",
+   "source": "Dominica II Passionis, n. 8 a"
+  },
+  "source": "RG 472; Dominica II Passionis, nn. 8, 8 a"
+ },
+ "announcements": [
+  {
+   "reading": "proprium/annuntiatio-beatae-mariae-virginis-epistola",
+   "unit": "lectio-isaiae-prophetae",
+   "reference": "Isai. 7, 10-15",
+   "pericope": {
+    "book": "Isai",
+    "passages": [
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        10,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/annuntiatio-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 26-38",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        26,
+        38
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/ascensio-domini-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 1, 1-11",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/ascensio-domini-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-marcum",
+   "reference": "Marc. 16, 14-20",
+   "pericope": {
+    "book": "Marc",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        14,
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/assumptio-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-iudith",
+   "reference": "Iudith 13, 22-25; 15, 10",
+   "pericope": {
+    "book": "Iudith",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        22,
+        25
+       ]
+      ]
+     },
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        10,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/assumptio-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 41-50",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        41,
+        50
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/beata-maria-virgo-regina-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Eccli. 24, 5 et 7, 9-11, 30-31",
+   "pericope": {
+    "book": "Eccli",
+    "passages": [
+     {
+      "chapter": 24,
+      "verses": [
+       [
+        5,
+        5
+       ],
+       [
+        7,
+        7
+       ],
+       [
+        9,
+        11
+       ],
+       [
+        30,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/beata-maria-virgo-regina-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 26-33",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        26,
+        33
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/beatae-mariae-virginis-a-rosario-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Prov. 8, 22-24 et 32-35",
+   "pericope": {
+    "book": "Prov",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        22,
+        24
+       ],
+       [
+        32,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/beatae-mariae-virginis-a-rosario-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 26-38",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        26,
+        38
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/cathedra-sancti-petri-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 1, 1-7",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-baptismatis-domini-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 1, 29-34",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        29,
+        34
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 15, 51-57",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        51,
+        57
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-i-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 5, 25-29",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        25,
+        29
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-epistola",
+   "unit": "lectio-libri-machabaeorum",
+   "reference": "2 Mach. 12, 43-46",
+   "pericope": {
+    "book": "2 Mach",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        43,
+        46
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-ii-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 6, 37-40",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        37,
+        40
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-epistola",
+   "unit": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "reference": "Apoc. 14, 13",
+   "pericope": {
+    "book": "Apoc",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        13,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/commemoratio-omnium-fidelium-defunctorum-missa-iii-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 6, 51-55",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        51,
+        55
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/corporis-christi-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 11, 23-29",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        23,
+        29
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/corporis-christi-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 6, 56-59",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        56,
+        59
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/d-n-iesu-christi-regis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Coloss. 1, 12-20",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        12,
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/d-n-iesu-christi-regis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 18, 33-37",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 18,
+      "verses": [
+       [
+        33,
+        37
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-epistola",
+   "unit": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "reference": "Apoc. 21, 2-5",
+   "pericope": {
+    "book": "Apoc",
+    "passages": [
+     {
+      "chapter": 21,
+      "verses": [
+       [
+        2,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dedicatio-archibasilicae-sanctissimi-salvatoris-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 19, 1-10",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dedicatio-sancti-michaelis-archangeli-epistola",
+   "unit": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "reference": "Apoc. 1, 1-5",
+   "pericope": {
+    "book": "Apoc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dedicatio-sancti-michaelis-archangeli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 18, 1-10",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 18,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-adventus-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 13, 11-14",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        11,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-adventus-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 21, 25-33",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 21,
+      "verses": [
+       [
+        25,
+        33
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-in-quadragesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "2 Cor. 6, 1-10",
+   "pericope": {
+    "book": "2 Cor",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-in-quadragesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 4, 1-11",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-passionis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+   "reference": "Hebr. 9, 11-15",
+   "pericope": {
+    "book": "Hebr",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        11,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-passionis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 8, 46-59",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        46,
+        59
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-i-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 12, 1-5",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-adventus-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 15, 4-13",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        4,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-adventus-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matt. 11, 2-10",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        2,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-in-quadragesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+   "reference": "1 Thess. 4, 1-7",
+   "pericope": {
+    "book": "1 Thess",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-passionis-evangelium",
+   "unit": "passio-domini-nostri-iesu-christi-secundum-matthaeum",
+   "reference": "26, 36-75; 27, 1-60",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 26,
+      "verses": [
+       [
+        36,
+        75
+       ]
+      ]
+     },
+     {
+      "chapter": 27,
+      "verses": [
+       [
+        1,
+        60
+       ]
+      ]
+     }
+    ]
+   },
+   "book_supplied": true
+  },
+  {
+   "reading": "proprium/dominica-ii-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 12, 6-16",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        6,
+        16
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-post-epiphaniam-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 2, 1-11",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-post-pascha-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 2, 21-25",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        21,
+        25
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-post-pascha-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 10, 11-16",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        11,
+        16
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-ioannis-apostoli",
+   "reference": "1 Ioann. 3, 13-18",
+   "pericope": {
+    "book": "1 Ioann",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        13,
+        18
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 14, 16-24",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        16,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-adventus-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "reference": "Philipp. 4, 4-7",
+   "pericope": {
+    "book": "Philipp",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        4,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-adventus-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 1, 19-28",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        19,
+        28
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-in-quadragesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 5, 1-9",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-in-quadragesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 11, 4-28",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        14,
+        28
+       ]
+      ]
+     }
+    ]
+   },
+   "misprint": true
+  },
+  {
+   "reading": "proprium/dominica-iii-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 12, 16-21",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        16,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-post-epiphaniam-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 8, 1-13",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        1,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-post-pascha-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 2, 11-19",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        11,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-post-pascha-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 16, 16-22",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        16,
+        22
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 5, 6-11",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        6,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 15, 1-10",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-albis-epistola",
+   "unit": "lectio-epistolae-beati-ioannis-apostoli",
+   "reference": "1 Ioann. 5, 4-10",
+   "pericope": {
+    "book": "1 Ioann",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        4,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-albis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 80, 19-31",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 20,
+      "verses": [
+       [
+        19,
+        31
+       ]
+      ]
+     }
+    ]
+   },
+   "reference_uncertain": true
+  },
+  {
+   "reading": "proprium/dominica-in-quinquagesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 13, 1-13",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        1,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-quinquagesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 18, 31-43",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 18,
+      "verses": [
+       [
+        31,
+        43
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-septuagesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 9, 24-27; 10, 1-5",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        24,
+        27
+       ]
+      ]
+     },
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-septuagesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 20, 1-16",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 20,
+      "verses": [
+       [
+        1,
+        16
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-sexagesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "2 Cor. 11, 19-33; 12, 1-9",
+   "pericope": {
+    "book": "2 Cor",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        19,
+        33
+       ]
+      ]
+     },
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-in-sexagesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 8, 4-15",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        4,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-infra-octavam-nativitatis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "reference": "Gal. 4, 1-7",
+   "pericope": {
+    "book": "Gal",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-infra-octavam-nativitatis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 33-40",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        33,
+        40
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-adventus-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 4, 1-5",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-adventus-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 3, 1-6",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-in-quadragesima-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "reference": "Gal. 4, 22-31",
+   "pericope": {
+    "book": "Gal",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        22,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-in-quadragesima-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 6, 1-15",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        1,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 13, 8-10",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        8,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-epiphaniam-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 8, 23-27",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        23,
+        27
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-pascha-epistola",
+   "unit": "lectio-epistolae-beati-iacobi-apostoli",
+   "reference": "Iac. 1, 17-21",
+   "pericope": {
+    "book": "Iac",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        17,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-pascha-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 16, 5-14",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        5,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 8, 18-23",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        18,
+        23
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-iv-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 5, 1-11",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ix-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 10, 6-13",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        6,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-ix-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 19, 41-47",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        41,
+        47
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-pentecostes-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 2, 1-11",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-pentecostes-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 14, 23-31",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        23,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-post-ascensionem-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 4, 7-11",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        7,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-post-ascensionem-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 15, 26-27; 16, 1-4",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        26,
+        27
+       ]
+      ]
+     },
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        1,
+        4
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-resurrectionis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 5, 7-8",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        7,
+        8
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-resurrectionis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-marcum",
+   "reference": "Marc. 16, 1-7",
+   "pericope": {
+    "book": "Marc",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Col. 3, 12-17",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        12,
+        17
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-epiphaniam-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 13, 24-30",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        24,
+        30
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-pascha-epistola",
+   "unit": "lectio-epistolae-beati-iacobi-apostoli",
+   "reference": "Iac. 1, 22-27",
+   "pericope": {
+    "book": "Iac",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        22,
+        27
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-pascha-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 16, 23-30",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        23,
+        30
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "1 Petr. 3, 8-15",
+   "pericope": {
+    "book": "1 Petr",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        8,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-v-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 5, 20-24",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        20,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vi-post-epiphaniam-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-thessalonicenses",
+   "reference": "1 Thess. 1, 2-10",
+   "pericope": {
+    "book": "1 Thess",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        2,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vi-post-epiphaniam-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 13, 31-35",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        31,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vi-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 6, 3-11",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        3,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vi-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-marcum",
+   "reference": "Marc. 8, 1-9",
+   "pericope": {
+    "book": "Marc",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 6, 19-23",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        19,
+        23
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-vii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 7, 15-21",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        15,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-viii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 8, 12-17",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        12,
+        17
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-viii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 16, 1-9",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-x-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 12, 2-11",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        2,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-x-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 18, 9-14",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 18,
+      "verses": [
+       [
+        9,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xi-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 15, 1-10",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xi-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-marcum",
+   "reference": "Marc. 7, 31-37",
+   "pericope": {
+    "book": "Marc",
+    "passages": [
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        31,
+        37
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "2 Cor. 3, 4-9",
+   "pericope": {
+    "book": "2 Cor",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        4,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 10, 23-37",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        23,
+        37
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xiii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "reference": "Gal. 3, 16-22",
+   "pericope": {
+    "book": "Gal",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        16,
+        22
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xiii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 17, 11-19",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 17,
+      "verses": [
+       [
+        11,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xiv-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "reference": "Gal. 5, 16-24",
+   "pericope": {
+    "book": "Gal",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        16,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xiv-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 6, 24-33",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        24,
+        33
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xix-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 4, 23-28",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        23,
+        28
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xix-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 22, 1-14",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 22,
+      "verses": [
+       [
+        1,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xv-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+   "reference": "Galat. 5, 25-26; 6, 1-10",
+   "pericope": {
+    "book": "Gal",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        25,
+        26
+       ]
+      ]
+     },
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        1,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xv-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 7, 11-16",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        11,
+        16
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xvi-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 3, 13-21",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        13,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xvi-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 14, 1-11",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xvii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 4, 1-6",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xvii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 22, 34-46",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 22,
+      "verses": [
+       [
+        34,
+        46
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xviii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 1, 4-8",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        4,
+        8
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xviii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 9, 1-8",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        1,
+        8
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xx-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 5, 15-21",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        15,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xx-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 4, 46-53",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        46,
+        53
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxi-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 6, 10-17",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        10,
+        17
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxi-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 18, 23-35",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 18,
+      "verses": [
+       [
+        23,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "reference": "Philipp. 1, 6-11",
+   "pericope": {
+    "book": "Philipp",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        6,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 22, 15-21",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 22,
+      "verses": [
+       [
+        15,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxiii-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "reference": "Philipp. 3, 17-21; 4, 1-3",
+   "pericope": {
+    "book": "Philipp",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        17,
+        21
+       ]
+      ]
+     },
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        1,
+        3
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxiii-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 9, 18-26",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        18,
+        26
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxiv-post-pentecosten-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Col. 1, 9-14",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        9,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/dominica-xxiv-post-pentecosten-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 24, 15-35",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 24,
+      "verses": [
+       [
+        15,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/epiphania-domini-epistola",
+   "unit": "lectio-isaiae-prophetae",
+   "reference": "Isai. 60, 1-6",
+   "pericope": {
+    "book": "Isai",
+    "passages": [
+     {
+      "chapter": 60,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/epiphania-domini-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 2, 1-12",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        1,
+        12
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/exaltatio-sanctae-crucis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-philippenses",
+   "reference": "Philipp. 2, 5-11",
+   "pericope": {
+    "book": "Philipp",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        5,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/exaltatio-sanctae-crucis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 12, 31-36",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        31,
+        36
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/feria-v-in-cena-domini-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 11, 20-32",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        20,
+        32
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/feria-v-in-cena-domini-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 13, 1-15",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        1,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/immaculata-conceptio-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 26-28",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        26,
+        28
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/immaculatum-cor-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Eccli. 24, 23-31",
+   "pericope": {
+    "book": "Eccli",
+    "passages": [
+     {
+      "chapter": 24,
+      "verses": [
+       [
+        23,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/immaculatum-cor-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 19, 25-27",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        25,
+        27
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/in-octava-nativitatis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 21",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        21,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/maternitas-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 43-51",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        43,
+        51
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Prov. 8, 22-35",
+   "pericope": {
+    "book": "Prov",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        22,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-aurora-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-titum",
+   "reference": "Tit. 3, 4-7",
+   "pericope": {
+    "book": "Tit",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        4,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-aurora-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 15-20",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        15,
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-die-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+   "reference": "Heb. 1, 1-12",
+   "pericope": {
+    "book": "Hebr",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        12
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-die-evangelium",
+   "unit": "initium-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 1, 1-14",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-nocte-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-titum",
+   "reference": "Tit. 2, 11-15",
+   "pericope": {
+    "book": "Tit",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        11,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-domini-in-nocte-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 1-14",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        1,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-sancti-ioannis-baptistae-epistola",
+   "unit": "lectio-isaiae-prophetae",
+   "reference": "Isai. 49, 1-3, 6 et 7",
+   "pericope": {
+    "book": "Isai",
+    "passages": [
+     {
+      "chapter": 49,
+      "verses": [
+       [
+        1,
+        3
+       ],
+       [
+        6,
+        6
+       ],
+       [
+        7,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/nativitas-sancti-ioannis-baptistae-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 57-68",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        57,
+        68
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/omnium-sanctorum-epistola",
+   "unit": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "reference": "Apoc. 7, 2-12",
+   "pericope": {
+    "book": "Apoc",
+    "passages": [
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        2,
+        12
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/omnium-sanctorum-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "5, 1-12",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        1,
+        12
+       ]
+      ]
+     }
+    ]
+   },
+   "book_supplied": true
+  },
+  {
+   "reading": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-hebraeos",
+   "reference": "Hebr. 9, 11-15",
+   "pericope": {
+    "book": "Hebr",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        11,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/pretiosissimi-sanguinis-domini-nostri-iesu-christi-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 19, 30-35",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        30,
+        35
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/purificatio-beatae-mariae-virginis-epistola",
+   "unit": "lectio-malachiae-prophetae",
+   "reference": "Malach. 3, 1-4",
+   "pericope": {
+    "book": "Malach",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        1,
+        4
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/purificatio-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 22-32",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        22,
+        32
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sacratissimi-cordis-iesu-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 3, 8-19",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        8,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sacratissimi-cordis-iesu-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 19, 31-37",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        31,
+        37
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancta-familia-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Col. 3, 12-17",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        12,
+        17
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancta-familia-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 2, 42-52",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        42,
+        52
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctae-annae-matris-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Prov. 31, 10-31",
+   "pericope": {
+    "book": "Prov",
+    "passages": [
+     {
+      "chapter": 31,
+      "verses": [
+       [
+        10,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctae-annae-matris-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 13, 44-52",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        44,
+        52
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-andreae-apostoli-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 10, 10-18",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        10,
+        18
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-andreae-apostoli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 4, 18-22",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        18,
+        22
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-bartholomaei-apostoli-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 12, 27-31",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        27,
+        31
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-bartholomaei-apostoli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 6, 12-19",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        12,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-iacobi-apostoli-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "1 Cor. 4, 9-15",
+   "pericope": {
+    "book": "1 Cor",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        9,
+        15
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-iacobi-apostoli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 20, 20-23",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 20,
+      "verses": [
+       [
+        20,
+        23
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioachim-confessoris-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Eccli. 31, 8-11",
+   "pericope": {
+    "book": "Eccli",
+    "passages": [
+     {
+      "chapter": 31,
+      "verses": [
+       [
+        8,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioachim-confessoris-evangelium",
+   "unit": "initium-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 1, 1-16",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        16
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioannis-apostoli-et-evangelistae-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Eccli. 15, 1-6",
+   "pericope": {
+    "book": "Eccli",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioannis-apostoli-et-evangelistae-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 21, 19-24",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 21,
+      "verses": [
+       [
+        19,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioseph-opificis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Col. 3, 14-15, 17, 23-24",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        14,
+        15
+       ],
+       [
+        17,
+        17
+       ],
+       [
+        23,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioseph-opificis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 13, 54-58",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        54,
+        58
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-ioseph-sponsi-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Eccli. 45, 1-6",
+   "pericope": {
+    "book": "Eccli",
+    "passages": [
+     {
+      "chapter": 45,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-laurentii-martyris-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "2 Cor. 9, 6-10",
+   "pericope": {
+    "book": "2 Cor",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        6,
+        10
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-laurentii-martyris-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 12, 24-26",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        24,
+        26
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-lucae-evangelistae-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-corinthios",
+   "reference": "2 Cor. 8, 16-24",
+   "pericope": {
+    "book": "2 Cor",
+    "passages": [
+     {
+      "chapter": 8,
+      "verses": [
+       [
+        16,
+        24
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-lucae-evangelistae-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 10, 1-9",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 10,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-matthaei-apostoli-et-evangelistae-epistola",
+   "unit": "lectio-ezechielis-prophetae",
+   "reference": "Ezech. 1, 10-14",
+   "pericope": {
+    "book": "Ezech",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        10,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-matthaei-apostoli-et-evangelistae-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 9, 9-13",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 9,
+      "verses": [
+       [
+        9,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-matthiae-apostoli-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 1, 15-26",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        15,
+        26
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-matthiae-apostoli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 11, 25-30",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        25,
+        30
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-petri-et-pauli-apostolorum-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 12, 1-11",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 12,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-petri-et-pauli-apostolorum-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 16, 13-19",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 16,
+      "verses": [
+       [
+        13,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-stephani-protomartyris-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 6, 8-10, 7, 54-59",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 6,
+      "verses": [
+       [
+        8,
+        10
+       ]
+      ]
+     },
+     {
+      "chapter": 7,
+      "verses": [
+       [
+        54,
+        59
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-stephani-protomartyris-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 23, 34-39",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 23,
+      "verses": [
+       [
+        34,
+        39
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-thomae-apostoli-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 2, 19-22",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        19,
+        22
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sancti-thomae-apostoli-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 20, 24-29",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 20,
+      "verses": [
+       [
+        24,
+        29
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctissimae-trinitatis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 11, 33-36",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 11,
+      "verses": [
+       [
+        33,
+        36
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctissimae-trinitatis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 28, 18-20",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 28,
+      "verses": [
+       [
+        18,
+        20
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctissimi-nominis-iesu-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 4, 8-12",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        8,
+        12
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-innocentium-martyrum-epistola",
+   "unit": "lectio-libri-apocalypsis-beati-ioannis-apostoli",
+   "reference": "Apoc. 14, 1-5",
+   "pericope": {
+    "book": "Apoc",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-innocentium-martyrum-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 2, 13-18",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        13,
+        18
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-philippi-et-iacobi-apostolorum-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Sap. 5, 1-5",
+   "pericope": {
+    "book": "Sap",
+    "passages": [
+     {
+      "chapter": 5,
+      "verses": [
+       [
+        1,
+        5
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-philippi-et-iacobi-apostolorum-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 14, 1-13",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        1,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-simonis-et-iudae-apostolorum-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-ephesios",
+   "reference": "Ephes. 4, 7-13",
+   "pericope": {
+    "book": "Ephes",
+    "passages": [
+     {
+      "chapter": 4,
+      "verses": [
+       [
+        7,
+        13
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/sanctorum-simonis-et-iudae-apostolorum-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 15, 17-25",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 15,
+      "verses": [
+       [
+        17,
+        25
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/septem-dolorum-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-iudith",
+   "reference": "Iudith 13, 22 et 23-25",
+   "pericope": {
+    "book": "Iudith",
+    "passages": [
+     {
+      "chapter": 13,
+      "verses": [
+       [
+        22,
+        22
+       ],
+       [
+        23,
+        25
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/septem-dolorum-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 19, 25-27",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        25,
+        27
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/transfiguratio-domini-epistola",
+   "unit": "lectio-epistolae-beati-petri-apostoli",
+   "reference": "2 Petr. 1, 16-19",
+   "pericope": {
+    "book": "2 Petr",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        16,
+        19
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/transfiguratio-domini-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 17, 1-9",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 17,
+      "verses": [
+       [
+        1,
+        9
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-nativitatis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
+   "reference": "Rom. 1, 1-6",
+   "pericope": {
+    "book": "Rom",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        1,
+        6
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-nativitatis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 1, 18-21",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        18,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-paschalis-epistola",
+   "unit": "lectio-epistolae-beati-pauli-apostoli-ad-colossenses",
+   "reference": "Col. 3, 1-4",
+   "pericope": {
+    "book": "Col",
+    "passages": [
+     {
+      "chapter": 3,
+      "verses": [
+       [
+        1,
+        4
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-paschalis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-matthaeum",
+   "reference": "Matth. 28, 1-7",
+   "pericope": {
+    "book": "Matth",
+    "passages": [
+     {
+      "chapter": 28,
+      "verses": [
+       [
+        1,
+        7
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-pentecostes-epistola",
+   "unit": "lectio-actuum-apostolorum",
+   "reference": "Act. 19, 1-8",
+   "pericope": {
+    "book": "Act",
+    "passages": [
+     {
+      "chapter": 19,
+      "verses": [
+       [
+        1,
+        8
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/vigilia-pentecostes-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 14, 15-21",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 14,
+      "verses": [
+       [
+        15,
+        21
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/visitatio-beatae-mariae-virginis-epistola",
+   "unit": "lectio-libri-sapientiae",
+   "reference": "Cant. 2, 8-14",
+   "pericope": {
+    "book": "Cant",
+    "passages": [
+     {
+      "chapter": 2,
+      "verses": [
+       [
+        8,
+        14
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "reading": "proprium/visitatio-beatae-mariae-virginis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-lucam",
+   "reference": "Luc. 1, 39-47",
+   "pericope": {
+    "book": "Luc",
+    "passages": [
+     {
+      "chapter": 1,
+      "verses": [
+       [
+        39,
+        47
+       ]
+      ]
+     }
+    ]
+   }
   }
  ]
 }

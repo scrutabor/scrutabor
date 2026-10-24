@@ -41,6 +41,7 @@ import {
 import {
 	COMMEMORATION_SLOTS,
 	commemorationLookup,
+	orationBodies,
 	selectedCommemorations,
 	SITUATIONS,
 	validateCommemorationPack,
@@ -48,11 +49,14 @@ import {
 	type CommemorationEntry,
 	type CommemorationPack,
 	type CommemorationPlan,
+	type MissingCommemoration,
 	type SelectedCommemorationBody,
 	type Situation
 } from '$lib/commemorationes';
 import type { VariantPack } from '$lib/variant-resource';
 import { object, validateLocalizedBody } from '$lib/localized-body';
+import { introductionLookup } from '$lib/introductiones';
+import { validateReadingDelivery } from '$lib/reading-delivery';
 import { artifactRequestPath, componentApplies, dayById, SLOT_OF } from '$lib/proprium';
 import { dayOn, isoDate } from '$lib/kalendarium';
 import { massesOn, resolveOrdoChoice, ordoHref, type OrdoChoice } from '$lib/ordo-choice';
@@ -70,6 +74,9 @@ export interface ProperPartPayload {
 	condition?: ComponentCondition;
 	/** The commemoration this oration belongs to; absent for the Mass's own parts. */
 	commemoration?: string;
+	/** The formulary a resolved commemoration's oration comes from (the impeded Sunday's or the
+	 * impeded feast's own, or the Advent Sunday whose Mass an Advent weekday says). */
+	formulary?: string;
 	/** A Secret followed by a commemoration's Secret: its ending is said quietly (RG 480–481). */
 	nonfinal?: boolean;
 	/** The sung situation this occurrence belongs to, where the two sung decisions differ and
@@ -84,6 +91,7 @@ export interface ProperPartPayload {
 interface Assembly {
 	parts: ProperPartPayload[];
 	unavailable: CommemorationEntry[];
+	missing: MissingCommemoration[];
 	/** Which commemorations it makes and lacks, to tell two sung decisions apart. */
 	plan: string;
 }
@@ -94,8 +102,11 @@ export interface CommemorationVariant {
 	/** The two sung decisions differ and the reader's low/sung choice cannot settle which
 	 * applies: this sequence is one of two described alternatives, never a guessed default. */
 	described: boolean;
-	/** Required here and not yet in this edition (decision omitted-required-de-tempore-unavailable). */
+	/** Omitted for a required de Tempore commemoration this edition does not yet carry. */
 	unavailable: CommemorationEntry[];
+	/** Required here, with orations this edition does not yet carry (a resolved commemoration
+	 * decided omitted-required-de-tempore-unavailable). */
+	missing: MissingCommemoration[];
 }
 
 const COMMEMORATED_SLOTS: readonly string[] = COMMEMORATION_SLOTS;
@@ -105,18 +116,16 @@ function variantsOf(
 	form: MassForm
 ): CommemorationVariant[] {
 	if (!current) return [];
-	if (form === 'lecta')
-		return [{ situation: 'lecta', described: false, unavailable: current.lecta.unavailable }];
-	const conventual = current['cantu-conventualis'];
-	const other = current['cantu-non-conventualis'];
-	if (conventual.plan === other.plan)
-		return [
-			{ situation: 'cantu-conventualis', described: false, unavailable: conventual.unavailable }
-		];
-	return [
-		{ situation: 'cantu-conventualis', described: true, unavailable: conventual.unavailable },
-		{ situation: 'cantu-non-conventualis', described: true, unavailable: other.unavailable }
-	];
+	const variant = (situation: Situation, described: boolean): CommemorationVariant => ({
+		situation,
+		described,
+		unavailable: current[situation].unavailable,
+		missing: current[situation].missing
+	});
+	if (form === 'lecta') return [variant('lecta', false)];
+	if (current['cantu-conventualis'].plan === current['cantu-non-conventualis'].plan)
+		return [variant('cantu-conventualis', false)];
+	return [variant('cantu-conventualis', true), variant('cantu-non-conventualis', true)];
 }
 
 export interface ProperPayload {
@@ -292,12 +301,13 @@ function assembled(
 	dismissal: DismissalProfile,
 	dismissalPack: DismissalPack | null,
 	plans: Record<Situation, CommemorationPlan>,
-	commemorationPack: CommemorationPack | null = null
+	commemorationPack: CommemorationPack | null = null,
+	resolved: Record<string, ProperPayload> = {}
 ): { payload: ProperPayload; assemblies: Record<Situation, Assembly> } {
 	const filtered = forDate(source, selectedDate);
 	const fixed = [...selectedCanon(profile, pack), ...selectedDismissal(dismissal, dismissalPack)];
 	let lex = filtered.lex;
-	for (const extra of [pack, dismissalPack, commemorationPack]) {
+	for (const extra of [pack, dismissalPack, commemorationPack, ...Object.values(resolved)]) {
 		if (extra) {
 			lex = {
 				lemmata: { ...lex.lemmata, ...extra.lex.lemmata },
@@ -305,16 +315,25 @@ function assembled(
 			};
 		}
 	}
+	// A resolved commemoration says the orations of the formulary its pair names, taken from
+	// that formulary's own validated payload, never from a copy.
+	const resolvedBodies = Object.fromEntries(
+		Object.entries(resolved).map(([id, payload]) => [id, orationBodies(payload.parts)])
+	);
 	// Each situation is assembled whole from the unmodified bodies: a change of the reader's
 	// low/sung choice selects another sequence and never carries the previous one's prayers.
 	const situations = Object.fromEntries(
 		SITUATIONS.map((situation) => {
-			const { admitted, unavailable } = plans[situation];
+			const { admitted, unavailable, missing } = plans[situation];
 			const additions: SelectedCommemorationBody[] = selectedCommemorations(
 				admitted,
-				commemorationPack
+				commemorationPack,
+				resolvedBodies
 			);
-			const followed = additions.some((body) => body.slot === 'secreta') || unavailable.length > 0;
+			const followed =
+				additions.some((body) => body.slot === 'secreta') ||
+				unavailable.length > 0 ||
+				missing.length > 0;
 			return [
 				situation,
 				{
@@ -324,9 +343,11 @@ function assembled(
 						...fixed
 					],
 					unavailable,
+					missing,
 					plan: JSON.stringify([
-						admitted.map(({ commemoration }) => commemoration.id),
-						unavailable.map(({ id }) => id)
+						admitted.map(({ commemoration, formulary }) => [commemoration.id, formulary]),
+						unavailable.map(({ id }) => id),
+						missing.map(({ commemoration, formulary }) => [commemoration.id, formulary])
 					])
 				}
 			];
@@ -486,7 +507,7 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 	loading = true;
 	startTiming();
 	try {
-		if (!canonLookup || !dismissalLookup || !commemorationLookup)
+		if (!canonLookup || !dismissalLookup || !commemorationLookup || !introductionLookup)
 			throw new Error('dated text resource unavailable');
 		const profile = canonLookup.resolve(selected.date, next);
 		const dismissal = dismissalLookup.resolve(selected.date, next);
@@ -501,15 +522,23 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 		dismissalProfile = dismissal;
 		decisions = found;
 		const needsPack = CANON_ROLES.some((role) => profile.texts[role] !== ordinaryCanon(role));
-		const [body, pack, dismissalPack, commemorationPack] = await Promise.all([
+		const admitted = SITUATIONS.flatMap((situation) => plans[situation].admitted);
+		// An addressed commemoration's orations travel in the shared pack; a resolved one's are
+		// the orations of the formulary its pair names, fetched as that formulary's own day.
+		const formularies = admitted
+			.flatMap(({ formulary }) => (formulary === null ? [] : [formulary]))
+			.filter((id, index, all) => all.indexOf(id) === index);
+		const [body, pack, dismissalPack, commemorationPack, sources] = await Promise.all([
 			held[key] ?? load(next, lang),
 			needsPack ? loadCanon(lang) : null,
 			dismissal.text !== ORDINARY_DISMISSAL ? loadDismissal(lang) : null,
-			SITUATIONS.some((situation) => plans[situation].admitted.length)
-				? loadCommemoration(lang)
-				: null
+			admitted.some(({ formulary }) => formulary === null) ? loadCommemoration(lang) : null,
+			Promise.all(formularies.map((id) => held[`${lang}/${id}`] ?? load(id, lang)))
 		]);
 		held[key] = body;
+		formularies.forEach((id, index) => {
+			held[`${lang}/${id}`] = sources[index];
+		});
 		if (mine !== current) return;
 		const result = assembled(
 			body,
@@ -519,7 +548,8 @@ export async function chooseDay(choice: OrdoChoice, lang: Lang): Promise<void> {
 			dismissal,
 			dismissalPack,
 			plans,
-			commemorationPack
+			commemorationPack,
+			Object.fromEntries(formularies.map((id, index) => [id, sources[index]]))
 		);
 		assemblies = result.assemblies;
 		payload = result.payload;
@@ -596,6 +626,12 @@ function validateProper(value: unknown, day: string, lang: Lang): ProperPayload 
 		)
 			throw new Error('invalid formulary part identity');
 		validateLocalizedBody(part, lang, value.lex);
+		validateReadingDelivery(
+			part.part as string,
+			part.key as string,
+			part.doc as unknown as TextDocument,
+			introductionLookup
+		);
 	}
 	return value as unknown as ProperPayload;
 }

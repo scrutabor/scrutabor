@@ -117,6 +117,23 @@ export interface Messages {
 	commemorationVariants: string;
 	/** The label of each described sequence. */
 	commemorationSituations: Record<Situation, string>;
+	/** A required commemoration resolved to a formulary whose orations the edition does not yet
+	 * carry; '{title}' names it as its heading does, or by its own title where that formulary is
+	 * not in this edition. */
+	dayCommemorationMissing: string;
+	/** A resolved commemoration that keeps its own title and names the formulary its orations
+	 * come from (the Advent feria): '{commemoration}' and '{formulary}' are the two titles. */
+	commemorationPrayersOf: string;
+	/** A commemoration resolved per date has no orations of its own: its page says what it is,
+	 * keyed by commemoration identity, before the dates this edition resolves. */
+	commemorationRules: Record<string, readonly string[]>;
+	/** The heading over those dates, grouped by the Mass that makes the commemoration. */
+	commemorationDates: string;
+	/** A listed date whose formulary's orations the edition does not yet carry. */
+	commemorationPrayersMissing: string;
+	/** A Mass a resolved commemoration names on a listed date that this edition does not yet
+	 * author (the Ember days of Advent), keyed by its identity: named, never linked. */
+	commemorationAbsentMasses: Record<string, string>;
 	/** Capability limit, not a claim that every date needs an additional prayer. */
 	formularyScope: string;
 	dayLabel: string;
@@ -214,6 +231,7 @@ export interface Messages {
 	/** A conditional faculty: available to the faithful, but not their
 	 * unconditional response. */
 	mayJoin: string;
+	participationPerformance: string;
 	/** What the reader in the pew is called over their own lines. The
 	 * corpus's own word for that speaker is `populus`, printed as lud; this
 	 * is the word the picker uses, so that the setting and the page agree. */
@@ -384,8 +402,31 @@ const MESSAGES: Record<Lang, Messages> = {
 			'cantu-conventualis': 'we Mszy śpiewanej konwentualnej',
 			'cantu-non-conventualis': 'we Mszy śpiewanej niekonwentualnej'
 		},
+		dayCommemorationMissing:
+			'tego dnia przypada wspomnienie: {title}. Jego modlitw nie ma jeszcze w tym wydaniu',
+		commemorationPrayersOf: '{commemoration} (modlitwy: {formulary})',
+		commemorationRules: {
+			'dominica-impedita': [
+				'Gdy jedno z poniższych świąt pierwszej klasy przypada w niedzielę, zajmuje miejsce niedzieli, a we Mszy tego święta wspomina się tę niedzielę. Po kolekcie, sekrecie i pokomunii święta następuje za każdym razem odpowiednia modlitwa niedzieli z własnym zakończeniem. To wspomnienie uprzywilejowane odmawia się we wszystkich Mszach.',
+				'Wspominana niedziela zależy od daty: jest to niedziela, która według kalendarza przypadałaby tego dnia. Jej modlitwy pochodzą z jej własnego formularza i pokazuje je porządek Mszy wybranego dnia.'
+			],
+			'feria-adventus': [
+				'Gdy jedno z poniższych świąt przypada w dzień powszedni Adwentu, zajmuje miejsce dnia powszedniego, a we Mszy tego święta wspomina się ten dzień powszedni. Po kolekcie, sekrecie i pokomunii święta następuje za każdym razem odpowiednia modlitwa dnia powszedniego z własnym zakończeniem. To wspomnienie uprzywilejowane odmawia się we wszystkich Mszach: we Mszy cichej, we Mszy śpiewanej konwentualnej i we Mszy śpiewanej niekonwentualnej.',
+				'Modlitwy wspomnienia zależą od daty: w dzień powszedni Adwentu bierze się Mszę z poprzedniej niedzieli, więc są to modlitwy niedzieli Adwentu, która poprzedza ten dzień. Pochodzą z jej własnego formularza i pokazuje je porządek Mszy wybranego dnia. Wyjątkiem są Suche Dni Adwentu, które mają własną Mszę. Tej Mszy nie ma jeszcze w tym wydaniu, dlatego gdy święto przypada w jeden z Suchych Dni, wydanie zaznacza, że modlitw wspomnienia jeszcze w nim nie ma, i nie zastępuje ich modlitwami niedzieli.'
+			],
+			'festum-impeditum': [
+				'Gdy jedno z poniższych świąt drugiej klasy przypada w niedzielę drugiej klasy, ustępuje niedzieli, a we Mszy niedzieli wspomina się to święto. Po kolekcie, sekrecie i pokomunii niedzieli następuje za każdym razem odpowiednia modlitwa święta z własnym zakończeniem. To wspomnienie zwykłe odmawia się we Mszy cichej i we Mszy śpiewanej konwentualnej, a we Mszy śpiewanej niekonwentualnej pomija się je.',
+				'Wspominane święto zależy od daty: jest to święto, które według kalendarza przypada tego dnia. Jego modlitwy pochodzą z jego własnego formularza i pokazuje je porządek Mszy wybranego dnia.'
+			]
+		},
+		commemorationDates: 'Święta i daty w tym wydaniu',
+		commemorationPrayersMissing: 'modlitw nie ma jeszcze w tym wydaniu',
+		commemorationAbsentMasses: {
+			'feria-sexta-quatuor-temporum-adventus': 'Piątek Suchych Dni Adwentu',
+			'sabbato-quatuor-temporum-adventus': 'Sobota Suchych Dni Adwentu'
+		},
 		formularyScope:
-			'Dobór modlitw uwzględnia wspomnienia Litanii Większych i świętej Petroneli, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.',
+			'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, ale nie uwzględnia jeszcze innych wspomnień liturgicznych ani kalendarzy lokalnych.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
@@ -472,6 +513,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
 		everyone: 'odpowiadają wszyscy',
 		mayJoin: 'wierni mogą dołączyć',
+		participationPerformance:
+			'Schola śpiewa, a wierni mogą dołączyć. Kapłan odmawia ten sam tekst po cichu.',
 		faithful: 'wierni',
 		faithfulWith: {
 			sacerdos: 'kapłan i wierni',
@@ -628,8 +671,31 @@ const MESSAGES: Record<Lang, Messages> = {
 			'cantu-conventualis': 'in a sung conventual Mass',
 			'cantu-non-conventualis': 'in a sung Mass that is not conventual'
 		},
+		dayCommemorationMissing:
+			'a commemoration is due on this day: {title}. Its prayers are not yet in this edition',
+		commemorationPrayersOf: '{commemoration} (prayers: {formulary})',
+		commemorationRules: {
+			'dominica-impedita': [
+				'When one of the first-class feasts below falls on a Sunday, it takes the Sunday’s place, and the Sunday is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the Sunday’s prayer of the same kind, with its own conclusion. This privileged commemoration is made in every Mass.',
+				'The Sunday commemorated depends on the date: it is the Sunday the calendar would have kept that day. Its prayers come from its own formulary, and the order of Mass of the chosen day shows them.'
+			],
+			'feria-adventus': [
+				'When one of the feasts below falls on a weekday of Advent, it takes the weekday’s place, and the weekday is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the weekday’s prayer of the same kind, with its own conclusion. This privileged commemoration is made in every Mass: in a low Mass, in a sung conventual Mass and in a sung Mass that is not conventual.',
+				'The commemoration’s prayers depend on the date: a weekday of Advent uses the preceding Sunday’s Mass, so they are the prayers of the Sunday of Advent before that day. They come from its own formulary, and the order of Mass of the chosen day shows them. The Ember days of Advent are the exception: they have a Mass of their own. That Mass is not yet in this edition, so when a feast falls on an Ember day, the edition says that the commemoration’s prayers are not yet in it, and does not replace them with the Sunday’s.'
+			],
+			'festum-impeditum': [
+				'When one of the second-class feasts below falls on a second-class Sunday, it gives way to the Sunday, and the feast is commemorated in the Sunday’s Mass. The Collect, Secret and Postcommunion of the Sunday are each followed by the feast’s prayer of the same kind, with its own conclusion. This ordinary commemoration is made in a low Mass and in a sung conventual Mass, and omitted in a sung Mass that is not conventual.',
+				'The feast commemorated depends on the date: it is the feast the calendar assigns to that day. Its prayers come from its own formulary, and the order of Mass of the chosen day shows them.'
+			]
+		},
+		commemorationDates: 'Feasts and dates in this edition',
+		commemorationPrayersMissing: 'prayers not yet in this edition',
+		commemorationAbsentMasses: {
+			'feria-sexta-quatuor-temporum-adventus': 'Ember Friday of Advent',
+			'sabbato-quatuor-temporum-adventus': 'Ember Saturday of Advent'
+		},
 		formularyScope:
-			'The selection of prayers accounts for the commemorations of the Greater Litanies and Saint Petronilla, but not yet for other liturgical commemorations or local calendars.',
+			'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, but not yet for other liturgical commemorations or local calendars.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',
@@ -716,6 +782,8 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'sung', lecta: 'low' },
 		everyone: 'everyone answers',
 		mayJoin: 'the faithful may join',
+		participationPerformance:
+			'The choir sings, and the faithful may join. The priest recites the same text quietly.',
 		faithful: 'the faithful',
 		faithfulWith: {
 			sacerdos: 'priest and faithful',

@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Quad4-0.txt; [Lectio] section at line 25, heading at line 26"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading as its own line in the pinned file that the reading's own digital witness binds; it agrees with the selected print letter for letter. It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "106",
+    "scan": "IA leaf n185; one-based PDF page 186",
+    "section": "Proprium, heading of the Epistle of proprium.dominica-iv-in-quadragesima-epistola",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n185/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 7-word heading over the Epistle of proprium.dominica-iv-in-quadragesima-epistola, without a closing full stop, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 185",
+    "section": "Dominica IV in Quadragesima; complete announcement heading; Gal. 4, 22-31",
+    "printed": "104"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.lectio-epistolae-beati-pauli-apostoli-ad-galatas.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 7-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

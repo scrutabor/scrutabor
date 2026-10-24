@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.lectio-ezechielis-prophetae",
+  "title":"Léctio Ezechiélis Prophétæ",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Léctio","l":"lectio","m":20},{"i":"w002","f":"Ezechiélis","l":"Ezechiel","m":69},{"i":"w003","f":"Prophétæ","l":"propheta","m":261}]}
+  ]
+}

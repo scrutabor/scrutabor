@@ -1,5 +1,6 @@
 /** Structural prerequisites shared by localized text and word-card consumers. */
-import { hasText } from './corpus-metadata';
+import { hasText, ROOT_MANIFEST } from './corpus-metadata';
+import { validateParticipationPerformance } from './participation-performance';
 import type { Lang } from './i18n';
 
 export function object(value: unknown): value is Record<string, unknown> {
@@ -118,6 +119,7 @@ export function validateLocalizedBody(part: unknown, lang: Lang, lex: unknown): 
 		!Array.isArray(part.bibliography.translation)
 	)
 		throw new Error('invalid localized body data');
+	validateParticipationPerformance(part.doc, ROOT_MANIFEST.schema_version);
 	let count = 0;
 	const segmentIds = new Set<string>();
 	const wordIds = new Set<string>();

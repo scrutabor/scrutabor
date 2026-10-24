@@ -2,6 +2,7 @@ import type { GlossDocument, MassForm, Segment, TextDocument } from './corpus';
 import { litanyRows, type LitanyRow } from './reading-text';
 import { isEveryonesResponse, mayJoin, type Role } from './role.svelte';
 import * as marks from './speaker-marks';
+import { namesPerformance } from './participation-performance';
 import { textFlowUnits, type FlowRow } from './text-flow';
 
 /** The reading settings a text's flow depends on. */
@@ -23,6 +24,7 @@ export interface FlowBinding {
 	firstSharedVerse: number;
 	sharedSpeaker: Segment['speaker'] | undefined;
 	sharedPrayer: boolean;
+	namesPerformance: (index: number) => boolean;
 	options: Parameters<typeof textFlowUnits>[2];
 }
 
@@ -59,12 +61,14 @@ export function flowBinding(
 		firstSharedVerse,
 		sharedSpeaker,
 		sharedPrayer,
+		namesPerformance: (index) => !settings.referenceOnly && namesPerformance(segs, index, form),
 		options: {
 			hideOpeningRubric: settings.hideOpeningRubric ?? false,
 			namesWho: (i) =>
 				!settings.referenceOnly &&
 				((showSpeakerNames &&
 					(sharedPrayer ? i === firstSharedVerse : marks.namesSpeaker(segs, i))) ||
+					namesPerformance(segs, i, form) ||
 					marks.namesVoice(segs, i) ||
 					(mayJoin(segs[i], form) && marks.namesConditionalParticipation(segs, i, form))),
 			translated: (i) => settings.helpLevel >= 2 && !!gloss.segments[segs[i].id]?.translation,

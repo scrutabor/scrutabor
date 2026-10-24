@@ -4,17 +4,26 @@ for (const language of ['pl', 'en'] as const) {
 	test(`${language} discloses the scope of prayer selection on reading and calendar pages`, async ({
 		page
 	}) => {
-		// The edition now assembles two commemorations; the note names both and still says
+		// The edition now assembles five commemorations; the note names each and still says
 		// what it does not account for.
 		const message =
 			language === 'pl'
-				? 'Dobór modlitw uwzględnia wspomnienia Litanii Większych i świętej Petroneli, ale nie inne wspomnienia liturgiczne ani kalendarze lokalne.'
-				: 'The selection of prayers accounts for the commemorations of the Greater Litanies and Saint Petronilla, but not yet for other liturgical commemorations or local calendars.';
+				? 'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, ale nie uwzględnia jeszcze innych wspomnień liturgicznych ani kalendarzy lokalnych.'
+				: 'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, but not yet for other liturgical commemorations or local calendars.';
 		await page.setViewportSize({ width: 320, height: 900 });
 		await page.goto(`/app/${language}/ordo/offertorium?dies=2049-07-25`);
 		await expect(page.locator('.page > header .formulary-scope')).toHaveText(message);
 		await expect(page.locator('.page > header .formulary-scope')).toContainText(
 			language === 'pl' ? 'Petroneli' : 'Petronilla'
+		);
+		await expect(page.locator('.page > header .formulary-scope')).toContainText(
+			language === 'pl' ? 'niedzieli przeszkodzonej' : 'the impeded Sunday'
+		);
+		await expect(page.locator('.page > header .formulary-scope')).toContainText(
+			language === 'pl' ? 'święta przeszkodzonego' : 'the impeded feast'
+		);
+		await expect(page.locator('.page > header .formulary-scope')).toContainText(
+			language === 'pl' ? 'dnia powszedniego Adwentu' : 'the weekday of Advent'
 		);
 		await expect(page.locator('.page > header .formulary-scope')).toBeVisible();
 		await page.emulateMedia({ media: 'print' });

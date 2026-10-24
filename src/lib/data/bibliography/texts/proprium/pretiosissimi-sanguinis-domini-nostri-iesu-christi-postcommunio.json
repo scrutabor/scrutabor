@@ -22,6 +22,26 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 583",
+    "scan": "leaf n664 / PDF p. 665",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n664/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited Benziger proper page prints all 23 body words and the abbreviated cue Qui tecum. It does not print the selected full conclusion or Amen; those are separately supported by RG 115 c and the declared ritual-boundary use."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 225–226",
@@ -42,22 +62,23 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "rubric_control",
    "locator": {
-    "printed": "p. 583",
-    "scan": "leaf n664 / PDF p. 665",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n664/mode/1up"
+    "printed": "p. xviii",
+    "scan": "leaf n23 / PDF p. 24",
+    "section": "RG 115 c: conclusion addressed to the Father with mention of the Son near the end; complete Qui tecum formula through Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
    "entries": [
     {
-     "id": "use.proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio.mr1962",
+     "id": "use.proprium.pretiosissimi-sanguinis-domini-nostri-iesu-christi-postcommunio.conclusion.mr1962",
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "RG 115 c supplies the full conclusion Qui tecum vivit et regnat in unitate Spiritus Sancti, Deus, per omnia saecula saeculorum. Amen. This use supports the separately declared expansion of the proper page’s Qui tecum cue, not a claim that the proper page prints the full formula or the selected house accents."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-24"
   }
  ],
  "witnesses": []

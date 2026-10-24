@@ -1,3 +1,4 @@
+import { readingIntroductionOwners } from './introductiones';
 // Concordance: where each lemma and normalized Latin form occurs. The corpus
 // emits the postings; this module resolves only the text files they name.
 //
@@ -103,8 +104,17 @@ export function everyTextInOrder(): string[] {
 		}
 	};
 	for (const section of CATALOG) for (const t of section.texts) add(`${t.category}/${t.slug}`);
+	const fixedOwners = new Set(
+		ORDO.flatMap((movement) =>
+			movement.entries.flatMap((entry) => (entry.text ? [entry.text] : []))
+		)
+	);
 	for (const movement of ORDO) {
 		for (const e of movement.entries) {
+			if (e.id === 'epistola' || e.id === 'evangelium')
+				for (const key of readingIntroductionOwners(e.id))
+					// Keep existing full owners at their own Ordo home, notably the Last Gospel.
+					if (!fixedOwners.has(key)) add(key);
 			if (e.kind === 'proper') {
 				// Sequence shared texts at the slot where the rite uses them, in
 				// the corpus's formulary order, instead of leaving them in the

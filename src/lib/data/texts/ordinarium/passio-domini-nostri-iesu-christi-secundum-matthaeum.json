@@ -1,0 +1,14 @@
+{
+  "id":"ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+  "title":"Pássio Dómini nostri Iesu Christi secúndum Matthǽum",
+  "category":"ordinarium",
+  "section":"missa-catechumenorum",
+  "variant":"missae",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","w":[{"i":"w001","f":"Pássio","l":"passio","m":20},{"i":"w002","f":"Dómini","l":"dominus","m":54},{"i":"w003","f":"nostri","l":"noster","m":99,"h":"w002"},{"i":"w004","f":"Iesu","l":"Iesus","m":98},{"i":"w005","f":"Christi","l":"Christus","m":54},{"i":"w006","f":"secúndum","l":"secundum","m":3,"h":"w007"},{"i":"w007","f":"Matthǽum","l":"Matthaeus","m":35,"a":7}]}
+  ]
+}

@@ -1,0 +1,65 @@
+{
+ "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Sancti/08-16.txt; [Evangelium] section at line 46, heading at line 47"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.initium-sancti-evangelii-secundum-matthaeum.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 5-word heading as its own line in the pinned file that the reading's own digital witness binds; compared with the selected print it differs only in Initium for Inítium (accent), its ++ being the source's cross sign. It is a derived digital comparison, not proof of an independent manuscript family."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "642",
+    "scan": "IA leaf n723; one-based PDF page 724",
+    "section": "Proprium, heading of the Gospel of proprium.sancti-ioachim-confessoris-evangelium",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n723/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.initium-sancti-evangelii-secundum-matthaeum.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Prints the complete 5-word heading over the Gospel of proprium.sancti-ioachim-confessoris-evangelium, without a closing full stop, with the red cross in the margin before it, in the spelling, ligatures and capitalization selected here and with the same accents."
+    }
+   ],
+   "verified_on": "2026-10-23"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "scan": "PDF page 710",
+    "section": "S. Ioachim Confessoris, August 16; complete announcement heading; Mt. 1, 1-16",
+    "printed": "629"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.initium-sancti-evangelii-secundum-matthaeum.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Directly prints the complete 5-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": []
+}

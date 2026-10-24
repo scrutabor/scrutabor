@@ -48,7 +48,8 @@
 		layout,
 		preceding,
 		following,
-		precededBySources = false
+		precededBySources = false,
+		referenceEdges = {}
 	}: {
 		doc: TextDocument;
 		gloss: GlossDocument;
@@ -99,6 +100,8 @@
 		/** The body before this one in the slot shows its translation sources
 		 * on screen, so the first row's margin is neutralised there (TextFlow). */
 		precededBySources?: boolean;
+		/** Reading-reference blocks before or after this body's rows. */
+		referenceEdges?: { before?: boolean; after?: boolean };
 	} = $props();
 
 	// A dot, not a colon: it is unreserved in a URL, so `?w=credo.w001`
@@ -384,6 +387,7 @@
 		{following}
 		sourcesAfter={sourcesShown}
 		sourcesBefore={precededBySources}
+		{referenceEdges}
 	/>
 {/snippet}
 
@@ -397,6 +401,7 @@
 		preceding={flow.opening.at(-1)?.rows.at(-1)}
 		{following}
 		sourcesAfter={sourcesShown}
+		referenceEdges={{ after: referenceEdges.after }}
 	/>
 	{@render translationSources()}
 {/snippet}
@@ -432,6 +437,7 @@
 		{following}
 		sourcesAfter={sourcesShown}
 		sourcesBefore={precededBySources}
+		{referenceEdges}
 	/>
 	{@render translationSources()}
 {/if}
@@ -462,7 +468,10 @@
 			!referenceOnly &&
 			mayJoin(seg, massForm.value) &&
 			marks.namesConditionalParticipation(segs, i, massForm.value)}
-		{@const nameSpeaker = sharedPrayer ? i === firstSharedVerse : namesSpeaker(i)}
+		{@const performance = binding.namesPerformance(i)}
+		{@const hasPerformance = !!seg.participation?.[massForm.value]?.performance && !referenceOnly}
+		{@const nameSpeaker =
+			!hasPerformance && (sharedPrayer ? i === firstSharedVerse : namesSpeaker(i))}
 		{@const speakerName =
 			marks.isSharedPrayer(segs, massForm.value) && !sharedSpeaker
 				? M[lang].faithful
@@ -473,8 +482,10 @@
 						: seg.speaker
 							? M[lang].speakers[seg.speaker]
 							: undefined}
-		{#if (showSpeakerNames && nameSpeaker) || showVoice || joinable}
+		{#if performance || (showSpeakerNames && nameSpeaker) || (!hasPerformance && showVoice) || joinable}
 			<p class="who" class:yours={mine}>
+				{#if performance}<span class="who-performance">{M[lang].participationPerformance}</span
+					>{/if}
 				{#if showSpeakerNames && nameSpeaker && speakerName}<span class="who-name"
 						>{speakerName}</span
 					>{/if}
@@ -485,8 +496,8 @@
 				     to that one. -->
 				{#if everyones}<span class="who-all">{M[lang].everyone}</span>{/if}
 				{#if joinable}<span class="who-join">{M[lang].mayJoin}</span>{/if}
-				{#if showVoice && seg.voice && seg.voice !== 'clara'}<span class="who-voice"
-						>{M[lang].voices[seg.voice]}</span
+				{#if !hasPerformance && showVoice && seg.voice && seg.voice !== 'clara'}<span
+						class="who-voice">{M[lang].voices[seg.voice]}</span
 					>{/if}
 			</p>
 		{/if}
@@ -522,7 +533,7 @@
 			style:--print-initial-reserve={fit0 ? `calc(var(--reading) * ${fit0.reserve})` : null}
 			style:--selection-initial-start={fit0 ? `calc(var(--reading) * ${-fit0.reserve})` : null}
 			class:glossed={helpLevel === 1}
-			class:quiet={!referenceOnly && seg.voice === 'secreto'}
+			class:quiet={!referenceOnly && seg.voice === 'secreto' && !hasPerformance}
 			class:answer={mine}
 			class:marked={showMark || verseNo !== undefined || repeated}
 			class:repeated

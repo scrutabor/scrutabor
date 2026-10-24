@@ -1,6 +1,6 @@
 // The day picker fills the Ordo's own slots. Untagged tests also run against
 // the downloaded copy, where there is no server and the route lives in a hash.
-import { expect, settled, test } from './fixtures';
+import { expect, setHelp, settled, test } from './fixtures';
 
 // These two scenarios deliberately hold network responses. The production
 // worker would correctly satisfy them from its own cache before Playwright's
@@ -265,14 +265,32 @@ test('the Vigil Alleluia appears when Christmas Eve falls on Sunday', async ({ p
 
 test('Christmas Vigil selects only the preface appropriate to its weekday', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
-	for (const [date, expected, absent] of [
-		['2026-12-24', 'praefatio-communis', 'praefatio-sanctissimae-trinitatis'],
-		['2028-12-24', 'praefatio-sanctissimae-trinitatis', 'praefatio-communis']
-	]) {
-		await page.goto(`/app/pl/ordo/canon?dies=${date}`);
-		await expect(page.locator(`[id="${expected}.w001"]`)).toBeVisible();
-		await expect(page.locator(`[id="${absent}.w001"]`)).toHaveCount(0);
-		await expect(page.locator('.component-condition')).toHaveCount(0);
+	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+	await page.goto('/app/pl/ordo/canon?dies=2026-12-24');
+	const main = page.locator('main');
+	const originalMain = await main.elementHandle();
+	if (!originalMain) throw new Error('the Canon reader is missing');
+	try {
+		for (const [date, expected, absent] of [
+			['2026-12-24', 'praefatio-communis', 'praefatio-sanctissimae-trinitatis'],
+			['2028-12-24', 'praefatio-sanctissimae-trinitatis', 'praefatio-communis']
+		]) {
+			if (date !== '2026-12-24') await pickDate(page, date);
+			await expect(page.locator(`[id="${expected}.w001"]`)).toBeVisible();
+			await expect(page.locator(`[id="${absent}.w001"]`)).toHaveCount(0);
+			await expect(page.locator('.component-condition')).toHaveCount(0);
+			await expect(page).toHaveURL(new RegExp(`dies=${date}$`));
+			await expect(page.locator('.choice-title')).toContainText('Wigilia Narodzenia Pańskiego');
+			await expect(page.locator('.choice-date')).toHaveText(
+				date === '2026-12-24' ? '24 grudnia 2026' : '24 grudnia 2028'
+			);
+			await expect(main).toHaveAttribute('aria-busy', 'false');
+			await expect(page.locator('.picker.day .state')).toHaveCount(0);
+			expect(await originalMain.evaluate((node) => node.isConnected)).toBe(true);
+			expect(await main.evaluate((node, original) => node === original, originalMain)).toBe(true);
+		}
+	} finally {
+		await originalMain.dispose();
 	}
 });
 
@@ -348,8 +366,32 @@ test('a non-default Mass keeps its date through reload, movements, language, and
 	await page.locator('a.movement[href*="praeparatio"]').click();
 	await expect(page.locator('.choice-date')).toHaveText('25 grudnia 2026');
 	await expect(page).toHaveURL(/missa=nativitas-domini-in-nocte/);
+	await page.locator('a.pager-next[href*="/ordo/catechumenorum"]').click();
+	await settled(page);
+	await setHelp(page, 1);
+	const introit = page.locator('[id="nativitas-domini-in-nocte-introitus.w001"]');
+	await expect(introit.locator('.caption-content')).toHaveText('Pan');
+	await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
 	await page.getByRole('button', { name: 'wybór języka', exact: true }).click();
 	await page.getByRole('link', { name: 'English', exact: true }).click();
+	await settled(page);
+	await expect(page).toHaveURL(
+		/\/en\/ordo\/catechumenorum\?dies=2026-12-25&missa=nativitas-domini-in-nocte/
+	);
+	await expect(page.locator('.choice-date')).toHaveText('25 December 2026');
+	await expect(page.locator('.choice-title')).toContainText('Mass during the Night');
+	await expect(introit.locator('.caption-content')).toHaveText('The Lord');
+	await expect(page.locator('[id="nativitas-domini-in-nocte-epistola.w001"]')).toBeVisible();
+	await expect(
+		page.locator(
+			'[id="lectio-epistolae-beati-pauli-apostoli-ad-titum~epistola-annuntiatio~nativitas-domini-in-nocte-epistola.w001"]'
+		)
+	).toBeVisible();
+	await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+	await expect(page.locator('.picker.day .state')).toHaveCount(0);
+	// Retain the preparation-movement and later memory checks as well.
+	await page.locator('a.pager-link[href*="/ordo/praeparatio"]').click();
+	await settled(page);
 	await expect(page).toHaveURL(
 		/\/en\/ordo\/praeparatio\?dies=2026-12-25&missa=nativitas-domini-in-nocte/
 	);
@@ -860,24 +902,92 @@ test('a corrected pick is not overtaken by the first one @online', async ({ page
 		await firstReleased;
 		await route.continue();
 	});
-	await page.goto('/app/en/ordo/catechumenorum');
-	await settled(page);
-	await pickFormulary(page, 'dominica-i-adventus');
-	await firstRequested;
-	await pickFormulary(page, 'nativitas-domini-in-nocte');
-	await expect(
-		page.locator('[id^="nativitas-domini-in-nocte-introitus.w"] .base').first()
-	).toHaveText('Dóminus', { timeout: 10_000 });
-	const firstResponse = page.waitForResponse((response) =>
-		response.url().endsWith('/proprium/en/pack-01.json')
-	);
-	releaseFirstRequest();
-	await (await firstResponse).finished();
-	await page.evaluate(() => new Promise<void>((resolve) => requestAnimationFrame(() => resolve())));
-	await expect(page.locator('.picker.day .day-open')).toContainText(
-		'Nativity of the Lord — Mass during the Night'
-	);
-	await expect(page.locator('body')).not.toContainText('Ad te levávi');
+	try {
+		await page.goto('/app/en/ordo/catechumenorum?dies=2026-12-25&missa=nativitas-domini-in-nocte');
+		await settled(page);
+		await expect(
+			page.locator('[id^="nativitas-domini-in-nocte-introitus.w"] .base').first()
+		).toHaveText('Dóminus', { timeout: 10_000 });
+		await expect(page.locator('[id="nativitas-domini-in-nocte-evangelium.w001"]')).toBeVisible();
+		await expect(
+			page.locator(
+				'[id="sequentia-sancti-evangelii-secundum-lucam~evangelium-annuntiatio~nativitas-domini-in-nocte-evangelium.w001"]'
+			)
+		).toBeVisible();
+		await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+		await pickFormulary(page, 'dominica-i-adventus');
+		await firstRequested;
+		await expect(page.locator('main')).toHaveAttribute('aria-busy', 'true');
+		await expect(page.locator('[id^="nativitas-domini-in-nocte-"]')).toHaveCount(0);
+		await expect(
+			page.locator(
+				'[id*="~epistola-annuntiatio~nativitas-domini-in-nocte"], [id*="~evangelium-annuntiatio~nativitas-domini-in-nocte"]'
+			)
+		).toHaveCount(0);
+		await pickFormulary(page, 'nativitas-domini-in-nocte');
+		await expect(
+			page.locator('[id^="nativitas-domini-in-nocte-introitus.w"] .base').first()
+		).toHaveText('Dóminus', { timeout: 10_000 });
+		await expect(page.locator('[id="nativitas-domini-in-nocte-evangelium.w001"]')).toBeVisible();
+		await expect(
+			page.locator(
+				'[id="sequentia-sancti-evangelii-secundum-lucam~evangelium-annuntiatio~nativitas-domini-in-nocte-evangelium.w001"]'
+			)
+		).toBeVisible();
+		await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+		const recoveredWord = await page
+			.locator('[id="nativitas-domini-in-nocte-introitus.w001"]')
+			.elementHandle();
+		if (!recoveredWord) throw new Error('the restored Christmas introit is missing');
+		try {
+			const firstResponse = page.waitForResponse((response) =>
+				response.url().endsWith('/proprium/en/pack-01.json')
+			);
+			releaseFirstRequest();
+			await (await firstResponse).finished();
+			await page.evaluate(
+				() =>
+					new Promise<void>((resolve) =>
+						requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+					)
+			);
+			await expect(page.locator('.picker.day .day-open')).toContainText(
+				'Nativity of the Lord — Mass during the Night'
+			);
+			await expect(page.locator('body')).not.toContainText('Ad te levávi');
+			const reading = 'nativitas-domini-in-nocte-evangelium';
+			const gospel = page
+				.locator('section.part')
+				.filter({ has: page.locator(`[id="${reading}.w001"]`) });
+			await expect(gospel).toHaveCount(1);
+			await expect(
+				gospel.locator(
+					`[id="sequentia-sancti-evangelii-secundum-lucam~evangelium-annuntiatio~${reading}.w001"]`
+				)
+			).toBeVisible();
+			await expect(gospel.locator('.reading-reference')).toHaveText('Luc. 2, 1-14');
+			await expect(
+				page.locator(
+					'[id*="~epistola-annuntiatio~dominica-i-adventus"], [id*="~evangelium-annuntiatio~dominica-i-adventus"], [id*="~evangelium-salutatio~dominica-i-adventus"]'
+				)
+			).toHaveCount(0);
+			await expect(page).toHaveURL(/dies=2026-12-25&missa=nativitas-domini-in-nocte/);
+			await expect(page.locator('.choice-date')).toHaveText('25 December 2026');
+			await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+			await expect(page.locator('.picker.day .state')).toHaveCount(0);
+			expect(await recoveredWord.evaluate((node) => node.isConnected)).toBe(true);
+			expect(
+				await page
+					.locator('[id="nativitas-domini-in-nocte-introitus.w001"]')
+					.evaluate((node, original) => node === original, recoveredWord)
+			).toBe(true);
+		} finally {
+			await recoveredWord.dispose();
+		}
+	} finally {
+		releaseFirstRequest();
+		await page.unroute('**/artifacts/proprium/en/pack-01.json');
+	}
 });
 
 test('a malformed day value is answered and not remembered', async ({ page }) => {

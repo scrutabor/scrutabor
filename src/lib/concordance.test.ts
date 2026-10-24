@@ -1,3 +1,4 @@
+import { readingIntroductionOwners } from './introductiones';
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
 import { COMMEMORATION_TEXT_KEYS } from './commemorationes';
@@ -72,7 +73,9 @@ describe('what the concordance is built from', () => {
 			...CATALOG.flatMap((s) => s.texts).map((t) => `${t.category}/${t.slug}`),
 			...ORDO.flatMap((m) => m.entries).flatMap((e) => (e.text ? [e.text] : [])),
 			...PROPER_DAYS.flatMap((day) => day.components.map((component) => component.text)),
-			...DISMISSAL_TEXT_KEYS
+			...DISMISSAL_TEXT_KEYS,
+			...readingIntroductionOwners('epistola'),
+			...readingIntroductionOwners('evangelium')
 		]);
 		const unsequenced = everyTextInOrder().filter((k) => !sequenced.has(k));
 		expect(unsequenced.filter((k) => !k.startsWith('proprium/'))).toEqual([]);
