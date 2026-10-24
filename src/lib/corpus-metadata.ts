@@ -4,6 +4,8 @@
 import manifestData from './data/manifest.json';
 import formularyData from './data/formularies.json';
 import metricsData from './data/metrics.json';
+import commemorationData from './data/commemorationes.json';
+import { localizedCommemorations, type CommemorationAboutSlot } from './commemoration-titles';
 import { LANGS, type Lang } from './i18n';
 import {
 	validateOrdinaryPrescriptions,
@@ -109,11 +111,7 @@ interface LanguageFormularyCatalog {
 	titles: { id: string; title: string }[];
 }
 
-interface LanguageCommemorationCatalog {
-	schema_version: string;
-	language: Lang;
-	titles: { id: string; title: string }[];
-}
+type LocalizedCommemorationLookup = ReturnType<typeof localizedCommemorations>;
 
 type JsonModule = { default: unknown };
 
@@ -196,18 +194,25 @@ const COMMEMORATION_TITLES = Object.fromEntries(
 		const path = LANGUAGE_MANIFESTS[language].commemorationes;
 		const module = LANGUAGE_COMMEMORATION_MODULES[`./data/${path}`];
 		if (!module) throw new Error(`${language} names ${path}, which was not vendored`);
-		const catalog = module.default as LanguageCommemorationCatalog;
-		if (catalog.schema_version !== '1.0.0' || catalog.language !== language)
-			throw new Error(`${path} has an invalid localized commemoration title contract`);
-		return [language, new Map(catalog.titles.map((entry) => [entry.id, entry.title]))];
+		return [
+			language,
+			localizedCommemorations(module.default, language, commemorationData.commemorations)
+		];
 	})
-) as Record<Lang, Map<string, string>>;
+) as Record<Lang, LocalizedCommemorationLookup>;
 
 /** The localized name of a commemoration, from its language package alone. */
 export function commemorationTitle(id: string, language: Lang): string {
-	const title = COMMEMORATION_TITLES[language].get(id);
-	if (!title) throw new Error(`${language} has no title for commemoration ${id}`);
-	return title;
+	return COMMEMORATION_TITLES[language].title(id);
+}
+
+/** An explicit addressed-context view: undefined inherits, empty suppresses. */
+export function commemorationAbout(
+	id: string,
+	slot: CommemorationAboutSlot,
+	language: Lang
+): string | undefined {
+	return COMMEMORATION_TITLES[language].about(id, slot);
 }
 
 export const TEXT_METADATA = ROOT_MANIFEST.texts;

@@ -26,7 +26,7 @@ export function validateParticipationPerformance(document: unknown, readerVersio
 			if (!object(grant) || !Object.hasOwn(grant, 'performance')) continue;
 			const performance = grant.performance;
 			if (
-				readerVersion !== '6.6.0' ||
+				readerVersion !== '6.7.0' ||
 				form !== 'cantu' ||
 				segment.type !== 'verse' ||
 				segment.speaker !== 'sacerdos' ||

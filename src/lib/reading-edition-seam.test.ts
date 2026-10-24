@@ -3,6 +3,8 @@ import { announcedBodyFixtures, currentReadingState } from './reading-test-fixtu
 // All dated consumers must initialize against one declared reader edition.
 import { expect, it, vi } from 'vitest';
 import { ROOT_MANIFEST } from './corpus-metadata';
+import plManifest from './data/languages/pl/manifest.json';
+import enManifest from './data/languages/en/manifest.json';
 import { introductionLookup } from './introductiones';
 import { canonLookup } from './canon';
 import { dismissalLookup } from './dismissal';
@@ -13,7 +15,8 @@ import type { TextDocument } from './corpus';
 const runtime = freshProperFixture();
 
 it('declares every dated resource against the same freshly vendored reader edition', () => {
-	expect(ROOT_MANIFEST.schema_version).toBe('6.6.0');
+	expect(ROOT_MANIFEST.schema_version).toBe('6.7.0');
+	expect([plManifest.schema_version, enManifest.schema_version]).toEqual(['6.7.0', '6.7.0']);
 	expect(introductionLookup).not.toBeNull();
 	expect(introductionLookup!.announcements.size).toBe(205);
 	expect(canonLookup).not.toBeNull();
@@ -56,5 +59,42 @@ it.each(['pl', 'en'] as const)(
 		expect(result[0].doc.id).toBe('ordinarium.lectio-epistolae-beati-petri-apostoli');
 		expect(result[0].gloss.lang).toBe(lang);
 		expect(result[1].key).toBe(`proprium/${mass}-epistola`);
+	}
+);
+
+it.each(['6.6.0', '6.8.0'])(
+	'rejects root reader %s at every declared lookup and restores the real edition',
+	async (version) => {
+		const resources = async () => [
+			(await import('./canon')).canonLookup,
+			(await import('./dismissal')).dismissalLookup,
+			(await import('./commemorationes')).commemorationLookup,
+			(await import('./introductiones')).introductionLookup
+		];
+		const original = JSON.stringify(ROOT_MANIFEST);
+		vi.resetModules();
+		for (const lookup of await resources()) {
+			expect(lookup).toBeDefined();
+			expect(lookup).not.toBeNull();
+		}
+		vi.doMock('./corpus-metadata', async (importOriginal) => {
+			const actual = await importOriginal<typeof import('./corpus-metadata')>();
+			return {
+				...actual,
+				ROOT_MANIFEST: { ...actual.ROOT_MANIFEST, schema_version: version }
+			};
+		});
+		try {
+			vi.resetModules();
+			expect(await resources()).toEqual([null, null, null, null]);
+		} finally {
+			vi.doUnmock('./corpus-metadata');
+			vi.resetModules();
+		}
+		for (const lookup of await resources()) {
+			expect(lookup).toBeDefined();
+			expect(lookup).not.toBeNull();
+		}
+		expect(JSON.stringify(ROOT_MANIFEST)).toBe(original);
 	}
 );

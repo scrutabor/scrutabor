@@ -39,7 +39,7 @@ import {
 	SITUATIONS,
 	validateCommemorationPack
 } from './commemorationes';
-import { commemorationTitle } from './corpus-metadata';
+import { commemorationTitle, commemorationAbout } from './corpus-metadata';
 import { introductionBodies, introductionEventsFor, introductionOwners } from './introductiones';
 import { announcementOwners } from './reading-announcements';
 import type { VariantPack } from './variant-resource';
@@ -369,13 +369,14 @@ export async function commemorationPageData(id: string, lang: Lang) {
 	const parts = entry.slots.map((slot) => {
 		const body = pack.parts.find((part) => part.key === slot.text);
 		if (!body || body.slot !== slot.after) throw new Error('commemoration body absent');
+		const about = commemorationAbout(id, slot.key, lang);
 		return {
 			key: body.key,
 			part: body.part,
 			condition: undefined,
 			slot: body.slot,
 			doc: body.doc,
-			gloss: body.gloss,
+			gloss: about === undefined ? body.gloss : { ...body.gloss, about },
 			bibliography: body.bibliography
 		};
 	});

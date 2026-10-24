@@ -40,6 +40,7 @@
 	import { dayHref } from '$lib/proper.svelte';
 	import type { TextBibliographyEvidence } from '$lib/bibliography';
 	import { textHref } from '$lib/content-url';
+	import { commemorationEntryHref } from '$lib/commemoration-entry-url';
 	import { textAnchor } from '$lib/text-anchor';
 	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
 	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
@@ -632,7 +633,16 @@
 									<!-- The commemoration's oration follows the Mass oration it answers
 									     to, under its own conclusion (RG 436–437). -->
 									<p class="commemoration-head">
-										<a class="part-title" href={textHref(lang, body.key)} lang="la">{e.title}</a>
+										<a
+											class="part-title"
+											href={commemorationEntryHref(lang, {
+												key: body.key,
+												slot: e.id,
+												commemoration: body.commemoration,
+												formulary: body.formulary
+											})}
+											lang="la">{e.title}</a
+										>
 										<span class="mark smallcaps"
 											>{msgs.ordoCommemoration}: {commemorationName(
 												body.commemoration,

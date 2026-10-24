@@ -8,10 +8,10 @@ import type { TextDocument } from '../src/lib/corpus';
 
 test.use({ serviceWorkers: 'block' });
 for (const lang of ['pl', 'en'] as const)
-	test(`${lang} shipped6.6 pack initializes every dated consumer and displays its reading @online`, async ({
+	test(`${lang} shipped6.7 pack initializes every dated consumer and displays its reading @online`, async ({
 		page
 	}) => {
-		expect(manifest.schema_version).toBe('6.6.0');
+		expect(manifest.schema_version).toBe('6.7.0');
 		expect(table.schema_version).toBe('2.0.0');
 		expect(table.announcements).toHaveLength(205);
 		const mass = 'dominica-iii-post-pascha';

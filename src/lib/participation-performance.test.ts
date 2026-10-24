@@ -72,7 +72,7 @@ describe('closed received performance metadata', () => {
 	});
 	it('accepts the supplement without replacing priest ownership', () => {
 		const document = body();
-		expect(() => validateParticipationPerformance(document, '6.6.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.7.0')).not.toThrow();
 		expect(() => validateParticipationPerformance(document, '6.5.0')).toThrow();
 		const segments = document.segments as unknown as Segment[];
 		expect(namesPerformance(segments, 0, 'cantu')).toBe(true);
@@ -103,7 +103,7 @@ describe('closed received performance metadata', () => {
 	])('rejects %s descriptors', (_, value) => {
 		const document = body();
 		document.segments[0].participation.cantu.performance = value;
-		expect(() => validateParticipationPerformance(document, '6.6.0')).toThrow();
+		expect(() => validateParticipationPerformance(document, '6.7.0')).toThrow();
 	});
 	it.each([
 		'rubric',
@@ -127,22 +127,22 @@ describe('closed received performance metadata', () => {
 		if (mutation === 'lecta')
 			segment.participation.lecta.performance = segment.participation.cantu.performance;
 		if (mutation === 'unknown-form') segment.participation.other = segment.participation.cantu;
-		expect(() => validateParticipationPerformance(document, '6.6.0')).toThrow();
+		expect(() => validateParticipationPerformance(document, '6.7.0')).toThrow();
 	});
 	it('does not pretend shape validation detects a wholly absent feature', () => {
 		const document = body();
 		for (const segment of document.segments) delete segment.participation.cantu.performance;
-		expect(() => validateParticipationPerformance(document, '6.6.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.7.0')).not.toThrow();
 		expect(offersMassFormChoice(document.segments as unknown as Segment[])).toBe(true);
 		// Canonical derivation and reader artifact validation own this negative control.
 	});
 	it.each(['pl', 'en'] as const)(
-		'checks the actual 6.6 %s body, not only synthetic fixtures',
+		'checks the actual 6.7 %s body, not only synthetic fixtures',
 		async (lang) => {
 			const entry = await loadText('ordinarium/sanctus', lang);
 			expect(entry).toBeDefined();
 			const segments = entry!.text.segments;
-			expect(() => validateParticipationPerformance(entry!.text, '6.6.0')).not.toThrow();
+			expect(() => validateParticipationPerformance(entry!.text, '6.7.0')).not.toThrow();
 			expect(segments.filter((s) => performanceFor(s, 'cantu'))).toHaveLength(5);
 			expect(segments.flatMap((s) => s.words ?? []).map((w) => w.id)).toEqual(
 				Array.from({ length: 25 }, (_, n) => `w${String(n + 1).padStart(3, '0')}`)
@@ -150,3 +150,17 @@ describe('closed received performance metadata', () => {
 		}
 	);
 });
+
+it.each(['6.6.0', '6.8.0'])(
+	'rejects performance metadata at reader %s and retains the recovered 6.7 body',
+	(version) => {
+		const document = body();
+		const original = structuredClone(document);
+		expect(() => validateParticipationPerformance(document, '6.7.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, version)).toThrow(
+			'invalid participation performance'
+		);
+		expect(document).toEqual(original);
+		expect(() => validateParticipationPerformance(document, '6.7.0')).not.toThrow();
+	}
+);

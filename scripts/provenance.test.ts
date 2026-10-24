@@ -68,7 +68,8 @@ describe('the corpus this app ships', () => {
 		// text row keys are unchanged.
 		// 6.4 adds the Advent feria, a privileged resolved commemoration whose Ember-day rows name a
 		// Mass this edition does not author; the 2.1.0 rows and the text row keys are unchanged.
-		expect(provenance.edition).toBe('6.6.0');
+		// 6.7 adds optional localized commemoration context maps; compact text row keys are unchanged.
+		expect(provenance.edition).toBe('6.7.0');
 	});
 
 	it('was vendored from a clean corpus', () => {
