@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctae-catharinae-senensis-collecta",
+  "language":"pl",
+  "about":"Obchodząc święto Katarzyny ze Sieny, prosimy o radość z dorocznej uroczystości i o wzrastanie dzięki przykładowi jej cnoty. Obie prośby dotyczą modlących się.",
+  "seg":[
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy, obchodząc święto świętej Katarzyny, Twojej Dziewicy, zarówno radowali się doroczną uroczystością, jak i wzrastali dzięki przykładowi tak wielkiej cnoty. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy","wszechmogący","Boże","abyśmy","my, którzy",null,null,null,null,null,"obchodzimy","zarówno",null,null,null,"jak i",null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":6,"n":5,"a":4,"g":"święto świętej Katarzyny, Twojej Dziewicy"},{"s":13,"n":3,"a":2,"g":"radowali się doroczną uroczystością"},{"s":17,"n":4,"a":2,"g":"wzrastali dzięki przykładowi tak wielkiej cnoty"}],"ex":{"w006":"„Qui” podejmuje nas, obchodzących święto. To o naszą radość i nasze wzrastanie modlitwa prosi Boga.","w008":"To Katarzyna ze Sieny, której święto wskazuje nagłówek formularza.","w011":"„Natalítia” oznacza tutaj obchód świętej. Łączy się z doroczną uroczystością wymienioną w dalszej części modlitwy.","w016":"Radość i wzrastanie są połączone przez et...et. Oba orzeczenia należą do tej samej prośby otwartej przez „ut”.","w019":"„Virtútis” mówi tu o cnocie i moralnej doskonałości świętej.","w021":"Przykład tak wielkiej cnoty jest pomocą do naszego wzrastania. Kontekst uroczystości wiąże ten przykład z Katarzyną.","w038":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

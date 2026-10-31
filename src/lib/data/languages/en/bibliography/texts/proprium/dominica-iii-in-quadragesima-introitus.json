@@ -2,12 +2,34 @@
  "id": "proprium.dominica-iii-in-quadragesima-introitus",
  "source_groups": [
   {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68",
+    "section": "Gloria Patri only (s01/w038–057); Holy Ghost becomes Holy Spirit"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iii-in-quadragesima-introitus.gloria-patri.key1901",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English wording basis for the Gloria Patri only (s01/w038–057). The received formula uses Holy Spirit for the printed Holy Ghost; the other material wording is retained. This page does not supply the Introit proper, psalm verse or repeated antiphon."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
    "edition": "edition.the-missal-for-the-laity-1846",
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 209–210",
-    "scan": "scan pp. 225–226"
+    "scan": "scan pp. 225–226",
+    "section": "Antiphon and reprise only (s01/w001–024, w058–081)"
    },
    "entries": [
     {
@@ -16,10 +38,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "Historical English basis of the antiphon (the Douay Ps 24:15–16 through this missal), revised in contemporary language: He will pluck, look upon me; the psalm verse in the words of the Advent I and Lent II Introits for the same Latin; the Gloria Patri is the closed formula with Holy Spirit, and the repeated antiphon takes the same revised wording."
+     "claim": "Historical English basis of the antiphon only (s01/w001–024), revised in contemporary language; its reprise (w058–081) repeats that revision. These pages are not asserted as the wording source of the separate psalm verse or the expanded Gloria Patri."
     }
    ],
-   "verified_on": "2026-10-11"
+   "verified_on": "2026-10-26"
   }
  ],
  "witnesses": [],

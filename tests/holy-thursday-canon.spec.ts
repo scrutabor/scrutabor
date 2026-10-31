@@ -50,38 +50,24 @@ const constructions: {
 	},
 	{
 		// The divine reflexive is lowercase in the working Polish (owner, 2026-10-21).
+		// Celebránda (w030) follows with its own caption.
 		slug: 'hanc-igitur-in-cena-domini',
 		first: 'w025',
-		last: 'w030',
+		last: 'w029',
 		anchor: 'w029',
-		count: 6,
-		pl: 'tajemnice swojego Ciała i Krwi do sprawowania',
-		en: 'the mysteries of His Body and Blood to be celebrated'
-	},
-	{
-		slug: 'hanc-igitur-in-cena-domini',
-		first: 'w043',
-		last: 'w054',
-		anchor: 'w052',
-		count: 12,
-		en: 'command that we be delivered from eternal condemnation and counted in the flock of Your elect'
-	},
-	// The delivered Polish captions the petition's two members apart, joined by et (w048).
-	{
-		slug: 'hanc-igitur-in-cena-domini',
-		first: 'w043',
-		last: 'w047',
-		anchor: 'w047',
 		count: 5,
-		pl: 'wyrwanie nas z wiecznego potępienia'
+		pl: 'tajemnice swojego Ciała i Krwi',
+		en: 'the mysteries of His Body and Blood'
 	},
+	// Both languages caption the petition word by word; only the elect remain one unit.
 	{
 		slug: 'hanc-igitur-in-cena-domini',
-		first: 'w049',
-		last: 'w054',
-		anchor: 'w052',
-		count: 6,
-		pl: 'zaliczenie do trzody Twoich wybranych nakazał'
+		first: 'w050',
+		last: 'w051',
+		anchor: 'w050',
+		count: 2,
+		pl: 'Twoich wybranych',
+		en: 'of Your elect'
 	},
 	{
 		slug: 'qui-pridie-in-cena-domini',
@@ -93,6 +79,58 @@ const constructions: {
 		en: 'He was to suffer for our salvation and that of all'
 	}
 ];
+
+// The petition (s06, w036–w054) in reading order. Polish captions every word but the elect
+// (w050–w051); English also groups w036–w037 and w038–w040. Regrouping any word changes this.
+const petitionCaptions = {
+	pl: [
+		'i dni',
+		'nasze',
+		'w',
+		'Twoim',
+		'pokoju',
+		'uporządkował',
+		'a także',
+		'z',
+		'wiecznego',
+		'potępienia',
+		'nas',
+		'wyrwać',
+		'i',
+		'do',
+		'Twoich wybranych',
+		'nakazał',
+		'trzody',
+		'zaliczyć'
+	],
+	en: [
+		'and our days',
+		'in Your peace',
+		'order',
+		'and',
+		'from',
+		'eternal',
+		'condemnation',
+		'us',
+		'to be delivered',
+		'and',
+		'in',
+		'of Your elect',
+		'command',
+		'the flock',
+		'to be counted'
+	]
+} as const;
+
+// Former members of the petition's shared captions now open as single words.
+const wordCaptions = [
+	['w030', 'do sprawowania', 'to be celebrated'],
+	['w043', 'z', 'from'],
+	['w047', 'wyrwać', 'to be delivered'],
+	['w049', 'do', 'in'],
+	['w052', 'nakazał', 'command'],
+	['w054', 'zaliczyć', 'to be counted']
+] as const;
 
 for (const language of ['pl', 'en'] as const) {
 	for (const item of constructions) {
@@ -118,6 +156,33 @@ for (const language of ['pl', 'en'] as const) {
 			});
 		}
 	}
+	for (const [word, pl, en] of wordCaptions) {
+		const caption = language === 'pl' ? pl : en;
+		test(`@reader ${language}: hanc-igitur-in-cena-domini word caption from ${word}`, async ({
+			page
+		}) => {
+			await page.setViewportSize({ width: 320, height: 844 });
+			await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+			await page.goto(`/app/${language}/ordinarium/hanc-igitur-in-cena-domini?w=${word}`);
+			const panel = page.locator('aside.panel[role="dialog"]');
+			await expect(panel.locator('.context-layer > .gloss')).toHaveText(caption);
+			await expect(panel.locator('.construction-card')).toHaveCount(0);
+			await page.keyboard.press('Escape');
+			await expect(panel).toHaveCount(0);
+			await setHelp(page, 1);
+			await expect(page.locator(`button[id="${word}"]`)).not.toHaveClass(/word-construction/);
+			await expect(page.locator(`button[id="${word}"] rt`)).toHaveText(caption);
+		});
+	}
+	test(`@reader ${language}: hanc-igitur-in-cena-domini petition captions in reading order`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${language}/ordinarium/hanc-igitur-in-cena-domini`);
+		await setHelp(page, 1);
+		const petition = page.locator('.verse').filter({ has: page.locator('button[id="w052"]') });
+		await expect(petition).toHaveCount(1);
+		await expect(petition.locator('rt')).toHaveText([...petitionCaptions[language]]);
+	});
 	test(`@reader ${language}: Holy Thursday today identifies the institution day`, async ({
 		page
 	}) => {

@@ -1,7 +1,7 @@
 {
   "id":"ordinarium.iudica-me",
   "language":"pl",
-  "about":"W modlitwach u stopni ołtarza Psalm 42 według numeracji Wulgaty (Ps 43 w numeracji hebrajskiej) odmawiają na przemian kapłan i usługujący. Poprzedza go antyfona „Introíbo ad altáre Dei”, powtarzana po doksologii. We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie psalm opuszcza się wraz z antyfoną, a od razu następuje Confíteor.",
+  "about":"W modlitwach u stopni ołtarza Psalm 42 według numeracji Wulgaty (Ps 43 w numeracji hebrajskiej) odmawiają na przemian kapłan i usługujący. Poprzedza go antyfona „Introíbo ad altáre Dei”, powtarzana po doksologii. We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie opuszcza się psalm razem z „Glória Patri” i powtórzeniem antyfony: antyfonę mówi się wtedy tylko raz, a po niej następuje „Adiutórium” i Confíteor.",
   "seg":[
     {"id":"s01","nr":"We Mszach za zmarłych oraz we Mszach okresowych od Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie opuszcza się psalm, „Glória Patri” i powtórzenie antyfony. Po „In nómine Patris”, antyfonie i „Adiutórium” następuje od razu Confíteor."},
     {"id":"s02","nr":"Kapłan odmawia psalm na przemian z usługującymi."},

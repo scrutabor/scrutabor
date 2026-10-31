@@ -1,0 +1,83 @@
+{
+ "id": "proprium.vigilia-ascensionis-evangelium",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 343",
+    "scan": "leaf n424 / PDF p. 425",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n424/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-ascensionis-evangelium.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The located page prints the complete Ascension Vigil Gospel from In illo tempore through et ego ad te venio, ending within John 17:11."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 350, no. 1277",
+    "scan": "physical PDF p. 431 / scan n430",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n430/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.vigilia-ascensionis-evangelium.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The located page prints the complete Ascension Vigil Gospel from In illo tempore through et ego ad te venio, ending within John 17:11."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.vigilia-ascensionis-evangelium.mr1962",
+   "text": "proprium.vigilia-ascensionis-evangelium",
+   "use": "use.proprium.vigilia-ascensionis-evangelium.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from this identified printed setting; not a copy of the other witness. No genealogical independence or reproduction-date claim."
+  },
+  {
+   "id": "witness.proprium.vigilia-ascensionis-evangelium.vatican1962",
+   "text": "proprium.vigilia-ascensionis-evangelium",
+   "use": "use.proprium.vigilia-ascensionis-evangelium.vatican1962",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct transcription from this identified printed setting; not a copy of the other witness. No genealogical independence or reproduction-date claim."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.vigilia-ascensionis-evangelium.mr1962-vatican1962",
+  "text": "proprium.vigilia-ascensionis-evangelium",
+  "recension": "Ascension Vigil Gospel in the Benziger 1962 printing, ending within John 17:11; no expansion",
+  "witnesses": [
+   "witness.proprium.vigilia-ascensionis-evangelium.mr1962",
+   "witness.proprium.vigilia-ascensionis-evangelium.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "capitalization",
+    "punctuation"
+   ]
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+  "language":"en",
+  "about":"The prayer asks that the blessed feast of the four named martyrs may always nurture us and make us worthy of God’s service.",
+  "seg":[
+    {"id":"s01","tr":"Lord, we pray: may the blessed feast of Your martyrs Nereus, Achilleus, Domitilla, and Pancras always nurture us and make us worthy of Your service. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Always","us","Lord",null,null,"Nereus","Achilleus","Domitilla","and","Pancras","may nurture","we pray",null,null,"and",null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"of Your martyrs"},{"s":12,"n":2,"a":1,"g":"the blessed feast"},{"s":15,"n":4,"a":2,"g":"make worthy of Your service"},{"s":20,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Jesus Christ"},{"s":24,"n":2,"a":0,"g":"Your Son"},{"s":26,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":31,"n":2,"a":1,"g":"in the unity"},{"s":33,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":36,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w010":"Pancras is the English name used here for the source’s Pancratius. The same fourth named martyr is meant.","w014":"The blessed feast is the subject of both requests: that it nurture us and make us worthy of serving God.","w017":"“Worthy” describes us. The request is to be made worthy of serving God. The Latin “obséquio” can be either dative or ablative, while “worthy” commonly takes an ablative complement.","w036":"“God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

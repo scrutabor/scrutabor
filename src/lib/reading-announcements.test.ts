@@ -148,8 +148,8 @@ const faults: [string, (t: Mutable) => void][] = [
 it('accepts the exact new resource with every formulary reading bound', () => {
 	expect(lookup.units.size).toBe(31);
 	expect(lookup.events).toHaveLength(6);
-	expect(lookup.announcements.size).toBe(205);
-	expect(roles.size).toBe(205);
+	expect(lookup.announcements.size).toBe(206);
+	expect(roles.size).toBe(206);
 });
 it.each(faults)('rejects the actual semantic corruption: %s', (_name, mutate) => {
 	const broken = healthy();

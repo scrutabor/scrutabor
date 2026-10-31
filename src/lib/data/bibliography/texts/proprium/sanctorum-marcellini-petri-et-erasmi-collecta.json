@@ -1,0 +1,126 @@
+{
+ "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 546",
+    "scan": "PDF physical628 / leaf n627",
+    "section": "06-02 Ss. Marcellini, Petri atque Erasmi Episcopi Martyrum; collecta; proper w001–w021 only; supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n627/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 21-word collecta proper w001–w021, followed by the local cue “Per Dóminum.” The supplied full conclusion and Amen are excluded from this proper-page claim."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, XVIII, 123, 226",
+    "scan": "PDF physical23,24,203,306 / leaves n22,n23,n202,n305",
+    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. RG115b-e exception check and named same-setting running stress/response controls are distinct from the occasion paragraph."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s RG115a supplies the Father conclusion w022–w042 and response Amen w043 only; proper body excluded. The literal list is unaccented and has “tuum,”, “qui” and “Amen;”. The same-setting p.123 running conclusion supports stress and tuum: Qui, not the selected Deus comma; that comma is in RG115a. The p.226 terminal supports duration stress and the separate response period. This does not establish actors, singing, participation or separate conclusions in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 542",
+    "scan": "PDF physical623 / leaf n622",
+    "section": "06-02 Ss. Marcellini, Petri atque Erasmi Episcopi Martyrum; collecta; proper w001–w021 only; supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n622/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 21-word collecta proper w001–w021, followed by the local cue “Per Dóminum nostrum Iesum Christum, Fílium tuum: Qui tecum vivit et regnat in unitáte.” The supplied full conclusion and Amen are excluded from this proper-page claim. The body is printed once at §2701, not again at the Paschal Common II reference."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. Same-setting RG115b-e exceptions were examined; no Benziger running passage is attributed to this Vatican list."
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s RG115a supplies the Father conclusion w022–w042 and response Amen w043 only; proper body excluded. The literal list is accented and has “Christum,”, “tuum,”, “qui” and “Amen;”. This does not establish actors, singing, participation or separate conclusions in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962",
+   "text": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+   "use": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Own-setting proper and own-setting RG115a conclusion/response are an explicit composite. Distinct print settings do not prove independent historical ancestry. Same-edition repeated placement is not another witness."
+  },
+  {
+   "id": "witness.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.vatican1962",
+   "text": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+   "use": "use.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Own-setting proper and own-setting RG115a conclusion/response are an explicit composite. Distinct print settings do not prove independent historical ancestry. Same-edition repeated placement is not another witness."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962-vatican1962",
+  "text": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+  "recension": "Selected Benziger proper with explicitly controlled Father conclusion and response, compared with own-setting literal composites",
+  "witnesses": [
+   "witness.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.benziger1962",
+   "witness.proprium.sanctorum-marcellini-petri-et-erasmi-collecta.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 11,
+   "classes": [
+    "accent",
+    "capitalization",
+    "punctuation"
+   ]
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-petri-martyris-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa prosi, aby przyjęte sakramenty strzegły wiernych i broniły ich przed wszystkimi wrogimi napaściami. Przywołuje wstawiennictwo Piotra Męczennika.",
+  "seg":[
+    {"id":"s01","tr":"Panie, niech sakramenty, które przyjęliśmy, strzegą Twoich wiernych i za wstawiennictwem świętego Piotra, Twojego Męczennika, bronią ich przed wszystkimi wrogimi napaściami. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,"Panie","niech strzegą","sakramenty","które","przyjęliśmy","i",null,null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":0,"n":2,"a":0,"g":"Twoich wiernych"},{"s":8,"n":3,"a":0,"g":"za wstawiennictwem świętego Piotra"},{"s":11,"n":2,"a":0,"g":"Twojego Męczennika"},{"s":13,"n":5,"a":3,"g":"niech bronią przed wszystkimi wrogimi napaściami"}],"ex":{"w002":"„Tuos” zgadza się z „fidéles” w bierniku liczby mnogiej. Wierni są tutaj chronieni, a sakramenty są podmiotem obu próśb o ochronę.","w005":"Modlitwa mówi o sakramentach, które już przyjęliśmy. W pokomunii to one mają strzec wiernych i bronić ich przed napaściami.","w011":"To Piotr Męczennik. Jego wstawiennictwo towarzyszy prośbie o ochronę wiernych.","w017":"„Tueántur” ma czynne znaczenie obrony. Jego podmiotem nadal są sakramenty, a chronionymi osobami pozostają wierni.","w018":"Wrogie napaści są objęte słowem „omnes”, czyli „wszystkie”. Obraz obejmuje zagrożenia, przed którymi wierni potrzebują ochrony.","w035":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

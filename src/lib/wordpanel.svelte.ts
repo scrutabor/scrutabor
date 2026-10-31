@@ -401,6 +401,9 @@ export function wordPanel(host: WordPanelHost) {
 		},
 		raise,
 		applyFromLocation,
+		/** A newer landing supersedes a close's pending pins: they restore an older position,
+		 * and nothing orders their zero-delay timer before the landing's frames. */
+		cancelPins: cancelPin,
 		/** Tap on a word: toggles, and lifts it clear of the sheet. */
 		toggle(id: string) {
 			if (selectedId === id) close();

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Eastertide Offertory for the Queenship of the Blessed Virgin Mary in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Arisen from a royal lineage, Mary shines forth; with mind and spirit we most devoutly ask to be helped by her prayers. Alleluia.","g":["royal","from","line","Mary","sprung","shines","whose","by the prayers","us","to be helped","in mind","and","in spirit","most devoutly","we beg","alleluia"]}
+    {"id":"s01","tr":"Arisen from a royal lineage, Mary shines forth; with mind and spirit we most devoutly ask to be helped by her prayers. Alleluia.","g":[null,null,null,"Mary","sprung","shines",null,null,null,null,"in mind","and","in spirit","most devoutly","we beg","Alleluia"],"a":[{"s":0,"n":3,"a":2,"g":"From a royal line"},{"s":6,"n":2,"a":1,"g":"by whose prayers"},{"s":8,"n":2,"a":1,"g":"that we be helped"}],"ex":{"w010":"The verb póscimus (“we beg”) comes at the end of the sentence. The request is that we be helped by Mary’s prayers."}}
   ]
 }

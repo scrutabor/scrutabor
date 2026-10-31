@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “22nd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"I have cried, for You have heard me, O God; incline Your ear, and hear my words.","g":["I","have cried","because","You have heard","me","God","incline","ear","Your","and","hear","words","my"]}
+    {"id":"s01","tr":"I have cried, for You have heard me, O God; incline Your ear, and hear my words.","g":["I","have cried","because","You have heard","me","God","incline",null,null,"and","hear",null,null],"a":[{"s":7,"n":2,"a":0,"g":"Your ear"},{"s":11,"n":2,"a":0,"g":"my words"}]}
   ]
 }

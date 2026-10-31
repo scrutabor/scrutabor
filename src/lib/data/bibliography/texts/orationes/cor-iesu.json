@@ -2,12 +2,30 @@
  "id": "orationes.cor-iesu",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-cor-iesu; closed-literal-selection} (line 410; line 411); complete source contexts 393–415"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.cor-iesu.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 5-word literal selection in the stated selection order (410, then 411), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "p. 520",
-    "scan": "PDF scan 541",
+    "printed": "p. 521",
+    "scan": "PDF scan 542",
     "section": "n. 675"
    },
    "entries": [
@@ -16,10 +34,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The invocation closes the prayers after low Mass and is directed to be recited three times."
+     "claim": "The page prints the invocation once, after the prayers after private Mass and their grant, as an addition said three times (Praeterea, si addatur ter) that carries its own indulgence."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

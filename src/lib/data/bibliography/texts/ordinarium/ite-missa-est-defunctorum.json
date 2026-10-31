@@ -1,0 +1,187 @@
+{
+ "id": "ordinarium.ite-missa-est-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 316",
+    "scan": "leaf n397 / physical PDF p. 398"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.clauses.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The final greeting and response are retained; the separately prescribed Requiem dismissal and Amen replace the ordinary dismissal/response. These selected clauses comprise 2 + 4 + 3 + 1 words, not a continuous four-line block."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIII",
+    "section": "Rubricae generales 507 c, 508, 509 and 510 e",
+    "scan": "leaf n38 / physical PDF p. 39",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.ending-conditions.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Masses for the Dead conclude with Requiescant in pace and omit the final blessing. The Last Gospel is normally said; the explicit exception when absolution over the tumulus follows requires that additional ceremony and is not inferred from the date."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LVIII",
+    "section": "Ritus servandus XI, 1 and 3; XII, 4",
+    "scan": "leaf n63 / physical PDF p. 64",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n63/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.greeting-and-dismissal.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "After the final prayers the celebrant gives Dominus vobiscum. For Requiescant in pace he faces the altar. At a Missa cantata the celebrant himself sings this dismissal. Placeat follows, with no final blessing; the Last Gospel remains when the rubrics require it. The generic sung-Mass setting alone does not establish the solemn ministers present."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LIX",
+    "section": "Ritus servandus XIII, 1; XIV, 1–2",
+    "scan": "leaf n64 / physical PDF p. 65",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n64/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.requiem-exception.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Requiescant in pace replaces the ordinary dismissal. Placeat is retained and the final blessing omitted. Consecutive-Mass ablution changes depend on actual uninterrupted celebration, not merely selection of an All Souls formulary."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 724",
+    "section": "Commemoratio omnium fidelium defunctorum, direction following the first Mass",
+    "scan": "leaf n805 / physical PDF p. 806",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n805/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.all-souls-scope.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The final Requiem direction expressly applies at the end of each of the three Masses. It does not establish that the celebrant says several without interruption or that absolution follows every Mass."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 316, In Missis defunctorum dismissal rubric",
+    "scan": "leaf n397 / physical PDF p. 398"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.replacement.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Requiem dismissal is Requiescant in pace, answered Amen. Ordinary Ite/Benedicamus and Deo gratias alternatives are not part of this selected recension."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "pp. 322–323",
+    "scan": "physical PDF pp. 403–404"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.clauses.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The final greeting and response are retained; the separately prescribed Requiem dismissal and Amen replace the ordinary dismissal/response. These selected clauses comprise 2 + 4 + 3 + 1 words, not a continuous four-line block."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 322–323, In Missis defunctorum dismissal rubric",
+    "scan": "physical PDF pp. 403–404"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.replacement.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Requiem dismissal is Requiescant in pace, answered Amen. Ordinary Ite/Benedicamus and Deo gratias alternatives are not part of this selected recension."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 639–640, 642–643",
+    "scan": "physical PDF pp. 639–640, 642–643",
+    "section": "De musica sacra et sacra liturgia 25 a, 26 and 31 a",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=639"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.ite-missa-est-defunctorum.participation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Et cum spiritu tuo and Amen belong to the first degree of liturgical responses in sung and low Mass; the sung rule extends to Missa cantata. This does not assign Requiescant in pace to the congregation."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": []
+}

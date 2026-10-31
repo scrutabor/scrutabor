@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bonifatii-martyris-collecta",
+  "language":"pl",
+  "about":"Obchodząc uroczystość świętego Bonifacego, prosimy Boga o pomoc za jego wstawiennictwem. Modlitwa odróżnia męczennika, który się wstawia, od ludzi proszących o pomoc.",
+  "seg":[
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy, obchodząc uroczystość błogosławionego Bonifacego, Twojego męczennika, otrzymali pomoc dzięki jego wstawiennictwu u Ciebie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy",null,null,"abyśmy","którzy","błogosławionego","Bonifacego",null,null,"uroczystość","obchodzimy",null,null,null,null,"otrzymali pomoc","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":2,"n":2,"a":1,"g":"wszechmogący Boże"},{"s":8,"n":2,"a":0,"g":"Twojego męczennika"},{"s":12,"n":4,"a":3,"g":"za jego wstawiennictwem u Ciebie"}],"ex":{"w006":"„Qui” odnosi się do modlących się. To oni obchodzą uroczystość i proszą o pomoc.","w016":"Bonifacy wstawia się za modlącymi u Boga. „Eius” wskazuje na męczennika.","w034":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

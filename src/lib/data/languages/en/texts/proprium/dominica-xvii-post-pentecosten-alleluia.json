@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “17th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. O Lord, hear my prayer, and let my cry come to You. Alleluia.","g":["Alleluia","alleluia","Lord","hear","prayer","my","and","cry","my","to","You","may come","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. O Lord, hear my prayer, and let my cry come to You. Alleluia.","g":["Alleluia","alleluia","Lord","hear",null,null,"and",null,null,"to","You","may come","Alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"my prayer"},{"s":7,"n":2,"a":0,"g":"my cry"}]}
   ]
 }

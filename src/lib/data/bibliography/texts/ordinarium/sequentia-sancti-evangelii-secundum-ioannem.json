@@ -61,5 +61,53 @@
    "verified_on": "2026-10-24"
   }
  ],
- "witnesses": []
+ "witnesses": [
+  {
+   "id": "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.do44667ff",
+   "text": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+   "use": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Literal heading from the named pinned Divinum Officium source and explicit raw binding. Used as a derived digital comparison; its dependence on earlier print sources is not established here, so it is not claimed as a second independently set printed witness or an independent manuscript family."
+  },
+  {
+   "id": "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.mr1962",
+   "text": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+   "use": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Identified Benziger Brothers 1962 printed heading, visually checked against its retained page image; OCR is a locator only. This is the controlling print witness, not a claim that the digital comparator has independent historical transmission."
+  },
+  {
+   "id": "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.vatican1962",
+   "text": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+   "use": "use.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.vatican1962",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Separately set Vatican typical-text reproduction, personally checked in the registered PDF. Distinct type setting, line division, pagination and heading punctuation from Benziger establish a separate print presentation, not separate manuscript families or proven genealogical independence. The same 1962 typical recension is shared; exact reproduction production year is unproved."
+  }
+ ],
+ "collation": {
+  "id": "collation.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.mr1962-do44667ff",
+  "text": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
+  "recension": "Complete reading-announcement heading in the Benziger 1962 printing, corroborated against a separately set Vatican typical-text reproduction and the pinned derived digital heading; house accent/I-J comparisons and literal punctuation declared; no expansion and no independent manuscript-family claim",
+  "witnesses": [
+   "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.do44667ff",
+   "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.mr1962",
+   "witness.ordinarium.sequentia-sancti-evangelii-secundum-ioannem.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 2,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
 }

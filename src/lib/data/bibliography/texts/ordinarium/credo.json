@@ -2,6 +2,24 @@
  "id": "ordinarium.credo",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-credo; closed-literal-selection} (line 142); complete source contexts 140–144"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.credo.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 163-word literal selection in the stated selection order (142), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
@@ -20,6 +38,26 @@
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp.XIII, XXXIII",
+    "scan": "PDF pp.11,31 (one-based)",
+    "section": "Rubricae generales 28,31a,35; Rubricae generales Missalis Romani 475–476, especially 476e"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.credo.ascension-vigil.omission.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG 28,31a and 35 distinguish the second-class Ascension Vigil from a feast. RGM 475 does not include this weekday Vigil among the Masses requiring the Creed, and 476e excludes a commemoration as an independent reason to add it. Together these rules support omission of the Creed in the temporal weekday Ascension Vigil Mass. They do not prescribe a Sunday or votive use or determine the Mass selected when a higher-ranking feast prevents the Vigil."
+    }
+   ],
+   "verified_on": "2026-10-25"
   }
  ],
  "witnesses": []

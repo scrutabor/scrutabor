@@ -22,7 +22,28 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "official_text",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p.343",
+    "scan": "leaf n424 / PDF p.425",
+    "section": "In vigilia Ascensionis; Lectio Epistolae beati Pauli Apostoli ad Ephesios; Ephes. 4,7–13",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n424/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-simonis-et-iudae-apostolorum-epistola.ascension-vigil.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Ascension Vigil prints the Ephesians 4:7–13 lesson, beginning Fratres: Unicuique nostrum data est gratia and ending in mensuram aetatis plenitudinis Christi. This is the complete ninety-four-word body also stored for Saints Simon and Jude. The printed heading identifies the lesson as Paul's Epistle to the Ephesians. This occurrence does not assign its performer or delivery."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
    "locator": {
     "printed": "p. 716",
     "scan": "leaf n797 / PDF p. 798",
@@ -34,10 +55,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The identified approved Benziger 1962 page prints the complete selected 94-word lesson literally, without an expanded conclusion."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-24"
   }
  ],
  "witnesses": []

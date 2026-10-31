@@ -674,12 +674,16 @@ test('the reading size is the only knob', async ({ page }) => {
 		await page.evaluate(() => document.fonts.ready);
 		const units = await page.locator('main').evaluate(interlinearGeometry);
 		expect(units.length).toBeGreaterThan(6);
-		const first = units.find(
-			(unit) =>
-				units.filter((other) => other.verseId === unit.verseId).length > 6 &&
-				!units.some((other) => other.verseId === unit.verseId && other.initial)
-		)!;
-		expect(first, 'a non-initial verse supplies the spacing control').toBeDefined();
+		// The control is s04, "et elevátis óculis in cælum ad te Deum Patrem suum omnipoténtem":
+		// eleven words without the initial, on two lines at every probed size of this measure.
+		// s13 (accépit panem …, split from s02 at the printed rubric) fits one line at 1.45rem.
+		const control = units.filter((unit) => unit.verseId === 's04');
+		expect(control, 'the control verse keeps its eleven units').toHaveLength(11);
+		expect(
+			control.some((unit) => unit.initial),
+			'a non-initial verse supplies the spacing control'
+		).toBe(false);
+		const first = control[0];
 		const next = units.find(
 			(unit) =>
 				unit.verseId === first.verseId &&

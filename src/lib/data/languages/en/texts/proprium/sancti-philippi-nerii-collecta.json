@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-philippi-nerii-collecta",
+  "language":"en",
+  "about":"Recalling the glory God has given Philip Neri among His saints, the prayer asks that those rejoicing in Philip’s feast may advance by the example of his virtues.",
+  "seg":[
+    {"id":"s01","tr":"God, You have exalted blessed Philip, Your confessor, in the glory of Your saints. Graciously grant that we, who rejoice in his feast, may advance through the example of his virtues. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["God","You who",null,null,null,null,null,null,null,"have exalted",null,null,"that","whose","feast","we rejoice in",null,null,null,null,"Through",null,null,"Jesus","Christ",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":2,"n":2,"a":1,"g":"blessed Philip"},{"s":4,"n":2,"a":1,"g":"Your confessor"},{"s":6,"n":3,"a":2,"g":"in the glory of Your saints"},{"s":10,"n":2,"a":1,"g":"graciously grant"},{"s":16,"n":2,"a":1,"g":"of his virtues"},{"s":18,"n":2,"a":1,"g":"we may advance by the example"},{"s":21,"n":2,"a":1,"g":"our Lord"},{"s":25,"n":2,"a":1,"g":"Your Son"},{"s":34,"n":2,"a":1,"g":"of the Holy Spirit"},{"s":37,"n":4,"a":3,"g":"forever and ever"}],"ex":{"w004":"The feast heading identifies Philip Neri. The name does not refer to the Apostle Philip in this prayer.","w009":"The glory is that of God’s saints. God is the one who has exalted Philip.","w014":"Philip is the one whose feast brings the community joy. The later eius also refers to him.","w019":"The community asks to make progress through Philip’s example. His virtues supply the example, rather than becoming virtues the prayer already claims for us."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

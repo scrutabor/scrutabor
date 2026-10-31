@@ -1,0 +1,27 @@
+{
+ "id": "proprium.dominica-ii-post-pascha-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-ii-post-pascha-introitus.gloria-patri.key-of-heaven-1901",
+     "address": {
+      "kind": "word",
+      "word": "w021"
+     },
+     "claim": "Historical wording basis for the English Gloria Patri at w021–w040 only. The page prints the inherited formula with Holy Ghost; this rendering uses Holy Spirit. This source is not the wording basis of the antiphon, psalm verse or reprise."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

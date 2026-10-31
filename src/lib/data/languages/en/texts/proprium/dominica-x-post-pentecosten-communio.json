@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “10th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You will accept the sacrifice of justice, oblations, and burnt offerings, upon Your altar, O Lord.","g":["You shall receive","a sacrifice","of justice","oblations","and","burnt offerings","upon","altar","Your","Lord"]}
+    {"id":"s01","tr":"You will accept the sacrifice of justice, oblations, and burnt offerings, upon Your altar, O Lord.","g":["You will receive","a sacrifice","of justice","oblations","and","burnt offerings","upon",null,null,"Lord"],"a":[{"s":7,"n":2,"a":0,"g":"Your altar"}]}
   ]
 }

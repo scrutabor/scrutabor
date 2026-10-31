@@ -8,12 +8,12 @@ import type { TextDocument } from '../src/lib/corpus';
 
 test.use({ serviceWorkers: 'block' });
 for (const lang of ['pl', 'en'] as const)
-	test(`${lang} shipped6.7 pack initializes every dated consumer and displays its reading @online`, async ({
+	test(`${lang} shipped6.10 pack initializes every dated consumer and displays its reading @online`, async ({
 		page
 	}) => {
-		expect(manifest.schema_version).toBe('6.7.0');
+		expect(manifest.schema_version).toBe('6.10.0');
 		expect(table.schema_version).toBe('2.0.0');
-		expect(table.announcements).toHaveLength(205);
+		expect(table.announcements).toHaveLength(206);
 		const mass = 'dominica-iii-post-pascha';
 		const days = [...formularies.formularies].sort((a, b) => a.order - b.order);
 		const index = days.findIndex((day) => day.id === mass);

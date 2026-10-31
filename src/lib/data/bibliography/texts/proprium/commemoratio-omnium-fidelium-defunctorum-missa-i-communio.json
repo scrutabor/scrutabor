@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-02m1; resolved section [Communio] with declared inherited references"
+    "section": "web/www/horas/Latin/Commune/C9.txt [Communio] (lines 419-419); web/www/horas/Latin/Commune/C9.txt [Communio] (line 420, chars 2:44); web/www/horas/Latin/Commune/C9.txt [Communio] (lines 421-421); web/www/horas/Latin/Commune/C9.txt [Communio] (line 422, chars 2:44)"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Common C9 section supplies the complete literal chant comparison. This use does not independently establish the Mass I assignment, performer, or genealogical independence from the printed tradition."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-27"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

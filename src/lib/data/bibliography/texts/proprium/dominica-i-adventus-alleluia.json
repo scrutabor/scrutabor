@@ -2,22 +2,22 @@
  "id": "proprium.dominica-i-adventus-alleluia",
  "source_groups": [
   {
-   "edition": "edition.divinum-officium-missa.44667ff",
-   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Tempora/Adv1-0; section [Graduale], lines 32–34"
+    "section": "web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (line 32, chars 64:83); web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (lines 33-34)"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-i-adventus-alleluia.do44667ff",
+     "id": "use.proprium.dominica-i-adventus-alleluia.dob5e250b",
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact revision supplies this component as a derived digital comparison. The declared complete reading preserves the source spelling, accents, punctuation and component boundary. The weekday omission rubric belongs to the printed source, not to this thirteen-word digital reading. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-03"
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

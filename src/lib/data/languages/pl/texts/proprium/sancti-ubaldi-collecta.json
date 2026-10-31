@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-ubaldi-collecta",
+  "language":"pl",
+  "about":"Prosimy Boga o pomoc i osłonę Jego prawicy przeciw zamysłom diabła. Wstawia się za nami święty Ubald, wyznawca i biskup.",
+  "seg":[
+    {"id":"s01","tr":"Panie, prosimy, udziel nam łaskawie swojej pomocy i za wstawiennictwem błogosławionego Ubalda, Twojego wyznawcy i biskupa, wyciągnij nad nami prawicę swojej łaskawości przeciw wszystkim niegodziwym zamysłom diabła. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Pomocy","Twojej","nam","Panie","prosimy","łaskawie","udziel","i","za wstawiennictwem","błogosławionego","Ubalda",null,null,"i","biskupa","przeciw","wszystkim",null,null,null,null,null,null,null,"wyciągnij","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":11,"n":2,"a":0,"g":"Twojego wyznawcy"},{"s":17,"n":2,"a":1,"g":"niegodziwym zamysłom diabła"},{"s":19,"n":5,"a":0,"g":"nad nami prawicę Twojej łaskawości"}],"ex":{"w006":"„Placátus” określa Boga jako przychylnego modlącym się. Z tą łaskawością udziela On pomocy.","w020":"Prawica jest obrazem Bożej ochrony. „Tuæ propitiatiónis” łączy ją z łaskawością Boga wobec proszących.","w042":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

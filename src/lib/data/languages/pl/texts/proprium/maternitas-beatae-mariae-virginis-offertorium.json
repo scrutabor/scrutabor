@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Offertorium formularza „Macierzyństwo Najświętszej Maryi Panny” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Gdy Jego matka, Maryja, była zaręczona z Józefem, okazało się, że jest brzemienna z Ducha Świętego.","g":["Gdy","była","zaręczona","matka","Jego","Maryja","Józefowi","znaleziona","została","w","łonie","mająca","z","Ducha","Świętego"]}
+    {"id":"s01","tr":"Gdy Jego matka, Maryja, była zaręczona z Józefem, okazało się, że jest brzemienna z Ducha Świętego.","g":["Gdy",null,null,"matka","Jego","Maryja","z Józefem",null,null,null,null,null,"z","Ducha","Świętego"],"a":[{"s":1,"n":2,"a":1,"g":"była zaręczona"},{"s":7,"n":2,"a":0,"g":"okazała się"},{"s":9,"n":3,"a":2,"g":"brzemienna"}]}
   ]
 }

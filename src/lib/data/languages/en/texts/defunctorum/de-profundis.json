@@ -4,13 +4,13 @@
   "about":"Psalm 129 in Vulgate numbering (Psalm 130 in Hebrew numbering), traditionally prayed for the dead. Its Latin is the Gallican psalter, the version the Roman liturgy prays.",
   "seg":[
     {"id":"s001","tr":"From the depths I called out to You, O Lord.","g":["Out of","depths","I have cried","to","You","Lord"]},
-    {"id":"s002","tr":"Lord, hear my voice.","g":["Lord","hear","voice","my"]},
-    {"id":"s003","tr":"May Your ears listen closely to my pleading voice.","g":["let be","ears","Your","attentive","to","voice","of supplication","my"]},
-    {"id":"s004","tr":"If You mark iniquities, O Lord, Lord, who will endure it?","g":["if","iniquities","You will mark","Lord","Lord","who","shall endure"]},
-    {"id":"s005","tr":"For with You there is forgiveness; for the sake of Your law I have waited for You, O Lord.","g":["for","with","You","forgiveness","is","and","because of","law","Your","I have waited for","You","Lord"]},
-    {"id":"s006","tr":"My soul has waited for His word; my soul has hoped in the Lord.","g":["has waited","soul","my","for","word","His","has hoped","soul","my","in","the Lord"]},
+    {"id":"s002","tr":"Lord, hear my voice.","g":["Lord","hear",null,null],"a":[{"s":2,"n":2,"a":0,"g":"my voice"}]},
+    {"id":"s003","tr":"May Your ears listen closely to my pleading voice.","g":["let be",null,null,"attentive","to","voice",null,null],"a":[{"s":1,"n":2,"a":0,"g":"Your ears"},{"s":6,"n":2,"a":0,"g":"of my supplication"}]},
+    {"id":"s004","tr":"If You mark iniquities, O Lord, Lord, who will endure it?","g":["if","iniquities","You will mark","Lord","Lord","who","will endure"]},
+    {"id":"s005","tr":"For with You there is forgiveness; for the sake of Your law I have waited for You, O Lord.","g":["for","with","You","forgiveness","is","and","because of",null,null,"I have waited for","You","Lord"],"a":[{"s":7,"n":2,"a":0,"g":"Your law"}]},
+    {"id":"s006","tr":"My soul has waited for His word; my soul has hoped in the Lord.","g":["has waited",null,null,"for","word","His","has hoped",null,null,"in","the Lord"],"a":[{"s":1,"n":2,"a":0,"g":"my soul"},{"s":7,"n":2,"a":0,"g":"my soul"}]},
     {"id":"s007","tr":"From the morning watch until night, let Israel hope in the Lord.","g":["from","watch","morning",null,null,"night","let hope","Israel","in","the Lord"],"a":[{"s":3,"n":2,"a":1,"g":"until"}]},
     {"id":"s008","tr":"For mercy is with the Lord, and abundant redemption is with Him.","g":["for","with","the Lord","mercy","and","plentiful","with","Him","redemption"]},
-    {"id":"s009","tr":"And He Himself will redeem Israel from all its iniquities.","g":["and","He","shall redeem","Israel","from","all","iniquities","its"]}
+    {"id":"s009","tr":"And He Himself will redeem Israel from all its iniquities.","g":["and","He","will redeem","Israel","from","all","iniquities","its"]}
   ]
 }

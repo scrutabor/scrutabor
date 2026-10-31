@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-stanislai-collecta",
+  "language":"pl",
+  "about":"Modlitwa wspomina śmierć biskupa Stanisława dla czci Boga. Prosi o zbawienny owoc prośby wszystkich, którzy wzywają pomocy świętego.",
+  "seg":[
+    {"id":"s01","tr":"Boże, dla którego czci chwalebny Biskup Stanisław poległ od mieczy bezbożnych, spraw, prosimy, aby wszyscy, którzy wzywają jego pomocy, otrzymali zbawienny owoc swojej prośby. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże",null,null,null,"chwalebny","Biskup","Stanisław","od mieczy","bezbożnych","poległ","spraw","prosimy","aby","wszyscy","którzy","jego","wzywają","pomocy",null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":1,"n":3,"a":2,"g":"dla którego czci"},{"s":18,"n":2,"a":0,"g":"swojej prośby"},{"s":20,"n":3,"a":1,"g":"otrzymali zbawienny owoc"}],"ex":{"w003":"„Którego” wskazuje na Boga. Dla Jego czci Stanisław poniósł śmierć.","w008":"Liczba mnoga zachowuje miecze wymienione w opisie śmierci świętego.","w009":"Chodzi o ludzi, do których należą miecze.","w016":"Wzywana pomoc należy do Stanisława. O jej zbawienny owoc modlący się zwracają się do Boga.","w020":"„Swojej” odnosi się do wszystkich proszących o pomoc. Każdy z nich prosi o zbawienny owoc własnej prośby.","w022":"„Zbawienny owoc” oznacza dobro służące zbawieniu, o które proszą wzywający pomocy świętego.","w040":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

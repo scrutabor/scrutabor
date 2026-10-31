@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “5th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Behold, O God, our protector, and look on Your servants. O Lord God of Hosts, hear the prayers of Your servants.","g":["protector","our","behold","God","and","look","upon","servants","Your","Lord","God","of Hosts","hear","the prayers","of servants","Your"]}
+    {"id":"s01","tr":"Behold, O God, our protector, and look on Your servants. O Lord God of Hosts, hear the prayers of Your servants.","g":[null,null,"behold","God","and","look","upon",null,null,"Lord","God","of Hosts","hear","the prayers",null,null],"a":[{"s":0,"n":2,"a":0,"g":"Our protector"},{"s":7,"n":2,"a":0,"g":"Your servants"},{"s":14,"n":2,"a":0,"g":"of Your servants"}]}
   ]
 }

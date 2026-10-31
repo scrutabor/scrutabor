@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-gregorii-nazianzeni-postcommunio",
+  "language":"pl",
+  "about":"Prośba, by Grzegorz wystąpił jako orędownik, aby Boże ofiary przynosiły nam zbawienie.",
+  "seg":[
+    {"id":"s01","tr":"Prosimy, Panie, niech błogosławiony Grzegorz, Twój Biskup i znakomity Doktor, wystąpi jako orędownik, aby Twoje ofiary przynosiły nam zbawienie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Aby","nam","Panie","Twoje","ofiary","dały","zbawienie","błogosławiony","Grzegorz","Biskup","Twój","i","Doktor","znakomity","prosimy",null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":15,"n":2,"a":1,"g":"niech wystąpi jako orędownik"}],"ex":{"w005":"Ofiary są tym, co ma przynosić nam zbawienie. O ich zbawienny owoc modlący się proszą Pana.","w016":"Modlący się proszą Boga, by Grzegorz wystąpił w ich sprawie jako orędownik. Celem jest zbawienny owoc Bożych ofiar.","w034":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

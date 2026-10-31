@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “20th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Remember Your word to Your servant, O Lord, in which You have given me hope; this has comforted me in my lowliness.","g":["Remember","word","Your","to servant","Your","Lord","in","which","to me","hope","You gave","This","me","comforted","has","in","lowliness","my"]}
+    {"id":"s01","tr":"Remember Your word to Your servant, O Lord, in which You have given me hope; this has comforted me in my lowliness.","g":["Remember",null,null,null,null,"Lord","in","which","to me","hope","You gave","This","me",null,null,"in",null,null],"a":[{"s":1,"n":2,"a":0,"g":"Your word"},{"s":3,"n":2,"a":0,"g":"to Your servant"},{"s":13,"n":2,"a":0,"g":"has comforted"},{"s":16,"n":2,"a":0,"g":"my lowliness"}]}
   ]
 }

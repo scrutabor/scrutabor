@@ -3,6 +3,10 @@
 // into the first page of the book.
 import manifestData from './data/manifest.json';
 import formularyData from './data/formularies.json';
+import {
+	validateOrdinarySegmentOmissions,
+	type OrdinaryOmissionDescriptor
+} from './ordinary-omission-descriptors';
 import metricsData from './data/metrics.json';
 import commemorationData from './data/commemorationes.json';
 import { localizedCommemorations, type CommemorationAboutSlot } from './commemoration-titles';
@@ -88,6 +92,7 @@ export interface FormularyComponentMetadata {
 
 export interface FormularyMetadata {
 	ordinary: OrdinaryPrescriptions;
+	ordinary_omissions: OrdinaryOmissionDescriptor[];
 	id: string;
 	order: number;
 	collection: string;
@@ -151,7 +156,7 @@ const FORMULARY_CATALOG = formularyData as unknown as FormularyCatalog;
 if (
 	!FORMULARY_CATALOG ||
 	typeof FORMULARY_CATALOG !== 'object' ||
-	FORMULARY_CATALOG.schema_version !== '1.3.0' ||
+	FORMULARY_CATALOG.schema_version !== '1.5.0' ||
 	!Array.isArray(FORMULARY_CATALOG.formularies) ||
 	!FORMULARY_CATALOG.formularies.length
 )
@@ -160,6 +165,7 @@ for (const formulary of FORMULARY_CATALOG.formularies) {
 	if (!formulary || typeof formulary !== 'object' || Array.isArray(formulary))
 		throw new Error('invalid neutral formulary record');
 	validateOrdinaryPrescriptions(formulary.ordinary);
+	validateOrdinarySegmentOmissions(formulary.ordinary_omissions);
 }
 export const FORMULARY_METADATA = FORMULARY_CATALOG.formularies;
 export const CORPUS_METRICS = metricsData as unknown as CorpusMetrics;

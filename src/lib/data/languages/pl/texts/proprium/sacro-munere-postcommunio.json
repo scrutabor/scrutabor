@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sacro-munere-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa po Komunii z prośbą, aby sprawowany obchód przynosił wzrost zbawienia pochodzącego od Boga.",
+  "seg":[
+    {"id":"s01","tr":"Posileni świętym darem, pokornie Cię błagamy, Panie, abyśmy w tym, co sprawujemy jako należną Ci służbę, doświadczali coraz pełniej Twojego zbawienia. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,"pokornie","Cię","Panie","błagamy","abyśmy","tego, co",null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":0,"n":3,"a":2,"g":"Nasyceni świętym darem"},{"s":9,"n":4,"a":2,"g":"sprawujemy, wypełniając powinność należnej służby"},{"s":13,"n":4,"a":2,"g":"doświadczali jako wzrostu Twojego zbawienia"}],"ex":{"w003":"„Satiati” opisuje modlących się jako już nasyconych świętym darem. Po jego przyjęciu zwracają się z błaganiem do Boga.","w005":"„Te” wskazuje Boga jako adresata błagania. „Deprecamur” ma czynne znaczenie: „błagamy”.","w009":"„Quod” wprowadza to, co sprawujemy w należnej służbie Bogu. W polskim „tego, co” pierwszy człon dopełnia „doświadczali”, a drugi łączy się ze „sprawujemy”.","w010":"„Debitae servitutis officio” oznacza wypełnianie powinności służby należnej Bogu. Tak modlitwa określa sprawowany obchód.","w017":"Prosimy, abyśmy doświadczali tego, co sprawujemy, jako pomnożenia zbawienia pochodzącego od Boga. „Augmentum” określa zbawienny owoc sprawowanego obchodu.","w034":"„Deus” jest tu mianownikiem i określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

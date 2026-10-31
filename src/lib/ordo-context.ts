@@ -161,16 +161,7 @@ export function ordoResponseContext(
 		reason,
 		note: lang === 'pl' ? bindOrphans(note) : note
 	});
-	if (
-		state.date &&
-		state.mass === null &&
-		!state.loading &&
-		!state.failed &&
-		!state.unwritten &&
-		state.loadedMass === null &&
-		state.loadedLanguage === null &&
-		resolveOrdoChoice(state.date, 'none')
-	)
+	if (ordinaryGuideReady(state))
 		return reference(
 			'ordinary-only',
 			lang === 'pl'
@@ -217,6 +208,21 @@ export interface GospelPreparationState {
 	loading: boolean;
 	failed: boolean;
 	unwritten: boolean;
+}
+
+/** A completed generic Ordinary is distinct from an unsettled selected occurrence.
+ * This is the existing response-context predicate, shared without guessing intent. */
+export function ordinaryGuideReady(state: GospelPreparationState): boolean {
+	return !!(
+		state.date &&
+		state.mass === null &&
+		!state.loading &&
+		!state.failed &&
+		!state.unwritten &&
+		state.loadedMass === null &&
+		state.loadedLanguage === null &&
+		resolveOrdoChoice(state.date, 'none')
+	);
 }
 
 const GOSPEL_BLESSING_REQUIEMS = [

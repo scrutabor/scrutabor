@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-gregorii-vii-collecta",
+  "language":"pl",
+  "about":"Bóg jest przywoływany jako moc ludzi pokładających w Nim nadzieję. Modlitwa przypomina wytrwałość Grzegorza w obronie wolności Kościoła i prosi o mężne przezwyciężanie przeciwności za jego przykładem i wstawiennictwem.",
+  "seg":[
+    {"id":"s01","tr":"Boże, mocy tych, którzy w Tobie pokładają nadzieję, który umocniłeś błogosławionego Grzegorza, swojego wyznawcę i papieża, siłą wytrwałości do obrony wolności Kościoła, daj nam za jego przykładem i wstawiennictwem mężnie pokonywać wszelkie przeciwności. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże",null,null,null,null,"który","błogosławionego","Grzegorza",null,null,"i","papieża",null,null,null,null,null,null,"umocniłeś","daj","nam",null,null,"i","wstawiennictwem",null,null,"mężnie","pokonywać","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":1,"n":4,"a":3,"g":"mocy tych, którzy w Tobie pokładają nadzieję"},{"s":8,"n":2,"a":0,"g":"Twojego wyznawcę"},{"s":12,"n":4,"a":3,"g":"dla obrony wolności Kościoła"},{"s":16,"n":2,"a":0,"g":"siłą wytrwałości"},{"s":21,"n":2,"a":1,"g":"za jego przykładem"},{"s":25,"n":2,"a":1,"g":"wszelkie przeciwności"}],"ex":{"w016":"„Pro” z „tuénda” wyraża cel: obronę wolności Kościoła. Nie opisuje tu obrony jako już zakończonego czynu.","w027":"„Adversántia” obejmuje wszystko, co się sprzeciwia lub staje na przeszkodzie. Nie ogranicza się do ludzi.","w046":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

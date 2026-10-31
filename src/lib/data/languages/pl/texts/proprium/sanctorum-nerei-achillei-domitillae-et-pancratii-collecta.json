@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+  "language":"pl",
+  "about":"Modlitwa prosi, by uroczystość czterech męczenników zawsze nas wspierała i czyniła godnymi służby Bogu.",
+  "seg":[
+    {"id":"s01","tr":"Panie, prosimy, niech błogosławiona uroczystość Twoich męczenników Nereusza, Achillesa, Domitylli i Pankracego zawsze nas wspiera i czyni godnymi służby Tobie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Zawsze","nas","Panie",null,null,"Nereusza","Achillesa","Domitylli","i","Pankracego","niech wspiera","prosimy",null,null,"i",null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":3,"n":2,"a":0,"g":"Twoich męczenników"},{"s":12,"n":2,"a":1,"g":"błogosławiona uroczystość"},{"s":15,"n":4,"a":2,"g":"czyni godnymi służby Tobie"}],"ex":{"w004":"Wymienione imiona należą do męczenników wspominanych wspólnie. Nagłówek dnia określa Domityllę także jako dziewicę.","w014":"Obchód uroczystości ma nas wspierać i czynić godnymi służby Bogu.","w017":"Chodzi o godność pełnienia służby Bogu. „Tuo obsequio” określa służbę, której mamy być godni.","w036":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

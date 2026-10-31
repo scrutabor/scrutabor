@@ -4,10 +4,7 @@ import type { Page } from '@playwright/test';
 test.use({ serviceWorkers: 'block' });
 const slug = 'ite-missa-est-paschale';
 const words = (page: Page, prefix: string) => page.locator(`main [id^="${prefix}.w"]`);
-const dismissal = (page: Page) =>
-	page.locator('.part').filter({
-		has: page.locator('.part-title').filter({ hasText: /^Ite, missa est$/ })
-	});
+const dismissal = (page: Page) => page.locator('section.part[data-part="ite-missa-est"]');
 
 for (const lang of ['pl', 'en']) {
 	test(`${lang}: paschal dismissal has all words, a real word card and the bounded ritual note @reader`, async ({

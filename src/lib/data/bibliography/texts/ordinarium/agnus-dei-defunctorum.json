@@ -1,0 +1,166 @@
+{
+ "id": "ordinarium.agnus-dei-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 313",
+    "scan": "leaf n394 / physical PDF p. 395"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.stem.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The three six-word Agnus addresses are printed here. The complete Requiem petitions are derived from the adjacent explicit substitution, not printed as a continuous threefold Requiem body."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIV",
+    "section": "Rubricae generales 511 i, 512, 513 e and 514",
+    "scan": "leaf n39 / physical PDF p. 40",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.recitation-voice.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Agnus Dei is clara in low Mass. At solemn and sung Mass the celebrant recites the words secreto; this priestly recitation is distinct from the audible singing of the Ordinary."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LVII",
+    "section": "Ritus servandus X, 2–4",
+    "scan": "leaf n62 / physical PDF p. 63",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n62/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.priestly-recitation.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The priest recites Agnus Dei intelligibly at low Mass. In a Mass for the Dead the petition changes to dona eis requiem, he does not strike his breast, and the first Domine Iesu Christe prayer and kiss of peace are omitted. The next two Communion prayers remain."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. LIX",
+    "section": "Ritus servandus XIII, 1",
+    "scan": "leaf n64 / physical PDF p. 65",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n64/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.requiem-exception.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "For Masses for the Dead dona eis requiem replaces miserere nobis and the third invocation adds sempiternam instead of the ordinary peace petition. The priest does not strike his breast; the first pre-Communion prayer and kiss of peace are omitted."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 313, Agnus replacement rubric",
+    "scan": "leaf n394 / physical PDF p. 395"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.replacement.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Replace the ordinary petition with dona eis requiem; only the third adds sempiternam. The retained six-word address is repeated three times. This yields 9 + 9 + 10 words."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 318",
+    "scan": "physical PDF p. 399"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.stem.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The three six-word Agnus addresses are printed here. The complete Requiem petitions are derived from the adjacent explicit substitution, not printed as a continuous threefold Requiem body."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 318, Agnus replacement rubric",
+    "scan": "physical PDF p. 399"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.replacement.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Replace the ordinary petition with dona eis requiem; only the third adds sempiternam. The retained six-word address is repeated three times. This yields 9 + 9 + 10 words."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 639–640, 642–643",
+    "scan": "physical PDF pp. 639–640, 642–643",
+    "section": "De musica sacra et sacra liturgia 25 b, 26 and 31 c",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=639"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-defunctorum.participation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The faithful may sing Agnus Dei with the sung Ordinary at the second participation degree; the rule applies also to Missa cantata. At low Mass they may recite it with the celebrant at the third degree. Participation permission does not assert that every congregation actually participates or replace the celebrant’s distinct recitation."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": []
+}

@@ -4,7 +4,7 @@
   "about":"Kapłan wypowiada pierwszą część błogosławieństwa przy ołtarzu, następnie zwraca się do ludu i kreśli nad nim znak krzyża. Także podczas Mszy uroczystej czyni jeden znak. Potrójne błogosławieństwo należy do Mszy pontyfikalnej. Błogosławieństwo opuszcza się po Benedicámus Dómino oraz we Mszach za zmarłych.",
   "seg":[
     {"id":"s01","nr":"Potem kapłan całuje ołtarz, podnosi oczy, wyciąga, unosi i składa ręce, pochyla głowę przed krzyżem i mówi:"},
-    {"id":"s02","tr":"Niech was błogosławi Bóg wszechmogący,","tc":[141],"tb":"exact","g":["niech błogosławi","was","wszechmogący","Bóg"]},
+    {"id":"s02","tr":"Niech was błogosławi Bóg wszechmogący,","tc":[141],"tb":"exact","g":["Niech błogosławi","was","wszechmogący","Bóg"]},
     {"id":"s03","nr":"Kapłan zwraca się do ludu, błogosławi go jeden raz i mówi dalej:"},
     {"id":"s04","tr":"Ojciec i Syn, i Duch Święty.","tc":[141],"tb":"revised","g":["Ojciec","i","Syn","i","Duch","Święty"]},
     {"id":"s06","tr":"Amen.","tc":[141],"tb":"exact","g":["Amen"]},

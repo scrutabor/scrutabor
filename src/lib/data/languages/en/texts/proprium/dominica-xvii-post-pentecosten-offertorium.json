@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “17th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"I, Daniel, prayed to my God, saying, Hear, O Lord, the prayers of Your servant; show Your face upon Your sanctuary, and favorably look down upon this people, upon whom Your name is invoked, O God.","g":["I prayed to","God","my","I","Daniel","saying","Hear","Lord","prayers","of servant","Your","illumine","face","Your","upon","sanctuary","Your","and","mercifully","look upon","people","this","upon","whom","invoked","is","name","Your","God"]}
+    {"id":"s01","tr":"I, Daniel, prayed to my God, saying, Hear, O Lord, the prayers of Your servant; show Your face upon Your sanctuary, and favorably look down upon this people, upon whom Your name is invoked, O God.","g":["I prayed to",null,null,"I","Daniel","saying","Hear","Lord","prayers",null,null,"illumine",null,null,"upon",null,null,"and","mercifully","look upon","people","this","upon","whom",null,null,null,null,"God"],"a":[{"s":1,"n":2,"a":0,"g":"my God"},{"s":9,"n":2,"a":0,"g":"of Your servant"},{"s":12,"n":2,"a":0,"g":"Your face"},{"s":15,"n":2,"a":0,"g":"Your sanctuary"},{"s":24,"n":2,"a":0,"g":"has been invoked"},{"s":26,"n":2,"a":0,"g":"Your name"}]}
   ]
 }

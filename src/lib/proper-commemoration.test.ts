@@ -19,6 +19,15 @@ const QUEEN = 'beata-maria-virgo-regina';
 const MARK = 'sancti-marci-evangelistae';
 const OTHER = '~cantu-non-conventualis';
 
+// Fresh expected rows keep each assertion independent of other tests.
+const expectedVariants = (situations: string[], described: boolean) =>
+	situations.map((situation) => ({
+		situation,
+		described,
+		unavailable: [],
+		missing: []
+	}));
+
 // The three shared transport packs by the path segment that names them.
 const PACKS = { canon: canonData, dismissal: dismissalData, commemorationes: commemorationData };
 
@@ -72,9 +81,7 @@ it.each(['pl', 'en'] as const)(
 		massForm.set('lecta');
 		await chooseDay({ date: '2027-05-31', mass: QUEEN }, lang);
 		expect(proper.failed).toBe(false);
-		expect(proper.commemorationVariants).toEqual([
-			{ situation: 'lecta', described: false, unavailable: [], missing: [] }
-		]);
+		expect(proper.commemorationVariants).toEqual(expectedVariants(['lecta'], false));
 		expect(shape('collecta')).toEqual([
 			[`proprium/${QUEEN}-collecta`, `${QUEEN}-collecta`, null, null, false],
 			[
@@ -113,10 +120,9 @@ it.each(['pl', 'en'] as const)(
 		const massForm = await form();
 		massForm.set('cantu');
 		await chooseDay({ date: '2027-05-31', mass: QUEEN }, lang);
-		expect(proper.commemorationVariants).toEqual([
-			{ situation: 'cantu-conventualis', described: true, unavailable: [], missing: [] },
-			{ situation: 'cantu-non-conventualis', described: true, unavailable: [], missing: [] }
-		]);
+		expect(proper.commemorationVariants).toEqual(
+			expectedVariants(['cantu-conventualis', 'cantu-non-conventualis'], true)
+		);
 		expect(shape('collecta')).toEqual([
 			[`proprium/${QUEEN}-collecta`, `${QUEEN}-collecta`, null, 'cantu-conventualis', false],
 			[
@@ -161,43 +167,64 @@ it.each(['pl', 'en'] as const)(
 );
 
 it.each(['pl', 'en'] as const)(
-	'%s 31 May 2079 owes a de Tempore commemoration this edition lacks, never none',
+	'%s 31 May 2079 supplies the impeded Vigil without admitting Petronilla',
 	async (lang) => {
-		transport(lang, [QUEEN]);
+		const vigil = 'vigilia-ascensionis';
+		const commemoration = 'vigilia-ascensionis-impedita';
+		const prayers = 'dominica-v-post-pascha';
+		const choice = { date: '2079-05-31', mass: QUEEN };
+		transport(lang, [QUEEN, vigil]);
 		const massForm = await form();
 		massForm.set('lecta');
-		await chooseDay({ date: '2079-05-31', mass: QUEEN }, lang);
+		await chooseDay(choice, lang);
 		expect(proper.failed).toBe(false);
-		expect(
-			proper.commemorationVariants.map(({ situation, described, unavailable }) => [
-				situation,
-				described,
-				unavailable.map(({ id }) => id)
-			])
-		).toEqual([['lecta', false, ['sancta-petronilla']]]);
-		expect(shape('collecta')).toEqual([
-			[`proprium/${QUEEN}-collecta`, `${QUEEN}-collecta`, null, null, false]
+		expect(proper.commemorationVariants).toEqual(expectedVariants(['lecta'], false));
+		for (const slot of ['collecta', 'secreta', 'postcommunio'])
+			expect(shape(slot), slot).toEqual([
+				[`proprium/${QUEEN}-${slot}`, `${QUEEN}-${slot}`, null, null, slot === 'secreta'],
+				[`proprium/${prayers}-${slot}`, `${prayers}-${slot}`, commemoration, null, false]
+			]);
+		expect(tail('secreta', 0).at(-1)).toEqual(['s03', 'sacerdos', 'secreto']);
+		expect(tail('secreta', 1).slice(-2)).toEqual([
+			['s02', 'sacerdos', 'clara'],
+			['s03', 'minister', 'clara']
 		]);
-		// The owed commemoration's Secret would follow, so the Mass's own is not the last.
-		expect(shape('secreta')).toEqual([
-			[`proprium/${QUEEN}-secreta`, `${QUEEN}-secreta`, null, null, true]
-		]);
+		expect(vi.mocked(fetch).mock.calls.map(([url]) => String(url))).toContain(
+			artifactPath(vigil, lang)
+		);
 		massForm.set('cantu');
+		expect(proper.commemorationVariants).toEqual(
+			expectedVariants(['cantu-conventualis', 'cantu-non-conventualis'], true)
+		);
 		expect(
-			proper.commemorationVariants.map(({ situation, described, unavailable }) => [
+			shape('secreta').map(([, slug, owner, situation, nonfinal]) => [
+				slug,
+				owner,
 				situation,
-				described,
-				unavailable.map(({ id }) => id)
+				nonfinal
 			])
 		).toEqual([
-			['cantu-conventualis', true, ['sancta-petronilla']],
-			['cantu-non-conventualis', true, []]
+			[`${QUEEN}-secreta`, null, 'cantu-conventualis', true],
+			[`${prayers}-secreta`, commemoration, 'cantu-conventualis', false],
+			[`${QUEEN}-secreta${OTHER}`, null, 'cantu-non-conventualis', false]
 		]);
-		expect(
-			shape('secreta').map(([, slug, , situation, nonfinal]) => [slug, situation, nonfinal])
-		).toEqual([
-			[`${QUEEN}-secreta`, 'cantu-conventualis', true],
-			[`${QUEEN}-secreta${OTHER}`, 'cantu-non-conventualis', false]
+		// A resolved Vigil requires its actual formulary; failure must not become an empty plan.
+		// A fresh graph prevents the earlier healthy payload/pack caches hiding this defect.
+		vi.resetModules();
+		({ chooseDay, proper } = await import('./proper.svelte'));
+		transport(lang, [QUEEN]);
+		(await form()).set('lecta');
+		await chooseDay(choice, lang);
+		expect(proper.failed).toBe(true);
+		expect(proper.payload).toBeNull();
+		expect(proper.forSlot('collecta')).toEqual([]);
+		transport(lang, [QUEEN, vigil]);
+		proper.clear();
+		await chooseDay(choice, lang);
+		expect(proper.failed).toBe(false);
+		expect(proper.forSlot('collecta').map(({ commemoration }) => commemoration ?? null)).toEqual([
+			null,
+			'vigilia-ascensionis-impedita'
 		]);
 	}
 );
@@ -393,9 +420,7 @@ for (const { date, sunday, feast } of IMPEDED_FEASTS)
 		it(`${lang} low Mass of ${sunday} on ${date} commemorates ${feast}`, async () => {
 			await assemble(lang, date, sunday, 'lecta', [sunday, feast]);
 			expect(proper.failed).toBe(false);
-			expect(proper.commemorationVariants).toEqual([
-				{ situation: 'lecta', described: false, unavailable: [], missing: [] }
-			]);
+			expect(proper.commemorationVariants).toEqual(expectedVariants(['lecta'], false));
 			for (const slot of SLOTS)
 				expect(said(slot), slot).toEqual([
 					[`proprium/${sunday}-${slot}`, null, null, null, slot === 'secreta'],

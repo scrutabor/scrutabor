@@ -2,7 +2,7 @@ import { expect, setHelp, test } from './fixtures';
 import { interlinearGeometry } from './interlinear-geometry';
 
 const texts = [
-	{ slug: 'communicantes-in-ascensione-domini', verses: 9, words: 101, pl: 72, en: 68 },
+	{ slug: 'communicantes-in-ascensione-domini', verses: 9, words: 101, pl: 72, en: 70 },
 	{ slug: 'communicantes-in-die-paschae', verses: 10, words: 92, pl: 71, en: 69 },
 	{ slug: 'communicantes-in-epiphania-domini', verses: 9, words: 100, pl: 73, en: 69 },
 	{ slug: 'communicantes-in-nativitate-domini-in-die', verses: 10, words: 95, pl: 76, en: 71 },
@@ -11,7 +11,7 @@ const texts = [
 	{ slug: 'communicantes-in-pentecoste', verses: 9, words: 92, pl: 70, en: 66 },
 	// Its s03 and s04 are now retired into s02: one verse for the whole first sentence, the same
 	// 59 words, and captions recounted from the delivered groups.
-	{ slug: 'hanc-igitur-paschale', verses: 3, words: 59, pl: 43, en: 35 }
+	{ slug: 'hanc-igitur-paschale', verses: 3, words: 59, pl: 43, en: 37 }
 ];
 
 test('@reader the paschal Hanc igitur keeps its first sentence in one verse', async ({ page }) => {

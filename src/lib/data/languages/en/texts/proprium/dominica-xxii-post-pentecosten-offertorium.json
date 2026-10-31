@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “22nd Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Remember me, O Lord, who have dominion over every power, and put a right word into my mouth, so that my words may find favor in the presence of the prince.","g":["Remember","me","Lord","over every","power","ruling","and","give","speech","right","into","mouth","my","that","may be pleasing","words","my","in","sight","of prince"]}
+    {"id":"s01","tr":"Remember me, O Lord, who have dominion over every power, and put a right word into my mouth, so that my words may find favor in the presence of the prince.","g":["Remember","me","Lord","over every","power","ruling","and","give","speech","right","into",null,null,"that","may be pleasing",null,null,"in","sight","of prince"],"a":[{"s":11,"n":2,"a":0,"g":"my mouth"},{"s":15,"n":2,"a":0,"g":"my words"}]}
   ]
 }

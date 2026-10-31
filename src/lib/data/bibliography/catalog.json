@@ -251,8 +251,8 @@
     "la"
    ],
    "rights": {
-    "status": "permission",
-    "basis": "Libreria Editrice Vaticana."
+    "status": "unverified",
+    "basis": "The document bears a Libreria Editrice Vaticana copyright notice. No permission instrument has been established; public access is not treated as permission to redistribute the complete publication."
    }
   },
   {
@@ -270,6 +270,23 @@
    "rights": {
     "status": "permission",
     "basis": "Distributed under the MIT License by the Divinum Officium project."
+   }
+  },
+  {
+   "id": "edition.divinum-officium-missa.21cb2d37",
+   "work": "work.divinum-officium",
+   "recension": "Latin Mass data, including the obsolete Marian common, at commit 21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "title": "Divinum Officium: Latin Mass data",
+   "edition_statement": "Pinned exact source revision; publication date not established",
+   "year": "n.d.",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Availability of the exact source files does not establish permission; no license for this revision is asserted."
    }
   },
   {
@@ -678,6 +695,51 @@
    "access": "open"
   },
   {
+   "id": "item.divinum-officium-missa.21cb2d37.advent-ii",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv2-0.txt",
+   "revision": "21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.21cb2d37.advent-iii",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt",
+   "revision": "21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.21cb2d37.advent-iv",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv4-0.txt",
+   "revision": "21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.21cb2d37.marian-common",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/21cb2d370337ec1fd668e96d035622b4296c32cb/obsolete/missa/Latin/Commune/C10a.txt",
+   "revision": "21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.21cb2d37.prayers",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Ordo/Prayers.txt",
+   "revision": "21cb2d370337ec1fd668e96d035622b4296c32cb",
+   "access": "open"
+  },
+  {
    "id": "item.divinum-officium-missa.44667ff.github",
    "edition": "edition.divinum-officium-missa.44667ff",
    "repository": "GitHub",
@@ -696,11 +758,29 @@
    "access": "open"
   },
   {
+   "id": "item.divinum-officium-missa.44667ff.prayers",
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
    "id": "item.divinum-officium-missa.b5e250b.advent-i",
    "edition": "edition.divinum-officium-missa.b5e250b",
    "repository": "GitHub",
    "kind": "born-digital",
    "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt",
+   "revision": "b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19",
+   "access": "open"
+  },
+  {
+   "id": "item.divinum-officium-missa.b5e250b.prayers",
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Ordo/Prayers.txt",
    "revision": "b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19",
    "access": "open"
   },

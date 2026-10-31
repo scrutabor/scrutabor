@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-augustini-cantuariensis-postcommunio",
+  "language":"pl",
+  "about":"Pokrzepieni zbawienną ofiarą modlący się proszą, aby ta sama ofiara była nieustannie składana Bożemu imieniu na każdym miejscu. Prośba odwołuje się do wstawiennictwa świętego Augustyna z Canterbury.",
+  "seg":[
+    {"id":"s01","tr":"Pokrzepieni zbawienną ofiarą, pokornie błagamy Cię, Panie, aby za wstawiennictwem błogosławionego Augustyna ta sama ofiara była nieustannie składana Twojemu imieniu na każdym miejscu. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,"Cię","Panie","pokornie","błagamy","aby","ta sama ofiara",null,null,null,null,null,null,null,null,null,"nieustannie","była składana","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg",null,null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"Pokrzepieni zbawienną ofiarą"},{"s":9,"n":4,"a":3,"g":"za wstawiennictwem błogosławionego Augustyna"},{"s":13,"n":3,"a":2,"g":"na każdym miejscu"},{"s":16,"n":2,"a":0,"g":"Twojemu imieniu"},{"s":37,"n":4,"a":2,"g":"na wieki wieków"}],"ex":{"w003":"Pokrzepieni są ludzie modlący się po przyjęciu zbawiennej ofiary.","w009":"„Ta sama” wskazuje wspomnianą ofiarę. To ona ma być składana na każdym miejscu.","w013":"Wstawiennictwo należy do błogosławionego Augustyna.","w020":"Prośba dotyczy nieustannego składania tej samej ofiary Bożemu imieniu.","w037":"„Deus” określa tutaj Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

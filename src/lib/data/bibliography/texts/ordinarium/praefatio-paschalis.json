@@ -22,6 +22,27 @@
    "verified_on": "2026-10-14"
   },
   {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p.344",
+    "scan": "leaf n425 / PDF p.426",
+    "section": "In vigilia Ascensionis; Praefatio paschalis cue after the Secret",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n425/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-paschalis.ascension-vigil.selection.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Ascension Vigil explicitly directs Praefatio paschalis after its Secret. This establishes Easter Preface selection for this proper. The complete Preface wording and its performance remain supported by their separate sources."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
    "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
    "role": "corroborating_latin_witness",

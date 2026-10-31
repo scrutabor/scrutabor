@@ -2,12 +2,30 @@
  "id": "orationes.deus-refugium",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-deus-refugium; closed-literal-selection} (line 406); complete source contexts 393–408"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.deus-refugium.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 59-word literal selection in the stated selection order (406), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
    "role": "official_text",
    "locator": {
     "printed": "p. 520",
-    "scan": "scan p. 539",
+    "scan": "PDF scan 541",
     "section": "n. 675"
    },
    "entries": [

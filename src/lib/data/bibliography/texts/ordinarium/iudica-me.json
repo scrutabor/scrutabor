@@ -2,6 +2,24 @@
  "id": "ordinarium.iudica-me",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-iudica-me; closed-literal-selection} (line 16; line 17; line 18; line 19; line 20; line 21; line 22; line 23; line 25; line 26); complete source contexts 7–26"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.iudica-me.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 124-word literal selection in the stated selection order (16, then 17, then 18, then 19, then 20, then 21, then 22, then 23, then 25, then 26), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",

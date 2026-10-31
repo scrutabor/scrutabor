@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-athanasii-collecta",
+  "language":"pl",
+  "about":"Modlitwa na uroczystość świętego Atanazego, Wyznawcy i Biskupa. Prosi Boga o wysłuchanie zanoszonych modlitw oraz uwolnienie od wszystkich grzechów przez wstawiennictwo zasług świętego.",
+  "seg":[
+    {"id":"s01","tr":"Wysłuchaj, prosimy, Panie, naszych modlitw, które zanosimy w uroczystość świętego Atanazego, Twojego Wyznawcy i Biskupa. Za wstawiennictwem zasług tego, który zasłużył na to, by godnie Tobie służyć, uwolnij nas od wszystkich grzechów. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Wysłuchaj","prosimy","Panie","modlitw","naszych","które","w","świętego","Atanazego","Wyznawcy","Twojego","i","Biskupa","uroczystość","zanosimy","i","który",null,null,null,null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":17,"n":4,"a":2,"g":"zasłużył na to, by godnie Tobie służyć"},{"s":21,"n":3,"a":1,"g":"za wstawiennictwem jego zasług"},{"s":24,"n":5,"a":3,"g":"uwolnij nas od wszystkich grzechów"}],"ex":{"w008":"„Beatus” jest tu określeniem świętego wspominanego w liturgii. Słowo podkreśla jego błogosławiony stan.","w014":"Określenie uroczystości obejmuje Atanazego wraz z tytułami Wyznawcy i Biskupa. Modlący się właśnie w tę uroczystość zanoszą swoje prośby.","w017":"„Który” wskazuje Atanazego. Jego służbę Bogu wspomina zdanie wtrącone, a dalsze „jego” podejmuje tego samego świętego.","w023":"Modlitwa przedstawia zasługi świętego jako orędujące za ludźmi. Do Boga kieruje prośbę o uwolnienie od grzechów.","w046":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

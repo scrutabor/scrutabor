@@ -4,7 +4,7 @@
   "about":"The rubrics call the sentence before Pater noster the preface of the Lord’s Prayer. After et ne nos indúcas in tentatiónem, they assign the response sed líbera nos a malo to the server. At low Mass the faithful may say the whole Our Father with the priest, in Latin, and add the Amen with him.",
   "seg":[
     {"id":"s01","nr":"The priest joins his hands."},
-    {"id":"s02","tr":"Let us pray.","tc":[272],"tb":"normalized","g":["let us pray"]},
+    {"id":"s02","tr":"Let us pray.","tc":[272],"tb":"normalized","g":["Let us pray"]},
     {"id":"s03","tr":"Taught by precepts that lead to salvation and formed through divine instruction, we dare to say:","g":["by precepts","saving","admonished","and","divine","through instruction","formed","we dare","to say"],"ex":{"w009":"“Audémus dícere” expresses filial boldness: instructed by Christ, we dare to say “Our Father.”"}},
     {"id":"s04","nr":"The priest spreads his hands, and keeps them so through the prayer."},
     {"id":"s05","tr":"Our Father, who art in heaven,","tc":[93],"tb":"normalized","g":["Father","our","who","are","in","the heavens"],"ex":{"w016":"Latin speaks here of “the heavens” in the plural. The received English keeps the familiar “in heaven”."}},

@@ -1,6 +1,5 @@
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
-vi.mock('$app/environment', () => ({ browser: true, dev: false }));
-vi.mock('$lib/storage', () => ({ readStored: () => null, writeStored: () => {} }));
+import './proper-browser-test-environment';
 import { canonData, dismissalData, properData } from './loaders';
 import type { Lang } from './i18n';
 

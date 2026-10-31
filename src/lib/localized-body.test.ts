@@ -7,7 +7,7 @@ import { interlinearRuns } from './interlinear';
 it.each(['pl', 'en'] as const)(
 	'accepts every actual %s formulary body and both variant resources',
 	async (lang) => {
-		expect(PROPER_DAYS).toHaveLength(113);
+		expect(PROPER_DAYS).toHaveLength(114);
 		let bodies = 0;
 		let grouped = 0;
 		for (const day of PROPER_DAYS) {
@@ -25,7 +25,7 @@ it.each(['pl', 'en'] as const)(
 				}
 			}
 		}
-		expect(bodies).toBe(1267);
+		expect(bodies).toBe(1280);
 		expect(grouped).toBeGreaterThan(0);
 		for (const pack of [await canonData(lang), await dismissalData(lang)]) {
 			for (const part of pack.parts)

@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.7.0",
+  "schema_version": "6.10.0",
   "corpus_schema": "0.21.0",
   "language": "pl",
   "direction": "ltr",
@@ -208,6 +208,11 @@
       "path": "languages/pl/texts/ordinarium/adiutorium.json"
     },
     {
+      "id": "ordinarium.agnus-dei-defunctorum",
+      "path": "languages/pl/texts/ordinarium/agnus-dei-defunctorum.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/agnus-dei-defunctorum.json"
+    },
+    {
       "id": "ordinarium.agnus-dei",
       "path": "languages/pl/texts/ordinarium/agnus-dei.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/agnus-dei.json",
@@ -356,6 +361,11 @@
       "id": "ordinarium.introibo",
       "path": "languages/pl/texts/ordinarium/introibo.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/introibo.json"
+    },
+    {
+      "id": "ordinarium.ite-missa-est-defunctorum",
+      "path": "languages/pl/texts/ordinarium/ite-missa-est-defunctorum.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/ite-missa-est-defunctorum.json"
     },
     {
       "id": "ordinarium.ite-missa-est-paschale",
@@ -3288,6 +3298,11 @@
       "path": "languages/pl/texts/proprium/feria-v-in-cena-domini-secreta.json"
     },
     {
+      "id": "proprium.haec-hostia-secreta",
+      "path": "languages/pl/texts/proprium/haec-hostia-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/haec-hostia-secreta.json"
+    },
+    {
       "id": "proprium.immaculata-conceptio-alleluia",
       "path": "languages/pl/texts/proprium/immaculata-conceptio-alleluia.json"
     },
@@ -3390,6 +3405,11 @@
     {
       "id": "proprium.in-octava-nativitatis-secreta",
       "path": "languages/pl/texts/proprium/in-octava-nativitatis-secreta.json"
+    },
+    {
+      "id": "proprium.laudis-tibi-secreta",
+      "path": "languages/pl/texts/proprium/laudis-tibi-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/laudis-tibi-secreta.json"
     },
     {
       "id": "proprium.litaniae-maiores-collecta",
@@ -3608,6 +3628,11 @@
       "path": "languages/pl/texts/proprium/nativitas-sancti-ioannis-baptistae-secreta.json"
     },
     {
+      "id": "proprium.oblatis-muneribus-secreta",
+      "path": "languages/pl/texts/proprium/oblatis-muneribus-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/oblatis-muneribus-secreta.json"
+    },
+    {
       "id": "proprium.omnium-sanctorum-alleluia",
       "path": "languages/pl/texts/proprium/omnium-sanctorum-alleluia.json"
     },
@@ -3732,6 +3757,16 @@
       "path": "languages/pl/texts/proprium/purificatio-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.refecti-cibo-potuque-postcommunio",
+      "path": "languages/pl/texts/proprium/refecti-cibo-potuque-postcommunio.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/refecti-cibo-potuque-postcommunio.json"
+    },
+    {
+      "id": "proprium.refectione-sancta-postcommunio",
+      "path": "languages/pl/texts/proprium/refectione-sancta-postcommunio.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/refectione-sancta-postcommunio.json"
+    },
+    {
       "id": "proprium.sacratissimi-cordis-iesu-alleluia",
       "path": "languages/pl/texts/proprium/sacratissimi-cordis-iesu-alleluia.json"
     },
@@ -3773,6 +3808,11 @@
       "path": "languages/pl/texts/proprium/sacratissimi-cordis-iesu-secreta.json"
     },
     {
+      "id": "proprium.sacro-munere-postcommunio",
+      "path": "languages/pl/texts/proprium/sacro-munere-postcommunio.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sacro-munere-postcommunio.json"
+    },
+    {
       "id": "proprium.sancta-familia-alleluia",
       "path": "languages/pl/texts/proprium/sancta-familia-alleluia.json"
     },
@@ -3811,6 +3851,21 @@
     {
       "id": "proprium.sancta-familia-secreta",
       "path": "languages/pl/texts/proprium/sancta-familia-secreta.json"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-collecta",
+      "path": "languages/pl/texts/proprium/sanctae-angelae-mericiae-collecta.json",
+      "title": "Kolekta o świętej Anieli Merici"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+      "path": "languages/pl/texts/proprium/sanctae-angelae-mericiae-postcommunio.json",
+      "title": "Pokomunia o świętej Anieli Merici"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-secreta",
+      "path": "languages/pl/texts/proprium/sanctae-angelae-mericiae-secreta.json",
+      "title": "Sekreta o świętej Anieli Merici"
     },
     {
       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
@@ -3857,6 +3912,34 @@
       "path": "languages/pl/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.sanctae-catharinae-senensis-collecta",
+      "path": "languages/pl/texts/proprium/sanctae-catharinae-senensis-collecta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sanctae-catharinae-senensis-collecta.json",
+      "title": "Święta Katarzyna ze Sieny — kolekta"
+    },
+    {
+      "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+      "path": "languages/pl/texts/proprium/sanctae-catharinae-senensis-postcommunio.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sanctae-catharinae-senensis-postcommunio.json",
+      "title": "Święta Katarzyna ze Sieny — pokomunia"
+    },
+    {
+      "id": "proprium.sanctae-catharinae-senensis-secreta",
+      "path": "languages/pl/texts/proprium/sanctae-catharinae-senensis-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sanctae-catharinae-senensis-secreta.json",
+      "title": "Święta Katarzyna ze Sieny — sekreta"
+    },
+    {
+      "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+      "path": "languages/pl/texts/proprium/sanctae-mariae-magdalenae-de-pazzis-collecta.json",
+      "title": "Kolekta o świętej Marii Magdalenie de Pazzi"
+    },
+    {
+      "id": "proprium.sanctae-monicae-collecta",
+      "path": "languages/pl/texts/proprium/sanctae-monicae-collecta.json",
+      "title": "Kolekta — świętej Moniki"
+    },
+    {
       "id": "proprium.sanctae-petronillae-collecta",
       "path": "languages/pl/texts/proprium/sanctae-petronillae-collecta.json",
       "title": "Kolekta na wspomnienie św. Petroneli"
@@ -3900,6 +3983,46 @@
       "path": "languages/pl/texts/proprium/sancti-andreae-apostoli-secreta.json"
     },
     {
+      "id": "proprium.sancti-antonini-collecta",
+      "path": "languages/pl/texts/proprium/sancti-antonini-collecta.json",
+      "title": "Kolekta o świętym Antoninie"
+    },
+    {
+      "id": "proprium.sancti-antonini-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-antonini-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Antoninie"
+    },
+    {
+      "id": "proprium.sancti-athanasii-collecta",
+      "path": "languages/pl/texts/proprium/sancti-athanasii-collecta.json",
+      "title": "Kolekta — świętego Atanazego"
+    },
+    {
+      "id": "proprium.sancti-athanasii-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-athanasii-postcommunio.json",
+      "title": "Modlitwa po Komunii — świętego Atanazego"
+    },
+    {
+      "id": "proprium.sancti-athanasii-secreta",
+      "path": "languages/pl/texts/proprium/sancti-athanasii-secreta.json",
+      "title": "Sekreta — świętego Atanazego"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-collecta",
+      "path": "languages/pl/texts/proprium/sancti-augustini-cantuariensis-collecta.json",
+      "title": "Kolekta o świętym Augustynie z Canterbury"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-augustini-cantuariensis-postcommunio.json",
+      "title": "Pokomunia o świętym Augustynie z Canterbury"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-secreta",
+      "path": "languages/pl/texts/proprium/sancti-augustini-cantuariensis-secreta.json",
+      "title": "Sekreta o świętym Augustynie z Canterbury"
+    },
+    {
       "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
       "path": "languages/pl/texts/proprium/sancti-bartholomaei-apostoli-alleluia.json"
     },
@@ -3930,6 +4053,61 @@
     {
       "id": "proprium.sancti-bartholomaei-apostoli-secreta",
       "path": "languages/pl/texts/proprium/sancti-bartholomaei-apostoli-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-collecta",
+      "path": "languages/pl/texts/proprium/sancti-bedae-venerabilis-collecta.json",
+      "title": "Świętego Bedy Czcigodnego – kolekta"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-bedae-venerabilis-postcommunio.json",
+      "title": "Świętego Bedy Czcigodnego – modlitwa po Komunii"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-secreta",
+      "path": "languages/pl/texts/proprium/sancti-bedae-venerabilis-secreta.json",
+      "title": "Świętego Bedy Czcigodnego – sekreta"
+    },
+    {
+      "id": "proprium.sancti-bernardini-senensis-collecta",
+      "path": "languages/pl/texts/proprium/sancti-bernardini-senensis-collecta.json",
+      "title": "Kolekta o świętym Bernardynie ze Sieny"
+    },
+    {
+      "id": "proprium.sancti-bonifatii-martyris-collecta",
+      "path": "languages/pl/texts/proprium/sancti-bonifatii-martyris-collecta.json",
+      "title": "Kolekta o świętym Bonifacym, męczenniku"
+    },
+    {
+      "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-bonifatii-martyris-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Bonifacym, męczenniku"
+    },
+    {
+      "id": "proprium.sancti-felicis-i-papae-collecta",
+      "path": "languages/pl/texts/proprium/sancti-felicis-i-papae-collecta.json",
+      "title": "Kolekta o świętym Feliksie I, papieżu i męczenniku"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+      "path": "languages/pl/texts/proprium/sancti-gregorii-nazianzeni-collecta.json",
+      "title": "Kolekta o świętym Grzegorzu z Nazjanzu"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-gregorii-nazianzeni-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Grzegorzu z Nazjanzu"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+      "path": "languages/pl/texts/proprium/sancti-gregorii-nazianzeni-secreta.json",
+      "title": "Sekreta o świętym Grzegorzu z Nazjanzu"
+    },
+    {
+      "id": "proprium.sancti-gregorii-vii-collecta",
+      "path": "languages/pl/texts/proprium/sancti-gregorii-vii-collecta.json",
+      "title": "Kolekta o świętym Grzegorzu VII"
     },
     {
       "id": "proprium.sancti-iacobi-apostoli-alleluia",
@@ -4050,6 +4228,11 @@
     {
       "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
       "path": "languages/pl/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-tractus.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+      "path": "languages/pl/texts/proprium/sancti-ioannis-baptistae-de-la-salle-collecta.json",
+      "title": "Kolekta o świętym Janie Chrzcicielu de La Salle"
     },
     {
       "id": "proprium.sancti-ioseph-opificis-alleluia",
@@ -4300,6 +4483,16 @@
       "path": "languages/pl/texts/proprium/sancti-matthiae-apostoli-tractus.json"
     },
     {
+      "id": "proprium.sancti-paschalis-baylon-collecta",
+      "path": "languages/pl/texts/proprium/sancti-paschalis-baylon-collecta.json",
+      "title": "Kolekta o świętym Paschalisie Baylonie"
+    },
+    {
+      "id": "proprium.sancti-petri-caelestini-collecta",
+      "path": "languages/pl/texts/proprium/sancti-petri-caelestini-collecta.json",
+      "title": "Kolekta o świętym Piotrze Celestynie"
+    },
+    {
       "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
       "path": "languages/pl/texts/proprium/sancti-petri-et-pauli-apostolorum-alleluia.json"
     },
@@ -4338,6 +4531,74 @@
     {
       "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
       "path": "languages/pl/texts/proprium/sancti-petri-et-pauli-apostolorum-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-collecta",
+      "path": "languages/pl/texts/proprium/sancti-petri-martyris-collecta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sancti-petri-martyris-collecta.json",
+      "title": "Święty Piotr Męczennik — kolekta"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-petri-martyris-postcommunio.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sancti-petri-martyris-postcommunio.json",
+      "title": "Święty Piotr Męczennik — pokomunia"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-secreta",
+      "path": "languages/pl/texts/proprium/sancti-petri-martyris-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sancti-petri-martyris-secreta.json",
+      "title": "Święty Piotr Męczennik — sekreta"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-collecta",
+      "path": "languages/pl/texts/proprium/sancti-philippi-nerii-collecta.json",
+      "title": "Świętego Filipa Neri – kolekta"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-philippi-nerii-postcommunio.json",
+      "title": "Świętego Filipa Neri – modlitwa po Komunii"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-secreta",
+      "path": "languages/pl/texts/proprium/sancti-philippi-nerii-secreta.json",
+      "title": "Świętego Filipa Neri – sekreta"
+    },
+    {
+      "id": "proprium.sancti-pii-v-collecta",
+      "path": "languages/pl/texts/proprium/sancti-pii-v-collecta.json",
+      "title": "Kolekta o świętym Piusie V"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-collecta",
+      "path": "languages/pl/texts/proprium/sancti-roberti-bellarmino-collecta.json",
+      "title": "Kolekta o świętym Robercie Bellarminie"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-roberti-bellarmino-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Robercie Bellarminie"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-secreta",
+      "path": "languages/pl/texts/proprium/sancti-roberti-bellarmino-secreta.json",
+      "title": "Sekreta o świętym Robercie Bellarminie"
+    },
+    {
+      "id": "proprium.sancti-stanislai-collecta",
+      "path": "languages/pl/texts/proprium/sancti-stanislai-collecta.json",
+      "title": "Kolekta o świętym Stanisławie"
+    },
+    {
+      "id": "proprium.sancti-stanislai-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-stanislai-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Stanisławie"
+    },
+    {
+      "id": "proprium.sancti-stanislai-secreta",
+      "path": "languages/pl/texts/proprium/sancti-stanislai-secreta.json",
+      "title": "Sekreta o świętym Stanisławie"
     },
     {
       "id": "proprium.sancti-stephani-protomartyris-alleluia",
@@ -4410,6 +4671,36 @@
     {
       "id": "proprium.sancti-thomae-apostoli-secreta",
       "path": "languages/pl/texts/proprium/sancti-thomae-apostoli-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-tui-secreta",
+      "path": "languages/pl/texts/proprium/sancti-tui-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/sancti-tui-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-ubaldi-collecta",
+      "path": "languages/pl/texts/proprium/sancti-ubaldi-collecta.json",
+      "title": "Kolekta o świętym Ubaldzie, biskupie i wyznawcy"
+    },
+    {
+      "id": "proprium.sancti-ubaldi-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-ubaldi-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętym Ubaldzie, biskupie i wyznawcy"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-collecta",
+      "path": "languages/pl/texts/proprium/sancti-venantii-martyris-collecta.json",
+      "title": "Kolekta o świętym Wenancjuszu"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-postcommunio",
+      "path": "languages/pl/texts/proprium/sancti-venantii-martyris-postcommunio.json",
+      "title": "Pokomunia o świętym Wenancjuszu"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-secreta",
+      "path": "languages/pl/texts/proprium/sancti-venantii-martyris-secreta.json",
+      "title": "Sekreta o świętym Wenancjuszu"
     },
     {
       "id": "proprium.sanctissimae-trinitatis-alleluia",
@@ -4489,6 +4780,16 @@
       "path": "languages/pl/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
     },
     {
+      "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+      "path": "languages/pl/texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta.json",
+      "title": "Kolekta — świętych Aleksandra, Ewencjusza, Teodula i Juwenalisa"
+    },
+    {
+      "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+      "path": "languages/pl/texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio.json",
+      "title": "Modlitwa po Komunii — świętych Aleksandra, Ewencjusza, Teodula i Juwenalisa"
+    },
+    {
       "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
       "path": "languages/pl/texts/proprium/sanctorum-innocentium-martyrum-alleluia.json"
     },
@@ -4531,6 +4832,26 @@
     {
       "id": "proprium.sanctorum-innocentium-martyrum-tractus",
       "path": "languages/pl/texts/proprium/sanctorum-innocentium-martyrum-tractus.json"
+    },
+    {
+      "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+      "path": "languages/pl/texts/proprium/sanctorum-marcellini-petri-et-erasmi-collecta.json",
+      "title": "Kolekta o świętych Marcelinie, Piotrze i Erazmie"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+      "path": "languages/pl/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-collecta.json",
+      "title": "Kolekta o świętych Nereuszu, Achillesie, Domitylli i Pankracym"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+      "path": "languages/pl/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.json",
+      "title": "Modlitwa po Komunii o świętych Nereuszu, Achillesie, Domitylli i Pankracym"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+      "path": "languages/pl/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-secreta.json",
+      "title": "Sekreta o świętych Nereuszu, Achillesie, Domitylli i Pankracym"
     },
     {
       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
@@ -4637,6 +4958,11 @@
       "path": "languages/pl/texts/proprium/septem-dolorum-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.super-has-hostias-secreta",
+      "path": "languages/pl/texts/proprium/super-has-hostias-secreta.json",
+      "evidence": "languages/pl/bibliography/texts/proprium/super-has-hostias-secreta.json"
+    },
+    {
       "id": "proprium.transfiguratio-domini-alleluia",
       "path": "languages/pl/texts/proprium/transfiguratio-domini-alleluia.json"
     },
@@ -4675,6 +5001,11 @@
     {
       "id": "proprium.transfiguratio-domini-secreta",
       "path": "languages/pl/texts/proprium/transfiguratio-domini-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-ascensionis-evangelium",
+      "path": "languages/pl/texts/proprium/vigilia-ascensionis-evangelium.json",
+      "title": "Ewangelia na Wigilię Wniebowstąpienia"
     },
     {
       "id": "proprium.vigilia-nativitatis-alleluia",

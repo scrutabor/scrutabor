@@ -3,7 +3,7 @@
   "language":"pl",
   "about":"Ave Regina Caelorum jest maryjną antyfoną końcową okresu od Oczyszczenia Najświętszej Maryi Panny do Wielkiego Tygodnia. W kolejnych pozdrowieniach wierni nazywają Maryję Królową niebios, Panią Aniołów, korzeniem i bramą, z której wzeszło dla świata Światło, a na końcu proszą Ją o wstawiennictwo u Chrystusa.",
   "seg":[
-    {"id":"s01","tr":"Bądź pozdrowiona, Królowo niebios,","tc":[426],"tb":"revised","g":["bądź pozdrowiona","Królowo","niebios"]},
+    {"id":"s01","tr":"Bądź pozdrowiona, Królowo niebios,","tc":[426],"tb":"revised","g":["Bądź pozdrowiona","Królowo","niebios"]},
     {"id":"s02","tr":"bądź pozdrowiona, Pani Aniołów:","tc":[426],"tb":"revised","g":["bądź pozdrowiona","Pani","Aniołów"]},
     {"id":"s03","tr":"witaj, korzeniu, witaj, bramo,","g":["witaj","korzeniu","witaj","bramo"],"ex":{"w008":"Maryja jest tu nazwana korzeniem, z którego wyrasta zbawcze Światło — Chrystus.","w010":"Maryja jest tu nazwana bramą, przez którą Światło przyszło na świat."}},
     {"id":"s04","tr":"z której światu wzeszła światłość:","g":["z","której","dla świata","Światło",null,null],"a":[{"s":4,"n":2,"a":1,"g":"wzeszło"}],"ex":{"w014":"Światło oznacza Chrystusa.","w015":"Razem z „orta” (w016) tworzy jedno orzeczenie: „wzeszło”. Dlatego nie ma osobnego odpowiednika w przekładzie."}},

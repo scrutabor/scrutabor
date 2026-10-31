@@ -86,7 +86,7 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(reading.locator('rt')).toHaveText(
 			language === 'pl'
 				? [
-						'w',
+						'W',
 						'dniach',
 						'owych',
 						'usłyszałem',
@@ -118,7 +118,7 @@ for (const language of ['pl', 'en'] as const) {
 						'nimi'
 					]
 				: [
-						'in',
+						'In',
 						'those days',
 						'I heard',
 						'a voice',

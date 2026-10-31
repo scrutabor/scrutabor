@@ -4,6 +4,6 @@
   "about":"The priest drops a small particle of the consecrated Host into the chalice. He quietly asks that this commingling and consecration of the Body and Blood of our Lord Jesus Christ may avail us for eternal life.",
   "seg":[
     {"id":"s01","nr":"The priest drops the particle into the chalice and says the prayer silently."},
-    {"id":"s02","tr":"As we receive the Body and Blood of our Lord Jesus Christ, may their mingling and consecration bring us eternal life. Amen.","g":["This","mingling","and","consecration","of the Body","and","of the Blood","of Lord","our","Jesus","Christ","may it be","receiving","to us","for","life","everlasting","amen"]}
+    {"id":"s02","tr":"As we receive the Body and Blood of our Lord Jesus Christ, may their mingling and consecration bring us eternal life. Amen.","g":["This","mingling","and","consecration","of the Body","and","of the Blood",null,null,"Jesus","Christ","may it be",null,null,"for","life","everlasting","amen"],"a":[{"s":7,"n":2,"a":0,"g":"of our Lord"},{"s":12,"n":2,"a":1,"g":"for us who receive"}]}
   ]
 }

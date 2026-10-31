@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “4th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Enlighten my eyes, lest I ever fall asleep in death, lest my enemy should ever say: I have prevailed against him.","g":["Give light to","eyes","my","lest","ever","I fall asleep","in","death","lest","ever","say","enemy","my","I have prevailed","against","him"]}
+    {"id":"s01","tr":"Enlighten my eyes, lest I ever fall asleep in death, lest my enemy should ever say: I have prevailed against him.","g":["Give light to",null,null,"lest","ever","I fall asleep","in","death","lest","ever","say",null,null,"I have prevailed","against","him"],"a":[{"s":1,"n":2,"a":0,"g":"my eyes"},{"s":11,"n":2,"a":0,"g":"my enemy"}]}
   ]
 }

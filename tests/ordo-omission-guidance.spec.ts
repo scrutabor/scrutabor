@@ -215,3 +215,296 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(section.locator('.part-text')).toHaveCount(0);
 	});
 }
+
+// The current Mass carries the closed omission. Its full canonical study page is unchanged.
+for (const language of ['pl', 'en'] as const) {
+	for (const form of ['lecta', 'cantu'] as const) {
+		test(`@reader ${language} ${form} Lavabo follows only the settled source prescription`, async ({
+			page
+		}) => {
+			await page.addInitScript((form) => {
+				localStorage.setItem('scrutabor-role', 'sacerdos');
+				localStorage.setItem('scrutabor-mass-form', form);
+			}, form);
+			for (const [date, mass, omitted] of [
+				['2026-03-15', 'dominica-iv-in-quadragesima', false],
+				['2026-03-22', 'dominica-i-passionis', true],
+				['2026-03-25', 'annuntiatio-beatae-mariae-virginis', false],
+				['2026-03-29', 'dominica-ii-passionis', true],
+				['2026-04-02', 'feria-v-in-cena-domini', true],
+				['2026-04-04', 'vigilia-paschalis', false],
+				['2026-04-05', 'dominica-resurrectionis', false],
+				['2026-11-02', 'commemoratio-omnium-fidelium-defunctorum', true],
+				['2026-11-02', 'commemoratio-omnium-fidelium-defunctorum-missa-ii', true],
+				['2026-11-02', 'commemoratio-omnium-fidelium-defunctorum-missa-iii', true]
+			] as const) {
+				await page.goto(`/app/${language}/ordo/offertorium?dies=${date}&missa=${mass}`);
+				await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+				await expect(page.locator('[id="lavabo.w074"]')).toBeVisible();
+				const section = page.locator('section.part').filter({
+					has: page.locator('[id="lavabo.w074"]')
+				});
+				for (const level of [0, 1, 2] as const) {
+					await setHelp(page, level);
+					await expect(section.locator('.ordinary-segment-omission')).toHaveCount(omitted ? 1 : 0);
+					await expect(section.locator('[id="lavabo.w075"], [id="lavabo.w094"]')).toHaveCount(
+						omitted ? 0 : 2
+					);
+					await expect(section.locator('[id="lavabo-s09"], [id="lavabo-s10"]')).toHaveCount(
+						omitted ? 0 : 2
+					);
+				}
+				if (omitted) {
+					await expect(section.locator('.ordinary-segment-omission a')).toHaveAttribute(
+						'href',
+						`/app/${language}/ordinarium/lavabo`
+					);
+					await page.emulateMedia({ media: 'print' });
+					await expect(section.locator('[id="lavabo-s08"]')).toBeVisible();
+					await expect(section.locator('[id="lavabo-s09"]')).toHaveCount(0);
+					await page.emulateMedia({ media: 'screen' });
+				}
+			}
+		});
+	}
+
+	for (const kind of ['word', 'segment', 'range'] as const) {
+		test(`@reader ${language} omitted Lavabo ${kind} intent opens only the canonical study page`, async ({
+			page
+		}) => {
+			await page.setViewportSize({ width: 320, height: 740 });
+			await page.addInitScript(() => {
+				localStorage.setItem('scrutabor-role', 'populus');
+				localStorage.setItem(
+					'scrutabor-pos:ordo/offertorium',
+					JSON.stringify({ y: 4800, t: Date.now() })
+				);
+			});
+			const selected = kind === 'segment' ? 's09' : 's08-s10';
+			const param = kind === 'word' ? 'w=lavabo.w075' : `s=lavabo.${selected}`;
+			const local = kind === 'word' ? 'w=w075' : `s=${selected}`;
+			await page.goto(`/app/${language}/ordo/offertorium?dies=2026-03-29&${param}`);
+			const note = page.locator('.ordinary-segment-omission');
+			await expect(note).toBeVisible();
+			await expect(note).toHaveAttribute('id', 'ordinary-omission-lavabo');
+			await expect(note).toBeInViewport();
+			await expect
+				.poll(() =>
+					note.evaluate((element) => {
+						const box = element.getBoundingClientRect();
+						return Math.abs(box.top + box.height / 2 - innerHeight / 2);
+					})
+				)
+				.toBeLessThan(12);
+			await expect(page.locator('[id="lavabo.w075"]')).toHaveCount(0);
+			await expect(page.getByRole('dialog')).toHaveCount(0);
+			await expect
+				.poll(() => {
+					const url = new URL(page.url());
+					return url.protocol === 'file:' ? url.hash : url.search;
+				})
+				.toContain(param);
+			await expect(note.locator('a')).toHaveAttribute(
+				'href',
+				`/app/${language}/ordinarium/lavabo?${local}`
+			);
+			await page.evaluate(() => {
+				window.scrollTo(0, 0);
+				window.dispatchEvent(new PopStateEvent('popstate', { state: history.state }));
+			});
+			await page.evaluate(
+				() =>
+					new Promise<void>((resolve) =>
+						requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+					)
+			);
+			expect(await page.evaluate(() => scrollY)).toBe(0);
+			await note.locator('a').click();
+			await expect(page.locator('[id="w075"]')).toBeVisible();
+			if (kind === 'word')
+				await expect(page.locator('aside .form').first()).toContainText('Glória');
+			await page.goto(`/app/${language}/ordo/offertorium?dies=2026-03-25&${param}`);
+			await expect(page.locator('[id="lavabo.w075"]')).toBeVisible();
+			await expect(page.locator('.ordinary-segment-omission')).toHaveCount(0);
+			if (kind === 'word')
+				await expect(page.locator('aside .form').first()).toContainText('Glória');
+			else await expect(page.locator('[id="lavabo-s09"]')).toHaveClass(/segment-selected/);
+			await page.setViewportSize({ width: 320, height: 740 });
+			expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+				true
+			);
+		});
+	}
+
+	test(`@reader ${language} an omitted Lavabo word lands even when a zero-delay timer runs late`, async ({
+		page
+	}) => {
+		await page.setViewportSize({ width: 320, height: 740 });
+		await page.addInitScript(() => {
+			localStorage.setItem('scrutabor-role', 'populus');
+			// Nothing orders a zero-delay timer before the next two frames, and WebKit ran
+			// one after them. Run each such timer late here, and keep the ones still waiting.
+			const timer = window.setTimeout.bind(window);
+			const clear = window.clearTimeout.bind(window);
+			const waiting = new Set<number>();
+			Object.assign(window, { lateTimers: waiting });
+			window.setTimeout = ((handler: () => void, delay?: number, ...rest: unknown[]) => {
+				if (delay) return timer(handler, delay, ...rest);
+				const id = timer(() => {
+					waiting.delete(id);
+					handler(...(rest as []));
+				}, 60);
+				waiting.add(id);
+				return id;
+			}) as typeof window.setTimeout;
+			window.clearTimeout = ((id?: number) => {
+				if (id !== undefined) waiting.delete(id);
+				clear(id);
+			}) as typeof window.clearTimeout;
+		});
+		await page.goto(`/app/${language}/ordo/offertorium?dies=2026-03-29&w=lavabo.w075`);
+		const note = page.locator('#ordinary-omission-lavabo');
+		await expect(note).toBeVisible();
+		await expect
+			.poll(() =>
+				page.evaluate(() => (window as unknown as { lateTimers: Set<number> }).lateTimers.size)
+			)
+			.toBe(0);
+		await page.evaluate(
+			() =>
+				new Promise<void>((resolve) =>
+					requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+				)
+		);
+		await expect(note).toBeInViewport();
+		expect(
+			await note.evaluate((element) => {
+				const box = element.getBoundingClientRect();
+				return Math.abs(box.top + box.height / 2 - innerHeight / 2);
+			})
+		).toBeLessThan(12);
+		await expect(page.getByRole('dialog')).toHaveCount(0);
+	});
+
+	test(`${language} a failed dated payload keeps full Lavabo and recovers its prescribed view @online`, async ({
+		page
+	}) => {
+		await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+		const pattern = `**/artifacts/proprium/${language}/pack-*.json`;
+		await page.route(pattern, (route) => route.fulfill({ status: 503, body: 'unavailable' }));
+		await page.goto(`/app/${language}/ordo/offertorium?dies=2026-03-29`);
+		await expect(page.locator('section.part [role="status"]').first()).toBeVisible();
+		await expect(page.locator('[id="lavabo.w094"]')).toBeVisible();
+		await expect(page.locator('.ordinary-segment-omission')).toHaveCount(0);
+		await page.unroute(pattern);
+		await page.reload();
+		await expect(page.locator('.ordinary-segment-omission')).toBeVisible();
+		await expect(page.locator('[id="lavabo.w094"]')).toHaveCount(0);
+	});
+}
+
+// A gesture while the selected payload is pending ends that same landing window.
+test.describe('pending omitted citations', () => {
+	test.use({ serviceWorkers: 'block' });
+	for (const language of ['pl', 'en'] as const) {
+		test(`${language} a pending omitted citation lands once and yields to gestures and a newer Mass @online`, async ({
+			page
+		}) => {
+			await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));
+			for (const action of [
+				'landing',
+				'gesture',
+				'explicit-gesture',
+				'implicit-gesture',
+				'navigation'
+			] as const) {
+				let release!: () => void;
+				let requested!: () => void;
+				let held = false;
+				const gate = new Promise<void>((resolve) => {
+					release = resolve;
+				});
+				const arrived = new Promise<void>((resolve) => {
+					requested = resolve;
+				});
+				const pattern = `**/artifacts/proprium/${language}/pack-*.json*`;
+				await page.route(pattern, async (route) => {
+					if (!held) {
+						held = true;
+						requested();
+						await gate;
+					}
+					await route.continue();
+				});
+				try {
+					const implicit = action === 'implicit-gesture';
+					// Reuse the preceding real picker's remembered row, without a test clock guess.
+					if (implicit)
+						expect(
+							await page.evaluate(() => JSON.parse(localStorage.getItem('scrutabor-day')!))
+						).toMatchObject({ date: '2026-03-29', mass: 'dominica-ii-passionis' });
+					const mass = action === 'explicit-gesture' ? '&missa=dominica-ii-passionis' : '';
+					const query = implicit ? 'w=lavabo.w075' : `dies=2026-03-29${mass}&w=lavabo.w075`;
+					await page.goto(`/app/${language}/ordo/offertorium?${query}`);
+					await arrived;
+					await expect(page.locator('main')).toHaveAttribute('aria-busy', 'true');
+					if (action === 'explicit-gesture' || implicit)
+						await expect.poll(() => new URL(page.url()).searchParams.get('missa')).toBeNull();
+					if (implicit)
+						await expect
+							.poll(() => new URL(page.url()).searchParams.get('dies'))
+							.toBe('2026-03-29');
+					await expect(page.locator('aside .form').first()).toContainText('Glória');
+					if (action === 'gesture' || action === 'explicit-gesture' || implicit) {
+						// The held load's notice changes the header height once it is slow. Let it
+						// appear first: a shift during the animated Home scroll moves its rest.
+						await expect(page.locator('.picker .state')).toHaveText(
+							language === 'pl' ? 'wczytywanie' : 'loading'
+						);
+						await page.keyboard.press('Home');
+						await expect.poll(() => page.evaluate(() => scrollY)).toBe(0);
+					} else if (action === 'navigation') {
+						await page.evaluate(() => {
+							const url = new URL(location.href);
+							url.searchParams.set('dies', '2026-03-25');
+							history.replaceState(history.state, '', url);
+							window.dispatchEvent(new PopStateEvent('popstate', { state: history.state }));
+						});
+					}
+					release();
+					await expect(page.locator('main')).toHaveAttribute('aria-busy', 'false');
+					await page.evaluate(
+						() =>
+							new Promise<void>((resolve) =>
+								requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+							)
+					);
+					if (action === 'landing') {
+						const note = page.locator('#ordinary-omission-lavabo');
+						await expect(note).toBeInViewport();
+						await expect
+							.poll(() =>
+								note.evaluate((element) => {
+									const box = element.getBoundingClientRect();
+									return Math.abs(box.top + box.height / 2 - innerHeight / 2);
+								})
+							)
+							.toBeLessThan(12);
+						await expect(page.getByRole('dialog')).toHaveCount(0);
+					} else if (action === 'gesture' || action === 'explicit-gesture' || implicit) {
+						await expect(page.locator('#ordinary-omission-lavabo')).toBeVisible();
+						await expect(page.locator('#ordinary-omission-lavabo')).not.toBeInViewport();
+						expect(await page.evaluate(() => scrollY)).toBe(0);
+						await expect(page.locator('[id="lavabo.w075"]')).toHaveCount(0);
+					} else {
+						await expect(page.locator('#ordinary-omission-lavabo')).toHaveCount(0);
+						await expect(page.locator('[id="lavabo.w075"]')).toBeVisible();
+					}
+				} finally {
+					release();
+					await page.unroute(pattern);
+				}
+			}
+		});
+	}
+});

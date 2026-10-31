@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Offertorium formularza „Najświętszej Maryi Panny Królowej” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Maryja, która wzeszła z królewskiego rodu, jaśnieje; umysłem i duchem z największą pobożnością prosimy, abyśmy byli wspomagani jej prośbami. Alleluja.","g":["królewskiego","z","rodu","Maryja","pochodząca","jaśnieje","której","modlitwami","nas","zostali wsparci","umysłem","i","duchem","najpobożniej","prosimy","alleluja"]}
+    {"id":"s01","tr":"Maryja, która wzeszła z królewskiego rodu, jaśnieje; umysłem i duchem z największą pobożnością prosimy, abyśmy byli wspomagani jej prośbami. Alleluja.","g":[null,null,null,"Maryja","pochodząca","jaśnieje","której","modlitwami",null,null,"umysłem","i","duchem","najpobożniej","prosimy","Alleluja"],"a":[{"s":0,"n":3,"a":2,"g":"Z królewskiego rodu"},{"s":8,"n":2,"a":1,"g":"abyśmy byli wspomagani"}],"ex":{"w010":"Czasownik póscimus („prosimy”) stoi na końcu zdania. Prośba dotyczy tego, abyśmy byli wspomagani modlitwami Maryi."}}
   ]
 }

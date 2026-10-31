@@ -167,7 +167,7 @@ test.describe('interlinear word names @online', () => {
 	test('a word control names the Latin and the gloss apart', async ({ page }) => {
 		await page.goto('/app/pl/orationes/sub-tuum-praesidium');
 		const word = page.locator('#w001');
-		await expect(word).toHaveAttribute('aria-label', 'Sub — pod');
+		await expect(word).toHaveAttribute('aria-label', 'Sub — Pod');
 	});
 });
 

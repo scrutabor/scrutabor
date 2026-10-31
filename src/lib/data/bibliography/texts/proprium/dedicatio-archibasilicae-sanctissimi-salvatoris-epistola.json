@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/11-09; resolved section [Lectio] with declared inherited references"
+    "section": "Direct Common C8 [Lectio], body line 587 (heading 584), web/www/horas/Latin/Commune/C8.txt"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Common C8 [Lectio] directly corroborates the complete 82-word reading, with the declared spelling and punctuation differences. Sancti/11-09 says ex C8 but has no [Lectio]. This is current direct textual corroboration, not a verified historical inherited runtime selection."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-27"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

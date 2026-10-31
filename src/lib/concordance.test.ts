@@ -130,9 +130,11 @@ describe('what the concordance is built from', () => {
 		const order = everyTextInOrder();
 		const ordinary = order.indexOf('ordinarium/ite-missa-est');
 		expect(ordinary).toBeGreaterThan(-1);
-		expect(order.slice(ordinary, ordinary + 3)).toEqual([
+		// Every dismissal profile, in the resource's order: ordinary, Paschal, Requiem.
+		expect(order.slice(ordinary, ordinary + 4)).toEqual([
 			'ordinarium/ite-missa-est',
 			'ordinarium/ite-missa-est-paschale',
+			'ordinarium/ite-missa-est-defunctorum',
 			'ordinarium/placeat-tibi'
 		]);
 		expect(order.filter((key) => key === 'ordinarium/ite-missa-est-paschale')).toHaveLength(1);

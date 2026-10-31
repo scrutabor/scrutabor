@@ -22,6 +22,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p.343",
+    "scan": "leaf n424 / PDF p.425",
+    "section": "In vigilia Ascensionis; Oratio; Deus, a quo bona cuncta procedunt",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n424/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-v-post-pascha-collecta.ascension-vigil.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "In the Ascension Vigil, the page prints Deus, a quo bona cuncta procedunt through eadem faciamus (w001–w021), followed by the abbreviated Per Dominum cue. The full common conclusion (w022–w042) and separate Amen (w043) retain their distinct wording and ritual-boundary sources."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxxii–xxxiv, 225–226",

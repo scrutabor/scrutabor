@@ -25,9 +25,13 @@ export function formularyForText(textKey: string): string | undefined {
 
 /** A Proper text no formulary owns may belong to a commemoration's set of orations. */
 export function commemorationForText(textKey: string): string | undefined {
-	return commemorationLookup?.commemorations.find((entry) =>
-		entry.slots.some((slot) => slot.text === textKey)
-	)?.id;
+	const entries = commemorationLookup?.commemorations;
+	const owner = entries?.find((entry) =>
+		entry.slots.some((slot) => slot.text === textKey && slot.relation === 'proper')
+	);
+	return (
+		owner?.id ?? entries?.find((entry) => entry.slots.some((slot) => slot.text === textKey))?.id
+	);
 }
 
 export interface TextAddress {

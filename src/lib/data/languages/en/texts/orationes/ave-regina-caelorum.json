@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Ave Regina Caelorum is the final Marian antiphon for the season from the Purification of the Blessed Virgin Mary into Holy Week. In successive salutations the faithful call Mary Queen of the heavens, Lady of the Angels, the root and gate from whom the Light arose for the world, and finally ask her to intercede with Christ.",
   "seg":[
-    {"id":"s01","tr":"Hail, Queen of Heaven,","g":["hail","Queen","of the heavens"]},
+    {"id":"s01","tr":"Hail, Queen of Heaven,","g":["Hail","Queen","of the heavens"]},
     {"id":"s02","tr":"hail, Lady of Angels.","g":["hail","Lady","of the Angels"]},
     {"id":"s03","tr":"Hail, root, hail, gate,","g":["hail","root","hail","gate"],"ex":{"w008":"Mary is called the root from which the saving Light, Christ, springs.","w010":"Mary is called the gate through which the Light came into the world."}},
     {"id":"s04","tr":"from whom the Light has dawned upon the world.","g":["from","whom","for the world","the Light",null,null],"a":[{"s":4,"n":2,"a":1,"g":"arose"}],"ex":{"w014":"The Light denotes Christ.","w015":"Together with “orta” (w016), it forms the single predicate “arose” and therefore has no separate equivalent in translation."}},

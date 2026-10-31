@@ -10,7 +10,7 @@ const responses = [
 		words: ['Deo', 'grátias.'],
 		lemma: 'deus',
 		form: 'Deo',
-		gloss: { pl: 'Bogu', en: 'to God' }
+		gloss: { pl: 'Bogu', en: 'To God' }
 	},
 	{
 		id: 'laus-tibi-christe',

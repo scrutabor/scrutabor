@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-stanislai-postcommunio",
+  "language":"en",
+  "about":"The prayer asks that communion cleanse us from sin and make us sharers in the heavenly remedy, with Stanislaus, martyr and bishop, interceding.",
+  "seg":[
+    {"id":"s01","tr":"Lord, may this communion cleanse us from sin and, with blessed Stanislaus, Your martyr and bishop, interceding, make us sharers in the heavenly remedy. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,"and",null,null,null,null,null,null,null,null,null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":0,"n":5,"a":4,"g":"Lord, may this communion cleanse us"},{"s":5,"n":2,"a":1,"g":"from sin"},{"s":8,"n":7,"a":0,"g":"with blessed Stanislaus, Your martyr and bishop, interceding"},{"s":15,"n":5,"a":2,"g":"may make us sharers in the heavenly remedy"},{"s":21,"n":2,"a":0,"g":"our Lord"},{"s":23,"n":2,"a":0,"g":"Jesus Christ"},{"s":25,"n":2,"a":0,"g":"Your Son"},{"s":27,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":32,"n":2,"a":1,"g":"in the unity"},{"s":34,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":37,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w001":"“This” qualifies communion, which is the subject of both cleansing us and making us sharers in the heavenly remedy.","w018":"The people cleansed by communion are also the people made sharers in the heavenly remedy. The second “us” is supplied naturally in English.","w037":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

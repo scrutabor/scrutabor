@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-gregorii-nazianzeni-postcommunio",
+  "language":"en",
+  "about":"The prayer asks that Gregory Nazianzen come forward as intercessor so that God’s sacrifices may bring us salvation. It names him as God’s bishop and distinguished Doctor.",
+  "seg":[
+    {"id":"s01","tr":"Lord, we pray that blessed Gregory, Your bishop and distinguished Doctor, may come forward as our intercessor, so that Your sacrifices may bring us salvation. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["So that","for us","Lord",null,null,"may bring","salvation",null,null,null,null,"and",null,null,"we pray",null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":3,"n":2,"a":1,"g":"Your sacrifices"},{"s":7,"n":2,"a":1,"g":"blessed Gregory"},{"s":9,"n":2,"a":0,"g":"Your bishop"},{"s":12,"n":2,"a":0,"g":"distinguished Doctor"},{"s":15,"n":2,"a":1,"g":"may come forward as intercessor"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":20,"n":2,"a":0,"g":"Jesus Christ"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":24,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":29,"n":2,"a":1,"g":"in the unity"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w005":"The sacrifices are the subject of the request that they bring salvation. Gregory is the subject of the request that he come forward.","w016":"The prayer asks God for Gregory’s intercession so that God’s sacrifices may bring us salvation.","w034":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-venantii-martyris-collecta",
+  "language":"en",
+  "about":"The prayer recalls the triumph of Saint Venantius, God’s martyr. It asks God to hear His people and enable them to imitate the saint’s constancy in faith.",
+  "seg":[
+    {"id":"s01","tr":"God, You consecrated this day through the triumph of blessed Venantius, Your martyr. Hear the prayers of Your people, and grant that we who honor his merits may imitate his constancy in faith. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["God","who",null,null,null,null,null,null,null,"consecrated","hear","the prayers",null,null,"and","grant","that","we who",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":2,"n":2,"a":1,"g":"this day"},{"s":4,"n":5,"a":4,"g":"through the triumph of blessed Venantius, Your martyr"},{"s":12,"n":2,"a":0,"g":"of Your people"},{"s":18,"n":3,"a":2,"g":"honor his merits"},{"s":21,"n":3,"a":2,"g":"may imitate his constancy in faith"},{"s":24,"n":3,"a":1,"g":"Through our Lord"},{"s":27,"n":2,"a":0,"g":"Jesus Christ"},{"s":29,"n":2,"a":0,"g":"Your Son"},{"s":31,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":36,"n":4,"a":1,"g":"in the unity of the Holy Spirit"},{"s":41,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w009":"The martyr’s triumph is the event through which God sanctified this feast day.","w010":"The prayer first recalls what God has done. “This day” is the day consecrated through the martyr’s triumph.","w021":"The people praying honor the saint’s merits and ask to follow his example.","w024":"The requested imitation concerns the saint’s steadfastness in faith.","w041":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

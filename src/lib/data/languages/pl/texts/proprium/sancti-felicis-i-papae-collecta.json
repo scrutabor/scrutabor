@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-felicis-i-papae-collecta",
+  "language":"pl",
+  "about":"Modlitwa prosi Wiecznego Pasterza o łaskawe wejrzenie na swoją owczarnię i nieustanną opiekę przez świętego Feliksa I. Wspomina ustanowienie tego papieża i męczennika pasterzem całego Kościoła.",
+  "seg":[
+    {"id":"s01","tr":"Wieczny Pasterzu, wejrzyj przebłagany na swoją owczarnię i przez błogosławionego Feliksa, Twojego Męczennika i Najwyższego Pasterza, strzeż jej nieustanną opieką. Jego ustanowiłeś pasterzem całego Kościoła. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,null,"przebłagany","wejrzyj","i","przez","błogosławionego","Feliksa",null,null,"i",null,null,null,null,"strzeż jej","Jego",null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg",null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Na swoją owczarnię"},{"s":2,"n":2,"a":0,"g":"Wieczny Pasterzu"},{"s":10,"n":2,"a":0,"g":"Twojego Męczennika"},{"s":13,"n":2,"a":1,"g":"Najwyższego Pasterza"},{"s":15,"n":2,"a":1,"g":"nieustanną opieką"},{"s":19,"n":2,"a":1,"g":"całego Kościoła"},{"s":21,"n":3,"a":2,"g":"ustanowiłeś pasterzem"},{"s":41,"n":4,"a":2,"g":"na wieki wieków"}],"ex":{"w006":"Polskie „wejrzyj” łączy się z „na swoją owczarnię”. Modlitwa zwraca się do Boga, nazwanego Wiecznym Pasterzem.","w010":"W kolekcie o świętym Feliksie I imię wskazuje papieża, którego łaciński tekst określa jako męczennika i pasterza całego Kościoła.","w015":"Najwyższy Pasterz to tutaj papież Feliks I. Jest odrębny od Boga, do którego skierowana jest modlitwa.","w019":"„Jego” wskazuje Feliksa. To jego Bóg ustanowił pasterzem całego Kościoła.","w041":"„Deus” określa tutaj Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

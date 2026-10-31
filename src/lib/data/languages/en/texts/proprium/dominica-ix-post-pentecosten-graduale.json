@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “9th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"O Lord, our Lord, how wonderful is Your name in all the earth! For Your magnificence is exalted above the heavens.","g":["Lord","Lord","our","how","wonderful","is","name","Your","throughout","all","the earth","For","exalted","is","magnificence","Your","above","the heavens"]}
+    {"id":"s01","tr":"O Lord, our Lord, how wonderful is Your name in all the earth! For Your magnificence is exalted above the heavens.","g":["Lord",null,null,"how","wonderful","is",null,null,"throughout","all","the earth","For",null,null,null,null,"above","the heavens"],"a":[{"s":1,"n":2,"a":0,"g":"our Lord"},{"s":6,"n":2,"a":0,"g":"Your name"},{"s":12,"n":2,"a":0,"g":"is exalted"},{"s":14,"n":2,"a":0,"g":"Your magnificence"}]}
   ]
 }

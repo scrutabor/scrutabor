@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctae-catharinae-senensis-collecta",
+  "language":"en",
+  "about":"On Catherine of Siena’s feast, we ask to rejoice in its yearly celebration and to grow through the example of her great virtue.",
+  "seg":[
+    {"id":"s01","tr":"Almighty God, grant, we pray, that we who celebrate the feast of blessed Catherine, Your virgin, may both rejoice in its annual celebration and grow by her example of such great virtue. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Grant","we pray",null,null,"that","we who",null,null,null,null,null,"celebrate","both",null,null,"may rejoice","and",null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":2,"n":2,"a":1,"g":"almighty God"},{"s":6,"n":5,"a":4,"g":"the feast of blessed Catherine, Your virgin"},{"s":13,"n":2,"a":1,"g":"in the annual celebration"},{"s":17,"n":4,"a":2,"g":"grow by the example of such great virtue"},{"s":22,"n":2,"a":0,"g":"our Lord"},{"s":24,"n":2,"a":0,"g":"Jesus Christ"},{"s":26,"n":2,"a":0,"g":"Your Son"},{"s":28,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":33,"n":2,"a":1,"g":"in the unity"},{"s":35,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":38,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w011":"The word names Catherine’s liturgical feast. The prayer is not asserting a date of earthly birth.","w038":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

@@ -2,22 +2,40 @@
  "id": "proprium.dominica-i-adventus-introitus",
  "source_groups": [
   {
-   "edition": "edition.divinum-officium-missa.44667ff",
-   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Tempora/Adv1-0; section [Introitus], lines 13–18; inherited Ordo/Prayers [Gloria], lines 13–14"
+    "section": "web/www/missa/Latin/Tempora/Adv1-0.txt [Introitus] (lines 13-17); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14); web/www/missa/Latin/Tempora/Adv1-0.txt [Introitus] (lines 18-18)"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-i-adventus-introitus.do44667ff",
+     "id": "use.proprium.dominica-i-adventus-introitus.dob5e250b",
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact revision supplies this component as a derived digital comparison. This primary file contributes the proper antiphon, psalm and literal reprise; the common Gloria is separately inventoried. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-03"
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "digital_item": "item.divinum-officium-missa.b5e250b.prayers",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Gloria], heading12, complete V./R. lines13–14"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-introitus.gloria-common.dob5e250b",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This exact common source contributes only the complete Gloria Patri after the proper-file &Gloria cue; its textual markers are source framing."
+    }
+   ],
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +52,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page1 prints the proper antiphon, psalm verse and complete Gloria once, followed by the explicit antiphon-repetition rubric. The repeated antiphon is a controlled expansion, not a second full printing."
     }
    ],
-   "verified_on": "2026-10-04"
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. xxix",
+    "scan": "leaf n34 / PDF p. 35",
+    "section": "Rubricae generales 427–428",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n34/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-i-adventus-introitus.repetition-rule.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG427 requires the Introit antiphon, psalm verse, Gloria Patri and repeated antiphon. RG428 does not omit the Gloria in Advent; this is ritual control, not another printing of the proper words."
+    }
+   ],
+   "verified_on": "2026-10-26"
   }
  ],
  "witnesses": []

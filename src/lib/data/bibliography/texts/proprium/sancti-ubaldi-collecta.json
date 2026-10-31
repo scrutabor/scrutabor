@@ -1,0 +1,126 @@
+{
+ "id": "proprium.sancti-ubaldi-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 534",
+    "scan": "PDF physical616 / leaf n615",
+    "section": "05-16 collecta; Oratio P; right lower column after May16 heading and Common Statuit direction, before Secreta C",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n615/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ubaldi-collecta.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 25-word collecta proper w001–w025, followed by the distinct abbreviated cue “Per Dóminum.” The full supplied ending and Amen are not printed at this proper locus."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
+    "section": "RG115a complete ending and Amen wording; same-edition accented common stem and terminal typography"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ubaldi-collecta.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the Father-directed Per Dominum ending w026–w046 and Amen w047. Its literal rubric formula is unaccented. Same-edition p.123 controls matching accented formula words, and p.226 controls the accented four-word terminal and separately marked Amen period. These controls do not make the proper page a full-ending witness or establish response actors, singing, or larger-group conclusion distribution."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 531",
+    "scan": "PDF physical612 / leaf n611",
+    "section": "05-16 collecta; Oratio2612 P; right bottom after May16 heading and Common Statuit direction, before Secreta2613 on V613",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n611/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ubaldi-collecta.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 25-word collecta proper w001–w025, followed by the distinct abbreviated cue “Per Dóminum.” The full supplied ending and Amen are not printed at this proper locus. The setting is typographically distinct, not evidence of independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a; this setting’s full ending and Amen",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-ubaldi-collecta.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies its complete ad-patrem ending and Amen, w026–w047. Its literal accents, punctuation and Amen list semicolon are retained. Formula wording alone does not establish response actors, singing or a rule for grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-ubaldi-collecta.benziger1962",
+   "text": "proprium.sancti-ubaldi-collecta",
+   "use": "use.proprium.sancti-ubaldi-collecta.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s complete RG115a form the explicit composite. The settings are separate, not independent historical traditions."
+  },
+  {
+   "id": "witness.proprium.sancti-ubaldi-collecta.vatican1962",
+   "text": "proprium.sancti-ubaldi-collecta",
+   "use": "use.proprium.sancti-ubaldi-collecta.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s complete RG115a form the explicit composite. The settings are separate, not independent historical traditions."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-ubaldi-collecta.benziger1962-vatican1962",
+  "text": "proprium.sancti-ubaldi-collecta",
+  "recension": "Benziger1962 approved-print proper with its own RG115a supplied conclusion and separate Amen, compared with a literal Vatican same-setting composite",
+  "witnesses": [
+   "witness.proprium.sancti-ubaldi-collecta.benziger1962",
+   "witness.proprium.sancti-ubaldi-collecta.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 9,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
+  }
+ }
+}

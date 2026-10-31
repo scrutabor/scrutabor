@@ -13,6 +13,7 @@ import {
 	SEPARATE_CONCLUSIONS,
 	SITUATIONS,
 	validateCommemorationPack,
+	type CommemorationSlotEntry,
 	type Situation
 } from './commemorationes';
 import {
@@ -57,6 +58,8 @@ const ADVENT_SUNDAYS = ['i', 'ii', 'iii', 'iv'].map((week) => `dominica-${week}-
 const EMBER_FRIDAY = 'feria-sexta-quatuor-temporum-adventus';
 const EMBER_SATURDAY = 'sabbato-quatuor-temporum-adventus';
 const ST_PETRONILLA = 'sancta-petronilla';
+const VIGIL = 'vigilia-ascensionis';
+const IMPEDED_VIGIL = 'vigilia-ascensionis-impedita';
 // The impeded feast: two second-class feasts, each kept off its day by a second-class Sunday.
 const OCTAVE = 'dominica-infra-octavam-nativitatis';
 const ST_JOHN = 'sancti-ioannis-apostoli-et-evangelistae';
@@ -110,6 +113,198 @@ const IMPEDED_FEASTS_CIVIL = [
 	ST_JOHN,
 	'sanctorum-innocentium-martyrum'
 ];
+// Exact source-authored identities, distinct slot bodies and 76-year lower-date counts.
+// These oracles are independent of the vendored resource under test.
+const EXPECTED_COMM = [
+	['dominica-impedita', 'Dominica impedita', 'privileged', true],
+	['feria-adventus', 'Feria Adventus', 'privileged', true],
+	['festum-impeditum', 'Festum impeditum', 'ordinary', true],
+	['litaniae-maiores', 'Litaniæ maiores', 'privileged', false],
+	['sancta-angela-mericia', 'S. Angelae Mericiae Virginis', 'ordinary', false],
+	['sancta-catharina-senensis', 'S. Catharinae Senensis Virginis', 'ordinary', false],
+	[
+		'sancta-maria-magdalena-de-pazzis',
+		'S. Mariae Magdalenae de Pazzis Virginis',
+		'ordinary',
+		false
+	],
+	['sancta-monica', 'S. Monicae Viduae', 'ordinary', false],
+	['sancta-petronilla', 'S. Petronillæ Virginis', 'ordinary', false],
+	[
+		'sancti-alexander-eventius-theodulus-et-iuvenalis',
+		'Ss. Alexandri, Eventii et Theoduli Martyrum ac Iuvenalis Episcopi Confessoris',
+		'ordinary',
+		false
+	],
+	[
+		'sancti-marcellinus-petrus-et-erasmus',
+		'Ss. Marcellini, Petri atque Erasmi Episcopi Martyrum',
+		'ordinary',
+		false
+	],
+	[
+		'sancti-nereus-achilleus-domitilla-et-pancratius',
+		'Ss. Nerei, Achillei, Domitillae Virginis atque Pancratii Martyrum',
+		'ordinary',
+		false
+	],
+	['sanctus-antoninus', 'S. Antonini Episcopi Confessoris', 'ordinary', false],
+	[
+		'sanctus-athanasius',
+		'S. Athanasii Episcopi Confessoris et Ecclesiae Doctoris',
+		'ordinary',
+		false
+	],
+	[
+		'sanctus-augustinus-cantuariensis',
+		'S. Augustini Episcopi Confessoris (Canterbury)',
+		'ordinary',
+		false
+	],
+	[
+		'sanctus-beda-venerabilis',
+		'S. Bedae Venerabilis Confessoris et Ecclesiae Doctoris',
+		'ordinary',
+		false
+	],
+	['sanctus-bernardinus-senensis', 'S. Bernardini Senensis Confessoris', 'ordinary', false],
+	['sanctus-bonifatius-martyr', 'S. Bonifatii Martyris', 'ordinary', false],
+	['sanctus-felix-i-papa', 'S. Felicis I Papae Martyris', 'ordinary', false],
+	[
+		'sanctus-gregorius-nazianzenus',
+		'S. Gregorii Nazianzeni Episcopi Confessoris et Ecclesiae Doctoris',
+		'ordinary',
+		false
+	],
+	['sanctus-gregorius-vii', 'S. Gregorii VII Papae Confessoris', 'ordinary', false],
+	[
+		'sanctus-ioannes-baptista-de-la-salle',
+		'S. Ioannis Baptistae de la Salle Confessoris',
+		'ordinary',
+		false
+	],
+	['sanctus-paschalis-baylon', 'S. Paschalis Baylon Confessoris', 'ordinary', false],
+	['sanctus-petrus-caelestinus', 'S. Petri Caelestini Papae Confessoris', 'ordinary', false],
+	['sanctus-petrus-martyr', 'S. Petri Martyris', 'ordinary', false],
+	['sanctus-philippus-nerius', 'S. Philippi Nerii Confessoris', 'ordinary', false],
+	['sanctus-pius-v', 'S. Pii V Papae Confessoris', 'ordinary', false],
+	[
+		'sanctus-robertus-bellarmino',
+		'S. Roberti Bellarmino Episcopi Confessoris et Ecclesiae Doctoris',
+		'ordinary',
+		false
+	],
+	['sanctus-stanislaus', 'S. Stanislai Episcopi Martyris', 'ordinary', false],
+	['sanctus-ubaldus', 'S. Ubaldi Episcopi Confessoris', 'ordinary', false],
+	['sanctus-venantius-martyr', 'S. Venantii Martyris', 'ordinary', false],
+	['vigilia-ascensionis-impedita', 'Vigiliæ Ascensionis Domini impeditæ', 'ordinary', true]
+] as const;
+const EXPECTED_BODIES = [
+	{ key: 'proprium/litaniae-maiores-collecta', slot: 'collecta' },
+	{ key: 'proprium/dominica-i-passionis-secreta', slot: 'secreta' },
+	{ key: 'proprium/litaniae-maiores-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sanctae-angelae-mericiae-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctae-angelae-mericiae-secreta', slot: 'secreta' },
+	{ key: 'proprium/sanctae-angelae-mericiae-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sanctae-catharinae-senensis-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctae-catharinae-senensis-secreta', slot: 'secreta' },
+	{ key: 'proprium/sanctae-catharinae-senensis-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sanctae-mariae-magdalenae-de-pazzis-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctae-petronillae-secreta', slot: 'secreta' },
+	{ key: 'proprium/sanctae-petronillae-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sanctae-monicae-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctae-petronillae-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta', slot: 'collecta' },
+	{ key: 'proprium/super-has-hostias-secreta', slot: 'secreta' },
+	{
+		key: 'proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio',
+		slot: 'postcommunio'
+	},
+	{ key: 'proprium/sanctorum-marcellini-petri-et-erasmi-collecta', slot: 'collecta' },
+	{ key: 'proprium/haec-hostia-secreta', slot: 'secreta' },
+	{ key: 'proprium/sacro-munere-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-collecta', slot: 'collecta' },
+	{ key: 'proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-secreta', slot: 'secreta' },
+	{
+		key: 'proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio',
+		slot: 'postcommunio'
+	},
+	{ key: 'proprium/sancti-antonini-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-tui-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-antonini-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-athanasii-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-athanasii-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-athanasii-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-augustini-cantuariensis-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-augustini-cantuariensis-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-augustini-cantuariensis-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-bedae-venerabilis-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-bedae-venerabilis-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-bedae-venerabilis-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-bernardini-senensis-collecta', slot: 'collecta' },
+	{ key: 'proprium/laudis-tibi-secreta', slot: 'secreta' },
+	{ key: 'proprium/refecti-cibo-potuque-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-bonifatii-martyris-collecta', slot: 'collecta' },
+	{ key: 'proprium/in-octava-nativitatis-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-bonifatii-martyris-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-felicis-i-papae-collecta', slot: 'collecta' },
+	{ key: 'proprium/oblatis-muneribus-secreta', slot: 'secreta' },
+	{ key: 'proprium/refectione-sancta-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-gregorii-nazianzeni-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-gregorii-nazianzeni-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-gregorii-nazianzeni-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-gregorii-vii-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-ioannis-baptistae-de-la-salle-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-paschalis-baylon-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-petri-caelestini-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-petri-martyris-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-petri-martyris-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-petri-martyris-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-philippi-nerii-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-philippi-nerii-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-philippi-nerii-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-pii-v-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-roberti-bellarmino-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-roberti-bellarmino-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-roberti-bellarmino-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-stanislai-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-stanislai-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-stanislai-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-ubaldi-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-ubaldi-postcommunio', slot: 'postcommunio' },
+	{ key: 'proprium/sancti-venantii-martyris-collecta', slot: 'collecta' },
+	{ key: 'proprium/sancti-venantii-martyris-secreta', slot: 'secreta' },
+	{ key: 'proprium/sancti-venantii-martyris-postcommunio', slot: 'postcommunio' }
+] as const;
+const LOWER_DATES = [
+	['sancta-angela-mericia', '06-01', 1],
+	['sancta-catharina-senensis', '04-30', 0],
+	['sancta-maria-magdalena-de-pazzis', '05-29', 3],
+	['sancta-monica', '05-04', 0],
+	['sancti-alexander-eventius-theodulus-et-iuvenalis', '05-03', 3],
+	['sancti-marcellinus-petrus-et-erasmus', '06-02', 1],
+	['sancti-nereus-achilleus-domitilla-et-pancratius', '05-12', 2],
+	['sanctus-antoninus', '05-10', 2],
+	['sanctus-athanasius', '05-02', 2],
+	['sanctus-augustinus-cantuariensis', '05-28', 2],
+	['sanctus-beda-venerabilis', '05-27', 3],
+	['sanctus-bernardinus-senensis', '05-20', 2],
+	['sanctus-bonifatius-martyr', '05-14', 3],
+	['sanctus-felix-i-papa', '05-30', 2],
+	['sanctus-gregorius-nazianzenus', '05-09', 2],
+	['sanctus-gregorius-vii', '05-25', 3],
+	['sanctus-ioannes-baptista-de-la-salle', '05-15', 2],
+	['sanctus-paschalis-baylon', '05-17', 2],
+	['sanctus-petrus-caelestinus', '05-19', 3],
+	['sanctus-petrus-martyr', '04-29', 0],
+	['sanctus-philippus-nerius', '05-26', 3],
+	['sanctus-pius-v', '05-05', 3],
+	['sanctus-robertus-bellarmino', '05-13', 3],
+	['sanctus-stanislaus', '05-07', 4],
+	['sanctus-ubaldus', '05-16', 1],
+	['sanctus-venantius-martyr', '05-18', 4]
+] as const;
+
 const ADMITTED = table.decisions.findIndex(({ id }) => id === 'admitted');
 const NOT_ADMITTED = table.decisions.findIndex(({ id }) => id === 'not-admitted');
 const UNAVAILABLE = table.decisions.findIndex(
@@ -123,9 +318,10 @@ const rows = (value: Table) => value.pairs as Row[];
 const at = (value: Table, id: string) =>
 	value.commemorations.findIndex((commemoration) => commemoration.id === id);
 const entry = (value: Table, id: string) => value.commemorations[at(value, id)];
-/** One slot of a commemoration, typed for a mutation that may give it a text or take it away. */
+/** One slot of a commemoration, typed for a mutation that may give it a text or take it away,
+ * or give it another declared relation. */
 const slotOf = (value: Table, id: string, index: number) =>
-	entry(value, id).slots[index] as { text: string | null };
+	entry(value, id).slots[index] as Pick<CommemorationSlotEntry, 'text' | 'relation'>;
 const pairOf = (value: Table, id: string, date?: string) =>
 	rows(value).findIndex((row) => row[2] === at(value, id) && (!date || row[0] === date));
 /** Insert a commemoration's occurrence and pair right after another's on the same date, so the
@@ -139,17 +335,10 @@ const beside = (value: Table, after: string, date: string, added: string, row: R
 };
 const components = (id: string) => FORMULARY_METADATA.find((form) => form.id === id)!.components;
 
-describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)', () => {
+describe('corpus-owned commemoration occurrences and decisions (selection 2.2.0)', () => {
 	it('declares every addressed slot body once, after the Mass role each follows', () => {
-		expect(COMMEMORATION_DECLARATIONS).toEqual([
-			{ key: COLLECT, slot: 'collecta' },
-			{ key: SECRET, slot: 'secreta' },
-			{ key: POSTCOMMUNION, slot: 'postcommunio' },
-			{ key: PETRONILLA[0], slot: 'collecta' },
-			{ key: PETRONILLA[1], slot: 'secreta' },
-			{ key: PETRONILLA[2], slot: 'postcommunio' }
-		]);
-		expect(COMMEMORATION_TEXT_KEYS).toEqual([COLLECT, SECRET, POSTCOMMUNION, ...PETRONILLA]);
+		expect(COMMEMORATION_DECLARATIONS).toEqual(EXPECTED_BODIES);
+		expect(COMMEMORATION_TEXT_KEYS).toEqual(EXPECTED_BODIES.map(({ key }) => key));
 		expect(commemorationTitle(IMPEDED, 'pl')).toBe('Niedziela przeszkodzona');
 		expect(commemorationTitle(IMPEDED, 'en')).toBe('Impeded Sunday');
 		expect(commemorationTitle(FERIA, 'pl')).toBe('Dzień powszedni Adwentu');
@@ -163,21 +352,10 @@ describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)
 		const lookup = createCommemorationLookup(table);
 		expect(
 			lookup.commemorations.map(({ id, title, rank, resolved }) => [id, title, rank, resolved])
-		).toEqual([
-			[IMPEDED, 'Dominica impedita', 'privileged', true],
-			[FERIA, 'Feria Adventus', 'privileged', true],
-			[FESTUM, 'Festum impeditum', 'ordinary', true],
-			[LITANIES, 'Litaniæ maiores', 'privileged', false],
-			[ST_PETRONILLA, 'S. Petronillæ Virginis', 'ordinary', false]
-		]);
-		// The wire format orders commemorations by identity, so the Advent feria sorts second and
-		// moves the impeded feast to index 2, the Litanies to 3 and St Petronilla to 4. The app
-		// addresses none of them by position; this pins only where the resource puts them.
-		expect([IMPEDED, FERIA, FESTUM, LITANIES, ST_PETRONILLA].map((id) => at(table, id))).toEqual([
-			0, 1, 2, 3, 4
-		]);
+		).toEqual(EXPECTED_COMM);
+		expect(lookup.commemorations.map(({ id }) => id)).toEqual(EXPECTED_COMM.map(([id]) => id));
 		// No resolved commemoration says a text of its own in any slot.
-		for (const id of [IMPEDED, FERIA, FESTUM])
+		for (const id of [IMPEDED, FERIA, FESTUM, IMPEDED_VIGIL])
 			expect(
 				entry(table, id).slots.map(({ key, after, text }) => [key, after, text]),
 				id
@@ -189,14 +367,15 @@ describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)
 	});
 	it('resolves every published pair with its decisions and publishes every occurrence', () => {
 		const lookup = createCommemorationLookup(table);
-		expect(table.occurrences).toHaveLength(596);
-		expect(table.pairs).toHaveLength(551);
+		expect(table.occurrences).toHaveLength(656);
+		expect(table.pairs).toHaveLength(611);
 		for (const [id, pairs, occurrences] of [
 			[IMPEDED, 75, 75],
 			[FERIA, 163, 163],
 			[FESTUM, 206, 206],
 			[LITANIES, 63, 76],
-			[ST_PETRONILLA, 44, 76]
+			[ST_PETRONILLA, 44, 76],
+			[IMPEDED_VIGIL, 4, 4]
 		] as const) {
 			expect(
 				table.pairs.filter((row) => row[2] === at(table, id)),
@@ -208,10 +387,39 @@ describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)
 			).toHaveLength(occurrences);
 			expect(lookup.datesOf(id), id).toHaveLength(pairs);
 		}
+		let lowerCount = 0;
+		for (const [id, monthDay, count] of LOWER_DATES) {
+			const dates = lookup.datesOf(id);
+			expect(dates, id).toHaveLength(count);
+			expect(
+				table.occurrences.filter((row) => row[1] === at(table, id)),
+				id
+			).toHaveLength(count);
+			for (const occurrence of dates) {
+				expect([occurrence.date.slice(5), occurrence.mass, occurrence.formulary], id).toEqual([
+					monthDay,
+					VIGIL,
+					null
+				]);
+				expect(Object.values(occurrence.decisions), id).toEqual([
+					'admitted',
+					'admitted',
+					'not-admitted'
+				]);
+			}
+			lowerCount += dates.length;
+		}
+		expect(lowerCount).toBe(56);
 		for (const row of rows(table)) {
 			const [date, mass, index, profile, ...rest] = row;
 			const plan = rest.slice(0, SITUATIONS.length);
-			const found = lookup.resolve(String(date), table.masses[Number(mass)]);
+			const resolved = lookup.resolve(String(date), table.masses[Number(mass)]);
+			expect(resolved).toHaveLength(
+				rows(table).filter((candidate) => candidate[0] === date && candidate[1] === mass).length
+			);
+			const found = resolved.filter(
+				({ commemoration }) => commemoration.id === lookup.commemorations[Number(index)].id
+			);
 			expect(found).toEqual([
 				{
 					commemoration: lookup.commemorations[Number(index)],
@@ -257,12 +465,12 @@ describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)
 		[
 			'2079-05-31',
 			QUEENSHIP,
-			{ lecta: [], 'cantu-conventualis': [], 'cantu-non-conventualis': [] },
 			{
-				lecta: [ST_PETRONILLA],
-				'cantu-conventualis': [ST_PETRONILLA],
+				lecta: [IMPEDED_VIGIL],
+				'cantu-conventualis': [IMPEDED_VIGIL],
 				'cantu-non-conventualis': []
-			}
+			},
+			{ lecta: [], 'cantu-conventualis': [], 'cantu-non-conventualis': [] }
 		],
 		[
 			'2026-05-31',
@@ -311,14 +519,23 @@ describe('corpus-owned commemoration occurrences and decisions (selection 2.1.0)
 			}
 		}
 	);
-	it('marks exactly one Mass as omitting a commemoration for an unavailable de Tempore one', () => {
+	it('keeps the unavailable Advent feria distinct from the represented impeded Vigil', () => {
 		const marked = table.pairs.filter((row) => row.slice(4, 4 + SITUATIONS.length).includes(2));
-		// Since 6.4.0 the Advent feria, itself the de Tempore commemoration, is also owed and
-		// unavailable, on the 21 Ember days of Advent that St Thomas meets (its describe below).
-		expect(marked.filter((row) => row[2] !== at(table, FERIA))).toEqual([
-			['2079-05-31', table.masses.indexOf(QUEENSHIP), at(table, ST_PETRONILLA), 0, 2, 2, 1, null]
-		]);
+		expect(marked.filter((row) => row[2] !== at(table, FERIA))).toEqual([]);
 		expect(marked.filter((row) => row[2] === at(table, FERIA))).toHaveLength(21);
+		const lookup = createCommemorationLookup(table);
+		expect(
+			lookup
+				.resolve('2079-05-31', QUEENSHIP)
+				.map(({ commemoration, formulary, decisions }) => [
+					commemoration.id,
+					formulary,
+					Object.values(decisions)
+				])
+		).toEqual([
+			[ST_PETRONILLA, null, ['not-admitted', 'not-admitted', 'not-admitted']],
+			[IMPEDED_VIGIL, VIGIL, ['admitted', 'admitted', 'not-admitted']]
+		]);
 	});
 	it.each([
 		['2026-04-25', MARK, 1],
@@ -714,7 +931,8 @@ describe('the Advent feria, resolved per pair', () => {
 		expect(RESOLVED_HEADINGS).toEqual({
 			[IMPEDED]: 'formulary',
 			[FERIA]: 'prayers',
-			[FESTUM]: 'formulary'
+			[FESTUM]: 'formulary',
+			[IMPEDED_VIGIL]: 'formulary'
 		});
 		// Rank does not choose it: the impeded Sunday and the Advent feria are both privileged.
 		expect(entryOf(IMPEDED)?.rank).toBe(entryOf(FERIA)?.rank);
@@ -728,6 +946,31 @@ describe('the Advent feria, resolved per pair', () => {
 describe('malformed selection resources', () => {
 	const mutations: [string, (value: Table) => void, RegExp?][] = [
 		['the previous selection version', (v) => void (v.schema_version = '2.0.0')],
+		['selection 2.1 without ownership', (v) => void (v.schema_version = '2.1.0')],
+		[
+			'missing slot relation',
+			(v) => void delete (slotOf(v, LITANIES, 0) as unknown as Record<string, unknown>).relation
+		],
+		[
+			'null slot relation',
+			(v) => void ((slotOf(v, LITANIES, 0) as unknown as Record<string, unknown>).relation = null)
+		],
+		[
+			'array slot relation',
+			(v) =>
+				void ((slotOf(v, LITANIES, 0) as unknown as Record<string, unknown>).relation = ['proper'])
+		],
+		[
+			'unknown slot relation',
+			(v) =>
+				void ((slotOf(v, LITANIES, 0) as unknown as Record<string, unknown>).relation = 'shared')
+		],
+		[
+			'calendar relation with addressed text',
+			(v) => void (slotOf(v, LITANIES, 0).relation = 'calendar')
+		],
+		['proper relation without text', (v) => void (slotOf(v, IMPEDED, 0).relation = 'proper')],
+		['reference relation without text', (v) => void (slotOf(v, IMPEDED, 0).relation = 'reference')],
 		['profile', (v) => void (v.profiles[0].id = 'single-conclusion')],
 		['situation order', (v) => void v.situations.reverse()],
 		['decision vocabulary', (v) => void (v.decisions[2].id = 'omitted')],
@@ -968,6 +1211,12 @@ describe('malformed selection resources', () => {
 		const broken = structuredClone(table);
 		mutate(broken);
 		expect(() => createCommemorationLookup(broken)).toThrow(message ?? /./);
+		for (const key of Object.keys(broken))
+			delete (broken as unknown as Record<string, unknown>)[key];
+		Object.assign(broken, structuredClone(table));
+		expect(broken).toEqual(table);
+		expect(() => createCommemorationLookup(broken)).not.toThrow();
+		expect(() => createCommemorationLookup(structuredClone(table))).not.toThrow();
 	});
 	// The Fourth Sunday of Advent is resolved by the Advent feria alone (St Thomas).
 	it.each([XXIII, ST_JAMES, ADVENT_SUNDAYS[3]])(
@@ -1023,7 +1272,7 @@ describe('typed row order', () => {
 });
 
 describe('commemoration transport pack and resolved orations', () => {
-	it.each(['pl', 'en'] as const)('%s pack carries exactly the six bodies', async (lang) => {
+	it.each(['pl', 'en'] as const)('%s pack carries every declared addressed body', async (lang) => {
 		const pack = validateCommemorationPack(await commemorationData(lang), lang);
 		expect(pack.parts.map(({ key, slot }) => ({ key, slot }))).toEqual(COMMEMORATION_DECLARATIONS);
 		const lookup = createCommemorationLookup(table);
@@ -1202,7 +1451,7 @@ describe('commemoration pages', () => {
 			expect(page).not.toHaveProperty('parts');
 		}
 	);
-	it('knows which formulary of each resolved commemoration’s pair is the feast', () => {
+	it('knows which formulary of each resolved commemoration’s pair is the feast', async () => {
 		const lookup = createCommemorationLookup(table);
 		expect(lookup.commemorations.filter(({ resolved }) => resolved).map(({ id }) => id)).toEqual(
 			Object.keys(RESOLVED_FEAST_SIDE)
@@ -1210,7 +1459,8 @@ describe('commemoration pages', () => {
 		expect(RESOLVED_FEAST_SIDE).toEqual({
 			[IMPEDED]: 'mass',
 			[FERIA]: 'mass',
-			[FESTUM]: 'formulary'
+			[FESTUM]: 'formulary',
+			[IMPEDED_VIGIL]: 'mass'
 		});
 		// The order of the feasts on each page is declared by identity as well: the side does not
 		// decide it, since the impeded Sunday and the Advent feria share a side and not an order.
@@ -1218,8 +1468,39 @@ describe('commemoration pages', () => {
 		expect(RESOLVED_FEAST_ORDER).toEqual({
 			[IMPEDED]: 'edition',
 			[FERIA]: 'civil',
-			[FESTUM]: 'civil'
+			[FESTUM]: 'civil',
+			[IMPEDED_VIGIL]: 'civil'
 		});
+		for (const lang of ['pl', 'en'] as const) {
+			const page = await commemorationPageData(IMPEDED_VIGIL, lang);
+			expect(page?.kind).toBe('resolved');
+			if (page?.kind !== 'resolved') throw new Error('real Vigil page missing');
+			expect(page.feasts.map(({ id }) => id)).toEqual([
+				'sanctorum-philippi-et-iacobi-apostolorum',
+				QUEENSHIP
+			]);
+			expect(
+				page.feasts
+					.flatMap(({ dates }) => dates)
+					.map(({ date, formulary, authored, said }) => [date, formulary, authored, said])
+			).toEqual([
+				['2067-05-11', VIGIL, true, true],
+				['2078-05-11', VIGIL, true, true],
+				['2089-05-11', VIGIL, true, true],
+				['2079-05-31', VIGIL, true, true]
+			]);
+			const rules = M[lang].commemorationRules;
+			const kept = rules[IMPEDED_VIGIL];
+			delete rules[IMPEDED_VIGIL];
+			try {
+				await expect(commemorationPageData(IMPEDED_VIGIL, lang)).rejects.toThrow(
+					/resolved commemoration without its rule/
+				);
+			} finally {
+				rules[IMPEDED_VIGIL] = kept;
+			}
+			expect((await commemorationPageData(IMPEDED_VIGIL, lang))?.kind).toBe('resolved');
+		}
 	});
 	it.each(['pl', 'en'] as const)(
 		'%s Advent feria page lists the three feasts in civil order and names each Ember day',
@@ -1278,7 +1559,9 @@ describe('commemoration pages', () => {
 		expect((await commemorationPageData(FERIA, 'en'))?.kind).toBe('resolved');
 	});
 	it('keeps the addressed commemorations’ pages as their three orations', async () => {
-		for (const id of [LITANIES, ST_PETRONILLA]) {
+		for (const { id } of createCommemorationLookup(table).commemorations.filter(
+			({ resolved }) => !resolved
+		)) {
 			const page = await commemorationPageData(id, 'en');
 			expect(page?.kind, id).toBe('orations');
 			if (page?.kind !== 'orations') continue;

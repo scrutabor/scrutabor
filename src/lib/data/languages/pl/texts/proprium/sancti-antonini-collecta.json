@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-antonini-collecta",
+  "language":"pl",
+  "about":"Modlitwa prosi o pomoc dzięki zasługom świętego Antonina. Wysławianie Boga w Antoninie łączy z prośbą, byśmy chlubili się doznanym miłosierdziem.",
+  "seg":[
+    {"id":"s01","tr":"Panie, niech dzięki zasługom świętego Antonina, Twojego wyznawcy i biskupa, doznamy pomocy, abyśmy, jak wysławiamy Cię jako przedziwnego w nim, tak chlubili się tym, że okazałeś nam miłosierdzie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,"Panie",null,null,"i","biskupa",null,null,"abyśmy","jak","Ciebie",null,null,"jako przedziwnego","wysławiamy","tak",null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":0,"n":2,"a":1,"g":"Świętego Antonina"},{"s":3,"n":2,"a":0,"g":"Twojego wyznawcy"},{"s":7,"n":2,"a":1,"g":"obyśmy dzięki zasługom doznali pomocy"},{"s":12,"n":2,"a":0,"g":"w nim"},{"s":17,"n":5,"a":4,"g":"chlubili się tym, że byłeś dla nas miłosierny"}],"ex":{"w002":"To Antonin, biskup i wyznawca wspominany 10 maja. Modlitwa odwołuje się do jego zasług.","w009":"Prośba dotyczy pomocy, której mamy doznać dzięki zasługom Antonina.","w014":"„W nim” odnosi się do Antonina. W świętym wysławiamy Boga jako przedziwnego.","w021":"„Byłeś” zachowuje uprzedniość miłosierdzia wobec chluby, o którą prosimy. Modlitwa nie określa przez to dokładnej chwili okazania nam miłosierdzia.","w022":"Modlitwa zestawia dwa powody uwielbienia: Boga przedziwnego w Antoninie i Jego miłosierdzie wobec nas.","w039":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

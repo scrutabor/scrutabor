@@ -12,6 +12,45 @@ const PETRONILLA = 'sancta-petronilla';
 const SECRET = 'proprium/dominica-i-passionis-secreta';
 const catalogs = { pl, en };
 const languages = ['pl', 'en'] as const;
+// Exact admitted occurrence prose, not copied from the vendored resource under test.
+const EXPECTED_ABOUT = {
+	pl: {
+		'sancta-monica': {
+			secreta:
+				'Prosimy, aby Bóg przyjął ofiarę swego ludu ku czci świętych, dzięki których zasługom lud otrzymał pomoc w utrapieniu.',
+			postcommunio:
+				'Po przyjęciu świętych darów prosimy o umocnienie przez wstawiennictwo świętej, której uroczystość obchodzimy.'
+		},
+		'sanctus-bonifatius-martyr': {
+			secreta:
+				'Prosimy, aby Bóg przyjął nasze dary i modlitwy, oczyścił nas przez święte tajemnice i łaskawie nas wysłuchał.'
+		},
+		'sancta-maria-magdalena-de-pazzis': {
+			secreta:
+				'Prosimy, aby Bóg przyjął ofiarę swego ludu ku czci świętych, dzięki których zasługom lud otrzymał pomoc w utrapieniu.',
+			postcommunio:
+				'Po przyjęciu świętych darów prosimy o umocnienie przez wstawiennictwo świętej, której uroczystość obchodzimy.'
+		}
+	},
+	en: {
+		'sancta-monica': {
+			secreta:
+				"We ask God to accept His people's offering in honor of the saints, through whose merits His people have received help in distress.",
+			postcommunio:
+				'Having received the sacred gifts, we ask to be renewed through the intercession of the saint whose feast we celebrate.'
+		},
+		'sanctus-bonifatius-martyr': {
+			secreta:
+				'We ask God to receive our gifts and prayers, cleanse us through the heavenly mysteries and graciously hear us.'
+		},
+		'sancta-maria-magdalena-de-pazzis': {
+			secreta:
+				"We ask God to accept His people's offering in honor of the saints, through whose merits His people have received help in distress.",
+			postcommunio:
+				'Having received the sacred gifts, we ask to be renewed through the intercession of the saint whose feast we celebrate.'
+		}
+	}
+} as const;
 const edited = () =>
 	structuredClone(en) as {
 		schema_version: string;
@@ -23,14 +62,43 @@ afterEach(() => vi.restoreAllMocks());
 describe('localized commemoration context contract 1.1.0', () => {
 	it.each(languages)(
 		'%s preserves every real existing title and inherits all default prose',
-		(lang) => {
+		async (lang) => {
 			const lookup = localizedCommemorations(catalogs[lang], lang, neutral.commemorations);
+			const expected = EXPECTED_ABOUT[lang] as Record<
+				string,
+				Partial<Record<CommemorationAboutSlot, string>>
+			>;
+			expect(
+				catalogs[lang].titles
+					.filter((entry) => 'about' in entry)
+					.map(({ id }) => id)
+					.sort()
+			).toEqual(Object.keys(expected).sort());
 			for (const entry of catalogs[lang].titles) {
 				expect(lookup.title(entry.id)).toBe(entry.title);
 				const owner = neutral.commemorations.find((row) => row.id === entry.id)!;
 				for (const slot of owner.slots.filter((slot) => slot.text !== null))
-					expect(lookup.about(entry.id, slot.key as CommemorationAboutSlot)).toBeUndefined();
+					expect(lookup.about(entry.id, slot.key as CommemorationAboutSlot)).toBe(
+						expected[entry.id]?.[slot.key as CommemorationAboutSlot]
+					);
 			}
+			let overrides = 0;
+			for (const [id, about] of Object.entries(expected)) {
+				const page = await commemorationPageData(id, lang);
+				if (page?.kind !== 'orations') throw new Error('real context page missing');
+				for (const [slot, prose] of Object.entries(about)) {
+					const part = page.parts.find((part) => part.part === slot)!;
+					expect(part).toBeDefined();
+					const shared = (await loadText(part.key, lang))!;
+					expect(part.gloss.about).toBe(prose);
+					expect(part.doc).toBe(shared.text);
+					expect(part.gloss.words).toBe(shared.gloss.words);
+					expect(part.gloss.segments).toBe(shared.gloss.segments);
+					expect({ ...part.gloss, about: shared.gloss.about }).toEqual(shared.gloss);
+					overrides++;
+				}
+			}
+			expect(overrides).toBe(5);
 		}
 	);
 	it('distinguishes missing, empty and nonempty values without changing the input', () => {

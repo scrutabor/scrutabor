@@ -1,0 +1,127 @@
+{
+ "id": "proprium.sancti-felicis-i-papae-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 542",
+    "scan": "PDF physical624 / leaf n623",
+    "section": "05-30 S. Felicis I Papae et Martyris; collecta; proper w001–w024 only; full supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n623/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-felicis-i-papae-collecta.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 24-word collecta proper w001–w024, followed by the literal local cue “Per Dóminum.” The cue does not print the supplied full conclusion or Amen. Separate settings corroborate one received tradition, not independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII–XVIII, 123, 226",
+    "scan": "PDF physical23,24,203,306 / leaves n22,n23,n202,n305",
+    "section": "RG115a; conclusion w025–w045 and response w046 only; proper excluded; RG115b-e exception check and distinct running stress/response controls, not a contiguous occasion paragraph"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-felicis-i-papae-collecta.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s RG115a supplies its full Father-directed conclusion w025–w045 and response w046 only; proper excluded. Its literal list is unaccented and prints “tuum,”, “qui” and “Amen;”. Same-edition p.123 supplies selected common stress and “tuum: Qui”, not the selected comma after “Deus”; RG115a prints that comma. The p.226 terminal supplies duration stress and the separate response period. These passages do not establish occurrence actors, singing, participation or conclusion distribution in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 539",
+    "scan": "PDF physical620 / leaf n619",
+    "section": "05-30 S. Felicis I Papae et Martyris; collecta §2678; proper w001–w024 only; full supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n619/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-felicis-i-papae-collecta.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 24-word collecta proper w001–w024, followed by the literal local cue “Per Dóminum.” The cue does not print the supplied full conclusion or Amen. Separate settings corroborate one received tradition, not independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a; conclusion w025–w045 and response w046 only; proper excluded; RG115b-e exception check",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-felicis-i-papae-collecta.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies its full Father-directed conclusion w025–w045 and response w046 only; proper excluded. Its accented literal list prints “Christum,”, “tuum,”, “qui” and “Amen;”. The own-setting completion does not establish actors, singing, participation or conclusion distribution in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-felicis-i-papae-collecta.benziger1962",
+   "text": "proprium.sancti-felicis-i-papae-collecta",
+   "use": "use.proprium.sancti-felicis-i-papae-collecta.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "The exact proper plus its own setting’s RG115a conclusion/Amen is an explicit composite; distinct print settings do not prove independent historical ancestry."
+  },
+  {
+   "id": "witness.proprium.sancti-felicis-i-papae-collecta.vatican1962",
+   "text": "proprium.sancti-felicis-i-papae-collecta",
+   "use": "use.proprium.sancti-felicis-i-papae-collecta.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "The exact proper plus its own setting’s RG115a conclusion/Amen is an explicit composite; distinct print settings do not prove independent historical ancestry."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-felicis-i-papae-collecta.benziger1962-vatican1962",
+  "text": "proprium.sancti-felicis-i-papae-collecta",
+  "recension": "Benziger approved-print proper and explicit own-setting RG115a conclusion/Amen compared with Vatican same-setting literal composite",
+  "witnesses": [
+   "witness.proprium.sancti-felicis-i-papae-collecta.benziger1962",
+   "witness.proprium.sancti-felicis-i-papae-collecta.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 13,
+   "classes": [
+    "accent",
+    "capitalization",
+    "punctuation"
+   ]
+  }
+ }
+}

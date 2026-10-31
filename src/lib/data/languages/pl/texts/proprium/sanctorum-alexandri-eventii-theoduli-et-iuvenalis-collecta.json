@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+  "language":"pl",
+  "about":"Kolekta wspólnego wspomnienia świętych Aleksandra, Ewencjusza, Teodula i Juwenalisa. Modlący się obchodzą ich święto i proszą Boga o uwolnienie od wszelkiego grożącego zła za wstawiennictwem wszystkich czterech świętych.",
+  "seg":[
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy my, którzy obchodzimy święto Twoich świętych Aleksandra, Ewencjusza, Teodula i Juwenalisa, za ich wstawiennictwem zostali uwolnieni od wszelkiego grożącego nam zła. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy",null,null,"abyśmy","my, którzy",null,null,"Aleksandra","Ewencjusza","Teodula","i","Juwenalisa",null,null,null,null,null,null,null,null,"zostali uwolnieni","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":2,"n":2,"a":1,"g":"wszechmogący Boże"},{"s":6,"n":2,"a":0,"g":"Twoich świętych"},{"s":13,"n":2,"a":1,"g":"święto obchodzimy"},{"s":15,"n":4,"a":2,"g":"od wszelkiego grożącego nam zła"},{"s":19,"n":2,"a":1,"g":"za ich wstawiennictwem"}],"ex":{"w006":"„My, którzy” wskazuje ludzi obchodzących święto. To oni proszą o uwolnienie od grożącego zła.","w013":"Juwenalis jest w nagłówku wspomnienia Biskupem i Wyznawcą. Wspólna modlitwa obejmuje go razem z trzema wymienionymi męczennikami.","w014":"„Natalitia” nazywa tu liturgiczny obchód ku czci świętych. Cztery imiona obejmuje jedno wspólne wspomnienie.","w039":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

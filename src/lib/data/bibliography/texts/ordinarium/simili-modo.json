@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.simili-modo",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-simili-modo; closed-literal-selection} (line 241; line 245; line 249); complete source contexts 240–250"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.simili-modo.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 60-word literal selection in the stated selection order (241, then 245, then 249), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 307",
+    "scan": "leaf n388 / PDF p. 389",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n388/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.simili-modo.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": []
+}

@@ -43,6 +43,7 @@
 		showSpeakerNames = true,
 		referenceOnly = false,
 		hideOpeningRubric = false,
+		openingRubricContext,
 		showTranslationSources = true,
 		verifiedTranslationCitations = [],
 		layout,
@@ -84,6 +85,8 @@
 		/** A standalone Mass prayer keeps the opening rubric's deep-link
 		 * anchor, while leaving its continuous-rite direction to the Ordo. */
 		hideOpeningRubric?: boolean;
+		/** Qualify a general source rubric before its unaltered Latin and narrative. */
+		openingRubricContext?: string;
 		/** The landing specimen favours the always-open analysis box: its
 		 * translation-sources disclosure pushed the box below the fold
 		 * (owner, 2026-08-21), and the panel carries its own sources row. */
@@ -340,6 +343,9 @@
 			class:segment-selected={citedSegments.includes(seg.id)}
 			id={segmentId(seg.id)}
 		>
+			{#if i === 0 && openingRubricContext}
+				<p class="rubric-narrative rubric-context">{openingRubricContext}</p>
+			{/if}
 			<p class="rubric-la" lang="la">{seg.text}</p>
 			<!-- Narratives ride in EVERY mode (owner, 2026-08-21): what
 			     happens at the altar is the prayer book's own layer, not

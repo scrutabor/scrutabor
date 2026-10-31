@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctae-angelae-mericiae-postcommunio",
+  "language":"pl",
+  "about":"Pokrzepiona niebieskim pokarmem wspólnota prosi, aby dzięki modlitwom i przykładowi świętej Anieli Merici, oczyszczona z wszelkiej skazy, podobała się Bogu ciałem i umysłem.",
+  "seg":[
+    {"id":"s01","tr":"Pokrzepieni niebieskim pokarmem, pokornie błagamy Cię, Panie, abyśmy dzięki modlitwom i przykładowi błogosławionej Anieli, oczyszczeni z wszelkiej skazy, podobali się Tobie zarówno ciałem, jak i umysłem. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,null,null,null,null,"abyśmy",null,null,null,"i","przykładowi",null,null,null,null,"zarówno","ciałem","Tobie","podobali się","jak i","umysłem","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg",null,null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"Pokrzepieni niebieskim pokarmem"},{"s":3,"n":4,"a":3,"g":"pokornie błagamy Cię, Panie"},{"s":8,"n":3,"a":2,"g":"dzięki modlitwom błogosławionej Anieli"},{"s":13,"n":4,"a":3,"g":"oczyszczeni z wszelkiej skazy"},{"s":40,"n":4,"a":2,"g":"na wieki wieków"}],"ex":{"w003":"Pokrzepieni niebieskim pokarmem są ludzie, którzy teraz zanoszą prośbę do Boga.","w007":"„Deprecámur” ma znaczenie czynne: to modlący się pokornie błagają Boga.","w013":"Zarówno modlitwy, jak i przykład należą do błogosławionej Anieli. Prośba przywołuje je w związku z oczyszczeniem i podobaniem się Bogu.","w017":"Oczyszczenie z wszelkiej skazy należy do treści prośby. Modlący się proszą, aby jako oczyszczeni podobali się Bogu.","w021":"Prośba obejmuje podobanie się Bogu zarówno ciałem, jak i umysłem. „Tibi” wskazuje osobę, której mamy się podobać.","w040":"„Deus” określa tutaj Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

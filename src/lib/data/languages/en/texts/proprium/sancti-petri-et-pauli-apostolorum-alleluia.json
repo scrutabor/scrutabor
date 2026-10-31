@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Saints Peter and Paul, Apostles” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. You are Peter, and upon this rock I will build My Church. Alleluia.","g":["Alleluia","alleluia","You","are","Peter","and","upon","this","rock","I will build","Church","My","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. You are Peter, and upon this rock I will build My Church. Alleluia.","g":["Alleluia","alleluia","You","are","Peter","and","upon","this","rock","I will build",null,null,"Alleluia"],"a":[{"s":10,"n":2,"a":0,"g":"My Church"}]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Visitation of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Blessed art thou, O Virgin Mary, who didst bear the Creator of all things, thou didst bring forth Him who made thee, and remainest a virgin forever.","g":["Blessed","are","Virgin","Mary","who","of all things","bore","the Creator","brought forth","Him who","you","made","and","for","ever","you remain","a virgin"]}
+    {"id":"s01","tr":"Blessed are you, Virgin Mary, who carried the Creator of all things; you gave birth to Him who made you, and you remain a virgin forever.","g":[null,null,"Virgin","Mary","who",null,null,null,"you gave birth to","Him who",null,null,"and",null,null,"you remain","a virgin"],"a":[{"s":0,"n":2,"a":1,"g":"Blessed are you"},{"s":5,"n":3,"a":1,"g":"carried the Creator of all things"},{"s":10,"n":2,"a":1,"g":"made you"},{"s":13,"n":2,"a":1,"g":"forever"}]}
   ]
 }

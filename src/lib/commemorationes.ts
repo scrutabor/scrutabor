@@ -1,7 +1,7 @@
 // The corpus owns each commemoration's date, rank and admission; this
 // consumer does no calendar arithmetic and infers no procession or local use.
 //
-// Selection schema 2.1.0 states one decision for each situation of the Mass
+// Selection schema 2.2.0 states one decision for each situation of the Mass
 // (RG 108): a low Mass, a sung conventual Mass and a sung Mass that is not
 // conventual. The reader's low/sung control does not establish conventual
 // status, so where the two sung decisions differ both are kept and the Ordo
@@ -9,8 +9,8 @@
 //
 // A commemoration is either addressed, its slots naming its own texts, or
 // resolved per pair: the impeded Sunday, the Advent feria and the impeded
-// feast name no text of their own, and each pair names the formulary whose
-// Collect, Secret and Postcommunion it says on that date. Commemorations are
+// feast and weekday Vigil name no text of their own, and each pair names the formulary whose
+// Collect, Secret and Postcommunion it says on that date. Lower saints retain addressed slots. Commemorations are
 // addressed by identity, never by position.
 import tableData from './data/commemorationes.json';
 import {
@@ -53,6 +53,8 @@ export interface CommemorationSlotEntry {
 	/** Slash-addressed reader text, as every other transported body, or null where the slot is
 	 * resolved per pair to the oration of its role that the pair's formulary assembles. */
 	text: string | null;
+	/** Authored ownership; calendar slots are resolved per pair. */
+	relation: 'proper' | 'reference' | 'calendar';
 }
 export interface CommemorationEntry {
 	id: string;
@@ -174,7 +176,7 @@ export function createCommemorationLookup(
 			'occurrences',
 			'pairs'
 		]) ||
-		value.schema_version !== '2.1.0' ||
+		value.schema_version !== '2.2.0' ||
 		!sameList(value.profiles, [{ id: SEPARATE_CONCLUSIONS }]) ||
 		!sameList(value.situations, SITUATIONS) ||
 		!sameList(
@@ -218,13 +220,21 @@ export function createCommemorationLookup(
 			const expected = COMMEMORATION_SLOTS[index];
 			if (
 				!object(slot) ||
-				!exactKeys(slot, ['key', 'after', 'text']) ||
+				!exactKeys(slot, ['key', 'after', 'text', 'relation']) ||
 				slot.key !== expected ||
 				slot.after !== expected ||
+				typeof slot.relation !== 'string' ||
+				!['proper', 'reference', 'calendar'].includes(slot.relation) ||
+				(slot.text === null) !== (slot.relation === 'calendar') ||
 				(slot.text !== null && (typeof slot.text !== 'string' || !knownTexts.has(slot.text)))
 			)
 				throw new Error('invalid commemoration slot');
-			slots.push({ key: expected, after: expected, text: slot.text });
+			slots.push({
+				key: expected,
+				after: expected,
+				text: slot.text,
+				relation: slot.relation as CommemorationSlotEntry['relation']
+			});
 		}
 		// A commemoration says its own three texts or is resolved whole: a set that addressed some
 		// slots and left others to a formulary would have no single source for its orations.
@@ -420,7 +430,8 @@ export function createCommemorationLookup(
 export const RESOLVED_HEADINGS: Readonly<Record<string, 'formulary' | 'prayers'>> = {
 	'dominica-impedita': 'formulary',
 	'feria-adventus': 'prayers',
-	'festum-impeditum': 'formulary'
+	'festum-impeditum': 'formulary',
+	'vigilia-ascensionis-impedita': 'formulary'
 };
 
 /** What the reader calls a commemoration made on a date: a resolved one as RESOLVED_HEADINGS
@@ -446,7 +457,7 @@ export function commemorationName(
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.7.0' ||
+			ROOT_MANIFEST.schema_version !== '6.10.0' ||
 			ROOT_MANIFEST.base.commemorationes !== 'commemorationes.json'
 		)
 			throw new Error('undeclared commemoration resource');

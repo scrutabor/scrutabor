@@ -71,12 +71,16 @@ describe('the days table and the corpus agree', () => {
 
 describe('parts reach the spine', () => {
 	it('sends every part to a slot the Ordo actually has', () => {
-		const slots = new Set(
-			ORDO.flatMap((m) => m.entries)
-				.filter((e) => e.kind === 'proper')
-				.map((e) => e.id)
-		);
-		for (const part of PROPER_PARTS) {
+		const entries = ORDO.flatMap((m) => m.entries);
+		const slots = new Set(entries.filter((e) => e.kind === 'proper').map((e) => e.id));
+		// One part has no Proper slot of its own. The Requiem Agnus Dei, a formulary component,
+		// takes the place of the Ordinary's Agnus Dei, as the Canon and dismissal variants take
+		// the place of theirs, so its slot is that Ordinary text, said at every other Mass.
+		expect(entries.find((e) => e.id === SLOT_OF['agnus-dei'])).toMatchObject({
+			kind: 'text',
+			text: 'ordinarium/agnus-dei'
+		});
+		for (const part of PROPER_PARTS.filter((part) => part !== 'agnus-dei')) {
 			expect(
 				slots.has(SLOT_OF[part]),
 				`${part} maps to slot ${SLOT_OF[part]}, which the Ordo lacks`

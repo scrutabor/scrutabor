@@ -2,22 +2,22 @@
  "id": "proprium.dominica-iii-adventus-communio",
  "source_groups": [
   {
-   "edition": "edition.divinum-officium-missa.44667ff",
-   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "digital_item": "item.divinum-officium-missa.21cb2d37.advent-iii",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Tempora/Adv3-0; section [Communio], line 61"
+    "section": "web/www/missa/Latin/Tempora/Adv3-0.txt [Communio] (lines 60-61)"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-iii-adventus-communio.do44667ff",
+     "id": "use.proprium.dominica-iii-adventus-communio.do21cb2d37",
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The exact revision supplies this component as a derived digital comparison. The declared complete reading preserves the source spelling, accents, punctuation and component boundary. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-03"
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

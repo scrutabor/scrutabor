@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+  "language":"pl",
+  "about":"Modlitwa wspomina radość z dorocznej uroczystości świętych Marcelina, Piotra i Erazma. Prosi, aby przykłady tych męczenników pobudzały modlących się, którzy radują się ich zasługami.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który radujesz nas doroczną uroczystością Twoich błogosławionych Męczenników Marcelina, Piotra i Erazma, spraw, prosimy, aby pobudzały nas przykłady tych, których zasługami się radujemy. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże","który","nas","doroczną",null,null,null,"Marcelina","Piotra","i","Erazma","uroczystością","radujesz","spraw","prosimy","aby",null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg",null,null,null,null],"a":[{"s":4,"n":3,"a":1,"g":"Twoich błogosławionych Męczenników"},{"s":16,"n":5,"a":3,"g":"pobudzały nas przykłady tych, których zasługami się radujemy"},{"s":38,"n":4,"a":2,"g":"na wieki wieków"}],"ex":{"w009":"Chodzi o Piotra, męczennika wspominanego 2 czerwca wraz z Marcelinem i Erazmem.","w011":"Erazm jest biskupem i męczennikiem wymienionym w nagłówku tej Mszy.","w017":"„Quorum” wskazuje trzech wymienionych męczenników. Modlitwa mówi o ich zasługach i przykładach.","w020":"Łacińska forma bierna ujmuje modlących się jako tych, których pobudzają przykłady męczenników. Radość z ich zasług jest obecnym stwierdzeniem, a działanie przykładów należy do prośby.","w038":"„Deus” określa tutaj Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

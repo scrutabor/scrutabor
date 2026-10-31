@@ -2,22 +2,22 @@
  "id": "proprium.dominica-i-adventus-communio",
  "source_groups": [
   {
-   "edition": "edition.divinum-officium-missa.44667ff",
-   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "edition": "edition.divinum-officium-missa.b5e250b",
+   "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Tempora/Adv1-0; section [Communio], lines 55–56"
+    "section": "Latin/Tempora/Adv1-0.txt [Communio], heading54, scripture reference55, complete body56; b5e250b0 retained transcript source"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-i-adventus-communio.do44667ff",
+     "id": "use.proprium.dominica-i-adventus-communio.dob5e250b",
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The retained b5e250b0 source prints the complete nine-word Communion at line56, after its Psalm84:13 reference. All words, accents, capitalization and punctuation agree with the selected Latin. The separately retained 44667ff file has identical complete bytes; it is a concordance, not another independent edition."
     }
    ],
-   "verified_on": "2026-10-03"
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

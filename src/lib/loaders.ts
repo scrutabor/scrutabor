@@ -32,7 +32,7 @@ export { lemmaData } from './lemma-data';
 import { movementById } from './ordo';
 import { PROPER_DAYS, SLOT_OF, dayById } from './proprium';
 import { CANON_VARIANTS, CANON_ROLES, canonKey, validateCanonPack } from './canon';
-import { DISMISSAL_ROLE, PASCHAL_DISMISSAL, validateDismissalPack } from './dismissal';
+import { replacementDismissals, validateDismissalPack } from './dismissal';
 import {
 	COMMEMORATION_DECLARATIONS,
 	commemorationLookup,
@@ -279,7 +279,8 @@ export async function commemorationData(lang: Lang) {
 export const RESOLVED_FEAST_SIDE: Readonly<Record<string, 'mass' | 'formulary'>> = {
 	'dominica-impedita': 'mass',
 	'feria-adventus': 'mass',
-	'festum-impeditum': 'formulary'
+	'festum-impeditum': 'formulary',
+	'vigilia-ascensionis-impedita': 'mass'
 };
 
 /** How a resolved commemoration's page orders its feasts. The impeded feasts and the three feasts
@@ -288,7 +289,8 @@ export const RESOLVED_FEAST_SIDE: Readonly<Record<string, 'mass' | 'formulary'>>
 export const RESOLVED_FEAST_ORDER: Readonly<Record<string, 'edition' | 'civil'>> = {
 	'dominica-impedita': 'edition',
 	'feria-adventus': 'civil',
-	'festum-impeditum': 'civil'
+	'festum-impeditum': 'civil',
+	'vigilia-ascensionis-impedita': 'civil'
 };
 
 /** A commemoration's orations read as one document, the way a formulary's parts are. A
@@ -392,13 +394,9 @@ export async function commemorationPageData(id: string, lang: Lang) {
 	};
 }
 
-/** One shared Easter dismissal body per language, not a copy in each Mass. */
+/** One shared pack of source-owned dismissal variants per language. */
 export async function dismissalData(lang: Lang) {
-	return variantData(
-		lang,
-		[{ key: PASCHAL_DISMISSAL.replace('.', '/'), slot: DISMISSAL_ROLE }],
-		validateDismissalPack
-	);
+	return variantData(lang, replacementDismissals, validateDismissalPack);
 }
 
 async function variantData<Role extends string>(

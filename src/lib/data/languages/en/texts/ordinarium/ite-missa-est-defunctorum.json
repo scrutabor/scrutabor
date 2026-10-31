@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.ite-missa-est-defunctorum",
+  "language":"en",
+  "about":"After the final postcommunion prayer, the priest gives the greeting. The response is addressed to him. At Low Mass the priest then says “May they rest in peace” facing the altar. The response is “Amen.” In a sung Mass without solemn ministers, the celebrant sings the dismissal. The Placeat prayer is retained and the final blessing is omitted. The Last Gospel is normally retained. It is omitted when the prescribed rite of absolution for the dead follows.",
+  "seg":[
+    {"id":"s01","tr":"The Lord be with you.","tb":"exact","g":[null,null],"a":[{"s":0,"n":2,"a":0,"g":"The Lord be with you"}],"ex":{"w002":"The priest addresses the gathered faithful, so “you” is plural. The verb “be” is understood in the greeting."}},
+    {"id":"s02","tr":"And with your spirit.","tb":"revised","g":["And","with",null,null],"a":[{"s":2,"n":2,"a":0,"g":"your spirit"}]},
+    {"id":"s03","tr":"May they rest in peace.","tb":"exact","g":["May they rest","in","peace"],"ex":{"w007":"This is a prayer that the departed may rest in peace. The Latin verb has a plural subject."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

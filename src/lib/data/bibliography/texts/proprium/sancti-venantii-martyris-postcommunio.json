@@ -1,0 +1,126 @@
+{
+ "id": "proprium.sancti-venantii-martyris-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 535",
+    "scan": "PDF physical617 / leaf n616",
+    "section": "05-18 postcommunio; proper w001–w021 and literal cue only; supplied conclusion/Amen excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n616/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-venantii-martyris-postcommunio.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 21-word postcommunio proper w001–w021, followed by the separate literal cue “Per Dóminum.” The supplied complete conclusion and Amen are not printed at this proper locus."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
+    "section": "RG115a; complete supplied conclusion w022–w042 and Amen w043 only; accented common words and terminal; proper body excluded"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-venantii-martyris-postcommunio.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s RG115a supplies the complete Father-directed Per Dominum ending w022–w042 and Amen w043, excluding the proper body. The literal rubric list is unaccented. The matching common words on p.123 and terminal on p.226 control selected stress; p.226 also distinguishes the Amen response period. These controls do not establish response actors, singing or the distribution of conclusions in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 532",
+    "scan": "PDF physical613 / leaf n612",
+    "section": "05-18 postcommunio; proper w001–w021 and literal cue only; supplied conclusion/Amen excluded",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n612/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-venantii-martyris-postcommunio.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 21-word postcommunio proper w001–w021, followed by the separate literal cue “Per Dóminum nostrum.” The supplied complete conclusion and Amen are not printed at this proper locus. This is a separately set witness of the same received tradition, not proof of independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a; this setting’s supplied conclusion w022–w042 and Amen w043 only; proper body excluded",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-venantii-martyris-postcommunio.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies its complete ending and Amen w022–w043, excluding the proper body. Literal accents, punctuation and the Amen list semicolon remain in the transcript. Formula wording alone does not establish actors, singing, participation or grouped-orations conclusion distribution."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-venantii-martyris-postcommunio.benziger1962",
+   "text": "proprium.sancti-venantii-martyris-postcommunio",
+   "use": "use.proprium.sancti-venantii-martyris-postcommunio.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper and its own setting’s full RG115a form the explicit composite; separately set witnesses do not establish independent historical ancestry."
+  },
+  {
+   "id": "witness.proprium.sancti-venantii-martyris-postcommunio.vatican1962",
+   "text": "proprium.sancti-venantii-martyris-postcommunio",
+   "use": "use.proprium.sancti-venantii-martyris-postcommunio.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper and its own setting’s full RG115a form the explicit composite; separately set witnesses do not establish independent historical ancestry."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-venantii-martyris-postcommunio.benziger1962-vatican1962",
+  "text": "proprium.sancti-venantii-martyris-postcommunio",
+  "recension": "Benziger1962 approved-print proper and its own RG115a supplied conclusion/Amen, compared with a literal Vatican same-setting composite",
+  "witnesses": [
+   "witness.proprium.sancti-venantii-martyris-postcommunio.benziger1962",
+   "witness.proprium.sancti-venantii-martyris-postcommunio.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 10,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
+  }
+ }
+}

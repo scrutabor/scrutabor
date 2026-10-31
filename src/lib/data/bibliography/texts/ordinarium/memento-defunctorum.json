@@ -2,12 +2,30 @@
  "id": "ordinarium.memento-defunctorum",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-memento-defunctorum; closed-literal-selection} (line 262); complete source contexts 260–264"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.memento-defunctorum.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 38-word literal selection in the stated selection order (262), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 308–309",
-    "scan": "leaves n389–n390 / PDF pp. 390–391",
+    "printed": "p. 308",
+    "scan": "leaf n389 / PDF p. 390",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n389/mode/1up"
    },
    "entries": [
@@ -16,10 +34,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page image prints the Memento of the dead from its opening through s01, Memento etiam, Domine to in somno pacis, with the name slots N. et N. that the witness record treats as framing."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 309",
+    "scan": "leaf n390 / PDF p. 391",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n390/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.memento-defunctorum.continuation.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The cited page image prints the Memento of the dead from s02 to its end: the rubric Iungit manus, orat aliquantulum, Ipsis, Domine and Per eundem Christum Dominum nostrum. Amen."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

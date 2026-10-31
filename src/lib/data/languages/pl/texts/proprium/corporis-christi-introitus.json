@@ -3,10 +3,10 @@
   "language":"pl",
   "about":"Introit uroczystości Najświętszego Ciała Chrystusa. Przedstawia Boga karmiącego lud najlepszą pszenicą i miodem ze skały, a w wersecie wzywa do radosnego śpiewu.",
   "seg":[
-    {"id":"s01","tr":"Nakarmił ich najlepszą pszenicą, alleluja, i nasycił ich miodem ze skały, alleluja, alleluja, alleluja.","g":["nakarmił","ich","z","tłustością","pszenicy","alleluja","i","ze","skały","miodem","nasycił","ich","alleluja","alleluja","alleluja"]},
-    {"id":"s02","tr":"Radujcie się Bogiem, naszym wspomożycielem; radośnie wołajcie do Boga Jakuba.","g":["Radujcie się","Bogu","Wspomożycielowi","naszemu","wykrzykujcie","Bogu","Jakuba"]},
+    {"id":"s01","tr":"Nakarmił ich najlepszą pszenicą, alleluja, i nasycił ich miodem ze skały, alleluja, alleluja, alleluja.","g":["Nakarmił","ich",null,null,null,"alleluja","i","ze","skały","miodem","nasycił","ich","alleluja","alleluja","alleluja"],"a":[{"s":2,"n":3,"a":1,"g":"najlepszą pszenicą"}]},
+    {"id":"s02","tr":"Radujcie się Bogiem, naszym wspomożycielem; radośnie wołajcie do Boga Jakuba.","g":["Radujcie się","Bogiem","Wspomożycielem","naszym","wykrzykujcie","Bogu","Jakuba"]},
     {"id":"s03","tr":"Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen.","tb":"traditional-composite","g":["Chwała","Ojcu","i","Synowi","i","Duchowi","Świętemu","Jak","była","na","początku","i","teraz","i","zawsze","i","na","wieki","wieków","Amen"]},
     {"id":"s04","nr":"Po jego zakończeniu powtarza się antyfonę „Cibávit eos” aż do psalmu."},
-    {"id":"s05","tr":"Nakarmił ich najlepszą pszenicą, alleluja, i nasycił ich miodem ze skały, alleluja, alleluja, alleluja.","g":["nakarmił","ich","z","tłustością","pszenicy","alleluja","i","ze","skały","miodem","nasycił","ich","alleluja","alleluja","alleluja"]}
+    {"id":"s05","tr":"Nakarmił ich najlepszą pszenicą, alleluja, i nasycił ich miodem ze skały, alleluja, alleluja, alleluja.","g":["Nakarmił","ich",null,null,null,"alleluja","i","ze","skały","miodem","nasycił","ich","alleluja","alleluja","alleluja"],"a":[{"s":2,"n":3,"a":1,"g":"najlepszą pszenicą"}]}
   ]
 }

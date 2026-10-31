@@ -1,0 +1,17 @@
+{
+  "id":"ordinarium.ite-missa-est-defunctorum",
+  "title":"Requiéscant in pace",
+  "category":"ordinarium",
+  "section":"missa-fidelium",
+  "variant":"defunctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w001","f":"Dóminus","l":"dominus","m":60},{"i":"w002","f":"vobíscum","l":"vos","p":".","m":62,"a":13}]},
+    {"id":"s02","type":"verse","speaker":"minister","voice":"clara","delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w003","f":"Et","l":"et","m":15},{"i":"w004","f":"cum","l":"cum","m":0,"h":"w005"},{"i":"w005","f":"spíritu","l":"spiritus","m":100},{"i":"w006","f":"tuo","l":"tuus","p":".","m":101,"h":"w005"}]},
+    {"id":"s03","type":"verse","delivery":{"lecta":{"speaker":"sacerdos","voice":"clara"},"cantu":{"voice":"cantus"}},"w":[{"i":"w007","f":"Requiéscant","l":"requiesco","m":44},{"i":"w008","f":"in","l":"in","m":0,"h":"w009"},{"i":"w009","f":"pace","l":"pax","p":".","m":45}]},
+    {"id":"s04","type":"verse","speaker":"minister","voice":"clara","delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w010","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

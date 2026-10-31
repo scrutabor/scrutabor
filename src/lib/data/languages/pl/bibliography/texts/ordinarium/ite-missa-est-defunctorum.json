@@ -1,0 +1,57 @@
+{
+ "id": "ordinarium.ite-missa-est-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 341",
+    "scan": "PDF s. 355",
+    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+   },
+   "entries": [
+    {
+     "id": "use.pl.6f505b676e2c12b2a64c",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Otrzymana polska fraza „niech odpoczywają w pokoju wiecznym” w Godzinkach o Męce Pańskiej, zachowana jako osobne zdanie „Niech odpoczywają w pokoju wiecznym.”. Strona poświadcza to polskie brzmienie; nie jest przekładem Mszy z 1962 r. Łacińskie in pace znaczy dosłownie „w pokoju”."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 66",
+    "scan": "PDF s. 69",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.24761c85ddc01ddbe91c",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Polska odpowiedź „I z Duchem twoim.”, zachowana jako „I z duchem twoim.” po normalizacji wielkiej litery w rzeczowniku odnoszącym się do ducha kapłana."
+    },
+    {
+     "id": "use.pl.9adba4021baff6d01013",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Dokładne polskie pozdrowienie „Pan z wami.”; pozostały tekst zakończenia na tej stronie nie jest podstawą nowej modlitwy za zmarłych."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

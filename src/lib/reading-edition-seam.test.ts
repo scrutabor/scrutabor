@@ -15,10 +15,10 @@ import type { TextDocument } from './corpus';
 const runtime = freshProperFixture();
 
 it('declares every dated resource against the same freshly vendored reader edition', () => {
-	expect(ROOT_MANIFEST.schema_version).toBe('6.7.0');
-	expect([plManifest.schema_version, enManifest.schema_version]).toEqual(['6.7.0', '6.7.0']);
+	expect(ROOT_MANIFEST.schema_version).toBe('6.10.0');
+	expect([plManifest.schema_version, enManifest.schema_version]).toEqual(['6.10.0', '6.10.0']);
 	expect(introductionLookup).not.toBeNull();
-	expect(introductionLookup!.announcements.size).toBe(205);
+	expect(introductionLookup!.announcements.size).toBe(206);
 	expect(canonLookup).not.toBeNull();
 	expect(dismissalLookup).not.toBeNull();
 	expect(commemorationLookup).not.toBeNull();
@@ -62,7 +62,7 @@ it.each(['pl', 'en'] as const)(
 	}
 );
 
-it.each(['6.6.0', '6.8.0'])(
+it.each(['6.6.0', '6.7.0', '6.8.0', '6.9.0'])(
 	'rejects root reader %s at every declared lookup and restores the real edition',
 	async (version) => {
 		const resources = async () => [

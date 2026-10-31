@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bedae-venerabilis-postcommunio",
+  "language":"en",
+  "about":"The prayer asks that Bede may come forward as an intercessor so that God’s sacrifices may bring the community salvation. Bede is honored as a confessor and eminent doctor.",
+  "seg":[
+    {"id":"s01","tr":"Lord, we pray that blessed Bede, Your confessor and eminent doctor, may come forward as an intercessor, so that Your sacrifices may bring us salvation. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["So that","for us","Lord",null,null,"may bring","salvation",null,null,null,null,"and",null,null,"we pray","as an intercessor","may come forward","Through",null,null,"Jesus","Christ",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":3,"n":2,"a":1,"g":"Your sacrifices"},{"s":7,"n":2,"a":1,"g":"blessed Bede"},{"s":9,"n":2,"a":1,"g":"Your confessor"},{"s":12,"n":2,"a":1,"g":"eminent doctor"},{"s":18,"n":2,"a":1,"g":"our Lord"},{"s":22,"n":2,"a":1,"g":"Your Son"},{"s":31,"n":2,"a":1,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":3,"g":"forever and ever"}],"ex":{"w005":"The sacrifices are what the prayer asks to bring us salvation. Bede has the distinct role of intercessor in the main request.","w014":"Egregius honors Bede as an eminent doctor. It does not give him another office or change the divine addressee.","w016":"Bede is asked to come forward in prayer as an intercessor. Precator means one who prays, not peccator, a sinner."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

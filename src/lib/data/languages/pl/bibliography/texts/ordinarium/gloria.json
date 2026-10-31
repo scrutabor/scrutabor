@@ -8,7 +8,74 @@
    "locator": {
     "printed": "druk. s. 46",
     "scan": "PDF s. 49",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — dziękczynienie"
+   },
+   "entries": [
+    {
+     "id": "use.pl.7bddbbb0be4a2d33ce42",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczny wariant dziękczynienia: „Dzięki składamy Tobie dla wielkiej chwały Twojej.” Obecne „bo wielka jest chwała Twoja” jest rewizją składni, nie dosłownym odczytem tej strony."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — prośba o przyjęcie modlitwy"
+   },
+   "entries": [
+    {
+     "id": "use.pl.e2f3ce0c300bd37cd36b",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczny wariant prośby: „Który gładzisz grzechy świata, przyjmij prośby nasze!” Druk ma liczbę mnogą „prośby” i formę „przyjmij”; nie poświadcza dokładnie obecnego „przyjm błaganie nasze”."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — trzy wezwania pochwalne"
+   },
+   "entries": [
+    {
+     "id": "use.pl.af90bee5fee85e68d016",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Częściowy historyczny świadek brzmienia: „Chwalimy Cię. Błogosławimy Tobie. Cześć oddajemy Tobie.” Druk nie poświadcza odrębnego czwartego wezwania ani pełnego obecnego ciągu czterech zdań."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — trzykrotne „sam”"
    },
    "entries": [
     {
@@ -17,8 +84,21 @@
       "kind": "segment",
       "segment": "s12"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Albowiem tylko Tyś jest święty. Tylko Tyś jest Panem. Tylko Tyś Najwyższy, Jezu Chryste.”"
-    },
+     "claim": "Historyczny świadek trzykrotnego „sam”: „Boś ty sam Święty, Tyś sam Pan, Tyś sam Najwyższy, Jezu Chryste”. Druk przechodzi bez kropki po „Chryste” do „z Duchem świętym”; nie poświadcza dosłownie obecnego ciągu z „tylko Tyś”."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
     {
      "id": "use.pl.2b4003d55a932a4cdab6",
      "address": {
@@ -52,28 +132,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Boże, Królu nieba, Boże Ojcze wszechmogący.”"
     },
     {
-     "id": "use.pl.7bddbbb0be4a2d33ce42",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Dzięki Ci składamy, bo wielka jest chwała Twoja.”"
-    },
-    {
      "id": "use.pl.82dc7a224d2b169e28e8",
      "address": {
       "kind": "segment",
       "segment": "s08"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Boże, Baranku Boży, Synu Ojca.”"
-    },
-    {
-     "id": "use.pl.af90bee5fee85e68d016",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwalimy Cię. Błogosławimy Cię. Wielbimy Cię. Wysławiamy Cię.”"
     },
     {
      "id": "use.pl.beaf3dc314c2a5237c69",
@@ -90,14 +154,6 @@
       "segment": "s07"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, Synu Jednorodzony, Jezu Chryste.”"
-    },
-    {
-     "id": "use.pl.e2f3ce0c300bd37cd36b",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który gładzisz grzechy świata, przyjm błaganie nasze.”"
     },
     {
      "id": "use.pl.f007945bd27d403cd757",

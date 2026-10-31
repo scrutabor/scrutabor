@@ -1,7 +1,7 @@
 {
   "id":"orationes.cor-iesu",
   "language":"en",
-  "about":"The invocation that closes the prayers of Leo XIII, added to them in 1904 under Pius X. It is said three times. This edition prints it once.",
+  "about":"The invocation that closes the prayers of Leo XIII after low Mass. The 1952 Enchiridion Indulgentiarum attaches a separate indulgence of seven years to adding it three times, citing acts of the Sacred Congregation of Indulgences (17 June 1904) and the Apostolic Penitentiary (18 March 1932). This edition prints the invocation once.",
   "seg":[
     {"id":"s01","tr":"Most Sacred Heart of Jesus.","tc":[69],"tb":"exact","g":["Heart","of Jesus","most sacred"],"ex":{"w001":"This invocation addresses the Sacred Heart of Jesus. Latin “Cor” has the same form in the nominative and vocative, so it can both name the Heart and address It directly."}},
     {"id":"s02","tr":"Have mercy on us.","tc":[69],"tb":"exact","g":["have mercy","on us"]}

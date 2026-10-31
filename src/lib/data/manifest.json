@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.7.0",
+  "schema_version": "6.10.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -168,6 +168,12 @@
       "evidence": "bibliography/texts/ordinarium/adiutorium.json"
     },
     {
+      "id": "ordinarium.agnus-dei-defunctorum",
+      "path": "texts/ordinarium/agnus-dei-defunctorum.json",
+      "title": "Agnus Dei in Missis defunctorum",
+      "evidence": "bibliography/texts/ordinarium/agnus-dei-defunctorum.json"
+    },
+    {
       "id": "ordinarium.agnus-dei",
       "path": "texts/ordinarium/agnus-dei.json",
       "title": "Agnus Dei",
@@ -265,7 +271,8 @@
     {
       "id": "ordinarium.deo-gratias-epistolae",
       "path": "texts/ordinarium/deo-gratias-epistolae.json",
-      "title": "Deo grátias (post Epistolam)"
+      "title": "Deo grátias (post Epistolam)",
+      "evidence": "bibliography/texts/ordinarium/deo-gratias-epistolae.json"
     },
     {
       "id": "ordinarium.deus-qui-humanae",
@@ -344,6 +351,12 @@
       "path": "texts/ordinarium/introibo.json",
       "title": "Introíbo ad altáre Dei",
       "evidence": "bibliography/texts/ordinarium/introibo.json"
+    },
+    {
+      "id": "ordinarium.ite-missa-est-defunctorum",
+      "path": "texts/ordinarium/ite-missa-est-defunctorum.json",
+      "title": "Requiéscant in pace",
+      "evidence": "bibliography/texts/ordinarium/ite-missa-est-defunctorum.json"
     },
     {
       "id": "ordinarium.ite-missa-est-paschale",
@@ -779,7 +792,8 @@
     {
       "id": "ordinarium.qui-dixisti",
       "path": "texts/ordinarium/qui-dixisti.json",
-      "title": "Dómine Iesu Christe, qui dixísti"
+      "title": "Dómine Iesu Christe, qui dixísti",
+      "evidence": "bibliography/texts/ordinarium/qui-dixisti.json"
     },
     {
       "id": "ordinarium.qui-pridie-in-cena-domini",
@@ -838,12 +852,14 @@
     {
       "id": "ordinarium.simili-modo",
       "path": "texts/ordinarium/simili-modo.json",
-      "title": "Símili modo"
+      "title": "Símili modo",
+      "evidence": "bibliography/texts/ordinarium/simili-modo.json"
     },
     {
       "id": "ordinarium.supplices-te-rogamus",
       "path": "texts/ordinarium/supplices-te-rogamus.json",
-      "title": "Súpplices te rogámus"
+      "title": "Súpplices te rogámus",
+      "evidence": "bibliography/texts/ordinarium/supplices-te-rogamus.json"
     },
     {
       "id": "ordinarium.supra-quae",
@@ -4620,6 +4636,12 @@
       "evidence": "bibliography/texts/proprium/feria-v-in-cena-domini-secreta.json"
     },
     {
+      "id": "proprium.haec-hostia-secreta",
+      "path": "texts/proprium/haec-hostia-secreta.json",
+      "title": "Hæc hóstia quǽsumus",
+      "evidence": "bibliography/texts/proprium/haec-hostia-secreta.json"
+    },
+    {
       "id": "proprium.immaculata-conceptio-alleluia",
       "path": "texts/proprium/immaculata-conceptio-alleluia.json",
       "title": "Allelúia, allelúia. Tota pulchra es, María: et",
@@ -4774,6 +4796,12 @@
       "path": "texts/proprium/in-octava-nativitatis-secreta.json",
       "title": "Munéribus nostris, quǽsumus, Dómine, precibúsque suscéptis: et",
       "evidence": "bibliography/texts/proprium/in-octava-nativitatis-secreta.json"
+    },
+    {
+      "id": "proprium.laudis-tibi-secreta",
+      "path": "texts/proprium/laudis-tibi-secreta.json",
+      "title": "Laudis tibi Dómine",
+      "evidence": "bibliography/texts/proprium/laudis-tibi-secreta.json"
     },
     {
       "id": "proprium.litaniae-maiores-collecta",
@@ -5100,6 +5128,12 @@
       "evidence": "bibliography/texts/proprium/nativitas-sancti-ioannis-baptistae-secreta.json"
     },
     {
+      "id": "proprium.oblatis-muneribus-secreta",
+      "path": "texts/proprium/oblatis-muneribus-secreta.json",
+      "title": "Oblátis munéribus quǽsumus",
+      "evidence": "bibliography/texts/proprium/oblatis-muneribus-secreta.json"
+    },
+    {
       "id": "proprium.omnium-sanctorum-alleluia",
       "path": "texts/proprium/omnium-sanctorum-alleluia.json",
       "title": "Allelúia, allelúia. Veníte ad me, omnes qui",
@@ -5286,6 +5320,18 @@
       "evidence": "bibliography/texts/proprium/purificatio-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.refecti-cibo-potuque-postcommunio",
+      "path": "texts/proprium/refecti-cibo-potuque-postcommunio.json",
+      "title": "Refécti cibo potúque",
+      "evidence": "bibliography/texts/proprium/refecti-cibo-potuque-postcommunio.json"
+    },
+    {
+      "id": "proprium.refectione-sancta-postcommunio",
+      "path": "texts/proprium/refectione-sancta-postcommunio.json",
+      "title": "Refectióne sancta enutrítam",
+      "evidence": "bibliography/texts/proprium/refectione-sancta-postcommunio.json"
+    },
+    {
       "id": "proprium.sacratissimi-cordis-iesu-alleluia",
       "path": "texts/proprium/sacratissimi-cordis-iesu-alleluia.json",
       "title": "Tóllite iugum meum",
@@ -5346,6 +5392,12 @@
       "evidence": "bibliography/texts/proprium/sacratissimi-cordis-iesu-secreta.json"
     },
     {
+      "id": "proprium.sacro-munere-postcommunio",
+      "path": "texts/proprium/sacro-munere-postcommunio.json",
+      "title": "Sacro múnere satiáti",
+      "evidence": "bibliography/texts/proprium/sacro-munere-postcommunio.json"
+    },
+    {
       "id": "proprium.sancta-familia-alleluia",
       "path": "texts/proprium/sancta-familia-alleluia.json",
       "title": "Allelúia, allelúia. Vere tu es Rex",
@@ -5404,6 +5456,24 @@
       "path": "texts/proprium/sancta-familia-secreta.json",
       "title": "Placatiónis hóstiam offérimus tibi, Dómine, supplíciter deprecántes",
       "evidence": "bibliography/texts/proprium/sancta-familia-secreta.json"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-collecta",
+      "path": "texts/proprium/sanctae-angelae-mericiae-collecta.json",
+      "title": "Deus, qui novum",
+      "evidence": "bibliography/texts/proprium/sanctae-angelae-mericiae-collecta.json"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+      "path": "texts/proprium/sanctae-angelae-mericiae-postcommunio.json",
+      "title": "Cælésti alimónia refécti",
+      "evidence": "bibliography/texts/proprium/sanctae-angelae-mericiae-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctae-angelae-mericiae-secreta",
+      "path": "texts/proprium/sanctae-angelae-mericiae-secreta.json",
+      "title": "Hóstia, Dómine, quam tibi",
+      "evidence": "bibliography/texts/proprium/sanctae-angelae-mericiae-secreta.json"
     },
     {
       "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
@@ -5472,6 +5542,36 @@
       "evidence": "bibliography/texts/proprium/sanctae-annae-matris-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.sanctae-catharinae-senensis-collecta",
+      "path": "texts/proprium/sanctae-catharinae-senensis-collecta.json",
+      "title": "Da, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sanctae-catharinae-senensis-collecta.json"
+    },
+    {
+      "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+      "path": "texts/proprium/sanctae-catharinae-senensis-postcommunio.json",
+      "title": "Æternitátem nobis, Dómine, cónferat",
+      "evidence": "bibliography/texts/proprium/sanctae-catharinae-senensis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctae-catharinae-senensis-secreta",
+      "path": "texts/proprium/sanctae-catharinae-senensis-secreta.json",
+      "title": "Ascéndant ad te, Dómine",
+      "evidence": "bibliography/texts/proprium/sanctae-catharinae-senensis-secreta.json"
+    },
+    {
+      "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+      "path": "texts/proprium/sanctae-mariae-magdalenae-de-pazzis-collecta.json",
+      "title": "Deus, virginitátis amátor",
+      "evidence": "bibliography/texts/proprium/sanctae-mariae-magdalenae-de-pazzis-collecta.json"
+    },
+    {
+      "id": "proprium.sanctae-monicae-collecta",
+      "path": "texts/proprium/sanctae-monicae-collecta.json",
+      "title": "Deus, mæréntium consolátor",
+      "evidence": "bibliography/texts/proprium/sanctae-monicae-collecta.json"
+    },
+    {
       "id": "proprium.sanctae-petronillae-collecta",
       "path": "texts/proprium/sanctae-petronillae-collecta.json",
       "title": "Exáudi nos, Deus salutáris noster",
@@ -5532,6 +5632,54 @@
       "evidence": "bibliography/texts/proprium/sancti-andreae-apostoli-secreta.json"
     },
     {
+      "id": "proprium.sancti-antonini-collecta",
+      "path": "texts/proprium/sancti-antonini-collecta.json",
+      "title": "Sancti Antoníni, Dómine, Confessóris tui atque Pontíficis",
+      "evidence": "bibliography/texts/proprium/sancti-antonini-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-antonini-postcommunio",
+      "path": "texts/proprium/sancti-antonini-postcommunio.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sancti-antonini-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-athanasii-collecta",
+      "path": "texts/proprium/sancti-athanasii-collecta.json",
+      "title": "Exáudi, quǽsumus, Dómine, preces nostras",
+      "evidence": "bibliography/texts/proprium/sancti-athanasii-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-athanasii-postcommunio",
+      "path": "texts/proprium/sancti-athanasii-postcommunio.json",
+      "title": "Deus, fidélium remunerátor animárum",
+      "evidence": "bibliography/texts/proprium/sancti-athanasii-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-athanasii-secreta",
+      "path": "texts/proprium/sancti-athanasii-secreta.json",
+      "title": "Sancti Athanásii Confessóris tui atque Pontíficis",
+      "evidence": "bibliography/texts/proprium/sancti-athanasii-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-collecta",
+      "path": "texts/proprium/sancti-augustini-cantuariensis-collecta.json",
+      "title": "Deus, qui Anglórum gentes",
+      "evidence": "bibliography/texts/proprium/sancti-augustini-cantuariensis-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+      "path": "texts/proprium/sancti-augustini-cantuariensis-postcommunio.json",
+      "title": "Hóstia salutári refécti",
+      "evidence": "bibliography/texts/proprium/sancti-augustini-cantuariensis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-augustini-cantuariensis-secreta",
+      "path": "texts/proprium/sancti-augustini-cantuariensis-secreta.json",
+      "title": "Sacrifícium tibi offérimus, Dómine",
+      "evidence": "bibliography/texts/proprium/sancti-augustini-cantuariensis-secreta.json"
+    },
+    {
       "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
       "path": "texts/proprium/sancti-bartholomaei-apostoli-alleluia.json",
       "title": "Allelúia, allelúia. Te gloriósus Apostolórum chorus laudat",
@@ -5578,6 +5726,72 @@
       "path": "texts/proprium/sancti-bartholomaei-apostoli-secreta.json",
       "title": "Beáti Apóstoli tui Bartholomǽi solémnia recenséntes, quǽsumus",
       "evidence": "bibliography/texts/proprium/sancti-bartholomaei-apostoli-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-collecta",
+      "path": "texts/proprium/sancti-bedae-venerabilis-collecta.json",
+      "title": "Deus, qui Ecclésiam tuam",
+      "evidence": "bibliography/texts/proprium/sancti-bedae-venerabilis-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+      "path": "texts/proprium/sancti-bedae-venerabilis-postcommunio.json",
+      "title": "Ut nobis, Dómine, tua sacrifícia",
+      "evidence": "bibliography/texts/proprium/sancti-bedae-venerabilis-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-bedae-venerabilis-secreta",
+      "path": "texts/proprium/sancti-bedae-venerabilis-secreta.json",
+      "title": "Sancti Bedæ Confessóris tui",
+      "evidence": "bibliography/texts/proprium/sancti-bedae-venerabilis-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-bernardini-senensis-collecta",
+      "path": "texts/proprium/sancti-bernardini-senensis-collecta.json",
+      "title": "Dómine Iesu, qui beáto",
+      "evidence": "bibliography/texts/proprium/sancti-bernardini-senensis-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-bonifatii-martyris-collecta",
+      "path": "texts/proprium/sancti-bonifatii-martyris-collecta.json",
+      "title": "Da, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sancti-bonifatii-martyris-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+      "path": "texts/proprium/sancti-bonifatii-martyris-postcommunio.json",
+      "title": "Refécti participatióne múneris sacri",
+      "evidence": "bibliography/texts/proprium/sancti-bonifatii-martyris-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-felicis-i-papae-collecta",
+      "path": "texts/proprium/sancti-felicis-i-papae-collecta.json",
+      "title": "Gregem tuum, Pastor ætérne",
+      "evidence": "bibliography/texts/proprium/sancti-felicis-i-papae-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+      "path": "texts/proprium/sancti-gregorii-nazianzeni-collecta.json",
+      "title": "Deus, qui pópulo tuo",
+      "evidence": "bibliography/texts/proprium/sancti-gregorii-nazianzeni-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+      "path": "texts/proprium/sancti-gregorii-nazianzeni-postcommunio.json",
+      "title": "Ut nobis, Dómine, tua sacrifícia dent salútem",
+      "evidence": "bibliography/texts/proprium/sancti-gregorii-nazianzeni-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+      "path": "texts/proprium/sancti-gregorii-nazianzeni-secreta.json",
+      "title": "Sancti Gregórii Pontíficis tui atque Doctóris",
+      "evidence": "bibliography/texts/proprium/sancti-gregorii-nazianzeni-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-gregorii-vii-collecta",
+      "path": "texts/proprium/sancti-gregorii-vii-collecta.json",
+      "title": "Deus, in te sperántium fortitúdo",
+      "evidence": "bibliography/texts/proprium/sancti-gregorii-vii-collecta.json"
     },
     {
       "id": "proprium.sancti-iacobi-apostoli-alleluia",
@@ -5758,6 +5972,12 @@
       "path": "texts/proprium/sancti-ioannis-apostoli-et-evangelistae-tractus.json",
       "title": "Beátus vir, qui timet Dóminum: in mandátis",
       "evidence": "bibliography/texts/proprium/sancti-ioannis-apostoli-et-evangelistae-tractus.json"
+    },
+    {
+      "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+      "path": "texts/proprium/sancti-ioannis-baptistae-de-la-salle-collecta.json",
+      "title": "Deus, qui ad christiánam páuperum eruditiónem",
+      "evidence": "bibliography/texts/proprium/sancti-ioannis-baptistae-de-la-salle-collecta.json"
     },
     {
       "id": "proprium.sancti-ioseph-opificis-alleluia",
@@ -6132,6 +6352,18 @@
       "evidence": "bibliography/texts/proprium/sancti-matthiae-apostoli-tractus.json"
     },
     {
+      "id": "proprium.sancti-paschalis-baylon-collecta",
+      "path": "texts/proprium/sancti-paschalis-baylon-collecta.json",
+      "title": "Deus, qui beátum Paschálem Confessórem tuum",
+      "evidence": "bibliography/texts/proprium/sancti-paschalis-baylon-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-petri-caelestini-collecta",
+      "path": "texts/proprium/sancti-petri-caelestini-collecta.json",
+      "title": "Deus, qui beátum Petrum",
+      "evidence": "bibliography/texts/proprium/sancti-petri-caelestini-collecta.json"
+    },
+    {
       "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
       "path": "texts/proprium/sancti-petri-et-pauli-apostolorum-alleluia.json",
       "title": "Allelúia, allelúia. Tu es Petrus, et super",
@@ -6190,6 +6422,84 @@
       "path": "texts/proprium/sancti-petri-et-pauli-apostolorum-secreta.json",
       "title": "Hóstias, Dómine, quas nómini tuo sacrándas offérimus",
       "evidence": "bibliography/texts/proprium/sancti-petri-et-pauli-apostolorum-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-collecta",
+      "path": "texts/proprium/sancti-petri-martyris-collecta.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sancti-petri-martyris-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-postcommunio",
+      "path": "texts/proprium/sancti-petri-martyris-postcommunio.json",
+      "title": "Fidéles tuos, Dómine, custódiant sacraménta",
+      "evidence": "bibliography/texts/proprium/sancti-petri-martyris-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-petri-martyris-secreta",
+      "path": "texts/proprium/sancti-petri-martyris-secreta.json",
+      "title": "Preces, quas tibi, Dómine, offérimus",
+      "evidence": "bibliography/texts/proprium/sancti-petri-martyris-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-collecta",
+      "path": "texts/proprium/sancti-philippi-nerii-collecta.json",
+      "title": "Deus, qui beátum Philíppum",
+      "evidence": "bibliography/texts/proprium/sancti-philippi-nerii-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-postcommunio",
+      "path": "texts/proprium/sancti-philippi-nerii-postcommunio.json",
+      "title": "Cæléstibus, Dómine, pasti delíciis",
+      "evidence": "bibliography/texts/proprium/sancti-philippi-nerii-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-philippi-nerii-secreta",
+      "path": "texts/proprium/sancti-philippi-nerii-secreta.json",
+      "title": "Sacrifíciis præséntibus, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/sancti-philippi-nerii-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-pii-v-collecta",
+      "path": "texts/proprium/sancti-pii-v-collecta.json",
+      "title": "Deus, qui ad conteréndos Ecclésiæ tuæ hostes",
+      "evidence": "bibliography/texts/proprium/sancti-pii-v-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-collecta",
+      "path": "texts/proprium/sancti-roberti-bellarmino-collecta.json",
+      "title": "Deus, qui ad errórum insídias repelléndas",
+      "evidence": "bibliography/texts/proprium/sancti-roberti-bellarmino-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+      "path": "texts/proprium/sancti-roberti-bellarmino-postcommunio.json",
+      "title": "Sacraménta, quæ súmpsimus, Dómine Deus noster",
+      "evidence": "bibliography/texts/proprium/sancti-roberti-bellarmino-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-roberti-bellarmino-secreta",
+      "path": "texts/proprium/sancti-roberti-bellarmino-secreta.json",
+      "title": "Hóstias tibi, Dómine, in odórem suavitátis offérimus",
+      "evidence": "bibliography/texts/proprium/sancti-roberti-bellarmino-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-stanislai-collecta",
+      "path": "texts/proprium/sancti-stanislai-collecta.json",
+      "title": "Deus, pro cuius honóre",
+      "evidence": "bibliography/texts/proprium/sancti-stanislai-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-stanislai-postcommunio",
+      "path": "texts/proprium/sancti-stanislai-postcommunio.json",
+      "title": "Hæc nos commúnio, Dómine, purget",
+      "evidence": "bibliography/texts/proprium/sancti-stanislai-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-stanislai-secreta",
+      "path": "texts/proprium/sancti-stanislai-secreta.json",
+      "title": "Múnera tibi, Dómine, dicáta sanctífica",
+      "evidence": "bibliography/texts/proprium/sancti-stanislai-secreta.json"
     },
     {
       "id": "proprium.sancti-stephani-protomartyris-alleluia",
@@ -6298,6 +6608,42 @@
       "path": "texts/proprium/sancti-thomae-apostoli-secreta.json",
       "title": "Débitum tibi, Dómine, nostræ réddimus servitútis, supplíciter",
       "evidence": "bibliography/texts/proprium/sancti-thomae-apostoli-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-tui-secreta",
+      "path": "texts/proprium/sancti-tui-secreta.json",
+      "title": "Sancti tui quǽsumus",
+      "evidence": "bibliography/texts/proprium/sancti-tui-secreta.json"
+    },
+    {
+      "id": "proprium.sancti-ubaldi-collecta",
+      "path": "texts/proprium/sancti-ubaldi-collecta.json",
+      "title": "Auxílium tuum nobis, Dómine",
+      "evidence": "bibliography/texts/proprium/sancti-ubaldi-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-ubaldi-postcommunio",
+      "path": "texts/proprium/sancti-ubaldi-postcommunio.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sancti-ubaldi-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-collecta",
+      "path": "texts/proprium/sancti-venantii-martyris-collecta.json",
+      "title": "Deus, qui hunc diem",
+      "evidence": "bibliography/texts/proprium/sancti-venantii-martyris-collecta.json"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-postcommunio",
+      "path": "texts/proprium/sancti-venantii-martyris-postcommunio.json",
+      "title": "Súmpsimus, Dómine, ætérnæ vitæ",
+      "evidence": "bibliography/texts/proprium/sancti-venantii-martyris-postcommunio.json"
+    },
+    {
+      "id": "proprium.sancti-venantii-martyris-secreta",
+      "path": "texts/proprium/sancti-venantii-martyris-secreta.json",
+      "title": "Hanc oblatiónem, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sancti-venantii-martyris-secreta.json"
     },
     {
       "id": "proprium.sanctissimae-trinitatis-alleluia",
@@ -6414,6 +6760,18 @@
       "evidence": "bibliography/texts/proprium/sanctissimi-nominis-iesu-secreta.json"
     },
     {
+      "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+      "path": "texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta.json",
+      "title": "Præsta, quǽsumus, omnípotens Deus",
+      "evidence": "bibliography/texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta.json"
+    },
+    {
+      "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+      "path": "texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio.json",
+      "title": "Refécti participatióne múneris sacri",
+      "evidence": "bibliography/texts/proprium/sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio.json"
+    },
+    {
       "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
       "path": "texts/proprium/sanctorum-innocentium-martyrum-alleluia.json",
       "title": "Allelúia, allelúia. Laudáte, púeri, Dóminum, laudáte nomen",
@@ -6478,6 +6836,30 @@
       "path": "texts/proprium/sanctorum-innocentium-martyrum-tractus.json",
       "title": "Effudérunt sánguinem sanctórum, velut aquam, in circúitu",
       "evidence": "bibliography/texts/proprium/sanctorum-innocentium-martyrum-tractus.json"
+    },
+    {
+      "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+      "path": "texts/proprium/sanctorum-marcellini-petri-et-erasmi-collecta.json",
+      "title": "Deus, qui nos ánnua",
+      "evidence": "bibliography/texts/proprium/sanctorum-marcellini-petri-et-erasmi-collecta.json"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+      "path": "texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-collecta.json",
+      "title": "Semper nos, Dómine, Mártyrum tuórum",
+      "evidence": "bibliography/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-collecta.json"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+      "path": "texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.json",
+      "title": "Quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.json"
+    },
+    {
+      "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+      "path": "texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-secreta.json",
+      "title": "Sanctórum Mártyrum tuórum, quǽsumus, Dómine",
+      "evidence": "bibliography/texts/proprium/sanctorum-nerei-achillei-domitillae-et-pancratii-secreta.json"
     },
     {
       "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
@@ -6636,6 +7018,12 @@
       "evidence": "bibliography/texts/proprium/septem-dolorum-beatae-mariae-virginis-tractus.json"
     },
     {
+      "id": "proprium.super-has-hostias-secreta",
+      "path": "texts/proprium/super-has-hostias-secreta.json",
+      "title": "Super has hóstias",
+      "evidence": "bibliography/texts/proprium/super-has-hostias-secreta.json"
+    },
+    {
       "id": "proprium.transfiguratio-domini-alleluia",
       "path": "texts/proprium/transfiguratio-domini-alleluia.json",
       "title": "Allelúia, allelúia. Candor est lucis ætérnæ, spéculum",
@@ -6694,6 +7082,12 @@
       "path": "texts/proprium/transfiguratio-domini-secreta.json",
       "title": "Obláta, quǽsumus, Dómine, múnera gloriósa Unigéniti tui",
       "evidence": "bibliography/texts/proprium/transfiguratio-domini-secreta.json"
+    },
+    {
+      "id": "proprium.vigilia-ascensionis-evangelium",
+      "path": "texts/proprium/vigilia-ascensionis-evangelium.json",
+      "title": "In illo témpore: Sublevátis Iesus óculis in cælum",
+      "evidence": "bibliography/texts/proprium/vigilia-ascensionis-evangelium.json"
     },
     {
       "id": "proprium.vigilia-nativitatis-alleluia",
@@ -6960,7 +7354,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 1054,
+  "morphology": 1057,
   "kalendarium": [
     2026,
     2101

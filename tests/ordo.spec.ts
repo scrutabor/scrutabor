@@ -402,9 +402,13 @@ test('the responses after the readings follow the sourced participation lists', 
 	const deo = page.locator('.part', { hasText: 'Deo grátias' });
 	const laus = page.locator('.part', { hasText: 'Laus tibi, Christe' });
 
-	// DMS 25 a names Deo gratias for sung Mass but does not name Laus tibi,
-	// Christe. Silence in that list must not be promoted to an attribution.
-	await expect(deo.locator('.who-all')).toHaveText('odpowiadają wszyscy');
+	// DMS 25 a lists sung-response formulas, not every occurrence of those words: the edition
+	// withholds the sung grant at both responses after the readings. Silence in that list must
+	// not be promoted to an attribution. Each response first shows its settled actor, so the
+	// absence below is read from the rendered line, not from a page still confirming its day.
+	await expect(deo.locator('.who-name')).toHaveText('usługujący');
+	await expect(laus.locator('.who-name')).toHaveText('usługujący');
+	await expect(deo.locator('.who-all')).toHaveCount(0);
 	await expect(laus.locator('.who-all')).toHaveCount(0);
 
 	// DMS 31 a names both among the first-degree responses at low Mass.

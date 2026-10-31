@@ -9,6 +9,7 @@
 
 import type { Lang } from './i18n';
 import type { OrdinaryPrescriptions } from './ordinary-prescriptions';
+import type { OrdinaryOmissionDescriptor } from './ordinary-segment-omissions';
 import { FORMULARY_METADATA, formularyTitle, type ComponentCondition } from './corpus-metadata';
 import { bindPlFields } from './polish';
 import { dayOf, dayOn, isCivilDate, isoDate, type Kalendar } from './kalendarium';
@@ -30,6 +31,7 @@ export const PROPER_PARTS = [
 	'offertorium',
 	'secreta',
 	'praefatio',
+	'agnus-dei',
 	'communio',
 	'laudes-psalmus',
 	'laudes-canticum',
@@ -69,6 +71,7 @@ export const SLOT_OF: Record<ProperPart, string> = {
 	offertorium: 'offertorium',
 	secreta: 'secreta',
 	praefatio: 'praefatio',
+	'agnus-dei': 'agnus-dei',
 	communio: 'communio',
 	'laudes-psalmus': 'laudes',
 	'laudes-canticum': 'laudes',
@@ -97,6 +100,7 @@ const POST_SEPTUAGESIMAM: readonly Season[] = ['septuagesima', 'quadragesima', '
 export interface ProperDay {
 	/** Source-derived branches transported unchanged from the neutral catalogue. */
 	ordinary: OrdinaryPrescriptions;
+	ordinary_omissions: OrdinaryOmissionDescriptor[];
 	/** Stable identity of this particular Mass, including any variant. */
 	id: string;
 	/** Stable liturgical order for the picker and concordance. */
@@ -172,6 +176,7 @@ const PROPER_DAYS_SOURCE: ProperDay[] = FORMULARY_METADATA.map((formulary) => {
 	});
 	return {
 		ordinary: formulary.ordinary,
+		ordinary_omissions: formulary.ordinary_omissions,
 		id: formulary.id,
 		order: formulary.order,
 		collection: formulary.collection,

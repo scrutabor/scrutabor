@@ -2,22 +2,40 @@
  "id": "proprium.dominica-iv-adventus-communio",
  "source_groups": [
   {
-   "edition": "edition.divinum-officium-horae.44667ff",
-   "digital_item": "item.divinum-officium-horae.44667ff.doc10a",
-   "role": "derived_digital_collation_aid",
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "digital_item": "item.divinum-officium-missa.21cb2d37.advent-iv",
+   "role": "rubric_control",
    "locator": {
-    "section": "pinned source key Horae/Latin/Commune/C10a; section [Communio], line 41 (label 39, Is 7:14 reference 40); reached from Tempora/Adv4-0 [Communio], line 57 (@Commune/C10a:Communio)"
+    "section": "web/www/missa/Latin/Tempora/Adv4-0.txt [Communio], heading56, literal @Commune/C10a:Communio reference57"
    },
    "entries": [
     {
-     "id": "use.proprium.dominica-iv-adventus-communio.do44667ff",
+     "id": "use.proprium.dominica-iv-adventus-communio.reference.do21cb2d37",
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Advent IV caller supplies the literal same-section reference to Commune/C10a, not the Communion words. At this revision the retained destination is obsolete/missa/Latin/Commune/C10a.txt."
     }
    ],
-   "verified_on": "2026-10-03"
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.21cb2d37",
+   "digital_item": "item.divinum-officium-missa.21cb2d37.marian-common",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Adv4-0.txt [Communio] (lines 57-57); obsolete/missa/Latin/Commune/C10a.txt [Communio] (lines 48-49)"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-iv-adventus-communio.do21cb2d37",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The exact revision supplies this component as a derived digital comparison. The common file supplies the complete Communion; the Advent IV caller reference is separately inventoried. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
+    }
+   ],
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

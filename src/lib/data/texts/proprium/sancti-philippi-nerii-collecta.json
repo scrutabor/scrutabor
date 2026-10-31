@@ -1,0 +1,15 @@
+{
+  "id":"proprium.sancti-philippi-nerii-collecta",
+  "title":"Deus, qui beátum Philíppum",
+  "category":"proprium",
+  "section":"missa-catechumenorum",
+  "variant":"sancti-philippi-nerii",
+  "sung":false,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"speaker":"sacerdos","voice":"cantus"}},"w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":5},{"i":"w002","f":"qui","l":"qui","m":18,"h":"w010"},{"i":"w003","f":"beátum","l":"beatus","m":96,"h":"w004"},{"i":"w004","f":"Philíppum","l":"Philippus","m":35},{"i":"w005","f":"Confessórem","l":"confessor","m":162},{"i":"w006","f":"tuum","l":"tuus","m":96,"h":"w005"},{"i":"w007","f":"Sanctórum","l":"sanctus","m":76,"s":true},{"i":"w008","f":"tuórum","l":"tuus","m":76,"h":"w007"},{"i":"w009","f":"glória","l":"gloria","m":30},{"i":"w010","f":"sublimásti","l":"sublimo","p":":","m":283,"a":7},{"i":"w011","f":"concéde","l":"concedo","m":86},{"i":"w012","f":"propítius","l":"propitius","p":";","m":59,"h":"w011"},{"i":"w013","f":"ut","l":"ut","p":",","m":15},{"i":"w014","f":"cuius","l":"qui","m":27,"h":"w004"},{"i":"w015","f":"solemnitáte","l":"sollemnitas","m":45},{"i":"w016","f":"lætámur","l":"laetor","p":",","m":246},{"i":"w017","f":"eius","l":"is","m":27},{"i":"w018","f":"virtútum","l":"virtus","m":63},{"i":"w019","f":"proficiámus","l":"proficio","m":161},{"i":"w020","f":"exémplo","l":"exemplum","p":".","m":26},{"i":"w021","f":"Per","l":"per","m":3,"h":"w022"},{"i":"w022","f":"Dóminum","l":"dominus","m":35},{"i":"w023","f":"nostrum","l":"noster","m":96,"h":"w022"},{"i":"w024","f":"Iesum","l":"Iesus","m":38},{"i":"w025","f":"Christum","l":"Christus","m":35},{"i":"w026","f":"Fílium","l":"filius","m":35},{"i":"w027","f":"tuum","l":"tuus","p":":","m":96,"h":"w026"},{"i":"w028","f":"Qui","l":"qui","m":18,"h":"w030"},{"i":"w029","f":"tecum","l":"tu","m":131},{"i":"w030","f":"vivit","l":"vivo","m":140},{"i":"w031","f":"et","l":"et","m":15},{"i":"w032","f":"regnat","l":"regno","m":119},{"i":"w033","f":"in","l":"in","m":0,"h":"w034"},{"i":"w034","f":"unitáte","l":"unitas","m":45},{"i":"w035","f":"Spíritus","l":"spiritus","m":250},{"i":"w036","f":"Sancti","l":"sanctus","p":",","m":99,"h":"w035"},{"i":"w037","f":"Deus","l":"deus","p":",","m":60},{"i":"w038","f":"per","l":"per","m":3,"h":"w040"},{"i":"w039","f":"ómnia","l":"omnis","m":129,"h":"w040"},{"i":"w040","f":"sǽcula","l":"saeculum","m":85},{"i":"w041","f":"sæculórum","l":"saeculum","p":".","m":145}]},
+    {"id":"s02","type":"verse","speaker":"minister","voice":"clara","delivery":{"cantu":{"speaker":"schola","voice":"cantus"}},"participation":{"lecta":{"gradus":1,"source":"DMS 31 a"},"cantu":{"gradus":1,"source":"DMS 25 a"}},"w":[{"i":"w042","f":"Amen","l":"amen","p":".","m":46}]}
+  ]
+}

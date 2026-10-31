@@ -1,0 +1,28 @@
+{
+ "id": "proprium.dominica-i-in-quadragesima-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68",
+    "section": "Gloria Patri only (s01/w026–045); Holy Ghost becomes Holy Spirit"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-i-in-quadragesima-introitus.gloria-patri.key1901",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English wording basis for the Gloria Patri only (s01/w026–045). The received formula uses Holy Spirit for the printed Holy Ghost; the other material wording is retained. This page does not supply the Introit proper, psalm verse or repeated antiphon."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

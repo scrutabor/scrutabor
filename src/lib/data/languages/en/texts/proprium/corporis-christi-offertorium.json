@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Offertory of the feast of the Most Holy Body of Christ. It presents the Lord’s priests offering incense and loaves to God and guarding the holiness of His name.",
   "seg":[
-    {"id":"s01","tr":"The priests of the Lord offer incense and loaves to God; therefore they shall be holy to their God and shall not profane His name. Alleluia.","g":["priests","of the Lord","incense","and","loaves","offer","to God","and","therefore","holy","shall be","to God","their","and",null,null,"the name","His","alleluia"],"a":[{"s":14,"n":2,"a":1,"g":"shall not profane"}]}
+    {"id":"s01","tr":"The priests of the Lord offer incense and loaves to God; therefore they shall be holy to their God and shall not profane His name. Alleluia.","g":["Priests","of the Lord","incense","and","loaves","offer","to God","and","therefore","holy","shall be",null,null,"and",null,null,"the name","His","alleluia"],"a":[{"s":11,"n":2,"a":0,"g":"to their God"},{"s":14,"n":2,"a":1,"g":"shall not profane"}]}
   ]
 }

@@ -25,7 +25,7 @@
    "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "official_text",
    "locator": {
-    "section": "Appendix A — Common Prayers — Te Deum"
+    "section": "APPENDIX / A) COMMON PRAYERS / Te Deum"
    },
    "entries": [
     {
@@ -33,10 +33,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+     "claim": "The complete 194-word Latin prayer and its printed boundary in this section."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -58,5 +58,16 @@
    "verified_on": "2026-10-04"
   }
  ],
- "witnesses": []
+ "witnesses": [
+  {
+   "id": "witness.orationes.te-deum.compendium-2005",
+   "text": "orationes.te-deum",
+   "use": "use.orationes.te-deum.compendium-2005",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Current direct reading of the Latin in the official English HTML. The predecessor header identified the Lithuanian parallel publication; these are not treated as genealogically independent editions."
+  }
+ ]
 }

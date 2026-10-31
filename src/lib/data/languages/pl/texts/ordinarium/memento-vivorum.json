@@ -3,7 +3,7 @@
   "language":"pl",
   "about":"Modlitwa zaczyna się od prośby, aby Bóg pamiętał o swoich sługach i służebnicach. Kapłan składa wtedy ręce i modli się w milczeniu za tych, których pragnie wspomnieć. Następnie modlitwa obejmuje wszystkich obecnych i wymienia intencje: odkupienie ich dusz, nadzieję zbawienia oraz pomyślność.",
   "seg":[
-    {"id":"s01","tr":"Pamiętaj, Panie, o Twoich sługach i służebnicach","tc":[247],"tb":"revised","g":["pamiętaj","Panie","sług","i służebnic","Twoich"]},
+    {"id":"s01","tr":"Pamiętaj, Panie, o Twoich sługach i służebnicach","tc":[247],"tb":"revised","g":["Pamiętaj","Panie","sług","i służebnic","Twoich"]},
     {"id":"s02","nr":"Kapłan składa ręce i modli się chwilę w milczeniu za tych, których chce wspomnieć. Potem rozkłada ręce i mówi dalej."},
     {"id":"s03","tr":"i o wszystkich tu obecnych, których wiara jest Ci znana, a pobożność wiadoma; za nich składamy Ci","tc":[247],"tb":"revised","g":["i","wszystkich","obecnych","których","Ci","wiara","znana","jest","i","wiadoma","pobożność","za","których","Ci","składamy"]},
     {"id":"s04","tr":"— albo oni sami składają Ci — tę ofiarę chwały za siebie i za wszystkich swoich: za odkupienie swoich dusz, w nadziei zbawienia i pomyślności;","tc":[247],"tb":"revised","g":["albo","którzy","Ci","składają","tę","ofiarę","chwały","za","siebie","i swoich","wszystkich","za","odkupienie","dusz","swoich","za","nadzieję","zbawienia","i","bezpieczeństwa","swego"],"ex":{"w027":"„Ofiara chwały” podejmuje biblijne wezwanie do dziękczynienia z Ps 49, 14 i 106, 22."}},

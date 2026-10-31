@@ -60,6 +60,15 @@ describe('fitting the initial', () => {
 		}
 	});
 
+	it('fits the measured AE ligature without using the neutral fallback', () => {
+		expect(measuredInitial('Æ')).toBe(true);
+		const fit = initialFit('Æ', true);
+		expect(fit.start).toBeCloseTo(0.005 + 0.03 / 1.75, 12);
+		expect(fit.end).toBeCloseTo((-(1.75 - 1) / 1.75) * 0.025 + 0.03 / 1.75, 12);
+		expect(fit.padTop).toBeCloseTo(0.653 * 1.75 - (1.073 - 0.06) + 0.1, 12);
+		expect(fit.padBottom).toBe(0.06);
+	});
+
 	it('is defined for a letter it has never seen', () => {
 		// a new text may open with any capital; an unmeasured one must fall
 		// back to neutral rather than produce NaN and break the line

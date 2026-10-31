@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/08-16; resolved section [Lectio] with declared inherited references"
+    "section": "web/www/horas/Latin/Commune/C5.txt [Lectio], heading346; title347, reference348; complete Mass comparison body349."
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Common's Mass Lectio supplies the complete comparison reading; its literal accents and punctuation are recorded separately from the selected text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-27"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

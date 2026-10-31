@@ -2,21 +2,8 @@ import { expect, setHelp, setTheme, test } from './fixtures';
 import { expectSharedGloss } from './shared-gloss';
 import { interlinearGeometry } from './interlinear-geometry';
 
+// The Ordinary Hanc igitur captions its command petition word by word (below).
 const constructions = [
-	[
-		'pl',
-		'/ordinarium/hanc-igitur',
-		'w032',
-		12,
-		'rozkazał wyrwać nas od wiecznego potępienia i zaliczyć do trzody Twoich wybranych'
-	],
-	[
-		'en',
-		'/ordinarium/hanc-igitur',
-		'w032',
-		12,
-		'command that we be rescued from eternal damnation and counted in the flock of Your chosen ones'
-	],
 	['pl', '/ordinarium/supplices-te-rogamus', 'w006', 3, 'rozkaż, aby te dary zostały zaniesione'],
 	['en', '/ordinarium/supplices-te-rogamus', 'w006', 3, 'command that these offerings be carried'],
 	[
@@ -75,6 +62,113 @@ for (const [language, route, anchor, members, caption] of constructions) {
 		await page.emulateMedia({ media: 'print' });
 		await expect(group.locator('rt')).toHaveText(caption);
 		expect(await group.locator('.base').allTextContents()).toEqual(source);
+		await page.emulateMedia({ media: 'screen' });
+	});
+}
+
+// Hanc igitur, w023–w034: each word keeps its own caption, electórum tuórum stays one unit,
+// and the explanation at iúbeas carries the relation of both passive infinitives. The verse
+// (w016–w034, 19 words) has 18 captioned units in Polish and 17 in English, where w016–w017
+// also share one caption.
+const petition = {
+	pl: {
+		units: 18,
+		captions: [
+			'od',
+			'wiecznego',
+			'potępienia',
+			'nas',
+			'wyrwać',
+			'i',
+			'do',
+			'Twoich wybranych',
+			'rozkazał',
+			'trzody',
+			'zaliczyć'
+		],
+		explanation:
+			'„Rozkazał” zależy od wcześniejszego „byś” i łączy się z oboma bezokolicznikami: „wyrwać nas” i „zaliczyć”. Łacińskie formy są bierne: prosimy, aby to nas wyrwano i zaliczono. „Do” łączy się z dalszym „trzody”, a „Twoich wybranych” określa osoby tworzące trzodę.'
+	},
+	en: {
+		units: 17,
+		captions: [
+			'from',
+			'eternal',
+			'damnation',
+			'us',
+			'to be rescued',
+			'and',
+			'in',
+			'of Your chosen ones',
+			'command',
+			'the flock',
+			'to be counted'
+		],
+		explanation:
+			'“Command” governs both passive infinitives: “us to be rescued” and “to be counted”. The preposition “in” belongs with the later “flock”. The phrase “of Your chosen ones” names the people who make up the flock. The full translation gives the continuous English order.'
+	}
+} as const;
+const petitionButtons = [
+	'w023',
+	'w024',
+	'w025',
+	'w026',
+	'w027',
+	'w028',
+	'w029',
+	'w030',
+	'w032',
+	'w033',
+	'w034'
+];
+
+for (const language of ['pl', 'en'] as const) {
+	test(`${language} /ordinarium/hanc-igitur captions its command petition word by word`, async ({
+		page
+	}) => {
+		const { units, captions, explanation } = petition[language];
+		await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		await page.goto(`/app/${language}/ordinarium/hanc-igitur`);
+		await setHelp(page, 1);
+		const command = page.locator('button[id="w032"]');
+		const verse = page.locator('.verse').filter({ has: command });
+		await expect(verse).toHaveCount(1);
+		await expect(
+			page.locator('.token-group').filter({ has: page.locator('button[id="w032"]') })
+		).toHaveCount(0);
+		const read = () =>
+			Promise.all(petitionButtons.map((id) => page.locator(`button[id="${id}"] rt`).textContent()));
+		expect(await read()).toEqual(captions);
+		await expect(page.locator('button[id="w030"] .token')).toHaveCount(2);
+		for (const [width, theme] of [
+			[320, 'dark'],
+			[1280, 'light']
+		] as const) {
+			await page.setViewportSize({ width, height: 900 });
+			await setTheme(page, theme);
+			await verse.scrollIntoViewIfNeeded();
+			await page.evaluate(() => document.fonts.ready);
+			// Every word and caption of the petition is painted whole, and each caption clears its Latin.
+			const geometry = await verse.evaluate(interlinearGeometry);
+			expect(geometry).toHaveLength(units);
+			for (const unit of geometry) {
+				expect(unit.sourceClipping, unit.text ?? '').toEqual([]);
+				expect(unit.captionClipping, unit.text ?? '').toEqual([]);
+				expect(unit.clearance, unit.text ?? '').toBeGreaterThanOrEqual(0);
+			}
+			expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(0);
+		}
+		const source = await verse.locator('.base').allTextContents();
+		expect(source).toHaveLength(19);
+		await command.click();
+		const panel = page.locator('aside.panel[role="dialog"]');
+		await expect(panel.locator('.context-layer > .gloss')).toHaveText(captions[8]);
+		await expect(panel.locator('.context-layer .explanation')).toHaveText(explanation);
+		await expect(panel.locator('.construction-card')).toHaveCount(0);
+		await page.keyboard.press('Escape');
+		await page.emulateMedia({ media: 'print' });
+		expect(await read()).toEqual(captions);
+		expect(await verse.locator('.base').allTextContents()).toEqual(source);
 		await page.emulateMedia({ media: 'screen' });
 	});
 }

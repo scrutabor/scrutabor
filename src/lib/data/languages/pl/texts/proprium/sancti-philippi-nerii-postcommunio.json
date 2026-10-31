@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-philippi-nerii-postcommunio",
+  "language":"pl",
+  "about":"Po przyjęciu niebieskiego pokarmu modlitwa prosi o stałe pragnienie tych samych dóbr, dzięki którym prawdziwie żyjemy. Odwołuje się do zasług świętego Filipa Neri i do naśladowania go.",
+  "seg":[
+    {"id":"s01","tr":"Nasyceni niebieskimi rozkoszami, prosimy Cię, Panie, abyśmy przez zasługi błogosławionego Filipa, Twojego Wyznawcy, i naśladowanie go zawsze pragnęli tych samych dóbr, dzięki którym prawdziwie żyjemy. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"pragnęli",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Bóg",null,null,null,null],"a":[{"s":0,"n":4,"a":2,"g":"Nasyceni niebieskimi rozkoszami, Panie"},{"s":4,"n":2,"a":0,"g":"prosimy, abyśmy"},{"s":6,"n":7,"a":4,"g":"przez zasługi błogosławionego Filipa, Twojego Wyznawcy, i naśladowanie go"},{"s":13,"n":2,"a":1,"g":"zawsze tych samych dóbr"},{"s":15,"n":4,"a":3,"g":"dzięki którym prawdziwie żyjemy"},{"s":20,"n":3,"a":1,"g":"Przez Pana naszego"},{"s":23,"n":2,"a":0,"g":"Jezusa Chrystusa"},{"s":25,"n":2,"a":0,"g":"Syna Twojego"},{"s":27,"n":5,"a":2,"g":"który z Tobą żyje i króluje"},{"s":32,"n":4,"a":1,"g":"w jedności Ducha Świętego"},{"s":37,"n":4,"a":2,"g":"przez wszystkie wieki wieków"}],"ex":{"w003":"Modlący się zostali już nakarmieni. Obecna prośba dotyczy dalszego pragnienia niebieskich dóbr.","w013":"Naśladowanie Filipa odnosi się do modlących się, zasługi zaś do samego świętego.","w015":"„Te same dobra” oznaczają niebieski pokarm, którym modlący się zostali nasyceni. Łacińskie éadem ma tu liczbę mnogą i rodzaj nijaki.","w037":"Słowo „Bóg” odnosi się tu do Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

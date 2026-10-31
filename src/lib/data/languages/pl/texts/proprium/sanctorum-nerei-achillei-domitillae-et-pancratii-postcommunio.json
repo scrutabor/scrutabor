@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa przywołuje błagania czterech męczenników i prosi, by przyjęte sakramenty posłużyły nam do pełniejszego przebłagania Boga.",
+  "seg":[
+    {"id":"s01","tr":"Prosimy, Panie, aby święte sakramenty, które przyjęliśmy, za sprawą błagań Twoich błogosławionych męczenników Nereusza, Achillesa, Domitylli i Pankracego, posłużyły nam do pełniejszego przebłagania Ciebie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Prosimy","Panie","aby",null,null,null,"Nereusza","Achillesa","Domitylli","i","Pankracego","dzięki błaganiom",null,null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":3,"n":3,"a":1,"g":"Twoich błogosławionych męczenników"},{"s":12,"n":2,"a":0,"g":"święte sakramenty"},{"s":14,"n":2,"a":1,"g":"które przyjęliśmy"},{"s":16,"n":6,"a":3,"g":"posłużyły nam do pełniejszego przebłagania Ciebie"}],"ex":{"w016":"Sakramenty zostały już przyjęte. Prośba dotyczy ich dalszego owocu dla modlących się.","w021":"Przebłaganie dotyczy Boga i Jego przychylności wobec nas. Modlitwa prosi, by przyjęte sakramenty przyczyniały się do pełniejszego pojednania z Nim.","w022":"„Pełniejszego” oddaje wzrost wyrażony przez „augmentum”. Cała prośba dotyczy dobra modlących się.","w039":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

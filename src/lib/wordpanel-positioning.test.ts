@@ -16,6 +16,7 @@ type Panel = {
 	close(): void;
 	closeThen(action: () => void): void;
 	goTo(id: string): void;
+	cancelPins(): void;
 };
 type Event = {
 	operation: string;
@@ -494,6 +495,24 @@ it('teardown cancels both close pins before a replacement document appears', () 
 	run.replaceDocument();
 	flushCloseFrames(run);
 	expect(run.events).toHaveLength(count);
+});
+
+it('a newer landing cancels the late timer pin of a deep-link word that vanished', () => {
+	const options: Options = { closeGeometry: true };
+	const run = setup(options);
+	run.panel.applyFromLocation();
+	// The dated payload removes the cited word: the panel closes and pins position 0.
+	options.wordAvailable = false;
+	run.panel.applyFromLocation();
+	expect(run.panel.id).toBeNull();
+	run.frame();
+	run.frame();
+	// The landing's second frame: its scroll supersedes the pins before their timer runs.
+	run.panel.cancelPins();
+	const before = run.events.length;
+	run.flushTimers();
+	run.frame();
+	expect(pinEventsAfter(run, before)).toHaveLength(0);
 });
 
 it('opening another selection cancels a previous close session pin', () => {

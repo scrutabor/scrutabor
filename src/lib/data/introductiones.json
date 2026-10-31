@@ -4538,6 +4538,25 @@
    }
   },
   {
+   "reading": "proprium/vigilia-ascensionis-evangelium",
+   "unit": "sequentia-sancti-evangelii-secundum-ioannem",
+   "reference": "Ioann. 17, 1-11",
+   "pericope": {
+    "book": "Ioann",
+    "passages": [
+     {
+      "chapter": 17,
+      "verses": [
+       [
+        1,
+        11
+       ]
+      ]
+     }
+    ]
+   }
+  },
+  {
    "reading": "proprium/vigilia-nativitatis-epistola",
    "unit": "lectio-epistolae-beati-pauli-apostoli-ad-romanos",
    "reference": "Rom. 1, 1-6",

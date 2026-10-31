@@ -1,0 +1,9 @@
+{
+  "id":"proprium.refecti-cibo-potuque-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa po Komunii z prośbą o ochronę za wstawiennictwem świętego, w którego wspomnienie przyjęto święte dary.",
+  "seg":[
+    {"id":"s01","tr":"Pokrzepieni niebieskim pokarmem i napojem, Boże nasz, pokornie Cię błagamy: niech nas strzegą także modlitwy tego, na którego wspomnienie przyjęliśmy te dary. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Pokrzepieni",null,null,null,null,null,"Cię","pokornie","błagamy","abyśmy,",null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":1,"n":3,"a":0,"g":"niebieskim pokarmem i napojem"},{"s":4,"n":2,"a":0,"g":"Boże nasz"},{"s":10,"n":5,"a":4,"g":"na którego wspomnienie przyjęliśmy te dary,"},{"s":15,"n":4,"a":1,"g":"tego modlitwami byli też strzeżeni"}],"ex":{"w001":"Modlący się zostali pokrzepieni niebieskim pokarmem i napojem. Po ich przyjęciu proszą Boga o ochronę.","w007":"„Cię” wskazuje Boga, do którego modlący się kierują pokorne błaganie.","w012":"„Cuius” wskazuje świętego, na którego wspomnienie przyjęto te dary. Dalsze „eius” odnosi się do tej samej osoby.","w013":"„Te dary” oznaczają przyjęty niebieski pokarm i napój, wspomniane na początku modlitwy.","w016":"„Tego” odnosi się do tego samego świętego co wcześniejsze „którego”. Modlący się proszą o ochronę także przez modlitwy tego świętego.","w036":"„Deus” jest tu mianownikiem i określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

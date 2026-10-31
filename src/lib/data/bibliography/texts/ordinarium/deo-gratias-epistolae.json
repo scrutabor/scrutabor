@@ -1,0 +1,24 @@
+{
+ "id": "ordinarium.deo-gratias-epistolae",
+ "source_groups": [
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.prayers",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Ordo/Prayers, [Deo gratias], pinned heading line 81 and response line 82"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.deo-gratias-epistolae.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The retained pinned Prayers section supplies the literal reusable two-word Deo grátias response after removal of its R. marker. This section alone does not establish Epistle occurrence, minister identity or independent transmission."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  }
+ ],
+ "witnesses": []
+}

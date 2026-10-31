@@ -773,6 +773,169 @@ test('changing between a single and multiple Masses keeps the modal in place', a
 	expect(after!.height).toBeCloseTo(before!.height, 0);
 });
 
+// What a reader sees before anything scrolls: whether an element lies wholly inside the
+// viewport and every clipping box above it in the dialog, and is the element painted there.
+function dialogAtRest(dialog: Element) {
+	const shown = (element: Element | null) => {
+		if (!element) return false;
+		const box = element.getBoundingClientRect();
+		if (!box.width || !box.height) return false;
+		if (box.top < -0.5 || box.left < -0.5) return false;
+		if (box.bottom > innerHeight + 0.5 || box.right > innerWidth + 0.5) return false;
+		for (let up = element.parentElement; up && dialog.contains(up); up = up.parentElement) {
+			if (getComputedStyle(up).overflowY === 'visible') continue;
+			const frame = up.getBoundingClientRect();
+			const top = frame.top + up.clientTop;
+			if (box.top < top - 0.5 || box.bottom > top + up.clientHeight + 0.5) return false;
+		}
+		const hit = document.elementFromPoint(box.left + box.width / 2, box.top + box.height / 2);
+		return !!hit && (hit === element || element.contains(hit));
+	};
+	const cells = [...dialog.querySelectorAll('.date-cell')];
+	const rows = new Set(cells.map((cell) => Math.round(cell.getBoundingClientRect().top)));
+	return {
+		scrolled: [...dialog.querySelectorAll('.calendar-panel, .day-detail')].map(
+			(element) => element.scrollTop
+		),
+		weeks: rows.size,
+		datesShown: cells.every(shown),
+		selectedShown: shown(dialog.querySelector('.date-cell[aria-pressed="true"]')),
+		titleShown: shown(dialog.querySelector('.day-detail h3')),
+		choicesShown: [...dialog.querySelectorAll('.variants label')].map(shown)
+	};
+}
+
+// The month stays in view with the chosen date, and on a desktop the chosen day with every
+// Mass it offers, at both ends of the reading sizes; neither day moves or resizes the dialog.
+for (const reading of ['normal', 'largest'] as const) {
+	test(`the day dialog shows the month, the chosen date and every Mass at rest at ${reading} size`, async ({
+		page
+	}) => {
+		await asIfItWere(page, '2026-12-24T10:00:00');
+		if (reading === 'largest') {
+			await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+		}
+		for (const [width, height] of [
+			[1280, 720],
+			[375, 812]
+		] as const) {
+			await page.setViewportSize({ width, height });
+			for (const lang of ['pl', 'en'] as const) {
+				await page.goto(`/app/${lang}/ordo`);
+				const dialog = await openPicker(page);
+				await expect(dialog.locator('.date-cell[aria-pressed="true"]')).toHaveAttribute(
+					'data-date',
+					'2026-12-24'
+				);
+				let box: { y: number; height: number } | null = null;
+				for (const [day, masses] of [
+					['2026-12-24', 0],
+					['2026-12-25', 3]
+				] as const) {
+					if (day !== '2026-12-24') await dialog.locator(`[data-date="${day}"]`).click();
+					await expect(dialog.locator('.date-cell[aria-pressed="true"]')).toHaveAttribute(
+						'data-date',
+						day
+					);
+					await expect(dialog.locator('.variants input')).toHaveCount(masses);
+					const where = `${width}px ${reading} ${lang} ${day}`;
+					const view = await dialog.evaluate(dialogAtRest);
+					expect(
+						view.scrolled.every((top) => top === 0),
+						where
+					).toBe(true);
+					expect(view.weeks, where).toBe(5);
+					expect(view.datesShown, where).toBe(true);
+					expect(view.selectedShown, where).toBe(true);
+					if (width === 1280) {
+						expect(view.titleShown, where).toBe(true);
+						expect(view.choicesShown, where).toEqual(Array(masses).fill(true));
+					}
+					const now = await dialog.boundingBox();
+					if (box) {
+						expect(now!.y, where).toBeCloseTo(box.y, 0);
+						expect(now!.height, where).toBeCloseTo(box.height, 0);
+					}
+					box = now;
+					if (width === 375 && masses) {
+						// A phone shows the day below the month in the same scroll panel. Scrolling that
+						// panel alone brings the day's title and each Mass choice wholly into view.
+						for (const [index, target] of ['title', 'choice 1', 'choice 2', 'choice 3'].entries()) {
+							await dialog.evaluate((element, index) => {
+								const panel = element.querySelector('.calendar-panel')!;
+								const items = [
+									element.querySelector('.day-detail h3')!,
+									...element.querySelectorAll('.variants label')
+								];
+								const box = items[index].getBoundingClientRect();
+								const frame = panel.getBoundingClientRect();
+								panel.scrollTop += box.top - frame.top - (panel.clientHeight - box.height) / 2;
+							}, index);
+							const scrolled = await dialog.evaluate(dialogAtRest);
+							const shown = index ? scrolled.choicesShown[index - 1] : scrolled.titleShown;
+							expect(shown, `${where} ${target} in the scrolled panel`).toBe(true);
+							if (index === 3) expect(scrolled.scrolled[0], `${where} panel`).toBeGreaterThan(0);
+						}
+					}
+				}
+				await page.keyboard.press('Escape');
+				await expect(dialog).toHaveCount(0);
+			}
+		}
+	});
+}
+
+// The wide-screen day column scrolls by itself, and a browser keeps a scroll position the
+// next day's content can still hold. Christmas and All Souls both outgrow the column (a day
+// that fits would reset it on its own), so each newly chosen day must open at its top.
+test('a newly chosen day opens its day column at the top, with every Mass in view', async ({
+	page
+}) => {
+	await asIfItWere(page, '2026-12-24T10:00:00');
+	await page.addInitScript(() => localStorage.setItem('scrutabor-reading', 'largest'));
+	await page.setViewportSize({ width: 1280, height: 720 });
+	for (const lang of ['pl', 'en'] as const) {
+		await page.goto(`/app/${lang}/ordo`);
+		const dialog = await openPicker(page);
+		const column = dialog.locator('.day-detail');
+		const month = (direction: 'previous' | 'next') =>
+			dialog
+				.getByRole('button', {
+					name:
+						direction === 'previous'
+							? /poprzedni miesiąc|previous month/
+							: /następny miesiąc|next month/
+				})
+				.click();
+		for (const [day, move] of [
+			['2026-12-25', null],
+			['2026-11-02', 'previous'],
+			['2026-12-25', 'next']
+		] as const) {
+			if (move) {
+				await column.evaluate((element) => (element.scrollTop = element.scrollHeight));
+				expect(
+					await column.evaluate((element) => element.scrollTop),
+					`${lang} before ${day}`
+				).toBeGreaterThan(0);
+				await month(move);
+			}
+			await dialog.locator(`[data-date="${day}"]`).click();
+			await expect(dialog.locator('.date-cell[aria-pressed="true"]')).toHaveAttribute(
+				'data-date',
+				day
+			);
+			await expect(dialog.locator('.variants input')).toHaveCount(3);
+			const view = await dialog.evaluate(dialogAtRest);
+			expect(view.scrolled, `${lang} ${day}`).toEqual([0, 0]);
+			expect(view.titleShown, `${lang} ${day}`).toBe(true);
+			expect(view.choicesShown, `${lang} ${day}`).toEqual([true, true, true]);
+		}
+		await page.keyboard.press('Escape');
+		await expect(dialog).toHaveCount(0);
+	}
+});
+
 test('the modal traps focus, closes with Escape, and returns focus to its opener', async ({
 	page
 }) => {

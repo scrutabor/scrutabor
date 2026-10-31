@@ -5,7 +5,7 @@ const split = (text: string) => text.split(' | ');
 
 const orations = {
 	collecta:
-		'Almighty | eternal | God | Your majesty | as suppliants | we beseech | that | as | Your only-begotten Son | this | day | with | the substance of our flesh | in | the temple | was | presented | so | us | may You cause | to be presented to You with purified minds | Through | this same Jesus Christ, our Lord | Your Son | who lives and reigns with You | in | the unity | of the Holy Spirit | God | forever and ever | Amen',
+		'Almighty | eternal | God | Your majesty | as suppliants | we beseech | that | as | Your only-begotten Son | this | day | with | the substance of our flesh | in | the temple | was presented | so | us | may You cause | to be presented to You with purified minds | Through | this same Jesus Christ, our Lord | Your Son | who lives and reigns with You | in | the unity | of the Holy Spirit | God | forever and ever | Amen',
 	secreta:
 		'Graciously hear | Lord | our prayers | and | that | worthy | may be | the gifts | which | before the eyes | of Your | majesty | we offer | the help | to us | of Your | loving-kindness | bestow | Through | our Lord | Jesus Christ | Your Son | who lives and reigns with You | in | the unity | of the Holy Spirit | God | forever and ever | Amen'
 } as const;

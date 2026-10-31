@@ -1,0 +1,11 @@
+{
+  "id":"ordinarium.ite-missa-est-defunctorum",
+  "language":"pl",
+  "about":"Końcowe pozdrowienie i modlitwa za zmarłych po ostatniej modlitwie pokomunijnej. Po pozdrowieniu i odpowiedzi następuje prośba o pokój dla zmarłych, zakończona „Amen”. Kapłan odmawia następnie Placeat, lecz nie udziela końcowego błogosławieństwa.",
+  "seg":[
+    {"id":"s01","tr":"Pan z wami.","tb":"exact","g":["Pan","z wami"],"ex":{"w002":"Vobíscum znaczy „z wami”. Łączy zaimek „wy” z przyimkiem cum („z”), dołączonym na końcu wyrazu."}},
+    {"id":"s02","tr":"I z duchem twoim.","tb":"normalized","g":["I","z","duchem","twoim"]},
+    {"id":"s03","tr":"Niech odpoczywają w pokoju wiecznym.","tb":"normalized","g":["Niech odpoczywają","w","pokoju"],"ex":{"w007":"„Requiéscant” wyraża prośbę o odpoczynek dla zmarłych. Tradycyjne polskie brzmienie zawiera słowo „wiecznym”, choć łacińskie in pace znaczy dosłownie „w pokoju”."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

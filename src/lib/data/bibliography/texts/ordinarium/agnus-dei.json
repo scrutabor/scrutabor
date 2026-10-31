@@ -2,6 +2,24 @@
  "id": "ordinarium.agnus-dei",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-agnus-dei; closed-literal-selection} (line 299; line 300; line 301); complete source contexts 296–308"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 25-word literal selection in the stated selection order (299, then 300, then 301), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
@@ -20,6 +38,48 @@
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIV",
+    "section": "Rubricae generales 511 i, 512, 513 e and 514",
+    "scan": "leaf n39 / physical PDF p. 40",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei.recitation-voice.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "At low Mass the priest recites Agnus Dei clara. At solemn and sung Mass he recites it secreto; this distinct priestly recitation is retained alongside the audible singing of the Ordinary."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 639–640, 642–643",
+    "scan": "physical PDF pp. 639–640, 642–643",
+    "section": "De musica sacra et sacra liturgia 25 b, 26 and 31 c",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=639"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei.participation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The faithful may sing Agnus Dei with the Ordinary at the second participation degree, also at Missa cantata. At low Mass they may recite it with the celebrant at the third degree. This permission neither asserts actual congregational participation nor replaces the celebrant’s distinct recitation."
+    }
+   ],
+   "verified_on": "2026-10-29"
   }
  ],
  "witnesses": []

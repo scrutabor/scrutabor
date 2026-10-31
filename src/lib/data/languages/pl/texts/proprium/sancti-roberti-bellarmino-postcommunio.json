@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-roberti-bellarmino-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa prosi, by przyjęte sakramenty podtrzymywały w nas żar miłości. Wspomina Roberta, który rozpalony tym żarem nieustannie poświęcał się dla Kościoła.",
+  "seg":[
+    {"id":"s01","tr":"Panie, Boże nasz, niech sakramenty, które przyjęliśmy, podtrzymują w nas żar miłości. Mocno nim rozpalony, błogosławiony Robert nieustannie poświęcał się dla Twojego Kościoła. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Sakramenty",null,null,"Panie",null,null,null,null,"niech podtrzymują",null,null,"którym",null,null,null,null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":1,"n":2,"a":1,"g":"które przyjęliśmy"},{"s":4,"n":2,"a":0,"g":"Boże nasz"},{"s":6,"n":2,"a":0,"g":"w nas"},{"s":9,"n":2,"a":1,"g":"żar miłości"},{"s":12,"n":2,"a":1,"g":"błogosławiony Robert"},{"s":14,"n":2,"a":1,"g":"mocno rozpalony"},{"s":16,"n":3,"a":1,"g":"dla Twojego Kościoła"},{"s":19,"n":3,"a":2,"g":"nieustannie się poświęcał"}],"ex":{"w012":"„Którym” odnosi się do żaru miłości. To nim Robert był mocno rozpalony.","w022":"Poświęcanie siebie opisuje stałe oddanie Roberta Kościołowi. „Iugiter” podkreśla jego nieustanny charakter.","w039":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

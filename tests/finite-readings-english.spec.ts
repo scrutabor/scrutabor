@@ -57,7 +57,10 @@ const cases = [
 		part: 'collecta',
 		words: 52,
 		segments: 2,
-		groups: [['w029', 'to be presented to You with purified minds', 4]],
+		groups: [
+			['w022', 'was presented', 2],
+			['w029', 'to be presented to You with purified minds', 4]
+		],
 		prose: 'grant us to be presented to You with purified minds'
 	},
 	{
@@ -93,9 +96,8 @@ for (const subject of cases) {
 			await page.keyboard.press('Escape');
 		}
 		if (subject.part === 'collecta') {
+			// Est praesentátus (w021, w022) is the first group above.
 			for (const [word, gloss] of [
-				['w021', 'was'],
-				['w022', 'presented'],
 				['w025', 'may You cause'],
 				// The conclusion reads as one group.
 				['w040', 'who lives and reigns with You']

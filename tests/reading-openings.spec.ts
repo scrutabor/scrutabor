@@ -79,7 +79,7 @@ test('the Polish Annunciation opening keeps independently inflected words', asyn
 	await setHelp(page, 1);
 	const text = 'annuntiatio-beatae-mariae-virginis-epistola';
 	for (const [word, gloss] of [
-		['w001', 'w'],
+		['w001', 'W'],
 		['w002', 'dniach'],
 		['w003', 'owych']
 	]) {

@@ -11,7 +11,7 @@ import { ORDO } from './ordo';
 import { flowBinding } from './reading-flow';
 import { massForm } from './mass-form.svelte';
 import { role, ROLES } from './role.svelte';
-import { expectParagraphLatin } from './ordo-test-context';
+import { expectReferenceVerse } from './ordo-test-context';
 import { findOrphans } from './polish';
 
 const actual = [
@@ -156,18 +156,9 @@ it.each(['gloria', 'credo'] as const)(
 					for (const cue of ['who-name', 'who-all', 'who-join', 'who-voice', 'class="mark'])
 						expect(reference).not.toContain(cue);
 					for (const segment of body.text.segments.filter((item) => item.type === 'verse')) {
-						const opening = reference.match(
-							new RegExp('<p[^>]*id="conditional-' + segment.id + '"[^>]*>')
-						)?.[0];
-						expect(opening).toBeDefined();
-						for (const cue of ['yours', 'quiet', 'answer'])
-							expect(opening).not.toMatch(new RegExp('\\b' + cue + '\\b'));
-						expectParagraphLatin(reference, 'conditional-' + segment.id, segment.words!);
-						for (const word of segment.words!) {
-							const token = 'id="conditional.' + word.id + '"';
-							expect(active.split(token)).toHaveLength(2);
-							expect(reference.split(token)).toHaveLength(2);
-						}
+						expectReferenceVerse(reference, 'conditional', segment);
+						for (const word of segment.words!)
+							expect(active.split('id="conditional.' + word.id + '"')).toHaveLength(2);
 					}
 				}
 			} finally {

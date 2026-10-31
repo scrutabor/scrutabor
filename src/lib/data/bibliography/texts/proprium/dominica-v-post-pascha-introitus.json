@@ -41,6 +41,27 @@
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p.343",
+    "scan": "leaf n424 / PDF p.425",
+    "section": "In vigilia Ascensionis; Antiphona ad Introitum; Isai. 48,20; Ps.65,1–2",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n424/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.dominica-v-post-pascha-introitus.ascension-vigil.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "In the Ascension Vigil, the page prints the Vocem iucunditatis antiphon (w001–w017) and Iubilate Deo psalm verse (w018–w029), followed by the Gloria Patri and Vocem cues. The full common doxology and repeated antiphon at w030–w066 are supplied through their separate expansion controls, rather than printed here in full."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. xxix, lii",

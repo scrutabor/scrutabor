@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bernardini-senensis-collecta",
+  "language":"pl",
+  "about":"Modlitwa zwraca się do Jezusa i przypomina miłość Bernardyna do Jego świętego imienia. Przez zasługi i wstawiennictwo świętego prosi o ducha miłości do Chrystusa.",
+  "seg":[
+    {"id":"s01","tr":"Panie Jezu, który obdarzyłeś błogosławionego Bernardyna, swojego wyznawcę, wyjątkową miłością do swojego świętego imienia, prosimy, przez jego zasługi i wstawiennictwo łaskawie wlej w nas ducha miłości do Ciebie. Który żyjesz i królujesz z Bogiem Ojcem w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Panie","Jezu","który","błogosławionemu","Bernardynowi",null,null,null,null,null,null,null,"udzieliłeś",null,null,null,"i","wstawiennictwo",null,null,null,null,"łaskawie","wlej","Który","żyjesz","i","królujesz","z","Bogiem","Ojcem","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":5,"n":2,"a":0,"g":"Twojemu wyznawcy"},{"s":7,"n":5,"a":4,"g":"wyjątkowej miłości do Twojego świętego imienia"},{"s":13,"n":3,"a":2,"g":"prosimy, przez jego zasługi"},{"s":18,"n":4,"a":0,"g":"w nas ducha miłości do Ciebie"}],"ex":{"w012":"„Amórem” jest darem udzielonym Bernardynowi. „Sancti nóminis tui” wskazuje, ku komu ta miłość jest skierowana.","w019":"„Nobis” wskazuje odbiorców daru. Przy prośbie „wlej” naturalne polskie „w nas” zachowuje tę relację, a „spíritum” pozostaje przedmiotem prośby.","w023":"„Benígnus” opisuje życzliwość Jezusa, do którego skierowana jest prośba. W polskim zdaniu oddaje ją „łaskawie”.","w036":"„Deus” określa Chrystusa, do którego zwraca się ta modlitwa. Zakończenie zachowuje drugą osobę: żyjesz i królujesz."},"nt":{"w022":"„Tuæ dilectiónis” można też rozumieć jako „Twojej miłości”. Wzmianka o miłości do imienia Jezusa przemawia za prośbą o miłość do Niego. Sama forma rzeczownika „spíritum” nie określa tu odrębnie osoby Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

@@ -19,8 +19,127 @@
    "title": "Litanie Większe"
   },
   {
+   "id": "sancta-angela-mericia",
+   "title": "Świętej Anieli Merici, Dziewicy"
+  },
+  {
+   "id": "sancta-catharina-senensis",
+   "title": "Świętej Katarzyny ze Sieny, Dziewicy"
+  },
+  {
+   "id": "sancta-maria-magdalena-de-pazzis",
+   "title": "Świętej Marii Magdaleny de Pazzi, Dziewicy",
+   "about": {
+    "secreta": "Prosimy, aby Bóg przyjął ofiarę swego ludu ku czci świętych, dzięki których zasługom lud otrzymał pomoc w utrapieniu.",
+    "postcommunio": "Po przyjęciu świętych darów prosimy o umocnienie przez wstawiennictwo świętej, której uroczystość obchodzimy."
+   }
+  },
+  {
+   "id": "sancta-monica",
+   "title": "Świętej Moniki, Wdowy",
+   "about": {
+    "secreta": "Prosimy, aby Bóg przyjął ofiarę swego ludu ku czci świętych, dzięki których zasługom lud otrzymał pomoc w utrapieniu.",
+    "postcommunio": "Po przyjęciu świętych darów prosimy o umocnienie przez wstawiennictwo świętej, której uroczystość obchodzimy."
+   }
+  },
+  {
    "id": "sancta-petronilla",
    "title": "Świętej Petroneli, Dziewicy"
+  },
+  {
+   "id": "sancti-alexander-eventius-theodulus-et-iuvenalis",
+   "title": "Świętych Aleksandra, Ewencjusza i Teodula, Męczenników, oraz Juwenalisa, Biskupa i Wyznawcy"
+  },
+  {
+   "id": "sancti-marcellinus-petrus-et-erasmus",
+   "title": "Świętych Marcelina, Piotra oraz Erazma, Biskupa, Męczenników"
+  },
+  {
+   "id": "sancti-nereus-achilleus-domitilla-et-pancratius",
+   "title": "Świętych Nereusza, Achillesa, Domitylli, Dziewicy, oraz Pankracego, Męczenników"
+  },
+  {
+   "id": "sanctus-antoninus",
+   "title": "Świętego Antonina, Biskupa i Wyznawcy"
+  },
+  {
+   "id": "sanctus-athanasius",
+   "title": "Świętego Atanazego, Biskupa, Wyznawcy i Doktora Kościoła"
+  },
+  {
+   "id": "sanctus-augustinus-cantuariensis",
+   "title": "Świętego Augustyna z Canterbury, Biskupa i Wyznawcy"
+  },
+  {
+   "id": "sanctus-beda-venerabilis",
+   "title": "Świętego Bedy Czcigodnego, Wyznawcy i Doktora Kościoła"
+  },
+  {
+   "id": "sanctus-bernardinus-senensis",
+   "title": "Świętego Bernardyna ze Sieny, Wyznawcy"
+  },
+  {
+   "id": "sanctus-bonifatius-martyr",
+   "title": "Świętego Bonifacego, Męczennika",
+   "about": {
+    "secreta": "Prosimy, aby Bóg przyjął nasze dary i modlitwy, oczyścił nas przez święte tajemnice i łaskawie nas wysłuchał."
+   }
+  },
+  {
+   "id": "sanctus-felix-i-papa",
+   "title": "Świętego Feliksa I, Papieża i Męczennika"
+  },
+  {
+   "id": "sanctus-gregorius-nazianzenus",
+   "title": "Świętego Grzegorza z Nazjanzu, Biskupa, Wyznawcy i Doktora Kościoła"
+  },
+  {
+   "id": "sanctus-gregorius-vii",
+   "title": "Świętego Grzegorza VII, Papieża i Wyznawcy"
+  },
+  {
+   "id": "sanctus-ioannes-baptista-de-la-salle",
+   "title": "Świętego Jana Chrzciciela de la Salle, Wyznawcy"
+  },
+  {
+   "id": "sanctus-paschalis-baylon",
+   "title": "Świętego Paschalisa Baylona, Wyznawcy"
+  },
+  {
+   "id": "sanctus-petrus-caelestinus",
+   "title": "Świętego Piotra Celestyna, Papieża i Wyznawcy"
+  },
+  {
+   "id": "sanctus-petrus-martyr",
+   "title": "Świętego Piotra, Męczennika"
+  },
+  {
+   "id": "sanctus-philippus-nerius",
+   "title": "Świętego Filipa Neri, Wyznawcy"
+  },
+  {
+   "id": "sanctus-pius-v",
+   "title": "Świętego Piusa V, Papieża i Wyznawcy"
+  },
+  {
+   "id": "sanctus-robertus-bellarmino",
+   "title": "Świętego Roberta Bellarmina, Biskupa, Wyznawcy i Doktora Kościoła"
+  },
+  {
+   "id": "sanctus-stanislaus",
+   "title": "Świętego Stanisława, Biskupa i Męczennika"
+  },
+  {
+   "id": "sanctus-ubaldus",
+   "title": "Świętego Ubalda, Biskupa i Wyznawcy"
+  },
+  {
+   "id": "sanctus-venantius-martyr",
+   "title": "Świętego Wenancjusza, Męczennika"
+  },
+  {
+   "id": "vigilia-ascensionis-impedita",
+   "title": "Wigilii Wniebowstąpienia Pańskiego"
   }
  ]
 }

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctae-catharinae-senensis-postcommunio",
+  "language":"en",
+  "about":"We have been nourished at the heavenly table, which also sustained Catherine of Siena’s earthly life. The prayer asks that this same table may grant us eternal life.",
+  "seg":[
+    {"id":"s01","tr":"Lord, the heavenly table at which we have been nourished also sustained the earthly life of blessed Catherine the virgin. May it grant us eternal life. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Eternal life","to us","Lord","may grant","at which",null,null,null,null,"which",null,null,null,null,"also","sustained","earthly","Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":5,"n":2,"a":0,"g":"we have been nourished"},{"s":7,"n":2,"a":0,"g":"the heavenly table"},{"s":10,"n":4,"a":3,"g":"the life of blessed Catherine the virgin"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":20,"n":2,"a":0,"g":"Jesus Christ"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":24,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":29,"n":2,"a":1,"g":"in the unity"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w004":"The request concerns the heavenly table. The phrase naming it is delayed until after “we have been nourished.”","w017":"The contrast is between the eternal life now requested and Catherine’s earthly life already sustained. In the Latin order, “earthly” follows “sustained” but still describes her life.","w034":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

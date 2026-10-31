@@ -1,0 +1,127 @@
+{
+ "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 540",
+    "scan": "PDF physical622 / leaf n621",
+    "section": "05-27 S. Bedæ Venerabilis Conf. et Eccl. Doct.; postcommunio; proper w001–w017 only; supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n621/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 17-word postcommunio proper w001–w017, followed by the literal local cue “Per Dóminum.” The supplied complete conclusion and Amen are not printed at this proper locus."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
+    "section": "RG115a; w018–w038 and Amen w039 only; proper body excluded; stress/punctuation controls, not a contiguous occasion paragraph"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s RG115a supplies the complete Father-directed conclusion and response w018–w038 and Amen w039 only; proper body excluded. The literal RG115a list has tuum, qui and Amen; and is unaccented. Same-edition p.123 supports selected common stress and tuum: Qui, not the selected Deus comma; that comma is printed in RG115a. The p.226 terminal supports duration stress and the separate Amen period. These controls do not establish actors, singing or the distribution of conclusions in grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 537",
+    "scan": "PDF physical618 / leaf n617",
+    "section": "05-27 S. Bedæ Venerabilis Conf. et Eccl. Doct.; postcommunio 2662; proper w001–w017 only; supplied conclusion and Amen excluded",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n617/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bedae-venerabilis-postcommunio.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the complete 17-word postcommunio proper w001–w017, followed by the literal local cue “Per Dóminum.” The supplied complete conclusion and Amen are not printed at this proper locus. This separately set manifestation corroborates one received tradition, not independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a; w018–w038 and Amen w039 only; proper body excluded; explicitly supplied same-edition ending",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bedae-venerabilis-postcommunio.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies its complete conclusion and response w018–w038 and Amen w039 only; proper body excluded. Literal accents, Christum comma, tuum, qui and Amen list semicolon are retained. Wording alone establishes no actors, singing, participation or grouped-orations conclusion distribution."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962",
+   "text": "proprium.sancti-bedae-venerabilis-postcommunio",
+   "use": "use.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper and its own setting’s RG115a conclusion/Amen form this explicit composite; separate settings do not establish independent historical ancestry."
+  },
+  {
+   "id": "witness.proprium.sancti-bedae-venerabilis-postcommunio.vatican1962",
+   "text": "proprium.sancti-bedae-venerabilis-postcommunio",
+   "use": "use.proprium.sancti-bedae-venerabilis-postcommunio.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper and its own setting’s RG115a conclusion/Amen form this explicit composite; separate settings do not establish independent historical ancestry."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962-vatican1962",
+  "text": "proprium.sancti-bedae-venerabilis-postcommunio",
+  "recension": "Benziger approved-print proper and same-edition RG115a conclusion/Amen compared with Vatican same-setting composite",
+  "witnesses": [
+   "witness.proprium.sancti-bedae-venerabilis-postcommunio.benziger1962",
+   "witness.proprium.sancti-bedae-venerabilis-postcommunio.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 11,
+   "classes": [
+    "accent",
+    "capitalization",
+    "punctuation"
+   ]
+  }
+ }
+}

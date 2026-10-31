@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “21st Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"My soul is in Your salvation, and in Your word I have hoped; when will You execute judgment on those who persecute me? The wicked have persecuted me; help me, O Lord my God.","g":["In","salvation","Your","soul","my","and","in","word","Your","I have hoped","when","will You execute","upon","those persecuting","me","judgment","The wicked","persecuted","have","me","help","me","Lord","God","my"]}
+    {"id":"s01","tr":"My soul is in Your salvation, and in Your word I have hoped; when will You execute judgment on those who persecute me? The wicked have persecuted me; help me, O Lord my God.","g":["In",null,null,null,null,"and","in",null,null,"I have hoped","when","will You execute","upon","those persecuting","me","judgment","The wicked",null,null,"me","help","me","Lord",null,null],"a":[{"s":1,"n":2,"a":0,"g":"Your salvation"},{"s":3,"n":2,"a":0,"g":"my soul"},{"s":7,"n":2,"a":0,"g":"Your word"},{"s":17,"n":2,"a":0,"g":"have persecuted"},{"s":23,"n":2,"a":0,"g":"my God"}]}
   ]
 }

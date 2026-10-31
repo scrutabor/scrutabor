@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.agnus-dei-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 63",
+    "scan": "PDF s. 66",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.5cec2cba7619946252b9",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Strona poświadcza wyłącznie odziedziczony zwrot „Baranku Boży, który gładzisz grzechy świata”. Prośba o odpoczynek dla zmarłych w tym wersecie została przełożona z właściwego tekstu łacińskiego i nie pochodzi z tej strony."
+    },
+    {
+     "id": "use.pl.b1a2b95b288894d3bd7d",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Strona poświadcza wyłącznie odziedziczony zwrot „Baranku Boży, który gładzisz grzechy świata”. Prośba o odpoczynek dla zmarłych w tym wersecie została przełożona z właściwego tekstu łacińskiego i nie pochodzi z tej strony."
+    },
+    {
+     "id": "use.pl.d3b9d84f65030d3dbcb6",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Strona poświadcza wyłącznie odziedziczony zwrot „Baranku Boży, który gładzisz grzechy świata”. Prośba o odpoczynek dla zmarłych w tym wersecie została przełożona z właściwego tekstu łacińskiego i nie pochodzi z tej strony."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

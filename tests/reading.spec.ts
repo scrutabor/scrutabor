@@ -32,7 +32,7 @@ test('the control walks the three reading modes', async ({ page }) => {
 test('one target gloss spans a multiword Latin construction', async ({ page }) => {
 	for (const [language, target] of [
 		['pl', 'będzie'],
-		['en', 'shall be']
+		['en', 'will be']
 	] as const) {
 		await page.goto(`/app/${language}/formularium/commemoratio-omnium-fidelium-defunctorum`);
 		await setHelp(page, 1);
@@ -502,7 +502,7 @@ test('cross-references in explanations jump to the referenced word', async ({ pa
 
 test('the English locale renders its own gloss layer', async ({ page }) => {
 	await page.goto('/app/en/orationes/ave-maria');
-	await expect(page.locator('rt').first()).toHaveText('hail');
+	await expect(page.locator('rt').first()).toHaveText('Hail');
 	await page.locator('#w019').click();
 	await expect(page.locator('aside .head')).toContainText('— mother');
 });
@@ -808,11 +808,12 @@ test('an unresolved legacy citation is not presented as audited evidence', async
 });
 
 test('the Credo reads with participles in the panel', async ({ page }) => {
-	await page.goto('/app/pl/ordinarium/credo?w=w064'); // incarnátus
+	await page.goto('/app/pl/ordinarium/credo?w=w064'); // incarnátus est, one Polish caption
 	const panel = page.locator('aside');
-	await expect(panel.locator('.form')).toHaveText('incarnátus');
-	await expect(panel.locator('.morph')).toContainText('imiesłów');
-	await expect(panel.locator('.morph')).toContainText('perfectum');
+	await expect(panel.locator('.form')).toHaveText('incarnátus est');
+	const participle = panel.locator('[aria-labelledby="construction-w064-title"] .morph');
+	await expect(participle).toContainText('imiesłów');
+	await expect(participle).toContainText('perfectum');
 	await expect(panel.locator('.explanation')).toHaveCount(0);
 	// deponent participle keeps its concept link
 	await page.goto('/app/en/ordinarium/credo?w=w083'); // passus

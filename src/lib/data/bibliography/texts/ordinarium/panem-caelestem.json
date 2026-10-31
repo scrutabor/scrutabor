@@ -2,12 +2,30 @@
  "id": "ordinarium.panem-caelestem",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-panem-caelestem; closed-literal-selection} (line 327; line 329; line 330; line 331; line 334); complete source contexts 325–336"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.panem-caelestem.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 70-word literal selection in the stated selection order (327, then 329, then 330, then 331, then 334), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 314–315",
-    "scan": "leaves n395–n396 / PDF pp. 396–397",
+    "printed": "p. 314",
+    "scan": "leaf n395 / PDF p. 396",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n395/mode/1up"
    },
    "entries": [
@@ -16,10 +34,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Pages 314–315 print Panem caelestem, one complete Domine, non sum dignus petition under ter dicit, and the communion formula ending animam meam. The selected reading expands that petition three times according to the rubric; three complete copies are not printed there."
+     "claim": "The cited page image prints Panem caelestem from its opening rubric through the start of the rubric s03, Deinde parum inclinatus, which the page turn divides; the petition and the communion formula follow on p. 315."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 315",
+    "scan": "leaf n396 / PDF p. 397",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n396/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.panem-caelestem.continuation.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "The cited page image prints Panem caelestem from s04 to its end, after the end of the rubric s03, which the page turn divides: one complete Domine, non sum dignus petition under ter dicit, and the communion formula ending animam meam. The selected reading expands that petition three times according to the rubric; three complete copies are not printed there."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

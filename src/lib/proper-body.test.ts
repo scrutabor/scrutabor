@@ -5,7 +5,7 @@ import { properData, canonData, dismissalData, commemorationData } from './loade
 import type { Lang } from './i18n';
 import { PROPER_DAYS, artifactPath } from './proprium';
 import canonTable from './data/canon.json';
-import { useFreshProperState } from './proper-test-context';
+import { deferred, stubJsonFetch, useFreshProperState } from './proper-test-context';
 type Payload = NonNullable<Awaited<ReturnType<typeof properData>>>;
 const choice = { date: '2026-04-04', mass: 'vigilia-paschalis' };
 let chooseDay: (typeof import('./proper.svelte'))['chooseDay'];
@@ -219,7 +219,7 @@ for (const lang of ['pl', 'en'] as const)
 	);
 
 it.each(['pl', 'en'] as const)(
-	'actual %s consumer accepts all111 date-indexed forms, including repeated keys',
+	'actual %s consumer accepts all112 date-indexed forms, including repeated keys',
 	async (lang) => {
 		const days = Object.fromEntries(
 			await Promise.all(PROPER_DAYS.map(async (day) => [day.id, await properData(day.id, lang)]))
@@ -238,7 +238,7 @@ it.each(['pl', 'en'] as const)(
 								: { days }
 			}))
 		);
-		expect(PROPER_DAYS).toHaveLength(113);
+		expect(PROPER_DAYS).toHaveLength(114);
 		const unindexed: string[] = [];
 		let accepted = 0;
 		for (const day of PROPER_DAYS) {
@@ -256,7 +256,7 @@ it.each(['pl', 'en'] as const)(
 			expect(proper.payload?.day, day.id).toBe(day.id);
 			accepted++;
 		}
-		expect(accepted).toBe(111);
+		expect(accepted).toBe(112);
 		expect(unindexed).toEqual([
 			'dominica-i-post-epiphaniam',
 			'dominica-iii-quae-superfuit-post-epiphaniam'
@@ -279,24 +279,15 @@ for (const lateBad of [false, true])
 		'superseded ' + (lateBad ? 'invalid' : 'valid') + ' Proper cannot replace a newer choice',
 		async () => {
 			const newer = { date: '2026-02-22', mass: 'dominica-i-in-quadragesima' };
-			let release!: (body: Payload) => void;
-			const pending = new Promise<Payload>((resolve) => {
-				release = resolve;
+			const { promise: pending, release } = deferred<Payload>();
+			stubJsonFetch(async (url) => {
+				if (url.includes('/canon/')) return canonData('en');
+				if (url.includes('/dismissal/')) return dismissalData('en');
+				if (url.includes('/commemorationes/')) return commemorationData('en');
+				if (url === artifactPath(choice.mass, 'en'))
+					return { days: { [choice.mass]: await pending } };
+				return { days: { [newer.mass]: await properData(newer.mass, 'en') } };
 			});
-			vi.stubGlobal(
-				'fetch',
-				vi.fn(async (url: string) => ({
-					ok: true,
-					json: async () => {
-						if (url.includes('/canon/')) return canonData('en');
-						if (url.includes('/dismissal/')) return dismissalData('en');
-						if (url.includes('/commemorationes/')) return commemorationData('en');
-						if (url === artifactPath(choice.mass, 'en'))
-							return { days: { [choice.mass]: await pending } };
-						return { days: { [newer.mass]: await properData(newer.mass, 'en') } };
-					}
-				}))
-			);
 			const old = chooseDay(choice, 'en');
 			let oldFinished = false;
 			void old.then(() => {

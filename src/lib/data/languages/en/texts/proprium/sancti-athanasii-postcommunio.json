@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-athanasii-postcommunio",
+  "language":"en",
+  "about":"This Postcommunion addresses God as the rewarder of faithful souls. It asks for pardon through Saint Athanasius’s prayers while celebrating his feast as worthy of veneration.",
+  "seg":[
+    {"id":"s01","tr":"God, rewarder of faithful souls, grant that through the prayers of blessed Athanasius, Your confessor and bishop, whose venerable feast we celebrate, we may obtain pardon. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["God",null,null,null,"grant","that",null,null,null,null,"and","bishop",null,null,null,null,"through the prayers","pardon","we may obtain","Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":1,"n":3,"a":1,"g":"rewarder of faithful souls"},{"s":6,"n":2,"a":1,"g":"of blessed Athanasius"},{"s":8,"n":2,"a":0,"g":"Your confessor"},{"s":12,"n":4,"a":2,"g":"whose venerable feast we celebrate"},{"s":20,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Jesus Christ"},{"s":24,"n":2,"a":0,"g":"Your Son"},{"s":26,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":31,"n":2,"a":1,"g":"in the unity"},{"s":33,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":36,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w008":"The words naming Athanasius and his titles depend on the later “prayers.” The intervening relative clause describes his feast.","w014":"The feast is worthy of veneration. The gerundive does not predict that the feast will take place in the future.","w018":"Here the prayer asks for pardon. It does not specify the conditions of a technical indulgence.","w036":"God describes Christ, the Son, not the Father being addressed. The Son lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

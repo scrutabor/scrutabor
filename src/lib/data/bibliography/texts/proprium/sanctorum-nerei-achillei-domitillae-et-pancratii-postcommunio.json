@@ -1,0 +1,146 @@
+{
+ "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 530, 531",
+    "scan": "PDF physical612 / leaf n611; PDF physical613 / leaf n612",
+    "section": "05-12 postcommunio; Postcommunio; left column immediately before Extra tempus paschale boundary; seasonal repeat: Extra tempus paschale Postcommunio; left bottom continued right top, before May13 heading; proper bodies and literal cues only",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n611/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 22-word postcommunio proper, w001–w022, followed by the distinct cue “Per Dóminum.” The supplied conclusion and Amen are not printed in full at this proper locus. Benziger prints “ut beatórum”; Vatican prints “ut, beatórum”. The same comma distinction recurs in their extra-Paschal copies. The extra-Paschal copy repeats the same proper body. Its distinct cue is “Per Dóminum.”"
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "leaves n22, n202, n305 / PDF physical23,203,306",
+    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the full Father-directed Per Dominum ending w023–w043 and Amen w044. The same-edition accented stem and terminal-response typography control accents and the separate response. This does not claim that the proper face prints the whole composite or establish every member’s conclusion in a larger group."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XXX, XXXIII–XXXIV",
+    "scan": "leaves n35,n38–n39 / PDF physical36,39–40",
+    "section": "RG436–437,505,511i,513–514"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962.ritual-context",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This postcommunion follows the Mass postcommunion when used as its sole separately concluded commemoration, retaining its own conclusion; priestly read/sung delivery follows the corresponding oration rules. This claim is not a rule for each member of larger groups."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "pp. 527, 528",
+    "scan": "PDF physical608 / leaf n607; PDF physical609 / leaf n608",
+    "section": "05-12 postcommunio; Postcommunio2576; right column immediately before Extra tempus paschale boundary; seasonal repeat: Extra tempus paschale Postcommunio2585; right column before May13 heading; proper bodies and literal cues only",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n607/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 22-word postcommunio proper, w001–w022, followed by the distinct cue “Per Dóminum.” The supplied conclusion and Amen are not printed in full at this proper locus. Benziger prints “ut beatórum”; Vatican prints “ut, beatórum”. The same comma distinction recurs in their extra-Paschal copies. The extra-Paschal copy repeats the same proper body. Its distinct cue is “Per Dóminum nostrum Iesum Christum.” This is a separate printed setting of the same received tradition, not independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical p. 17; leaf n16",
+    "section": "Rubricae generales115a; full Father-directed conclusion, including Amen",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies the complete ending and Amen, w023–w044. Its Christum comma and Amen list semicolon remain literal in the composite witness. Formula words alone do not establish a response actor or a rule for larger groups."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962",
+   "text": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+   "use": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s RG115a form an explicit composite. The settings are typographically separate, not independent historical traditions."
+  },
+  {
+   "id": "witness.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.vatican1962",
+   "text": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+   "use": "use.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s RG115a form an explicit composite. The settings are typographically separate, not independent historical traditions."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962-vatican1962",
+  "text": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+  "recension": "Benziger1962 approved-print proper body with its same-edition Father-directed conclusion and separate Amen; literal Vatican own-setting composite retained for comparison",
+  "witnesses": [
+   "witness.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.benziger1962",
+   "witness.proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 10,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
+  }
+ }
+}

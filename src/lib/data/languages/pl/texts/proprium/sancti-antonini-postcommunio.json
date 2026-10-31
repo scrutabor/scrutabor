@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-antonini-postcommunio",
+  "language":"pl",
+  "about":"Dziękując za otrzymane dary, prosimy o większe dobrodziejstwa za wstawiennictwem świętego Antonina.",
+  "seg":[
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy, składając dzięki za otrzymane dary, za wstawiennictwem błogosławionego Antonina, Twojego wyznawcy i biskupa, otrzymali większe dobrodziejstwa. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy",null,null,"abyśmy",null,null,null,null,null,null,null,null,null,null,"i","biskupa",null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":2,"n":2,"a":1,"g":"wszechmogący Boże"},{"s":5,"n":3,"a":2,"g":"za otrzymane dary"},{"s":8,"n":2,"a":1,"g":"składając dzięki"},{"s":10,"n":3,"a":0,"g":"za wstawiennictwem błogosławionego Antonina"},{"s":13,"n":2,"a":0,"g":"Twojego wyznawcy"},{"s":17,"n":3,"a":2,"g":"otrzymali większe dobrodziejstwa"}],"ex":{"w007":"Dary zostały już przyjęte. Dziękczynienie za nie łączy się z prośbą o dalsze dobro.","w011":"Antonin wstawia się za modlącymi. Oni zaś składają Bogu dzięki i proszą Go o dobrodziejstwa.","w019":"Stopień wyższy wskazuje na większą wartość dobrodziejstw, o które teraz prosimy.","w037":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

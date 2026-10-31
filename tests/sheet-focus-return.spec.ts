@@ -2,6 +2,11 @@ import type { Locator, Page } from '@playwright/test';
 import { expect, noWordInTheAddress, setHelp, test } from './fixtures';
 
 const errors = new WeakMap<Page, string[]>();
+// The landing specimen w017: Polish captions legem alone, English shares legem tuam as “Your law”.
+const specimen = {
+	pl: { form: 'legem', gloss: 'prawo', members: [] as string[] },
+	en: { form: 'legem tuam', gloss: 'Your law', members: ['legem', 'tuam'] }
+};
 const word = (page: Page, id: string) => page.locator(`[id="${id}"].word`);
 const sheet = (page: Page) => page.locator('aside.panel[role="dialog"]');
 
@@ -123,7 +128,15 @@ for (const lang of ['pl', 'en'] as const) {
 		await expect(inline).toHaveCount(1);
 		await expect(inline).not.toBeFocused();
 		await target.click();
-		await expect(inline.locator('.form')).toHaveText('legem');
+		await expect(inline.locator('.form')).toHaveText(specimen[lang].form);
+		await expect(inline.locator('.context-layer > .gloss')).toHaveText(specimen[lang].gloss);
+		await expect(inline.locator('.construction-card .construction-title')).toHaveCount(
+			specimen[lang].members.length
+		);
+		if (specimen[lang].members.length)
+			await expect(inline.locator('.construction-card .construction-title')).toHaveText(
+				specimen[lang].members
+			);
 		await expect(inline).not.toHaveAttribute('role', 'dialog');
 		await expect(inline).not.toHaveAttribute('tabindex', '-1');
 		await expect(inline.locator('button.close')).toHaveCount(0);

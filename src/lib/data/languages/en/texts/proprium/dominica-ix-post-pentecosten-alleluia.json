@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “9th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Deliver me from my enemies, my God, and set me free from those who rise up against me. Alleluia.","g":["Alleluia","alleluia","Rescue","me","from","enemies","my","God","my","and","from","those rising up","against","me","deliver","me","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Deliver me from my enemies, my God, and set me free from those who rise up against me. Alleluia.","g":["Alleluia","alleluia","Rescue","me","from",null,null,null,null,"and","from","those rising up","against","me","deliver","me","Alleluia"],"a":[{"s":5,"n":2,"a":0,"g":"my enemies"},{"s":7,"n":2,"a":0,"g":"my God"}]}
   ]
 }

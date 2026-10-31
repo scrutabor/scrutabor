@@ -26,8 +26,14 @@
 	import { proper } from '$lib/proper.svelte';
 	import { isCanonRole } from '$lib/canon';
 	import { ordinaryApplicability } from '$lib/ordinary-applicability';
+	import { unconfirmedOrdoContext, type OrdoApplicabilityContext } from '$lib/ordo-applicability';
 	import { ordinaryOmission } from '$lib/ordinary-omission';
 	import { DISMISSAL_ROLE } from '$lib/dismissal';
+	import {
+		requiemBodyContext,
+		requiemLastGospelContext,
+		requiemWaterContext
+	} from '$lib/requiem-view';
 	import {
 		ordoBlessingContext,
 		ordoContext,
@@ -51,6 +57,10 @@
 	/** The commemoration body a variant head labels: its situation and whether its Secret ends aloud. */
 	type VariantBody = { situation?: Situation; nonfinal?: boolean };
 	import type { IntroductionBody } from '$lib/introductiones';
+	import { orationInvitations, withOrationInvitations } from '$lib/oration-invitations';
+	import { ordinarySegmentView, omittedOrdinaryCitation } from '$lib/ordinary-segment-omissions';
+	import { dayById } from '$lib/proprium';
+	import { bindOrphans } from '$lib/polish';
 	import type { CommemorationVariant } from '$lib/proper.svelte';
 	import {
 		announcedReadings,
@@ -85,7 +95,8 @@
 	// Whether this movement has a slot the day fills.
 	const hasProper = $derived(
 		(movement?.entries ?? []).some(
-			(e) => e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE
+			(e) =>
+				e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE || e.id === 'agnus-dei'
 		)
 	);
 	const around = $derived(movementNeighbors(data.movement));
@@ -99,6 +110,7 @@
 	let unfolded = $state<Record<string, boolean>>({});
 	let citedPart = $state<string | null>(null);
 	let citedSegments = $state<string[]>([]);
+	let omittedCitation = $state<{ entry: string; query: string } | null>(null);
 
 	// The Ordo is exactly where paging by key is worth having — the reader
 	// is walking the Mass movement by movement — and it was the one surface
@@ -164,9 +176,16 @@
 	});
 
 	const availableBodiesFor = $derived((e: OrdoEntry) => {
-		if (e.kind === 'proper' || isCanonRole(e.id) || e.id === DISMISSAL_ROLE) {
+		if (
+			e.kind === 'proper' ||
+			isCanonRole(e.id) ||
+			e.id === DISMISSAL_ROLE ||
+			e.id === 'agnus-dei'
+		) {
 			const chosen = selectedBodiesFor(e.id);
 			if (chosen.length) {
+				if (e.id === 'agnus-dei' || e.id === DISMISSAL_ROLE)
+					return readingPayloadReady(applicabilityState, lang) ? chosen : [];
 				if (e.id === 'epistola' || e.id === 'evangelium')
 					return readingPayloadReady(applicabilityState, lang)
 						? announcedReadings(e.id, chosen, readingOwners)
@@ -198,7 +217,37 @@
 	});
 
 	const omissionFor = $derived((e: OrdoEntry) => ordinaryOmission(e.id, applicabilityState, lang));
-	const bodiesFor = $derived((e: OrdoEntry) => (omissionFor(e) ? [] : availableBodiesFor(e)));
+	const segmentViewsFor = $derived((e: OrdoEntry) =>
+		availableBodiesFor(e).map((body) =>
+			ordinarySegmentView(
+				e.id,
+				body,
+				proper.day ? dayById(proper.day)?.ordinary_omissions : undefined,
+				readingPayloadReady(applicabilityState, lang)
+			)
+		)
+	);
+	const segmentOmissionFor = (e: OrdoEntry) =>
+		e.id === 'lavabo' ? segmentViewsFor(e).find((view) => view.omitted.length) : undefined;
+	const bodiesFor = $derived((e: OrdoEntry) =>
+		omissionFor(e) ? [] : segmentViewsFor(e).map((view) => view.body)
+	);
+	const segmentOmissionNote = $derived(
+		lang === 'pl'
+			? bindOrphans('W tej Mszy w Lavabo pomija się doksologię „Gloria Patri”.')
+			: 'The doxology “Gloria Patri” is omitted from the Lavabo at this Mass.'
+	);
+	const invitationsFor = $derived((e: OrdoEntry) =>
+		orationInvitations(
+			e.id,
+			bodiesFor(e),
+			introductionsFor(e),
+			readingPayloadReady(applicabilityState, lang)
+		)
+	);
+	const displayedBodiesFor = $derived((e: OrdoEntry) =>
+		withOrationInvitations(bodiesFor(e), invitationsFor(e))
+	);
 
 	// Only the matching, settled payload may describe the selected Gospel.
 	const settledGospelKeys = $derived(
@@ -211,7 +260,9 @@
 			: []
 	);
 
-	const entryContext = $derived((entry: OrdoEntry) => {
+	const entryContext = $derived((entry: OrdoEntry): OrdoApplicabilityContext | undefined => {
+		const unconfirmed = unconfirmedOrdoContext(entry.id, applicabilityState, lang);
+		if (unconfirmed) return unconfirmed;
 		const ministerial = ordoMinisterBlessingContext(
 			entry.id,
 			applicabilityState,
@@ -240,7 +291,7 @@
 		ordoEntryVisibility(
 			entryContext(entry)?.referenceOnly ?? false,
 			showsWords(
-				[...introductionsFor(entry), ...bodiesFor(entry)].flatMap((body) =>
+				[...introductionsFor(entry), ...displayedBodiesFor(entry)].flatMap((body) =>
 					body.doc.segments
 						.filter((segment) => segment.type === 'verse')
 						.flatMap((segment) => voicesInMassForm(segment, massForm.value))
@@ -263,14 +314,16 @@
 	// — which is also what the ?w= deep link carries.
 	const inlined = $derived(
 		entries.flatMap((e) =>
-			[...introductionsFor(e), ...bodiesFor(e)].map(({ key, slug, anchor, doc, gloss }) => ({
-				slug,
-				key,
-				anchor,
-				doc,
-				slot: e.id,
-				entry: { doc, gloss }
-			}))
+			[...introductionsFor(e), ...displayedBodiesFor(e)].map(
+				({ key, slug, anchor, doc, gloss }) => ({
+					slug,
+					key,
+					anchor,
+					doc,
+					slot: e.id,
+					entry: { doc, gloss }
+				})
+			)
 		)
 	);
 
@@ -288,6 +341,48 @@
 
 	const locationFrame = readingLocationFrame();
 	const cancelLocationFrame = locationFrame.cancel;
+	// A pending same-address arrival may land once, until the reader acts.
+	let omissionLandingAddress: string | null = null;
+	let omissionLandingOpen = false;
+	function stopOmissionLanding() {
+		omissionLandingAddress = pageUrl().href;
+		omissionLandingOpen = false;
+		if (omittedCitation) cancelLocationFrame();
+	}
+
+	// Only a valid existing day choice has a canonical equivalent. Other intent stays exact.
+	function omissionIntentKey(
+		url: URL,
+		selectedDate: string | null,
+		selectedMass: string | null
+	): string {
+		const intent = new URL(url);
+		const namedDate = intent.searchParams.get(DAY_PARAM);
+		const namedMass = intent.searchParams.get(MASS_PARAM);
+		const implicit = namedDate === null && namedMass === null;
+		const date = implicit ? selectedDate : namedDate;
+		const mass = implicit ? (selectedMass ?? 'none') : namedMass;
+		const choice = date === null ? null : resolveOrdoChoice(date, mass);
+		if (choice) writeOrdoChoice(intent, choice);
+		return intent.href;
+	}
+
+	function omittedAddress(url: URL) {
+		for (const entry of entries) {
+			const original = availableBodiesFor(entry);
+			for (const [index, view] of segmentViewsFor(entry).entries()) {
+				const citation = omittedOrdinaryCitation(
+					original[index],
+					view,
+					url.searchParams.get('w'),
+					url.searchParams.get('s'),
+					url.hash
+				);
+				if (citation) return { entry: entry.id, ...citation };
+			}
+		}
+		return null;
+	}
 
 	function properMatchesLocation(url: URL) {
 		if (proper.date === null || proper.loading || proper.failed) return false;
@@ -313,10 +408,61 @@
 	function applyFromLocation(scroll = true) {
 		cancelLocationFrame();
 		const url = pageUrl();
+		const intent = omissionIntentKey(url, proper.date, proper.day);
+		const previous =
+			omissionLandingAddress === null
+				? null
+				: omissionIntentKey(new URL(omissionLandingAddress), proper.date, proper.day);
+		if (previous !== intent) omissionLandingOpen = scroll;
+		// Reinterpret both URLs with the same chosen state, then retain the observed URL.
+		omissionLandingAddress = url.href;
+		if (!scroll) omissionLandingOpen = false;
+		omittedCitation = null;
 		// An absent asynchronous proper is not a stale citation. Keep the
 		// address while loading (or after a failed request) so retry can resolve it.
 		if (hasProper && !properMatchesLocation(url)) {
 			panel.applyFromLocation();
+			return;
+		}
+		const citation = omittedAddress(url);
+		if (citation) {
+			omittedCitation = citation;
+			citedPart = null;
+			citedSegments = [];
+			unfolded = { ...untrack(() => unfolded), [citation.entry]: true };
+			panel.applyFromLocation();
+			const date = proper.date,
+				mass = proper.day,
+				language = lang;
+			const stillCurrent = () => {
+				if (
+					!omissionLandingOpen ||
+					omissionIntentKey(pageUrl(), proper.date, proper.day) !== intent ||
+					proper.date !== date ||
+					proper.day !== mass ||
+					lang !== language ||
+					!readingPayloadReady(applicabilityState, language) ||
+					!properMatchesLocation(pageUrl())
+				)
+					return false;
+				const current = omittedAddress(pageUrl());
+				return (
+					current !== null && current.entry === citation.entry && current.query === citation.query
+				);
+			};
+			if (scroll && omissionLandingOpen)
+				locationFrame.schedule(() => {
+					if (!stillCurrent()) return;
+					// Let an old panel's two-frame close pin finish before the new landing.
+					locationFrame.schedule(() => {
+						if (!stillCurrent()) return;
+						panel.cancelPins();
+						document
+							.getElementById(`ordinary-omission-${citation.entry}`)
+							?.scrollIntoView({ block: 'center' });
+						omissionLandingOpen = false;
+					});
+				});
 			return;
 		}
 		const selectedDate = proper.date;
@@ -403,6 +549,7 @@
 			if (hasProper && !properMatchesLocation(url)) {
 				return url.searchParams.has('w') || url.searchParams.has('s');
 			}
+			if (omittedAddress(url)) return true;
 			const resolved = resolveCompositeAddress(
 				inlined,
 				url.searchParams.get('w'),
@@ -416,7 +563,11 @@
 
 <svelte:window
 	onpopstate={() => applyFromLocation(false)}
+	onwheel={stopOmissionLanding}
+	ontouchstart={stopOmissionLanding}
+	onpointerdown={stopOmissionLanding}
 	onkeydown={(e) => {
+		stopOmissionLanding();
 		const href = onWindowKeydown(e);
 		if (href) openPage(href);
 	}}
@@ -448,7 +599,7 @@
 			</div>
 		</div>
 		<FormularyScopeNote {lang} centered />
-		{#if movement?.entries.some((e) => isCanonRole(e.id) || e.id === DISMISSAL_ROLE)}
+		{#if movement?.entries.some((e) => isCanonRole(e.id) || e.id === DISMISSAL_ROLE || e.id === 'agnus-dei')}
 			<noscript
 				><p class="noscript-note">
 					{lang === 'pl'
@@ -466,13 +617,22 @@
 		{#each entries as e, idx (e.id)}
 			{@const responseContext = entryContext(e)}
 			{@const referenceOnly = responseContext?.referenceOnly ?? false}
-			{@const context =
-				omissionFor(e)?.note ??
-				(responseContext
-					? responseContext.note
-					: ordoContext(e.id, proper.day, proper.paschalDismissal, lang))}
+			{@const context = responseContext?.unconfirmed
+				? responseContext.note
+				: (omissionFor(e)?.note ??
+					requiemBodyContext(bodiesFor(e)[0]) ??
+					requiemLastGospelContext(e.id, applicabilityState, lang) ??
+					requiemWaterContext(e.id, applicabilityState, lang) ??
+					(responseContext
+						? responseContext.note
+						: ordoContext(e.id, proper.day, proper.paschalDismissal, lang)))}
 			{@const bodies = bodiesFor(e)}
 			{@const entry = bodies[0]}
+			{@const omission = omissionFor(e)}
+			{@const title =
+				responseContext?.title ??
+				(entry && (e.id === 'agnus-dei' || e.id === DISMISSAL_ROLE) ? entry.doc.title : e.title)}
+			{@const titleLanguage = responseContext?.titleLanguage ?? 'la'}
 			{@const headingEntry =
 				bodies.find((body) => 'readingReference' in body && body.readingReference) ?? entry}
 			<!-- Several bodies in one slot (the Gradual and the Alleluia) are one
@@ -493,6 +653,13 @@
 				sources: helpLevel >= 2 && body.bibliography.translation.length > 0,
 				reference: 'readingReference' in body && !!body.readingReference
 			}))}
+			{@const beforeBodies = invitationsFor(e)}
+			{@const invitationEdges = Object.fromEntries(
+				Object.entries(beforeBodies).map(([slug, run]) => [
+					slug,
+					textFlowFor(run.doc, run.gloss, { helpLevel }, massForm.value, role.value)
+				])
+			)}
 			{@const openers = introductionsFor(e)}
 			{@const openerEdges = openers.map((run) =>
 				textFlowFor(run.doc, run.gloss, { helpLevel }, massForm.value, role.value)
@@ -516,19 +683,42 @@
 				!((variantPending || e.kind === 'proper') && proper.failed)}
 			<section
 				class="part"
+				data-part={e.id}
 				class:omitted={!!omissionFor(e)}
 				class:folded
 				class:revealed
 				class:loading={partLoading}
 			>
+				{#snippet segmentOmissionLead()}
+					{#if segmentOmissionFor(e)}
+						<p id={`ordinary-omission-${e.id}`} class="part-note ordinary-segment-omission">
+							{segmentOmissionNote}{' '}
+							<a
+								href={textHref(lang, 'ordinarium/lavabo') +
+									(omittedCitation?.entry === e.id ? omittedCitation.query : '')}
+							>
+								{lang === 'pl' ? 'Pełny tekst' : 'Complete text'}</a
+							>
+						</p>
+					{/if}
+				{/snippet}
 				{#snippet partLead()}
 					<div class="part-head">
 						{#if entry}
-							<a class="part-title" href={textHref(lang, (headingEntry ?? entry).key)} lang="la"
-								>{e.title}</a
+							<a
+								class="part-title"
+								href={textHref(lang, (headingEntry ?? entry).key)}
+								lang={titleLanguage}>{title}</a
+							>
+						{:else if omission?.text}
+							<a
+								class="part-title"
+								lang={titleLanguage}
+								href={textHref(lang, omission.text) +
+									(omittedCitation?.entry === e.id ? omittedCitation.query : '')}>{title}</a
 							>
 						{:else}
-							<span class="part-title" lang="la">{e.title}</span>
+							<span class="part-title" lang={titleLanguage}>{title}</span>
 						{/if}
 						{#if e.kind !== 'text'}
 							<span class="mark smallcaps"
@@ -549,13 +739,14 @@
 					<!-- The what-happens line rides in EVERY mode, like the rubric
 					     narratives it continues (owner, 2026-08-21): the altar's
 					     story is the book's own layer, not translation help. -->
-					<p class="part-note">
+					<p id={omission?.text ? `ordinary-omission-${e.id}` : undefined} class="part-note">
 						{#if context}
 							{context}
 						{:else}
 							{e.note[lang]}{#if e.when}<span class="when">{e.when[lang]}</span>{/if}
 						{/if}
 					</p>
+					{@render segmentOmissionLead()}
 					<!-- RG 480–481: a Secret followed by a commemoration's Secret keeps its
 					     words and loses only its audible ending; the mark says so. -->
 					{#if entry?.nonfinal && !entry.situation}
@@ -641,7 +832,7 @@
 												commemoration: body.commemoration,
 												formulary: body.formulary
 											})}
-											lang="la">{e.title}</a
+											lang="la">{title}</a
 										>
 										<span class="mark smallcaps"
 											>{msgs.ordoCommemoration}: {commemorationName(
@@ -651,6 +842,25 @@
 											)}</span
 										>
 									</p>
+								{/if}
+								{#if beforeBodies[body.slug]}
+									{@const invitation = beforeBodies[body.slug]}
+									<div class="oration-invitation">
+										<TextBody
+											doc={invitation.doc}
+											gloss={invitation.gloss}
+											{lang}
+											{helpLevel}
+											idPrefix={invitation.slug}
+											selectedId={panel.id}
+											citedSegments={citedPart === invitation.slug ? citedSegments : []}
+											ontap={tapWord}
+											onmark={openLegend}
+											preceding={edges[j].last}
+											precededBySources={edges[j].sources}
+											following={edges[j + 1].first}
+										/>
+									</div>
 								{/if}
 								{#if body.condition && !proper.date}
 									<ComponentConditionNote condition={body.condition} {lang} />
@@ -675,6 +885,8 @@
 								{/if}
 								<TextBody
 									doc={body.doc}
+									openingRubricContext={responseContext?.openingRubricContext ??
+										requiemWaterContext(e.id, applicabilityState, lang)}
 									{referenceOnly}
 									gloss={body.gloss}
 									{lang}
@@ -685,13 +897,14 @@
 									ontap={tapWord}
 									onmark={openLegend}
 									verifiedTranslationCitations={body.bibliography.translation}
-									preceding={edges[j].last}
-									precededBySources={edges[j].sources}
+									preceding={invitationEdges[body.slug]?.last ?? edges[j].last}
+									precededBySources={!beforeBodies[body.slug] && edges[j].sources}
 									referenceEdges={{
 										before: edges[j + 1].reference,
-										after: edges[j + 2]?.reference
+										after: beforeBodies[bodies[j + 2]?.slug ?? ''] ? false : edges[j + 2]?.reference
 									}}
-									following={edges[j + 2]?.first}
+									following={invitationEdges[bodies[j + 2]?.slug ?? '']?.first ??
+										edges[j + 2]?.first}
 								/>
 							{/each}
 						</div>
@@ -705,10 +918,11 @@
 					     the page — the reader scrolls past the silence looking
 					     for their own next line. Folded, never hidden. -->
 					<button class="unfold" onclick={() => (unfolded[e.id] = true)}>
-						<span class="unfold-title" lang="la">{e.title}</span>
+						<span class="unfold-title" lang={titleLanguage}>{title}</span>
 						<span class="unfold-what">{context ?? e.note[lang]}</span>
 						<span class="unfold-do smallcaps">{msgs.quietReveal}</span>
 					</button>
+					{@render segmentOmissionLead()}
 				{:else if !inline}
 					{@render partLead()}
 					{#if openers.length}
@@ -725,6 +939,8 @@
 					{#key entry.slug}
 						<TextBody
 							doc={entry.doc}
+							openingRubricContext={responseContext?.openingRubricContext ??
+								requiemWaterContext(e.id, applicabilityState, lang)}
 							{referenceOnly}
 							gloss={entry.gloss}
 							{lang}
@@ -737,8 +953,10 @@
 							verifiedTranslationCitations={entry.bibliography.translation}
 							layout={partLayout}
 							preceding={openerEdges.at(-1)?.last}
-							following={edges[1]?.first}
-							referenceEdges={{ after: edges[1]?.reference }}
+							following={invitationEdges[bodies[1]?.slug ?? '']?.first ?? edges[1]?.first}
+							referenceEdges={{
+								after: beforeBodies[bodies[1]?.slug ?? ''] ? false : edges[1]?.reference
+							}}
 						/>
 					{/key}
 				{/if}
@@ -1024,6 +1242,9 @@
 	}
 
 	@media print {
+		.oration-invitation {
+			break-after: avoid;
+		}
 		.print-opening {
 			display: block;
 			break-inside: auto;

@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bedae-venerabilis-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa łączy prośbę o orędownictwo świętego Bedy z prośbą, by Boże ofiary przyniosły modlącym się zbawienie.",
+  "seg":[
+    {"id":"s01","tr":"Prosimy, Panie, aby błogosławiony Beda, Twój Wyznawca i znakomity Doktor, wystąpił jako orędownik, by Twoje ofiary przyniosły nam zbawienie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,"prosimy",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Bóg",null,null,null,null],"a":[{"s":0,"n":3,"a":0,"g":"Aby nam, Panie"},{"s":3,"n":4,"a":2,"g":"Twoje ofiary przyniosły zbawienie"},{"s":7,"n":4,"a":1,"g":"błogosławiony Beda, Twój Wyznawca"},{"s":11,"n":3,"a":1,"g":"i znakomity Doktor"},{"s":15,"n":2,"a":1,"g":"niech wystąpi jako orędownik"},{"s":17,"n":3,"a":1,"g":"Przez Pana naszego"},{"s":20,"n":2,"a":0,"g":"Jezusa Chrystusa"},{"s":22,"n":2,"a":0,"g":"Syna Twojego"},{"s":24,"n":5,"a":2,"g":"który z Tobą żyje i króluje"},{"s":29,"n":4,"a":1,"g":"w jedności Ducha Świętego"},{"s":34,"n":4,"a":2,"g":"przez wszystkie wieki wieków"}],"ex":{"w005":"Modlitwa prosi, aby ofiary przyniosły wspólnocie zbawienie. Z tą intencją łączy prośbę o orędownictwo Bedy.","w016":"Beda jest przywołany jako orędownik. Jego udział ma postać modlitwy za wspólnotę, która prosi o zbawienny owoc ofiar.","w034":"Słowo „Bóg” odnosi się tu do Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

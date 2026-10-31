@@ -5,11 +5,12 @@ import type { Page } from '@playwright/test';
 // of the Queenship and not in a sung Mass that is not conventual (RG 108). The low/sung control
 // does not say whether a sung Mass is conventual, so a sung Mass shows both sequences, each
 // labelled, and no setting chooses between them. On 31 May 2079 the impeded Vigil of the
-// Ascension, absent from this edition, takes the place: that Mass is announced as incomplete.
+// Ascension takes the place and is supplied by its own represented formulary.
 const QUEEN = 'beata-maria-virgo-regina';
 const DAY = 'dies=2027-05-31';
 const MARKED = 'dies=2079-05-31';
 const OTHER = '~cantu-non-conventualis';
+const VIGIL_PRAYERS = 'dominica-v-post-pascha';
 const PETRONILLA = [
 	'sanctae-petronillae-collecta',
 	'sanctae-petronillae-secreta',
@@ -20,32 +21,22 @@ const TEXT = {
 	pl: {
 		head: 'wspomnienie: Świętej Petroneli, Dziewicy',
 		title: 'Świętej Petroneli, Dziewicy',
+		vigil: 'wspomnienie: Wigilia Wniebowstąpienia Pańskiego',
 		variants: [
 			'We Mszy śpiewanej wspomnienie zależy od tego, czy jest to Msza konwentualna. Pokazano oba warianty.'
 		],
 		situations: ['we Mszy śpiewanej konwentualnej', 'we Mszy śpiewanej niekonwentualnej'],
-		unavailable:
-			'Po modlitwie z formularza dnia następuje wymagane wspomnienie okresowe (de Tempore), którego nie ma jeszcze w tym wydaniu.',
-		day: (where: string) =>
-			`${where} wymaga wspomnienia okresowego (de Tempore), którego nie ma jeszcze w tym wydaniu. Pomija się inne wspomnienie: Świętej Petroneli, Dziewicy`,
-		mass: 'ta Msza',
-		conventual: 'śpiewana Msza konwentualna',
 		low: 'cicha',
 		sung: 'śpiewana'
 	},
 	en: {
 		head: 'commemoration: Saint Petronilla, Virgin',
 		title: 'Saint Petronilla, Virgin',
+		vigil: 'commemoration: Vigil of the Ascension of the Lord',
 		variants: [
 			'In a sung Mass the commemoration depends on whether the Mass is conventual. Both forms are shown.'
 		],
 		situations: ['in a sung conventual Mass', 'in a sung Mass that is not conventual'],
-		unavailable:
-			'The prayer of the day is followed by a required commemoration of the season (de Tempore), which is not yet in this edition.',
-		day: (where: string) =>
-			`${where} requires a commemoration of the season (de Tempore) that is not yet in this edition. The other commemoration is omitted: Saint Petronilla, Virgin`,
-		mass: 'this Mass',
-		conventual: 'a sung conventual Mass',
 		low: 'low',
 		sung: 'sung'
 	}
@@ -124,9 +115,10 @@ for (const language of ['pl', 'en'] as const) {
 			`${PETRONILLA[0]}.w001`,
 			`${QUEEN}-collecta${OTHER}.w001`
 		]);
-		// One commemoration, in the conventual sequence only, and one introduction before both.
+		// The greeting opens the slot; the conventual commemoration gets a second invitation.
 		await expect(collect.locator('.commemoration-head')).toHaveCount(1);
 		await expect(collect.locator('[id="aufer-a-nobis~collecta-introductio.w001"]')).toHaveCount(1);
+		await expect(collect.locator('.oration-invitation')).toHaveCount(1);
 		await uniqueAddresses(page);
 
 		await page.goto(`/app/${language}/ordo/offertorium?${DAY}`);
@@ -147,36 +139,41 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(page.locator(`[id="${PETRONILLA[1]}.w001"]`)).toHaveCount(1);
 	});
 
-	test(`${language} a required commemoration this edition lacks is announced, never shown as none`, async ({
+	test(`${language} the represented impeded Vigil is supplied and Petronilla is not admitted`, async ({
 		page
 	}) => {
 		await as(page, 'lecta');
-		await page.goto(`/app/${language}/ordo/catechumenorum?${MARKED}`);
-		await expect(page.locator(`[id="${QUEEN}-collecta.w001"]`)).toBeVisible();
-		await expect(page.locator('.picker .state.commemoration-unavailable')).toHaveText(
-			text.day(text.mass)
-		);
-		await expect(part(page, `${QUEEN}-collecta.w001`).locator('.unavailable-note')).toHaveText(
-			text.unavailable
-		);
-		await expect(page.locator(`[id="${PETRONILLA[0]}.w001"]`)).toHaveCount(0);
-		await expect(page.locator('.commemoration-head')).toHaveCount(0);
-		await expect(page.locator('.picker .state.commemoration-only')).toHaveCount(0);
-
+		for (const [route, role] of [
+			['catechumenorum', 'collecta'],
+			['offertorium', 'secreta'],
+			['conclusio', 'postcommunio']
+		] as const) {
+			await page.goto(`/app/${language}/ordo/${route}?${MARKED}`);
+			await expect(page.locator(`[id="${QUEEN}-${role}.w001"]`)).toBeVisible();
+			await expect(page.locator(`[id="${VIGIL_PRAYERS}-${role}.w001"]`)).toHaveCount(1);
+			await expect(page.locator('.commemoration-head .mark')).toHaveText(text.vigil);
+			await expect(page.locator('.commemoration-head a.part-title')).toHaveAttribute(
+				'href',
+				/formularium\/vigilia-ascensionis/
+			);
+			await expect(page.locator('.commemoration-unavailable, .unavailable-note')).toHaveCount(0);
+			for (const slug of PETRONILLA)
+				await expect(page.locator(`[id="${slug}.w001"]`)).toHaveCount(0);
+		}
 		await page.goto(`/app/${language}/ordo/offertorium?${MARKED}`);
-		// The Secret the missing commemoration brings follows the Mass's own, which ends quietly.
 		await expect(page.locator('.quiet-note')).toHaveCount(1);
 		await expect(page.locator(`.quiet [id="${QUEEN}-secreta.w041"]`)).toHaveCount(1);
-
+		await expect(page.locator(`[id="${VIGIL_PRAYERS}-secreta.w035"]`)).toHaveCount(1);
+		await expect(page.locator(`.quiet [id="${VIGIL_PRAYERS}-secreta.w035"]`)).toHaveCount(0);
+		await expect(page.locator(`.quiet [id="${VIGIL_PRAYERS}-secreta.w039"]`)).toHaveCount(0);
 		await page.getByRole('radio', { name: new RegExp(`${text.sung}$`) }).click();
-		await expect(page.locator('.picker .state.commemoration-unavailable')).toHaveText(
-			text.day(text.conventual)
-		);
 		const secret = part(page, `${QUEEN}-secreta.w001`);
 		await expect(secret.locator('.variant-head')).toHaveText(text.situations);
-		await expect(secret.locator('.unavailable-note')).toHaveCount(1);
+		await expect(secret.locator('.unavailable-note')).toHaveCount(0);
+		await expect(page.locator(`[id="${VIGIL_PRAYERS}-secreta.w001"]`)).toHaveCount(1);
 		await expect(page.locator(`.quiet [id="${QUEEN}-secreta${OTHER}.w041"]`)).toHaveCount(0);
 		await expect(page.locator(`[id="${PETRONILLA[1]}.w001"]`)).toHaveCount(0);
+		await uniqueAddresses(page);
 	});
 
 	test(`${language} St Petronilla's commemoration page reads her three orations as one set`, async ({

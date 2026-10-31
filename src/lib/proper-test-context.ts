@@ -13,3 +13,20 @@ export function useFreshProperState(receive: (state: typeof import('./proper.sve
 		vi.unstubAllGlobals();
 	});
 }
+
+/** A promise the test settles itself, so one transport can be held in flight. */
+export function deferred<T>() {
+	let release!: (value: T) => void;
+	const promise = new Promise<T>((resolve) => {
+		release = resolve;
+	});
+	return { promise, release };
+}
+
+/** Every fetch succeeds; the test derives each JSON body from the requested URL. */
+export function stubJsonFetch(respond: (url: string) => Promise<unknown>) {
+	vi.stubGlobal(
+		'fetch',
+		vi.fn(async (url: string) => ({ ok: true, json: () => respond(url) }))
+	);
+}

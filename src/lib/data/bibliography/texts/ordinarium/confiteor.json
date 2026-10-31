@@ -26,8 +26,8 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 219–220",
-    "scan": "leaves n298–n299 / PDF pp. 299–300",
+    "printed": "p. 219",
+    "scan": "leaf n298 / PDF p. 299",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
    },
    "entries": [
@@ -36,10 +36,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Ordo Missae prints the celebrant’s Confiteor across pp. 219–220. The rubric on p. 220 directs the ministers to repeat it with tibi, pater and te, pater in place of vobis, fratres and vos, fratres. The selected ministerial form applies those substitutions; it is not a second complete printed formula."
+     "claim": "The cited page image prints the opening of the celebrant’s Confiteor, from Confiteor Deo through sanctis Apostolis (w001–w015), which the ministers repeat unchanged; the page turns inside s02, and p. 220 prints the rest."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 220",
+    "scan": "leaf n299 / PDF p. 300",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n299/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.confiteor.continuation.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w016"
+     },
+     "claim": "The cited page image prints the rest of the celebrant’s Confiteor, from Petro et Paulo (w016) to its end, after a page turn inside s02, and the rubric that directs the ministers to repeat it with tibi, pater and te, pater in place of vobis, fratres and vos, fratres. The selected ministerial form applies those substitutions; it is not a second complete printed formula."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

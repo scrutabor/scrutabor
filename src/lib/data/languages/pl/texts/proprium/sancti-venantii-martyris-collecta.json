@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-venantii-martyris-collecta",
+  "language":"pl",
+  "about":"Modlitwa przypomina triumf świętego Wenancjusza, męczennika, i prosi Boga o wysłuchanie Jego ludu. Cześć dla zasług męczennika łączy z prośbą, by naśladować jego stałość w wierze.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który uświęciłeś ten dzień triumfem błogosławionego Wenancjusza, Twojego męczennika, wysłuchaj modlitw swojego ludu i spraw, abyśmy, czcząc jego zasługi, naśladowali stałość jego wiary. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże","który","ten","dzień","błogosławionego","Wenancjusza",null,null,"triumfem","uświęciłeś","wysłuchaj",null,null,"Twojego","i","spraw","abyśmy","którzy","jego","zasługi","czcimy",null,null,"naśladowali","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":6,"n":2,"a":0,"g":"Twojego męczennika"},{"s":11,"n":2,"a":0,"g":"modlitw ludu"},{"s":21,"n":2,"a":1,"g":"stałość wiary"}],"ex":{"w018":"„Qui” odnosi się do modlących się. To oni czczą zasługi męczennika i proszą, aby naśladować jego stałość w wierze.","w041":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

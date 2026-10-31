@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-philippi-nerii-postcommunio",
+  "language":"en",
+  "about":"After receiving heavenly nourishment, the community asks that Philip’s merits and its imitation of him may help it always to long for the heavenly things through which it truly lives.",
+  "seg":[
+    {"id":"s01","tr":"Lord, nourished with heavenly delights, we pray that, through the merits of blessed Philip, Your confessor, and by imitating him, we may always long for those same things through which we truly live. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,"we pray","that",null,null,null,null,"by the merits","and","by imitation","always","those same things",null,null,"truly","we live","we may long for","Through",null,null,"Jesus","Christ",null,null,"who","with You","lives","and","reigns","in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":4,"a":2,"g":"Nourished with heavenly delights, Lord"},{"s":6,"n":2,"a":1,"g":"of blessed Philip"},{"s":8,"n":2,"a":1,"g":"Your confessor"},{"s":15,"n":2,"a":1,"g":"through which"},{"s":21,"n":2,"a":1,"g":"our Lord"},{"s":25,"n":2,"a":1,"g":"Your Son"},{"s":34,"n":2,"a":1,"g":"of the Holy Spirit"},{"s":37,"n":4,"a":3,"g":"forever and ever"}],"ex":{"w001":"Heavenly qualifies the delights with which the praying community has been nourished. The intervening address to the Lord does not break that connection.","w013":"Philip’s merits and our imitation of him are two distinct aids. The prayer does not say that Philip is imitating us.","w015":"The same heavenly things are desired again because through them we truly live. Eadem stands on its own as a neuter plural expression, rather than agreeing with the feminine deliciae.","w020":"The prayer asks that our desire may continue. It already affirms that we truly live through the heavenly things received."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

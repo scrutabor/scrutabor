@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “15th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"It is good to give praise to the Lord, and to sing psalms to Your name, Most High; to declare Your mercy in the morning, and Your truth through the night.","g":["Good","it is","to give praise","to the Lord","and","to sing","to name","Your","Most High","to","proclaim","in the morning","mercy","Your","and","truth","Your","throughout","the night"]}
+    {"id":"s01","tr":"It is good to give praise to the Lord, and to sing psalms to Your name, Most High; to declare Your mercy in the morning, and Your truth through the night.","g":["Good","it is","to give praise","to the Lord","and","to sing",null,null,"Most High","to","proclaim","in the morning",null,null,"and",null,null,"throughout","the night"],"a":[{"s":6,"n":2,"a":0,"g":"to Your name"},{"s":12,"n":2,"a":0,"g":"Your mercy"},{"s":15,"n":2,"a":0,"g":"Your truth"}]}
   ]
 }

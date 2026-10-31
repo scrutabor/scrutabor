@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Maternity of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"When His mother Mary was betrothed to Joseph, she was found with child of the Holy Spirit.","g":["When","was","betrothed","Mother","His","Mary","to Joseph","found","was","in","the womb","having","of",null,null],"a":[{"s":13,"n":2,"a":0,"g":"the Holy Spirit"}]}
+    {"id":"s01","tr":"When His mother Mary was betrothed to Joseph, she was found with child of the Holy Spirit.","g":["When",null,null,null,null,"Mary","to Joseph",null,null,null,null,null,"of",null,null],"a":[{"s":1,"n":2,"a":1,"g":"was betrothed"},{"s":3,"n":2,"a":0,"g":"His mother"},{"s":7,"n":2,"a":0,"g":"was found"},{"s":9,"n":3,"a":2,"g":"to be with child"},{"s":13,"n":2,"a":0,"g":"the Holy Spirit"}]}
   ]
 }

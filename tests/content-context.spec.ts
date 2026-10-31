@@ -537,10 +537,18 @@ for (const language of ['pl', 'en']) {
 		await page.goto(
 			`/app/${language}/formularium/corporis-christi?w=corporis-christi-sequentia.w276`
 		);
-		await expect(page.locator('aside .form')).toHaveText('hic');
-		await expect(page.locator('aside')).toContainText(language === 'pl' ? 'przysłówek' : 'adverb');
-		await expect(page.locator('aside')).toContainText(language === 'pl' ? 'tutaj' : 'here');
-		await expect(page.locator('aside')).toContainText(
+		// English captions nos pascis hic mortáles as one unit, so hic is its own card there.
+		await expect(page.locator('aside .form')).toHaveText(
+			language === 'pl' ? 'hic' : 'nos pascis hic mortáles'
+		);
+		const word =
+			language === 'pl'
+				? page.locator('aside')
+				: page.locator('aside [aria-labelledby="construction-w276-title"]');
+		if (language === 'en') await expect(word.locator('.construction-title')).toHaveText('hic');
+		await expect(word).toContainText(language === 'pl' ? 'przysłówek' : 'adverb');
+		await expect(word).toContainText(language === 'pl' ? 'tutaj' : 'here');
+		await expect(word).toContainText(
 			language === 'pl' ? 'Przysłówek miejsca' : 'The adverb of place'
 		);
 	});

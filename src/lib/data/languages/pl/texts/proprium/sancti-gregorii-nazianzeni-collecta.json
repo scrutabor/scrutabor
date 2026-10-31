@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-gregorii-nazianzeni-collecta",
+  "language":"pl",
+  "about":"Modlitwa wspomina Grzegorza jako sługę wiecznego zbawienia i nauczyciela życia na ziemi. Prosi, byśmy byli godni mieć go za orędownika w niebie.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który dałeś swojemu ludowi błogosławionego Grzegorza jako sługę wiecznego zbawienia, spraw, prosimy, abyśmy byli godni mieć w niebie za orędownika tego, którego na ziemi mieliśmy za nauczyciela życia. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże","który","ludowi","Twojemu","wiecznego","zbawienia","błogosławionego","Grzegorza","jako sługę","dałeś","spraw","prosimy","abyśmy","tego, którego","za nauczyciela","życia","mieliśmy",null,null,"za orędownika",null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":17,"n":2,"a":1,"g":"na ziemi"},{"s":20,"n":2,"a":1,"g":"byli godni mieć"},{"s":22,"n":2,"a":1,"g":"w niebie"}],"ex":{"w009":"Grzegorz został dany ludowi jako sługa wiecznego zbawienia. Określenie „wiecznego” odnosi się do zbawienia.","w014":"„Tego, którego” wskazuje na tę samą osobę, Grzegorza. Modlitwa zestawia jego ziemskie nauczanie z orędownictwem w niebie.","w022":"Prośba dotyczy godności posiadania Grzegorza za orędownika. „Mieć” odnosi się do tej samej osoby, którą wcześniej nazwano nauczycielem życia.","w041":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

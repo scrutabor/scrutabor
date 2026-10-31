@@ -4,7 +4,7 @@
   "about":"Rubryki nazywają zdanie poprzedzające Pater noster prefacją Modlitwy Pańskiej. Po słowach et ne nos indúcas in tentatiónem odpowiedź sed líbera nos a malo przypisują usługującemu. We Mszy cichej wierni mogą odmówić całe Ojcze nasz razem z kapłanem, po łacinie, i dodać z nim Amen.",
   "seg":[
     {"id":"s01","nr":"Kapłan składa ręce."},
-    {"id":"s02","tr":"Módlmy się.","tc":[271],"tb":"normalized","g":["módlmy się"]},
+    {"id":"s02","tr":"Módlmy się.","tc":[271],"tb":"normalized","g":["Módlmy się"]},
     {"id":"s03","tr":"Pouczeni zbawiennymi nakazami i ukształtowani przez Bożą naukę, ośmielamy się powiedzieć:","g":["przykazaniami","zbawiennymi","pouczeni","i","Bożą","nauką","ukształtowani","ośmielamy się","mówić"],"ex":{"w009":"„Audémus dícere” wyraża synowską śmiałość: pouczeni przez Chrystusa, ośmielamy się powiedzieć „Ojcze nasz”."}},
     {"id":"s04","nr":"Kapłan rozkłada ręce i tak je trzyma przez całą modlitwę."},
     {"id":"s05","tr":"Ojcze nasz, któryś jest w niebie,","tc":[90],"tb":"normalized","g":["Ojcze","nasz","który","jesteś","w","niebiosach"],"ex":{"w016":"Łacina mówi tu o „niebiosach” w liczbie mnogiej. Tradycyjny przekład zachowuje znajome „w niebie”."}},

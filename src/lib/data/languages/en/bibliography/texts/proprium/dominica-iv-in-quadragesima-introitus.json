@@ -1,0 +1,49 @@
+{
+ "id": "proprium.dominica-iv-in-quadragesima-introitus",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 55",
+    "scan": "scan p. 68",
+    "section": "Gloria Patri only (s01/w037–056); Holy Ghost becomes Holy Spirit"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-introitus.gloria-patri.key1901",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English wording basis for the Gloria Patri only (s01/w037–056). The received formula uses Holy Spirit for the printed Holy Ghost; the other material wording is retained. This page does not supply the Introit proper, psalm verse or repeated antiphon."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 231",
+    "scan": "scan p. 247",
+    "section": "Psalm verse only (s01/w025–036); shall becomes will"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.dominica-iv-in-quadragesima-introitus.psalm.laity1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English wording basis for the psalm verse only (s01/w025–036). The retained sentence uses will in place of printed shall. This use does not attribute the new proper, expanded Gloria Patri or reprise to this page."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

@@ -45,6 +45,7 @@
 	let pendingDay = $state(initial.day);
 	let month = $state(clampDate(initial.date).slice(0, 7));
 	let frame = $state<HTMLElement | null>(null);
+	let dayDetail = $state<HTMLElement | null>(null);
 
 	function localDate(iso: string): Date {
 		const [year, monthNumber, day] = iso.split('-').map(Number);
@@ -217,6 +218,12 @@
 		if (event.target === event.currentTarget) onclose();
 	}
 
+	// On a wide screen the day column scrolls by itself. Each newly chosen date opens at the
+	// top of that column, with its title and Mass choices, wherever the last day was left.
+	$effect(() => {
+		if (pendingDate && dayDetail) dayDetail.scrollTop = 0;
+	});
+
 	$effect(() => {
 		if (!frame) return;
 		const dialog = frame;
@@ -304,12 +311,11 @@
 				</div>
 			</div>
 
-			<div class="day-detail">
+			<div class="day-detail" bind:this={dayDetail}>
 				<p class="detail-date smallcaps">{dateLabel(pendingDate, 'full')}</p>
 				{#if displayedDay}
 					<h3>{displayedDay.title[lang]}</h3>
 					{#if displayedDay.partial}<p class="availability">{msgs.dayPicker.partial}</p>{/if}
-					<FormularyScopeNote {lang} />
 					{#if detail.variants.length > 1}
 						<fieldset class="variants">
 							<legend>{msgs.dayPicker.chooseVariant}</legend>
@@ -327,6 +333,7 @@
 							{/each}
 						</fieldset>
 					{/if}
+					<FormularyScopeNote {lang} />
 				{:else if detail.on}
 					<h3>{msgs.dayPicker.unwrittenTitle}</h3>
 					<p>{msgs.dayPicker.unwrittenText}</p>
@@ -697,7 +704,12 @@
 			grid-template-rows: auto repeat(6, 1fr);
 		}
 
+		/* The day column takes the calendar's height and scrolls by itself, so a day with
+		   several Masses neither grows nor moves the dialog, and the note after the choices
+		   never pushes a choice or the month out of view. */
 		.day-detail {
+			contain: size;
+			overflow-y: auto;
 			border-top: 0;
 			border-inline-start: 1px solid var(--border);
 			margin-block-start: 0;

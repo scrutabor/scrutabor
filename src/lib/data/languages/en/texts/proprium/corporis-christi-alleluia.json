@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The Alleluia of the feast of the Most Holy Body of Christ. It gives Christ’s words about His Flesh as true food and His Blood as true drink.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia.","g":["alleluia","alleluia"]},
-    {"id":"s02","tr":"My Flesh is meat indeed, and My Blood is drink indeed. He that eateth My Flesh and drinketh My Blood abideth in Me, and I in him.","g":["Flesh","My","truly","is","food","and","Blood","My","truly","is","drink","who","eats","My","Flesh","and","drinks","My","Blood","in","Me","abides","and","I","in","him"]}
+    {"id":"s01","tr":"Alleluia, alleluia.","g":["Alleluia","alleluia"]},
+    {"id":"s02","tr":"My Flesh is meat indeed, and My Blood is drink indeed. He who eats My Flesh and drinks My Blood abides in Me, and I in him.","g":[null,null,"truly","is","food","and",null,null,"truly","is","drink","who","eats","My","Flesh","and","drinks","My","Blood","in","Me","abides","and","I","in","him"],"a":[{"s":0,"n":2,"a":0,"g":"My Flesh"},{"s":6,"n":2,"a":0,"g":"My Blood"}]}
   ]
 }

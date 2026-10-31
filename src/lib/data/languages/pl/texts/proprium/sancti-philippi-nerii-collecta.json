@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-philippi-nerii-collecta",
+  "language":"pl",
+  "about":"Modlitwa łączy radość z uroczystości świętego Filipa Neri z prośbą o wzrost dzięki przykładowi jego cnót.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który wyniosłeś błogosławionego Filipa, Twojego Wyznawcę, do chwały Twoich świętych, udziel łaskawie, abyśmy, radując się jego uroczystością, wzrastali dzięki przykładowi jego cnót. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże","który",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Bóg",null,null,null,null],"a":[{"s":2,"n":4,"a":1,"g":"błogosławionego Filipa, Twojego Wyznawcę"},{"s":6,"n":4,"a":3,"g":"chwałą Twoich świętych wywyższyłeś"},{"s":10,"n":3,"a":0,"g":"udziel łaskawie, abyśmy"},{"s":13,"n":3,"a":2,"g":"radując się jego uroczystością"},{"s":16,"n":4,"a":2,"g":"wzrastali dzięki przykładowi jego cnót"},{"s":20,"n":3,"a":1,"g":"Przez Pana naszego"},{"s":23,"n":2,"a":0,"g":"Jezusa Chrystusa"},{"s":25,"n":2,"a":0,"g":"Syna Twojego"},{"s":27,"n":5,"a":2,"g":"który z Tobą żyje i króluje"},{"s":32,"n":4,"a":1,"g":"w jedności Ducha Świętego"},{"s":37,"n":4,"a":2,"g":"przez wszystkie wieki wieków"}],"ex":{"w004":"Modlitwa dotyczy Filipa Neri, którego wspomnienie przypada 26 maja.","w010":"Wywyższenie Filipa jest opisane jako dokonane działanie Boga. Wzrost modlących się pozostaje przedmiotem prośby.","w014":"Uroczystość odnosi się do Filipa. Radość z jego święta łączy się z prośbą o wzrost dzięki przykładowi jego cnót.","w037":"Słowo „Bóg” odnosi się tu do Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

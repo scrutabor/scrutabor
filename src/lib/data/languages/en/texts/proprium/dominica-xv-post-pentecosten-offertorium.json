@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “15th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Expectantly I waited for the Lord, and He looked upon me and heard my supplication; and He put a new song into my mouth, a hymn to our God.","g":["Waiting","I waited","for the Lord","and","He regarded","me","and","He heard","plea","my","and","He put","into","mouth","my","a canticle","new","a hymn","to God","our"]}
+    {"id":"s01","tr":"Expectantly I waited for the Lord, and He looked upon me and heard my supplication; and He put a new song into my mouth, a hymn to our God.","g":["Waiting","I waited","for the Lord","and","He regarded","me","and","He heard",null,null,"and","He put","into",null,null,"a canticle","new","a hymn",null,null],"a":[{"s":8,"n":2,"a":0,"g":"my plea"},{"s":13,"n":2,"a":0,"g":"my mouth"},{"s":18,"n":2,"a":0,"g":"to our God"}]}
   ]
 }

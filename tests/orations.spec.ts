@@ -114,7 +114,7 @@ const prayers = [
 		constructions: [
 			{ language: 'pl', gloss: 'w tym, co sprawujemy z obowiązku należnej służby', words: 5 },
 			{ language: 'pl', gloss: 'doświadczyli wzrostu zbawienia, którego udzielasz', words: 4 },
-			{ language: 'en', gloss: 'filled with the sacred gift', words: 3 },
+			{ language: 'en', gloss: 'Filled with the sacred gift', words: 3 },
 			{ language: 'en', gloss: 'we implore You, Lord', words: 3 },
 			{ language: 'en', gloss: 'we celebrate in fulfillment of the service we owe', words: 4 },
 			{ language: 'en', gloss: 'Your martyr', words: 2 },

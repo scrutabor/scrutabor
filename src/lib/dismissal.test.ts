@@ -10,17 +10,19 @@ import { dismissalData } from './loaders';
 import { properOccurrences, indexOccurrenceWords } from './proper-occurrences';
 
 describe('corpus-owned dismissal choices', () => {
-	it('exposes both validated text keys for navigation', () => {
+	it('exposes all three validated text keys for navigation', () => {
 		expect(DISMISSAL_TEXT_KEYS).toEqual([
 			'ordinarium/ite-missa-est',
-			'ordinarium/ite-missa-est-paschale'
+			'ordinarium/ite-missa-est-paschale',
+			'ordinarium/ite-missa-est-defunctorum'
 		]);
 	});
 	it('resolves all emitted choices with no implicit ordinary default', () => {
 		const lookup = createDismissalLookup(table);
-		// 7619 before the calendar repair: St Matthias moved to 25 February in leap years and
+		// 7610 after the calendar repair (7619 before it): St Matthias moved to 25 February in leap years and
 		// the Friday "Sunday within the octave" of 30 December removed.
-		expect(table.pairs).toHaveLength(7610);
+		// The represented Vigil of the Ascension adds 72 pairs to that repaired calendar.
+		expect(table.pairs).toHaveLength(7682);
 		expect(() => lookup.resolve('2033-12-30', 'dominica-infra-octavam-nativitatis')).toThrow();
 		expect(lookup.resolve('2028-02-25', 'sancti-matthiae-apostoli').id).toBe('ordinary');
 		let paschal = 0;
@@ -114,7 +116,7 @@ describe('corpus-owned dismissal choices', () => {
 		[
 			'unresolved profile',
 			(v) => {
-				v.pairs[0][2] = 2;
+				v.pairs[0][2] = 3;
 			}
 		]
 	];
@@ -128,11 +130,11 @@ describe('corpus-owned dismissal choices', () => {
 describe.each(['pl', 'en'] as const)('%s dismissal body', (lang) => {
 	it('carries all fifteen words, sources and lexical identities', async () => {
 		const pack = await dismissalData(lang);
-		expect(pack.parts).toHaveLength(1);
+		expect(pack.parts).toHaveLength(2);
 		const part = pack.parts[0];
 		expect(part.key).toBe('ordinarium/ite-missa-est-paschale');
 		expect(part.bibliography.context.length).toBeGreaterThan(0);
-		const occurrences = properOccurrences(pack.parts);
+		const occurrences = properOccurrences([part]);
 		const words = indexOccurrenceWords(occurrences);
 		expect(words.size).toBe(15);
 		expect(words.get('ite-missa-est-paschale.w015')?.doc.id).toBe(

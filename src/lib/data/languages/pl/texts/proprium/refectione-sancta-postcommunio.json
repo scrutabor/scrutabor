@@ -1,0 +1,9 @@
+{
+  "id":"proprium.refectione-sancta-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa po Komunii z prośbą za Kościół posilony świętym pokarmem: o wzrost wolności i wytrwanie w nienaruszonej wierze.",
+  "seg":[
+    {"id":"s01","tr":"Panie, prosimy, prowadź łaskawie swój Kościół, posilony świętym pokarmem. Niech pod Twoim potężnym kierownictwem zyskuje coraz większą wolność i trwa w nienaruszonej wierze. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,"prowadź","prosimy","Panie",null,null,null,"aby",null,null,null,"zarówno",null,null,"otrzymywał","jak i",null,null,null,"trwał","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":0,"n":3,"a":2,"g":"Posilony świętym pokarmem"},{"s":6,"n":3,"a":2,"g":"łaskawie swój Kościół"},{"s":10,"n":3,"a":2,"g":"prowadzony pod potężnym kierownictwem"},{"s":14,"n":2,"a":0,"g":"wzrost wolności"},{"s":18,"n":3,"a":2,"g":"w nienaruszonej wierze"}],"ex":{"w003":"„Enutritam” określa Kościół, posilony świętym pokarmem. O prowadzenie tego Kościoła proszony jest Pan.","w008":"„Placatus” określa Pana jako przebłaganego i przychylnego. „Łaskawie” łączy to usposobienie z prośbą, aby prowadził swój Kościół.","w013":"„Directa” opisuje Kościół prowadzony pod potężnym Bożym kierownictwem. Dalsza prośba obejmuje jego wzrost w wolności i trwanie w nienaruszonej wierze.","w020":"„Religio” obejmuje tu wiarę przeżywaną w oddawaniu czci Bogu i wiernym Mu życiu. Prośba dotyczy zachowania całego tego życia religijnego w nienaruszonym stanie.","w039":"„Deus” jest tu mianownikiem i określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

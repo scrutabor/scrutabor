@@ -1,0 +1,26 @@
+{
+ "id": "ordinarium.agnus-dei-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp.72–73",
+    "scan": "PDF pp.84–85(one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.requiem.agnus-address-and-requiem-petitions.missal1846",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Historical English Agnus addresses and Requiem replacement instructions underlying the three invocations, revised in contemporary second-person address and the choices grant and everlasting. This is a rule-derived base, not a verbatim printing of the complete current sentences."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

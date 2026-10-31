@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Commemoration of All the Faithful Departed — Mass I” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"May light eternal shine upon them, O Lord, with Your Saints forever, for You are merciful. Grant them eternal rest, O Lord; and let perpetual light shine upon them: with Your Saints forever, for You are merciful.","g":["light","eternal","may shine","upon them","Lord","with","Saints","Your","for","ever","for","kind","are","rest","eternal","grant","them","Lord","and","light","perpetual","may shine","upon them","with","Saints","Your","for","ever","for","kind","are"]}
+    {"id":"s01","tr":"May light eternal shine upon them, O Lord, with Your saints forever, for You are merciful. Grant them eternal rest, O Lord; and let perpetual light shine upon them: with Your saints forever, for You are merciful.","g":["Light","eternal","may shine","upon them","Lord","with",null,null,null,null,"for",null,null,"Rest","eternal","grant","them","Lord","and","light","perpetual","may shine","upon them","with",null,null,null,null,"for",null,null],"a":[{"s":6,"n":2,"a":0,"g":"Your saints"},{"s":8,"n":2,"a":1,"g":"forever"},{"s":11,"n":2,"a":1,"g":"You are merciful"},{"s":24,"n":2,"a":0,"g":"Your saints"},{"s":26,"n":2,"a":1,"g":"forever"},{"s":29,"n":2,"a":1,"g":"You are merciful"}]}
   ]
 }

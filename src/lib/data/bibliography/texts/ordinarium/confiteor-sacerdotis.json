@@ -26,8 +26,8 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 219–220",
-    "scan": "leaves n298–n299 / PDF pp. 299–300",
+    "printed": "p. 219",
+    "scan": "leaf n298 / PDF p. 299",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
    },
    "entries": [
@@ -36,10 +36,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page image prints the Confiteor from Confiteor Deo through sanctis Apostolis (w001–w015); the page turns inside s02, and p. 220 prints the rest."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 220",
+    "scan": "leaf n299 / PDF p. 300",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n299/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.confiteor-sacerdotis.continuation.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w016"
+     },
+     "claim": "The cited page image prints the Confiteor from Petro et Paulo (w016) to its end, after a page turn inside s02."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

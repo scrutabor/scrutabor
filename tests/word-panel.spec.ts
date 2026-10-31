@@ -75,9 +75,9 @@ test('a shared gloss opens one panel with a complete analysis of every Latin wor
 	await page.goto(
 		`/app/en/formularium/commemoratio-omnium-fidelium-defunctorum?w=commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia.w016`
 	);
-	await expect(page.locator('aside .gloss')).toHaveText('shall be');
+	await expect(page.locator('aside .gloss')).toHaveText('will be');
 	await expect(page.locator('aside .alignment')).toHaveText(
-		'Est functions here as an auxiliary verb, while futúrus is a future active participle. The whole expression is rendered in English as “shall be”.'
+		'Est functions here as an auxiliary verb, while futúrus is a future active participle. The whole expression is rendered in English as “will be”.'
 	);
 });
 

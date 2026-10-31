@@ -2,6 +2,24 @@
  "id": "ordinarium.praefatio-dialogus",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-praefatio-dialogus; closed-literal-selection} (line 203; line 204; line 205; line 206; line 207; line 208); complete source contexts 201–210"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-dialogus.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 20-word literal selection in the stated selection order (203, then 204, then 205, then 206, then 207, then 208), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
@@ -20,6 +38,28 @@
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 225",
+    "scan": "leaf n304 / PDF p. 305",
+    "section": "Ordo Missae, complete Praefationem incipit rubric through Gratias agamus Domino Deo nostro",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n304/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.praefatio-dialogus.hands-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "This separate rubric supplies s01: both hands laid on the altar at the start of the Preface and raised a little at Sursum corda, then joined before the breast with a bow of the head at Gratias agamus Domino Deo nostro. It is not printed with the dialogue on p. 286."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

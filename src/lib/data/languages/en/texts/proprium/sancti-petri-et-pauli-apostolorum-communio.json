@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The communio of the formulary “Saints Peter and Paul, Apostles” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"You are Peter, and upon this rock I will build My Church.","g":["You","are","Peter","and","upon","this","rock","I will build","Church","My"]}
+    {"id":"s01","tr":"You are Peter, and upon this rock I will build My Church.","g":["You","are","Peter","and","upon","this","rock","I will build",null,null],"a":[{"s":8,"n":2,"a":0,"g":"My Church"}]}
   ]
 }

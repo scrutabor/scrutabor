@@ -19,8 +19,127 @@
    "title": "Greater Litanies"
   },
   {
+   "id": "sancta-angela-mericia",
+   "title": "Saint Angela Merici, Virgin"
+  },
+  {
+   "id": "sancta-catharina-senensis",
+   "title": "Saint Catherine of Siena, Virgin"
+  },
+  {
+   "id": "sancta-maria-magdalena-de-pazzis",
+   "title": "Saint Mary Magdalene de' Pazzi, Virgin",
+   "about": {
+    "secreta": "We ask God to accept His people's offering in honor of the saints, through whose merits His people have received help in distress.",
+    "postcommunio": "Having received the sacred gifts, we ask to be renewed through the intercession of the saint whose feast we celebrate."
+   }
+  },
+  {
+   "id": "sancta-monica",
+   "title": "Saint Monica, Widow",
+   "about": {
+    "secreta": "We ask God to accept His people's offering in honor of the saints, through whose merits His people have received help in distress.",
+    "postcommunio": "Having received the sacred gifts, we ask to be renewed through the intercession of the saint whose feast we celebrate."
+   }
+  },
+  {
    "id": "sancta-petronilla",
    "title": "Saint Petronilla, Virgin"
+  },
+  {
+   "id": "sancti-alexander-eventius-theodulus-et-iuvenalis",
+   "title": "Saints Alexander, Eventius and Theodulus, Martyrs, and Juvenal, Bishop and Confessor"
+  },
+  {
+   "id": "sancti-marcellinus-petrus-et-erasmus",
+   "title": "Saints Marcellinus, Peter, and Erasmus the Bishop, all Martyrs"
+  },
+  {
+   "id": "sancti-nereus-achilleus-domitilla-et-pancratius",
+   "title": "Saints Nereus, Achilleus, Domitilla the Virgin, and Pancras, all Martyrs"
+  },
+  {
+   "id": "sanctus-antoninus",
+   "title": "Saint Antoninus, Bishop and Confessor"
+  },
+  {
+   "id": "sanctus-athanasius",
+   "title": "Saint Athanasius, Bishop, Confessor and Doctor of the Church"
+  },
+  {
+   "id": "sanctus-augustinus-cantuariensis",
+   "title": "Saint Augustine of Canterbury, Bishop and Confessor"
+  },
+  {
+   "id": "sanctus-beda-venerabilis",
+   "title": "Saint Bede the Venerable, Confessor and Doctor of the Church"
+  },
+  {
+   "id": "sanctus-bernardinus-senensis",
+   "title": "Saint Bernardine of Siena, Confessor"
+  },
+  {
+   "id": "sanctus-bonifatius-martyr",
+   "title": "Saint Boniface, Martyr",
+   "about": {
+    "secreta": "We ask God to receive our gifts and prayers, cleanse us through the heavenly mysteries and graciously hear us."
+   }
+  },
+  {
+   "id": "sanctus-felix-i-papa",
+   "title": "Saint Felix I, Pope and Martyr"
+  },
+  {
+   "id": "sanctus-gregorius-nazianzenus",
+   "title": "Saint Gregory of Nazianzus, Bishop, Confessor and Doctor of the Church"
+  },
+  {
+   "id": "sanctus-gregorius-vii",
+   "title": "Saint Gregory VII, Pope and Confessor"
+  },
+  {
+   "id": "sanctus-ioannes-baptista-de-la-salle",
+   "title": "Saint John Baptist de la Salle, Confessor"
+  },
+  {
+   "id": "sanctus-paschalis-baylon",
+   "title": "Saint Paschal Baylon, Confessor"
+  },
+  {
+   "id": "sanctus-petrus-caelestinus",
+   "title": "Saint Peter Celestine, Pope and Confessor"
+  },
+  {
+   "id": "sanctus-petrus-martyr",
+   "title": "Saint Peter, Martyr"
+  },
+  {
+   "id": "sanctus-philippus-nerius",
+   "title": "Saint Philip Neri, Confessor"
+  },
+  {
+   "id": "sanctus-pius-v",
+   "title": "Saint Pius V, Pope and Confessor"
+  },
+  {
+   "id": "sanctus-robertus-bellarmino",
+   "title": "Saint Robert Bellarmine, Bishop, Confessor and Doctor of the Church"
+  },
+  {
+   "id": "sanctus-stanislaus",
+   "title": "Saint Stanislaus, Bishop and Martyr"
+  },
+  {
+   "id": "sanctus-ubaldus",
+   "title": "Saint Ubald, Bishop and Confessor"
+  },
+  {
+   "id": "sanctus-venantius-martyr",
+   "title": "Saint Venantius, Martyr"
+  },
+  {
+   "id": "vigilia-ascensionis-impedita",
+   "title": "Vigil of the Ascension of the Lord"
   }
  ]
 }

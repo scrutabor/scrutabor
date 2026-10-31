@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/09-29; resolved section [Evangelium] with declared inherited references"
+    "section": "missa/Latin/Sancti/09-29.txt [Evangelium] line 36 literally references @Sancti/05-08; missa/Latin/Sancti/05-08.txt [Evangelium] heading 33, title/reference framing 34–35, complete body line 36"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The complete pinned Latin Mass Gospel line directly corroborates the selected substantive reading after the single declared digital typo niitti is corrected to mitti against the controlling missal. Literal source spelling and accidental differences remain recorded. The 09-29 reference is source data, not proof of executed feast selection or historical transcription genesis."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-28"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

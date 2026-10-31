@@ -55,7 +55,7 @@ export default defineConfig({
 								name: 'corpus-texts',
 								test: /\/src\/lib\/data\/(?:texts|bibliography\/texts|languages\/[^/]+\/(?:texts|bibliography\/texts))\//,
 								minSize: 48 * 1024,
-								maxSize: 96 * 1024
+								maxSize: 104 * 1024
 							}
 						]
 					};

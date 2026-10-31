@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Graduale formularza „Świętego Wawrzyńca Męczennika” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Doświadczyłeś, Panie, moje serce i nawiedziłeś nocą; ogniem mnie wypróbowałeś i nie znaleziono we mnie nieprawości.","g":["Badałeś","Panie","serce","moje","i","nawiedziłeś","nocą","W ogniu","mnie","doświadczyłeś","i","nie","została","znaleziona","we","mnie","nieprawość"]}
+    {"id":"s01","tr":"Doświadczyłeś, Panie, moje serce i nawiedziłeś nocą; ogniem mnie wypróbowałeś i nie znaleziono we mnie nieprawości.","g":["Badałeś","Panie","serce","moje","i","nawiedziłeś","nocą","W ogniu","mnie","doświadczyłeś","i","nie",null,null,"we","mnie","nieprawość"],"a":[{"s":12,"n":2,"a":1,"g":"została znaleziona"}]}
   ]
 }

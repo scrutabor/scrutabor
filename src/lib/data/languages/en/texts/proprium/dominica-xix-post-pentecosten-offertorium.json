@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “19th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"If I walk in the midst of tribulation, You will give me life, O Lord, and You will stretch out Your hand against the wrath of my enemies, and Your right hand will save me.","g":["If","I shall walk","in","the midst","of tribulation","You will give life","to me","Lord","and","against","the wrath","of enemies","my","You will stretch forth","hand","Your","and","safe","me","shall make","right hand","Your"]}
+    {"id":"s01","tr":"If I walk in the midst of tribulation, You will give me life, O Lord, and You will stretch out Your hand against the wrath of my enemies, and Your right hand will save me.","g":["If","I walk","in","the midst","of tribulation","You will give life","to me","Lord","and","against","the wrath",null,null,"You will stretch forth",null,null,"and","safe","me","will make",null,null],"a":[{"s":11,"n":2,"a":0,"g":"of my enemies"},{"s":14,"n":2,"a":0,"g":"Your hand"},{"s":20,"n":2,"a":0,"g":"Your right hand"}]}
   ]
 }

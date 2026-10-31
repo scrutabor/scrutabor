@@ -2,12 +2,30 @@
  "id": "ordinarium.per-ipsum",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-per-ipsum; closed-literal-selection} (line 269; line 271; line 272); complete source contexts 267–274"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.per-ipsum.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 26-word literal selection in the stated selection order (269, then 271, then 272), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 309–310",
-    "scan": "leaves n390–n391 / PDF pp. 391–392",
+    "printed": "p. 309",
+    "scan": "leaf n390 / PDF p. 391",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n390/mode/1up"
    },
    "entries": [
@@ -16,10 +34,31 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page image prints Per ipsum from its opening rubric through s06, omnis honor, et gloria, with the rubrics set within it."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 310",
+    "scan": "leaf n391 / PDF p. 392",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n391/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.per-ipsum.continuation.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "The cited page image prints Per ipsum from s07 to its end: the rubric Reponit hostiam, the chant setting of Per omnia saecula saeculorum and the answer Amen."
+    }
+   ],
+   "verified_on": "2026-10-30"
   }
  ],
  "witnesses": []

@@ -1,0 +1,49 @@
+{
+ "id": "proprium.sacro-munere-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 51",
+    "scan": "PDF s. 54",
+    "section": "Deus qui humanae — tylko „na wieki wieków” w zakończeniu; tekst własny modlitwy i Amen wyłączone"
+   },
+   "entries": [
+    {
+     "id": "use.pl.proprium.sacro-munere-postcommunio.conclusion-duration.pamiatka1903",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Wyłącznie końcowe „na wieki wieków”, odpowiadające łacińskim w035–w038. Ten zwrot jest wydrukowany po Deus qui humanae na wskazanej stronie; wcześniejsze słowa tego źródła mają inny wstęp i szyk niż wybrane Per Dominum. Tekst własny modlitwy, pozostałe słowa zakończenia i Amen nie są objęte tym użyciem; nie jest to poświadczenie całego zakończenia na jednej stronie."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 62",
+    "scan": "PDF s. 65",
+    "section": "Libera nos — tylko zakończenie od „Przez” do „Bóg”; tekst własny modlitwy wyłączony"
+   },
+   "entries": [
+    {
+     "id": "use.pl.proprium.sacro-munere-postcommunio.conclusion-stem.pamiatka1903",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa wyłącznie trzonu zakończenia odpowiadającego łacińskim w018–w034, od „Przez” do „Bóg”, wydrukowanego po Libera nos: „Przez tegoż Pana naszego Jezusa Chrystusa, Syna Twego, który z Tobą żyje i króluje w jedności Ducha świętego Bóg.” Dostosowanie do wybranego tekstu łacińskiego: pominięto „tegoż”, ponieważ nie ma eundem; Twego na Twojego to modernizacja formy dzierżawczej, a Świętego i interpunkcja odpowiadają współczesnemu zapisowi. Tekst własny modlitwy, końcowe „na wieki wieków” i Amen nie są objęte tym użyciem."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

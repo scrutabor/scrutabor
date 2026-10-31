@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “10th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Guard me, O Lord, as the apple of the eye; protect me beneath the shadow of Your wings. Let my judgment come forth from Your countenance; let Your eyes look upon equity.","g":["Keep","me","Lord","as","the pupil","of the eye","under","the shadow","of wings","Your","protect","me","From","countenance","Your","judgment","my","may go forth","eyes","Your","may behold","equity"]}
+    {"id":"s01","tr":"Guard me, O Lord, as the apple of the eye; protect me beneath the shadow of Your wings. Let my judgment come forth from Your countenance; let Your eyes look upon equity.","g":["Keep","me","Lord","as","the pupil","of the eye","under","the shadow",null,null,"protect","me","From",null,null,null,null,"may go forth",null,null,"may behold","equity"],"a":[{"s":8,"n":2,"a":0,"g":"of Your wings"},{"s":13,"n":2,"a":0,"g":"Your countenance"},{"s":15,"n":2,"a":0,"g":"my judgment"},{"s":18,"n":2,"a":0,"g":"Your eyes"}]}
   ]
 }

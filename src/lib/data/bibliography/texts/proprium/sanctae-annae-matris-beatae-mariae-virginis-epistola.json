@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/07-26; resolved section [Lectio] with declared inherited references"
+    "section": "Direct shared Common web/www/horas/Latin/Commune/C7a.txt [Lectio], section line 74, reference line 76 and body line 77. Heading line 75 is outside-body context. Proper Sancti/07-26 contains ex C7a and vide C7a, not a direct Lectio."
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The directly consulted pinned shared Common Lectio prints the complete comparison body. Its literal spelling and the selected edition’s differences are declared in the apparatus. This present documentary reading does not establish the original import route or an executed feast-selection result."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-28"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

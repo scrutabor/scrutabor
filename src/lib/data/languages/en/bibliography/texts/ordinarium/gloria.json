@@ -100,14 +100,6 @@
    },
    "entries": [
     {
-     "id": "use.en.0524d8c62828c31becdd",
-     "address": {
-      "kind": "segment",
-      "segment": "s12"
-     },
-     "claim": "You who sit at the Father's right hand, have mercy on us."
-    },
-    {
      "id": "use.en.bc0573a61c0e3ef9ac0d",
      "address": {
       "kind": "segment",
@@ -117,6 +109,27 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.the-family-prayer-book-1839",
+   "digital_item": "item.family-prayer-book-1839.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 65–66",
+    "scan": "scan pp. 96–97",
+    "section": "Gloria — threefold confession of Christ"
+   },
+   "entries": [
+    {
+     "id": "use.en.0524d8c62828c31becdd",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "The historical Gloria begins the threefold confession at the foot of p. 65 and continues on p. 66: Christ alone is holy, Lord and Most High. The present wording modernizes the pronouns and separates the clauses; it is a revision, not a verbatim transcription."
+    }
+   ],
+   "verified_on": "2026-10-28"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",

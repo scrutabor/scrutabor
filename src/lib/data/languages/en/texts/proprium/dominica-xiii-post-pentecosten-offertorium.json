@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “13th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"In You, O Lord, I have hoped; I said: You are my God; my times are in Your hands.","g":["In","You","I have hoped","Lord","I said","You","are","God","my","in","hands","Your","times","my"]}
+    {"id":"s01","tr":"In You, O Lord, I have hoped; I said: You are my God; my times are in Your hands.","g":["In","You","I have hoped","Lord","I said","You","are",null,null,"in",null,null,null,null],"a":[{"s":7,"n":2,"a":0,"g":"my God"},{"s":10,"n":2,"a":0,"g":"Your hands"},{"s":12,"n":2,"a":0,"g":"my times"}]}
   ]
 }

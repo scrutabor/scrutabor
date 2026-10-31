@@ -4,7 +4,7 @@
   "about":"The versicle and response form the final verse of Psalm 123 in the Vulgate numbering (Psalm 124:8 in Hebrew). The first part has an understood copula, while the second has its own verb, fecit.",
   "seg":[
     {"id":"s01","nr":"The priest makes the sign of the cross."},
-    {"id":"s02","tr":"Our help is in the name of the Lord.","tc":[125,126],"tb":"exact","g":["help","our","in","the name","of the Lord"],"ex":{"w001":"Latin leaves “est” unspoken: “Adiutórium nostrum [est] in nómine Dómini” — “our help [is] in the name of the Lord”."}},
+    {"id":"s02","tr":"Our help is in the name of the Lord.","tc":[125,126],"tb":"exact","g":[null,null,"in","the name","of the Lord"],"a":[{"s":0,"n":2,"a":0,"g":"Our help"}],"ex":{"w001":"Latin leaves “est” unspoken: “Adiutórium nostrum [est] in nómine Dómini” — “our help [is] in the name of the Lord”."}},
     {"id":"s03","tr":"Who made heaven and earth.","tc":[126],"tb":"exact","g":["who","made","heaven","and","earth"]}
   ]
 }

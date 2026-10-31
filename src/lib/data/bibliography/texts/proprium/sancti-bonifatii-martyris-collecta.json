@@ -1,0 +1,126 @@
+{
+ "id": "proprium.sancti-bonifatii-martyris-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 533",
+    "scan": "PDF physical615 / leaf n614",
+    "section": "05-14 collecta; Oratio P; left column after May14 heading and both seasonal Common directions, before distinct Secreta C3",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n614/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bonifatii-martyris-collecta.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 17-word collecta proper w001–w017, followed by the distinct abbreviated cue “Per Dóminum.” The full supplied ending and Amen are not printed at this proper locus. The printed feast heading identifies Boniface as a commemoration."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
+    "section": "RG115a complete ending and Amen wording; same-edition accented common stem and terminal typography"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bonifatii-martyris-collecta.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the Father-directed Per Dominum ending w018–w038 and Amen w039. Its literal rubric formula is unaccented. Same-edition p.123 controls matching accented formula words, and p.226 controls the accented four-word terminal and separately marked Amen period. These controls do not make the proper page a full-ending witness or establish response actors, singing, or larger-group conclusion distribution."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 530",
+    "scan": "PDF physical611 / leaf n610",
+    "section": "05-14 collecta; Oratio2598 P; right top, after May14 heading and seasonal Common directions at left bottom, before Secreta2599 C3",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n610/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bonifatii-martyris-collecta.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 17-word collecta proper w001–w017, followed by the distinct abbreviated cue “Per Dóminum.” The full supplied ending and Amen are not printed at this proper locus. The printed feast heading identifies Boniface as a commemoration. The setting is typographically distinct, not evidence of independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical17 / leaf n16",
+    "section": "RG115a; this setting’s full ending and Amen",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-bonifatii-martyris-collecta.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies its complete ad-patrem ending and Amen, w018–w039. Its literal accents, punctuation and Amen list semicolon are retained. Formula wording alone does not establish response actors, singing or a rule for grouped orations."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-bonifatii-martyris-collecta.benziger1962",
+   "text": "proprium.sancti-bonifatii-martyris-collecta",
+   "use": "use.proprium.sancti-bonifatii-martyris-collecta.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s complete RG115a form the explicit composite. The settings are separate, not independent historical traditions."
+  },
+  {
+   "id": "witness.proprium.sancti-bonifatii-martyris-collecta.vatican1962",
+   "text": "proprium.sancti-bonifatii-martyris-collecta",
+   "use": "use.proprium.sancti-bonifatii-martyris-collecta.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s complete RG115a form the explicit composite. The settings are separate, not independent historical traditions."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-bonifatii-martyris-collecta.benziger1962-vatican1962",
+  "text": "proprium.sancti-bonifatii-martyris-collecta",
+  "recension": "Benziger1962 approved-print proper with its own RG115a supplied conclusion and separate Amen, compared with a literal Vatican same-setting composite",
+  "witnesses": [
+   "witness.proprium.sancti-bonifatii-martyris-collecta.benziger1962",
+   "witness.proprium.sancti-bonifatii-martyris-collecta.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 10,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
+  }
+ }
+}

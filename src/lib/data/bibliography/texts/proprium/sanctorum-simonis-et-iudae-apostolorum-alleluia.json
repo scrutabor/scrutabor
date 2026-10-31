@@ -6,7 +6,7 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/10-28; resolved section [Allelúia] with declared inherited references"
+    "section": "web/www/missa/Latin/Sancti/10-28.txt [Graduale] (line 28, chars 80:98); web/www/missa/Latin/Sancti/10-28.txt [Graduale] (lines 30-30)"
    },
    "entries": [
     {
@@ -14,10 +14,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The retained pinned Mass file prints this Alleluia as a suffix and subsequent verse under [Graduale], not an [Allelúia] heading. The literal j spelling and absent stop after the opening acclamation are retained for comparison with the selected Benziger text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-27"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

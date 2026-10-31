@@ -432,9 +432,10 @@ export const proper = {
 
 	/** An unresolved initial choice is not permission to render an Ordinary formula. */
 	variantRequired(slot: string): boolean {
-		if (!isCanonRole(slot) && slot !== DISMISSAL_ROLE) return false;
+		if (!isCanonRole(slot) && slot !== DISMISSAL_ROLE && slot !== 'agnus-dei') return false;
 		if (!date) return true;
 		if (!day) return false;
+		if (slot === 'agnus-dei') return this.hasSlot(slot);
 		if (slot === DISMISSAL_ROLE)
 			return !dismissalProfile || dismissalProfile.text !== ORDINARY_DISMISSAL;
 		return !canonProfile || canonProfile.texts[slot] !== ordinaryCanon(slot);

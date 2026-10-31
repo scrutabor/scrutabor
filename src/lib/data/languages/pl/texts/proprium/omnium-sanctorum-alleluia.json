@@ -3,6 +3,6 @@
   "language":"pl",
   "about":"Alleluia formularza „Wszystkich Świętych” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Alleluja, alleluja. Przyjdźcie do mnie wszyscy, którzy się trudzicie i jesteście obarczeni, a ja was pokrzepię. Alleluja.","g":["Alleluja","alleluja","Pójdźcie","do","Mnie","wszyscy","którzy","trudzicie się","i","obciążeni","jesteście","i","Ja","pokrzepię","was","Alleluja"]}
+    {"id":"s01","tr":"Alleluja, alleluja. Przyjdźcie do Mnie wszyscy, którzy się trudzicie i jesteście obarczeni, a Ja was pokrzepię. Alleluja.","g":["Alleluja","alleluja","Pójdźcie","do","Mnie","wszyscy","którzy","trudzicie się","i",null,null,"i","Ja","pokrzepię","was","Alleluja"],"a":[{"s":9,"n":2,"a":0,"g":"jesteście obciążeni"}]}
   ]
 }

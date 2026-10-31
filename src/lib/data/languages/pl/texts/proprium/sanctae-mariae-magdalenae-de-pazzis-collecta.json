@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+  "language":"pl",
+  "about":"Modlitwa zwraca się do Boga jako miłośnika dziewictwa i wspomina niebieskie dary świętej Marii Magdaleny de Pazzi. Prosi, aby modlący się naśladowali czczoną świętą w czystości i miłości.",
+  "seg":[
+    {"id":"s01","tr":"Boże, miłośniku dziewictwa, który błogosławioną Marię Magdalenę, Dziewicę rozpaloną Twoją miłością, obdarzyłeś niebieskimi darami, spraw, abyśmy tę, którą uroczyście czcimy, naśladowali w czystości i miłości. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże",null,null,"który","błogosławioną","Marię","Magdalenę","Dziewicę",null,null,null,null,null,"obdarzyłeś",null,null,"tę, którą",null,null,null,"w czystości","i","w miłości","naśladowali","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg",null,null,null,null],"a":[{"s":1,"n":2,"a":1,"g":"miłośniku dziewictwa"},{"s":8,"n":3,"a":2,"g":"rozpaloną Twoją miłością"},{"s":11,"n":2,"a":1,"g":"niebieskimi darami"},{"s":14,"n":2,"a":0,"g":"spraw, abyśmy"},{"s":17,"n":3,"a":2,"g":"uroczyście czcimy"},{"s":41,"n":4,"a":2,"g":"na wieki wieków"}],"ex":{"w007":"Chodzi o Marię Magdalenę de Pazzi, świętą dziewicę.","w011":"„Twoją miłością” może wskazywać miłość otrzymaną od Boga lub miłość świętej ku Niemu. Sam zwrot nie rozstrzyga wyłącznie jednego z tych kierunków.","w020":"Uroczyste czczenie świętej jest treścią obecnego obchodu. Modlitwa prosi o jej naśladowanie w czystości i miłości.","w041":"„Deus” określa tutaj Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

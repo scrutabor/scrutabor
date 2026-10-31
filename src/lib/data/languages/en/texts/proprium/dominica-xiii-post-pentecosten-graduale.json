@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “13th Sunday after Pentecost” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Have regard for Your covenant, O Lord, and do not forget forever the souls of Your poor. Arise, O Lord, and judge Your own cause; be mindful of the reproach of Your servants.","g":["Look","Lord","upon","covenant","Your","and","the souls","of poor","Your","not","forget","to","the end","Arise","Lord","and","judge","cause","Your","mindful","be","of the reproach","of servants","Your"]}
+    {"id":"s01","tr":"Have regard for Your covenant, O Lord, and do not forget forever the souls of Your poor. Arise, O Lord, and judge Your own cause; be mindful of the reproach of Your servants.","g":["Look","Lord","upon",null,null,"and","the souls",null,null,"not","forget","to","the end","Arise","Lord","and","judge",null,null,"mindful","be","of the reproach",null,null],"a":[{"s":3,"n":2,"a":0,"g":"Your covenant"},{"s":7,"n":2,"a":0,"g":"of Your poor"},{"s":17,"n":2,"a":0,"g":"Your cause"},{"s":22,"n":2,"a":0,"g":"of Your servants"}]}
   ]
 }

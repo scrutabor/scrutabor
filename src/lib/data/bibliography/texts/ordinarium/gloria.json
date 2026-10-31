@@ -2,12 +2,30 @@
  "id": "ordinarium.gloria",
  "source_groups": [
   {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-gloria; closed-literal-selection} (line 89); complete source contexts 87–91"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.gloria.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 84-word literal selection in the stated selection order (89), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
+  },
+  {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 221–222",
-    "scan": "leaves n300–n301 / PDF pp. 301–302",
+    "printed": "p. 221",
+    "scan": "leaf n300 / PDF p. 301",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n300/mode/1up"
    },
    "entries": [
@@ -16,10 +34,52 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited page image prints the opening Gloria in excelsis Deo (s02) in five chant intonations, Missa I, II, IV, IX and XI; the rubric s01 stands on p. 220 and the text from s03 on p. 222."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 222",
+    "scan": "leaf n301 / PDF p. 302",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n301/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.gloria.continuation.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The cited page image prints the Gloria from s03 to its end, Et in terra pax through Amen, after two more chant intonations of s02, Missa XII and XV."
+    }
+   ],
+   "verified_on": "2026-10-30"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p.343",
+    "scan": "leaf n424 / PDF p.425",
+    "section": "In vigilia Ascensionis; Et dicitur Gloria in excelsis after the Introit",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n424/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.gloria.ascension-vigil.inclusion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Ascension Vigil explicitly directs Et dicitur Gloria in excelsis after its Introit. This supports inclusion of the Gloria in this proper. It supplies no new full-body Gloria transcription or target-language wording."
+    }
+   ],
+   "verified_on": "2026-10-25"
   }
  ],
  "witnesses": []

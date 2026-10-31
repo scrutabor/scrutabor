@@ -15,7 +15,8 @@ import { resolveCompositeAddress } from './reading-address';
 describe('source-owned Canon table', () => {
 	it('reads every real date/Mass pair, not a calendar reimplementation', () => {
 		const lookup = createCanonLookup(table);
-		expect(table.pairs).toHaveLength(7610);
+		// The represented Vigil of the Ascension adds 72 date/Mass pairs.
+		expect(table.pairs).toHaveLength(7682);
 		for (const [date, mass, profile] of table.pairs)
 			expect(lookup.resolve(String(date), table.masses[Number(mass)])).toEqual(
 				table.profiles[Number(profile)]

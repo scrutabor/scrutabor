@@ -19,6 +19,24 @@
     }
    ],
    "verified_on": "2026-09-18"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.ordo",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-pater-noster; closed-literal-selection} (line 277; line 278; line 279); complete source contexts 275–281"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.pater-noster.main-ordo-literal.do44667ff",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The pinned Mass Ordo supplies this 50-word literal selection in the stated selection order (277, then 278, then 279), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
+    }
+   ],
+   "verified_on": "2026-10-27"
   }
  ],
  "witnesses": []

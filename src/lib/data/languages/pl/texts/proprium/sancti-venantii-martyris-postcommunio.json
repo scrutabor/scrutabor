@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-venantii-martyris-postcommunio",
+  "language":"pl",
+  "about":"Po przyjęciu sakramentów życia wiecznego modlący się pokornie proszą Boga o przebaczenie i łaskę. Święty Wenancjusz wstawia się za nimi.",
+  "seg":[
+    {"id":"s01","tr":"Przyjęliśmy, Panie, sakramenty życia wiecznego, pokornie prosząc Ciebie, aby wyjednały nam przebaczenie i łaskę, gdy błogosławiony Wenancjusz, Twój męczennik, wstawia się za nami. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Przyjęliśmy","Panie",null,null,null,null,null,null,"aby",null,null,null,null,null,null,"się wstawia","przebaczenie","nam","wyjednały","i","łaskę","Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":2,"n":3,"a":2,"g":"sakramenty życia wiecznego"},{"s":5,"n":3,"a":2,"g":"pokornie prosząc Ciebie"},{"s":9,"n":4,"a":1,"g":"gdy błogosławiony Wenancjusz, Twój męczennik"},{"s":13,"n":2,"a":0,"g":"za nami"}],"ex":{"w005":"Sakramenty są tym, co przyjęliśmy. To one mają nam następnie wyjednać przebaczenie i łaskę.","w011":"Zwrot z „deprecánte” opisuje wstawiającego się Wenancjusza. Krótkie „gdy” wprowadza tę okoliczność, a „deprecántes” wcześniej odnosi się do modlących się.","w038":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

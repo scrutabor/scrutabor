@@ -6,7 +6,26 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pent01-4.txt (lines 15-21); web/www/missa/Latin/Ordo/Prayers.txt (lines 13-15)"
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (heading line 12; text lines 13-14), invoked by the proper's literal &Gloria"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.corporis-christi-introitus.gloria-macro.do44667ff",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The invoked common Latin Mass Gloria supplies the 20 words w023–w042; source V./R. labels are framing for this textual comparison and do not establish this Introit's performer or delivery."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.github",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "web/www/missa/Latin/Tempora/Pent01-4.txt [Introitus] (lines 15-21); literal &Gloria invokes the separately declared Mass Ordo/Prayers.txt [Gloria]"
    },
    "entries": [
     {
@@ -14,18 +33,18 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The pinned Latin Mass Introit section supplies the antiphon, psalm verse and repeated antiphon. Its literal &Gloria invokes the separately declared common Mass prayer. The antiphon's unparenthesized Alleluias remain included."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-10-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "p. 369; expanded doxology attested on p. 401",
-    "scan": "leaf n450 / PDF p. 451; leaf n482 / PDF p. 483",
+    "printed": "p. 369",
+    "scan": "leaf n450 / PDF p. 451",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n450/mode/1up"
    },
    "entries": [
@@ -34,11 +53,91 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The cited proper passage prints this Introit's antiphon and psalm verse, followed by abbreviated Gloria Patri and antiphon-repeat cues. It does not print the supplied common doxology and full antiphon reprise in full at this locus."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up",
+    "section": "First Sunday of Advent: common Introit doxology"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.corporis-christi-introitus.expanded-doxology.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The printed complete Gloria Patri through Amen supplies w023–w042 after this Introit's abbreviated cue, including the comma after semper. Only that common formula is used, not the Advent proper or its separate seasonal rubrics."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up",
+    "section": "First Sunday of Advent: year-round Introit repetition rubric"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.corporis-christi-introitus.introit-expansion.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "After the doxology the antiphon is repeated up to the psalm; the printed rubric expressly applies this manner of repeating throughout the year. It supports the full reprise w043–w057 after this proper's abbreviated Cibávit. cue, not an additional psalm or doxology."
+    }
+   ],
+   "verified_on": "2026-10-26"
   }
  ],
- "witnesses": []
+ "witnesses": [
+  {
+   "id": "witness.proprium.corporis-christi-introitus.do44667ff",
+   "text": "proprium.corporis-christi-introitus",
+   "use": "use.proprium.corporis-christi-introitus.do44667ff",
+   "role": "derived_comparison",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Pinned Latin Mass data maintained separately from this corpus, used as a same-recension derived digital comparison with its actual Gloria invocation and selected seasonal scope; not the controlling printing or evidence of an independent printed genealogy."
+  },
+  {
+   "id": "witness.proprium.corporis-christi-introitus.mr1962",
+   "text": "proprium.corporis-christi-introitus",
+   "use": "use.proprium.corporis-christi-introitus.mr1962",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Direct comparison with the identified Benziger 1962 proper page, with the separately declared same-edition common Introit formula and year-round antiphon-repeat rule; a composite expansion, not an independent new printed witness."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.corporis-christi-introitus.mr1962-do44667ff",
+  "text": "proprium.corporis-christi-introitus",
+  "recension": "The 1962 component in the approved Benziger printing, with declared shared expansions and house orthography",
+  "witnesses": [
+   "witness.proprium.corporis-christi-introitus.do44667ff",
+   "witness.proprium.corporis-christi-introitus.mr1962"
+  ],
+  "apparatus": {
+   "entries": 12,
+   "classes": [
+    "orthography",
+    "punctuation"
+   ]
+  }
+ }
 }

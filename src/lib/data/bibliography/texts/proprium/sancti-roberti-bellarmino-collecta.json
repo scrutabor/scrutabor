@@ -1,0 +1,146 @@
+{
+ "id": "proprium.sancti-roberti-bellarmino-collecta",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "pp. 531",
+    "scan": "PDF physical613 / leaf n612",
+    "section": "05-13 collecta; Oratio; right column below May13 heading and Introit; proper bodies and literal cues only",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n612/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-roberti-bellarmino-collecta.benziger1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 41-word collecta proper, w001–w041, followed by the distinct cue “Per Dóminum.” The supplied conclusion and Amen are not printed in full at this proper locus. Benziger prints “propugnánda,”; Vatican prints “propugnánda”."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XVII, 123, 226",
+    "scan": "leaves n22, n202, n305 / PDF physical23,203,306",
+    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-roberti-bellarmino-collecta.benziger1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "RG115a supplies the full Father-directed Per Dominum ending w042–w062 and Amen w063. The same-edition accented stem and terminal-response typography control accents and the separate response. This does not claim that the proper face prints the whole composite or establish every member’s conclusion in a larger group."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. XXX, XXXIII–XXXIV, LII",
+    "scan": "leaves n35,n38–n39,n57 / PDF physical36,39–40,58",
+    "section": "RG436–437,511d,513–514; RitusV"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-roberti-bellarmino-collecta.benziger1962.ritual-context",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Collect is the priest's prayer, audible in read Mass and sung in sung Mass; in the bounded sole separately concluded commemoration context it retains a conclusion distinct from the Mass Collect. This claim is not a rule for each member of larger groups."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "pp. 529",
+    "scan": "PDF physical610 / leaf n609",
+    "section": "05-13 collecta; Oratio2587; left top under May13 heading on preceding V609; proper bodies and literal cues only",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n609/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-roberti-bellarmino-collecta.vatican1962.proper",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting prints the 41-word collecta proper, w001–w041, followed by the distinct cue “Per Dóminum.” The supplied conclusion and Amen are not printed in full at this proper locus. Benziger prints “propugnánda,”; Vatican prints “propugnánda”. This is a separate printed setting of the same received tradition, not independent historical transmission."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XIX",
+    "scan": "PDF physical p. 17; leaf n16",
+    "section": "Rubricae generales115a; full Father-directed conclusion, including Amen",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n16/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.sancti-roberti-bellarmino-collecta.vatican1962.conclusion",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "This setting’s own RG115a supplies the complete ending and Amen, w042–w063. Its Christum comma and Amen list semicolon remain literal in the composite witness. Formula words alone do not establish a response actor or a rule for larger groups."
+    }
+   ],
+   "verified_on": "2026-10-25"
+  }
+ ],
+ "witnesses": [
+  {
+   "id": "witness.proprium.sancti-roberti-bellarmino-collecta.benziger1962",
+   "text": "proprium.sancti-roberti-bellarmino-collecta",
+   "use": "use.proprium.sancti-roberti-bellarmino-collecta.benziger1962.proper",
+   "role": "controlling",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s RG115a form an explicit composite. The settings are typographically separate, not independent historical traditions."
+  },
+  {
+   "id": "witness.proprium.sancti-roberti-bellarmino-collecta.vatican1962",
+   "text": "proprium.sancti-roberti-bellarmino-collecta",
+   "use": "use.proprium.sancti-roberti-bellarmino-collecta.vatican1962.proper",
+   "role": "approved_corroboration",
+   "coverage": {
+    "kind": "full"
+   },
+   "independence_basis": "Each proper body and its own setting’s RG115a form an explicit composite. The settings are typographically separate, not independent historical traditions."
+  }
+ ],
+ "collation": {
+  "id": "collation.proprium.sancti-roberti-bellarmino-collecta.benziger1962-vatican1962",
+  "text": "proprium.sancti-roberti-bellarmino-collecta",
+  "recension": "Benziger1962 approved-print proper body with its same-edition Father-directed conclusion and separate Amen; literal Vatican own-setting composite retained for comparison",
+  "witnesses": [
+   "witness.proprium.sancti-roberti-bellarmino-collecta.benziger1962",
+   "witness.proprium.sancti-roberti-bellarmino-collecta.vatican1962"
+  ],
+  "apparatus": {
+   "entries": 10,
+   "classes": [
+    "accent",
+    "punctuation"
+   ]
+  }
+ }
+}

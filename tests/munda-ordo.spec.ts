@@ -125,11 +125,12 @@ for (const lang of ['pl', 'en'] as const) {
 		await section.locator('button.refold').click();
 		await expect(section.locator('button.unfold')).toBeVisible();
 		await page.goto(`/app/${lang}/ordo/catechumenorum?missa=none&w=munda-cor-meum.w015`);
-		await expect(page.locator('aside .construction-title')).toHaveText(
-			lang === 'pl'
-				? ['cálculo', 'mundásti', 'igníto']
-				: ['lábia', 'Isaíæ', 'prophétæ', 'cálculo', 'mundásti', 'igníto']
-		);
+		// Both languages caption the glowing stone apart from the prophet's lips.
+		await expect(page.locator('aside .construction-title')).toHaveText([
+			'cálculo',
+			'mundásti',
+			'igníto'
+		]);
 		const disputed = page.locator('aside [aria-labelledby="construction-w015-title"]');
 		await expect(disputed.locator('.note')).toHaveCount(1);
 		await expect(disputed.locator('.verification')).toContainText('Collatinus');

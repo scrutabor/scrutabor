@@ -11,7 +11,7 @@ it.each(['pl', 'en'] as const)(
 		const canon = await canonData(lang);
 		expect(validateCanonPack(canon, lang).parts).toHaveLength(11);
 		const dismissal = await dismissalData(lang);
-		expect(validateDismissalPack(dismissal, lang).parts).toHaveLength(1);
+		expect(validateDismissalPack(dismissal, lang).parts).toHaveLength(2);
 		for (const pack of [canon, dismissal]) {
 			for (const part of pack.parts) {
 				for (const segment of part.doc.segments.filter((s) => s.type === 'verse')) {

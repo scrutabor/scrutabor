@@ -62,7 +62,35 @@ for (const language of ['pl', 'en'] as const) {
 		await setHelp(page, 1);
 		const section = page.locator(`#text-proprium-${text}`);
 		await expect(section.locator('.token')).toHaveCount(71);
-		await expect(section.locator('rt')).toHaveCount(69);
+		// 71 words. Polish shares the two death predicates (69 captions). English also shares
+		// the five noun and possessive pairs, each one caption on its noun (64 captions).
+		await expect(section.locator('rt')).toHaveCount(language === 'pl' ? 69 : 64);
+		const shared: [string, string, string, string][] =
+			language === 'pl'
+				? [
+						['w018', 'w019', 'mórtuum fúerit,', 'obumrze'],
+						['w025', 'w026', 'mórtuum fúerit,', 'obumrze']
+					]
+				: [
+						['w006', 'w007', 'discípulis suis:', 'to His disciples'],
+						['w018', 'w019', 'mórtuum fúerit,', 'dies'],
+						['w025', 'w026', 'mórtuum fúerit,', 'dies'],
+						['w032', 'w033', 'ánimam suam,', 'his life'],
+						['w039', 'w040', 'ánimam suam', 'his life'],
+						['w061', 'w062', 'miníster meus', 'My servant'],
+						['w070', 'w071', 'Pater meus.', 'My Father']
+					];
+		const groups = section.locator('.token-group');
+		await expect(groups).toHaveCount(shared.length);
+		for (const [index, [anchor, member, forms, caption]] of shared.entries()) {
+			const group = groups.nth(index);
+			await expect(group.locator(':scope > button.word-construction')).toHaveId(
+				`${text}.${anchor}`
+			);
+			await expect(group.locator('rt')).toHaveText(caption);
+			await expect(group.locator('.token')).toHaveText(forms.split(' '));
+			await expect(group.locator(`.token[id="${text}.${member}"]`)).toHaveCount(1);
+		}
 		const glosses =
 			language === 'pl'
 				? [

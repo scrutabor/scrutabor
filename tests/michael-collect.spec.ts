@@ -109,7 +109,7 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(section.locator('.translation').first()).toContainText(
 			language === 'pl'
 				? 'osłaniali nasze życie na ziemi. Przez Pana naszego Jezusa Chrystusa'
-				: 'who lives and reigns with You in the unity of the Holy Spirit, God, for ever and ever.'
+				: 'who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.'
 		);
 	});
 

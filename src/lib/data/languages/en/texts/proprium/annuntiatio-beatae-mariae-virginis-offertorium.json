@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Eastertide Offertory for the Annunciation of the Blessed Virgin Mary in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb. Alleluia.","g":["Hail","Mary","of grace","full","the Lord","with you","blessed","you","among","women","and","blessed","the fruit","of womb","your","Alleluia"],"ex":{"w014":"Here venter means Mary’s womb. Its “fruit” is her child."}}
+    {"id":"s01","tr":"Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb. Alleluia.","g":["Hail","Mary","of grace","full","the Lord","with you","blessed","you","among","women","and","blessed","the fruit",null,null,"Alleluia"],"a":[{"s":13,"n":2,"a":0,"g":"of your womb"}],"ex":{"w014":"Here venter means Mary’s womb. Its “fruit” is her child."}}
   ]
 }

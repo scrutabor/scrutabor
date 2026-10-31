@@ -9,7 +9,7 @@
   "ad":5,
   "adw":2,
   "seg":[
-    {"id":"s01","type":"rubric","text":"Et inclinatus prosequitur:","an":8},
+    {"id":"s01","type":"rubric","text":"Et inclinatus prosequitur:","an":11},
     {"id":"s02","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w001","f":"Deus","l":"deus","p":",","m":5},{"i":"w002","f":"tu","l":"tu","m":143},{"i":"w003","f":"convérsus","l":"converto","m":251,"h":"w002"},{"i":"w004","f":"vivificábis","l":"vivifico","m":284},{"i":"w005","f":"nos","l":"nos","p":".","m":49}]},
     {"id":"s03","type":"verse","voice":"clara","speaker":"minister","participation":{"lecta":{"gradus":2,"source":"DMS 31 b"}},"w":[{"i":"w006","f":"Et","l":"et","m":15},{"i":"w007","f":"plebs","l":"plebs","m":20},{"i":"w008","f":"tua","l":"tuus","m":25,"h":"w007"},{"i":"w009","f":"lætábitur","l":"laetor","m":285},{"i":"w010","f":"in","l":"in","m":0,"h":"w011"},{"i":"w011","f":"te","l":"tu","p":".","m":131}]},
     {"id":"s04","type":"verse","voice":"clara","speaker":"sacerdos","w":[{"i":"w012","f":"Osténde","l":"ostendo","m":86},{"i":"w013","f":"nobis","l":"nos","p":",","m":53},{"i":"w014","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w015","f":"misericórdiam","l":"misericordia","m":141},{"i":"w016","f":"tuam","l":"tuus","p":".","m":8,"h":"w015"}]},

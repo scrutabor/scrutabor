@@ -13,14 +13,16 @@ import {
 export const DISMISSAL_ROLE = 'ite-missa-est';
 export const ORDINARY_DISMISSAL = 'ordinarium.ite-missa-est';
 export const PASCHAL_DISMISSAL = 'ordinarium.ite-missa-est-paschale';
+export const REQUIEM_DISMISSAL = 'ordinarium.ite-missa-est-defunctorum';
 export interface DismissalProfile {
-	id: 'ordinary' | 'paschale';
+	id: 'ordinary' | 'paschale' | 'defunctorum';
 	text: string;
 }
 export type DismissalPack = VariantPack<typeof DISMISSAL_ROLE>;
 const PROFILES: DismissalProfile[] = [
 	{ id: 'ordinary', text: ORDINARY_DISMISSAL },
-	{ id: 'paschale', text: PASCHAL_DISMISSAL }
+	{ id: 'paschale', text: PASCHAL_DISMISSAL },
+	{ id: 'defunctorum', text: REQUIEM_DISMISSAL }
 ];
 
 export function createDismissalLookup(
@@ -31,7 +33,7 @@ export function createDismissalLookup(
 	if (
 		!object(value) ||
 		!exactKeys(value, ['schema_version', 'role', 'profiles', 'masses', 'pairs']) ||
-		value.schema_version !== '1.0.0' ||
+		value.schema_version !== '1.1.0' ||
 		value.role !== DISMISSAL_ROLE ||
 		!Array.isArray(value.profiles) ||
 		value.profiles.length !== PROFILES.length ||
@@ -58,7 +60,7 @@ export function createDismissalLookup(
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.7.0' ||
+			ROOT_MANIFEST.schema_version !== '6.10.0' ||
 			ROOT_MANIFEST.base.dismissal !== 'dismissal.json'
 		)
 			throw new Error('undeclared dismissal resource');
@@ -71,11 +73,21 @@ export const dismissalLookup = declaredLookup();
 export const DISMISSAL_TEXT_KEYS =
 	dismissalLookup?.profiles.map(({ text }) => text.replace('.', '/')) ?? [];
 
+/** The shared pack contains every non-ordinary body, in profile order. */
+export const replacementDismissals: { key: string; slot: typeof DISMISSAL_ROLE }[] = [
+	PASCHAL_DISMISSAL,
+	REQUIEM_DISMISSAL
+].map((text) => ({
+	key: text.replace('.', '/'),
+	slot: DISMISSAL_ROLE
+}));
+
 export function validateDismissalPack(value: unknown, lang: Lang): DismissalPack {
 	if (!dismissalLookup) throw new Error('dismissal resource unavailable');
-	return validateVariantPack(value, lang, [
-		{ key: PASCHAL_DISMISSAL.replace('.', '/'), slot: DISMISSAL_ROLE }
-	]);
+	const pack = validateVariantPack(value, lang, replacementDismissals);
+	const requiem = pack.parts.find((part) => part.doc.id === REQUIEM_DISMISSAL);
+	if (!requiem?.gloss.about?.trim()) throw new Error('Requiem dismissal context absent');
+	return pack;
 }
 
 export function selectedDismissal(profile: DismissalProfile, pack: DismissalPack | null) {

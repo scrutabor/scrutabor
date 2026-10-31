@@ -169,13 +169,6 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-iv-adventus-communio",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.omnium-sanctorum-offertorium",
        "roles": [
         "derived_digital_collation_aid"
@@ -199,6 +192,55 @@
      ],
      "texts": [
       {
+       "id": "orationes.cor-iesu",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.deus-refugium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.pater-noster",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.salve-regina",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.sancte-michael",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.adiutorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.aufer-a-nobis",
        "roles": [
         "derived_digital_collation_aid"
@@ -206,7 +248,84 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.benedictio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.corpus-tuum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.credo",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deo-gratias-epistolae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deus-qui-humanae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.deus-tu-conversus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.fili-dei-vivi",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.haec-commixtio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.in-spiritu-humilitatis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.introibo",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -221,6 +340,27 @@
       },
       {
        "id": "ordinarium.iube-domne-benedicere-in-passione",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.iudica-me",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.kyrie",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.lavabo",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -367,6 +507,41 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.libera-nos",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.memento-defunctorum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.memento-vivorum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.misereatur",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.misereatur-tui",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.munda-cor-meum",
        "roles": [
         "derived_digital_collation_aid"
@@ -374,7 +549,77 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.nobis-quoque",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.offerimus-tibi",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.orate-fratres",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.panem-caelestem",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pater-noster",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.pax-domini",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.per-ipsum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.per-quem-haec-omnia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.perceptio-corporis",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.placeat-tibi",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -465,6 +710,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-dialogus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-epiphaniae",
        "roles": [
         "derived_digital_collation_aid"
@@ -542,6 +794,48 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.quam-oblationem",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-dixisti",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.quid-retribuam",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.quod-ore-sumpsimus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.sanctus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.sequentia-sancti-evangelii-secundum-ioannem",
        "roles": [
         "derived_digital_collation_aid"
@@ -564,6 +858,55 @@
       },
       {
        "id": "ordinarium.sequentia-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.simili-modo",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.supplices-te-rogamus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.supra-quae",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.suscipe-sancta-trinitas",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.suscipe-sancte-pater",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.te-igitur",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.unde-et-memores",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -1253,7 +1596,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-offertorium",
@@ -1508,13 +1851,6 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-i-adventus-alleluia",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-i-adventus-collecta",
        "roles": [
         "derived_digital_collation_aid"
@@ -1522,35 +1858,7 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-i-adventus-communio",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-i-adventus-epistola",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-i-adventus-graduale",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-i-adventus-introitus",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-i-adventus-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -1767,25 +2075,11 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-ii-adventus-alleluia",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-ii-adventus-collecta",
        "roles": [
         "derived_digital_collation_aid"
        ],
        "uses": 2
-      },
-      {
-       "id": "proprium.dominica-ii-adventus-communio",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
       },
       {
        "id": "proprium.dominica-ii-adventus-epistola",
@@ -1796,27 +2090,6 @@
       },
       {
        "id": "proprium.dominica-ii-adventus-evangelium",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-ii-adventus-graduale",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-ii-adventus-introitus",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-ii-adventus-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -2159,25 +2432,11 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-iii-adventus-alleluia",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-iii-adventus-collecta",
        "roles": [
         "derived_digital_collation_aid"
        ],
        "uses": 2
-      },
-      {
-       "id": "proprium.dominica-iii-adventus-communio",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
       },
       {
        "id": "proprium.dominica-iii-adventus-epistola",
@@ -2188,27 +2447,6 @@
       },
       {
        "id": "proprium.dominica-iii-adventus-evangelium",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iii-adventus-graduale",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iii-adventus-introitus",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iii-adventus-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -2782,13 +3020,6 @@
        "uses": 1
       },
       {
-       "id": "proprium.dominica-iv-adventus-alleluia",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
        "id": "proprium.dominica-iv-adventus-collecta",
        "roles": [
         "derived_digital_collation_aid"
@@ -2804,27 +3035,6 @@
       },
       {
        "id": "proprium.dominica-iv-adventus-evangelium",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iv-adventus-graduale",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iv-adventus-introitus",
-       "roles": [
-        "derived_digital_collation_aid"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-iv-adventus-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -5733,7 +5943,7 @@
        "roles": [
         "derived_digital_collation_aid"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sacratissimi-cordis-iesu-offertorium",
@@ -7586,7 +7796,156 @@
      ],
      "texts": [
       {
+       "id": "proprium.dominica-i-adventus-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.dominica-i-adventus-evangelium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-i-adventus-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.divinum-officium-missa.21cb2d37",
+     "roles": [
+      "derived_digital_collation_aid"
+     ],
+     "texts": [
+      {
+       "id": "proprium.dominica-ii-adventus-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-offertorium",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-alleluia",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-communio",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-graduale",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-introitus",
+       "roles": [
+        "derived_digital_collation_aid"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-offertorium",
        "roles": [
         "derived_digital_collation_aid"
        ],
@@ -7651,6 +8010,13 @@
        "id": "ordinarium.agnus-dei",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -7729,14 +8095,14 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.confiteor-sacerdotis",
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.corpus-tuum",
@@ -7785,7 +8151,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.haec-commixtio",
@@ -7840,6 +8206,13 @@
        "id": "ordinarium.ite-missa-est",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est-defunctorum",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -8044,7 +8417,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.memento-vivorum",
@@ -8100,7 +8473,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.passio-domini-nostri-iesu-christi-secundum-matthaeum",
@@ -8128,7 +8501,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.per-quem-haec-omnia",
@@ -8334,11 +8707,18 @@
        "uses": 1
       },
       {
-       "id": "ordinarium.qui-pridie",
+       "id": "ordinarium.qui-dixisti",
        "roles": [
         "official_text"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.qui-pridie",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "ordinarium.qui-pridie-in-cena-domini",
@@ -8397,6 +8777,20 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.simili-modo",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.supplices-te-rogamus",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.supra-quae",
        "roles": [
         "official_text"
@@ -8429,7 +8823,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.annuntiatio-beatae-mariae-virginis-alleluia",
@@ -9117,7 +9511,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.corporis-christi-offertorium",
@@ -9695,7 +10089,7 @@
        "roles": [
         "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-ii-adventus-offertorium",
@@ -9769,7 +10163,7 @@
         "direct_approved_print",
         "official_text"
        ],
-       "uses": 4
+       "uses": 5
       },
       {
        "id": "proprium.dominica-ii-in-quadragesima-tractus",
@@ -10094,7 +10488,7 @@
        "roles": [
         "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iii-adventus-offertorium",
@@ -10731,7 +11125,7 @@
        "roles": [
         "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-iv-adventus-offertorium",
@@ -11269,23 +11663,26 @@
       {
        "id": "proprium.dominica-v-post-pascha-alleluia",
        "roles": [
-        "official_text"
-       ],
-       "uses": 1
-      },
-      {
-       "id": "proprium.dominica-v-post-pascha-collecta",
-       "roles": [
+        "direct_approved_print",
         "official_text"
        ],
        "uses": 2
       },
       {
-       "id": "proprium.dominica-v-post-pascha-communio",
+       "id": "proprium.dominica-v-post-pascha-collecta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 3
+      },
+      {
+       "id": "proprium.dominica-v-post-pascha-communio",
+       "roles": [
+        "direct_approved_print",
+        "official_text"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pascha-epistola",
@@ -11304,30 +11701,34 @@
       {
        "id": "proprium.dominica-v-post-pascha-introitus",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-v-post-pascha-offertorium",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.dominica-v-post-pascha-postcommunio",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-v-post-pascha-secreta",
        "roles": [
+        "direct_approved_print",
         "official_text"
        ],
-       "uses": 2
+       "uses": 3
       },
       {
        "id": "proprium.dominica-v-post-pentecosten-alleluia",
@@ -12782,7 +13183,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.exaltatio-sanctae-crucis-offertorium",
@@ -12855,6 +13256,13 @@
         "official_text"
        ],
        "uses": 2
+      },
+      {
+       "id": "proprium.haec-hostia-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.immaculata-conceptio-alleluia",
@@ -13040,6 +13448,13 @@
        "roles": [
         "direct_approved_print",
         "official_text"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.laudis-tibi-secreta",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 3
       },
@@ -13436,6 +13851,13 @@
        "uses": 2
       },
       {
+       "id": "proprium.oblatis-muneribus-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 4
+      },
+      {
        "id": "proprium.omnium-sanctorum-alleluia",
        "roles": [
         "official_text"
@@ -13653,6 +14075,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.refecti-cibo-potuque-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 3
+      },
+      {
+       "id": "proprium.refectione-sancta-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 4
+      },
+      {
        "id": "proprium.sacratissimi-cordis-iesu-alleluia",
        "roles": [
         "official_text"
@@ -13699,7 +14135,7 @@
        "roles": [
         "official_text"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sacratissimi-cordis-iesu-offertorium",
@@ -13721,6 +14157,13 @@
         "official_text"
        ],
        "uses": 3
+      },
+      {
+       "id": "proprium.sacro-munere-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.sancta-familia-alleluia",
@@ -13793,6 +14236,27 @@
         "official_text"
        ],
        "uses": 3
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-alleluia",
@@ -13872,6 +14336,41 @@
        "uses": 1
       },
       {
+       "id": "proprium.sanctae-catharinae-senensis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-monicae-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctae-petronillae-collecta",
        "roles": [
         "direct_approved_print"
@@ -13945,6 +14444,62 @@
        "uses": 3
       },
       {
+       "id": "proprium.sancti-antonini-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-antonini-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-bartholomaei-apostoli-alleluia",
        "roles": [
         "official_text"
@@ -13999,6 +14554,83 @@
        "id": "proprium.sancti-bartholomaei-apostoli-secreta",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bernardini-senensis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-felicis-i-papae-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-vii-collecta",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14215,6 +14847,13 @@
        "id": "proprium.sancti-ioannis-apostoli-et-evangelistae-tractus",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14655,6 +15294,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-paschalis-baylon-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-caelestini-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-alleluia",
        "roles": [
         "official_text"
@@ -14721,6 +15374,97 @@
        "id": "proprium.sancti-petri-et-pauli-apostolorum-secreta",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-pii-v-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-secreta",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -14856,6 +15600,48 @@
        "uses": 3
       },
       {
+       "id": "proprium.sancti-tui-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-ubaldi-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimae-trinitatis-alleluia",
        "roles": [
         "official_text"
@@ -14989,6 +15775,20 @@
        "uses": 3
       },
       {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctorum-innocentium-martyrum-alleluia",
        "roles": [
         "official_text"
@@ -15069,6 +15869,34 @@
        "uses": 1
       },
       {
+       "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctorum-philippi-et-iacobi-apostolorum-alleluia",
        "roles": [
         "official_text"
@@ -15141,9 +15969,9 @@
       {
        "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-epistola",
        "roles": [
-        "official_text"
+        "direct_approved_print"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "proprium.sanctorum-simonis-et-iudae-apostolorum-evangelium",
@@ -15251,6 +16079,13 @@
        "uses": 2
       },
       {
+       "id": "proprium.super-has-hostias-secreta",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.transfiguratio-domini-alleluia",
        "roles": [
         "official_text"
@@ -15318,6 +16153,13 @@
        "id": "proprium.transfiguratio-domini-secreta",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-ascensionis-evangelium",
+       "roles": [
+        "direct_approved_print"
        ],
        "uses": 1
       },
@@ -15601,6 +16443,13 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.communicantes-in-ascensione-domini",
        "roles": [
         "official_text"
@@ -15672,6 +16521,13 @@
       },
       {
        "id": "ordinarium.initium-sancti-evangelii-secundum-matthaeum",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est-defunctorum",
        "roles": [
         "corroborating_latin_witness"
        ],
@@ -15888,6 +16744,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.haec-hostia-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.laudis-tibi-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.litaniae-maiores-collecta",
        "roles": [
         "corroborating_latin_witness"
@@ -15896,6 +16766,90 @@
       },
       {
        "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.oblatis-muneribus-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.refecti-cibo-potuque-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.refectione-sancta-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacro-munere-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-monicae-collecta",
        "roles": [
         "corroborating_latin_witness"
        ],
@@ -15917,6 +16871,349 @@
       },
       {
        "id": "proprium.sanctae-petronillae-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-antonini-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-antonini-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bernardini-senensis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-felicis-i-papae-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-vii-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-paschalis-baylon-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-caelestini-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-pii-v-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-tui-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.super-has-hostias-secreta",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.vigilia-ascensionis-evangelium",
        "roles": [
         "corroborating_latin_witness"
        ],
@@ -16260,7 +17557,37 @@
        "uses": 1
       },
       {
+       "id": "proprium.maternitas-beatae-mariae-virginis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.omnium-sanctorum-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.vigilia-paschalis-alleluia",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.divinum-officium-missa.21cb2d37",
+     "roles": [
+      "rubric_control"
+     ],
+     "texts": [
+      {
+       "id": "proprium.dominica-iv-adventus-communio",
        "roles": [
         "rubric_control"
        ],
@@ -16292,6 +17619,20 @@
       "rubric_control"
      ],
      "texts": [
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 4
+      },
       {
        "id": "ordinarium.communicantes-in-ascensione-domini",
        "roles": [
@@ -16349,6 +17690,13 @@
        "uses": 4
       },
       {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.hanc-igitur-in-cena-domini",
        "roles": [
         "rubric_control"
@@ -16361,6 +17709,13 @@
         "rubric_control"
        ],
        "uses": 3
+      },
+      {
+       "id": "ordinarium.ite-missa-est-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 5
       },
       {
        "id": "ordinarium.ite-missa-est-paschale",
@@ -16489,6 +17844,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.praefatio-dialogus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.praefatio-epiphaniae",
        "roles": [
         "rubric_control"
@@ -16497,6 +17859,13 @@
       },
       {
        "id": "ordinarium.praefatio-nativitatis",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.praefatio-paschalis",
        "roles": [
         "rubric_control"
        ],
@@ -16784,6 +18153,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.corporis-christi-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.corporis-christi-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -16873,6 +18249,13 @@
        "id": "proprium.dominica-i-adventus-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-i-adventus-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -16978,6 +18361,13 @@
        "id": "proprium.dominica-ii-adventus-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-ii-adventus-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -17126,6 +18516,13 @@
        "id": "proprium.dominica-iii-adventus-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iii-adventus-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -17350,6 +18747,13 @@
        "id": "proprium.dominica-iv-adventus-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.dominica-iv-adventus-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18055,6 +19459,13 @@
        "uses": 1
       },
       {
+       "id": "proprium.exaltatio-sanctae-crucis-introitus",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.exaltatio-sanctae-crucis-postcommunio",
        "roles": [
         "official_liturgical_context"
@@ -18093,6 +19504,13 @@
        "id": "proprium.feria-v-in-cena-domini-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.haec-hostia-secreta",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18166,6 +19584,13 @@
         "official_liturgical_context"
        ],
        "uses": 2
+      },
+      {
+       "id": "proprium.laudis-tibi-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.litaniae-maiores-collecta",
@@ -18242,7 +19667,7 @@
        "roles": [
         "official_liturgical_context"
        ],
-       "uses": 5
+       "uses": 6
       },
       {
        "id": "proprium.nativitas-domini-in-die-collecta",
@@ -18322,6 +19747,13 @@
        "uses": 4
       },
       {
+       "id": "proprium.oblatis-muneribus-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.omnium-sanctorum-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18394,9 +19826,30 @@
        "uses": 1
       },
       {
+       "id": "proprium.refecti-cibo-potuque-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.refectione-sancta-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sacratissimi-cordis-iesu-collecta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacratissimi-cordis-iesu-introitus",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18411,6 +19864,13 @@
        "id": "proprium.sacratissimi-cordis-iesu-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacro-munere-postcommunio",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18443,6 +19903,27 @@
        "uses": 3
       },
       {
+       "id": "proprium.sanctae-angelae-mericiae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctae-annae-matris-beatae-mariae-virginis-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18469,6 +19950,41 @@
         "official_liturgical_context"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-monicae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.sanctae-petronillae-collecta",
@@ -18513,6 +20029,62 @@
        "uses": 2
       },
       {
+       "id": "proprium.sancti-antonini-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-antonini-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-athanasii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-athanasii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-athanasii-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-bartholomaei-apostoli-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18530,6 +20102,83 @@
        "id": "proprium.sancti-bartholomaei-apostoli-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bernardini-senensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-felicis-i-papae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-gregorii-vii-collecta",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -18609,6 +20258,13 @@
         "official_liturgical_context"
        ],
        "uses": 2
+      },
+      {
+       "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
       },
       {
        "id": "proprium.sancti-ioseph-opificis-collecta",
@@ -18761,6 +20417,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.sancti-paschalis-baylon-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-caelestini-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sancti-petri-et-pauli-apostolorum-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18787,6 +20457,97 @@
         "official_liturgical_context"
        ],
        "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-pii-v-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-stanislai-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-stanislai-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sancti-stanislai-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
       },
       {
        "id": "proprium.sancti-stephani-protomartyris-collecta",
@@ -18838,6 +20599,48 @@
        "uses": 2
       },
       {
+       "id": "proprium.sancti-tui-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.sanctissimae-trinitatis-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18887,6 +20690,20 @@
        "uses": 3
       },
       {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
        "id": "proprium.sanctorum-innocentium-martyrum-collecta",
        "roles": [
         "official_liturgical_context"
@@ -18911,6 +20728,34 @@
        "id": "proprium.sanctorum-innocentium-martyrum-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 2
       },
@@ -18974,6 +20819,13 @@
        "id": "proprium.septem-dolorum-beatae-mariae-virginis-secreta",
        "roles": [
         "official_liturgical_context"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.super-has-hostias-secreta",
+       "roles": [
+        "rubric_control"
        ],
        "uses": 1
       },
@@ -19116,6 +20968,13 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.communicantes-in-nocte-paschae",
        "roles": [
         "rubric_control"
@@ -19123,7 +20982,21 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.credo",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.hanc-igitur-paschale",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est-defunctorum",
        "roles": [
         "rubric_control"
        ],
@@ -19158,6 +21031,20 @@
        "uses": 1
       },
       {
+       "id": "proprium.haec-hostia-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.laudis-tibi-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "proprium.litaniae-maiores-collecta",
        "roles": [
         "rubric_control"
@@ -19166,6 +21053,90 @@
       },
       {
        "id": "proprium.litaniae-maiores-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.oblatis-muneribus-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.refecti-cibo-potuque-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.refectione-sancta-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sacro-munere-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-angelae-mericiae-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-catharinae-senensis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-mariae-magdalenae-de-pazzis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctae-monicae-collecta",
        "roles": [
         "rubric_control"
        ],
@@ -19187,6 +21158,342 @@
       },
       {
        "id": "proprium.sanctae-petronillae-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-antonini-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-antonini-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-athanasii-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-augustini-cantuariensis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bedae-venerabilis-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bernardini-senensis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-bonifatii-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-felicis-i-papae-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-nazianzeni-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-gregorii-vii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ioannis-baptistae-de-la-salle-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-paschalis-baylon-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-caelestini-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-petri-martyris-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-philippi-nerii-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-pii-v-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-roberti-bellarmino-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-stanislai-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-tui-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-ubaldi-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sancti-venantii-martyris-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-alexandri-eventii-theoduli-et-iuvenalis-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-marcellini-petri-et-erasmi-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-collecta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-postcommunio",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.sanctorum-nerei-achillei-domitillae-et-pancratii-secreta",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "proprium.super-has-hostias-secreta",
        "roles": [
         "rubric_control"
        ],
@@ -19304,6 +21611,27 @@
       "rubric_control"
      ],
      "texts": [
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.ite-missa-est-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
       {
        "id": "ordinarium.sanctus",
        "roles": [

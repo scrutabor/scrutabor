@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The Offertory for Saint Joseph, Spouse of the Blessed Virgin Mary, outside Eastertide in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"My truth and My mercy are with him, and in My name his horn will be exalted.","g":["truth","My","and","mercy","My","with","him","and","in","name","My","shall be exalted","horn","his"]}
+    {"id":"s01","tr":"My truth and My mercy are with him, and in My name his horn will be exalted.","g":[null,null,"and",null,null,"with","him","and","in",null,null,"will be exalted","horn","his"],"a":[{"s":0,"n":2,"a":0,"g":"My truth"},{"s":3,"n":2,"a":0,"g":"My mercy"},{"s":9,"n":2,"a":0,"g":"My name"}]}
   ]
 }

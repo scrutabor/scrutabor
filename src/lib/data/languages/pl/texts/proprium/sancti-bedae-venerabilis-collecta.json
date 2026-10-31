@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bedae-venerabilis-collecta",
+  "language":"pl",
+  "about":"Modlitwa wskazuje na uczoność świętego Bedy, którą Bóg wsławia Kościół, i prosi o stałe oświecenie jego mądrością oraz o pomoc dzięki jego zasługom.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który wsławiasz swój Kościół uczonością błogosławionego Bedy, Twojego Wyznawcy i Doktora, udziel łaskawie Twoim sługom, aby zawsze byli oświecani jego mądrością i wspomagani jego zasługami. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"Bóg",null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Boże, który"},{"s":2,"n":2,"a":0,"g":"Twój Kościół"},{"s":4,"n":6,"a":1,"g":"błogosławionego Bedy, Twojego Wyznawcy i Doktora"},{"s":10,"n":2,"a":1,"g":"uczonością wsławiasz"},{"s":12,"n":2,"a":0,"g":"udziel łaskawie"},{"s":14,"n":2,"a":0,"g":"Twoim sługom"},{"s":16,"n":4,"a":2,"g":"aby zawsze byli oświecani jego mądrością"},{"s":20,"n":3,"a":2,"g":"i wspomagani jego zasługami"},{"s":23,"n":3,"a":1,"g":"Przez Pana naszego"},{"s":26,"n":2,"a":0,"g":"Jezusa Chrystusa"},{"s":28,"n":2,"a":0,"g":"Syna Twojego"},{"s":30,"n":5,"a":2,"g":"który z Tobą żyje i króluje"},{"s":35,"n":4,"a":1,"g":"w jedności Ducha Świętego"},{"s":40,"n":4,"a":2,"g":"przez wszystkie wieki wieków"}],"ex":{"w011":"Uczoność Bedy jest wskazana jako środek, przez który Bóg wsławia Kościół. Dalej modlitwa prosi o oświecenie jego mądrością.","w019":"Prośba dotyczy sług Boga. To oni mają być stale oświecani mądrością Bedy i wspomagani jego zasługami.","w040":"Słowo „Bóg” odnosi się tu do Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

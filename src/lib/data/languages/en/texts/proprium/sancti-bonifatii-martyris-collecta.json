@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-bonifatii-martyris-collecta",
+  "language":"en",
+  "about":"The Collect for Saint Boniface the Martyr asks that those celebrating his feast may be helped by his intercessions before God.",
+  "seg":[
+    {"id":"s01","tr":"Almighty God, we pray: grant that we who celebrate the feast of blessed Boniface, Your Martyr, may be helped by his intercessions before You. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Grant","we pray",null,null,"that","we who",null,null,null,null,null,"celebrate",null,null,null,null,"may be helped.","Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":2,"n":2,"a":1,"g":"almighty God"},{"s":6,"n":5,"a":4,"g":"the feast of blessed Boniface, Your Martyr"},{"s":12,"n":4,"a":3,"g":"by his intercessions before You"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":20,"n":2,"a":0,"g":"Jesus Christ"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":24,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":29,"n":2,"a":1,"g":"in the unity"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w006":"The people celebrating Boniface’s feast are the same people asking to be helped. Boniface is the intercessor, not the one celebrating his own feast.","w011":"Solemnia names the feast or solemn celebration, rather than describing an omitted noun as solemn.","w013":"His refers to Boniface. The prayer seeks help for the worshipers through the saint’s intercessions before God.","w034":"God describes Christ, the Son, who lives and reigns with the Father in the unity of the Holy Spirit. It does not introduce the Father as a new addressee."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+ "id": "proprium.sancti-petri-martyris-postcommunio",
+ "source_groups": [
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 113",
+    "scan": "DjVu scan 126",
+    "section": "Per ipsum — “Forever and ever” in the conclusion only; proper prayer body and Amen excluded"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancti-petri-martyris-postcommunio.conclusion-duration.key1901",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Only the concluding duration forever and ever, corresponding to Latin w036–w039. The actual passage prints “Forever and ever.” after Per ipsum, with a different preceding doxology; initial case is adjusted within the continuous conclusion. This use excludes the proper prayer body, the Per Dominum stem and Amen and does not claim that the complete selected conclusion is printed on this page."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 119",
+    "scan": "DjVu scan 132",
+    "section": "Libera nos — conclusion from “Through” through “God” only; proper prayer body excluded"
+   },
+   "entries": [
+    {
+     "id": "use.en.proprium.sancti-petri-martyris-postcommunio.conclusion-stem.key1901",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical contribution only to conclusion words w019–w035, from “Through” through “God”, printed after Libera nos: “Through the same our Lord Jesus Christ, Thy Son, who liveth and reigneth with Thee in the unity of the Holy Ghost, God.” Adapted to the selected Latin: same is omitted because eundem is absent; Thy/Thee become Your/You and liveth/reigneth become lives/reigns. Holy Ghost becomes Holy Spirit, a lexical modernization, not spelling-only normalization; linking punctuation follows the continuous conclusion. The proper prayer body, the duration forever and ever and Amen are excluded from this use."
+    }
+   ],
+   "verified_on": "2026-10-24"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

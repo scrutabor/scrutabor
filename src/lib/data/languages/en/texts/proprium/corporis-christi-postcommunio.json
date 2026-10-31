@@ -1,9 +1,9 @@
 {
   "id":"proprium.corporis-christi-postcommunio",
   "language":"en",
-  "about":"The Postcommunion of the feast of the Most Holy Body of Christ. It asks to be filled eternally with the Godhead, foreshadowed by the temporal reception of Christ’s precious Body and Blood.",
+  "about":"The Postcommunion of the feast of the Most Holy Body of Christ. It asks that we be filled with the eternal enjoyment of Christ’s divinity, an enjoyment foreshadowed by our temporal reception of His precious Body and Blood.",
   "seg":[
-    {"id":"s01","tr":"Grant, we beseech Thee, O Lord, that we may be filled with the everlasting enjoyment of Thy Godhead, which is foreshadowed by the temporal reception of Thy precious Body and Blood, who livest and reignest with God the Father in the unity of the Holy Ghost, God, world without end.","g":["grant","that we","we beseech","Lord","of Godhead","Your","everlasting","enjoyment","be filled","which","precious","of the Body","and","of Blood","Your","temporal","reception","foreshadows","who","live","and","reign","with","God","the Father","in","the unity",null,null,"God","through","all","ages","of ages"],"a":[{"s":27,"n":2,"a":0,"g":"of the Holy Spirit"}]},
+    {"id":"s01","tr":"Grant, we pray, Lord, that we may be filled with the eternal enjoyment of Your divinity, an enjoyment foreshadowed by our reception in time of Your precious Body and Blood. You live and reign with God the Father in the unity of the Holy Spirit, God, forever and ever.","g":["Grant","that we","we beseech","Lord",null,null,"everlasting","enjoyment","be filled","which",null,null,null,null,null,"temporal","reception","foreshadows",null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":4,"n":2,"a":0,"g":"of Your divinity"},{"s":10,"n":5,"a":1,"g":"of Your precious Body and Blood"},{"s":18,"n":4,"a":1,"g":"You live and reign"},{"s":22,"n":3,"a":1,"g":"with God the Father"},{"s":27,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":30,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

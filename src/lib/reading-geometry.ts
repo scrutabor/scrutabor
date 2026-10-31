@@ -55,7 +55,9 @@ const SB: Record<string, [number, number]> = {
 	É: [0.037, 0.025],
 	Í: [0.019, 0.018],
 	Ó: [0.045, 0.045],
-	Ú: [0.024, 0.01]
+	Ú: [0.024, 0.01],
+	// EB Garamond 400 outline at 1000 units/em; known P/E/C/Q/T/A/R/F rows rechecked.
+	Æ: [-0.005, 0.025]
 };
 
 // INK reach above and below the baseline, in the letter's own em. The
@@ -93,7 +95,8 @@ const INK: Record<string, [number, number]> = {
 	É: [0.838, 0.005],
 	Í: [0.838, 0.005],
 	Ó: [0.838, 0.014],
-	Ú: [0.838, 0.014]
+	Ú: [0.838, 0.014],
+	Æ: [0.653, 0.005]
 };
 // how far the base's own box reaches, measured, less the padding it
 // already carries

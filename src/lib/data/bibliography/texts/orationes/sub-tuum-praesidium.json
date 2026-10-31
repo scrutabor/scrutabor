@@ -6,18 +6,19 @@
    "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "official_text",
    "locator": {
-    "section": "Appendix A — Sub tuum praesidium"
+    "section": "APPENDIX / A) COMMON PRAYERS / Sub tuum præsidium"
    },
    "entries": [
     {
      "id": "use.core.f9e87cc5d5b567cbab11",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s01"
      },
-     "claim": "The source prints and identifies Sub tuum præsídium."
+     "claim": "The Latin antiphon only, w001–w024 through Virgo gloriosa et benedicta; not the devotional continuation or Amen."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-10-26"
   }
  ],
  "witnesses": []

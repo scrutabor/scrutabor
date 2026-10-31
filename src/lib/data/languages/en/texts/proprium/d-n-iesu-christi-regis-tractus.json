@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The tractus of the formulary “Christ the King” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"He will call upon Me: You are My Father, My God, and the upholder of My salvation. And I will make Him the firstborn, high above the kings of the earth. And I will establish His offspring forever and ever, and His throne as the days of heaven.","g":["He","shall call upon","Me","Father","My","are","You","God","My","and","helper","of salvation","my","and","I","the firstborn","will make","Him","highest","above","kings","of earth","and","I will establish","for","ever","and ever","posterity","His","and","throne","His","as","days","of heaven"]}
+    {"id":"s01","tr":"He will call upon Me: You are My Father, My God, and the upholder of My salvation. And I will make Him the firstborn, high above the kings of the earth. And I will establish His offspring forever and ever, and His throne as the days of heaven.","g":["He","will call upon","Me",null,null,"are","You",null,null,"and","helper",null,null,"and","I","the firstborn","will make","Him","highest","above","kings","of earth","and","I will establish","for","ever","and ever","posterity","His","and","throne","His","as","days","of heaven"],"a":[{"s":3,"n":2,"a":0,"g":"My Father"},{"s":7,"n":2,"a":0,"g":"My God"},{"s":11,"n":2,"a":0,"g":"of my salvation"}]}
   ]
 }

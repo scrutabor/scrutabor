@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sacro-munere-postcommunio",
+  "language":"en",
+  "about":"The prayer follows reception of the sacred gift. It asks that the observance we celebrate in fulfillment of the service we owe may be experienced as an increase of salvation.",
+  "seg":[
+    {"id":"s01","tr":"Filled with the sacred gift, we humbly beseech You, Lord, that through what we celebrate in dutiful service to You we may experience growth in the salvation You bestow. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,"that","what",null,null,null,null,null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,"God",null,null,null,null],"a":[{"s":0,"n":3,"a":2,"g":"Filled with the sacred gift"},{"s":3,"n":4,"a":3,"g":"we humbly beseech You, Lord"},{"s":9,"n":4,"a":2,"g":"we celebrate in fulfillment of the service we owe"},{"s":13,"n":4,"a":2,"g":"we may experience as an increase of Your salvation"},{"s":18,"n":2,"a":0,"g":"our Lord"},{"s":20,"n":2,"a":0,"g":"Jesus Christ"},{"s":22,"n":2,"a":0,"g":"Your Son"},{"s":24,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":29,"n":2,"a":1,"g":"in the unity"},{"s":31,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":34,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w003":"The praying community has been filled with the sacred gift.","w005":"“You” names the Lord, the one whom we beseech.","w009":"What refers to the sacred observance we celebrate. The prayer asks to experience that observance as an increase of salvation.","w010":"The participle describes the service as something we owe to God.","w017":"The increase is in the salvation God gives us.","w034":"The word “God” refers to the Son, who lives and reigns with the Father in the unity of the Holy Spirit."}},
+    {"id":"s04","tr":"Amen.","g":["Amen"]}
+  ]
+}

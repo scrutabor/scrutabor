@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Saints Simon and Jude, Apostles” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. Your friends, O God, are honored exceedingly; their sovereignty is made exceedingly strong. Alleluia.","g":["Alleluia","alleluia","Exceedingly","honored","are","friends","Your","God","exceedingly","strengthened","is","the sovereignty","their","Alleluia"]}
+    {"id":"s01","tr":"Alleluia, alleluia. Your friends, O God, are honored exceedingly; their sovereignty is made exceedingly strong. Alleluia.","g":["Alleluia","alleluia","Exceedingly",null,null,null,null,"God","exceedingly",null,null,"the sovereignty","their","Alleluia"],"a":[{"s":3,"n":2,"a":0,"g":"are honored"},{"s":5,"n":2,"a":0,"g":"Your friends"},{"s":9,"n":2,"a":0,"g":"is strengthened"}]}
   ]
 }

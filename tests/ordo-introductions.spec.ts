@@ -83,13 +83,115 @@ for (const language of ['pl', 'en'] as const) {
 				else await expect(label(page, `${dialogue}-s02`, 'who-voice')).toHaveCount(0);
 				// The response is everyone's first-degree answer, as the owner's participation says.
 				await expect(label(page, `${dialogue}-s03`, 'who-all')).toHaveText(names.everyone);
-				// The introduction is said once before the group, not repeated in the slot.
+				// The greeting is not repeated before a separately concluded commemoration.
 				await expect(section.locator(`[id^="${dialogue}"][id$=".w001"]`)).toHaveCount(1);
 				const ids = await page.locator('main [id]').evaluateAll((nodes) => nodes.map((n) => n.id));
 				expect(new Set(ids).size, movement).toBe(ids.length);
 			}
 		});
 	}
+
+	for (const form of ['lecta', 'cantu'] as const) {
+		test(`${language} ${form}: second ordinary oration has its own invitation and word owner`, async ({
+			page
+		}) => {
+			await as(page, form);
+			for (const [movement, slot] of [
+				['catechumenorum', 'collecta'],
+				['conclusio', 'postcommunio']
+			] as const) {
+				const body = `sanctae-petronillae-${slot}`;
+				const invitation = `aufer-a-nobis~${slot}-introductio~commemoratio~${body}`;
+				const initial = run(slot);
+				await page.goto(`/app/${language}/ordo/${movement}?dies=2027-05-31`);
+				await expect(page.locator(`[id="${body}.w001"]`)).toBeVisible();
+				const section = page.locator('section.part').filter({
+					has: page.locator(`[id="${body}.w001"]`)
+				});
+				const order = await section
+					.locator(
+						[
+							`${initial.invitation}.w001`,
+							`beata-maria-virgo-regina-${slot}.w001`,
+							`${invitation}.w001`,
+							`${body}.w001`
+						]
+							.map((id) => `[id="${id}"]`)
+							.join(', ')
+					)
+					.evaluateAll((nodes) => nodes.map((node) => node.id));
+				expect(order).toEqual([
+					`${initial.invitation}.w001`,
+					`beata-maria-virgo-regina-${slot}.w001`,
+					`${invitation}.w001`,
+					`${body}.w001`
+				]);
+				await expect(section.locator('.oration-invitation')).toHaveCount(1);
+				await expect(section.locator(`[id="${initial.dialogue}.w001"]`)).toHaveCount(1);
+				await expect(section.locator('.variant-head')).toHaveCount(form === 'cantu' ? 2 : 0);
+				const word = page.locator(`[id="${invitation}.w001"]`);
+				await word.click();
+				await expect(page.locator('aside .form').first()).toContainText('Orémus');
+				await expect
+					.poll(() => {
+						const physical = new URL(page.url());
+						const logical =
+							physical.protocol === 'file:'
+								? new URL(physical.hash.slice(1), 'https://scrutabor.invalid')
+								: physical;
+						return logical.searchParams.get('w');
+					})
+					.toBe(`${invitation}.w001`);
+				await expect(page.getByRole('dialog').locator('.head > a')).toHaveAttribute(
+					'href',
+					`/app/${language}/lemma?l=oro`
+				);
+				await page.keyboard.press('Escape');
+				await expect(page.getByRole('dialog')).toHaveCount(0);
+				await expect(word).toBeFocused();
+				await page.evaluate(
+					(movement) =>
+						localStorage.setItem(
+							`scrutabor-pos:ordo/${movement}`,
+							JSON.stringify({ y: 99999, t: Date.now() })
+						),
+					movement
+				);
+				await page.goto(`/app/${language}/ordo/${movement}?dies=2027-05-31&w=${invitation}.w001`);
+				await expect(page.locator('aside .form').first()).toContainText('Orémus');
+				await expect(word).toBeInViewport();
+				await expect(section.locator('.oration-invitation .flow-row').last()).toHaveAttribute(
+					'data-after',
+					'who'
+				);
+				const ids = await page.locator('main [id]').evaluateAll((nodes) => nodes.map((n) => n.id));
+				expect(new Set(ids).size).toBe(ids.length);
+				await page.emulateMedia({ media: 'print' });
+				await expect(section.locator('.oration-invitation')).toHaveCSS('break-after', 'avoid');
+				await page.emulateMedia({ media: 'screen' });
+			}
+			await page.goto(`/app/${language}/ordo/offertorium?dies=2027-05-31`);
+			await expect(page.locator('[id="sanctae-petronillae-secreta.w001"]')).toBeVisible();
+			await expect(page.locator('.oration-invitation')).toHaveCount(0);
+			await page.goto(`/app/${language}/ordo/catechumenorum?${SUNDAY.query}`);
+			await expect(page.locator(`[id="${SUNDAY.mass}-collecta.w001"]`)).toBeVisible();
+			await expect(page.locator('.oration-invitation')).toHaveCount(0);
+		});
+	}
+
+	test(`${language} an incomplete commemoration transport adds no second invitation @online`, async ({
+		page
+	}) => {
+		await as(page, 'lecta');
+		await page.route(`**/artifacts/commemorationes/${language}.json`, (route) =>
+			route.fulfill({ status: 503, body: 'unavailable' })
+		);
+		await page.goto(`/app/${language}/ordo/catechumenorum?dies=2027-05-31`);
+		await expect(page.locator('.part-loading')).toHaveCount(0);
+		await expect(page.locator('[id="sanctae-petronillae-collecta.w001"]')).toHaveCount(0);
+		await expect(page.locator('.oration-invitation')).toHaveCount(0);
+		await expect(page.locator(`[id="${run('collecta').invitation}.w001"]`)).toBeVisible();
+	});
 
 	test(`${language} no introduction precedes the Secret or the Gospel in this edition`, async ({
 		page

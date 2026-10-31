@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-athanasii-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa po Komunii na uroczystość świętego Atanazego, Wyznawcy i Biskupa. Zwraca się do Boga, który nagradza wierne dusze, i prosi o przebaczenie przez modlitwy świętego, którego święto jest obchodzone.",
+  "seg":[
+    {"id":"s01","tr":"Boże, który nagradzasz wierne dusze, spraw, abyśmy przez modlitwy świętego Atanazego, Twojego Wyznawcy i Biskupa, którego czcigodne święto obchodzimy, otrzymali przebaczenie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Boże",null,null,null,"spraw","abyśmy","świętego","Atanazego","Wyznawcy","Twojego","i","Biskupa",null,null,null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":1,"n":3,"a":1,"g":"nagradzający wierne dusze"},{"s":12,"n":4,"a":2,"g":"którego czcigodne święto obchodzimy"},{"s":16,"n":3,"a":2,"g":"przez modlitwy otrzymali przebaczenie"}],"ex":{"w003":"Tytuł Boga wskazuje na Tego, który nagradza wierne dusze. Prośba o przebaczenie następuje po tym wezwaniu.","w007":"„Beatus” określa tutaj świętego wspominanego w liturgii i podkreśla jego błogosławiony stan.","w014":"„Venerandam” wyraża, że święto jest godne czci. Modlący się mówią o święcie, które właśnie obchodzą.","w017":"„Przez modlitwy” podejmuje wcześniejsze imię Atanazego wraz z tytułami Wyznawcy i Biskupa. Wtrącone zdanie o jego święcie rozdziela to określenie od rzeczownika.","w018":"Przedmiotem tej prośby jest Boże przebaczenie, o które modlący się zabiegają przez modlitwy świętego.","w036":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

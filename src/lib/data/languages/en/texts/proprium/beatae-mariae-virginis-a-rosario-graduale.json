@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Blessed Virgin Mary of the Rosary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"For the sake of truth, and meekness, and justice: and your right hand will lead you wonderfully. Listen, daughter, and see, and incline your ear: for the King has desired your beauty.","g":["for the sake of","truth","and","meekness","and","justice","and","shall lead","you","wondrously","right hand","your","hear","daughter","and","see","and","incline","ear","your","for","has desired","the King","beauty","your"]}
+    {"id":"s01","tr":"For the sake of truth, and meekness, and justice: and your right hand will lead you wonderfully. Listen, daughter, and see, and incline your ear: for the King has desired your beauty.","g":["For the sake of","truth","and","meekness","and","justice","and","will lead","you","wondrously",null,null,"hear","daughter","and","see","and","incline",null,null,"for","has desired","the King",null,null],"a":[{"s":10,"n":2,"a":0,"g":"your right hand"},{"s":18,"n":2,"a":0,"g":"your ear"},{"s":23,"n":2,"a":0,"g":"your beauty"}]}
   ]
 }

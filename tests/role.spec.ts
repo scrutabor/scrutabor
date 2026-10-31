@@ -137,12 +137,26 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	// gives the faithful the whole Ordinary too (25 b at sung Mass, 31 c at
 	// low Mass). Both are true. A V. plus the former label “wierni” made
 	// those truths look contradictory and called a profession a versicle.
-	for (const slug of ['gloria', 'credo', 'agnus-dei']) {
+	for (const slug of ['gloria', 'credo']) {
 		await page.goto(`/app/pl/ordinarium/${slug}`);
 		await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
 		await expect(page.locator('.verse .mark')).toHaveCount(0);
 		await expect(page.locator('.picker[data-kind="role"]')).toHaveCount(0);
 	}
+	// At sung Mass the Agnus Dei belongs to the schola, as the Sanctus does (DMS 25 b; 26):
+	// the faithful may join and the priest says it quietly. At low Mass both are named again.
+	await page.goto('/app/pl/ordinarium/agnus-dei');
+	await expect(page.locator('.who-performance')).toHaveText(
+		'Schola śpiewa, a wierni mogą dołączyć. Kapłan odmawia ten sam tekst po cichu.'
+	);
+	await expect(page.locator('.who-name')).toHaveCount(0);
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await expect(page.locator('.picker[data-kind="role"]')).toHaveCount(0);
+	await page.locator('.option[data-word="cicha"]').click();
+	await expect(page.locator('.who-name').first()).toHaveText('kapłan i wierni');
+	await expect(page.locator('.verse .mark')).toHaveCount(0);
+	await page.locator('.option[data-word="śpiewana"]').click();
+	await expect(page.locator('.who-performance')).toHaveCount(1);
 
 	// A persisted viewpoint cannot change the objective attribution or the
 	// nature of the text. It only marks the reader's own part where there is

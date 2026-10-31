@@ -1,0 +1,16 @@
+{
+  "id":"ordinarium.agnus-dei-defunctorum",
+  "title":"Agnus Dei in Missis defunctorum",
+  "category":"ordinarium",
+  "section":"missa-fidelium",
+  "variant":"defunctorum",
+  "sung":true,
+  "st":"working-edition",
+  "ad":5,
+  "adw":6,
+  "seg":[
+    {"id":"s01","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"voice":"secreto"}},"participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b","performance":{"speaker":"schola","voice":"cantus","source":"DMS 25 b; 26"}}},"w":[{"i":"w001","f":"Agnus","l":"agnus","m":60},{"i":"w002","f":"Dei","l":"deus","p":",","m":54},{"i":"w003","f":"qui","l":"qui","m":18},{"i":"w004","f":"tollis","l":"tollo","m":84},{"i":"w005","f":"peccáta","l":"peccatum","m":85},{"i":"w006","f":"mundi","l":"mundus","p":":","m":54},{"i":"w007","f":"dona","l":"dono","m":41},{"i":"w008","f":"eis","l":"is","m":53},{"i":"w009","f":"réquiem","l":"requies","p":".","m":7}]},
+    {"id":"s02","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"voice":"secreto"}},"participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b","performance":{"speaker":"schola","voice":"cantus","source":"DMS 25 b; 26"}}},"w":[{"i":"w010","f":"Agnus","l":"agnus","m":60},{"i":"w011","f":"Dei","l":"deus","p":",","m":54},{"i":"w012","f":"qui","l":"qui","m":18},{"i":"w013","f":"tollis","l":"tollo","m":84},{"i":"w014","f":"peccáta","l":"peccatum","m":85},{"i":"w015","f":"mundi","l":"mundus","p":":","m":54},{"i":"w016","f":"dona","l":"dono","m":41},{"i":"w017","f":"eis","l":"is","m":53},{"i":"w018","f":"réquiem","l":"requies","p":".","m":7}]},
+    {"id":"s03","type":"verse","speaker":"sacerdos","voice":"clara","delivery":{"cantu":{"voice":"secreto"}},"participation":{"lecta":{"gradus":3,"source":"DMS 31 c"},"cantu":{"gradus":2,"source":"DMS 25 b","performance":{"speaker":"schola","voice":"cantus","source":"DMS 25 b; 26"}}},"w":[{"i":"w019","f":"Agnus","l":"agnus","m":60},{"i":"w020","f":"Dei","l":"deus","p":",","m":54},{"i":"w021","f":"qui","l":"qui","m":18},{"i":"w022","f":"tollis","l":"tollo","m":84},{"i":"w023","f":"peccáta","l":"peccatum","m":85},{"i":"w024","f":"mundi","l":"mundus","p":":","m":54},{"i":"w025","f":"dona","l":"dono","m":41},{"i":"w026","f":"eis","l":"is","m":53},{"i":"w027","f":"réquiem","l":"requies","m":7},{"i":"w028","f":"sempitérnam","l":"sempiternus","p":".","m":8,"h":"w027"}]}
+  ]
+}

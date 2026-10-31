@@ -1,0 +1,9 @@
+{
+  "id":"proprium.sancti-stanislai-postcommunio",
+  "language":"pl",
+  "about":"Modlitwa prosi, by Komunia oczyściła nas z grzechu i dała nam udział w niebiańskim lekarstwie za wstawiennictwem Stanisława.",
+  "seg":[
+    {"id":"s01","tr":"Niech ta Komunia, Panie, oczyści nas z grzechu i za wstawiennictwem błogosławionego Stanisława, Twojego Męczennika i Biskupa, da nam udział w niebiańskim lekarstwie. Przez Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Ta","nas","Komunia","Panie","niech oczyści","z","grzechu","i",null,null,null,"Męczennika","Twojego","i","Biskupa",null,null,null,null,null,"Przez","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":8,"n":3,"a":0,"g":"za wstawiennictwem błogosławionego Stanisława"},{"s":15,"n":5,"a":2,"g":"niech uczyni uczestnikami niebiańskiego lekarstwa"}],"ex":{"w003":"To Komunia ma nas oczyścić i dać nam udział w niebiańskim lekarstwie. Pan pozostaje adresatem modlitwy.","w007":"Prośba dotyczy oczyszczenia z grzechu. To jeden z owoców Komunii, o które proszą modlący się.","w018":"Prośba o udział w niebiańskim lekarstwie odnosi się do tych samych ludzi, których Komunia ma oczyścić. Obraz lekarstwa podkreśla uzdrawiający dar Komunii.","w037":"„Deus” określa Chrystusa, Syna. To On żyje i króluje z Ojcem w jedności Ducha Świętego."}},
+    {"id":"s02","tr":"Amen.","g":["Amen"]}
+  ]
+}

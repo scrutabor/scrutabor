@@ -81,6 +81,7 @@
 		offertorium: 'Offertórium',
 		secreta: 'Secréta',
 		praefatio: 'Præfátio',
+		'agnus-dei': 'Agnus Dei',
 		communio: 'Commúnio',
 		'laudes-psalmus': 'Laudes — Psalmus 150',
 		'laudes-canticum': 'Laudes — Benedíctus',

@@ -1,0 +1,43 @@
+{
+ "id": "ordinarium.ite-missa-est-defunctorum",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p.78",
+    "scan": "PDF p.90(one-based)"
+   },
+   "entries": [
+    {
+     "id": "use.en.requiem.dismissal-greeting.missal1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historical English greeting “The Lord be with you.”"
+    },
+    {
+     "id": "use.en.requiem.dismissal-requiem-petition.missal1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical Masses-for-the-Dead petition “May they rest in peace.”"
+    },
+    {
+     "id": "use.en.requiem.dismissal-response.missal1846",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English reply “And with thy spirit.” revised to the contemporary singular human possessive your."
+    }
+   ],
+   "verified_on": "2026-10-29"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

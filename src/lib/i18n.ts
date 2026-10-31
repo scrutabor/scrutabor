@@ -417,6 +417,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			'festum-impeditum': [
 				'Gdy jedno z poniższych świąt drugiej klasy przypada w niedzielę drugiej klasy, ustępuje niedzieli, a we Mszy niedzieli wspomina się to święto. Po kolekcie, sekrecie i pokomunii niedzieli następuje za każdym razem odpowiednia modlitwa święta z własnym zakończeniem. To wspomnienie zwykłe odmawia się we Mszy cichej i we Mszy śpiewanej konwentualnej, a we Mszy śpiewanej niekonwentualnej pomija się je.',
 				'Wspominane święto zależy od daty: jest to święto, które według kalendarza przypada tego dnia. Jego modlitwy pochodzą z jego własnego formularza i pokazuje je porządek Mszy wybranego dnia.'
+			],
+			'vigilia-ascensionis-impedita': [
+				'Gdy wskazane w tym wydaniu święto II klasy ma pierwszeństwo przed Wigilią Wniebowstąpienia, we Mszy święta wspomina się tę Wigilię. Po kolekcie, sekrecie i modlitwie po Komunii święta następuje za każdym razem odpowiednia modlitwa z formularza Wigilii z własnym zakończeniem. To wspomnienie odmawia się we Mszy cichej i we Mszy śpiewanej konwentualnej, a we Mszy śpiewanej niekonwentualnej pomija się je.',
+				'Dotyczy to tylko wskazanych świąt i dat. Sam wybór Mszy śpiewanej nie rozstrzyga, czy jest ona konwentualna.'
 			]
 		},
 		commemorationDates: 'Święta i daty w tym wydaniu',
@@ -426,7 +430,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'sabbato-quatuor-temporum-adventus': 'Sobota Suchych Dni Adwentu'
 		},
 		formularyScope:
-			'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, ale nie uwzględnia jeszcze innych wspomnień liturgicznych ani kalendarzy lokalnych.',
+			'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, a także wskazane w tym wydaniu wspomnienia świętych w Wigilię Wniebowstąpienia i wspomnienie tej Wigilii, gdy jest przeszkodzona. Nie obejmuje jeszcze wszystkich wspomnień liturgicznych ani kalendarzy lokalnych.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
@@ -686,6 +690,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			'festum-impeditum': [
 				'When one of the second-class feasts below falls on a second-class Sunday, it gives way to the Sunday, and the feast is commemorated in the Sunday’s Mass. The Collect, Secret and Postcommunion of the Sunday are each followed by the feast’s prayer of the same kind, with its own conclusion. This ordinary commemoration is made in a low Mass and in a sung conventual Mass, and omitted in a sung Mass that is not conventual.',
 				'The feast commemorated depends on the date: it is the feast the calendar assigns to that day. Its prayers come from its own formulary, and the order of Mass of the chosen day shows them.'
+			],
+			'vigilia-ascensionis-impedita': [
+				'When a second-class feast represented in this edition takes precedence over the Vigil of the Ascension, the Vigil is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the Vigil’s prayer of the same kind, with its own conclusion. This commemoration is made in a low Mass and in a sung conventual Mass, and omitted in a sung Mass that is not conventual.',
+				'This applies only to the specified feasts and dates. Selecting sung Mass alone does not decide whether it is conventual.'
 			]
 		},
 		commemorationDates: 'Feasts and dates in this edition',
@@ -695,7 +703,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'sabbato-quatuor-temporum-adventus': 'Ember Saturday of Advent'
 		},
 		formularyScope:
-			'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, but not yet for other liturgical commemorations or local calendars.',
+			'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, as well as this edition’s specified commemorations of saints on the Vigil of the Ascension and of the Vigil when it is impeded. It does not yet cover all liturgical commemorations or local calendars.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',

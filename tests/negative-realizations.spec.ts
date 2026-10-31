@@ -16,9 +16,15 @@ const readings = [
 	['pl', 'proprium/dominica-ii-in-quadragesima-epistola', 'w074', 'nie oszukiwał', 1],
 	['pl', 'litaniae/sanctissimi-nominis-iesu', 'w449', 'nie przestawali', 1],
 	['pl', 'litaniae/sanctissimi-nominis-iesu', 'w466', 'nie pozbawiasz', 1],
-	['pl', 'ordinarium/fili-dei-vivi', 'w047', 'nie dopuść', 1],
+	['pl', 'ordinarium/fili-dei-vivi', 'w047', 'nie pozwól', 1],
 	['pl', 'ordinarium/praefatio-sacratissimi-cordis-iesu', 'w050', 'nie przestało', 1],
-	['pl', 'proprium/corporis-christi-sequentia', 'w210', 'nie dokonuje się', 1],
+	[
+		'pl',
+		'proprium/corporis-christi-sequentia',
+		'w210',
+		'Nie następuje żadne rozdzielenie rzeczywistości',
+		4
+	],
 	['pl', 'proprium/dominica-ii-post-pentecosten-collecta', 'w017', 'nie pozbawiasz', 1],
 	['pl', 'proprium/dominica-iii-post-epiphaniam-epistola', 'w011', 'nieodpłacający', 1],
 	['pl', 'proprium/dominica-in-sexagesima-collecta', 'w009', 'nie pokładamy ufności', 1],

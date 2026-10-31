@@ -56,7 +56,7 @@ export function createIntroductionLookup(
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.7.0' ||
+			ROOT_MANIFEST.schema_version !== '6.10.0' ||
 			ROOT_MANIFEST.base.introductiones !== 'introductiones.json'
 		)
 			throw new Error('undeclared introduction resource');
@@ -97,8 +97,9 @@ export interface IntroductionBody {
 
 /** Cut the event's owner segments out of their documents, in event order. The base speaker
  * and voice become the occurrence's low-Mass delivery and its sung delivery the only override:
- * what the resource authors for this occurrence governs it. The faithful's participation stays
- * the owner's, as the resource requires. */
+ * what the resource authors for this occurrence governs it. Participation normally stays
+ * the owner's. The source-bound ordinary Gospel response has its own sung grant, distinct
+ * from the borrowed Last-Gospel words; only its cloned occurrence receives that grant. */
 export function introductionBodies(
 	event: IntroductionEvent,
 	owners: Record<string, { doc: TextDocument; gloss: GlossDocument } | undefined>,
@@ -106,7 +107,7 @@ export function introductionBodies(
 ): IntroductionBody[] {
 	if (!lookup) throw new Error('introduction resource unavailable');
 	const runs: { key: string; segments: Segment[] }[] = [];
-	for (const occurrence of event.occurrences) {
+	for (const [index, occurrence] of event.occurrences.entries()) {
 		if (!('unit' in occurrence)) throw new Error('unresolved announcement slot');
 		const unit = lookup.units.get(occurrence.unit);
 		const owner = unit && owners[unit.text];
@@ -131,13 +132,51 @@ export function introductionBodies(
 			(unit.role !== 'announcement' && occurrence.cantu.voice !== 'cantus')
 		)
 			throw new Error(`introduction ${unit.id} owner or delivery conflicts with its role`);
-		const answered = unit.role === 'response' || unit.role === 'gospel-response';
+		const borrowedGospel =
+			unit.id === 'responsio-gloria-tibi' ||
+			unit.role === 'gospel-response' ||
+			(unit.text === 'ordinarium/evangelium-ultimum' && unit.segment === 's06');
+		// The ordinary Gospel's sourced occurrence is not the Last Gospel.
+		// Never give a sung grant back to the borrowed canonical owner.
 		if (
-			answered
-				? !segment.participation?.lecta || !segment.participation?.cantu
-				: !!segment.participation
+			(event.id === 'evangelium-annuntiatio' && index === 1 && !borrowedGospel) ||
+			(borrowedGospel &&
+				(event.id !== 'evangelium-annuntiatio' ||
+					event.before !== 'evangelium' ||
+					event.source !== 'RG 471; Ritus servandus VI, 2' ||
+					index !== 1 ||
+					unit.id !== 'responsio-gloria-tibi' ||
+					unit.role !== 'gospel-response' ||
+					unit.text !== 'ordinarium/evangelium-ultimum' ||
+					unit.segment !== 's06' ||
+					unit.source !== 'Ritus servandus VI, 2' ||
+					JSON.stringify(unit.words) !== JSON.stringify(['w012', 'w013', 'w014']) ||
+					JSON.stringify(
+						(segment.words ?? []).map(({ id, form, post }) => [id, form, post ?? ''])
+					) !==
+						JSON.stringify([
+							['w012', 'Glória', ''],
+							['w013', 'tibi', ','],
+							['w014', 'Dómine', '.']
+						]) ||
+					occurrence.lecta.source !== 'Ritus servandus VI, 2' ||
+					occurrence.cantu.source !== 'DMS 16 b, 25 a, 26'))
 		)
-			throw new Error(`introduction ${unit.id} participation conflicts with its role`);
+			throw new Error(`introduction ${unit.id} ordinary Gospel context or source differs`);
+		const answered = unit.role === 'response' || unit.role === 'gospel-response';
+		const low = segment.participation?.lecta;
+		if (
+			borrowedGospel
+				? !low ||
+					Object.keys(segment.participation ?? {}).length !== 1 ||
+					Object.keys(low).length !== 2 ||
+					low.gradus !== 1 ||
+					low.source !== 'DMS 31 a'
+				: answered
+					? !segment.participation?.lecta || !segment.participation?.cantu
+					: !!segment.participation
+		)
+			throw new Error(`introduction ${unit.id} owner participation conflicts with its role`);
 		if (
 			segment.delivery?.cantu &&
 			(segment.delivery.cantu.speaker !== occurrence.cantu.speaker ||
@@ -148,7 +187,15 @@ export function introductionBodies(
 			...structuredClone(segment),
 			speaker: occurrence.lecta.speaker,
 			voice: occurrence.lecta.voice,
-			delivery: { cantu: { speaker: occurrence.cantu.speaker, voice: occurrence.cantu.voice } }
+			delivery: { cantu: { speaker: occurrence.cantu.speaker, voice: occurrence.cantu.voice } },
+			...(borrowedGospel
+				? {
+						participation: {
+							...structuredClone(segment.participation!),
+							cantu: { gradus: 1, source: 'DMS 25 a' }
+						}
+					}
+				: {})
 		};
 		const last = runs.at(-1);
 		if (last?.key === unit.text && !last.segments.some(({ id }) => id === cut.id))
