@@ -34,11 +34,6 @@
    "id": "work.the-missal-for-the-use-of-the-laity",
    "responsible": "Frederick Charles Husenbeth",
    "title": "The Missal for the Use of the Laity"
-  },
-  {
-   "id": "work.the-raccolta",
-   "responsible": "Ambrose St John (English translation)",
-   "title": "The Raccolta"
   }
  ],
  "editions": [
@@ -149,22 +144,6 @@
     "status": "public-domain",
     "basis": "Frederick Charles Husenbeth died in 1872; the examined new edition improved was published in London in 1853."
    }
-  },
-  {
-   "id": "edition.the-raccolta-1910",
-   "work": "work.the-raccolta",
-   "title": "The Raccolta or Collection of Indulgenced Prayers and Good Works",
-   "year": "1910",
-   "publication_type": "prayer_book",
-   "authority": "approved_ecclesiastical_edition",
-   "languages": [
-    "en",
-    "la"
-   ],
-   "rights": {
-    "status": "public-domain",
-    "basis": "English translation attributed to Ambrose St John (d. 1875), in an edition published in 1910; only wording verified on the original page image is cited."
-   }
   }
  ],
  "digital_items": [
@@ -229,15 +208,6 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/missal_for_use_of_laity_1853-f_c_husenbeth",
    "scan_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf",
-   "access": "open"
-  },
-  {
-   "id": "item.raccolta-1910.scan",
-   "edition": "edition.the-raccolta-1910",
-   "repository": "Internet Archive",
-   "kind": "scan",
-   "record_url": "https://archive.org/details/theraccoltaorcol00unknuoft",
-   "scan_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf",
    "access": "open"
   }
  ]

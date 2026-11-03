@@ -39,6 +39,12 @@
       "evidence": "bibliography/texts/orationes/actus-contritionis.json"
     },
     {
+      "id": "orationes.adoro-te-devote",
+      "path": "texts/orationes/adoro-te-devote.json",
+      "title": "Adóro te devóte",
+      "evidence": "bibliography/texts/orationes/adoro-te-devote.json"
+    },
+    {
       "id": "orationes.agimus-tibi-gratias",
       "path": "texts/orationes/agimus-tibi-gratias.json",
       "title": "Ágimus tibi grátias",
@@ -7354,7 +7360,7 @@
     "formularies": "formularies.json",
     "metrics": "metrics.json"
   },
-  "morphology": 1057,
+  "morphology": 1059,
   "kalendarium": [
     2026,
     2101

@@ -21,6 +21,7 @@ export const CATALOG_ORDER: CatalogSectionSource[] = [
 			'memorare',
 			'magnificat',
 			'anima-christi',
+			'adoro-te-devote',
 			'actus-contritionis',
 			'angele-dei',
 			'benedic-domine',

@@ -96,6 +96,11 @@
    "title": "De S. Joseph nomine Canoni Missae inserendo"
   },
   {
+   "id": "work.the-raccolta",
+   "responsible": "Ambrose St John (English translation)",
+   "title": "The Raccolta"
+  },
+  {
    "id": "work.valla.elegantiae",
    "responsible": "Laurentius Valla",
    "title": "De linguae Latinae elegantia libri sex"
@@ -535,6 +540,22 @@
    }
   },
   {
+   "id": "edition.the-raccolta-1910",
+   "work": "work.the-raccolta",
+   "title": "The Raccolta or Collection of Indulgenced Prayers and Good Works",
+   "year": "1910",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "English translation attributed to Ambrose St John (d. 1875), in an edition published in 1910; only wording verified on the original page image is cited."
+   }
+  },
+  {
    "id": "edition.valla.elegantiae.1538",
    "work": "work.valla.elegantiae",
    "title": "De linguae Latinae elegantia libri sex",
@@ -890,6 +911,15 @@
    "scan_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf",
    "access": "open",
    "digitization_rights": "Repository assertion CC BY-NC-ND 3.0 is retained as an assertion, not a new rights determination."
+  },
+  {
+   "id": "item.raccolta-1910.scan",
+   "edition": "edition.the-raccolta-1910",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/theraccoltaorcol00unknuoft",
+   "scan_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf",
+   "access": "open"
   },
   {
    "id": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",

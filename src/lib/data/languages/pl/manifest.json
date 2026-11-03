@@ -39,6 +39,14 @@
       "title": "Akt żalu"
     },
     {
+      "id": "orationes.adoro-te-devote",
+      "path": "languages/pl/texts/orationes/adoro-te-devote.json",
+      "title": "Adoro te devote",
+      "aliases": [
+        "Adoruję Cię z oddaniem"
+      ]
+    },
+    {
       "id": "orationes.agimus-tibi-gratias",
       "path": "languages/pl/texts/orationes/agimus-tibi-gratias.json",
       "evidence": "languages/pl/bibliography/texts/orationes/agimus-tibi-gratias.json",

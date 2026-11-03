@@ -7,9 +7,17 @@
     {
      "edition": "edition.liber-usualis.1961",
      "roles": [
+      "corroborating_latin_witness",
       "direct_approved_print"
      ],
      "texts": [
+      {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
       {
        "id": "orationes.te-deum",
        "roles": [
@@ -49,6 +57,22 @@
        "id": "proprium.dominica-v-post-pascha-introitus",
        "roles": [
         "direct_approved_print"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.the-raccolta-1910",
+     "roles": [
+      "corroborating_latin_witness"
+     ],
+     "texts": [
+      {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "corroborating_latin_witness"
        ],
        "uses": 1
       }
@@ -7999,6 +8023,13 @@
       "official_text"
      ],
      "texts": [
+      {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
       {
        "id": "ordinarium.adiutorium",
        "roles": [
@@ -16443,6 +16474,13 @@
      ],
      "texts": [
       {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.agnus-dei-defunctorum",
        "roles": [
         "corroborating_latin_witness"
@@ -17329,6 +17367,7 @@
     {
      "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
      "roles": [
+      "corroborating_latin_witness",
       "official_text"
      ],
      "texts": [
@@ -17357,6 +17396,13 @@
        "id": "litaniae.sanctissimi-nominis-iesu",
        "roles": [
         "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "corroborating_latin_witness"
        ],
        "uses": 1
       },

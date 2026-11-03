@@ -40,6 +40,14 @@
       "title": "Act of Contrition"
     },
     {
+      "id": "orationes.adoro-te-devote",
+      "path": "languages/en/texts/orationes/adoro-te-devote.json",
+      "title": "Adoro te devote",
+      "aliases": [
+        "I Adore You Devoutly"
+      ]
+    },
+    {
       "id": "orationes.agimus-tibi-gratias",
       "path": "languages/en/texts/orationes/agimus-tibi-gratias.json",
       "evidence": "languages/en/bibliography/texts/orationes/agimus-tibi-gratias.json",

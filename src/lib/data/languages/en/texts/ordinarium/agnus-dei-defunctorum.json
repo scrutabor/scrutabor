@@ -1,7 +1,7 @@
 {
   "id":"ordinarium.agnus-dei-defunctorum",
   "language":"en",
-  "about":"In Masses for the Dead, the Lamb of God is asked to grant rest to the departed. The petition is repeated three times. The third adds “everlasting.” The priest does not strike his breast. He recites the prayer clearly at Low Mass and quietly at sung Mass. At sung Mass the Agnus Dei is also sung aloud.",
+  "about":"In Masses for the Dead, the Lamb of God is asked to grant rest to the departed. The petition is repeated three times. The third adds “everlasting.” The priest does not strike his breast and recites the prayer clearly at Low Mass and quietly at sung Mass. At sung Mass the Agnus Dei is also sung aloud.",
   "seg":[
     {"id":"s01","tr":"Lamb of God, You who take away the sins of the world, grant them rest.","tb":"revised","g":["Lamb","of God",null,null,"the sins","of the world","grant","them","rest"],"a":[{"s":2,"n":2,"a":1,"g":"You who take away"}],"ex":{"w001":"The Lamb of God is addressed here. Latin uses the nominative form Agnus for this invocation."}},
     {"id":"s02","tr":"Lamb of God, You who take away the sins of the world, grant them rest.","tb":"revised","g":["Lamb","of God",null,null,"the sins","of the world","grant","them","rest"],"a":[{"s":2,"n":2,"a":1,"g":"You who take away"}],"ex":{"w010":"The Lamb of God is addressed here. Latin uses the nominative form Agnus for this invocation."}},

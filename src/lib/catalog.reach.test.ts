@@ -1,6 +1,7 @@
 import { readingIntroductionOwners } from './introductiones';
 import { describe, expect, it } from 'vitest';
 import { CATALOG } from './catalog';
+import { CATALOG_ORDER } from './catalog-order';
 import { CORPUS_METRICS, TEXT_KEYS, hasText } from './corpus';
 import { ORDO } from './ordo';
 import { PROPER_DAYS } from './proprium';
@@ -70,5 +71,16 @@ describe('the reader metrics are the common denominator', () => {
 			TEXT_KEYS.filter((key) => key.startsWith('proprium/')).length
 		);
 		expect(CORPUS_METRICS.formularies.total).toBe(PROPER_DAYS.length);
+	});
+});
+
+// The Missal prints Adoro te devote beside Anima Christi among the thanksgiving
+// prayers after Mass, and the shelf follows the book. A reorder is an editorial
+// decision, not a tidy-up: whoever makes it must change this line.
+describe("the prayers shelf keeps the book's order", () => {
+	it('places Adoro te devote immediately after Anima Christi', () => {
+		const prayers = CATALOG_ORDER.find((section) => section.category === 'orationes')?.texts ?? [];
+		expect(prayers).toContain('anima-christi');
+		expect(prayers[prayers.indexOf('anima-christi') + 1]).toBe('adoro-te-devote');
 	});
 });
