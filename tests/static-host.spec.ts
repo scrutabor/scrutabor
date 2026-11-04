@@ -79,7 +79,7 @@ test('the worker installs and takes control on the static host @static-host', as
 for (const [surface, path, word] of [
 	['a prayer', PATER, '#w008'],
 	['a complete formulary', '/app/pl/formularium/dominica-i-adventus', '.proper-part button.word'],
-	['an Ordo movement', '/app/pl/ordo/catechumenorum', '#credo\\.w103']
+	['an Ordo movement', '/app/pl/ordo/catechumenorum?dies=2026-11-29', '#credo\\.w103']
 ] as const) {
 	test(`Back after a reload keeps ${surface} on the page @static-host`, async ({ page }) => {
 		const routeData: string[] = [];

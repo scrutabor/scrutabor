@@ -464,6 +464,7 @@
 
 	.calendar-panel {
 		height: min(60dvh, 25rem);
+		max-height: 100%;
 		min-height: 0;
 		overflow-y: auto;
 	}

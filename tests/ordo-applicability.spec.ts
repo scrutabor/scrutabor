@@ -447,65 +447,68 @@ for (const lang of ['pl', 'en'] as const) {
 			// (WebKit showed the hydrated guide while the scripts were held).
 			const cold = await browser.newPage({ baseURL, javaScriptEnabled: false });
 			const away: string[] = [];
-			await cold.route(/^(?!http:\/\/localhost:\d+\/)/, (route) => {
-				away.push(route.request().url());
-				return route.abort();
-			});
-			for (const movement of ['praeparatio', 'communio', 'offertorium', 'conclusio']) {
-				const address = `/app/${lang}/ordo/${movement}?dies=2026-04-04&missa=none`;
-				await cold.goto(address);
-				await unconfirmedGuide(cold, lang, movement);
-				await page.goto(address);
-				await genericGuide(page, lang, movement);
+			try {
+				await cold.route(/^(?!http:\/\/localhost:\d+\/)/, (route) => {
+					away.push(route.request().url());
+					return route.abort();
+				});
+				for (const movement of ['praeparatio', 'communio', 'offertorium', 'conclusio']) {
+					const address = `/app/${lang}/ordo/${movement}?dies=2026-04-04&missa=none`;
+					await cold.goto(address);
+					await unconfirmedGuide(cold, lang, movement);
+					await page.goto(address);
+					await genericGuide(page, lang, movement);
 
-				const pattern = `**/artifacts/dismissal/${lang}.json*`;
-				let release!: () => void;
-				let requested!: () => void;
-				const wait = new Promise<void>((resolve) => {
-					release = resolve;
-				});
-				const arrived = new Promise<void>((resolve) => {
-					requested = resolve;
-				});
-				await page.route(pattern, async (route) => {
-					requested();
-					await wait;
-					await route.fulfill({ status: 503, body: 'unavailable' });
-				});
-				try {
-					await selectGuideMode(page, true);
-					await arrived;
-					await unconfirmedGuide(page, lang, movement);
-					await selectGuideMode(page, false);
-					await genericGuide(page, lang, movement);
-					const late = page.waitForResponse((response) =>
-						response.url().includes(`/artifacts/dismissal/${lang}.json`)
-					);
-					release();
-					await (await late).finished();
-					await page.evaluate(
-						() =>
-							new Promise<void>((resolve) =>
-								requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
-							)
-					);
-					await genericGuide(page, lang, movement);
-					await expect(page.locator('.picker .state')).toHaveCount(0);
-					await selectGuideMode(page, true);
-					await expect(page.locator('.picker .state')).toContainText(
-						lang === 'pl' ? /nie udało/ : /could/
-					);
-					await unconfirmedGuide(page, lang, movement);
-					await selectGuideMode(page, false);
-					await genericGuide(page, lang, movement);
-					await expect(page.locator('.picker .state')).toHaveCount(0);
-				} finally {
-					release();
-					await page.unroute(pattern);
+					const pattern = `**/artifacts/dismissal/${lang}.json*`;
+					let release!: () => void;
+					let requested!: () => void;
+					const wait = new Promise<void>((resolve) => {
+						release = resolve;
+					});
+					const arrived = new Promise<void>((resolve) => {
+						requested = resolve;
+					});
+					await page.route(pattern, async (route) => {
+						requested();
+						await wait;
+						await route.fulfill({ status: 503, body: 'unavailable' });
+					});
+					try {
+						await selectGuideMode(page, true);
+						await arrived;
+						await unconfirmedGuide(page, lang, movement);
+						await selectGuideMode(page, false);
+						await genericGuide(page, lang, movement);
+						const late = page.waitForResponse((response) =>
+							response.url().includes(`/artifacts/dismissal/${lang}.json`)
+						);
+						release();
+						await (await late).finished();
+						await page.evaluate(
+							() =>
+								new Promise<void>((resolve) =>
+									requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+								)
+						);
+						await genericGuide(page, lang, movement);
+						await expect(page.locator('.picker .state')).toHaveCount(0);
+						await selectGuideMode(page, true);
+						await expect(page.locator('.picker .state')).toContainText(
+							lang === 'pl' ? /nie udało/ : /could/
+						);
+						await unconfirmedGuide(page, lang, movement);
+						await selectGuideMode(page, false);
+						await genericGuide(page, lang, movement);
+						await expect(page.locator('.picker .state')).toHaveCount(0);
+					} finally {
+						release();
+						await page.unroute(pattern);
+					}
 				}
+				expect(away, 'the cold page tried to reach the network').toEqual([]);
+			} finally {
+				await cold.close();
 			}
-			await cold.close();
-			expect(away, 'the cold page tried to reach the network').toEqual([]);
 		}
 	);
 }

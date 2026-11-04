@@ -65,6 +65,70 @@
 			}
 		</script>
 		<script>
+			// Static words are visible before the new document has hydrated.
+			// Keep the reader's latest activation and hand it to the real word
+			// control once mount completes, with its normal panel/history logic.
+			(function () {
+				var wordIntent = null;
+				var intentAddress = null;
+				function discardIntent() {
+					wordIntent = null;
+					intentAddress = null;
+				}
+				function dismissIntent(event) {
+					if (event.key === 'Escape') discardIntent();
+				}
+				function rememberWord(event) {
+					if (document.documentElement.dataset.hydrated === 'true') return;
+					var word = event.target instanceof Element && event.target.closest('button.word[id]');
+					if (!word) {
+						wordIntent = null;
+						return;
+					}
+					wordIntent = word.id;
+					intentAddress = location.href;
+					event.preventDefault();
+					event.stopImmediatePropagation();
+				}
+				var ready = new MutationObserver(function () {
+					if (document.documentElement.dataset.hydrated !== 'true') return;
+					ready.disconnect();
+					document.removeEventListener('click', rememberWord, true);
+					document.removeEventListener('keydown', dismissIntent, true);
+					window.removeEventListener('pagehide', discardIntent);
+					var anchor =
+						wordIntent && intentAddress === location.href && document.getElementById(wordIntent);
+					var word = anchor && anchor.closest('button.word');
+					if (!word) return;
+					var selected = null;
+					try {
+						// Folder routes live in #/. Unrelated or malformed hashes
+						// keep the reader's existing safe fallback.
+						if ('__scrutabor_up' in window) {
+							if (location.hash.startsWith('#/'))
+								selected = new URL(
+									location.hash.slice(1),
+									'https://reader.invalid'
+								).searchParams.get('w');
+						} else selected = new URL(location.href).searchParams.get('w');
+					} catch (error) {
+						/* a malformed address supplies no selected word */
+					}
+					var selectedAnchor = selected && document.getElementById(selected);
+					// A deep link may already have opened this same construction.
+					if (word && (!selectedAnchor || selectedAnchor.closest('button.word') !== word))
+						word.click();
+				});
+				document.addEventListener('click', rememberWord, true);
+				document.addEventListener('keydown', dismissIntent, true);
+				window.addEventListener('pagehide', discardIntent);
+				ready.observe(document.documentElement, {
+					attributes: true,
+					attributeFilter: ['data-hydrated']
+				});
+			})();
+		</script>
+		<script>
 			// Counting visits, and refusing to do anything more.
 			//
 			// Cloudflare Web Analytics: no cookie, no local storage, no

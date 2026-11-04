@@ -8,8 +8,7 @@ import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { BEACON_BLOCK, BEACON_HOST } from './beacon-block.mjs';
 
-/** The two inline scripts as app.html really orders them: the theme block
- * that runs before first paint, then the counter. */
+/** The inline scripts in the real document: pre-paint controls, then the counter. */
 const APP_HTML = readFileSync('src/app.html', 'utf8');
 
 describe('the offline package cuts the visit counter', () => {
@@ -23,6 +22,9 @@ describe('the offline package cuts the visit counter', () => {
 		// pattern starts matching there and runs past its end.
 		expect(APP_HTML.indexOf('scrutabor-theme')).toBeLessThan(APP_HTML.indexOf(BEACON_HOST));
 		const cut = APP_HTML.replace(BEACON_BLOCK, '');
+		for (const script of APP_HTML.match(/<script\b[^>]*>[\s\S]*?<\/script>/g) ?? []) {
+			if (!script.includes(BEACON_HOST)) expect(cut).toContain(script);
+		}
 		expect(cut).toContain("localStorage.getItem('scrutabor-theme')");
 		expect(cut).toContain('prefers-color-scheme: dark');
 		expect(cut).toContain('%sveltekit.head%');

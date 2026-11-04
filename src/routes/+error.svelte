@@ -20,7 +20,11 @@
 	// unnoticed exit to the landing (the trap PageNav exists to prevent),
 	// and in the downloaded copy it is worse: a link out of the folder to
 	// scrutabor.org, in a copy whose whole point is working with no signal.
-	const home = $derived(path.startsWith('/app') ? `/app/${lang}` : `/${lang}`);
+	const home = $derived(
+		path.startsWith('/app') || (typeof window !== 'undefined' && '__scrutabor_up' in window)
+			? `/app/${lang}`
+			: `/${lang}`
+	);
 </script>
 
 <svelte:head>

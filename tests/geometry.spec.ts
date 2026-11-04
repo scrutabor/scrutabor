@@ -14,6 +14,8 @@ const PAGES = [
 	// Easter Sunday: one slot carries the Gradual, the Alleluia and the Sequence,
 	// so a seam between two bodies is on every run, not only on a pinned day.
 	'/app/pl/ordo/catechumenorum?dies=2026-04-05',
+	// All Saints on Sunday: a named commemoration and its Orémus must be measured.
+	'/app/pl/ordo/catechumenorum?dies=2026-11-01',
 	// First Sunday of Advent, English: the Gradual's translation sources stand
 	// between it and the Alleluia, so a seam kept apart by that block is on
 	// every run. The day is named by URL because the undated page shows the
@@ -35,6 +37,7 @@ const MODES = [0, 2, 1];
 // show that day's proper; its identity is evidence, not an assumption.
 const DAY_PROPERS: Record<string, string> = {
 	'2026-04-05': 'dominica-resurrectionis',
+	'2026-11-01': 'omnium-sanctorum',
 	'2026-11-29': 'dominica-i-adventus',
 	'2028-12-24': 'vigilia-nativitatis'
 };
@@ -209,6 +212,7 @@ interface GeometryProbe {
 	blockedPartitions: number;
 	referencePartitions: number;
 	referencesBetweenBodies: number;
+	commemorationsBetweenBodies: number;
 	interposedBodyBlocks: number;
 	/** An ordered sources→reference chain has one extra priced leg. */
 	doubleChains: number;
@@ -239,6 +243,8 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			'about-pill',
 			'translation-sources',
 			'reading-reference',
+			'commemoration-head',
+			'oration-invitation',
 			'pager',
 			'subtitle',
 			'movement-nav',
@@ -311,7 +317,9 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			.map((row) => boxChildren(row).filter(visible))
 			.filter((members) => members.length);
 	const isWrapper = (element: Element) =>
-		element.classList.contains('measure') || element.classList.contains('bilingual');
+		element.classList.contains('measure') ||
+		element.classList.contains('bilingual') ||
+		element.classList.contains('oration-invitation');
 	const inGrid = (element: Element) => {
 		const columns = element.closest('.columns');
 		return !!columns && getComputedStyle(columns).display === 'grid';
@@ -339,6 +347,7 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		blockedPartitions: 0,
 		referencePartitions: 0,
 		referencesBetweenBodies: 0,
+		commemorationsBetweenBodies: 0,
 		interposedBodyBlocks: 0,
 		doubleChains: 0,
 		references: [...document.querySelectorAll('.reading-reference')].map((element) => ({
@@ -399,7 +408,9 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			![
 				'translation-sources',
 				'reading-reference',
-				'translation-sources|reading-reference'
+				'translation-sources|reading-reference',
+				'commemoration-head',
+				'translation-sources|commemoration-head'
 			].includes(kinds.join('|'))
 		) {
 			out.overlaps.push(`unexplained interposed blocks (${kinds.join('|')})`);
@@ -414,19 +425,26 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			const toSource = after.classList.contains('translation-sources');
 			const fromReference = before.classList.contains('reading-reference');
 			const toReference = after.classList.contains('reading-reference');
+			const fromCommemoration = before.classList.contains('commemoration-head');
+			const toCommemoration = after.classList.contains('commemoration-head');
 			out.seams.push({
 				before: endpoint(before) || classify(before),
 				after: endpoint(after) || classify(after),
-				kind:
-					fromSource && toReference
-						? 'sources-reference'
-						: toSource
-							? 'sources-above'
-							: fromSource
-								? 'sources-below'
-								: fromReference
-									? 'reference-below'
-									: 'reference-above',
+				kind: toCommemoration
+					? fromSource
+						? 'sources-commemoration'
+						: 'commemoration-above'
+					: fromCommemoration
+						? 'commemoration-below'
+						: fromSource && toReference
+							? 'sources-reference'
+							: toSource
+								? 'sources-above'
+								: fromSource
+									? 'sources-below'
+									: fromReference
+										? 'reference-below'
+										: 'reference-above',
 				found: true,
 				gap:
 					after.getBoundingClientRect().top -
@@ -453,6 +471,13 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 			// between their rows below; their edges hold the seam's margins
 			// inside or outside the box by face, like the partition wrappers.
 			if (isWrapper(first) && isWrapper(second)) continue;
+			// Measure the heading against the invitation's first real row,
+			// not its wrapper, whose collapsed margin differs by reading face.
+			if (
+				first.classList.contains('commemoration-head') &&
+				second.classList.contains('oration-invitation')
+			)
+				continue;
 			const opening = first.classList.contains('print-opening')
 				? first.querySelector(':scope > .part-text')
 				: first;
@@ -571,7 +596,9 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		let previous: { slug: string; members: Element[] } | null = null;
 		let blocked: Element[] = [];
 		for (const child of continuation.children) {
-			const childRows = /^(flow-unit|measure|bilingual)$/.test(child.className.split(' ')[0])
+			const childRows = /^(flow-unit|measure|bilingual|oration-invitation)$/.test(
+				child.className.split(' ')[0]
+			)
 				? rows(child)
 				: [];
 			if (!childRows.length) {
@@ -612,7 +639,7 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		// Counted from the DOM alone: sources blocks with a row before and after.
 		const children = [...continuation.children];
 		const holdsRows = (child: Element) =>
-			/^(flow-unit|measure|bilingual)$/.test(child.className.split(' ')[0]) &&
+			/^(flow-unit|measure|bilingual|oration-invitation)$/.test(child.className.split(' ')[0]) &&
 			rows(child).length > 0;
 		out.sourcesBetweenBodies += children.filter(
 			(child, index) =>
@@ -624,6 +651,13 @@ function probeGeometry(boundaries: Boundary[]): GeometryProbe {
 		out.referencesBetweenBodies += children.filter(
 			(child, index) =>
 				child.classList.contains('reading-reference') &&
+				visible(child) &&
+				children.slice(0, index).some(holdsRows) &&
+				children.slice(index + 1).some(holdsRows)
+		).length;
+		out.commemorationsBetweenBodies += children.filter(
+			(child, index) =>
+				child.classList.contains('commemoration-head') &&
 				visible(child) &&
 				children.slice(0, index).some(holdsRows) &&
 				children.slice(index + 1).some(holdsRows)
@@ -681,6 +715,16 @@ function expectedBoundary(measured: Measured, mode: number, scale: Scale): numbe
 			? scale.reading * STUDY_RUBRIC_SEAM
 			: scale.reading * (RUBRIC_MARGIN + scale.glossGap);
 	}
+	const commemoration = parseFloat(scale.rootFontSize) * 1.4;
+	// A stacked translation keeps its own tail inside the bilingual wrapper.
+	if (measured.kind === 'commemoration-above')
+		return commemoration + (mode === 2 && measured.translated && !measured.grid ? tail : 0);
+	if (measured.kind === 'sources-commemoration')
+		return Math.max(commemoration, scale.reading * SOURCES_BELOW);
+	if (measured.kind === 'commemoration-below')
+		return mode === 2 && !measured.grid
+			? 0
+			: voice + (mode === 1 ? scale.reading * VOICE_RESERVE : 0);
 	if (measured.kind === 'reference-above') return scale.reading * REFERENCE_ABOVE;
 	if (measured.kind === 'reference-below') return scale.reading * REFERENCE_BELOW;
 	if (measured.kind === 'sources-reference')
@@ -775,6 +819,64 @@ async function referenceControls(page: import('@playwright/test').Page, url: str
 			});
 		}
 		expect(referenceFindings(await probe(), url, mode), `${mutation}: healthy-after`).toEqual([]);
+	}
+}
+
+function commemorationFindings(data: GeometryProbe, mode: number): string[] {
+	const issues = [...data.overlaps];
+	if (data.commemorationsBetweenBodies !== 1) issues.push('commemoration heading missing');
+	const edges = data.seams.filter((seam) => seam.kind.includes('commemoration'));
+	if (edges.length !== 2) issues.push('commemoration edges missing');
+	for (const edge of edges) {
+		const wanted = expectedBoundary(edge, mode, data.scale);
+		if (wanted === null || Math.abs(edge.gap - wanted) > EXACT)
+			issues.push('commemoration spacing differs');
+	}
+	return issues;
+}
+
+async function commemorationControls(page: import('@playwright/test').Page, mode: number) {
+	const probe = () => page.evaluate(probeGeometry, []);
+	expect(commemorationFindings(await probe(), mode)).toEqual([]);
+	for (const mutation of ['missing', 'spacing', 'unknown'] as const) {
+		await page.evaluate((mutation) => {
+			const head = document.querySelector<HTMLElement>('.commemoration-head');
+			if (!head) throw new Error('commemoration control requires a real heading');
+			head.dataset.geometryStyle = head.getAttribute('style') ?? '';
+			head.dataset.geometryHadStyle = String(head.hasAttribute('style'));
+			if (mutation === 'missing') head.style.display = 'none';
+			if (mutation === 'spacing') head.style.marginTop = 'calc(1.4rem + 8px)';
+			if (mutation === 'unknown') {
+				const block = document.createElement('p');
+				block.dataset.geometryControl = 'commemoration-unknown';
+				block.textContent = 'Interposed block';
+				head.before(block);
+			}
+		}, mutation);
+		try {
+			const findings = commemorationFindings(await probe(), mode);
+			const diagnostic =
+				mutation === 'missing'
+					? 'commemoration heading missing'
+					: mutation === 'spacing'
+						? 'commemoration spacing differs'
+						: 'unexplained interposed blocks';
+			expect(
+				findings.some((finding) => finding.includes(diagnostic)),
+				mutation
+			).toBe(true);
+		} finally {
+			await page.evaluate(() => {
+				document.querySelector('[data-geometry-control="commemoration-unknown"]')?.remove();
+				const head = document.querySelector<HTMLElement>('.commemoration-head')!;
+				if (head.dataset.geometryHadStyle === 'true')
+					head.setAttribute('style', head.dataset.geometryStyle ?? '');
+				else head.removeAttribute('style');
+				delete head.dataset.geometryHadStyle;
+				delete head.dataset.geometryStyle;
+			});
+		}
+		expect(commemorationFindings(await probe(), mode), `${mutation}: healthy-after`).toEqual([]);
 	}
 }
 
@@ -921,6 +1023,13 @@ async function measure(
 	await expect(page.locator('.part-loading, .part.loading')).toHaveCount(0);
 	await expect(page.locator('main p.part-note[role="status"]')).toHaveCount(0);
 	if (named) await expect(page.locator(`main .part [id^="${named}-"]`).first()).toBeAttached();
+	if (url.includes('dies=2026-11-01')) {
+		await expect(page.locator('.commemoration-head')).toHaveCount(1);
+		await expect(page.locator('.commemoration-head')).toContainText(
+			'23. Niedziela po Zesłaniu Ducha Świętego'
+		);
+		await expect(page.locator('.oration-invitation')).toHaveCount(1);
+	}
 	await page.evaluate(() => document.fonts.ready);
 	const data = await page.evaluate(probeGeometry, boundariesFor(url));
 	expect(data.scale.step).toBe(step);
@@ -960,6 +1069,7 @@ async function sweep(
 	let blockedPartitions = 0;
 	let referencePartitions = 0;
 	let referencesBetweenBodies = 0;
+	let commemorationsBetweenBodies = 0;
 	let interposedBodyBlocks = 0;
 	let doubleChains = 0;
 	let judgedBoundaries = 0;
@@ -993,6 +1103,7 @@ async function sweep(
 			blockedPartitions += data.blockedPartitions;
 			referencePartitions += data.referencePartitions;
 			referencesBetweenBodies += data.referencesBetweenBodies;
+			commemorationsBetweenBodies += data.commemorationsBetweenBodies;
 			interposedBodyBlocks += data.interposedBodyBlocks;
 			doubleChains += data.doubleChains;
 			if (
@@ -1003,6 +1114,8 @@ async function sweep(
 			) {
 				await referenceControls(page, url, mode);
 			}
+			if (width === 1512 && step === 'normal' && mode === 2 && url.includes('dies=2026-11-01'))
+				await commemorationControls(page, mode);
 			if (!data.gaps.length) emptyRuns.push(`${url} @${width} m${mode}`);
 			perMode[mode] = data;
 			for (const issue of [...data.overflow, ...data.targets, ...data.overlaps]) {
@@ -1044,7 +1157,11 @@ async function sweep(
 	expect(
 		interposedBodyBlocks,
 		'every intervening source and reference block must be accounted for'
-	).toBe(sourcesBetweenBodies + referencesBetweenBodies);
+	).toBe(sourcesBetweenBodies + referencesBetweenBodies + commemorationsBetweenBodies);
+	expect(
+		commemorationsBetweenBodies,
+		'a commemoration heading and invitation must be on the matrix'
+	).toBeGreaterThan(0);
 	expect(referencesBetweenBodies, 'body references must be on the matrix').toBeGreaterThan(0);
 	expect(referencePartitions, 'partition references must be on the matrix').toBeGreaterThan(0);
 	expect(doubleChains, 'sources→reference chains must be on the matrix').toBeGreaterThan(0);

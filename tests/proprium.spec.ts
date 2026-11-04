@@ -851,6 +851,31 @@ for (const reading of ['normal', 'largest'] as const) {
 						expect(view.titleShown, where).toBe(true);
 						expect(view.choicesShown, where).toEqual(Array(masses).fill(true));
 					}
+					if (width === 375) {
+						const edges = await dialog.evaluate((element) => ({
+							panel: element.querySelector('.calendar-panel')!.getBoundingClientRect().bottom,
+							actions: element.querySelector('.modal-actions')!.getBoundingClientRect().top
+						}));
+						expect(edges.panel, `${where} panel clears the actions`).toBeLessThanOrEqual(
+							edges.actions + 0.5
+						);
+						await dialog.locator('.calendar-panel').evaluate((panel) => {
+							panel.scrollTop = panel.scrollHeight;
+						});
+						const noteEnd = await dialog.locator('.formulary-scope').evaluate((note) => {
+							const range = document.createRange();
+							range.selectNodeContents(note);
+							const last = [...range.getClientRects()].at(-1)!;
+							const panel = note.closest('.calendar-panel')!.getBoundingClientRect();
+							return { bottom: last.bottom, panel: panel.bottom };
+						});
+						expect(noteEnd.bottom, `${where} the last note line is reachable`).toBeLessThanOrEqual(
+							noteEnd.panel + 0.5
+						);
+						await dialog.locator('.calendar-panel').evaluate((panel) => {
+							panel.scrollTop = 0;
+						});
+					}
 					const now = await dialog.boundingBox();
 					if (box) {
 						expect(now!.y, where).toBeCloseTo(box.y, 0);

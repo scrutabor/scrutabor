@@ -159,6 +159,9 @@ for (const lang of ['pl', 'en'] as const) {
 		});
 		await page.goto(`/app/${lang}/ordo/catechumenorum?dies=2026-05-24`);
 		await expect.poll(() => requests).toBeGreaterThan(0);
+		await expect(page.locator('.picker .state')).toHaveText(
+			lang === 'pl' ? 'wczytywanie' : 'loading'
+		);
 		await setHelp(page, 0);
 		await expect(page.locator('.word[id^="munda-cor-meum.w"]')).toHaveCount(34);
 		fail();

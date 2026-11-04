@@ -1190,6 +1190,13 @@
 		border-top: 1px dotted var(--border);
 	}
 
+	/* The commemoration name can be longer than a phone's full line. */
+	.commemoration-head .mark {
+		flex: 0 1 auto;
+		min-width: 0;
+		max-width: 100%;
+	}
+
 	.quiet-note {
 		font-style: italic;
 	}

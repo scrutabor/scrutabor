@@ -302,10 +302,15 @@ test.describe('two worker versions, one book @online', () => {
 		await expect.poll(flag).toBe(true);
 		state.suffix = 'B';
 		await page.reload();
-		await page
-			.locator('.update-notice')
-			.getByRole('button', { name: /wczytaj|reload/i })
-			.click();
+		// The old document can still have a controller while the update's
+		// reload is pending. Wait for the new document before reading its DB.
+		await Promise.all([
+			page.waitForEvent('domcontentloaded'),
+			page
+				.locator('.update-notice')
+				.getByRole('button', { name: /wczytaj|reload/i })
+				.click()
+		]);
 		await page.waitForFunction(() => navigator.serviceWorker?.controller !== null);
 		await expect.poll(flag, { timeout: 15000 }).toBe(true);
 	});

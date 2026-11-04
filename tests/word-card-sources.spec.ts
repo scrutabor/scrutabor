@@ -120,21 +120,19 @@ for (const host of ['', ' @static-host']) {
 		const held = new Promise<void>((resolve) => (release = resolve));
 		let matched = 0;
 		const receipts: { url: string; owner: string; status: number; outcome: string }[] = [];
-		const handle = async (route: Route) => {
+		const inFlight = new Set<Promise<void>>();
+		const callbackErrors: unknown[] = [];
+		const pattern = '**/_app/immutable/corpus/*';
+		const processRoute = async (route: Route) => {
 			const request = route.request();
 			const url = new URL(request.url());
 			const worker = request.serviceWorker();
-			const workerFetch =
-				failOnce &&
-				worker !== null &&
-				request.resourceType() === 'fetch' &&
-				url.pathname.startsWith('/_app/immutable/corpus/');
+			const workerFetch = worker !== null && request.resourceType() === 'fetch';
 			if (
 				!['localhost', '127.0.0.1'].includes(url.hostname) ||
 				(request.resourceType() !== 'script' && !workerFetch)
-			) {
+			)
 				return route.fallback();
-			}
 			const response = await route.fetch({ maxRedirects: 0, timeout: 15_000 });
 			const body = await response.text();
 			const neutral =
@@ -161,108 +159,144 @@ for (const host of ['', ' @static-host']) {
 			await route.fulfill({ response });
 			if (receipt) receipt.outcome = 'fulfilled';
 		};
-		await page.route('**/*', handle);
-		if (failOnce) {
-			// Page routing cannot see a fetch owned by the worker after Reload.
-			// Keep the original page guard; add only the worker's corpus network path.
-			await page.context().route('**/_app/immutable/corpus/*', async (route) => {
-				if (!route.request().serviceWorker()) return route.fallback();
-				return handle(route);
-			});
-		}
-		return { release, matches: () => matched, receipts: () => receipts.map((r) => ({ ...r })) };
+		const handle = (route: Route) => {
+			const running = processRoute(route);
+			inFlight.add(running);
+			void running.then(
+				() => inFlight.delete(running),
+				(error) => {
+					callbackErrors.push(error);
+					inFlight.delete(running);
+				}
+			);
+			return running;
+		};
+		const workerRoute = (route: Route) =>
+			route.request().serviceWorker() ? handle(route) : route.fallback();
+		// A newly activated worker can own the very first module request,
+		// not only a retry. Page routes do not see its network fetch.
+		await page.route(pattern, handle);
+		await page.context().route(pattern, workerRoute);
+		return {
+			release,
+			matches: () => matched,
+			receipts: () => receipts.map((r) => ({ ...r })),
+			async dispose() {
+				release();
+				await page.unroute(pattern, handle);
+				await page.context().unroute(pattern, workerRoute);
+				// Finish our callbacks before the page/context fixture tears down.
+				// Keep the fixture's local-only routes installed throughout.
+				while (inFlight.size) await Promise.allSettled([...inFlight]);
+				if (callbackErrors.length)
+					throw new AggregateError(callbackErrors, 'Source control callbacks failed');
+			}
+		};
 	}
 
-	test(`a held source request cannot blank the card or repaint an earlier lemma @online${host}`, async ({
-		page
-	}) => {
-		const control = await controlNeutralIndex(page);
-		try {
-			await page.goto('/app/en/orationes/te-deum?w=w065', { waitUntil: 'domcontentloaded' });
-			const old = page.locator('aside .lemma-sources[data-lemma="veneror"]');
-			const entry = page
-				.locator('aside .construction-card')
-				.filter({ has: page.locator('.lemma-sources[data-lemma="veneror"]') });
-			await expect(old.locator('[role="status"]')).toBeVisible();
-			await expect(page.locator('aside .construction-card')).toHaveCount(6);
-			await expect(entry.locator('.head')).toContainText('véneror');
-			await expect(entry.locator('.morph')).toBeVisible();
-			await expect.poll(control.matches).toBe(1);
-			await page.locator('#w192').click();
-			await expect(page.locator('aside .construction-card')).toHaveCount(4);
-			const current = page.locator('aside .lemma-sources[data-lemma="in"]');
-			await expect(current.locator('[role="status"]')).toBeVisible();
-			await expect(old).toHaveCount(0);
-			expect(control.matches()).toBe(1);
-			const pending = await current.boundingBox();
-			control.release();
-			await expect(current.locator('summary')).toBeVisible();
-			const loaded = await current.boundingBox();
-			expect(pending).not.toBeNull();
-			expect(loaded).not.toBeNull();
-			expect(Math.abs(loaded!.height - pending!.height)).toBeLessThanOrEqual(1);
-			await expectClosedSources(current, 'en');
-			await current.locator('summary').click();
-			await expect(current.locator('ol')).toContainText('Perseus TEI entry n22111');
-			await expect(current.locator('ol')).not.toContainText('n50434');
-			await expectExactCitations(current, 'in');
-			expect(control.matches()).toBe(1);
-		} finally {
-			control.release();
-		}
-	});
+	for (const controlled of [false, true])
+		test(`a held source request cannot blank the card or repaint an earlier lemma${controlled ? ' with an active worker' : ''} @online${host}`, async ({
+			page
+		}) => {
+			if (controlled) {
+				await page.goto('/app/en/orationes/te-deum');
+				await expect
+					.poll(() => page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? ''))
+					.toMatch(/service-worker\.js$/);
+			}
+			const control = await controlNeutralIndex(page);
+			try {
+				await page.goto('/app/en/orationes/te-deum?w=w065', { waitUntil: 'domcontentloaded' });
+				const old = page.locator('aside .lemma-sources[data-lemma="veneror"]');
+				const entry = page
+					.locator('aside .construction-card')
+					.filter({ has: page.locator('.lemma-sources[data-lemma="veneror"]') });
+				await expect.poll(control.matches).toBe(1);
+				expect(control.receipts()[0].outcome).toBe('held');
+				await expect(old.locator('[role="status"]')).toBeVisible();
+				await expect(page.locator('aside .construction-card')).toHaveCount(6);
+				await expect(entry.locator('.head')).toContainText('véneror');
+				await expect(entry.locator('.morph')).toBeVisible();
+				await expect.poll(control.matches).toBe(1);
+				await page.locator('#w192').click();
+				await expect(page.locator('aside .construction-card')).toHaveCount(4);
+				const current = page.locator('aside .lemma-sources[data-lemma="in"]');
+				await expect(current.locator('[role="status"]')).toBeVisible();
+				await expect(old).toHaveCount(0);
+				expect(control.matches()).toBe(1);
+				const pending = await current.boundingBox();
+				control.release();
+				await expect(current.locator('summary')).toBeVisible();
+				const loaded = await current.boundingBox();
+				expect(pending).not.toBeNull();
+				expect(loaded).not.toBeNull();
+				expect(Math.abs(loaded!.height - pending!.height)).toBeLessThanOrEqual(1);
+				await expectClosedSources(current, 'en');
+				await current.locator('summary').click();
+				await expect(current.locator('ol')).toContainText('Perseus TEI entry n22111');
+				await expect(current.locator('ol')).not.toContainText('n50434');
+				await expectExactCitations(current, 'in');
+				expect(control.matches()).toBe(1);
+			} finally {
+				await control.dispose();
+			}
+		});
 
 	test(`source failure stays explicit and reload retries the same selection @online${host}`, async ({
 		page
 	}) => {
 		const control = await controlNeutralIndex(page, true);
-		control.release();
-		await page.goto('/app/en/orationes/te-deum?w=w065', { waitUntil: 'domcontentloaded' });
-		const sources = page.locator('aside .lemma-sources[data-lemma="veneror"]');
-		const entry = page
-			.locator('aside .construction-card')
-			.filter({ has: page.locator('.lemma-sources[data-lemma="veneror"]') });
-		await expect(sources.locator('[role="alert"]')).toContainText('Sources unavailable.');
-		await expect(sources.locator('details')).toHaveCount(0);
-		await expect(page.locator('aside .construction-card')).toHaveCount(6);
-		await expect(entry.locator('.morph')).toBeVisible();
-		await expect(entry.locator('.head')).toContainText('véneror');
-		const failed = await sources.evaluate((element) => ({
-			height: element.getBoundingClientRect().height,
-			reserved: parseFloat(getComputedStyle(element).minBlockSize)
-		}));
-		expect(Math.abs(failed.height - failed.reserved)).toBeLessThanOrEqual(1);
-		// Exercise the real production worker, not a cache/controller spoof.
-		await expect
-			.poll(() => page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? null))
-			.toMatch(/\/service-worker\.js$/);
-		const moduleUrl = control.receipts()[0].url;
-		const recoveredModule = page.waitForResponse(
-			(response) =>
-				response.url() === moduleUrl &&
-				response.request().resourceType() === 'script' &&
-				response.ok()
-		);
-		await sources.getByRole('button', { name: 'Reload', exact: true }).click();
-		expect((await recoveredModule).fromServiceWorker()).toBe(true);
-		await expect(page).toHaveURL(/w=w065/);
-		await expect(sources.locator('summary')).toBeVisible();
-		expect(control.matches()).toBe(2);
-		await expect.poll(control.receipts).toEqual([
-			{
-				url: moduleUrl,
-				owner: expect.stringMatching(/^(page-script|worker-fetch)$/),
-				status: 200,
-				outcome: 'aborted'
-			},
-			{ url: moduleUrl, owner: 'worker-fetch', status: 200, outcome: 'fulfilled' }
-		]);
-		await expect(sources.locator('[role="alert"]')).toHaveCount(0);
-		await expect(page.locator('aside .construction-card')).toHaveCount(6);
-		await expect(entry.locator('.morph')).toBeVisible();
-		await expectClosedSources(sources, 'en');
-		await sources.locator('summary').click();
-		await expect(sources.locator('ol')).toContainText('Perseus TEI entry n50434');
-		await expectExactCitations(sources, 'veneror');
+		try {
+			control.release();
+			await page.goto('/app/en/orationes/te-deum?w=w065', { waitUntil: 'domcontentloaded' });
+			const sources = page.locator('aside .lemma-sources[data-lemma="veneror"]');
+			const entry = page
+				.locator('aside .construction-card')
+				.filter({ has: page.locator('.lemma-sources[data-lemma="veneror"]') });
+			await expect(sources.locator('[role="alert"]')).toContainText('Sources unavailable.');
+			await expect(sources.locator('details')).toHaveCount(0);
+			await expect(page.locator('aside .construction-card')).toHaveCount(6);
+			await expect(entry.locator('.morph')).toBeVisible();
+			await expect(entry.locator('.head')).toContainText('véneror');
+			const failed = await sources.evaluate((element) => ({
+				height: element.getBoundingClientRect().height,
+				reserved: parseFloat(getComputedStyle(element).minBlockSize)
+			}));
+			expect(Math.abs(failed.height - failed.reserved)).toBeLessThanOrEqual(1);
+			// Exercise the real production worker, not a cache/controller spoof.
+			await expect
+				.poll(() => page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? null))
+				.toMatch(/\/service-worker\.js$/);
+			const moduleUrl = control.receipts()[0].url;
+			const recoveredModule = page.waitForResponse(
+				(response) =>
+					response.url() === moduleUrl &&
+					response.request().resourceType() === 'script' &&
+					response.ok()
+			);
+			await sources.getByRole('button', { name: 'Reload', exact: true }).click();
+			expect((await recoveredModule).fromServiceWorker()).toBe(true);
+			await expect(page).toHaveURL(/w=w065/);
+			await expect(sources.locator('summary')).toBeVisible();
+			expect(control.matches()).toBe(2);
+			await expect.poll(control.receipts).toEqual([
+				{
+					url: moduleUrl,
+					owner: expect.stringMatching(/^(page-script|worker-fetch)$/),
+					status: 200,
+					outcome: 'aborted'
+				},
+				{ url: moduleUrl, owner: 'worker-fetch', status: 200, outcome: 'fulfilled' }
+			]);
+			await expect(sources.locator('[role="alert"]')).toHaveCount(0);
+			await expect(page.locator('aside .construction-card')).toHaveCount(6);
+			await expect(entry.locator('.morph')).toBeVisible();
+			await expectClosedSources(sources, 'en');
+			await sources.locator('summary').click();
+			await expect(sources.locator('ol')).toContainText('Perseus TEI entry n50434');
+			await expectExactCitations(sources, 'veneror');
+		} finally {
+			await control.dispose();
+		}
 	});
 }

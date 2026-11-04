@@ -82,7 +82,7 @@ test('a shared gloss opens one panel with a complete analysis of every Latin wor
 });
 
 test('shared constructions use the same panel in Ordo Missae', async ({ page }) => {
-	await page.goto('/app/pl/ordo/catechumenorum?w=credo.w103');
+	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-11-29&w=credo.w103');
 	await expect(page.locator('aside .form')).toHaveText('ventúrus est');
 	await expect(page.locator('aside .construction-title')).toHaveText(['ventúrus', 'est']);
 	await expect(page.locator('aside .construction-card')).toHaveCount(2);
