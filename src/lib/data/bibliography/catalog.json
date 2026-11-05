@@ -86,6 +86,11 @@
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
   },
   {
+   "id": "work.rituale-romanum",
+   "responsible": "Catholic Church",
+   "title": "Rituale Romanum"
+  },
+  {
    "id": "work.sacra-rituum-congregatio.de-musica-sacra-1958",
    "responsible": "Sacra Rituum Congregatio",
    "title": "Instructio de musica sacra et sacra liturgia"
@@ -504,6 +509,24 @@
    }
   },
   {
+   "id": "edition.rituale-romanum.1937-pustet-quinta",
+   "work": "work.rituale-romanum",
+   "title": "Rituale Romanum",
+   "edition_statement": "Editio quinta iuxta typicam; episcopal approval dated 12 March 1937",
+   "place": "Ratisbona",
+   "publisher": "Fridericus Pustet",
+   "year": "1937",
+   "publication_type": "ritual",
+   "authority": "official_liturgical_edition",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic and formula attestation only. The ancient Latin prayer is cited at its checked ritual locus; no licence to reproduce the 1937 scan or surrounding editorial material is asserted."
+   }
+  },
+  {
    "id": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
    "work": "work.sacra-rituum-congregatio.de-musica-sacra-1958",
    "recension": "Instruction of 3 September 1958, approved by Pius XII",
@@ -919,6 +942,15 @@
    "kind": "scan",
    "record_url": "https://archive.org/details/theraccoltaorcol00unknuoft",
    "scan_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.rituale-romanum.1937-pustet-quinta.librinostri",
+   "edition": "edition.rituale-romanum.1937-pustet-quinta",
+   "repository": "Libri Nostri scan mirror",
+   "kind": "scan",
+   "record_url": "https://librinostri.catholica.cz/download/RitualRom1937-OCR.pdf",
+   "scan_url": "https://librinostri.catholica.cz/download/RitualRom1937-OCR.pdf",
    "access": "open"
   },
   {

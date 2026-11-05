@@ -44,6 +44,26 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "rubric_control",
    "locator": {
+    "printed": "p. 216, no. 7",
+    "scan": "leaf n295 / physical PDF p. 296",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n295/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.formulary.vigilia-paschalis.communion-assembly.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Vigil explicitly retains Pax Domini, omits Agnus Dei and Qui dixisti, and retains Domine Iesu Christe, Fili Dei vivi and Perceptio Corporis tui."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
     "printed": "p. XXXIV",
     "section": "Rubricae generales 511 i, 512, 513 e and 514",
     "scan": "leaf n39 / physical PDF p. 40",
@@ -59,6 +79,26 @@
     }
    ],
    "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 213, no. 7",
+    "scan": "physical PDF p. 294",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n293/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.formulary.vigilia-paschalis.communion-assembly.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Vigil explicitly retains Pax Domini, omits Agnus Dei and Qui dixisti, and retains Domine Iesu Christe, Fili Dei vivi and Perceptio Corporis tui."
+    }
+   ],
+   "verified_on": "2026-11-04"
   },
   {
    "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",

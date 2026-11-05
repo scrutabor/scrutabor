@@ -95,6 +95,7 @@ export default defineConfig({
 			name: 'reader-firefox',
 			testMatch: [
 				'commemoration-entry-navigation.spec.ts',
+				'triduum-ordinary.spec.ts',
 				'pager-layout.spec.ts',
 				'print-associations.spec.ts',
 				'interlinear-portability.spec.ts',
@@ -142,6 +143,7 @@ export default defineConfig({
 			name: 'reader-webkit',
 			testMatch: [
 				'commemoration-entry-navigation.spec.ts',
+				'triduum-ordinary.spec.ts',
 				'pager-layout.spec.ts',
 				'print-associations.spec.ts',
 				'interlinear-portability.spec.ts',

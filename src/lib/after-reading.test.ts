@@ -199,10 +199,24 @@ for (const lang of ['pl', 'en'] as const)
 							expect(verse).toBeDefined();
 							expect(verse).not.toMatch(/\b(answer|quiet)\b/);
 							const plain = reference.replace(/<[^>]*>/g, '');
+							const sharedThanks = helpLevel === 1 && lang === 'en' && entry === responses[0];
+							if (sharedThanks) {
+								expect(body.gloss.segments.s01.alignments).toEqual([
+									{
+										words: ['w001', 'w002'],
+										forms: ['Deo', 'grátias'],
+										anchor: 'w002',
+										gloss: 'Thanks be to God'
+									}
+								]);
+								expect(reference.match(/class="[^"]*\bword-construction\b[^"]*"/g)).toHaveLength(1);
+								expect(plain.split('Thanks be to God')).toHaveLength(2);
+							}
 							for (const word of words) {
 								expect(reference.split('id="' + entry + '.' + word.id + '"')).toHaveLength(2);
 								expect(plain).toContain(word.form);
-								if (helpLevel === 1) expect(plain).toContain(body.gloss.words[word.id].gloss!);
+								if (sharedThanks) expect(body.gloss.words[word.id].gloss).toBeUndefined();
+								else if (helpLevel === 1) expect(plain).toContain(body.gloss.words[word.id].gloss!);
 							}
 							if (helpLevel === 2) {
 								expect(plain).toContain(body.gloss.segments.s01.translation!);

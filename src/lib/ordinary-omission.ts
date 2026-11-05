@@ -30,6 +30,14 @@ export function ordinaryOmission(
 				'W tej Mszy pomija się pierwszą modlitwę o pokój przed Komunią.',
 				'The first prayer for peace before Communion is omitted at this Mass.'
 			],
+			'triduum-peace-prayer': [
+				'W tej Mszy pomija się pierwszą modlitwę o pokój przed Komunią oraz pocałunek pokoju. Pozdrowienie Pax Domini i dwie pozostałe modlitwy przed Komunią pozostają.',
+				'The first prayer for peace before Communion and the kiss of peace are omitted at this Mass. The Pax Domini greeting and the other two prayers before Communion remain.'
+			],
+			'vigil-agnus-dei': [
+				'W tej Mszy pomija się Agnus Dei.',
+				'The Agnus Dei is omitted at this Mass.'
+			],
 			'requiem-blessing': [
 				'W tej Mszy nie udziela się końcowego błogosławieństwa.',
 				'The final blessing is omitted at this Mass.'

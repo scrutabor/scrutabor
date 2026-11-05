@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Saint Mark the Evangelist” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"The heavens will praise Your wonders, O Lord, and Your truth in the assembly of the saints, alleluia, alleluia.","g":["Will praise","the heavens","wonders","Your","Lord","and",null,null,"in","the assembly","of the saints","alleluia","alleluia"],"a":[{"s":6,"n":2,"a":0,"g":"Your truth"}]}
+    {"id":"s01","tr":"The heavens will praise Your wonders, O Lord, and Your truth in the assembly of the saints, alleluia, alleluia.","g":["Will praise","the heavens",null,null,"Lord","and",null,null,"in","the assembly","of the saints","alleluia","alleluia"],"a":[{"s":2,"n":2,"a":0,"g":"Your wonders"},{"s":6,"n":2,"a":0,"g":"Your truth"}]}
   ]
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { untrack } from 'svelte';
-	import { pageUrl } from '$lib/url';
+	import { ownsLocation, pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { arrowNav } from '$lib/arrow-nav';
 	import { initialHelp } from '$lib/components/HelpLevels.svelte';
@@ -72,6 +72,8 @@
 		() => data.gloss
 	);
 	const panel = wp.panel;
+	// The logical route this page owns, in both editions' terms (see ownsLocation).
+	const route = $derived(`/${data.lang}/${data.category}/${data.slug}`);
 
 	// Reading is the whole point of this page: hold the screen open.
 	keepAwake();
@@ -116,7 +118,7 @@
 	let segmentAnchor = $state<string | null>(null);
 
 	function applyVerseFromLocation(scroll = true) {
-		if (!data.verses) return;
+		if (!data.verses || !ownsLocation(route)) return;
 		const raw = pageUrl().searchParams.get('v');
 		const n = raw === null ? null : Number(raw);
 		const target = n !== null && Object.values(data.verses).includes(n) ? n : null;
@@ -133,6 +135,9 @@
 
 	function applyAddressFromLocation(scroll = true) {
 		cancelLocationFrame();
+		// Only this page's own address: a popstate that leaves the page must not
+		// have the departing page strip the next page's citation.
+		if (!ownsLocation(route)) return;
 		const url = pageUrl();
 		const original = url.href;
 		const resolved = resolveDocumentAddress(
@@ -266,6 +271,7 @@
 
 <svelte:window
 	onpopstate={() => {
+		if (!ownsLocation(route)) return;
 		panel.applyFromLocation();
 		// History still restores which line is cited, but it is not a fresh
 		// arrival at that citation. In particular, closing a word panel pops its

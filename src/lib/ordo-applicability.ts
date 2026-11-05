@@ -34,7 +34,7 @@ export function unconfirmedOrdoContext(
 				'The dismissal formula for the selected Mass has not yet been confirmed. Retained texts are for reference only.'
 			)
 		};
-	if (['iudica-me', 'qui-dixisti', 'benedictio'].includes(entry))
+	if (['iudica-me', 'agnus-dei', 'qui-dixisti', 'benedictio'].includes(entry))
 		return {
 			referenceOnly: true,
 			unconfirmed: true,

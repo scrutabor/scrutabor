@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.10.0",
+  "schema_version": "6.11.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -178,6 +178,12 @@
       "path": "texts/ordinarium/agnus-dei-defunctorum.json",
       "title": "Agnus Dei in Missis defunctorum",
       "evidence": "bibliography/texts/ordinarium/agnus-dei-defunctorum.json"
+    },
+    {
+      "id": "ordinarium.agnus-dei-in-cena-domini",
+      "path": "texts/ordinarium/agnus-dei-in-cena-domini.json",
+      "title": "Agnus Dei in Cena Domini",
+      "evidence": "bibliography/texts/ordinarium/agnus-dei-in-cena-domini.json"
     },
     {
       "id": "ordinarium.agnus-dei",

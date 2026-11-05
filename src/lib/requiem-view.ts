@@ -6,17 +6,19 @@ import { readingPayloadReady } from './reading-announcements';
 import { dayById } from './proprium';
 import { bindOrphans } from './polish';
 
-export function requiemBodyContext(
+export function selectedOrdinaryBodyContext(
 	body: Pick<OrdinaryBody, 'doc' | 'gloss'> | undefined
 ): string | undefined {
 	if (
 		!body ||
-		!['ordinarium.agnus-dei-defunctorum', 'ordinarium.ite-missa-est-defunctorum'].includes(
-			body.doc.id
-		)
+		![
+			'ordinarium.agnus-dei-defunctorum',
+			'ordinarium.agnus-dei-in-cena-domini',
+			'ordinarium.ite-missa-est-defunctorum'
+		].includes(body.doc.id)
 	)
 		return undefined;
-	if (!body.gloss.about?.trim()) throw new Error('Requiem body context absent');
+	if (!body.gloss.about?.trim()) throw new Error('selected Ordinary body context absent');
 	return body.gloss.about;
 }
 

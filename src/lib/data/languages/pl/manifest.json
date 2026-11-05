@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.10.0",
+  "schema_version": "6.11.0",
   "corpus_schema": "0.21.0",
   "language": "pl",
   "direction": "ltr",
@@ -41,6 +41,7 @@
     {
       "id": "orationes.adoro-te-devote",
       "path": "languages/pl/texts/orationes/adoro-te-devote.json",
+      "evidence": "languages/pl/bibliography/texts/orationes/adoro-te-devote.json",
       "title": "Adoro te devote",
       "aliases": [
         "Adoruję Cię z oddaniem"
@@ -205,6 +206,7 @@
     {
       "id": "orationes.te-deum",
       "path": "languages/pl/texts/orationes/te-deum.json",
+      "evidence": "languages/pl/bibliography/texts/orationes/te-deum.json",
       "title": "Ciebie, Boga, wysławiamy",
       "aliases": [
         "Te Deum",
@@ -219,6 +221,12 @@
       "id": "ordinarium.agnus-dei-defunctorum",
       "path": "languages/pl/texts/ordinarium/agnus-dei-defunctorum.json",
       "evidence": "languages/pl/bibliography/texts/ordinarium/agnus-dei-defunctorum.json"
+    },
+    {
+      "id": "ordinarium.agnus-dei-in-cena-domini",
+      "path": "languages/pl/texts/ordinarium/agnus-dei-in-cena-domini.json",
+      "evidence": "languages/pl/bibliography/texts/ordinarium/agnus-dei-in-cena-domini.json",
+      "title": "Baranku Boży w Wielki Czwartek"
     },
     {
       "id": "ordinarium.agnus-dei",

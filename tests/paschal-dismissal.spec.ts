@@ -97,17 +97,28 @@ for (const lang of ['pl', 'en']) {
 		await expect(dismissal(page)).toBeVisible();
 	});
 
-	test(`${lang}: folded Vigil prayer retains its omission guidance, without automatic suppression @reader`, async ({
+	test(`${lang}: Vigil prayer is omitted and retains its complete canonical study link @reader`, async ({
 		page
 	}) => {
 		await page.goto(`/app/${lang}/ordo/communio?dies=2026-04-04`);
-		const folded = page.locator('.part.folded').filter({
-			has: page.locator('.unfold-title', { hasText: 'Dómine Iesu Christe, qui dixísti' })
-		});
-		await expect(folded).toContainText(
-			lang === 'pl' ? 'opuszcza się tę modlitwę' : 'this prayer and the kiss of peace are omitted'
+		const source = page.url();
+		const section = page.locator('section.part[data-part="qui-dixisti"]');
+		await expect(section).toHaveClass(/\bomitted\b/);
+		await expect(section.locator('.word, .rubric, button.unfold')).toHaveCount(0);
+		await expect(section.locator('.part-note').first()).toContainText(
+			lang === 'pl' ? 'pomija się pierwszą modlitwę' : 'first prayer for peace'
 		);
-		await folded.locator('button.unfold').click();
-		await expect(page.locator('[id="qui-dixisti.w001"]')).toBeVisible();
+		await expect(section.locator('.part-note').first()).toContainText('Pax Domini');
+		await expect(section.locator('.part-note').first()).toContainText(
+			lang === 'pl' ? 'pocałunek pokoju' : 'kiss of peace'
+		);
+		const link = section.locator('.part-title');
+		await expect(link).toHaveAttribute('href', new RegExp(`/ordinarium/qui-dixisti$`));
+		await link.click();
+		await expect(page.locator('[id="w001"]')).toBeVisible();
+		await page.goBack();
+		await expect(page).toHaveURL(source);
+		await expect(section).toHaveClass(/\bomitted\b/);
+		await expect(section.locator('.word, .rubric, button.unfold')).toHaveCount(0);
 	});
 }

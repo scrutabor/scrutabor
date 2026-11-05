@@ -457,7 +457,7 @@ export function commemorationName(
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.10.0' ||
+			ROOT_MANIFEST.schema_version !== '6.11.0' ||
 			ROOT_MANIFEST.base.commemorationes !== 'commemorationes.json'
 		)
 			throw new Error('undeclared commemoration resource');

@@ -1,12 +1,12 @@
 {
   "id":"ordinarium.fili-dei-vivi",
   "language":"en",
-  "about":"The priest addresses Jesus Christ, the Son of the living God. He recalls the work of salvation accomplished through Christ’s death, by the will of the Father and with the cooperation of the Holy Spirit. He asks to be delivered from iniquity and evil, to remain faithful to the commandments, and never to be separated from Christ.",
+  "about":"In this prayer to Jesus Christ, the Son of the living God, the priest recalls the work of salvation accomplished through Christ’s death, by the will of the Father and with the cooperation of the Holy Spirit. The priest asks Christ to deliver him from iniquity and evil, keep him faithful to the commandments, and never let him be separated from Him.",
   "seg":[
     {"id":"s01","tr":"Lord Jesus Christ, Son of the living God,","tc":[194,195],"tb":"exact","g":["Lord","Jesus","Christ","Son","of God","living"]},
     {"id":"s02","tr":"who, by the will of the Father and with the cooperation of the Holy Spirit, brought the world to life through Your death:","tc":[194,195],"tb":"revised","g":["who","out of","the will","of the Father","with the cooperation of",null,null,"through",null,null,"the world","have given life to"],"a":[{"s":5,"n":2,"a":0,"g":"the Holy Spirit"},{"s":8,"n":2,"a":0,"g":"Your death"}]},
-    {"id":"s03","tr":"deliver me through this Your most holy Body and Blood from all my iniquities and from all evils:","tc":[194,195],"tb":"revised","g":["deliver","me","through","this","most holy",null,null,null,null,"from","all",null,null,"and","all manner of","evils"],"a":[{"s":5,"n":4,"a":0,"g":"Body and Blood of Yours"},{"s":11,"n":2,"a":0,"g":"my iniquities"}]},
-    {"id":"s04","tr":"and make me always hold fast to Your commandments, and never permit me to be separated from You:","tc":[194,195],"tb":"revised","g":["and","make","me","Your","always","to cling","commandments","and","from","You","never","to be parted","allow"]},
-    {"id":"s05","tr":"who, being God, live and reign with the same God the Father and with the Holy Spirit forever and ever. Amen.","tc":[194,195],"tb":"revised","g":["Who","with","the same","God","the Father","and",null,null,"live","and","reign","God","for","ages","of ages","amen"],"a":[{"s":6,"n":2,"a":0,"g":"the Holy Spirit"}]}
+    {"id":"s03","tr":"deliver me through this Your most holy Body and Blood from all my iniquities and from all evils:","tc":[194,195],"tb":"revised","g":["deliver","me","through",null,null,null,null,null,null,"from","all",null,null,"and","all manner of","evils"],"a":[{"s":3,"n":6,"a":2,"g":"this most holy Body and Blood of Yours"},{"s":11,"n":2,"a":0,"g":"my iniquities"}]},
+    {"id":"s04","tr":"and make me always hold fast to Your commandments, and never permit me to be separated from You:","tc":[194,195],"tb":"revised","g":["and","make","me",null,null,null,null,"and","from","You","never","to be parted","allow"],"a":[{"s":3,"n":4,"a":2,"g":"always cling to Your commandments"}]},
+    {"id":"s05","tr":"who, being God, live and reign with the same God the Father and with the Holy Spirit forever and ever. Amen.","tc":[194,195],"tb":"revised","g":["Who","with","the same","God","the Father","and",null,null,"live","and","reign","God","for","ages","of ages","Amen"],"a":[{"s":6,"n":2,"a":0,"g":"the Holy Spirit"}]}
   ]
 }

@@ -38,6 +38,26 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "pp. 215, 520",
+    "scan": "PDF pp. 234, 541",
+    "section": "n. 332 (antiphon); n. 675 (versicle and response)"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.salve-regina.latin-text.enchiridion1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The complete antiphon follows n. 332 and the closing versicle/response n. 675, with house accents and ligatures. This edition retains Eva/exilium/genetrix spellings, devotional capitals and the separately noted pointing instead of presenting them as a diplomatic transcription of Hevae/exsilium/Genitrix. The book supplies the underlying Latin formula; it is not a 1962 Missal witness or an independent attestation of every digital-source accidental."
+    }
+   ],
+   "verified_on": "2026-11-04"
   }
  ],
  "witnesses": []

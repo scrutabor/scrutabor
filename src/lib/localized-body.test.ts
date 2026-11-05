@@ -25,7 +25,7 @@ it.each(['pl', 'en'] as const)(
 				}
 			}
 		}
-		expect(bodies).toBe(1280);
+		expect(bodies).toBe(1281);
 		expect(grouped).toBeGreaterThan(0);
 		for (const pack of [await canonData(lang), await dismissalData(lang)]) {
 			for (const part of pack.parts)

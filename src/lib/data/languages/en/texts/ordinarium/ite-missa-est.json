@@ -7,8 +7,8 @@
     {"id":"s02","tr":"The Lord be with you.","tc":[433],"tb":"exact","g":[null,null],"a":[{"s":0,"n":2,"a":0,"g":"The Lord be with you"}]},
     {"id":"s03","tr":"And with your spirit.","tc":[433],"tb":"revised","g":["And","with",null,null],"a":[{"s":2,"n":2,"a":0,"g":"your spirit"}]},
     {"id":"s04","nr":"Turned toward the people, the priest says “Ite, missa est”, and the server answers “Deo grátias”. When a liturgical procession follows the Mass, he says “Benedicámus Dómino” instead, at the middle of the altar, facing it."},
-    {"id":"s05","tr":"Go forth, the Mass is ended.","g":["go","the dismissal","is made"],"nt":{"w008":"As a noun, “missa” means dismissal. The same form can be a participle of “mitto,” meaning “sent.” A participial reading would require an understood subject that the formula does not name."}},
-    {"id":"s06","tr":"Thanks be to God.","tc":[433],"tb":"exact","g":["to God","thanks"],"ex":{"w011":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}},
+    {"id":"s05","tr":"Go forth, the Mass is ended.","g":["Go","the dismissal","is made"],"nt":{"w008":"As a noun, “missa” means dismissal. The same form can be a participle of “mitto,” meaning “sent.” A participial reading would require an understood subject that the formula does not name."}},
+    {"id":"s06","tr":"Thanks be to God.","tc":[433],"tb":"exact","g":[null,null],"a":[{"s":0,"n":2,"a":1,"g":"Thanks be to God"}],"ex":{"w011":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}},
     {"id":"s07","nr":"In Masses for the Dead the priest says instead, facing the altar: Requiéscant in pace — and the answer is Amen."}
   ]
 }

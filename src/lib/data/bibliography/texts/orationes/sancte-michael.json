@@ -38,6 +38,26 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "pp. 520–521",
+    "scan": "PDF pp. 541–542",
+    "section": "n. 675"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.sancte-michael.latin-text.enchiridion1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The complete Latin prayer follows n. 675, with house accents and ligatures, and retains its current sentence punctuation, capital Caelestis and lower-case satanam. The page's praelio is retained with the house ligature and stress mark. The book supplies the underlying prayer; it is not a 1962 Missal witness or evidence that Leo XIII personally composed it."
+    }
+   ],
+   "verified_on": "2026-11-04"
   }
  ],
  "witnesses": []

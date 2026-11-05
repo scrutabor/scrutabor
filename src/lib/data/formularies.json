@@ -1,5 +1,5 @@
 {
- "schema_version": "1.5.0",
+ "schema_version": "1.6.0",
  "formularies": [
   {
    "id": "dominica-i-adventus",
@@ -2695,6 +2695,10 @@
       "s10"
      ],
      "reason": "lavabo-doxology"
+    },
+    {
+     "text": "ordinarium/qui-dixisti",
+     "reason": "triduum-peace-prayer"
     }
    ],
    "ordinary": {
@@ -2754,6 +2758,12 @@
      "key": "praefatio",
      "role": "praefatio",
      "text": "ordinarium/praefatio-sanctae-crucis",
+     "relation": "shared"
+    },
+    {
+     "key": "agnus-dei",
+     "role": "agnus-dei",
+     "text": "ordinarium/agnus-dei-in-cena-domini",
      "relation": "shared"
     },
     {
@@ -2847,7 +2857,16 @@
      "relation": "proper"
     }
    ],
-   "ordinary_omissions": []
+   "ordinary_omissions": [
+    {
+     "text": "ordinarium/agnus-dei",
+     "reason": "vigil-agnus-dei"
+    },
+    {
+     "text": "ordinarium/qui-dixisti",
+     "reason": "triduum-peace-prayer"
+    }
+   ]
   },
   {
    "id": "dominica-resurrectionis",

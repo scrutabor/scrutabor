@@ -15,8 +15,8 @@ import type { TextDocument } from './corpus';
 const runtime = freshProperFixture();
 
 it('declares every dated resource against the same freshly vendored reader edition', () => {
-	expect(ROOT_MANIFEST.schema_version).toBe('6.10.0');
-	expect([plManifest.schema_version, enManifest.schema_version]).toEqual(['6.10.0', '6.10.0']);
+	expect(ROOT_MANIFEST.schema_version).toBe('6.11.0');
+	expect([plManifest.schema_version, enManifest.schema_version]).toEqual(['6.11.0', '6.11.0']);
 	expect(introductionLookup).not.toBeNull();
 	expect(introductionLookup!.announcements.size).toBe(206);
 	expect(canonLookup).not.toBeNull();

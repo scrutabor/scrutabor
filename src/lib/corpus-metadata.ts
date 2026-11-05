@@ -156,7 +156,7 @@ const FORMULARY_CATALOG = formularyData as unknown as FormularyCatalog;
 if (
 	!FORMULARY_CATALOG ||
 	typeof FORMULARY_CATALOG !== 'object' ||
-	FORMULARY_CATALOG.schema_version !== '1.5.0' ||
+	FORMULARY_CATALOG.schema_version !== '1.6.0' ||
 	!Array.isArray(FORMULARY_CATALOG.formularies) ||
 	!FORMULARY_CATALOG.formularies.length
 )

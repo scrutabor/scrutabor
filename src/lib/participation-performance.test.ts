@@ -73,6 +73,7 @@ describe('closed received performance metadata', () => {
 	it('accepts the supplement without replacing priest ownership', () => {
 		const document = body();
 		expect(() => validateParticipationPerformance(document, '6.10.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.11.0')).not.toThrow();
 		expect(() => validateParticipationPerformance(document, '6.5.0')).toThrow();
 		expect(() => validateParticipationPerformance(document, '6.8.0')).toThrow();
 		const segments = document.segments as unknown as Segment[];
@@ -134,6 +135,7 @@ describe('closed received performance metadata', () => {
 		const document = body();
 		for (const segment of document.segments) delete segment.participation.cantu.performance;
 		expect(() => validateParticipationPerformance(document, '6.10.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.11.0')).not.toThrow();
 		expect(offersMassFormChoice(document.segments as unknown as Segment[])).toBe(true);
 		// Canonical derivation and reader artifact validation own this negative control.
 	});
@@ -152,16 +154,18 @@ describe('closed received performance metadata', () => {
 	);
 });
 
-it.each(['6.6.0', '6.7.0', '6.9.0', '6.11.0'])(
+it.each(['6.6.0', '6.7.0', '6.9.0', '6.12.0'])(
 	'rejects performance metadata at reader %s and retains the recovered 6.10 body',
 	(version) => {
 		const document = body();
 		const original = structuredClone(document);
 		expect(() => validateParticipationPerformance(document, '6.10.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.11.0')).not.toThrow();
 		expect(() => validateParticipationPerformance(document, version)).toThrow(
 			'invalid participation performance'
 		);
 		expect(document).toEqual(original);
 		expect(() => validateParticipationPerformance(document, '6.10.0')).not.toThrow();
+		expect(() => validateParticipationPerformance(document, '6.11.0')).not.toThrow();
 	}
 );

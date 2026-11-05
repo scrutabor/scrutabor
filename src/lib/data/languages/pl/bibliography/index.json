@@ -145,6 +145,22 @@
      "lemmas": []
     },
     {
+     "edition": "edition.rituale-romanum.1937-pustet-quinta",
+     "roles": [
+      "official_text"
+     ],
+     "texts": [
+      {
+       "id": "orationes.pater-noster",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.divinum-officium-horae.44667ff",
      "roles": [
       "derived_digital_collation_aid"
@@ -8052,6 +8068,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
+       "roles": [
+        "direct_approved_print"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.aufer-a-nobis",
        "roles": [
         "direct_approved_print"
@@ -16488,6 +16511,13 @@
        "uses": 1
       },
       {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
+       "roles": [
+        "corroborating_latin_witness"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.communicantes-in-ascensione-domini",
        "roles": [
         "official_text"
@@ -17421,6 +17451,13 @@
        "uses": 1
       },
       {
+       "id": "orationes.cor-iesu",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
        "id": "orationes.deus-refugium",
        "roles": [
         "official_text"
@@ -17429,6 +17466,20 @@
       },
       {
        "id": "orationes.memorare",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.salve-regina",
+       "roles": [
+        "official_text"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "orationes.sancte-michael",
        "roles": [
         "official_text"
        ],
@@ -17473,6 +17524,38 @@
    "id": "wording_witnesses",
    "entries": [
     {
+     "edition": "edition.nawiedzania-najswietszego-sakramentu.1889-chicago",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.nojszewski-liturgia-rzymska.1914-drugie",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "ordinarium.gloria",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
      "roles": [
       "historical_wording_basis"
@@ -17516,6 +17599,22 @@
         "historical_wording_basis"
        ],
        "uses": 7
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.siedlecki-spiewnik.1928-jubileuszowe",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []
@@ -17685,6 +17784,13 @@
         "historical_wording_basis"
        ],
        "uses": 1
+      },
+      {
+       "id": "orationes.adoro-te-devote",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
       },
       {
        "id": "orationes.alma-redemptoris-mater",
@@ -17938,6 +18044,13 @@
        "uses": 3
       },
       {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
+      {
        "id": "ordinarium.aufer-a-nobis",
        "roles": [
         "historical_wording_basis"
@@ -17989,7 +18102,8 @@
       {
        "id": "ordinarium.gloria",
        "roles": [
-        "historical_wording_basis"
+        "historical_wording_basis",
+        "historical_wording_comparator"
        ],
        "uses": 12
       },
@@ -18606,7 +18720,7 @@
        "roles": [
         "rubric_control"
        ],
-       "uses": 1
+       "uses": 2
       },
       {
        "id": "ordinarium.agnus-dei-defunctorum",
@@ -18614,6 +18728,13 @@
         "rubric_control"
        ],
        "uses": 4
+      },
+      {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
       },
       {
        "id": "ordinarium.communicantes-in-ascensione-domini",
@@ -21950,11 +22071,25 @@
      ],
      "texts": [
       {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
        "id": "ordinarium.agnus-dei-defunctorum",
        "roles": [
         "rubric_control"
        ],
        "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 2
       },
       {
        "id": "ordinarium.communicantes-in-nocte-paschae",
@@ -22602,6 +22737,13 @@
       },
       {
        "id": "ordinarium.agnus-dei-defunctorum",
+       "roles": [
+        "rubric_control"
+       ],
+       "uses": 1
+      },
+      {
+       "id": "ordinarium.agnus-dei-in-cena-domini",
        "roles": [
         "rubric_control"
        ],

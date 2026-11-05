@@ -10,7 +10,7 @@ const subjects: Record<string, [string, number, string][]> = {
 	],
 	ascensionis: [
 		['w024', 2, 'our Lord'],
-		['w028', 2, 'His resurrection'],
+		['w028', 2, 'His Resurrection'],
 		// ómnibus now carries its own caption ("to all"); the possessive keeps its noun.
 		['w031', 2, 'His disciples'],
 		['w065', 2, 'of Your glory']

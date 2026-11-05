@@ -1,0 +1,44 @@
+{
+ "id": "ordinarium.agnus-dei-in-cena-domini",
+ "source_groups": [
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 63",
+    "scan": "PDF s. 66",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ordinarium.agnus-dei-in-cena-domini.s01.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Pełne odziedziczone wezwanie z prośbą o miłosierdzie; różnice dotyczą interpunkcji. Ta sama potwierdzona formuła jest użyta w trzech odrębnych wezwaniach Wielkiego Czwartku."
+    },
+    {
+     "id": "use.pl.ordinarium.agnus-dei-in-cena-domini.s02.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Pełne odziedziczone wezwanie z prośbą o miłosierdzie; różnice dotyczą interpunkcji. Ta sama potwierdzona formuła jest użyta w trzech odrębnych wezwaniach Wielkiego Czwartku."
+    },
+    {
+     "id": "use.pl.ordinarium.agnus-dei-in-cena-domini.s03.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Pełne odziedziczone wezwanie z prośbą o miłosierdzie; różnice dotyczą interpunkcji. Ta sama potwierdzona formuła jest użyta w trzech odrębnych wezwaniach Wielkiego Czwartku."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

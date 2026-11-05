@@ -5,11 +5,11 @@
   "seg":[
     {"id":"s01","nr":"Kapłan, pochylony, mówi dalej."},
     {"id":"s02","tr":"Boże, Ty, gdy się ku nam zwrócisz, ożywisz nas.","g":["Boże","Ty","zwróciwszy się","ożywisz","nas"]},
-    {"id":"s03","tr":"A Twój lud rozraduje się w Tobie.","tc":[179],"tb":"revised","g":["a","lud","Twój","rozraduje się","w","Tobie"]},
-    {"id":"s04","tr":"Okaż nam, Panie, miłosierdzie Twoje.","g":["okaż","nam","Panie","miłosierdzie","Twoje"]},
-    {"id":"s05","tr":"I zbawienie Twoje daj nam.","g":["i","zbawienie","Twoje","daj","nam"]},
+    {"id":"s03","tr":"A Twój lud rozraduje się w Tobie.","tc":[179],"tb":"revised","g":["A","lud","Twój","rozraduje się","w","Tobie"]},
+    {"id":"s04","tr":"Okaż nam, Panie, miłosierdzie Twoje.","g":["Okaż","nam","Panie","miłosierdzie","Twoje"]},
+    {"id":"s05","tr":"I zbawienie Twoje daj nam.","g":["I","zbawienie","Twoje","daj","nam"]},
     {"id":"s06","tr":"Panie, wysłuchaj mojej modlitwy.","tc":[179],"tb":"revised","g":["Panie","wysłuchaj","modlitwy","mojej"]},
-    {"id":"s07","tr":"A moje wołanie niech do Ciebie dotrze.","tc":[179],"tb":"revised","g":["a","wołanie","moje","do","Ciebie","niech przyjdzie"]},
+    {"id":"s07","tr":"A moje wołanie niech do Ciebie dotrze.","tc":[179],"tb":"revised","g":["A","wołanie","moje","do","Ciebie","niech przyjdzie"]},
     {"id":"s08","tr":"Pan z wami.","tc":[179],"tb":"revised","g":["Pan","z wami"],"ex":{"w032":"W pozdrowieniu „Dóminus vobíscum” łacina nie wypowiada czasownika: „Pan [jest] z wami”."}},
     {"id":"s09","tr":"I z duchem twoim.","tc":[179],"tb":"normalized","g":["I","z","duchem","twoim"]}
   ]

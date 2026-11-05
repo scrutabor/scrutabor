@@ -60,7 +60,7 @@ export function createDismissalLookup(
 function declaredLookup() {
 	try {
 		if (
-			ROOT_MANIFEST.schema_version !== '6.10.0' ||
+			ROOT_MANIFEST.schema_version !== '6.11.0' ||
 			ROOT_MANIFEST.base.dismissal !== 'dismissal.json'
 		)
 			throw new Error('undeclared dismissal resource');

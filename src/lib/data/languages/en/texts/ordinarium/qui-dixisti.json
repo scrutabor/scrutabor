@@ -5,10 +5,10 @@
   "seg":[
     {"id":"s01","nr":"The priest bows over the altar with his hands joined upon it, and says the three prayers that follow silently."},
     {"id":"s02","tr":"Lord Jesus Christ, who said to Your Apostles:","tc":[305,306],"tb":"revised","g":["Lord","Jesus","Christ","who","said",null,null],"a":[{"s":5,"n":2,"a":0,"g":"to Your Apostles"}]},
-    {"id":"s03","tr":"“Peace I leave you; My peace I give you” —","tc":[306],"tb":"revised","g":["Peace","I leave","to you",null,null,"I give","to you"],"a":[{"s":3,"n":2,"a":0,"g":"my peace"}]},
+    {"id":"s03","tr":"“Peace I leave you; My peace I give you” —","tc":[306],"tb":"revised","g":["Peace","I leave","to you",null,null,"I give","to you"],"a":[{"s":3,"n":2,"a":0,"g":"My peace"}]},
     {"id":"s04","tr":"do not regard my sins, but the faith of Your Church;","tc":[306],"tb":"revised","g":["not","look upon",null,null,"but","the faith",null,null],"a":[{"s":2,"n":2,"a":0,"g":"my sins"},{"s":6,"n":2,"a":0,"g":"of Your Church"}]},
     {"id":"s05","tr":"and graciously grant her peace and unite her according to Your will,","tc":[305],"tb":"revised","g":["and her","according to",null,null,"to grant peace to","and","to unite","vouchsafe"],"a":[{"s":2,"n":2,"a":0,"g":"Your will"}]},
-    {"id":"s06","tr":"who, being God, live and reign forever and ever. Amen.","tc":[305],"tb":"revised","g":["Who","live","and","reign","God","for","all","ages","of ages","amen"]},
+    {"id":"s06","tr":"who, being God, live and reign forever and ever. Amen.","tc":[305],"tb":"revised","g":["Who","live","and","reign","God","for","all","ages","of ages","Amen"]},
     {"id":"s07","nr":"If the peace is given, the priest kisses the altar and says:"},
     {"id":"s08","tr":"Peace be with you.","g":["Peace","with you"]},
     {"id":"s09","tr":"And with your spirit.","tc":[237],"tb":"revised","g":["And","with",null,null],"a":[{"s":2,"n":2,"a":0,"g":"your spirit"}]},

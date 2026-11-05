@@ -37,6 +37,26 @@
     }
    ],
    "verified_on": "2026-10-27"
+  },
+  {
+   "edition": "edition.rituale-romanum.1937-pustet-quinta",
+   "digital_item": "item.rituale-romanum.1937-pustet-quinta.librinostri",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 16",
+    "scan": "PDF p. 24",
+    "section": "Tit. II cap. 2, n. 11"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.pater-noster.latin-text.rituale1937",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The page prints the complete Latin Pater noster, including quotidianum and the final Amen, in the baptism rite. Its formula is adopted here as a standalone prayer; the present edition retains its period after caelis and the capitals Sanctificetur and Sed. Baptismal participants, volume and placement are not transferred to the standalone prayer, and this is not the Mass-recension witness."
+    }
+   ],
+   "verified_on": "2026-11-04"
   }
  ],
  "witnesses": []

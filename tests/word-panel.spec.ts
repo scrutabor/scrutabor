@@ -341,7 +341,7 @@ test('switching language keeps the panel open on the same word', async ({ page }
 	await page.locator('button[aria-label="wybór języka"]').click();
 	await page.locator('a', { hasText: 'English' }).click();
 	await expect(page).toHaveURL(atRoute('/app/en/orationes/pater-noster', '?w=w008'));
-	await expect(page.locator(panelWord)).toHaveText('nomen');
+	await expect(page.locator(panelWord)).toHaveText('nomen tuum');
 });
 
 test('the way out of a long panel does not scroll away', async ({ page }) => {

@@ -115,7 +115,7 @@ test('the highlight is one box, with air around the letters', async ({ page }) =
 	await page.goto('/app/en/ordinarium/pater-noster?w=w022');
 	const m = await page.evaluate(() => {
 		const w = document.querySelector('button.word.selected')!;
-		const token = w.closest('.token')!;
+		const token = w.closest('.token-group, .token')!;
 		const st = getComputedStyle(token, '::before');
 		const b = token.getBoundingClientRect();
 		const box = {

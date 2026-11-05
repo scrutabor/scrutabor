@@ -42,13 +42,13 @@ async function body(lang: Lang) {
 	};
 }
 
-it('receives exactly six canonical omission declarations and no added calendar rule', () => {
+it('receives exactly the canonical omission declarations and no added calendar rule', () => {
 	expect(
 		FORMULARY_METADATA.filter((day) => day.ordinary_omissions.length)
 			.map((day) => day.id)
 			.sort()
 	).toEqual(
-		CASES.filter((row) => row[2])
+		CASES.filter((row) => row[2] || row[1] === 'vigilia-paschalis')
 			.map((row) => row[1])
 			.sort()
 	);

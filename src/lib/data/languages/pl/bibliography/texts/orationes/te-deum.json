@@ -1,0 +1,28 @@
+{
+ "id": "orationes.te-deum",
+ "source_groups": [
+  {
+   "edition": "edition.siedlecki-spiewnik.1928-jubileuszowe",
+   "digital_item": "item.siedlecki-spiewnik.1928-jubileuszowe.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 308–309",
+    "scan": "skany 326–327 (liczone od 1)",
+    "section": "pieśń 353, 14 zwrotek / 56 wersów",
+    "page_url": "https://www.wbc.poznan.pl/dlibra/publication/538983/edition/457839/content"
+   },
+   "entries": [
+    {
+     "id": "use.pl.orationes.te-deum.siedlecki1928",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Polski tekst przekładu hymnicznego ks. Tadeusza Karyłowskiego przyjęto według wszystkich 56 wersów pieśni 353, odpowiadających segmentom s01–s28. Zmodernizowano pisownię „zgodzonemi” i „całem”, interpunkcję i wielkie litery; połączono podział sylab i wierszy druku. Zachowano odczyty „pospiesza” i „zagrzmi”. W tym druku po pieśni nie ma osobnego Amen. Nuty, następna pieśń, łaciński tekst i glosy międzywierszowe nie są przypisane temu źródłu."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

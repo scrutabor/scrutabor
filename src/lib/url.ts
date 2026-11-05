@@ -33,6 +33,19 @@ export function pageUrl(): URL {
 	}
 }
 
+/**
+ * Whether the logical URL names this page. A page's location handlers fire for
+ * every popstate, including the one that carries the reader AWAY from it: the
+ * router has not yet swapped the component, so the departing page would read
+ * an address that belongs to its successor, fail to resolve the citation in
+ * it, and publish that address stripped. Hosted routes carry the `/app`
+ * prefix; the offline copy's hash routes do not.
+ */
+export function ownsLocation(route: string): boolean {
+	const path = pageUrl().pathname;
+	return path === route || path === `/app${route}`;
+}
+
 /** The language a path speaks, read from its SEGMENTS.
  *
  * Not a substring test: `'/app/en/lemma?l=plenus'.includes('/pl')` is true, so

@@ -40,6 +40,7 @@ export function ordinarySegmentView<T extends OrdinaryBody>(
 	if (whole) {
 		if (
 			body.key !== whole.text ||
+			body.slug !== slot ||
 			body.doc.id.replace('.', '/') !== whole.text ||
 			body.gloss.text !== body.doc.id ||
 			!body.doc.segments.some((row) => row.words?.length)

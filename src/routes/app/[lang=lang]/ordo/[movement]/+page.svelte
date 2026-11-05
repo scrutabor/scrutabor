@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { untrack, type Snippet } from 'svelte';
-	import { pageUrl } from '$lib/url';
+	import { ownsLocation, pageUrl } from '$lib/url';
 	import type { GlossDocument, TextDocument } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
@@ -30,7 +30,7 @@
 	import { ordinaryOmission } from '$lib/ordinary-omission';
 	import { DISMISSAL_ROLE } from '$lib/dismissal';
 	import {
-		requiemBodyContext,
+		selectedOrdinaryBodyContext,
 		requiemLastGospelContext,
 		requiemWaterContext
 	} from '$lib/requiem-view';
@@ -100,6 +100,7 @@
 		)
 	);
 	const around = $derived(movementNeighbors(data.movement));
+	const route = $derived(`/${lang}/ordo/${data.movement}`);
 
 	// The flow shares the reading page's help ladder and its stored setting.
 	let helpLevel = $state(initialHelp());
@@ -407,6 +408,9 @@
 
 	function applyFromLocation(scroll = true) {
 		cancelLocationFrame();
+		// Only this movement's own address (see ownsLocation): the popstate that
+		// carries the reader to a text page must not canonicalize that page's address.
+		if (!ownsLocation(route)) return;
 		const url = pageUrl();
 		const intent = omissionIntentKey(url, proper.date, proper.day);
 		const previous =
@@ -620,7 +624,7 @@
 			{@const context = responseContext?.unconfirmed
 				? responseContext.note
 				: (omissionFor(e)?.note ??
-					requiemBodyContext(bodiesFor(e)[0]) ??
+					selectedOrdinaryBodyContext(bodiesFor(e)[0]) ??
 					requiemLastGospelContext(e.id, applicabilityState, lang) ??
 					requiemWaterContext(e.id, applicabilityState, lang) ??
 					(responseContext

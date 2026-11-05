@@ -18,7 +18,14 @@ const masses = [
 	'commemoratio-omnium-fidelium-defunctorum-missa-ii',
 	'commemoratio-omnium-fidelium-defunctorum-missa-iii'
 ];
-const affected = ['ite-missa-est', 'iudica-me', 'qui-dixisti', 'benedictio', 'deus-qui-humanae'];
+const affected = [
+	'agnus-dei',
+	'ite-missa-est',
+	'iudica-me',
+	'qui-dixisti',
+	'benedictio',
+	'deus-qui-humanae'
+];
 const pending: [string, Partial<GospelPreparationState>][] = [
 	['initial', { date: null, mass: null, loadedMass: null, loadedLanguage: null }],
 	...unresolvedPayloadCases,
@@ -121,7 +128,9 @@ it.each([
 				expect(unconfirmedOrdoContext(entry, state, lang)).toBeUndefined();
 			for (const entry of ['iudica-me', 'qui-dixisti', 'benedictio'])
 				expect(ordinaryOmission(entry, state, lang)?.text).toBe(
-					requiem ? `ordinarium/${entry}` : undefined
+					requiem || (mass === 'vigilia-paschalis' && entry === 'qui-dixisti')
+						? `ordinarium/${entry}`
+						: undefined
 				);
 			expect(!!requiemWaterContext('deus-qui-humanae', state, lang)).toBe(requiem);
 		}

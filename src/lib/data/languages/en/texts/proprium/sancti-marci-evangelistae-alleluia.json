@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Saint Mark the Evangelist” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The heavens will praise Your wonders, O Lord, and indeed Your truth in the assembly of the saints. Alleluia. You have set, O Lord, upon his head a crown of precious stone. Alleluia.","g":["Alleluia","alleluia","Will praise","the heavens","wonders","Your","Lord","and indeed",null,null,"in","the assembly","of the saints","Alleluia","You have set","Lord","upon","head","his","a crown","of","stone","precious","Alleluia"],"a":[{"s":8,"n":2,"a":0,"g":"Your truth"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. The heavens will praise Your wonders, O Lord, and indeed Your truth in the assembly of the saints. Alleluia. You have set, O Lord, upon his head a crown of precious stone. Alleluia.","g":["Alleluia","alleluia","Will praise","the heavens",null,null,"Lord","and indeed",null,null,"in","the assembly","of the saints","Alleluia","You have set","Lord","upon","head","his","a crown","of","stone","precious","Alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"Your wonders"},{"s":8,"n":2,"a":0,"g":"Your truth"}]}
   ]
 }

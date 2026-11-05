@@ -1,7 +1,7 @@
 {
   "id":"ordinarium.ecce-agnus-dei",
   "language":"en",
-  "about":"The priest shows the Host and points to Christ as the Lamb of God who takes away the sins of the world. He then says Dómine, non sum dignus three times. He gives the Blessed Sacrament to each communicant with a prayer that the Body of Christ may preserve that person’s soul for eternal life.",
+  "about":"The priest shows the Host and points to Christ as the Lamb of God who takes away the sins of the world. After saying Dómine, non sum dignus three times, the priest gives the Blessed Sacrament to each communicant, praying that the Body of Christ may preserve that person’s soul for eternal life.",
   "seg":[
     {"id":"s01","nr":"Then the priest genuflects and takes the ciborium or paten with the Blessed Sacrament in his left hand and one particle in his right. Holding the particle between his thumb and forefinger slightly above the vessel, he turns at the middle of the altar toward those about to communicate and says:"},
     {"id":"s02","tr":"Behold the Lamb of God, behold Him who takes away the sins of the world.","tc":[184],"tb":"normalized","g":["Behold","the Lamb","of God","behold","Him who","takes away","the sins","of the world"],"ex":{"w007":"John 1:29 has the singular “peccátum mundi”."}},
@@ -10,7 +10,7 @@
     {"id":"s05","tr":"Lord, I am not worthy that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[427],"tb":"revised","g":["Lord",null,null,"worthy","that","You should enter",null,null,null,"but","only","say","with the word","and","shall be healed",null,null],"a":[{"s":1,"n":2,"a":1,"g":"I am not"},{"s":6,"n":3,"a":0,"g":"under my roof"},{"s":15,"n":2,"a":0,"g":"my soul"}]},
     {"id":"s06","tr":"Lord, I am not worthy that You should enter under my roof: but only say the word, and my soul shall be healed.","tc":[427],"tb":"revised","g":["Lord",null,null,"worthy","that","You should enter",null,null,null,"but","only","say","with the word","and","shall be healed",null,null],"a":[{"s":1,"n":2,"a":1,"g":"I am not"},{"s":6,"n":3,"a":0,"g":"under my roof"},{"s":15,"n":2,"a":0,"g":"my soul"}]},
     {"id":"s07","nr":"After repeating these words three times, the priest goes to their right, the Epistle side, and gives the Sacrament to each, making the sign of the cross with it over the ciborium or paten and saying:"},
-    {"id":"s08","tr":"May the Body of our Lord Jesus Christ preserve your soul for eternal life. Amen.","tc":[184],"tb":"revised","g":["The Body",null,null,"Jesus","Christ","may keep",null,null,"for","life","everlasting","amen"],"a":[{"s":1,"n":2,"a":0,"g":"of our Lord"},{"s":6,"n":2,"a":0,"g":"your soul"}]},
+    {"id":"s08","tr":"May the Body of our Lord Jesus Christ preserve your soul for eternal life. Amen.","tc":[184],"tb":"revised","g":["The Body",null,null,"Jesus","Christ","may keep",null,null,"for","life","everlasting","Amen"],"a":[{"s":1,"n":2,"a":0,"g":"of our Lord"},{"s":6,"n":2,"a":0,"g":"your soul"}]},
     {"id":"s09","nr":"When the faithful have received Communion, the priest returns to the altar."}
   ]
 }

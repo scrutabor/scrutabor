@@ -13,6 +13,6 @@
     {"id":"s07","nr":"The priest signs himself."},
     {"id":"s08","tr":"may be filled with every heavenly blessing and grace.","tc":[341],"tb":"revised","g":["every","blessing","heavenly","and","grace","may be filled"]},
     {"id":"s09","nr":"The priest joins his hands."},
-    {"id":"s10","tr":"Through the same Christ our Lord. Amen.","tc":[341],"tb":"exact","g":["through","the same","Christ",null,null,"amen"],"a":[{"s":3,"n":2,"a":0,"g":"our Lord"}]}
+    {"id":"s10","tr":"Through the same Christ our Lord. Amen.","tc":[341],"tb":"exact","g":["Through","the same","Christ",null,null,"Amen"],"a":[{"s":3,"n":2,"a":0,"g":"our Lord"}]}
   ]
 }

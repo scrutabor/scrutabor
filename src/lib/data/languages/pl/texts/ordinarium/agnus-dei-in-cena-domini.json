@@ -1,0 +1,10 @@
+{
+  "id":"ordinarium.agnus-dei-in-cena-domini",
+  "language":"pl",
+  "about":"We Mszy Wieczerzy Pańskiej wszystkie trzy wezwania Agnus Dei kończą się prośbą „miserére nobis” — „zmiłuj się nad nami”. Wieczorna Msza jest zwykle uroczysta lub śpiewana. Kapłan odmawia te wezwania cicho, a wierni mogą je śpiewać. Jeśli zezwolono na Mszę czytaną, kapłan odmawia je głosem słyszalnym, a wierni mogą je odmawiać wraz z nim przy trzecim stopniu uczestnictwa. Pocałunku pokoju się nie przekazuje i opuszcza się modlitwę „Dómine Iesu Christe, qui dixísti”. Wezwanie „Pax Dómini” oraz dwie dalsze modlitwy przygotowania do Komunii pozostają.",
+  "seg":[
+    {"id":"s01","tr":"Baranku Boży, który gładzisz grzechy świata: zmiłuj się nad nami.","tb":"normalized","g":["Baranku","Boga","który","gładzisz","grzechy","świata","zmiłuj się","nad nami"],"ex":{"w001":"„Agnus Dei” jest zwrotem do Chrystusa: „Baranku Boży”. Łacińskie Agnus ma tu postać mianownika, ale pełni funkcję bezpośredniego wezwania."}},
+    {"id":"s02","tr":"Baranku Boży, który gładzisz grzechy świata: zmiłuj się nad nami.","tb":"normalized","g":["Baranku","Boga","który","gładzisz","grzechy","świata","zmiłuj się","nad nami"],"ex":{"w009":"„Agnus Dei” jest zwrotem do Chrystusa: „Baranku Boży”. Łacińskie Agnus ma tu postać mianownika, ale pełni funkcję bezpośredniego wezwania."}},
+    {"id":"s03","tr":"Baranku Boży, który gładzisz grzechy świata: zmiłuj się nad nami.","tb":"normalized","g":["Baranku","Boga","który","gładzisz","grzechy","świata","zmiłuj się","nad nami"],"ex":{"w017":"„Agnus Dei” jest zwrotem do Chrystusa: „Baranku Boży”. Łacińskie Agnus ma tu postać mianownika, ale pełni funkcję bezpośredniego wezwania."}}
+  ]
+}

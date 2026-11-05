@@ -10,7 +10,7 @@ const responses = [
 		words: ['Deo', 'grátias.'],
 		lemma: 'deus',
 		form: 'Deo',
-		gloss: { pl: 'Bogu', en: 'To God' }
+		gloss: { pl: 'Bogu', en: 'Thanks be to God' }
 	},
 	{
 		id: 'laus-tibi-christe',
@@ -62,26 +62,31 @@ async function wordsAndCard(
 	inspectCard = false
 ) {
 	const part = section(page, response.id);
-	const tokens = part.locator(`button.word[id^="${response.id}.w"]`);
-	await expect(tokens).toHaveCount(response.words.length);
-	expect(
-		await tokens.evaluateAll((nodes) =>
-			nodes.map((node) => {
-				const copy = node.cloneNode(true) as HTMLElement;
-				copy.querySelectorAll('rt').forEach((caption) => caption.remove());
-				return copy.textContent?.trim();
-			})
-		)
-	).toEqual(response.words);
+	const canonicalWords = part.locator(`[id^="${response.id}.w"]`);
+	await expect(canonicalWords).toHaveCount(response.words.length);
+	for (let index = 0; index < response.words.length; index++)
+		await expect(
+			part.locator(`[id="${response.id}.w${String(index + 1).padStart(3, '0')}"]`)
+		).toHaveCount(1);
+	await expect(part.locator('.verse .base')).toHaveText(response.words);
 	await expect(part.locator('a.part-title')).toHaveAttribute(
 		'href',
 		`/app/${lang}/ordinarium/${response.id}`
 	);
 	if (inspectCard) {
-		const word = part.locator(`[id="${response.id}.w001"]`);
+		const sharedThanks = lang === 'en' && response.id === 'deo-gratias-epistolae';
+		const anchor = sharedThanks ? 'w002' : 'w001';
+		const word = part.locator(`button.word[id="${response.id}.${anchor}"]`);
 		await word.click();
 		const dialog = page.getByRole('dialog');
-		await expect(dialog.locator('h2.form')).toHaveText(response.form);
+		await expect(dialog.locator('h2.form')).toHaveText(
+			sharedThanks ? 'Deo grátias' : response.form
+		);
+		if (sharedThanks) {
+			await expect(dialog.locator('.construction-title')).toHaveText(['Deo', 'grátias']);
+			await expect(dialog.locator('.construction-card')).toHaveCount(2);
+			await expect(dialog.locator('a[href="/app/en/lemma?l=gratia"]')).toHaveCount(1);
+		}
 		await expect(dialog.locator('.context-layer .gloss')).toHaveText(response.gloss[lang]);
 		await expect(dialog.locator(`a[href="/app/${lang}/lemma?l=${response.lemma}"]`)).toHaveCount(1);
 		await expect(dialog.locator('.word-analysis')).toContainText(

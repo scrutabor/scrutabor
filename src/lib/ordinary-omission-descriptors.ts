@@ -11,7 +11,9 @@ export interface OrdinarySegmentOmission {
 export type WholeOrdinaryOmission =
 	| { text: 'ordinarium/iudica-me'; reason: 'requiem-iudica' }
 	| { text: 'ordinarium/qui-dixisti'; reason: 'requiem-peace-prayer' }
-	| { text: 'ordinarium/benedictio'; reason: 'requiem-blessing' };
+	| { text: 'ordinarium/benedictio'; reason: 'requiem-blessing' }
+	| { text: 'ordinarium/qui-dixisti'; reason: 'triduum-peace-prayer' }
+	| { text: 'ordinarium/agnus-dei'; reason: 'vigil-agnus-dei' };
 export type OrdinaryOmissionDescriptor = OrdinarySegmentOmission | WholeOrdinaryOmission;
 
 const REQUIEM = [
@@ -24,36 +26,41 @@ function record(value: unknown): value is Record<string, unknown> {
 	return value !== null && typeof value === 'object' && !Array.isArray(value);
 }
 
-/** Exact published alternatives: retention, Lavabo only, or the four Requiem rows. */
+const LAVABO = {
+	text: 'ordinarium/lavabo',
+	segments: ['s09', 's10'],
+	reason: 'lavabo-doxology'
+} as const;
+const TRIDUUM_PEACE = { text: 'ordinarium/qui-dixisti', reason: 'triduum-peace-prayer' } as const;
+const ALTERNATIVES = [
+	[],
+	[LAVABO],
+	[LAVABO, ...REQUIEM],
+	[LAVABO, TRIDUUM_PEACE],
+	[{ text: 'ordinarium/agnus-dei', reason: 'vigil-agnus-dei' }, TRIDUUM_PEACE]
+] as const;
+
+function sameRow(value: unknown, expected: Record<string, unknown>): boolean {
+	if (!record(value) || Object.keys(value).length !== Object.keys(expected).length) return false;
+	return Object.entries(expected).every(([key, wanted]) => {
+		const got = value[key];
+		return Array.isArray(wanted)
+			? Array.isArray(got) &&
+					got.length === wanted.length &&
+					wanted.every((item, index) => got[index] === item)
+			: got === wanted;
+	});
+}
+
+/** Only the published ordered alternatives; no independent calendar rule or new combination. */
 export function validateOrdinarySegmentOmissions(value: unknown): OrdinaryOmissionDescriptor[] {
-	if (Array.isArray(value) && value.length === 4) {
-		validateOrdinarySegmentOmissions(value.slice(0, 1));
-		for (const [index, expected] of REQUIEM.entries()) {
-			const row: unknown = value[index + 1];
-			if (
-				!record(row) ||
-				Object.keys(row).length !== 2 ||
-				row.text !== expected.text ||
-				row.reason !== expected.reason
-			)
-				throw new Error('invalid ordinary segment omission');
-		}
-		return value as OrdinaryOmissionDescriptor[];
-	}
-	if (!Array.isArray(value) || value.length > 1)
-		throw new Error('invalid ordinary segment omissions');
-	for (const row of value) {
-		if (
-			!record(row) ||
-			Object.keys(row).length !== 3 ||
-			row.text !== 'ordinarium/lavabo' ||
-			row.reason !== 'lavabo-doxology' ||
-			!Array.isArray(row.segments) ||
-			row.segments.length !== 2 ||
-			row.segments[0] !== 's09' ||
-			row.segments[1] !== 's10'
+	if (!Array.isArray(value)) throw new Error('invalid ordinary segment omissions');
+	if (
+		!ALTERNATIVES.some(
+			(rows) =>
+				rows.length === value.length && rows.every((row, index) => sameRow(value[index], row))
 		)
-			throw new Error('invalid ordinary segment omission');
-	}
-	return value as OrdinarySegmentOmission[];
+	)
+		throw new Error('invalid ordinary segment omission');
+	return value as OrdinaryOmissionDescriptor[];
 }

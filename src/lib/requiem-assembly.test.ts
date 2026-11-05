@@ -1,15 +1,20 @@
 import { expect, it } from 'vitest';
 import { dismissalData, properData } from './loaders';
-import { loadText, type Segment } from './corpus';
+import type { Segment } from './corpus';
 import table from './data/dismissal.json';
 import { createDismissalLookup, selectedDismissal, validateDismissalPack } from './dismissal';
 import { dayById } from './proprium';
-import { settledSelection, unresolvedPayloadCases } from './ordinary-test-fixtures';
+import {
+	expectWholeBodyOmitted,
+	loadOrdinaryReference,
+	settledSelection,
+	unresolvedPayloadCases
+} from './ordinary-test-fixtures';
 import { ordinaryOmission } from './ordinary-omission';
-import { ordinarySegmentView, omittedOrdinaryCitation } from './ordinary-segment-omissions';
+import { ordinarySegmentView } from './ordinary-segment-omissions';
 import { inMassForm } from './speaker-marks';
 import { voicesInMassForm } from './participation-performance';
-import { requiemBodyContext, requiemLastGospelContext } from './requiem-view';
+import { selectedOrdinaryBodyContext, requiemLastGospelContext } from './requiem-view';
 
 const masses = [
 	'commemoratio-omnium-fidelium-defunctorum',
@@ -35,7 +40,7 @@ it.each(['pl', 'en'] as const)(
 				expect(inMassForm(row, 'cantu').speaker).toBe('sacerdos');
 				expect(voicesInMassForm(row, 'cantu')).toEqual(['secreto', 'cantus']);
 			}
-			expect(requiemBodyContext(agnus)).toBe(agnus.gloss.about);
+			expect(selectedOrdinaryBodyContext(agnus)).toBe(agnus.gloss.about);
 			const dismissal = selectedDismissal(lookup.resolve('2026-11-02', mass), pack)[0];
 			expect(dismissal.doc.title).toBe('Requiéscant in pace');
 			expect(dismissal.doc.segments.flatMap((s) => s.words ?? [])).toHaveLength(10);
@@ -59,21 +64,15 @@ it.each(['pl', 'en'] as const)(
 		const mass = masses[0];
 		const state = settledSelection('2026-11-02', mass, lang);
 		for (const slot of ['iudica-me', 'qui-dixisti', 'benedictio']) {
-			const key = `ordinarium/${slot}`;
-			const loaded = (await loadText(key, lang))!;
-			const original = { key, slug: slot, anchor: slot, doc: loaded.text, gloss: loaded.gloss };
+			const original = await loadOrdinaryReference(slot, lang);
 			const saved = structuredClone(original);
-			expect(ordinaryOmission(slot, state, lang)?.text).toBe(key);
+			expect(ordinaryOmission(slot, state, lang)?.text).toBe(original.key);
 			const view = ordinarySegmentView(slot, original, dayById(mass)!.ordinary_omissions, true);
-			expect(view.body.doc.segments).toEqual([]);
-			expect(view.omitted).toEqual(original.doc.segments.map((s) => s.id));
-			expect(omittedOrdinaryCitation(original, view, `${slot}.w001`, null, '')?.query).toBe(
-				'?w=w001'
-			);
+			expectWholeBodyOmitted(original, view);
 			expect(original).toEqual(saved);
 			for (const [, patch] of unresolvedPayloadCases) {
 				expect(ordinaryOmission(slot, { ...state, ...patch }, lang)).toBeUndefined();
-				expect(ordinaryOmission(slot, state, lang)?.text).toBe(key);
+				expect(ordinaryOmission(slot, state, lang)?.text).toBe(original.key);
 			}
 			const bad = structuredClone(dayById(mass)!.ordinary_omissions);
 			bad[1].text = 'ordinarium/introibo' as (typeof bad)[1]['text'];

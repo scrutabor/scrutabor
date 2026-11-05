@@ -1,0 +1,59 @@
+{
+ "id": "orationes.adoro-te-devote",
+ "source_groups": [
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 154",
+    "scan": "physical PDF p. 168 (one-based)",
+    "section": "Adoro opening",
+    "page_url": "https://obc.opole.pl/Content/12961/10097s.pdf#page=168"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.adoro-te-devote.kuehn1902-pl-s01",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Revised Polish wording basis for the opening act of adoration. The historical clause ‘Kłaniam się Tobie, Boże nieskończony’ is revised against the Latin to express devotion, hiddenness and the divine-nature title, without the historical addition ‘nieskończony’. The page does not print the revised wording verbatim or supply the whole present hymn."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 156",
+    "scan": "physical PDF p. 170 (one-based)",
+    "section": "Część trzecia, single-drop clauses",
+    "page_url": "https://obc.opole.pl/Content/12961/10097s.pdf#page=170"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.adoro-te-devote.kuehn1902-pl-s23",
+     "address": {
+      "kind": "segment",
+      "segment": "s23"
+     },
+     "claim": "Revised Polish wording basis for the single saving drop of the blood. The printed ‘Której kropelka z grzechu wszelakiego’ supplies the relative blood reference and drop; the revision removes the diminutive, restores explicit one and expresses the Latin saving infinitive adjectivally. The from-sin phrase remains with its Latin segment s24. This is not verbatim retention or a whole-hymn basis."
+    },
+    {
+     "id": "use.orationes.adoro-te-devote.kuehn1902-pl-s24",
+     "address": {
+      "kind": "segment",
+      "segment": "s24"
+     },
+     "claim": "Revised Polish wording basis for the single drop’s capacity to cleanse the world from every sin. The printed ‘Oczyścić może każdego grzesznego’ supplies cleansing and ability; the revision restores the Latin whole world instead of every sinner and places the complete from-sin phrase here. This is not verbatim retention or a whole-hymn basis."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

@@ -1,0 +1,67 @@
+{
+ "id": "orationes.adoro-te-devote",
+ "source_groups": [
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 86",
+    "scan": "physical PDF p. 106 (one-based)",
+    "section": "n. 106, Hymn of St Thomas Aquinas, English column",
+    "page_url": "https://archive.org/details/theraccoltaorcol00unknuoft/page/n105/mode/2up"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.adoro-te-devote.raccolta1910-en-s01",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Revised English wording basis for the opening adoration of the hidden Godhead. The printed ‘O Godhead hid, devoutly I adore Thee’ is recast in contemporary order and address; this is a revision, not verbatim retention."
+    },
+    {
+     "id": "use.orationes.adoro-te-devote.raccolta1910-en-s02",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Revised English wording basis for the opening relative clause. The printed ‘Who truly art within the forms before me’ is corrected against the Latin to express hiddenness beneath these forms, retaining true presence and removing the added ‘before me’."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.the-raccolta-1910",
+   "digital_item": "item.raccolta-1910.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 87",
+    "scan": "physical PDF p. 107 (one-based)",
+    "section": "n. 106, Hymn of St Thomas Aquinas, English column",
+    "page_url": "https://archive.org/details/theraccoltaorcol00unknuoft/page/n106/mode/2up"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.adoro-te-devote.raccolta1910-en-s23",
+     "address": {
+      "kind": "segment",
+      "segment": "s23"
+     },
+     "claim": "Revised English wording basis for the single saving drop of Christ’s blood. The printed ‘Of which a single drop, for sinners spilt’ is revised against the Latin: the unsupported spilling clause is removed, the blood antecedent is explicit, and the saving expression is adjectival rather than infinitival. This is a revision, not verbatim retention."
+    },
+    {
+     "id": "use.orationes.adoro-te-devote.raccolta1910-en-s24",
+     "address": {
+      "kind": "segment",
+      "segment": "s24"
+     },
+     "claim": "Revised English wording basis for the single drop’s capacity to free the whole world from every sin. The printed ‘Can purge the entire world from all its guilt’ is revised to express capacity and deliverance from wrongdoing itself; it does not assert actual universal salvation."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

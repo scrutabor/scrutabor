@@ -110,10 +110,10 @@ it('uses actual canonical prescription inputs, without treating required or unre
 	expect(ordinaryOmission('gloria', state, 'en')).toBeDefined();
 });
 
-it('does not create an application-side rule for any other Ordinary entry', () => {
+it('does not create an application-side rule beyond the received omitted entries', () => {
 	const state = settled('2026-04-04', 'vigilia-paschalis', 'en');
 	for (const entry of ORDO.flatMap((movement) => movement.entries)) {
-		if (entry.id !== 'gloria' && entry.id !== 'credo')
+		if (!['gloria', 'credo', 'agnus-dei', 'qui-dixisti'].includes(entry.id))
 			expect(ordinaryOmission(entry.id, state, 'en'), entry.id).toBeUndefined();
 	}
 });

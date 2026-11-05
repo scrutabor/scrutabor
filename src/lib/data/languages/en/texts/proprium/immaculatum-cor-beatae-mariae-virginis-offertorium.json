@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The offertorium of the formulary “Immaculate Heart of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"My spirit has rejoiced in God my Savior; because He Who is mighty has done great things for me, and holy is His name.","g":["Has rejoiced",null,null,"in","God","Savior","my","for","has done","for me","great things","He who","mighty","is","and","holy","name","His"],"a":[{"s":1,"n":2,"a":0,"g":"my spirit"}]}
+    {"id":"s01","tr":"My spirit has rejoiced in God my Savior; because He who is mighty has done great things for me, and holy is His name.","g":["Has rejoiced",null,null,"in","God",null,null,"for","has done","for me","great things","He who","mighty","is","and","holy","name","His"],"a":[{"s":1,"n":2,"a":0,"g":"my spirit"},{"s":5,"n":2,"a":0,"g":"my Savior"}]}
   ]
 }

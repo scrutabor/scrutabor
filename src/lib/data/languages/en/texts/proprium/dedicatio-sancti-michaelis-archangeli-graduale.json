@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The graduale of the formulary “Dedication of Saint Michael the Archangel” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Bless the Lord, all you His angels, mighty in strength, who carry out His word. Bless the Lord, O my soul; and all that is within me, His holy name.","g":["Bless","the Lord","all","Angels","His","mighty","in strength","who","do","word","His","bless",null,null,"the Lord","and","all","inward parts","my","name","holy","His"],"a":[{"s":12,"n":2,"a":0,"g":"my soul"}]}
+    {"id":"s01","tr":"Bless the Lord, all you His angels, mighty in strength, who carry out His word. Bless the Lord, O my soul; and all that is within me, His holy name.","g":["Bless","the Lord","all","Angels","His","mighty","in strength","who","do","word","His","bless",null,null,"the Lord","and",null,null,null,"name","holy","His"],"a":[{"s":12,"n":2,"a":0,"g":"my soul"},{"s":16,"n":3,"a":1,"g":"all that is within me"}]}
   ]
 }

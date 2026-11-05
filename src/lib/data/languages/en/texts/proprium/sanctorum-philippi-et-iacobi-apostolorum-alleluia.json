@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The alleluia of the formulary “Saints Philip and James, Apostles” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Alleluia, alleluia. The heavens will praise Your wonders, O Lord, and Your truth also in the church of the saints. Alleluia. Have I been with you so long a time, and you have not known Me? Philip, whoever sees Me sees My Father also. Alleluia.","g":["Alleluia","alleluia","Will praise","the heavens","wonders","Your","Lord","and indeed",null,null,"in","the church","of the saints","Alleluia","So long","a time","with you","have I been","and",null,null,"Me","Philip","he who","sees","Me","sees","also",null,null,"Alleluia"],"a":[{"s":8,"n":2,"a":0,"g":"Your truth"},{"s":19,"n":2,"a":1,"g":"have you not known"},{"s":28,"n":2,"a":0,"g":"My Father"}]}
+    {"id":"s01","tr":"Alleluia, alleluia. The heavens will praise Your wonders, O Lord, and Your truth also in the church of the saints. Alleluia. Have I been with you so long a time, and you have not known Me? Philip, whoever sees Me sees My Father also. Alleluia.","g":["Alleluia","alleluia","Will praise","the heavens",null,null,"Lord","and indeed",null,null,"in","the church","of the saints","Alleluia","So long","a time","with you","have I been","and",null,null,"Me","Philip","he who","sees","Me","sees","also",null,null,"Alleluia"],"a":[{"s":4,"n":2,"a":0,"g":"Your wonders"},{"s":8,"n":2,"a":0,"g":"Your truth"},{"s":19,"n":2,"a":1,"g":"have you not known"},{"s":28,"n":2,"a":0,"g":"My Father"}]}
   ]
 }

@@ -3,6 +3,6 @@
   "language":"en",
   "about":"The response at the end of the Epistle.",
   "seg":[
-    {"id":"s01","tr":"Thanks be to God.","tc":[173],"tb":"exact","g":["To God","thanks"],"ex":{"w002":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}}
+    {"id":"s01","tr":"Thanks be to God.","tc":[173],"tb":"exact","g":[null,null],"a":[{"s":0,"n":2,"a":1,"g":"Thanks be to God"}],"ex":{"w002":"The response leaves the verb unspoken. Its full sense is “we give thanks to God”."}}
   ]
 }

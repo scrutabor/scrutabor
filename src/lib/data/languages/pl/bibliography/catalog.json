@@ -30,8 +30,23 @@
    "title": "Droga do Nieba"
   },
   {
+   "id": "work.nawiedzania-najswietszego-sakramentu",
+   "responsible": "Alfonso Maria de’ Liguori; unnamed Polish translator/compiler",
+   "title": "Nawiedzania Najświętszego Sakramentu i niepokalanie poczętej Najświętszej Maryi Panny na każdy dzień miesiąca"
+  },
+  {
+   "id": "work.nojszewski-liturgia-rzymska",
+   "responsible": "Antoni Nojszewski",
+   "title": "Liturgia rzymska"
+  },
+  {
    "id": "work.pamiatka-missyi-dla-ludu-katolickiego",
    "title": "Pamiątka Missyi dla ludu katolickiego"
+  },
+  {
+   "id": "work.siedlecki-spiewnik",
+   "responsible": "Jan Siedlecki; W. Świerczek; Bolesław Wallek Walewski",
+   "title": "Śpiewnik kościelny z melodiami na 2 głosy"
   }
  ],
  "editions": [
@@ -129,6 +144,41 @@
    }
   },
   {
+   "id": "edition.nawiedzania-najswietszego-sakramentu.1889-chicago",
+   "work": "work.nawiedzania-najswietszego-sakramentu",
+   "title": "Nawiedzania Najświętszego Sakramentu i niepokalanie poczętej Najświętszej Maryi Panny na każdy dzień miesiąca",
+   "place": "Chicago",
+   "publisher": "Władysław Dyniewicz",
+   "year": "1889",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The exact four praise clauses were published in this U.S. edition in 1889. The Polish translator/compiler is unnamed on the inspected title, approval and front matter. The anonymous contribution is out of the ordinary Polish term and the U.S. publication term. No licence for modern editorial additions or the digitized manifestation is asserted."
+   }
+  },
+  {
+   "id": "edition.nojszewski-liturgia-rzymska.1914-drugie",
+   "work": "work.nojszewski-liturgia-rzymska",
+   "title": "Liturgia rzymska",
+   "edition_statement": "Wydanie drugie uzupełnione",
+   "place": "Warszawa",
+   "publisher": "Druk Piotra Laskauera",
+   "year": "1914",
+   "publication_type": "scholarly_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The inspected 1914 edition attests the specified Polish Gloria petition. Nojszewski died in 1921; his contribution is outside the ordinary Polish economic term, and the 1914 published contribution is outside the maximum U.S. term. No republication licence for a modern facsimile or unrelated commentary is asserted."
+   }
+  },
+  {
    "id": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "work": "work.pamiatka-missyi-dla-ludu-katolickiego",
    "title": "Pamiątka Missyi dla ludu katolickiego",
@@ -142,6 +192,29 @@
    "rights": {
     "status": "public-domain",
     "basis": "The Śląska Biblioteka Cyfrowa record identifies this unattributed 1903 edition as public domain. Only page-verified historical wording is used; this statement does not grant rights in scan images or later editions."
+   }
+  },
+  {
+   "id": "edition.siedlecki-spiewnik.1928-jubileuszowe",
+   "work": "work.siedlecki-spiewnik",
+   "title": "Śpiewnik kościelny z melodiami na 2 głosy",
+   "edition_statement": "Wydanie jubileuszowe (1878–1928)",
+   "contributors": [
+    "W. Świerczek C.M.",
+    "Bolesław Wallek Walewski",
+    "Tadeusz Karyłowski (words of hymn 353)"
+   ],
+   "place": "Kraków",
+   "publisher": "Księża Misjonarze",
+   "year": "1928",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Hymn 353 credits Tadeusz Karyłowski for its words. His verbal contribution, published by 1928, is out of economic copyright term in Poland and the United States. No permission to republish the musical setting, scans or later revisions is asserted."
    }
   }
  ],
@@ -201,12 +274,39 @@
    "access": "open"
   },
   {
+   "id": "item.nawiedzania-najswietszego-sakramentu.1889-chicago.scan",
+   "edition": "edition.nawiedzania-najswietszego-sakramentu.1889-chicago",
+   "repository": "Biblioteka Uniwersytecka w Toruniu / KPBC; Internet Archive mirror",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/kpbc.umk.pl.Magazyn_288_07_HD_008_200378",
+   "scan_url": "https://archive.org/download/kpbc.umk.pl.Magazyn_288_07_HD_008_200378/Magazyn_288_07_HD_008_jp2.zip",
+   "access": "open"
+  },
+  {
+   "id": "item.nojszewski-liturgia-rzymska.1914-drugie.scan",
+   "edition": "edition.nojszewski-liturgia-rzymska.1914-drugie",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/liturgia-rzymska",
+   "scan_url": "https://archive.org/download/liturgia-rzymska/Liturgia_rzymska_objasniona_przez_X_Antoniego_Nojszewskiego_Warszawa_1914_jp2.zip",
+   "access": "open"
+  },
+  {
    "id": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "repository": "Śląska Biblioteka Cyfrowa",
    "kind": "scan",
    "record_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
    "scan_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+   "access": "open"
+  },
+  {
+   "id": "item.siedlecki-spiewnik.1928-jubileuszowe.scan",
+   "edition": "edition.siedlecki-spiewnik.1928-jubileuszowe",
+   "repository": "Wielkopolska Biblioteka Cyfrowa; Biblioteka PTPN",
+   "kind": "scan",
+   "record_url": "https://www.wbc.poznan.pl/dlibra/publication/538983/edition/457839/content",
+   "scan_url": "https://www.wbc.poznan.pl/Content/457839/download/",
    "access": "open"
   }
  ]

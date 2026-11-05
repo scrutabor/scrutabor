@@ -38,6 +38,26 @@
     }
    ],
    "verified_on": "2026-10-30"
+  },
+  {
+   "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
+   "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
+   "role": "official_text",
+   "locator": {
+    "printed": "p. 521",
+    "scan": "PDF p. 542",
+    "section": "n. 675, Praeterea, si addatur ter"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.cor-iesu.latin-text.enchiridion1952",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The page prints the complete invocation once as Cor Iesu sacratissimum, miserere nobis. The present edition adds house accents and keeps its two display segments, full stops and sentence capital Miserere. Three repetitions are described in the introduction. The conditional threefold addition and indulgence are historical context, not an unconditional rubric for every Mass."
+    }
+   ],
+   "verified_on": "2026-11-04"
   }
  ],
  "witnesses": []

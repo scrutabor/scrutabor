@@ -1,7 +1,7 @@
 {
   "id":"ordinarium.hanc-igitur",
   "language":"en",
-  "about":"The priest says this prayer secretly, holding his hands spread over the offerings. He asks God to accept this offering, order our days in peace, deliver us from damnation and number us among the elect.",
+  "about":"Holding his hands spread over the offerings, the priest quietly asks God to accept this offering, order our days in peace, deliver us from damnation and number us among the elect.",
   "seg":[
     {"id":"s01","nr":"The priest holds his hands spread over the offerings, and a little before the Consecration the server warns the faithful with the bell."},
     {"id":"s02","tr":"We therefore ask You, Lord, to accept with favor this offering of our service and of Your whole household;","tc":[206],"tb":"revised","g":["This","therefore","oblation",null,null,"and","also",null,null,null,"we beseech","Lord","that You","appeased","accept"],"a":[{"s":3,"n":2,"a":0,"g":"of our service"},{"s":7,"n":3,"a":1,"g":"of Your whole household"}]},

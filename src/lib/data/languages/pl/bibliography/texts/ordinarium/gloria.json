@@ -2,6 +2,50 @@
  "id": "ordinarium.gloria",
  "source_groups": [
   {
+   "edition": "edition.nawiedzania-najswietszego-sakramentu.1889-chicago",
+   "digital_item": "item.nawiedzania-najswietszego-sakramentu.1889-chicago.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 153",
+    "scan": "skan 89 (obraz 0088; rozkładówka s. 152–153)",
+    "section": "Pierwsza część Ofiary Mszy św. — Gloria",
+    "page_url": "https://archive.org/details/kpbc.umk.pl.Magazyn_288_07_HD_008_200378"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ordinarium.gloria.s04.nawiedzania-najswietszego-sakramentu.1889-chicago",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Strona poświadcza cały ciąg czterech wezwań: „Chwalimy Cię, błogosławimy Cię, wielbimy Cię, wysławiamy Cię”. Zachowano słownictwo; przecinki zastąpiono kropkami i dostosowano wielkie litery."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.nojszewski-liturgia-rzymska.1914-drugie",
+   "digital_item": "item.nojszewski-liturgia-rzymska.1914-drugie.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 62",
+    "scan": "skan 31 (obraz 0030; rozkładówka s. 62–63)",
+    "section": "8-o. Gloria in excelsis Deo",
+    "page_url": "https://archive.org/details/liturgia-rzymska"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ordinarium.gloria.s10.nojszewski-liturgia-rzymska.1914-drugie",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Strona poświadcza dokładne brzmienie prośby: „Który gładzisz grzechy świata, przyjm błaganie nasze.” Połączono wyłącznie podział wiersza druku. Pozostałe segmenty Glorii i glosy międzywierszowe nie są przypisane temu źródłu."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
@@ -18,54 +62,10 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Historyczny wariant dziękczynienia: „Dzięki składamy Tobie dla wielkiej chwały Twojej.” Obecne „bo wielka jest chwała Twoja” jest rewizją składni, nie dosłownym odczytem tej strony."
+     "claim": "Historyczna podstawa pełnego obecnego brzmienia segmentu: „Dzięki składamy Tobie dla wielkiej chwały Twojej.” Brzmienie, wielkie litery i końcowa kropka są zgodne z drukiem."
     }
    ],
-   "verified_on": "2026-10-26"
-  },
-  {
-   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
-   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "druk. s. 46",
-    "scan": "PDF s. 49",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
-    "section": "Na Gloria — prośba o przyjęcie modlitwy"
-   },
-   "entries": [
-    {
-     "id": "use.pl.e2f3ce0c300bd37cd36b",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Historyczny wariant prośby: „Który gładzisz grzechy świata, przyjmij prośby nasze!” Druk ma liczbę mnogą „prośby” i formę „przyjmij”; nie poświadcza dokładnie obecnego „przyjm błaganie nasze”."
-    }
-   ],
-   "verified_on": "2026-10-26"
-  },
-  {
-   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
-   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "druk. s. 46",
-    "scan": "PDF s. 49",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
-    "section": "Na Gloria — trzy wezwania pochwalne"
-   },
-   "entries": [
-    {
-     "id": "use.pl.af90bee5fee85e68d016",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Częściowy historyczny świadek brzmienia: „Chwalimy Cię. Błogosławimy Tobie. Cześć oddajemy Tobie.” Druk nie poświadcza odrębnego czwartego wezwania ani pełnego obecnego ciągu czterech zdań."
-    }
-   ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-04"
   },
   {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
@@ -84,10 +84,10 @@
       "kind": "segment",
       "segment": "s12"
      },
-     "claim": "Historyczny świadek trzykrotnego „sam”: „Boś ty sam Święty, Tyś sam Pan, Tyś sam Najwyższy, Jezu Chryste”. Druk przechodzi bez kropki po „Chryste” do „z Duchem świętym”; nie poświadcza dosłownie obecnego ciągu z „tylko Tyś”."
+     "claim": "Historyczna podstawa pełnego obecnego brzmienia segmentu: „Boś Ty sam święty, Tyś sam Pan, Tyś sam Najwyższy, Jezu Chryste.” Zachowano słownictwo druku; znormalizowano wielkie litery i zamknięcie segmentu kropką przed dalszym „z Duchem świętym”."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-04"
   },
   {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
@@ -165,6 +165,50 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — prośba o przyjęcie modlitwy"
+   },
+   "entries": [
+    {
+     "id": "use.pl.e2f3ce0c300bd37cd36b",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczny wariant prośby: „Który gładzisz grzechy świata, przyjmij prośby nasze!” Druk ma liczbę mnogą „prośby” i formę „przyjmij”; nie poświadcza dokładnie obecnego „przyjm błaganie nasze”."
+    }
+   ],
+   "verified_on": "2026-10-26"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "druk. s. 46",
+    "scan": "PDF s. 49",
+    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego",
+    "section": "Na Gloria — trzy wezwania pochwalne"
+   },
+   "entries": [
+    {
+     "id": "use.pl.af90bee5fee85e68d016",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Częściowy historyczny świadek brzmienia: „Chwalimy Cię. Błogosławimy Tobie. Cześć oddajemy Tobie.” Druk nie poświadcza odrębnego czwartego wezwania ani pełnego obecnego ciągu czterech zdań."
+    }
+   ],
+   "verified_on": "2026-10-26"
   }
  ],
  "witnesses": [],

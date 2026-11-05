@@ -1,7 +1,7 @@
 {
   "id":"proprium.commemoratio-omnium-fidelium-defunctorum-missa-i-sequentia",
   "language":"en",
-  "about":"The sequence Dies irae belongs to all three formularies for the Commemoration of All the Faithful Departed. When a priest celebrates the three Masses without interruption, he must say it only at the principal Mass, or at the first Mass if none is principal. He may omit it at the other Masses unless they are sung (1962 Roman Missal, p. 722).",
+  "about":"The sequence Dies irae belongs to all three formularies for the Commemoration of All the Faithful Departed. When a priest celebrates the three Masses without interruption, he must say it only at the principal Mass, or at the first Mass if none is principal. At the other Masses the priest may omit the sequence unless those Masses are sung (1962 Roman Missal, p. 722).",
   "seg":[
     {"id":"s01","tr":"The day of wrath, that day, will dissolve the world in ashes, as David bears witness with the Sibyl.","g":["Day","of wrath","day","that","will dissolve","the world","into","ashes","as witness","David","with","the Sibyl"]},
     {"id":"s02","tr":"How great a trembling there will be when the Judge is to come. He will examine all things strictly!","g":["how great","the trembling",null,null,"when","the Judge",null,null,"all things","strictly","to examine"],"a":[{"s":2,"n":2,"a":1,"g":"will be"},{"s":6,"n":2,"a":1,"g":"will come"}],"ex":{"w023":"The future participle describes the Judge of the previous line, “iudex” (w018). The edition prints a full stop after “ventúrus”, so this exclamation is a sentence of its own with the Judge understood: He who is to examine all things strictly."}},
@@ -21,6 +21,6 @@
     {"id":"s16","tr":"When the accursed are confounded and consigned to fierce flames, call me with the blessed.","g":[null,null,"to the flames","fierce","consigned","call","me","with","the blessed"],"a":[{"s":0,"n":2,"a":0,"g":"When the accursed are confounded"}]},
     {"id":"s17","tr":"I pray, suppliant and prostrate, with a heart contrite as ashes: take care of my end.","g":["I pray","suppliant","and","prostrate","heart","contrite","as","ashes","take","care","of my","end"]},
     {"id":"s18","tr":"Tearful will be that day on which guilty man will rise from the ashes to be judged.","g":["tearful","day","that","on which","will rise","from","ashes","to be judged","man","guilty"]},
-    {"id":"s19","tr":"Spare him therefore, O God. Kind Lord Jesus, grant them rest. Amen.","g":["him","therefore","spare","God","kind","Jesus","Lord","grant","them","rest","amen"]}
+    {"id":"s19","tr":"Spare him therefore, O God. Kind Lord Jesus, grant them rest. Amen.","g":["him","therefore","spare","God","kind","Jesus","Lord","grant","them","rest","Amen"]}
   ]
 }

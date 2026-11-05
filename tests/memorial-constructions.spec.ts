@@ -16,7 +16,7 @@ const constructions = [
 	{
 		language: 'en',
 		route: 'formularium/sancti-stephani-protomartyris',
-		gloss: 'memory of Your Saints',
+		gloss: 'memory of Your saints',
 		words: 3
 	},
 	{

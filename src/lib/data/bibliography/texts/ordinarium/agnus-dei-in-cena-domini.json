@@ -1,0 +1,149 @@
+{
+ "id": "ordinarium.agnus-dei-in-cena-domini",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 162, no. 28",
+    "scan": "leaf n241 / physical PDF p. 242",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n241/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-in-cena-domini.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Three complete Agnus Dei invocations, each ending miserere nobis, are printed consecutively for Feria V in Cena Domini. The following rubric omits the kiss of peace and Domine Iesu Christe, qui dixisti."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 162, no. 28",
+    "scan": "leaf n241 / physical PDF p. 242",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n241/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.formulary.feria-v-in-cena-domini.communion-assembly.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Three mercy invocations replace the ordinary Agnus recension; omit Qui dixisti and the kiss of peace. Pax Domini and the next two Communion preparation prayers remain under the instruction to continue the Canon except for the stated changes."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. XXXIV",
+    "section": "Rubricae generales 511 i, 512, 513 e and 514",
+    "scan": "leaf n39 / physical PDF p. 40",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-in-cena-domini.recitation-voice.mr1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "At low Mass the priest recites Agnus Dei clara. At solemn and sung Mass he recites it secreto; this distinct priestly recitation is retained alongside the audible singing of the Ordinary."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "corroborating_latin_witness",
+   "locator": {
+    "printed": "p. 159, no. 28",
+    "scan": "physical PDF p. 240",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n239/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-in-cena-domini.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Three complete Agnus Dei invocations, each ending miserere nobis, are printed consecutively for Feria V in Cena Domini. The following rubric omits the kiss of peace and Domine Iesu Christe, qui dixisti."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 153–154",
+    "scan": "physical PDF pp. 234–235",
+    "section": "De Missa solemni vespertina in Cena Domini, introductory prescription and no. 2",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n233/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-in-cena-domini.evening-and-permitted-low.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The evening Mass of the Lord’s Supper is solemn; where the clergy and priests required for that form are lacking, the usual Missa cantata rite is prescribed. Other Masses are forbidden except the Low Masses that the local ordinary may permit for the stated pastoral need and within the same evening hours. Low-Mass delivery metadata describes the permitted case, not an unrestricted choice of form."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 159, no. 28",
+    "scan": "physical PDF p. 240",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n239/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.formulary.feria-v-in-cena-domini.communion-assembly.vatican1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Three mercy invocations replace the ordinary Agnus recension; omit Qui dixisti and the kiss of peace. Pax Domini and the next two Communion preparation prayers remain under the instruction to continue the Canon except for the stated changes."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50",
+   "digital_item": "item.sacra-rituum-congregatio.de-musica-sacra.1958-aas50.vatican",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "pp. 639–640, 642–643",
+    "scan": "physical PDF pp. 639–640, 642–643",
+    "section": "De musica sacra et sacra liturgia 25 b, 26 and 31 c",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-50-1958-ocr.pdf#page=639"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.agnus-dei-in-cena-domini.participation.dms1958",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The faithful may sing Agnus Dei with the Ordinary at the second participation degree, also at Missa cantata. At low Mass they may recite it with the celebrant at the third degree. This permission neither asserts actual congregational participation nor replaces the celebrant’s distinct recitation."
+    }
+   ],
+   "verified_on": "2026-11-04"
+  }
+ ],
+ "witnesses": []
+}
