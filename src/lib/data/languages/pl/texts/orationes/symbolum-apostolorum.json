@@ -1,12 +1,12 @@
 {
   "id":"orationes.symbolum-apostolorum",
   "language":"pl",
-  "about":"Skład Apostolski jest starożytnym symbolem chrzcielnym Kościoła rzymskiego, tradycyjnie ujmowanym w dwunastu artykułach. W pierwszej osobie wyznaje wiarę w Boga Ojca, Jezusa Chrystusa i Ducha Świętego, a następnie w Kościół, odpuszczenie grzechów, zmartwychwstanie ciała i życie wieczne. Ta recenzja zachowuje powtórzone Credo przed artykułami o Duchu Świętym.",
+  "about":"Skład Apostolski jest starożytnym symbolem chrzcielnym Kościoła rzymskiego, tradycyjnie ujmowanym w dwunastu artykułach. W pierwszej osobie wyznaje wiarę w Boga Ojca, Jezusa Chrystusa i Ducha Świętego, a następnie w Kościół, odpuszczenie grzechów, zmartwychwstanie ciała i życie wieczne. W tej redakcji Credo powtarza się przed artykułami o Duchu Świętym.",
   "seg":[
     {"id":"s01","tr":"Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi.","tc":[119],"tb":"normalized","g":["Wierzę","w","Boga","Ojca","wszechmogącego","Stworzyciela","nieba","i","ziemi"]},
     {"id":"s02","tr":"I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego,","tc":[119],"tb":"normalized","g":["i","w","Jezusa","Chrystusa","Syna","Jego","jedynego","Pana","naszego"]},
     {"id":"s03","tr":"który się począł z Ducha Świętego, narodził się z Maryi Panny,","tc":[119],"tb":"normalized","g":["który",null,null,"z","Ducha","Świętego","narodzony","z","Maryi","Dziewicy"],"a":[{"s":1,"n":2,"a":0,"g":"został poczęty"}]},
-    {"id":"s04","tr":"umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion,","tc":[119],"tb":"normalized","g":["umęczony","pod","Poncjuszem","Piłatem","ukrzyżowany","umarłszy","i","pogrzebany"]},
+    {"id":"s04","tr":"umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion,","tc":[119],"tb":"normalized","g":["umęczony","pod","Poncjuszem","Piłatem","ukrzyżowany","umarł","i","pogrzebany"]},
     {"id":"s05","tr":"zstąpił do piekieł,","tc":[119],"tb":"normalized","g":["zstąpił","do","otchłani"]},
     {"id":"s06","tr":"trzeciego dnia zmartwychwstał,","tc":[119],"tb":"normalized","g":["trzeciego","dnia","zmartwychwstał","spośród","umarłych"]},
     {"id":"s07","tr":"wstąpił na niebiosa,","tc":[119],"tb":"normalized","g":["wstąpił","do","niebios"]},

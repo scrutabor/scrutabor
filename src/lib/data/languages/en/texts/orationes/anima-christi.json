@@ -1,7 +1,7 @@
 {
   "id":"orationes.anima-christi",
   "language":"en",
-  "about":"The Anima Christi is a Christ-centered devotional prayer built from brief invocations. It asks Christ’s soul, body, blood, the water from his side, and his Passion for sanctification, salvation, inebriation, cleansing, and strength, and asks Jesus to hear, hide the speaker within his wounds, defend, call at the hour of death, and receive the speaker into everlasting praise with the saints.",
+  "about":"The Anima Christi is a Christ-centered devotional prayer built from brief invocations. It asks Christ’s soul to sanctify the speaker, His body to save, His blood to inebriate, the water from His side to wash, and His Passion to strengthen. It then asks Jesus to hear, to hide the speaker within His wounds, not to let the speaker be parted from Him, to defend, to call at the hour of death, and to bid the speaker come to Him and praise Him with the saints forever.",
   "seg":[
     {"id":"s01","tr":"Soul of Christ, sanctify me.","tc":[57],"tb":"exact","g":["Soul","of Christ","sanctify","me"]},
     {"id":"s02","tr":"Body of Christ, save me.","tc":[57],"tb":"exact","g":["body","of Christ","save","me"]},

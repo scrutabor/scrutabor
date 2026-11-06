@@ -18646,6 +18646,13 @@
      ],
      "texts": [
       {
+       "id": "orationes.te-deum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      },
+      {
        "id": "ordinarium.adiutorium",
        "roles": [
         "historical_wording_basis"
@@ -18718,6 +18725,13 @@
       "historical_wording_comparator"
      ],
      "texts": [
+      {
+       "id": "ordinarium.agnus-dei",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
+      },
       {
        "id": "ordinarium.agnus-dei-defunctorum",
        "roles": [

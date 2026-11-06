@@ -1,0 +1,55 @@
+{
+ "id": "ordinarium.agnus-dei",
+ "source_groups": [
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 73",
+    "scan": "physical PDF p. 85"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.agnus-dei.s03.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English Agnus mercy invocation underlying this received formula. The printed who takest is recast as You take; punctuation is modernized. The selected contemporary sentence is a revision, not a verbatim historical quotation."
+    },
+    {
+     "id": "use.en.ordinarium.agnus-dei.s04.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English Agnus peace invocation underlying this received formula. The printed who takest is recast as You take and give us peace as grant us peace; punctuation is modernized. The selected contemporary sentence is a revision, not a verbatim historical quotation."
+    }
+   ],
+   "verified_on": "2026-11-05"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 72–73",
+    "scan": "physical PDF pp. 84–85"
+   },
+   "entries": [
+    {
+     "id": "use.en.ordinarium.agnus-dei.s02.wording",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English Agnus mercy invocation underlying this received formula. The printed who takest is recast as You take; punctuation is modernized. The selected contemporary sentence is a revision, not a verbatim historical quotation."
+    }
+   ],
+   "verified_on": "2026-11-05"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

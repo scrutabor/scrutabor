@@ -1,10 +1,10 @@
 {
   "id":"orationes.agimus-tibi-gratias",
   "language":"en",
-  "about":"The Agimus tibi gratias is a short thanksgiving traditionally said after a meal. Those gathered thank almighty God for all his benefits and confess that he lives and reigns forever.",
+  "about":"The Agimus tibi gratias is a short thanksgiving traditionally said after a meal. Those gathered thank almighty God for all His benefits and confess that He lives and reigns forever.",
   "seg":[
-    {"id":"s01","tr":"We give you thanks, almighty God,","tc":[36],"tb":"revised","g":["We give","to You","thanks","almighty","God"],"ex":{"w001":"With “grátias”, it forms the fixed expression “grátias ágere” — to give thanks."}},
-    {"id":"s02","tr":"for all your benefits:","tc":[36],"tb":"revised","g":["for","all",null,null],"a":[{"s":2,"n":2,"a":0,"g":"Your benefits"}]},
+    {"id":"s01","tr":"We give You thanks, almighty God,","tc":[36],"tb":"revised","g":["We give","to You","thanks","almighty","God"],"ex":{"w001":"With “grátias”, it forms the fixed expression “grátias ágere” — to give thanks."}},
+    {"id":"s02","tr":"for all Your benefits:","tc":[36],"tb":"revised","g":["for","all",null,null],"a":[{"s":2,"n":2,"a":0,"g":"Your benefits"}]},
     {"id":"s03","tr":"who live and reign forever and ever. Amen.","tc":[36],"tb":"revised","g":["Who","live","and","reign","for","ages","of ages","Amen"]}
   ]
 }

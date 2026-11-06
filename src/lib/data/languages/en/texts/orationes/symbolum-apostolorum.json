@@ -3,16 +3,16 @@
   "language":"en",
   "about":"The Apostles’ Creed is the ancient baptismal symbol of the Church of Rome, traditionally arranged in twelve articles. In the first person it professes faith in God the Father, Jesus Christ, and the Holy Spirit, and then professes the Church, forgiveness of sins, resurrection of the body, and everlasting life. This recension retains a repeated Credo before the articles concerning the Holy Spirit.",
   "seg":[
-    {"id":"s01","tr":"I believe in God, the Father Almighty, Creator of heaven and earth;","tc":[120,121],"tb":"revised","g":["I believe","into","God","the Father","almighty","Creator","of heaven","and","of earth"]},
-    {"id":"s02","tr":"and in Jesus Christ, His only Son, our Lord:","tc":[120,121],"tb":"revised","g":["and","into","Jesus","Christ","the Son","His","only",null,null],"a":[{"s":7,"n":2,"a":0,"g":"our Lord"}]},
+    {"id":"s01","tr":"I believe in God, the Father Almighty, Creator of heaven and earth;","tc":[120,121],"tb":"revised","g":["I believe","in","God","the Father","almighty","Creator","of heaven","and","of earth"]},
+    {"id":"s02","tr":"and in Jesus Christ, His only Son, our Lord:","tc":[120,121],"tb":"revised","g":["and","in","Jesus","Christ",null,null,null,null,null],"a":[{"s":4,"n":3,"a":0,"g":"His only Son"},{"s":7,"n":2,"a":0,"g":"our Lord"}]},
     {"id":"s03","tr":"who was conceived by the Holy Spirit, born of the Virgin Mary,","tc":[120,121],"tb":"revised","g":["who",null,null,"by",null,null,"born","of","Mary","the Virgin"],"a":[{"s":1,"n":2,"a":0,"g":"was conceived"},{"s":4,"n":2,"a":0,"g":"the Holy Spirit"}]},
-    {"id":"s04","tr":"suffered under Pontius Pilate, was crucified; died, and was buried.","tc":[120,121],"tb":"revised","g":["having suffered","under","Pontius","Pilate","crucified","having died","and","buried"]},
+    {"id":"s04","tr":"suffered under Pontius Pilate, was crucified, died, and was buried;","tc":[120,121],"tb":"revised","g":["having suffered","under","Pontius","Pilate","crucified","having died","and","buried"]},
     {"id":"s05","tr":"He descended into hell;","tc":[120,121],"tb":"revised","g":["descended","to","the realm of the dead"]},
     {"id":"s06","tr":"the third day He rose again from the dead;","tc":[120,121],"tb":"revised","g":["on the third","day","rose again","from","the dead"]},
     {"id":"s07","tr":"He ascended into heaven,","tc":[120,121],"tb":"revised","g":["ascended","into","heaven"]},
     {"id":"s08","tr":"sits at the right hand of God the Father Almighty;","tc":[120,121],"tb":"revised","g":["sits","at","the right hand","of God","the Father","almighty"]},
     {"id":"s09","tr":"from thence He shall come to judge the living and the dead.","tc":[120,121],"tb":"revised","g":["from there",null,null,"to judge","the living","and","the dead"],"a":[{"s":1,"n":2,"a":0,"g":"shall come"}]},
-    {"id":"s10","tr":"I believe in the Holy Spirit,","tc":[120,121],"tb":"revised","g":["I believe","into",null,null],"a":[{"s":2,"n":2,"a":0,"g":"the Holy Spirit"}]},
+    {"id":"s10","tr":"I believe in the Holy Spirit,","tc":[120,121],"tb":"revised","g":["I believe","in",null,null],"a":[{"s":2,"n":2,"a":0,"g":"the Holy Spirit"}]},
     {"id":"s11","tr":"the Holy Catholic Church, the communion of Saints,","tc":[120,121],"tb":"revised","g":["holy","Church","catholic","of saints","communion"]},
     {"id":"s12","tr":"the forgiveness of sins, the resurrection of the body, and the life everlasting. Amen.","tc":[120,121],"tb":"revised","g":["forgiveness","of sins","of the body","resurrection","life","everlasting","Amen"]}
   ]

@@ -1,12 +1,12 @@
 {
   "id":"orationes.regina-caeli",
   "language":"pl",
-  "about":"Antyfona maryjna okresu wielkanocnego, która stoi od komplety Wielkiej Soboty do soboty po Zesłaniu Ducha Świętego i w tym okresie zastępuje Anioła Pańskiego. Wzywa Najświętszą Maryję Pannę do radości ze zmartwychwstania Jej Syna i prosi Ją o modlitwę za nami. Po antyfonie następuje werset z odpowiedzią, wyznający prawdziwe zmartwychwstanie Pana.",
+  "about":"Antyfona maryjna okresu wielkanocnego, która stoi od komplety Wielkiej Soboty do soboty po Zesłaniu Ducha Świętego i w tym okresie zastępuje Anioła Pańskiego. Wzywa Najświętszą Maryję Pannę do radości ze zmartwychwstania jej Syna i prosi ją o modlitwę za nami. Po antyfonie następuje werset z odpowiedzią, wyznający prawdziwe zmartwychwstanie Pana.",
   "seg":[
     {"id":"s01","tr":"Królowo nieba, wesel się, alleluja;","tc":[99,100],"tb":"traditional-composite","g":["Królowo","nieba","wesel się","alleluja"]},
-    {"id":"s02","tr":"bo Ten, któregoś nosiła, alleluja,","tc":[99,100],"tb":"traditional-composite","g":["albowiem","którego","zasłużyłaś","nosić","alleluja"]},
+    {"id":"s02","tr":"bo Ten, któregoś nosiła, alleluja,","tc":[99],"tb":"traditional-composite","g":["albowiem","którego","zasłużyłaś","nosić","alleluja"]},
     {"id":"s03","tr":"zmartwychpowstał, jak powiedział, alleluja.","tc":[99,100],"tb":"traditional-composite","g":["zmartwychwstał","jak","powiedział","alleluja"]},
-    {"id":"s04","tr":"Módl się za nami do Boga, alleluja.","tc":[99,100],"tb":"traditional-composite","g":["módl się","za","nami","Boga","alleluja"]},
+    {"id":"s04","tr":"Módl się za nami do Boga, alleluja.","tc":[99,100],"tb":"traditional-composite","g":["módl się","za","nami","do Boga","alleluja"]},
     {"id":"s05","tr":"Raduj się i wesel, Panno Maryjo, alleluja.","tc":[99,100],"tb":"traditional-composite","g":["raduj się","i","wesel się","Panno","Maryjo","alleluja"]},
     {"id":"s06","tr":"Bo zmartwychwstał Pan prawdziwie, alleluja.","tc":[99,100],"tb":"traditional-composite","g":["bo","zmartwychwstał","Pan","prawdziwie","alleluja"],"ex":{"w026":"Podobnie jak „Resurréxit” (w010), odnosi się tu do zmartwychwstania Chrystusa."}}
   ]

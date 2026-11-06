@@ -221,11 +221,12 @@
       "id": "ordinarium.agnus-dei-in-cena-domini",
       "path": "languages/en/texts/ordinarium/agnus-dei-in-cena-domini.json",
       "evidence": "languages/en/bibliography/texts/ordinarium/agnus-dei-in-cena-domini.json",
-      "title": "Lamb of God on Maundy Thursday"
+      "title": "Lamb of God — Holy Thursday"
     },
     {
       "id": "ordinarium.agnus-dei",
       "path": "languages/en/texts/ordinarium/agnus-dei.json",
+      "evidence": "languages/en/bibliography/texts/ordinarium/agnus-dei.json",
       "title": "Lamb of God"
     },
     {

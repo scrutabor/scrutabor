@@ -1,7 +1,7 @@
 {
   "id":"litaniae.sanctissimi-nominis-iesu",
   "language":"pl",
-  "about":"Litania do Najświętszego Imienia Jezus, którą Enchiridion Indulgentiarum z 1952 r. odnotowuje pod dekretem Kongregacji Odpustów z 16 stycznia 1886 r. W tej księdze dwie końcowe prośby tworzą jedną modlitwę z jedną doksologią, a to wydanie zachowuje tę łacińską recenzję.",
+  "about":"Litania do Najświętszego Imienia Jezus, którą Enchiridion Indulgentiarum z 1952 r. odnotowuje pod dekretem Kongregacji Odpustów z 16 stycznia 1886 r. W tej księdze dwie końcowe prośby tworzą jedną modlitwę z jedną doksologią. Tak kończy się litania w tej łacińskiej redakcji.",
   "seg":[
     {"id":"s001","tr":"Kyrie, eleison.","tc":[26],"tb":"traditional-composite","g":["Panie","zmiłuj się"]},
     {"id":"s002","tr":"Christe, eleison.","tc":[26],"tb":"traditional-composite","g":["Chryste","zmiłuj się"]},
@@ -147,7 +147,7 @@
     {"id":"s142","tr":"Jezu, usłysz nas.","tc":[26],"tb":"traditional-composite","g":["Jezu","usłysz","nas"]},
     {"id":"s143","tr":"Jezu, wysłuchaj nas.","tc":[26],"tb":"traditional-composite","g":["Jezu","wysłuchaj","nas"]},
     {"id":"s144","tr":"Módlmy się.","tc":[26],"tb":"traditional-composite","g":["módlmy się"]},
-    {"id":"s145","tr":"Panie Jezu Chryste, któryś rzekł: „Proście, a otrzymacie; szukajcie, a znajdziecie; kołaczcie, a będzie wam otworzone”; daj nam, prosimy, uczucie swej Boskiej miłości, abyśmy Cię z całego serca, usty i uczynkiem miłowali i nigdy nie przestawali wielbić.","tc":[26],"tb":"traditional-composite","g":["Panie","Jezu","Chryste","któryś","rzekłeś","proście","i","otrzymacie","szukajcie","i","znajdziecie","kołaczcie","i","będzie otworzone","wam","prosimy","daj","nam","proszącym","boskiej","Twojej","miłości","uczucie","abyśmy","Ciebie","całym","sercem","ustami","i","uczynkiem","miłowali","i","od","Twojej","nigdy","chwały","nie przestawali"]},
-    {"id":"s146","tr":"Wszechmogący Boże, obdarz nas ustawiczną bojaźnią i miłością Twojego świętego imienia, albowiem nigdy nie odmawiasz opieki tym, których utwierdzasz w swojej miłości. Który żyjesz i królujesz na wieki wieków. Amen.","g":["świętego","imienia","Twojego","Panie","bojaźń","zarówno","i","miłość","spraw","abyśmy","mieli","ustawiczną","albowiem","nigdy","Twojego","przewodnictwa","nie pozbawiasz","tych, których","w","stałości","Twojej","miłości","utwierdzasz","Który","żyjesz","i","królujesz","na","wieki","wieków","Amen"]}
+    {"id":"s145","tr":"Panie Jezu Chryste, któryś rzekł: „Proście, a otrzymacie; szukajcie, a znajdziecie; kołaczcie, a będzie wam otworzone”; daj nam, prosimy, uczucie swej Boskiej miłości, abyśmy Cię z całego serca, usty i uczynkiem miłowali i nigdy nie przestawali wielbić.","tc":[26],"tb":"traditional-composite","g":["Panie","Jezu","Chryste","który","rzekłeś","proście","i","otrzymacie","szukajcie","i","znajdziecie","kołaczcie","i","będzie otworzone","wam","prosimy","daj","nam","proszącym","boskiej","Twojej","miłości","uczucie","abyśmy","Ciebie","całym","sercem","ustami","i","uczynkiem","miłowali","i","od","Twojej","nigdy","chwały","nie przestawali"]},
+    {"id":"s146","tr":"Panie, spraw, abyśmy zawsze mieli i bojaźń, i miłość Twojego świętego Imienia, bo nigdy nie odmawiasz swego kierownictwa tym, których utwierdzasz w stałości swojej miłości. Który żyjesz i królujesz na wieki wieków. Amen.","g":["świętego","Imienia","Twojego","Panie","bojaźń","zarówno","i","miłość","spraw","abyśmy","mieli","ustawiczną","albowiem","nigdy","Twojego","kierownictwa","nie pozbawiasz","tych, których","w","stałości","Twojej","miłości","utwierdzasz","Który","żyjesz","i","królujesz","na","wieki","wieków","Amen"]}
   ]
 }

@@ -5,7 +5,7 @@
   "seg":[
     {"id":"s01","tr":"We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin.","tc":[114,115],"tb":"traditional-composite","g":["Under","your","protection","we flee","Holy","of God","Mother","our","petitions","not","despise","in","necessities","but","from","dangers","all","deliver","us","always","Virgin","glorious","and","blessed"]},
     {"id":"s02","tr":"Our Lady, our Mediatrix, our Advocate, our Comforter.","g":[null,null,null,null,null,null,null,null],"a":[{"s":0,"n":2,"a":0,"g":"Our Lady"},{"s":2,"n":2,"a":0,"g":"our Mediatrix"},{"s":4,"n":2,"a":0,"g":"our Advocate"},{"s":6,"n":2,"a":0,"g":"our Comforter"}]},
-    {"id":"s03","tr":"Reconcile us with thy Son, commend us to thy Son, present us to thy Son.","g":["your","Son","us","reconcile","your","Son","us","commend","your","Son","us","present"]},
+    {"id":"s03","tr":"Reconcile us with thy Son, commend us to thy Son, present us to thy Son.","g":[null,null,"us","reconcile",null,null,"us","commend",null,null,"us","present"],"a":[{"s":0,"n":2,"a":1,"g":"with your Son"},{"s":4,"n":2,"a":1,"g":"to your Son"},{"s":8,"n":2,"a":1,"g":"to your Son"}]},
     {"id":"s04","tr":"Amen.","g":["Amen"]}
   ]
 }

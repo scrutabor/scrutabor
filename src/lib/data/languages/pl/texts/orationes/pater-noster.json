@@ -1,7 +1,7 @@
 {
   "id":"orationes.pater-noster",
   "language":"pl",
-  "about":"Modlitwa Pańska, której Jezus nauczył swoich uczniów (Mt 6, 9–13, a w formie krótszej Łk 11, 2–4). Zwraca się do Boga jako Ojca. Prosi o uświęcenie Jego imienia, przyjście królestwa i spełnienie Jego woli, a następnie o codzienny chleb, przebaczenie, o to, by nie być wodzonym na pokuszenie i wybawienie od zła.",
+  "about":"Modlitwa Pańska, której Jezus nauczył swoich uczniów (Mt 6, 9–13, a w formie krótszej Łk 11, 2–4). Zwraca się do Boga jako Ojca. Prosi o uświęcenie Jego imienia, przyjście królestwa i spełnienie Jego woli, a następnie o codzienny chleb, o przebaczenie, o to, by nie być wodzonym na pokuszenie, oraz o wybawienie od zła.",
   "seg":[
     {"id":"s01","tr":"Ojcze nasz, któryś jest w niebie,","tc":[90],"tb":"normalized","g":["Ojcze","nasz","który","jesteś","w","niebiosach"],"ex":{"w002":"Pan nauczył modlitwy wspólnej: „nasz”, nie „mój” — każdy odmawia ją w liczbie mnogiej, razem z całym Kościołem.","w006":"Łacina ma tutaj liczbę mnogą „cælis”, a dalej pojedyncze „cælo”. Utrwalony polski przekład w obu miejscach mówi o jednym niebie."}},
     {"id":"s02","tr":"święć się imię Twoje.","tc":[90],"tb":"normalized","g":["niech się święci","imię","Twoje"]},

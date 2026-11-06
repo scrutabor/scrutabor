@@ -1,7 +1,7 @@
 {
   "id":"orationes.magnificat",
   "language":"pl",
-  "about":"Magníficat to pieśń Maryi z Ewangelii według św. Łukasza (Łk 1,46–55), śpiewana w rzymskich nieszporach. Ta edycja zachowuje tradycyjny tekst łaciński i dziesięć numerowanych wersetów biblijnych, po których umieszcza osobno doksologię Chwała Ojcu.",
+  "about":"Magníficat to pieśń Maryi z Ewangelii według św. Łukasza (Łk 1,46–55), śpiewana w rzymskich nieszporach. Tradycyjny tekst łaciński pieśni obejmuje dziesięć numerowanych wersetów biblijnych, po których osobno następuje doksologia Chwała Ojcu.",
   "seg":[
     {"id":"s01","tr":"Wielbi dusza moja Pana.","tc":[78],"tb":"traditional-composite","g":["Wielbi","dusza","moja","Pana"]},
     {"id":"s02","tr":"I rozradował się duch mój w Bogu, moim Zbawicielu.","tc":[78],"tb":"traditional-composite","g":["i","rozradował się","duch","mój","w","Bogu","Zbawicielu","moim"]},

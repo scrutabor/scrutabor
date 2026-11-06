@@ -19,6 +19,48 @@
     }
    ],
    "verified_on": "2026-08-28"
+  },
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament p. 594",
+    "scan": "PDF p. 607",
+    "section": "Psalm 30:2 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.orationes.te-deum.s28.douay",
+     "address": {
+      "kind": "segment",
+      "segment": "s28"
+     },
+     "claim": "Historical English source expression: “In thee, O Lord, have I hoped, let me never be confounded:” The corresponding English expression is retained with capitalization and punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-11-05"
+  },
+  {
+   "edition": "edition.douay-rheims-bible-challoner",
+   "digital_item": "item.douay-rheims-challoner-1914.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "Old Testament p. 596",
+    "scan": "PDF p. 609",
+    "section": "Psalm 32:22 (Vulgate numbering)"
+   },
+   "entries": [
+    {
+     "id": "use.en.orationes.te-deum.s27.douay",
+     "address": {
+      "kind": "segment",
+      "segment": "s27"
+     },
+     "claim": "Historical English source expression for the second sentence of this segment: “Let thy mercy, O Lord, be upon us, as we have hoped in thee.” The corresponding English expression is retained with capitalization normalization. The first sentence is attested by Blessed Be God (1925)."
+    }
+   ],
+   "verified_on": "2026-11-05"
   }
  ],
  "witnesses": [],

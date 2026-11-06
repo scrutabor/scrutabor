@@ -1,7 +1,7 @@
 {
   "id":"orationes.te-deum",
   "language":"pl",
-  "about":"Te Deum to starożytny hymn uwielbienia i dziękczynienia. Kościół wyznaje w nim majestat Trójcy Świętej, zwraca się do Chrystusa jako Króla chwały i Sędziego, a następnie błaga o zbawienie, opiekę i miłosierdzie. Polski przekład hymniczny ks. Tadeusza Karyłowskiego przyjęto według Śpiewnika kościelnego Jana Siedleckiego, wydanie jubileuszowe z 1928 r., pieśń 353 (s. 308–309), z modernizacją pisowni i interpunkcji.",
+  "about":"Te Deum to starożytny hymn uwielbienia i dziękczynienia. Kościół wyznaje w nim majestat Trójcy Świętej, zwraca się do Chrystusa jako Króla chwały i Sędziego, a następnie błaga o zbawienie, opiekę i miłosierdzie. Polski przekład hymniczny ks. Tadeusza Karyłowskiego przyjęto według Śpiewnika kościelnego Jana Siedleckiego, wydanie jubileuszowe z 1928 r., pieśń 353 (s. 308–309), z modernizacją pisowni i interpunkcji. Pełny polski tekst to zatem śpiewany przekład Karyłowskiego z tego śpiewnika, oddający łacinę swobodnie, strofa po strofie. Dosłowny sens podaje przekład słowo po słowie.",
   "seg":[
     {"id":"s01","tr":"Ciebie, Boga, wysławiamy, Tobie, Panu, wieczna chwała.","tb":"normalized","g":["Ciebie","Boga","wysławiamy","Ciebie","Pana","wyznajemy"],"ex":{"w006":"W hymnie czasownik oznacza publiczne wyznanie i uznanie Boga jako Pana."}},
     {"id":"s02","tr":"Ciebie, Ojca, niebios bramy, Ciebie wielbi ziemia cała.","tb":"normalized","g":["Ciebie","wiekuistego","Ojca","cała","ziemia","wielbi"]},
@@ -28,7 +28,7 @@
     {"id":"s23","tr":"Rządź je, broń po wszystkie lata, prowadź w niebios błogie bramy.","tb":"normalized","g":["I","rządź","nimi","i","wywyższaj","ich",null,null,null],"a":[{"s":6,"n":3,"a":2,"g":"na wieki"}]},
     {"id":"s24","tr":"My w dzień każdy, Władco świata, Imię Twoje wysławiamy.","tb":"normalized","g":[null,null,null,"błogosławimy","Ciebie"],"a":[{"s":0,"n":3,"a":2,"g":"Każdego dnia"}]},
     {"id":"s25","tr":"Po wiek wieków nie ustanie pieśń, co sławi Twoje czyny.","tb":"normalized","g":["i","wysławiamy","imię","Twoje","na","wieki","i","na","wieki","wieków"]},
-    {"id":"s26","tr":"O, w dniu onym racz nas, Panie, od wszelakiej ustrzec winy!","tb":"normalized","g":["Racz","Panie","w dniu","tym","bez","grzechu","nas","zachować"]},
+    {"id":"s26","tr":"O, w dniu onym racz nas, Panie, od wszelakiej ustrzec winy!","tb":"normalized","g":["Racz","Panie","w dniu","tym","bez","grzechu","nas","zachować"],"ex":{"w167":"W hymnie „onym” to dawne „tym, owym”: prośba dotyczy dnia dzisiejszego (die isto), nie dnia Sądu."}},
     {"id":"s27","tr":"Zjaw swą litość w życiu całym tym, co żebrzą Twej opieki;","tb":"normalized","g":["Zmiłuj się","nad nami","Panie","zmiłuj się","nad nami","Niech będzie","miłosierdzie","Twoje","Panie","nad","nami","jak","zaufaliśmy",null,null],"a":[{"s":13,"n":2,"a":1,"g":"Tobie"}]},
     {"id":"s28","tr":"W Tobie, Panie, zaufałem, nie zawstydzę się na wieki!","tb":"normalized","g":["W","Tobie","Panie","złożyłem nadzieję",null,null,null,null],"a":[{"s":4,"n":4,"a":1,"g":"obym nigdy nie doznał zawstydzenia"}],"ex":{"w194":"Końcowe wyznanie ufności prosi, by nadzieja złożona w Panu nigdy nie skończyła się zawstydzeniem."}}
   ]
