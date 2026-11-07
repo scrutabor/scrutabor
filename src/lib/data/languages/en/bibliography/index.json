@@ -1,5 +1,5 @@
 {
- "schema_version": "1.5.0",
+ "schema_version": "1.6.0",
  "sections": [
   {
    "id": "latin_textual_sources",
@@ -17573,13 +17573,6 @@
        "uses": 1
       },
       {
-       "id": "orationes.memorare",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 1
-      },
-      {
        "id": "orationes.salve-regina",
        "roles": [
         "historical_wording_basis"
@@ -17639,7 +17632,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 1
+       "uses": 7
       },
       {
        "id": "orationes.benedic-domine",
@@ -17654,13 +17647,6 @@
         "historical_wording_basis"
        ],
        "uses": 1
-      },
-      {
-       "id": "orationes.memorare",
-       "roles": [
-        "historical_wording_basis"
-       ],
-       "uses": 5
       },
       {
        "id": "orationes.signum-crucis",
@@ -17698,7 +17684,7 @@
        "roles": [
         "historical_wording_basis"
        ],
-       "uses": 10
+       "uses": 4
       },
       {
        "id": "ordinarium.adiutorium",
@@ -19643,6 +19629,22 @@
         "historical_wording_basis"
        ],
        "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.manual-of-prayers-catholic-laity-1888",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "orationes.te-deum",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 3
       }
      ],
      "lemmas": []

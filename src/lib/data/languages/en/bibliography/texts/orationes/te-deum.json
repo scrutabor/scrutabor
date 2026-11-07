@@ -15,10 +15,11 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording witness for the complete orationes.te-deum text."
+     "claim": "Historical English wording basis of this text as far as “Have mercy on us, O Lord, have mercy on us.”, where the book ends the hymn. This text departs from the print in four places. The book reads “the admirable company of prophets”, “the white-robed army of martyrs, praise” and “Thee, the holy Church throughout the world doth acknowledge”, and at the petition for this day it has “from” where this text reads “without”. Capitals, spelling and punctuation are otherwise normalized.",
+     "reader_note": "The printed hymn ends with “Have mercy on us, O Lord, have mercy on us.” Several phrases differ from the wording shown here; the remaining petitions are attested by other sources listed here."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-06"
   },
   {
    "edition": "edition.douay-rheims-bible-challoner",
@@ -57,10 +58,48 @@
       "kind": "segment",
       "segment": "s27"
      },
-     "claim": "Historical English source expression for the second sentence of this segment: “Let thy mercy, O Lord, be upon us, as we have hoped in thee.” The corresponding English expression is retained with capitalization normalization. The first sentence is attested by Blessed Be God (1925)."
+     "claim": "Historical English source expression for the second sentence of this segment: “Let thy mercy, O Lord, be upon us, as we have hoped in thee.” The corresponding English expression is retained with capitalization normalization. The first sentence is attested by Blessed Be God (1925).",
+     "reader_note": "This psalm attests the second petition, “Let Thy mercy, O Lord, be upon us, as we have hoped in Thee.” It is not a witness to the whole hymn."
     }
    ],
    "verified_on": "2026-11-05"
+  },
+  {
+   "edition": "edition.manual-of-prayers-catholic-laity-1888",
+   "digital_item": "item.manual-of-prayers-catholic-laity-1888.ia",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 162",
+    "scan": "PDF p. 174"
+   },
+   "entries": [
+    {
+     "id": "use.en.orationes.te-deum.s26.manual1888",
+     "address": {
+      "kind": "segment",
+      "segment": "s26"
+     },
+     "claim": "Historical English wording basis of this segment. Printed p. 162 reads “Vouchsafe, O Lord, this day : to keep us without sin.” The words are retained. The mediant colon of the chant pointing is dropped."
+    },
+    {
+     "id": "use.en.orationes.te-deum.s27.manual1888",
+     "address": {
+      "kind": "segment",
+      "segment": "s27"
+     },
+     "claim": "Further historical English witness of the whole segment, printed inside the Te Deum. Printed p. 162 reads “Have mercy on us, O Lord ; have mercy on us. Let Thy mercy, O Lord, be upon us : as we have hoped in Thee.” The words are retained. The semicolon after the first vocative and the mediant colon of the chant pointing become commas."
+    },
+    {
+     "id": "use.en.orationes.te-deum.s28.manual1888",
+     "address": {
+      "kind": "segment",
+      "segment": "s28"
+     },
+     "claim": "Second historical English witness of this verse, printed inside the Te Deum. Printed p. 162 reads “O Lord, in Thee have I hoped : let me never be confounded.” The vocative stands first in print. The second clause is identical to this text. The first clause is reordered here, so the page is not an exact witness of the segment.",
+     "reader_note": "The printed line begins “O Lord, in Thee have I hoped”. Its word order differs from the line shown here."
+    }
+   ],
+   "verified_on": "2026-11-06"
   }
  ],
  "witnesses": [],

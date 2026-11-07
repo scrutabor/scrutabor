@@ -11,7 +11,7 @@ for (const lang of ['pl', 'en'] as const)
 	test(`${lang} shipped pack initializes every dated consumer and displays its reading @online`, async ({
 		page
 	}) => {
-		expect(manifest.schema_version).toBe('6.11.0');
+		expect(manifest.schema_version).toBe('6.12.0');
 		expect(table.schema_version).toBe('2.0.0');
 		expect(table.announcements).toHaveLength(206);
 		const mass = 'dominica-iii-post-pascha';

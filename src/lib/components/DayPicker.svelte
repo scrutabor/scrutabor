@@ -2,7 +2,7 @@
 	// Every Ordo occurrence has a date. Only a Mass belonging to that date can
 	// override its default; undated reading belongs to the formulary catalogue.
 	import { untrack } from 'svelte';
-	import { pageUrl } from '$lib/url';
+	import { ownsLocation, pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { browser } from '$app/environment';
 	import { M, type Lang } from '$lib/i18n';
@@ -20,7 +20,7 @@
 	import { commemorationTitle } from '$lib/corpus-metadata';
 	import { commemorationName } from '$lib/commemorationes';
 
-	let { lang }: { lang: Lang } = $props();
+	let { lang, route }: { lang: Lang; route: string } = $props();
 	const msgs = $derived(M[lang]);
 	const labelId = 'day-label';
 
@@ -86,6 +86,8 @@
 	}
 
 	function publishChoice(choice: OrdoChoice): void {
+		if (!ownsLocation(route)) return;
+		const ownedRoute = route;
 		const url = pageUrl();
 		const original = url.href;
 		writeOrdoChoice(url, choice);
@@ -93,13 +95,18 @@
 		// update overwrite a word selection or navigation made in the meantime.
 		locationFrame = requestAnimationFrame(() => {
 			locationFrame = 0;
-			if (pageUrl().href === original && url.href !== original) replaceState(url, {});
+			if (ownsLocation(ownedRoute) && pageUrl().href === original && url.href !== original) {
+				replaceState(url, {});
+			}
 		});
 	}
 
 	export function applyFromLocation(): void {
 		if (!browser) return;
 		cancelLocationFrame();
+		// The router may still have this picker mounted after Back or Forward
+		// has already selected a different page's address.
+		if (!ownsLocation(route)) return;
 		todayDate = isoDate(new Date());
 		const params = pageUrl().searchParams;
 		const named = params.get(DAY_PARAM);
@@ -130,6 +137,7 @@
 	}
 
 	function pick(choice: OrdoChoice): void {
+		if (!browser || !ownsLocation(route)) return;
 		cancelLocationFrame();
 		invalid = false;
 		honour(choice, true);

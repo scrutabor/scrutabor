@@ -1,10 +1,15 @@
 {
- "schema_version": "1.5.0",
+ "schema_version": "1.6.0",
  "works": [
   {
    "id": "work.biblia-wujka",
    "responsible": "Jakub Wujek",
    "title": "Biblia to jest księgi Starego i Nowego Testamentu"
+  },
+  {
+   "id": "work.directorium-dioecesis-tiraspolensis",
+   "responsible": "Diocese of Tiraspol",
+   "title": "Directorium Horarum Canonicarum et Sacrarum Missarum ad usum Dioecesis Tiraspolensis"
   },
   {
    "id": "work.dwutygodnik-dyecezalny-wilenski",
@@ -18,6 +23,10 @@
    "id": "work.katechizm-religji-rzymsko-katolickiej",
    "responsible": "Komitet Księży Katolickich",
    "title": "Katechizm religji rzymsko-katolickiej dla użytku szkół polskich w Republice Czechosłowackiej"
+  },
+  {
+   "id": "work.kochowicz-spiewnik",
+   "title": "Śpiewnik zawierający pieśni kościelne używane przez Polaków na obczyźnie"
   },
   {
    "id": "work.ksiazka-do-nabozenstwa",
@@ -67,6 +76,25 @@
    }
   },
   {
+   "id": "edition.directorium-dioecesis-tiraspolensis-1911",
+   "work": "work.directorium-dioecesis-tiraspolensis",
+   "title": "Directorium Horarum Canonicarum et Sacrarum Missarum ad usum Dioecesis Tiraspolensis pro anno Domini MCMXII",
+   "edition_statement": "Pro anno Domini MCMXII bissextili, issued by authority and mandate of Bishop Joseph Kessler, with his imprimatur dated Saratov, 5 August 1911",
+   "place": "Saratov",
+   "publisher": "Typis H. Schellhorn et Soc.",
+   "year": "1911",
+   "publication_type": "other",
+   "authority": "official_document",
+   "languages": [
+    "la",
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Diocesan directory printed at Saratov in 1911. Its Polish litany is printed without a named author or translator, and the anonymous contribution is outside the ordinary Polish term and the United States publication term. Reliance is limited to the two invocations verified on printed pp. 122–123. No licence for the digitized manifestation is asserted."
+   }
+  },
+  {
    "id": "edition.dwutygodnik-dyecezalny-wilenski-1911",
    "work": "work.dwutygodnik-dyecezalny-wilenski",
    "title": "Dwutygodnik Dyecezalny Wileński, nr 20",
@@ -110,6 +138,24 @@
    "rights": {
     "status": "unverified",
     "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
+   }
+  },
+  {
+   "id": "edition.kochowicz-spiewnik-1913",
+   "work": "work.kochowicz-spiewnik",
+   "title": "Śpiewnik zawierający pieśni kościelne używane przez Polaków na obczyźnie",
+   "edition_statement": "Wydanie trzecie",
+   "place": "Bruckhausen",
+   "publisher": "Księgarnia St. Kochowicza",
+   "year": "1913",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Songbook published at Bruckhausen in 1913 with an imprimi permittitur dated Cologne, 16 November 1908. Its litany is printed without a named author or translator, and the anonymous contribution is outside the ordinary Polish term and the United States publication term. Reliance is limited to the one invocation verified on printed p. 65. No licence for the digitized manifestation is asserted."
    }
   },
   {
@@ -229,6 +275,15 @@
    "access": "open"
   },
   {
+   "id": "item.directorium-dioecesis-tiraspolensis-1911.ia",
+   "edition": "edition.directorium-dioecesis-tiraspolensis-1911",
+   "repository": "Biblioteka Uniwersytecka KUL / Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/dlibra.kul.pl.24268_V-1269_Directorium-Horarum-",
+   "scan_url": "https://archive.org/download/dlibra.kul.pl.24268_V-1269_Directorium-Horarum-/24268_V-1269_Directorium-Horarum-.pdf",
+   "access": "open"
+  },
+  {
    "id": "item.dwutygodnik-dyecezalny-wilenski-1911.pbc",
    "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
    "repository": "Podlaska Biblioteka Cyfrowa",
@@ -253,6 +308,15 @@
    "kind": "scan",
    "record_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej",
    "scan_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej",
+   "access": "open"
+  },
+  {
+   "id": "item.kochowicz-spiewnik-1913.ia",
+   "edition": "edition.kochowicz-spiewnik-1913",
+   "repository": "Dolnośląska Biblioteka Cyfrowa / Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/dbc.wroc.pl.dz_144786",
+   "scan_url": "https://archive.org/download/dbc.wroc.pl.dz_144786/dz_144786.pdf",
    "access": "open"
   },
   {

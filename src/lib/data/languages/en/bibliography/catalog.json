@@ -1,5 +1,5 @@
 {
- "schema_version": "1.5.0",
+ "schema_version": "1.6.0",
  "works": [
   {
    "id": "work.blessed-be-god",
@@ -15,6 +15,11 @@
    "id": "work.francis-x-lasance-the-catholic-girl-s-guide",
    "responsible": "Francis X. Lasance",
    "title": "The Catholic Girl's Guide"
+  },
+  {
+   "id": "work.manual-of-prayers-catholic-laity",
+   "responsible": "Third Plenary Council of Baltimore",
+   "title": "A Manual of Prayers for the Use of the Catholic Laity"
   },
   {
    "id": "work.patrick-francis-moran-the-catholic-prayer-book",
@@ -81,6 +86,25 @@
    "rights": {
     "status": "public-domain",
     "basis": "Original United States edition published and copyrighted in 1906; Francis X. Lasance died in 1946. Only wording verified on the cited original pages, including the Holy Name litany, Deus refugium collect and short grace before meals, is used."
+   }
+  },
+  {
+   "id": "edition.manual-of-prayers-catholic-laity-1888",
+   "work": "work.manual-of-prayers-catholic-laity",
+   "title": "A Manual of Prayers for the Use of the Catholic Laity",
+   "edition_statement": "Prepared and published by order of the Third Plenary Council of Baltimore. The consulted copy bears the copyright notice of 1888 and an approval dated Baltimore, 17 May 1889",
+   "place": "New York / London",
+   "publisher": "The Catholic Publication Society Co. / Burns & Oates",
+   "year": "1888",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "United States prayer book with a copyright notice of 1888. Reliance is limited to the Te Deum wording verified on printed p. 162 of its original page images."
    }
   },
   {
@@ -190,6 +214,15 @@
    "kind": "scan",
    "record_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf",
    "scan_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_family_prayer-book%2C_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._%28IA_TheFamilyPrayerBookContaining%29.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.manual-of-prayers-catholic-laity-1888.ia",
+   "edition": "edition.manual-of-prayers-catholic-laity-1888",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/manualofprayersf00cath",
+   "scan_url": "https://archive.org/download/manualofprayersf00cath/manualofprayersf00cath.pdf",
    "access": "open"
   },
   {

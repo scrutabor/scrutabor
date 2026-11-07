@@ -1,7 +1,7 @@
 {
   "id":"orationes.regina-caeli",
   "language":"en",
-  "about":"The Marian antiphon of Paschaltide, which stands from Compline of Holy Saturday to the Saturday after Pentecost and takes the place of the Ángelus in that season. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen.",
+  "about":"The Marian antiphon recited in place of the Ángelus during Paschaltide. It calls the Blessed Virgin Mary to rejoice in the resurrection of her Son and asks her to pray for us. A versicle and response follow the antiphon, professing that the Lord has truly risen.",
   "seg":[
     {"id":"s01","tr":"Queen of heaven, rejoice, alleluia;","tc":[101],"tb":"traditional-composite","g":["Queen","of heaven","rejoice","alleluia"]},
     {"id":"s02","tr":"for He whom you merited to bear, alleluia,","tc":[101],"tb":"traditional-composite","g":["for","whom","you were counted worthy","to bear","alleluia"]},

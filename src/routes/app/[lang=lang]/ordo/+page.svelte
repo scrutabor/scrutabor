@@ -46,7 +46,7 @@
 		<div class="help-row">
 			<div class="tabella">
 				<HelpLevels {lang} />
-				<DayPicker {lang} />
+				<DayPicker {lang} route={`/${lang}/ordo`} />
 				<RolePicker {lang} />
 				<RolePicker {lang} kind="mass" />
 			</div>

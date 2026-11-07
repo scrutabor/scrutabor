@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Citation, TranslationRelationship } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import { bindProse } from '$lib/polish';
 
 	let {
 		citations,
@@ -51,6 +52,9 @@
 						>{:else}<cite lang="und">{citation.title}</cite>{/if}<span class="locator" lang="und"
 						>, {citation.locator}</span
 					>
+					{#each citation.notes ?? [] as note (note)}
+						<p class="citation-note">{lang === 'pl' ? bindProse(note) : note}</p>
+					{/each}
 				</li>
 			{/each}
 		</ol>
@@ -143,6 +147,10 @@
 		max-width: 28rem;
 		margin-inline: auto;
 		text-align: left;
+	}
+
+	.citation-note {
+		margin: 0.35rem 0 0;
 	}
 
 	li + li {

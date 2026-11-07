@@ -31,7 +31,7 @@ test("Saint John's revised English names both historical loci without leaking th
 	await expect(sources).toContainText('The Missal for the Use of the Laity');
 	await expect(sources).toContainText('PDF p. 99');
 	await expect(sources).toContainText('PDF p. 56');
-	await expect(sources.locator('.relationships')).toContainText('revised');
+	await expect(sources.locator('.relationships')).toHaveCount(0);
 	await page.goto(`/app/pl${route}`);
 	await setHelp(page, 2);
 	await expect(page.locator(sectionId)).not.toContainText('The Missal for the Use of the Laity');

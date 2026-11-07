@@ -246,6 +246,9 @@
 																</li>
 															{/each}
 														</ul>
+														{#each group.notes ?? [] as note (note)}
+															<p class="source-note">{lang === 'pl' ? bindProse(note) : note}</p>
+														{/each}
 													</li>
 												{/each}
 											</ul>

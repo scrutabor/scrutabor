@@ -38,6 +38,48 @@ const html = (segments: Segment[], hideOpeningRubric = false) =>
 		}
 	}).body;
 
+describe('a label for the complete translation', () => {
+	const label = 'Przekład hymniczny ks. Tadeusza Karyłowskiego';
+	const segments: Segment[] = [
+		{ id: 's01', type: 'verse', words: [] },
+		{ id: 's02', type: 'verse', words: [] }
+	];
+	const labelled: GlossDocument = {
+		...gloss,
+		lang: 'pl',
+		translation_label: label,
+		segments: { s01: { translation: 'Pierwsza strofa.' }, s02: { translation: 'Druga strofa.' } }
+	};
+	it.each([0, 1, 2, 3])('identifies only the full rendering at help level %i', (helpLevel) => {
+		const rendered = render(TextBody, {
+			props: { doc: text(segments), gloss: labelled, lang: 'pl', helpLevel }
+		}).body;
+		expect(rendered.split(label).length - 1).toBe(helpLevel === 2 ? 1 : 0);
+		if (helpLevel === 2) {
+			expect(rendered).toMatch(/<p class="translation-label[^"]*" lang="pl">/);
+			expect(rendered.indexOf(label)).toBeLessThan(rendered.indexOf('Pierwsza strofa.'));
+		}
+	});
+	it('stays once in the opening when the body is split across a layout', () => {
+		const rendered = render(TextBodyLayout, {
+			props: { doc: text(segments), gloss: labelled, lang: 'pl', helpLevel: 2 }
+		}).body;
+		expect(rendered.split(label)).toHaveLength(2);
+		expect(rendered).toMatch(/<div class="opening">[\s\S]*translation-label/);
+	});
+	it('creates no label for a document without one or without a complete translation', () => {
+		for (const layer of [
+			{ ...labelled, translation_label: undefined },
+			{ ...labelled, segments: {} }
+		]) {
+			const rendered = render(TextBody, {
+				props: { doc: text(segments), gloss: layer, lang: 'pl', helpLevel: 2 }
+			}).body;
+			expect(rendered).not.toContain('translation-label');
+		}
+	});
+});
+
 describe('actual text renderer fallbacks', () => {
 	it('emits no source row or invented opening for an empty document', () => {
 		const rendered = html([]);

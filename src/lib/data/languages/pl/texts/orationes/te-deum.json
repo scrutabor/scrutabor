@@ -2,6 +2,7 @@
   "id":"orationes.te-deum",
   "language":"pl",
   "about":"Te Deum to starożytny hymn uwielbienia i dziękczynienia. Kościół wyznaje w nim majestat Trójcy Świętej, zwraca się do Chrystusa jako Króla chwały i Sędziego, a następnie błaga o zbawienie, opiekę i miłosierdzie. Polski przekład hymniczny ks. Tadeusza Karyłowskiego przyjęto według Śpiewnika kościelnego Jana Siedleckiego, wydanie jubileuszowe z 1928 r., pieśń 353 (s. 308–309), z modernizacją pisowni i interpunkcji. Pełny polski tekst to zatem śpiewany przekład Karyłowskiego z tego śpiewnika, oddający łacinę swobodnie, strofa po strofie. Dosłowny sens podaje przekład słowo po słowie.",
+  "translation_label":"Przekład hymniczny ks. Tadeusza Karyłowskiego",
   "seg":[
     {"id":"s01","tr":"Ciebie, Boga, wysławiamy, Tobie, Panu, wieczna chwała.","tb":"normalized","g":["Ciebie","Boga","wysławiamy","Ciebie","Pana","wyznajemy"],"ex":{"w006":"W hymnie czasownik oznacza publiczne wyznanie i uznanie Boga jako Pana."}},
     {"id":"s02","tr":"Ciebie, Ojca, niebios bramy, Ciebie wielbi ziemia cała.","tb":"normalized","g":["Ciebie","wiekuistego","Ojca","cała","ziemia","wielbi"]},

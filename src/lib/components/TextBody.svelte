@@ -380,7 +380,14 @@
 	{/if}
 {/snippet}
 
+{#snippet translationLabel()}
+	{#if helpLevel === 2 && gloss.translation_label && segs.some((seg) => seg.type === 'verse' && gloss.segments[seg.id]?.translation)}
+		<p class="translation-label" {lang}>{gloss.translation_label}</p>
+	{/if}
+{/snippet}
+
 {#snippet opening()}
+	{@render translationLabel()}
 	<!-- A body that fits its opening ends there: its last row then meets the
 	     next body across the partition, so the opening too knows what follows. -->
 	<TextFlow
@@ -433,6 +440,7 @@
 		flow.compactOpening
 	)}
 {:else}
+	{@render translationLabel()}
 	<TextFlow
 		units={[...flow.opening, ...flow.continuation]}
 		row={flowRow}
@@ -759,6 +767,15 @@
 	.verse:has(> .segment-control:focus-visible)::before {
 		background: color-mix(in srgb, var(--wash) 78%, var(--bg));
 		box-shadow: inset 0.24rem 0 var(--rubric);
+	}
+
+	.translation-label {
+		margin: 0 0 calc(var(--reading) * 0.55);
+		color: var(--ink-soft);
+		font-size: calc(var(--reading-bare) * 0.9);
+		line-height: 1.5;
+		text-align: center;
+		break-after: avoid;
 	}
 
 	.translation-sources {

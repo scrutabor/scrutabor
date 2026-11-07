@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.11.0",
+  "schema_version": "6.12.0",
   "corpus_schema": "0.21.0",
   "language": "en",
   "direction": "ltr",
@@ -143,7 +143,6 @@
     {
       "id": "orationes.memorare",
       "path": "languages/en/texts/orationes/memorare.json",
-      "evidence": "languages/en/bibliography/texts/orationes/memorare.json",
       "title": "Memorare",
       "aliases": [
         "Remember, O Most Gracious Virgin Mary"

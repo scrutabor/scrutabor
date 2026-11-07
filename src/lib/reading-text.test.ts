@@ -77,7 +77,7 @@ describe('prayer-level translation sources', () => {
 		]);
 	});
 
-	it('keeps distinct wording relationships in reading order', () => {
+	it('does not describe mixed historical relationships as one prayer-wide claim', () => {
 		const segments = [verse(undefined, 'Primus.'), verse(undefined, 'Secundus.')];
 		const gloss = {
 			segments: {
@@ -86,9 +86,27 @@ describe('prayer-level translation sources', () => {
 			}
 		} as unknown as GlossDocument;
 
-		expect(collectTranslationRelationships(segments, gloss)).toEqual([
-			'traditional-composite',
-			'revised'
-		]);
+		expect(collectTranslationRelationships(segments, gloss)).toEqual([]);
+	});
+});
+
+describe('scope of a prayer-level source description', () => {
+	const segments = [verse(undefined, 'Prima.'), verse(undefined, 'Secunda.')];
+	it('does not promote one attested ending to a claim about the complete prayer', () => {
+		const gloss = {
+			segments: { [segments[1].id]: { translation_relationship: 'exact' } }
+		} as unknown as GlossDocument;
+		expect(collectTranslationRelationships(segments, gloss)).toEqual([]);
+	});
+	it('preserves a supported description shared by every verse, ignoring rubrics', () => {
+		const gloss = {
+			segments: Object.fromEntries(
+				segments.map(({ id }) => [id, { translation_relationship: 'normalized' }])
+			)
+		} as unknown as GlossDocument;
+		expect(collectTranslationRelationships([rubric(), ...segments], gloss)).toEqual(['normalized']);
+	});
+	it('does not infer a relationship from an empty text', () => {
+		expect(collectTranslationRelationships([], { segments: {} } as GlossDocument)).toEqual([]);
 	});
 });

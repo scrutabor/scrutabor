@@ -23,7 +23,7 @@
 	import { resolveCompositeAddress, writeReadingAddress } from '$lib/reading-address';
 	import { presentReadingLocation, readingLocationFrame } from '$lib/reading-location';
 	import { indexOccurrenceWords, properOccurrences } from '$lib/proper-occurrences';
-	import { pageUrl } from '$lib/url';
+	import { ownsLocation, pageUrl } from '$lib/url';
 	import { replaceState } from '$app/navigation';
 	import { wordPanel, wordPanelSelection } from '$lib/wordpanel.svelte';
 
@@ -58,6 +58,7 @@
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const day = $derived(data);
+	const route = $derived(`/${lang}/${neighbourBase}/${data.day}`);
 	const parts = $derived(
 		data.parts as {
 			key: string;
@@ -116,6 +117,10 @@
 
 	function applyFromLocation(scroll = true) {
 		cancelLocationFrame();
+		// A traversal changes the address before the departing page unmounts.
+		// Its citation belongs to the destination, even while our texts remain.
+		if (!ownsLocation(route)) return;
+		const ownedRoute = route;
 		const url = pageUrl();
 		const original = url.href;
 		const resolved = resolveCompositeAddress(
@@ -132,7 +137,7 @@
 		// deferred update belongs only to this address, never a later navigation
 		// or a reader's intervening selection.
 		locationFrame.schedule(() => {
-			if (pageUrl().href !== original) return;
+			if (!ownsLocation(ownedRoute) || pageUrl().href !== original) return;
 			presentReadingLocation(url, original, resolved, () => panel.applyFromLocation(), scroll);
 		});
 	}
@@ -144,6 +149,7 @@
 	});
 
 	function writeSegmentSelection(slug: string, selected: string[], ids: string[]) {
+		if (!ownsLocation(route)) return;
 		const url = pageUrl();
 		const value = formatSegmentSelection(selected, ids);
 		if (value) url.searchParams.set('s', `${slug}.${value}`);
@@ -158,6 +164,7 @@
 	}
 
 	function applySelection(slug: string, id: string, extend: boolean) {
+		if (!ownsLocation(route)) return;
 		const part = inlined.find((candidate) => candidate.slug === slug);
 		if (!part) return;
 		const ids = part.doc.segments.map((segment) => segment.id);

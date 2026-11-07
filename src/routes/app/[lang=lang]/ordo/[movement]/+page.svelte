@@ -597,7 +597,7 @@
 				<HelpLevels {lang} bind:value={helpLevel} />
 				<!-- Keep the dated Mass visible and restore its links even when
 				     this movement contains only texts of the Ordinary. -->
-				<DayPicker {lang} />
+				<DayPicker {lang} {route} />
 				<RolePicker {lang} />
 				<RolePicker {lang} kind="mass" />
 			</div>

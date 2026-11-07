@@ -146,9 +146,8 @@ for (const language of ['pl', 'en'] as const) {
 		if (language === 'en') {
 			const translationNotes = part.locator('details.source-notes');
 			await translationNotes.locator('summary').click();
-			await expect(translationNotes).toContainText(
-				'The translation is based on the cited historical wording, revised with reference to the Latin.'
-			);
+			// Only the priest’s prayer has a historical wording basis; Amen is a separate response.
+			await expect(translationNotes.locator('.relationships')).toHaveCount(0);
 			await expect(
 				translationNotes.locator(
 					'a[href="https://archive.org/details/TheMissalForTheLaity/page/n613/mode/1up"]'

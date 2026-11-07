@@ -2,6 +2,71 @@
  "id": "litaniae.sacratissimi-cordis-iesu",
  "source_groups": [
   {
+   "edition": "edition.directorium-dioecesis-tiraspolensis-1911",
+   "digital_item": "item.directorium-dioecesis-tiraspolensis-1911.ia",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 122",
+    "scan": "PDF s. 124",
+    "section": "Litania do Najświętszego Serca Jezusowego",
+    "page_url": "https://archive.org/details/dlibra.kul.pl.24268_V-1269_Directorium-Horarum-"
+   },
+   "entries": [
+    {
+     "id": "use.pl.litaniae.sacratissimi-cordis-iesu.s048.directorium1911",
+     "address": {
+      "kind": "segment",
+      "segment": "s048"
+     },
+     "claim": "Historyczna podstawa pełnego obecnego brzmienia segmentu: „Serce Jezusa, odwieczne upragnienie świata.” Brzmienie, wielkie litery i końcowa kropka są zgodne z drukiem."
+    }
+   ],
+   "verified_on": "2026-11-06"
+  },
+  {
+   "edition": "edition.directorium-dioecesis-tiraspolensis-1911",
+   "digital_item": "item.directorium-dioecesis-tiraspolensis-1911.ia",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 123",
+    "scan": "PDF s. 125",
+    "section": "Litania do Najświętszego Serca Jezusowego",
+    "page_url": "https://archive.org/details/dlibra.kul.pl.24268_V-1269_Directorium-Horarum-"
+   },
+   "entries": [
+    {
+     "id": "use.pl.litaniae.sacratissimi-cordis-iesu.s060.directorium1911",
+     "address": {
+      "kind": "segment",
+      "segment": "s060"
+     },
+     "claim": "Historyczna podstawa pełnego obecnego brzmienia segmentu: „Serce Jezusa, dla nieprawości naszych starte.” Brzmienie, wielkie litery i końcowa kropka są zgodne z drukiem."
+    }
+   ],
+   "verified_on": "2026-11-06"
+  },
+  {
+   "edition": "edition.kochowicz-spiewnik-1913",
+   "digital_item": "item.kochowicz-spiewnik-1913.ia",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "druk. s. 65",
+    "scan": "PDF s. 67",
+    "page_url": "https://archive.org/details/dbc.wroc.pl.dz_144786"
+   },
+   "entries": [
+    {
+     "id": "use.pl.litaniae.sacratissimi-cordis-iesu.s034.kochowicz1913",
+     "address": {
+      "kind": "segment",
+      "segment": "s034"
+     },
+     "claim": "Historyczna podstawa pełnego obecnego brzmienia segmentu: „Serce Jezusa, cnót wszelkich bezdenna głębino.” Śpiewnik drukuje to wezwanie w ciągłym szeregu wezwań, z przecinkiem na końcu. Zachowano brzmienie i wielkie litery, połączono przeniesienie wyrazu „głę-bino” i zastąpiono przecinek kropką."
+    }
+   ],
+   "verified_on": "2026-11-06"
+  },
+  {
    "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",

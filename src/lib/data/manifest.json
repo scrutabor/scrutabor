@@ -1,5 +1,5 @@
 {
-  "schema_version": "6.11.0",
+  "schema_version": "6.12.0",
   "corpus_schema": "0.21.0",
   "texts": [
     {
@@ -7373,5 +7373,5 @@
   ],
   "analyses": 26,
   "citations": 460,
-  "bibliography_schema": "1.5.0"
+  "bibliography_schema": "1.6.0"
 }

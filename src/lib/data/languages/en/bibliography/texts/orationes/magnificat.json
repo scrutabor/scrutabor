@@ -36,10 +36,11 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Glory be to the Father, and to the Son, and to the Holy Spirit."
+     "claim": "The printed first doxology clause supplies the inherited structure with Holy Ghost; this rendering uses Holy Spirit for Spiritui Sancto. The same first clause is reused from Gloria Patri. The cited page prints it in the Mass prayers rather than the Magnificat.",
+     "reader_note": "This page prints “Holy Ghost”; the formula shown here uses “Holy Spirit”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-06"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -52,44 +53,12 @@
    },
    "entries": [
     {
-     "id": "use.en.599ab530ca45de3e4944",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
-     },
-     "claim": "He has put down the mighty from their seat, and has exalted the humble."
-    },
-    {
-     "id": "use.en.6d93cdfb4df03482827c",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "My soul magnifies the Lord."
-    },
-    {
-     "id": "use.en.864050e96d16779409e9",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "He has received Israel His servant, being mindful of His mercy."
-    },
-    {
      "id": "use.en.af0e5a5bd74338c5f6e0",
      "address": {
       "kind": "segment",
       "segment": "s10"
      },
      "claim": "As He spoke to our fathers, to Abraham and to his seed forever."
-    },
-    {
-     "id": "use.en.b759948b0539fe3e58a9",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "And my spirit has rejoiced in God my Savior."
     }
    ],
    "verified_on": "2026-09-26"
@@ -110,42 +79,26 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "Historical basis for the revised English verse. The source prints both showing might in his arm and scattering the proud in the conceit of their heart. The selected wording uses has shown and with His arm, with divine capitalization and punctuation changes. The conceit-of-their-heart expression is materially printed; the whole verse is revised rather than verbatim."
+     "claim": "Historical English wording basis for both clauses of this verse, including the conceit of their heart. The print has shewn, in his arm and hath; the selected text has shown, with His arm and has, with divine capitalization and punctuation adjustments. The complete verse is revised rather than verbatim."
     },
     {
-     "id": "use.en.187222f69552357689e2",
+     "id": "use.en.599ab530ca45de3e4944",
      "address": {
       "kind": "segment",
-      "segment": "s04"
+      "segment": "s07"
      },
-     "claim": "Historical basis for the revised English verse. The source prints Because he that is mighty hath done great things to me: and holy is his name. The selected wording uses For, who, has and for me, with divine capitalization and punctuation changes. Both complete predicates remain materially attested; the current verse is not verbatim."
+     "claim": "Historical English wording basis for the complete putting-down and exalting clauses. The selected text modernizes hath to has and capitalizes divine pronouns. The complete verse is revised rather than verbatim."
     },
     {
-     "id": "use.en.c1bf1b3d4d5d50fac3c2",
+     "id": "use.en.864050e96d16779409e9",
      "address": {
       "kind": "segment",
-      "segment": "s05"
+      "segment": "s09"
      },
-     "claim": "Historical basis for the revised English mercy verse. The source prints from generation unto generations to them that fear him; the selected wording uses from generation to generation for those who fear Him, with divine capitalization. The complete mercy-and-fear relation is materially supported, but this is not exact or spelling-only retention."
-    },
-    {
-     "id": "use.en.c851cc4624ad0c9b8e90",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Historical basis for the revised English verse. The source prints the complete regard-for-the-handmaid and future-blessedness clauses. The selected wording changes Because to For, hath to has, humility to lowliness, henceforth to from now on, and shall to will, and omits the source’s for before behold. Divine capitalization and punctuation are normalized. This is revised wording, not a verbatim quotation."
-    },
-    {
-     "id": "use.en.fccee24c364e44f09cac",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historical basis for the revised English verse. The source prints filling the hungry with good things and the rich he hath sent empty away. The selected wording changes hath to has and coordinates sent the rich away empty, with capitalization changes. Both sides of the contrast are materially attested; the current word order is revised."
+     "claim": "Historical English wording basis for receiving Israel His servant and being mindful of His mercy. The selected text modernizes hath to has and capitalizes divine pronouns. The complete verse is revised rather than verbatim."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-06"
   }
  ],
  "witnesses": [],

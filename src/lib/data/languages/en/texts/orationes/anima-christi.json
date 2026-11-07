@@ -3,18 +3,18 @@
   "language":"en",
   "about":"The Anima Christi is a Christ-centered devotional prayer built from brief invocations. It asks Christ’s soul to sanctify the speaker, His body to save, His blood to inebriate, the water from His side to wash, and His Passion to strengthen. It then asks Jesus to hear, to hide the speaker within His wounds, not to let the speaker be parted from Him, to defend, to call at the hour of death, and to bid the speaker come to Him and praise Him with the saints forever.",
   "seg":[
-    {"id":"s01","tr":"Soul of Christ, sanctify me.","tc":[57],"tb":"exact","g":["Soul","of Christ","sanctify","me"]},
-    {"id":"s02","tr":"Body of Christ, save me.","tc":[57],"tb":"exact","g":["body","of Christ","save","me"]},
-    {"id":"s03","tr":"Blood of Christ, inebriate me.","tc":[57],"tb":"exact","g":["blood","of Christ","inebriate","me"]},
-    {"id":"s04","tr":"Water from the side of Christ, wash me.","tc":[57],"tb":"exact","g":["water","from the side","of Christ","wash","me"]},
-    {"id":"s05","tr":"Passion of Christ, strengthen me.","tc":[57],"tb":"exact","g":["Passion","of Christ","strengthen","me"]},
-    {"id":"s06","tr":"O good Jesus, hear me.","tc":[57],"tb":"exact","g":["O","good","Jesus","hear","me"],"ex":{"w025":"“Exáudi” asks not merely for audibility but for a favorable hearing of the petition."}},
-    {"id":"s07","tr":"Within Your wounds hide me.","tc":[57],"tb":"revised","g":["within","Your","wounds","hide","me"]},
-    {"id":"s08","tr":"Do not permit me to be separated from You.","tc":[57],"tb":"revised","g":["do not","permit","me","to be separated","from","You"]},
-    {"id":"s09","tr":"Defend me from the evil enemy.","tc":[57],"tb":"revised","g":["from","enemy","evil","defend","me"],"ex":{"w039":"Tradition understands this enemy as the evil spirit."}},
-    {"id":"s10","tr":"At the hour of my death, call me.","tc":[57],"tb":"revised","g":["in","the hour",null,null,"call","me"],"a":[{"s":2,"n":2,"a":0,"g":"of my death"}]},
-    {"id":"s11","tr":"And bid me come to You,","tc":[57],"tb":"revised","g":["and","bid","me","come","to","You"]},
-    {"id":"s12","tr":"that I may praise You with Your saints","tc":[57],"tb":"revised","g":["that","with",null,null,"I may praise","You"],"a":[{"s":2,"n":2,"a":0,"g":"Your saints"}]},
-    {"id":"s13","tr":"forever and ever. Amen.","tc":[57],"tb":"normalized","g":["for","ages","of ages","Amen"]}
+    {"id":"s01","tr":"Soul of Christ, sanctify me.","tb":"exact","g":["Soul","of Christ","sanctify","me"]},
+    {"id":"s02","tr":"Body of Christ, save me.","tb":"exact","g":["body","of Christ","save","me"]},
+    {"id":"s03","tr":"Blood of Christ, inebriate me.","tb":"exact","g":["blood","of Christ","inebriate","me"]},
+    {"id":"s04","tr":"Water from the side of Christ, wash me.","tb":"exact","g":["water","from the side","of Christ","wash","me"]},
+    {"id":"s05","tr":"Passion of Christ, strengthen me.","tb":"exact","g":["Passion","of Christ","strengthen","me"]},
+    {"id":"s06","tr":"O good Jesus, hear me.","tb":"exact","g":["O","good","Jesus","hear","me"],"ex":{"w025":"“Exáudi” asks not merely for audibility but for a favorable hearing of the petition."}},
+    {"id":"s07","tr":"Within Your wounds hide me.","g":["within","Your","wounds","hide","me"]},
+    {"id":"s08","tr":"Do not permit me to be separated from You.","g":["do not","permit","me","to be separated","from","You"]},
+    {"id":"s09","tr":"Defend me from the evil enemy.","g":["from","enemy","evil","defend","me"],"ex":{"w039":"Tradition understands this enemy as the evil spirit."}},
+    {"id":"s10","tr":"At the hour of my death, call me.","g":["in","the hour",null,null,"call","me"],"a":[{"s":2,"n":2,"a":0,"g":"of my death"}]},
+    {"id":"s11","tr":"And bid me come to You,","g":["and","bid","me","come","to","You"]},
+    {"id":"s12","tr":"that I may praise You with Your saints","g":["that","with",null,null,"I may praise","You"],"a":[{"s":2,"n":2,"a":0,"g":"Your saints"}]},
+    {"id":"s13","tr":"forever and ever. Amen.","tb":"normalized","g":["for","ages","of ages","Amen"]}
   ]
 }

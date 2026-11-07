@@ -1,5 +1,5 @@
 {
- "schema_version": "1.5.0",
+ "schema_version": "1.6.0",
  "sections": [
   {
    "id": "latin_textual_sources",
@@ -17556,6 +17556,22 @@
      "lemmas": []
     },
     {
+     "edition": "edition.directorium-dioecesis-tiraspolensis-1911",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "litaniae.sacratissimi-cordis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 2
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.dwutygodnik-dyecezalny-wilenski-1911",
      "roles": [
       "historical_wording_basis"
@@ -17688,7 +17704,8 @@
     {
      "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
      "roles": [
-      "historical_wording_basis"
+      "historical_wording_basis",
+      "historical_wording_comparator"
      ],
      "texts": [
       {
@@ -17722,9 +17739,10 @@
       {
        "id": "orationes.memorare",
        "roles": [
-        "historical_wording_basis"
+        "historical_wording_basis",
+        "historical_wording_comparator"
        ],
-       "uses": 6
+       "uses": 2
       },
       {
        "id": "orationes.regina-caeli",
@@ -18513,6 +18531,22 @@
         "historical_wording_basis"
        ],
        "uses": 2
+      }
+     ],
+     "lemmas": []
+    },
+    {
+     "edition": "edition.kochowicz-spiewnik-1913",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "litaniae.sacratissimi-cordis-iesu",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
       }
      ],
      "lemmas": []

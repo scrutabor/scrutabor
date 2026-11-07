@@ -221,15 +221,28 @@ test('a cited translation states how its wording relates to the historical sourc
 	await setHelp(page, 2);
 	sources = page.locator('main .translation-sources details.source-notes');
 	await sources.locator('summary').click();
-	await expect(sources).toContainText('relationship to historical wording');
-	await expect(sources).toContainText(
-		'The source wording is retained, with changes limited to spelling, capitalization and punctuation.'
-	);
-	await expect(sources).toContainText(
-		'The translation is based on the cited historical wording, revised with reference to the Latin.'
-	);
-	await expect(sources).not.toContainText('archaic word forms');
+	// Exact, revised and normalized verses share the citation, not a single description.
+	await expect(sources.locator('.relationships')).toHaveCount(0);
 	await expect(sources).toContainText("The Catholic Girl's Guide");
+
+	for (const [slug, description] of [
+		[
+			'pater-noster',
+			'The source wording is retained, with changes limited to spelling, capitalization and punctuation.'
+		],
+		[
+			'agimus-tibi-gratias',
+			'The translation is based on the cited historical wording, revised with reference to the Latin.'
+		]
+	]) {
+		await page.goto(`/app/en/orationes/${slug}`);
+		await setHelp(page, 2);
+		await sources.locator('summary').click();
+		const relationships = sources.locator('.relationships');
+		await expect(relationships).toContainText('relationship to historical wording');
+		await expect(relationships.locator('p:not(.relationship-label)')).toHaveText([description]);
+		await expect(relationships).not.toContainText('archaic word forms');
+	}
 });
 
 test('a litany pairs every invocation with its exact response in compact columns', async ({

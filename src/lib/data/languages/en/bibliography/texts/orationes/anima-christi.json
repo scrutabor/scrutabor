@@ -11,14 +11,64 @@
    },
    "entries": [
     {
-     "id": "use.en.6cbf3a9a9e7a1bca2242",
+     "id": "use.en.orationes.anima-christi.s01.lasance1906",
      "address": {
-      "kind": "text"
+      "kind": "segment",
+      "segment": "s01"
      },
-     "claim": "Historical English wording witness for the complete orationes.anima-christi text."
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here.",
+     "reader_note": "This citation supports the first six invocations and the ending with Amen. The intervening English wording is not attributed to this source."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s02.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s03.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s04.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s05.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s06.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English wording basis for this complete invocation; the selected wording is printed here."
+    },
+    {
+     "id": "use.en.orationes.anima-christi.s13.lasance1906",
+     "address": {
+      "kind": "segment",
+      "segment": "s13"
+     },
+     "claim": "Historical English wording basis for the complete closing eternity clause and Amen. The printed For ever is normalized to forever, with sentence capitalization adjusted."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-06"
   }
  ],
  "witnesses": [],

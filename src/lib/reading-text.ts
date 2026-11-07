@@ -61,15 +61,16 @@ export function collectTranslationCitations(segments: Segment[], gloss: GlossDoc
 	}));
 }
 
-/** The distinct source relationships used by this text, in reading order. */
+/** A prayer-level description is valid only for a uniform, complete relationship. */
 export function collectTranslationRelationships(
 	segments: Segment[],
 	gloss: GlossDocument
 ): TranslationRelationship[] {
-	const found = new Set<TranslationRelationship>();
-	for (const segment of segments) {
-		const relationship = gloss.segments[segment.id]?.translation_relationship;
-		if (relationship) found.add(relationship);
-	}
-	return [...found];
+	const verses = segments.filter((segment) => segment.type === 'verse');
+	if (!verses.length) return [];
+	const relationships = verses.map(
+		(segment) => gloss.segments[segment.id]?.translation_relationship
+	);
+	const first = relationships[0];
+	return first && relationships.every((relationship) => relationship === first) ? [first] : [];
 }

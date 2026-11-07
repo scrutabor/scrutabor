@@ -60,6 +60,7 @@ export interface Citation {
 	title: string;
 	locator: string;
 	url?: string;
+	notes?: string[];
 }
 
 export type TranslationRelationship = 'exact' | 'normalized' | 'revised' | 'traditional-composite';
@@ -170,6 +171,7 @@ export interface GlossDocument {
 	lang: Lang;
 	status: string;
 	about?: string;
+	translation_label?: string;
 	about_citations?: Citation[];
 	analysis_defaults: Analysis;
 	segments: Record<string, SegmentGloss>;
@@ -272,6 +274,7 @@ interface LanguageArtifact {
 	id: string;
 	language: Lang;
 	about: string;
+	translation_label?: string;
 	seg: LanguageSegmentRow[];
 }
 
@@ -330,6 +333,8 @@ export function expandDocument(
 		segments: {},
 		words: {}
 	};
+	if (languageArtifact.translation_label !== undefined)
+		gloss.translation_label = languageArtifact.translation_label;
 	const languageRows = new Map(languageArtifact.seg.map((row) => [row.id, row]));
 
 	text.segments = artifact.seg.map((row) => {

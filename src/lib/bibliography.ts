@@ -108,7 +108,7 @@ interface EvidenceSourceGroup {
 		section?: string;
 		page_url?: string;
 	};
-	entries: { id: string; address: EvidenceAddress; claim: string }[];
+	entries: { id: string; address: EvidenceAddress; claim: string; reader_note?: string }[];
 }
 
 interface EvidenceDocument {
@@ -178,6 +178,7 @@ export interface BibliographyDetailGroup {
 	url?: string;
 	repository?: string;
 	uses: BibliographyUse[];
+	notes?: string[];
 }
 
 export interface TextBibliographyEvidence {
@@ -384,7 +385,11 @@ export async function loadBibliographySource(
 	);
 	const groups = new Map<
 		string,
-		{ source: EvidenceSourceGroup; entries: { textId?: string; address: EvidenceAddress }[] }
+		{
+			source: EvidenceSourceGroup;
+			entries: { textId?: string; address: EvidenceAddress }[];
+			notes: Set<string>;
+		}
 	>();
 	const records = [
 		...loaded,
@@ -398,8 +403,11 @@ export async function loadBibliographySource(
 			({ edition, role }) => edition === source.id && source.roles.includes(role)
 		)) {
 			const key = [group.digital_item, group.role, JSON.stringify(group.locator)].join('\u0000');
-			const found = groups.get(key) ?? { source: group, entries: [] };
+			const found = groups.get(key) ?? { source: group, entries: [], notes: new Set<string>() };
 			found.entries.push(...group.entries.map(({ address }) => ({ textId, address })));
+			for (const entry of group.entries) {
+				if (entry.reader_note) found.notes.add(entry.reader_note);
+			}
 			groups.set(key, found);
 		}
 	}
@@ -414,7 +422,8 @@ export async function loadBibliographySource(
 			section: group.source.locator.section,
 			url: group.source.locator.page_url ?? item.scan_url ?? item.record_url,
 			repository: item.repository,
-			uses: compactUses(group.entries, lang)
+			uses: compactUses(group.entries, lang),
+			...(group.notes.size ? { notes: [...group.notes] } : {})
 		};
 	});
 }
@@ -428,8 +437,12 @@ function evidenceCitation(
 	if (!edition) throw new Error(`${group.edition} has no catalogue record`);
 	const item = items.get(group.digital_item);
 	if (!item) throw new Error(`${group.digital_item} has no catalogue record`);
+	const notes = [
+		...new Set(group.entries.flatMap(({ reader_note }) => (reader_note ? [reader_note] : [])))
+	];
 	return {
 		title: edition.title,
+		...(notes.length ? { notes } : {}),
 		locator: [group.locator.section, group.locator.printed, group.locator.scan]
 			.filter(Boolean)
 			.join(' · '),
@@ -437,10 +450,13 @@ function evidenceCitation(
 	};
 }
 
-function uniqueCitations(citations: Citation[]): Citation[] {
+export function uniqueCitations(citations: Citation[]): Citation[] {
 	const found = new Map<string, Citation>();
 	for (const citation of citations) {
-		found.set(`${citation.title}\u0000${citation.locator}\u0000${citation.url ?? ''}`, citation);
+		const key = `${citation.title}\u0000${citation.locator}\u0000${citation.url ?? ''}`;
+		const previous = found.get(key);
+		const notes = [...new Set([...(previous?.notes ?? []), ...(citation.notes ?? [])])];
+		found.set(key, { ...citation, ...(notes.length ? { notes } : {}) });
 	}
 	return [...found.values()];
 }
