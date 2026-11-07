@@ -110,6 +110,37 @@ for (const host of ['', ' @static-host']) {
 		await expect(sources.locator('[role="alert"]')).toHaveCount(0);
 		await expect(sources.locator('details')).toHaveCount(0);
 		await expect(page.locator('aside .head')).toContainText('Christ');
+		// Without sources the block takes no room and holds none: the form
+		// row follows the entry's last line at the rows' own 0.75rem margin.
+		await expect(sources).not.toHaveClass(/expected/);
+		await expect
+			.poll(() => sources.evaluate((element) => element.getBoundingClientRect().height))
+			.toBe(0);
+		const distance = await page.evaluate(() => {
+			const layers = document.querySelectorAll('aside .layer');
+			const entry = layers[0].querySelector('.layer-body')!;
+			const last = entry.querySelector('.note') ?? entry.querySelector('.head')!;
+			return layers[1].getBoundingClientRect().top - last.getBoundingClientRect().bottom;
+		});
+		expect(Math.abs(distance - 12)).toBeLessThanOrEqual(1);
+	});
+
+	test(`a sourced lemma holds the closed sources line's room from the start${host}`, async ({
+		page
+	}) => {
+		await page.goto('/app/en/orationes/te-deum?w=w065');
+		const sources = page.locator('aside .lemma-sources[data-lemma="veneror"]');
+		await expect(sources).toHaveClass(/expected/);
+		await expect(sources.locator('summary')).toBeVisible();
+		const box = await sources.evaluate((element) => ({
+			height: element.getBoundingClientRect().height,
+			reserved: parseFloat(getComputedStyle(element).minBlockSize),
+			line:
+				element.querySelector('details')!.getBoundingClientRect().height +
+				parseFloat(getComputedStyle(element.querySelector('details')!).marginTop)
+		}));
+		expect(Math.abs(box.height - box.reserved)).toBeLessThanOrEqual(1);
+		expect(Math.abs(box.line - box.reserved)).toBeLessThanOrEqual(1);
 	});
 
 	// Match the real emitted neutral index, not a substitute success payload.
@@ -258,11 +289,7 @@ for (const host of ['', ' @static-host']) {
 			await expect(page.locator('aside .construction-card')).toHaveCount(6);
 			await expect(entry.locator('.morph')).toBeVisible();
 			await expect(entry.locator('.head')).toContainText('véneror');
-			const failed = await sources.evaluate((element) => ({
-				height: element.getBoundingClientRect().height,
-				reserved: parseFloat(getComputedStyle(element).minBlockSize)
-			}));
-			expect(Math.abs(failed.height - failed.reserved)).toBeLessThanOrEqual(1);
+			const failed = await sources.evaluate((element) => element.getBoundingClientRect().height);
 			// Exercise the real production worker, not a cache/controller spoof.
 			await expect
 				.poll(() => page.evaluate(() => navigator.serviceWorker.controller?.scriptURL ?? null))
@@ -278,6 +305,10 @@ for (const host of ['', ' @static-host']) {
 			expect((await recoveredModule).fromServiceWorker()).toBe(true);
 			await expect(page).toHaveURL(/w=w065/);
 			await expect(sources.locator('summary')).toBeVisible();
+			// The failure line and the closed sources line take the same room,
+			// so the retry does not move the form row.
+			const recovered = await sources.evaluate((element) => element.getBoundingClientRect().height);
+			expect(Math.abs(recovered - failed)).toBeLessThanOrEqual(1);
 			expect(control.matches()).toBe(2);
 			await expect.poll(control.receipts).toEqual([
 				{
@@ -300,3 +331,38 @@ for (const host of ['', ' @static-host']) {
 		}
 	});
 }
+
+test.describe('desktop sheet below its height cap', () => {
+	test.use({ viewport: { width: 1100, height: 1000 } });
+
+	test('a tapped word with dictionary sources stays clear of the sheet', async ({ page }) => {
+		// The panel lifts the tapped word clear of the sheet in the sheet's
+		// first frame. The sources line arrives later and must not grow the
+		// sheet over the word (credo at w098 keeps the sheet under its cap).
+		await page.goto('/app/en/orationes/te-deum');
+		const word = page.locator('#w098');
+		await word.waitFor();
+		await page.evaluate(() => {
+			document.getElementById('w098')!.scrollIntoView({ block: 'center' });
+			window.scrollBy(0, -innerHeight * 0.35);
+		});
+		await word.click();
+		const sources = page.locator('aside .lemma-sources[data-lemma="credo"]');
+		await expect(sources).toHaveClass(/expected/);
+		await expect(sources.locator('summary')).toBeVisible();
+		const overlap = () =>
+			page.evaluate(() => {
+				const el = document.getElementById('w098')!;
+				const group = el.closest('.token-group') ?? el;
+				const sheet = document.querySelector('aside.panel')!;
+				return group.getBoundingClientRect().bottom + 16 - sheet.getBoundingClientRect().top;
+			});
+		await expect.poll(overlap).toBeLessThanOrEqual(1);
+		const sheet = page.locator('aside.panel');
+		const cap = await page.evaluate(() => innerHeight * 0.45);
+		expect((await sheet.boundingBox())!.height).toBeLessThan(cap);
+		await expect
+			.poll(() => sources.evaluate((element) => element.getBoundingClientRect().height))
+			.toBeGreaterThan(28);
+	});
+});

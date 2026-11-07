@@ -498,6 +498,28 @@ export async function loadLemmaSupport(lang: Lang, lemma: string): Promise<Citat
 	);
 }
 
+/** The lemmata this edition supports with at least one dictionary or grammar
+ * source, decided by the same index and roles as loadLemmaSupport. A page
+ * lexicon marks them so the word panel can hold the closed sources line's
+ * room before the lazy module arrives (never the panel's own guess). */
+export async function lemmataWithSupport(lang: Lang): Promise<Set<string>> {
+	const index = await loadResource<BibliographyIndex>(bibliographyResourcePaths(lang).root.index);
+	const supported = new Set<string>();
+	for (const section of index.sections) {
+		for (const entry of section.entries) {
+			for (const record of entry.lemmas) {
+				if (
+					record.source_groups.some(
+						({ role }) => role === 'lexical_support' || role === 'grammatical_support'
+					)
+				)
+					supported.add(record.id);
+			}
+		}
+	}
+	return supported;
+}
+
 /** Dictionary-level support is not evidence for an entire prayer or translation. */
 export async function loadLemmaBibliography(lang: Lang, lemma: string): Promise<Citation[]> {
 	const { catalog, index } = await resources(lang);

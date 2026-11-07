@@ -96,6 +96,10 @@ async function load(lang: 'pl' | 'en' = 'en', lemma = 'veneror') {
 	return (await import('./bibliography')).loadLemmaSupport(lang, lemma);
 }
 
+async function marked(lang: 'pl' | 'en' = 'en') {
+	return (await import('./bibliography')).lemmataWithSupport(lang);
+}
+
 describe('neutral dictionary support for word cards', () => {
 	test.each(['pl', 'en'] as const)('loads only neutral resources in %s', async (lang) => {
 		expect(await load(lang)).toEqual([
@@ -209,4 +213,32 @@ describe('neutral dictionary support for word cards', () => {
 			await expect(load()).rejects.toThrow('no catalogue record');
 		}
 	);
+});
+
+describe('the page lexicon mark for sourced lemmata', () => {
+	test('names exactly the lemmata loadLemmaSupport would fill', async () => {
+		expect([...(await marked())]).toEqual(['veneror']);
+		expect([...(await marked('pl'))]).toEqual(['veneror']);
+	});
+
+	test('counts grammatical support', async () => {
+		fixture.index = index([group('grammatical_support')]);
+		expect([...(await marked())]).toEqual(['veneror']);
+	});
+
+	test('counts no other role', async () => {
+		fixture.index = index([group('historical_wording_basis')]);
+		expect([...(await marked())]).toEqual([]);
+	});
+
+	test('marks nothing when no support was projected', async () => {
+		fixture.index = index([]);
+		expect([...(await marked())]).toEqual([]);
+	});
+
+	test('reads the shared root index once and never the catalogue', async () => {
+		await Promise.all([marked('pl'), marked('en')]);
+		expect(fixture.indexReads).toBe(1);
+		expect(fixture.catalogReads).toBe(0);
+	});
 });

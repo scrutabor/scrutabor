@@ -115,7 +115,7 @@
 		<SourceNotes citations={senseEntry.note_citations} {lang} />
 	{/if}
 	{#key `${lang}:${item.lemma}`}
-		<LemmaSources lemma={item.lemma} {lang} />
+		<LemmaSources lemma={item.lemma} {lang} expected={lemmaEntry?.sources === true} />
 	{/key}
 {/snippet}
 

@@ -194,6 +194,10 @@ export interface LemmaEntry {
 	conj?: number;
 	analysis?: Analysis;
 	localization?: { note: true; note_citations?: Citation[] };
+	/** Set on a page lexicon's entry when the edition supports this lemma
+	 * with a dictionary or grammar source (narrowLexicon). The word panel
+	 * holds the room for the closed sources line from its first frame. */
+	sources?: true;
 }
 
 export interface SenseEntry {
@@ -447,13 +451,21 @@ export async function narrowLexicon(
 	docs: Iterable<TextDocument>,
 	language: Lang
 ): Promise<Lexicon> {
-	const languageSenses = await loadSenses(language);
+	// The bibliography stays a lazy boundary for the reader; the page lexicon
+	// is built once at prerender and only carries the per-lemma mark.
+	const [languageSenses, { lemmataWithSupport }] = await Promise.all([
+		loadSenses(language),
+		import('./bibliography')
+	]);
+	const supported = await lemmataWithSupport(language);
 	const lemmata: Record<string, LemmaEntry> = {};
 	const senses: Record<string, SenseEntry> = {};
 	for (const doc of docs) {
 		for (const segment of doc.segments) {
 			for (const word of segment.words ?? []) {
-				if (LEXICON.lemmata[word.lemma]) lemmata[word.lemma] = LEXICON.lemmata[word.lemma];
+				const entry = LEXICON.lemmata[word.lemma];
+				if (entry)
+					lemmata[word.lemma] = supported.has(word.lemma) ? { ...entry, sources: true } : entry;
 				if (languageSenses[word.lemma]) senses[word.lemma] = languageSenses[word.lemma];
 			}
 		}
