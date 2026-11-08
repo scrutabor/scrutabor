@@ -135,6 +135,27 @@ test.describe('two worker versions, one book @online', () => {
 		await page.reload();
 		const notice = page.locator('.update-notice');
 		await expect(notice).toBeVisible();
+		// A card centred above the page's foot, inside the viewport, with
+		// finger-sized controls, and not printed with the page.
+		await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
+		const layout = await page.evaluate(() => ({
+			width: document.documentElement.clientWidth,
+			height: document.documentElement.clientHeight
+		}));
+		const box = (await notice.boundingBox())!;
+		expect(box.x).toBeGreaterThanOrEqual(8);
+		expect(box.x + box.width).toBeLessThanOrEqual(layout.width - 8);
+		expect(Math.abs(box.x + box.width / 2 - layout.width / 2)).toBeLessThanOrEqual(1);
+		expect(layout.height - (box.y + box.height)).toBeGreaterThanOrEqual(8);
+		// sized to its words on a wide screen, not to its 34rem cap
+		expect(box.width).toBeLessThan(480);
+		for (const button of await notice.getByRole('button').all()) {
+			expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(39.5);
+		}
+		await page.emulateMedia({ media: 'print' });
+		await expect(notice).toBeHidden();
+		await page.emulateMedia({ media: 'screen' });
+		await expect(notice).toBeVisible();
 		// Declining is a real choice: the bar goes, the session remembers,
 		// and the old worker keeps serving an intact old cache.
 		await notice.getByRole('button', { name: /później|later/ }).click();
@@ -152,6 +173,45 @@ test.describe('two worker versions, one book @online', () => {
 			})
 		).toBe(true);
 	});
+
+	for (const [screen, viewport] of [
+		['phone', { width: 390, height: 844 }],
+		['desktop', { width: 1280, height: 720 }]
+	] as const) {
+		test(`accepting holds the card still while it reloads on a ${screen}`, async ({ page }) => {
+			// The pressed label lengthens and the quiet choice leaves; the card
+			// must neither move nor change shape under the finger. The
+			// activation message is swallowed so the reloading state stays.
+			await page.setViewportSize(viewport);
+			await page.goto(`${origin}/app/pl`);
+			await ready(page);
+			state.suffix = 'B';
+			await page.reload();
+			const notice = page.locator('.update-notice');
+			await expect(notice).toBeVisible();
+			await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
+			const before = (await notice.boundingBox())!;
+			expect(before.height, 'one row').toBeLessThan(70);
+			await page.evaluate(() => {
+				const send = ServiceWorker.prototype.postMessage;
+				ServiceWorker.prototype.postMessage = function (
+					this: ServiceWorker,
+					message: unknown,
+					...rest: never[]
+				) {
+					if (message === 'activate-release') return;
+					return send.call(this, message, ...rest);
+				} as typeof send;
+			});
+			await notice.getByRole('button', { name: /wczytaj|reload/i }).click();
+			await expect(notice.getByRole('button', { name: /wczytywanie|reloading/i })).toBeDisabled();
+			await expect(notice.getByRole('button', { name: /później|later/ })).toHaveCount(0);
+			const after = (await notice.boundingBox())!;
+			expect(Math.abs(after.x - before.x)).toBeLessThanOrEqual(1);
+			expect(Math.abs(after.width - before.width)).toBeLessThanOrEqual(1);
+			expect(Math.abs(after.height - before.height)).toBeLessThanOrEqual(1);
+		});
+	}
 
 	for (const controlledOnLoad of [false, true]) {
 		test(`accepting a later update reloads a page that began ${controlledOnLoad ? 'controlled' : 'uncontrolled'}`, async ({

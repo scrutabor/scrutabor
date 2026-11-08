@@ -24,6 +24,7 @@
 	--wash: #ede2c9;
 	--wash-strong: #e3d3ae;
 	--shadow: 0 -10px 34px rgba(66, 50, 22, 0.14);
+	--shadow-float: 0 6px 24px rgba(66, 50, 22, 0.18);
 }
 
 [data-theme='dark'] {
@@ -37,6 +38,7 @@
 	--wash: #2b2417;
 	--wash-strong: #3a3120;
 	--shadow: 0 -10px 34px rgba(0, 0, 0, 0.45);
+	--shadow-float: 0 6px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* THE TWIN of the block above, for a dark-preferring reader with scripts
@@ -59,6 +61,7 @@
 		--wash: #2b2417;
 		--wash-strong: #3a3120;
 		--shadow: 0 -10px 34px rgba(0, 0, 0, 0.45);
+		--shadow-float: 0 6px 24px rgba(0, 0, 0, 0.5);
 	}
 }
 /* jscpd:ignore-end */
@@ -1008,6 +1011,7 @@ a {
 		--wash: #fff;
 		--wash-strong: #fff;
 		--shadow: none;
+		--shadow-float: none;
 		--reading: 10.5pt;
 		font-size: 10pt !important;
 		color-scheme: light;

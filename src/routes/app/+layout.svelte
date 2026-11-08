@@ -13,6 +13,7 @@
 
 	let { children } = $props();
 	let waitingWorker = $state<ServiceWorker | null>(null);
+	let notice = $state<HTMLElement | null>(null);
 	let updateLang = $state<Lang>('en');
 	let reloading = $state(false);
 	// An ordinary update may be put off for the session; a copy that can no
@@ -31,6 +32,11 @@
 
 	function acceptUpdate() {
 		if (!waitingWorker || reloading) return;
+		// The accepted card keeps its box while its label lengthens and the
+		// quiet choice leaves: a card that re-centred under the finger would
+		// look broken. The fatal card has no quiet choice to give the room, so
+		// it is left to grow.
+		if (notice && !stale) notice.style.inlineSize = `${notice.getBoundingClientRect().width}px`;
 		reloading = true;
 		waitingWorker.postMessage('activate-release');
 	}
@@ -178,78 +184,160 @@
 {@render children()}
 
 {#if noticeShown}
-	<aside class="update-notice" role="status" aria-live="polite" aria-atomic="true">
-		<p>{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
-		<button type="button" onclick={acceptUpdate} disabled={reloading}>
-			{reloading ? updateCopy.updateReloading : updateCopy.updateReload}
-		</button>
-		{#if !stale}
-			<button type="button" class="later" onclick={dismissUpdate}>
-				{updateCopy.updateLater}
+	<aside
+		class="update-notice"
+		class:stale
+		role="status"
+		aria-live="polite"
+		aria-atomic="true"
+		bind:this={notice}
+	>
+		<p class="trim-label">{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
+		<div class="actions">
+			{#if !stale && !reloading}
+				<button type="button" class="later trim-label" onclick={dismissUpdate}>
+					{updateCopy.updateLater}
+				</button>
+			{/if}
+			<button type="button" class="reload trim-label" onclick={acceptUpdate} disabled={reloading}>
+				{reloading ? updateCopy.updateReloading : updateCopy.updateReload}
 			</button>
-		{/if}
+		</div>
 	</aside>
 {/if}
 
 <style>
+	/* A housekeeping card, not a dialog. It floats above the page's foot,
+	   sized to its own words, in the sheet's card idiom (surface, hairline
+	   border, 0.9rem corners) with the chrome's pill controls: the quiet
+	   choice first, the action last and filled, so the eye lands on one
+	   thing. Below an open sheet (its aside sits at 10): the panel the
+	   reader opened outranks the housekeeping card. */
 	.update-notice {
 		position: fixed;
-		/* Below an open sheet (its aside sits at 10): the panel the reader
-		   opened outranks the housekeeping bar. */
 		z-index: 9;
-		inset-inline: 50% auto;
-		bottom: max(1rem, env(safe-area-inset-bottom));
-		transform: translateX(-50%);
+		inset-inline: 0;
+		bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+		inline-size: max-content;
+		max-inline-size: min(34rem, 100% - 1.5rem);
+		margin-inline: auto;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		width: min(28rem, calc(100vw - 2rem));
-		padding: 0.7rem 0.75rem 0.7rem 1rem;
+		justify-content: flex-end;
+		column-gap: 1.25rem;
+		row-gap: 0.5rem;
+		padding: 0.5rem 0.5rem 0.5rem 1.1rem;
 		border: 1px solid var(--border);
-		border-radius: 0.65rem;
+		border-radius: 0.9rem;
 		background: var(--surface);
-		box-shadow: var(--shadow);
+		box-shadow: var(--shadow-float);
 		color: var(--ink);
+		animation: notice-in 220ms ease-out;
 	}
 
+	@keyframes notice-in {
+		from {
+			opacity: 0;
+			transform: translateY(0.5rem);
+		}
+	}
+
+	/* A copy that can no longer fetch its files: the same card, edged in
+	   the rubric, so the longer explanation reads as the warning it is. */
+	.update-notice.stale {
+		border-color: var(--rubric);
+	}
+
+	/* On a phone the card spans the gutter width, so it sits the same in
+	   both languages and in both states. */
+	@media (max-width: 40rem) {
+		.update-notice {
+			inline-size: auto;
+		}
+	}
+
+	/* The message keeps its own width while the controls fit beside it
+	   and grows into what they leave; a long one wraps at a short measure
+	   (two balanced lines beside the button), and on a narrow screen the
+	   controls drop under it, flush right. The label face keeps its
+	   baseline level with the pill labels. */
 	.update-notice p {
+		flex: 1 1 auto;
+		min-inline-size: 0;
+		max-inline-size: 17rem;
 		margin: 0;
-		line-height: 1.3;
+		font-size: 0.95rem;
+		line-height: 1.35;
+		text-wrap: balance;
+	}
+
+	.actions {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-inline-start: auto;
 	}
 
 	.update-notice button {
-		min-height: 2.75rem;
-		padding: 0.4rem 0.85rem;
-		border: 1px solid var(--rubric);
-		border-radius: 0.45rem;
-		background: transparent;
-		color: var(--rubric);
-		font: inherit;
-		font-weight: 600;
+		appearance: none;
+		min-block-size: 2.5rem;
+		padding: 0.35rem 1rem;
+		border: 1px solid transparent;
+		border-radius: 999px;
+		background: none;
+		color: var(--ink-soft);
+		font-size: 0.95rem;
+		line-height: 1.2;
 		white-space: nowrap;
 		cursor: pointer;
 	}
 
-	.update-notice button.later {
-		border: 0;
-		background: none;
-		color: inherit;
-		text-decoration: underline;
+	.update-notice .later:hover {
+		background: var(--wash);
+		color: var(--ink);
+	}
+
+	.update-notice .reload {
+		border-color: var(--rubric);
+		background: var(--rubric);
+		color: var(--surface);
+		font-weight: 600;
+	}
+
+	.update-notice .reload:not(:disabled):hover {
+		box-shadow: inset 0 0 0 999px rgb(0 0 0 / 8%);
+	}
+
+	/* The pressed pill is the only progress message there is, so it stays
+	   legible (4.7:1 on paper, 5.8:1 at night). */
+	.update-notice button:disabled {
+		cursor: progress;
 		opacity: 0.8;
 	}
 
-	.update-notice button:disabled {
-		cursor: default;
-		opacity: 0.7;
+	/* A finger gets the full 44 px the chrome's mouse pills do not need. */
+	@media (pointer: coarse) {
+		.update-notice button {
+			min-block-size: 2.75rem;
+		}
 	}
 
-	@media (max-width: 24rem) {
+	/* Forced colours keep the one filled action, in the system's own pair.
+	   Without opting out of the adjustment the engine paints a Canvas
+	   backplate behind the label, which hides HighlightText on Highlight. */
+	@media (forced-colors: active) {
+		.update-notice .reload {
+			forced-color-adjust: none;
+			border-color: Highlight;
+			background: Highlight;
+			color: HighlightText;
+		}
+	}
+
+	@media print {
 		.update-notice {
-			align-items: stretch;
-			flex-direction: column;
-			gap: 0.6rem;
-			padding: 0.85rem;
+			display: none;
 		}
 	}
 </style>
