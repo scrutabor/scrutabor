@@ -49,5 +49,13 @@ for (const language of ['pl', 'en'] as const) {
 			await expect(page.locator('.formulary-scope')).toBeVisible();
 			await page.emulateMedia({ media: 'screen' });
 		}
+		await page.setViewportSize({ width: 1280, height: 900 });
+		await page.goto(`/app/${language}/formularium`);
+		const scope = (await page.locator('.formulary-scope').boundingBox())!;
+		const lead = (await page.locator('main .lead').boundingBox())!;
+		expect(scope.x).toBeCloseTo(lead.x, 0);
+		expect(scope.width).toBeCloseTo(lead.width, 0);
+		await page.goto(`/app/${language}/ordo/offertorium?dies=2049-07-25`);
+		expect((await page.locator('.formulary-scope').boundingBox())!.width).toBeGreaterThan(540);
 	});
 }

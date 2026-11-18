@@ -384,38 +384,17 @@ test('the way out of a long panel does not scroll away', async ({ page }) => {
 	await expect(sheet).toHaveCount(0);
 });
 
-test('a reading report copies the dated word and the selected view', async ({ page }) => {
-	await page.addInitScript(() => {
-		localStorage.setItem('scrutabor-help', '2');
-		localStorage.setItem('scrutabor-role', 'minister');
-		localStorage.setItem('scrutabor-mass-form', 'lecta');
-		Object.defineProperty(navigator, 'clipboard', {
-			configurable: true,
-			value: { writeText: async (value: string) => document.body.setAttribute('data-copy', value) }
-		});
-	});
-	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-11-29&w=credo.w103');
-	const copy = page.getByRole('button', { name: 'Kopiuj odsyłacz do zgłoszenia' });
-	await copy.click();
-	const value = await page.locator('body').getAttribute('data-copy');
-	expect(value).toBeTruthy();
-	const [link, settings, version] = value!.split('\n');
-	const url = new URL(link);
-	expect(url.origin).toBe('https://scrutabor.org');
-	expect(url.pathname).toBe('/app/pl/ordo/catechumenorum');
-	expect(url.searchParams.get('dies')).toBe('2026-11-29');
-	expect(url.searchParams.get('w')).toBe('credo.w103');
-	expect(settings).toContain('usługujący · cicha');
-	expect(version).toMatch(/^Scrutabor \d.*edycja korpusu \d/);
-});
-
-test('the reading report remains selectable without clipboard access', async ({ page }) => {
-	await page.addInitScript(() => {
-		Object.defineProperty(navigator, 'clipboard', { configurable: true, value: undefined });
-	});
-	await page.goto('/app/en/orationes/pater-noster?w=w001');
-	await page.getByRole('button', { name: 'Copy link for a report' }).click();
-	await expect(page.getByRole('textbox', { name: 'Copy link for a report' })).toHaveValue(
-		/^https:\/\/scrutabor\.org\/app\/en\/orationes\/pater-noster\?w=w001/
-	);
+test('word analysis ends with the certainty and source line', async ({ page }) => {
+	for (const [url, label] of [
+		['/app/pl/ordo/catechumenorum?dies=2026-11-29&w=credo.w103', /^pewność:/i],
+		['/app/en/orationes/pater-noster?w=w001', /^confidence:/i]
+	] as const) {
+		await page.goto(url);
+		const analysis = page.locator('aside .word-analysis');
+		await expect(analysis.locator(':scope > :last-child')).toHaveClass(/layers/);
+		await expect(analysis.locator('.verification').last()).toContainText(label);
+		await expect(analysis.getByRole('button', { name: /do zgłoszenia|for a report/i })).toHaveCount(
+			0
+		);
+	}
 });

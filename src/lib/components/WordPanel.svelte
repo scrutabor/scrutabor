@@ -1,7 +1,6 @@
 <script lang="ts">
 	// The word analysis as the reading surfaces present it: WordCard's
 	// content in the shared sheet, dismissed like every other sheet.
-	import CopyReadingReport from '$lib/components/CopyReadingReport.svelte';
 	import Sheet from '$lib/components/Sheet.svelte';
 	import WordCard from '$lib/components/WordCard.svelte';
 	import WordIdentity from '$lib/components/WordIdentity.svelte';
@@ -19,8 +18,7 @@
 		onnavigate,
 		construction = null,
 		inline = false,
-		idPrefix = '',
-		reportMode
+		idPrefix = ''
 	}: {
 		word: Word;
 		gloss: WordGloss | null;
@@ -35,7 +33,6 @@
 		inline?: boolean;
 		/** The same namespace used for this word's reading-surface address. */
 		idPrefix?: string;
-		reportMode?: number;
 	} = $props();
 </script>
 
@@ -62,11 +59,5 @@
 >
 	<div class="word-analysis">
 		<WordCard {word} {gloss} {analysis} {lex} {lang} {onnavigate} {construction} />
-		{#if reportMode !== undefined}
-			{@const address = idPrefix ? `${idPrefix}.${word.id}` : word.id}
-			{#key address}
-				<CopyReadingReport {lang} mode={reportMode} word={address} />
-			{/key}
-		{/if}
 	</div>
 </Sheet>

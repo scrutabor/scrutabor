@@ -1057,7 +1057,6 @@
 	{/if}
 
 	<SelectedWordPanel
-		reportMode={helpLevel}
 		word={picked?.word ?? null}
 		details={pickedDetails}
 		lex={mergedLex}

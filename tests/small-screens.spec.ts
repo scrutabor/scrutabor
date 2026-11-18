@@ -33,26 +33,18 @@ const PAGES = [
 const WIDTHS = [320, 390, 768, 1024];
 const SIZES = ['normal', 'larger', 'largest'];
 
-bare('nothing runs off the screen, at any width and any text size', async ({ page }) => {
-	// 120 combinations, and each one used to cost TWO page loads: a goto to
-	// get an origin to write localStorage on, then a reload to make the
-	// setting take. The setting outlives a navigation — localStorage is per
-	// origin, not per page — so it is written once per size and every goto
-	// after it already has it. 240 loads become 123.
-	//
-	// This is a measurement sweep over prerendered surfaces, so it uses the
-	// bare fixture: app.html applies the stored size synchronously, and the
-	// assertions below wait for that exact state and for the webfont. Full
-	// hydration on every cell adds no evidence and can starve under CI load.
-	test.setTimeout(180_000);
-	const damage: string[] = [];
-	for (const size of SIZES) {
+// Give each reading size its own case so a slow folder-edition run can
+// finish all the measurements. Each case uses a fresh navigation at every
+// width and sets the reading size once for the fixture's storage context.
+for (const size of SIZES) {
+	bare(`nothing runs off the screen at ${size} text size`, async ({ page }) => {
+		test.setTimeout(180_000);
+		const damage: string[] = [];
 		await page.goto('/app/pl');
 		await page.evaluate((s) => localStorage.setItem('scrutabor-reading', s), size);
 		for (const width of WIDTHS) {
 			await page.setViewportSize({ width, height: 760 });
 			for (const url of PAGES) {
-				// named, so a failure says which of the 120 it was on
 				await test.step(`${url} at ${width}px/${size}`, () => page.goto(url));
 				await expect(page.locator('html')).toHaveAttribute('data-reading', size);
 				await expect(page.locator('main')).toBeVisible();
@@ -76,9 +68,9 @@ bare('nothing runs off the screen, at any width and any text size', async ({ pag
 					damage.push(`${url} at ${width}px/${size}: +${bad.over}px [${bad.blame.join(', ')}]`);
 			}
 		}
-	}
-	expect(damage, `the page scrolls sideways:\n  ${damage.join('\n  ')}`).toEqual([]);
-});
+		expect(damage, `the page scrolls sideways:\n  ${damage.join('\n  ')}`).toEqual([]);
+	});
+}
 
 test('every menu opens onto the screen, not off the edge of it', async ({ page }) => {
 	// A list hung off the END of its pill, which is right until the nav

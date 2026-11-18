@@ -102,9 +102,11 @@
 			<span class="flow-lead">{msgs.ordoLead}</span>
 		</a>
 
-		<p class="formulary-catalog">
-			<a href="/app/{lang}/formularium">{msgs.dayPicker.catalogTitle}</a>
-		</p>
+		<div class="formulary-catalog">
+			<a class="secondary-nav-link" href="/app/{lang}/formularium">
+				{msgs.dayPicker.catalogTitle}<span aria-hidden="true">›</span>
+			</a>
+		</div>
 		<div class="catalog-spread">
 			<div class="catalog-column catalog-primary">
 				{#each primarySections as section (section.category)}
@@ -154,8 +156,7 @@
 	}
 
 	.formulary-catalog {
-		font-size: 0.85rem;
-		margin: 0.7rem 0 0;
+		margin-block-start: 0.7rem;
 	}
 
 	/* The nav row, .tagline, .motto and .motto-ref are shared furniture

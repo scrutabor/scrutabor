@@ -871,6 +871,28 @@ h2 {
 	text-decoration: underline;
 }
 
+.secondary-nav-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.65rem;
+	border: 1px solid var(--border);
+	border-radius: 0.42rem;
+	background: var(--surface);
+	color: var(--ink);
+	padding: 0.38rem 0.75rem;
+	max-inline-size: 100%;
+	font-size: 0.95rem;
+	text-decoration: none;
+}
+
+.secondary-nav-link:hover {
+	background: var(--wash);
+}
+
+.secondary-nav-link > [aria-hidden] {
+	color: var(--rubric);
+}
+
 /* The line under a title, and the row of reading controls under that:
    the two reading surfaces are seen one after the other by anyone
    following the Mass, so their heads have to be cut the same. */

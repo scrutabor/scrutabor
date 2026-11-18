@@ -8,7 +8,6 @@
 
 <style>
 	.formulary-scope {
-		max-width: 52ch;
 		margin: 1rem 0 0;
 		color: var(--ink-soft);
 		font-size: 0.85rem;
@@ -16,6 +15,7 @@
 		text-align: start;
 	}
 	.centered {
+		max-inline-size: 42rem;
 		margin-inline: auto;
 	}
 </style>

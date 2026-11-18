@@ -52,9 +52,6 @@
 			</div>
 		</div>
 
-		<p class="formulary-catalog">
-			<a href="/app/{lang}/formularium">{msgs.dayPicker.catalogTitle}</a>
-		</p>
 		<div class="movements">
 			{#each movements as m (m.id)}
 				<a class="movement" href={dayHref(`/app/${lang}/ordo/${m.id}`)}>
@@ -67,15 +64,19 @@
 					{/if}
 				</a>
 			{/each}
+			<div class="formulary-catalog">
+				<a class="secondary-nav-link" href="/app/{lang}/formularium">
+					{msgs.dayPicker.catalogTitle}<span aria-hidden="true">›</span>
+				</a>
+			</div>
 		</div>
 	</main>
 </div>
 
 <style>
 	.formulary-catalog {
-		text-align: center;
-		font-size: 0.85rem;
-		margin: 0.7rem 0 0;
+		align-self: flex-end;
+		margin-block-start: 0.35rem;
 	}
 
 	.subtitle {

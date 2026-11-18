@@ -435,6 +435,16 @@ test('a complete formulary fragment opens the named part', async ({ page }) => {
 	const part = page.locator(`#${id}`);
 	await expect(part).toContainText('Evangélium');
 	await expect(part).toBeInViewport();
+	await page.setViewportSize({ width: 1280, height: 900 });
+	const edges = await part.locator('.part-heading').evaluate((heading) => {
+		const textEdge = (element: Element) => {
+			const range = document.createRange();
+			range.selectNodeContents(element);
+			return range.getBoundingClientRect().left;
+		};
+		return [textEdge(heading.querySelector('h2')!), textEdge(heading.querySelector('p')!)];
+	});
+	expect(edges[0]).toBeCloseTo(edges[1], 0);
 });
 
 test('a followed link into a part opens on that part', async ({ page }) => {

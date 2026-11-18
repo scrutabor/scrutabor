@@ -13,7 +13,6 @@
 
 	let { children } = $props();
 	let waitingWorker = $state<ServiceWorker | null>(null);
-	let notice = $state<HTMLElement | null>(null);
 	let updateLang = $state<Lang>('en');
 	let reloading = $state(false);
 	// An ordinary update may be put off for the session; a copy that can no
@@ -32,11 +31,6 @@
 
 	function acceptUpdate() {
 		if (!waitingWorker || reloading) return;
-		// The accepted card keeps its box while its label lengthens and the
-		// quiet choice leaves: a card that re-centred under the finger would
-		// look broken. The fatal card has no quiet choice to give the room, so
-		// it is left to grow.
-		if (notice && !stale) notice.style.inlineSize = `${notice.getBoundingClientRect().width}px`;
 		reloading = true;
 		waitingWorker.postMessage('activate-release');
 	}
@@ -184,50 +178,38 @@
 {@render children()}
 
 {#if noticeShown}
-	<aside
-		class="update-notice"
-		class:stale
-		role="status"
-		aria-live="polite"
-		aria-atomic="true"
-		bind:this={notice}
-	>
-		<p class="trim-label">{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
+	<aside class="update-notice" class:stale>
+		<p role="status">{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
 		<div class="actions">
-			{#if !stale && !reloading}
-				<button type="button" class="later trim-label" onclick={dismissUpdate}>
+			{#if !stale}
+				<button
+					type="button"
+					class="later trim-label"
+					class:pending={reloading}
+					onclick={dismissUpdate}
+					disabled={reloading}
+				>
 					{updateCopy.updateLater}
 				</button>
 			{/if}
 			<button type="button" class="reload trim-label" onclick={acceptUpdate} disabled={reloading}>
-				{reloading ? updateCopy.updateReloading : updateCopy.updateReload}
+				<span class="reload-size" aria-hidden="true">{updateCopy.updateReloading}</span>
+				<span>{reloading ? updateCopy.updateReloading : updateCopy.updateReload}</span>
 			</button>
 		</div>
 	</aside>
 {/if}
 
 <style>
-	/* A housekeeping card, not a dialog. It floats above the page's foot,
-	   sized to its own words, in the sheet's card idiom (surface, hairline
-	   border, 0.9rem corners) with the chrome's pill controls: the quiet
-	   choice first, the action last and filled, so the eye lands on one
-	   thing. Below an open sheet (its aside sits at 10): the panel the
-	   reader opened outranks the housekeeping card. */
+	/* Keep the update below the reader's open sheet. */
 	.update-notice {
 		position: fixed;
 		z-index: 9;
 		inset-inline: 0;
 		bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-		inline-size: max-content;
-		max-inline-size: min(34rem, 100% - 1.5rem);
+		inline-size: min(24rem, 100% - 1.5rem);
 		margin-inline: auto;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: flex-end;
-		column-gap: 1.25rem;
-		row-gap: 0.5rem;
-		padding: 0.5rem 0.5rem 0.5rem 1.1rem;
+		padding: 0.9rem 1rem 0.85rem;
 		border: 1px solid var(--border);
 		border-radius: 0.9rem;
 		background: var(--surface);
@@ -249,45 +231,30 @@
 		border-color: var(--rubric);
 	}
 
-	/* On a phone the card spans the gutter width, so it sits the same in
-	   both languages and in both states. */
-	@media (max-width: 40rem) {
-		.update-notice {
-			inline-size: auto;
-		}
-	}
-
-	/* The message keeps its own width while the controls fit beside it
-	   and grows into what they leave; a long one wraps at a short measure
-	   (two balanced lines beside the button), and on a narrow screen the
-	   controls drop under it, flush right. The label face keeps its
-	   baseline level with the pill labels. */
 	.update-notice p {
-		flex: 1 1 auto;
-		min-inline-size: 0;
-		max-inline-size: 17rem;
 		margin: 0;
-		font-size: 0.95rem;
-		line-height: 1.35;
-		text-wrap: balance;
+		font-size: 1rem;
+		line-height: 1.3;
+		font-weight: 600;
 	}
 
 	.actions {
 		display: flex;
-		align-items: center;
+		flex-wrap: wrap;
+		justify-content: flex-end;
 		gap: 0.5rem;
-		margin-inline-start: auto;
+		margin-block-start: 0.7rem;
 	}
 
 	.update-notice button {
 		appearance: none;
 		min-block-size: 2.5rem;
-		padding: 0.35rem 1rem;
-		border: 1px solid transparent;
-		border-radius: 999px;
-		background: none;
-		color: var(--ink-soft);
-		font-size: 0.95rem;
+		padding: 0.3rem 0.7rem;
+		border: 1px solid var(--border);
+		border-radius: 0.42rem;
+		background: var(--surface);
+		color: var(--ink);
+		font-size: 0.9rem;
 		line-height: 1.2;
 		white-space: nowrap;
 		cursor: pointer;
@@ -295,7 +262,10 @@
 
 	.update-notice .later:hover {
 		background: var(--wash);
-		color: var(--ink);
+	}
+
+	.update-notice .later.pending {
+		visibility: hidden;
 	}
 
 	.update-notice .reload {
@@ -303,6 +273,17 @@
 		background: var(--rubric);
 		color: var(--surface);
 		font-weight: 600;
+		display: grid;
+		place-items: center;
+	}
+
+	/* Keep both labels in the same grid cell so pressing the button leaves it in place. */
+	.reload span {
+		grid-area: 1 / 1;
+	}
+
+	.reload-size {
+		visibility: hidden;
 	}
 
 	.update-notice .reload:not(:disabled):hover {

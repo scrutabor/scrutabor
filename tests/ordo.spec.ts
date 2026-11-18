@@ -10,6 +10,10 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	await expect(movements).toHaveCount(6);
 	await expect(movements.first()).toContainText('Præparátio');
 	await expect(movements.last()).toContainText('Conclúsio');
+	const catalog = page.getByRole('link', { name: 'Formularze Mszy', exact: true });
+	await expect(catalog).toHaveAttribute('href', '/app/pl/formularium');
+	const last = (await movements.last().boundingBox())!;
+	expect((await catalog.boundingBox())!.y).toBeGreaterThan(last.y + last.height);
 
 	// the Mass opens at the foot of the altar…
 	await movements.first().click();

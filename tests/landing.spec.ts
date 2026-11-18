@@ -14,7 +14,6 @@ async function analysisTree(locator: Locator) {
 				return text || null;
 			}
 			if (!(node instanceof Element)) return null;
-			if (node.classList.contains('reading-report')) return null;
 			return {
 				tag: node.tagName.toLowerCase(),
 				attributes: Object.fromEntries(
@@ -249,15 +248,12 @@ test.describe('landing @online', () => {
 	});
 
 	test('the landing and reader render one analysis component', async ({ page }) => {
-		const report = 'Kopiuj odsyłacz do zgłoszenia';
 		await page.goto('/pl');
 		const specimen = page.locator('.word-panel-inline .word-analysis');
-		await expect(specimen.getByRole('button', { name: report })).toHaveCount(0);
 		const landing = await analysisTree(specimen);
 
 		await page.goto('/app/pl/psalmi/118-he?w=w016');
 		const panel = page.locator('aside.panel .word-analysis');
-		await expect(panel.getByRole('button', { name: report })).toBeVisible();
 		const reader = await analysisTree(panel);
 		expect(landing).toEqual(reader);
 	});

@@ -862,6 +862,17 @@
 		margin-bottom: calc(var(--reading) * 0.39);
 	}
 
+	@media screen {
+		.who:has(
+			:global(.who-voice),
+			:global(.who-join),
+			:global(.who-all),
+			:global(.who-performance)
+		) {
+			padding-block-end: calc(var(--reading) * 0.25);
+		}
+	}
+
 	/* Set like the voice mark it sits beside — the same size and tracking,
 	   in the rubric's red, because it says something about the reader's own
 	   part rather than about the celebrant's. */

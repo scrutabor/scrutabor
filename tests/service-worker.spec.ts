@@ -147,8 +147,15 @@ test.describe('two worker versions, one book @online', () => {
 		expect(box.x + box.width).toBeLessThanOrEqual(layout.width - 8);
 		expect(Math.abs(box.x + box.width / 2 - layout.width / 2)).toBeLessThanOrEqual(1);
 		expect(layout.height - (box.y + box.height)).toBeGreaterThanOrEqual(8);
-		// sized to its words on a wide screen, not to its 34rem cap
-		expect(box.width).toBeLessThan(480);
+		expect(box.width).toBeLessThan(400);
+		const message = (await notice.getByRole('status').boundingBox())!;
+		const later = notice.getByRole('button', { name: /później|later/i });
+		const secondary = (await later.boundingBox())!;
+		const primary = (await notice.getByRole('button', { name: /wczytaj|reload/i }).boundingBox())!;
+		expect(secondary.y).toBeGreaterThan(message.y + message.height);
+		expect(primary.y).toBeCloseTo(secondary.y, 0);
+		expect(primary.x).toBeGreaterThan(secondary.x + secondary.width);
+		expect(box.x + box.width - primary.x - primary.width).toBeLessThan(20);
 		for (const button of await notice.getByRole('button').all()) {
 			expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(39.5);
 		}
@@ -158,7 +165,7 @@ test.describe('two worker versions, one book @online', () => {
 		await expect(notice).toBeVisible();
 		// Declining is a real choice: the bar goes, the session remembers,
 		// and the old worker keeps serving an intact old cache.
-		await notice.getByRole('button', { name: /później|later/ }).click();
+		await later.click();
 		await expect(notice).toHaveCount(0);
 		await page.reload();
 		await expect(page.locator('.update-notice')).toHaveCount(0);
@@ -191,7 +198,8 @@ test.describe('two worker versions, one book @online', () => {
 			await expect(notice).toBeVisible();
 			await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
 			const before = (await notice.boundingBox())!;
-			expect(before.height, 'one row').toBeLessThan(70);
+			const action = notice.locator('.reload');
+			const position = await action.boundingBox();
 			await page.evaluate(() => {
 				const send = ServiceWorker.prototype.postMessage;
 				ServiceWorker.prototype.postMessage = function (
@@ -205,7 +213,8 @@ test.describe('two worker versions, one book @online', () => {
 			});
 			await notice.getByRole('button', { name: /wczytaj|reload/i }).click();
 			await expect(notice.getByRole('button', { name: /wczytywanie|reloading/i })).toBeDisabled();
-			await expect(notice.getByRole('button', { name: /później|later/ })).toHaveCount(0);
+			await expect(notice.getByRole('button', { name: /później|later/i })).toHaveCount(0);
+			expect(await action.boundingBox()).toEqual(position);
 			const after = (await notice.boundingBox())!;
 			expect(Math.abs(after.x - before.x)).toBeLessThanOrEqual(1);
 			expect(Math.abs(after.width - before.width)).toBeLessThanOrEqual(1);
@@ -411,7 +420,7 @@ test.describe('two worker versions, one book @online', () => {
 		await page.reload();
 		const notice = page.locator('.update-notice');
 		await expect(notice).toBeVisible();
-		await notice.getByRole('button', { name: /później|later/ }).click();
+		await notice.getByRole('button', { name: /później|later/i }).click();
 		await expect(notice).toHaveCount(0);
 
 		state.retired = `/_app/immutable/corpus/${plConcordance}`;

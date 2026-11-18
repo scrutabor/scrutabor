@@ -401,7 +401,6 @@
 		{/if}
 
 		<SelectedWordPanel
-			reportMode={helpLevel}
 			word={selectedWord}
 			details={selectedDetails}
 			lex={data.lex}

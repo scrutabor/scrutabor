@@ -313,7 +313,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateAvailable: 'Nowa wersja jest gotowa.',
 		updateReload: 'Wczytaj',
 		updateReloading: 'Wczytywanie…',
-		updateLater: 'później',
+		updateLater: 'Później',
 		updateStale:
 			'Ta kopia nie może już pobrać swoich plików. Zastosuj aktualizację, aby czytać dalej.',
 		panelAria: 'analiza słowa',
@@ -594,7 +594,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		updateAvailable: 'A new version is ready.',
 		updateReload: 'Reload',
 		updateReloading: 'Reloading…',
-		updateLater: 'later',
+		updateLater: 'Later',
 		updateStale: 'This copy can no longer fetch its files. Apply the update to keep reading.',
 		panelAria: 'word analysis',
 		constructionPanelAria: 'construction analysis',

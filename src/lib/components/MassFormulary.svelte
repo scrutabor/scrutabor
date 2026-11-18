@@ -330,7 +330,6 @@
 		/>
 	{/if}
 	<SelectedWordPanel
-		reportMode={helpLevel}
 		word={picked?.word ?? null}
 		details={pickedDetails}
 		lex={data.lex}
@@ -384,6 +383,7 @@
 	.part-heading h2 {
 		font-size: 1.45rem;
 		font-weight: 500;
+		text-align: start;
 	}
 
 	.part-heading p {
