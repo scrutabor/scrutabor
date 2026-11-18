@@ -20,20 +20,18 @@
 
 		{#if lang === 'pl'}
 			<p class="what">
-				Teksty tego wydania są przepisane litera po literze ze źródeł publicznie dostępnych —
-				świadków tekstu, czyli ksiąg i&nbsp;wydań liturgii z&nbsp;1962 roku — a&nbsp;następnie
-				porównane z&nbsp;nimi słowo po słowie. W&nbsp;samych literach nie dopuszczamy żadnej
-				rozbieżności. Różnice drugorzędne (interpunkcja, wielkie litery) są rozstrzygane,
-				a&nbsp;każde rozstrzygnięcie jest zapisane wraz z&nbsp;uzasadnieniem w&nbsp;aparacie
-				krytycznym. Źródła, aparat krytyczny i&nbsp;wszystkie dane wydania są jawne w&nbsp;<a
+				Łacińskie teksty przepisujemy z&nbsp;publicznie dostępnych ksiąg liturgicznych
+				i&nbsp;sprawdzamy je z&nbsp;drukiem słowo po słowie. Zachowujemy zapis liter ze źródła.
+				Decyzje dotyczące interpunkcji i&nbsp;wielkich liter wyjaśniamy w&nbsp;aparacie krytycznym.
+				Źródła, aparat i&nbsp;dane wydania można znaleźć w&nbsp;<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
 					rel="external noopener">repozytorium korpusu</a
 				>.
 			</p>
 			<p class="what">
-				Analiza każdego słowa — lemat i&nbsp;rozbiór gramatyczny — jest sprawdzana mechanicznie
-				przez dwa niezależne, otwarte analizatory łaciny:
+				Formę słownikową i&nbsp;rozbiór gramatyczny sprawdzamy za pomocą dwóch niezależnych,
+				otwartych analizatorów łaciny,
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
 					>Whitaker's Words</a
 				>
@@ -41,23 +39,20 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. Przy każdym słowie panel wymienia, kto potwierdził jego rozbiór. „Opracowanie” to praca
-				własna wydania — glosy, przekłady, objaśnienia i&nbsp;rozstrzygnięcia.
+				>. W&nbsp;karcie słowa można sprawdzić, które źródła potwierdzają rozbiór. Oznaczeniem
+				„opracowanie” obejmujemy własne przekłady, podpisy pod słowami, objaśnienia i&nbsp;decyzje
+				redakcyjne.
 			</p>
 			<p class="what">
-				Ta weryfikacja czegoś dowodzi, a&nbsp;czegoś nie. Analizatory rozpoznają
-				<em>formę</em>: mówią, jakie rozbiory dana forma dopuszcza. Ponad połowa słów w&nbsp;tym
-				wydaniu ma formę wieloznaczną — „María” dopuszcza dwanaście odczytań — więc zgodność znaczy
-				tyle, że nasz rozbiór jest wśród możliwych, a&nbsp;nie że jest jedynym. Wybór właściwego
-				odczytania w&nbsp;kontekście należy do wydania i&nbsp;to on czeka na przegląd eksperta. Oba
-				analizatory są niezależnymi programami o&nbsp;słownikach w&nbsp;dużej mierze różnych, ale
-				mają wspólne źródło — Lewis&nbsp;&amp; Short.
+				Analizatory pokazują, jakie rozbiory są możliwe dla danej formy. Samo „María” dopuszcza
+				dwanaście odczytań. Żeby wybrać właściwe, trzeba przeczytać słowo w&nbsp;zdaniu. To właśnie
+				wybór rozbioru w&nbsp;kontekście czeka na przegląd latynisty. Oba programy korzystają między
+				innymi ze słownika Lewis&nbsp;&amp; Short.
 			</p>
 			<p class="what">
-				„Zaakceptowane” przy słowie znaczy: rozbiór potwierdzony przez analizatory. „Do przeglądu” —
-				ta część czeka jeszcze na weryfikację. Całość pozostaje
-				<strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę. Błędy są możliwe, a&nbsp;uwagi
-				mile widziane.
+				„Zaakceptowane” przy słowie oznacza, że analizatory potwierdzają podany rozbiór jako
+				możliwy. „Do przeglądu” oznacza, że dana część analizy jeszcze czeka na sprawdzenie.
+				Scrutabor pozostaje <strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę.
 			</p>
 			<p class="what">
 				Źródła zewnętrzne, na których opierają się objaśnienia, są podane bezpośrednio przy nich
@@ -65,11 +60,10 @@
 			</p>
 		{:else}
 			<p class="what">
-				The texts of this edition are transcribed letter for letter from publicly available
-				witnesses — books and editions of the 1962 liturgy — and collated: no divergence in the
-				letters themselves is tolerated, and accidental differences (punctuation, capitals) carry
-				recorded rulings in a critical apparatus. The witnesses, critical apparatus, and all edition
-				data are open in the
+				We transcribe the Latin from publicly available liturgical books and check it against the
+				printed text word by word. We follow the source spelling and record decisions about
+				punctuation and capitalization in the critical apparatus. The sources, apparatus, and
+				edition data are available in the
 				<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
@@ -77,8 +71,8 @@
 				>.
 			</p>
 			<p class="what">
-				Every word’s analysis — lemma and parse — is checked mechanically by two independent open
-				Latin analyzers:
+				We check each word’s dictionary form and grammar with two independent, open-source Latin
+				analyzers,
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
 					>Whitaker's Words</a
 				>
@@ -87,22 +81,20 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. The word panel names who confirmed each parse, and “editorial” is the edition’s own work
-				— the glosses, translations, notes, and rulings.
+				>. The word panel lists the sources that support the analysis. “Editorial” marks our own
+				work on the translations, word captions, notes, and textual decisions.
 			</p>
 			<p class="what">
-				That check proves some things and not others. The analyzers read the
-				<em>form</em>: they say which parses a form admits. More than half of the words in this
-				edition have an ambiguous form — “María” admits twelve readings — so agreement means our
-				parse is among the possible ones, not that it is the only one. Choosing the right reading in
-				context is the edition’s own act, and it is that choice which awaits expert review. The two
-				analyzers are independent programs with largely different dictionaries, but they share one
-				source: Lewis &amp; Short.
+				The analyzers list the possible grammatical forms. “María” alone has twelve possible
+				readings. The sentence tells us which one fits, and that choice still needs review by a
+				Latinist. Both analyzers draw on Lewis &amp; Short among their sources.
 			</p>
 			<p class="what">
-				“Accepted” on a word means its parse agrees with the analyzers’ votes. “Awaiting review”
-				marks a layer still to be verified. The whole remains a <strong>working edition</strong>
-				until review by a Latinist. Errors are possible and corrections welcome.
+				“Accepted” means the analyzers recognize the analysis as possible. “Awaiting review” marks
+				part of the analysis that still needs checking. Scrutabor remains a <strong
+					>working edition</strong
+				>
+				until it has been reviewed by a Latinist.
 			</p>
 			<p class="what">
 				External sources supporting the explanations are named beside them and collected in the

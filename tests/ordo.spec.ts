@@ -3,6 +3,7 @@ import { setHelp, atRoute, bare as bareTest, expect, settled, test } from './fix
 import { ORDO } from '../src/lib/ordo';
 
 test('the ordo is a map of six movements, walked in order', async ({ page }) => {
+	await page.addInitScript(() => localStorage.setItem('scrutabor-mass-form', 'lecta'));
 	await page.goto('/app/pl/ordo?missa=none');
 	await expect(page.locator('h1')).toHaveText('Ordo Missæ');
 	const movements = page.locator('.movement');
@@ -366,6 +367,11 @@ test('the reader is told which lines are theirs, and at which Mass', async ({ pa
 	// the Sunday parish Mass be sung
 	await expect(page.locator('.picker .option.on', { hasText: 'śpiewana' })).toBeVisible();
 	await expect(names().filter({ hasText: 'usługujący' }).first()).toBeVisible();
+
+	// The guide beside the servers’ confession must agree with the sung-Mass labels.
+	const confessionNote = page.locator('[data-part="confiteor"] .part-note').first();
+	await expect(confessionNote).toContainText('Usługujący odmawiają Confíteor');
+	await expect(confessionNote).not.toContainText('i wierni');
 
 	// at a low Mass the same lines are the faithful's, by n. 31 b
 	await page.locator('.option[data-word="cicha"]').click();

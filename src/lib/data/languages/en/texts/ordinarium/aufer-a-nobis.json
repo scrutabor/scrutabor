@@ -3,7 +3,7 @@
   "language":"en",
   "about":"As he ascends the altar steps, the priest asks God to take away iniquity so that we may enter the “Sancta sanctórum,” the holy of holies. In the second prayer he asks, in his own name, that his sins be forgiven through the merits of the saints whose relics are in this place, and of all the saints, kissing the altar as he names them.",
   "seg":[
-    {"id":"s01","nr":"The priest extends and joins his hands, then says one word aloud."},
+    {"id":"s01","nr":"The priest extends and joins his hands, then speaks aloud."},
     {"id":"s02","tr":"Let us pray.","tc":[134],"tb":"exact","g":["Let us pray"]},
     {"id":"s03","nr":"The priest ascends the steps to the altar and continues silently."},
     {"id":"s04","tr":"Lord, we ask You to take away our iniquities, so that with pure minds we may be worthy to enter the Holy of Holies.","tc":[135],"tb":"revised","g":["Take away","from","us","we beseech","Lord",null,null,"that","into",null,null,null,null,null,"to enter"],"a":[{"s":5,"n":2,"a":0,"g":"our iniquities"},{"s":9,"n":2,"a":0,"g":"the Holy of Holies"},{"s":11,"n":3,"a":1,"g":"with pure minds we may be worthy"}],"ex":{"w011":"“Sancta sanctórum” means “the Holy of Holies.” Both words are neuter here and refer to a holy place, not to saints.","w014":"After “ut,” “mereámur” takes the infinitive “introíre”: “that we may be worthy to enter.” It stands between “puris” and “méntibus,” which belong together: “with pure minds.”"}},

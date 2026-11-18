@@ -147,7 +147,10 @@ for (const language of ['pl', 'en'] as const) {
 			const translationNotes = part.locator('details.source-notes');
 			await translationNotes.locator('summary').click();
 			// Only the priest’s prayer has a historical wording basis; Amen is a separate response.
-			await expect(translationNotes.locator('.relationships')).toHaveCount(0);
+			await expect(translationNotes.locator('.relationship-label')).toHaveCount(0);
+			await expect(translationNotes.locator('.relationships [lang="la"]')).toHaveText(
+				'Deus qui unigénitum Fílium tuum…'
+			);
 			for (const leaf of [119, 55]) {
 				await expect(
 					translationNotes.locator(

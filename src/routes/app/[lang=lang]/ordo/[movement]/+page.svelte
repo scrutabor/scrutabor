@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { untrack, type Snippet } from 'svelte';
 	import { ownsLocation, pageUrl } from '$lib/url';
-	import type { GlossDocument, TextDocument } from '$lib/corpus';
+	import type { GlossDocument, Speaker, TextDocument } from '$lib/corpus';
 	import { arrowNav } from '$lib/arrow-nav';
 	import HelpLevels, { initialHelp } from '$lib/components/HelpLevels.svelte';
 	import ContentLoader from '$lib/components/ContentLoader.svelte';
@@ -28,6 +28,7 @@
 	import { ordinaryApplicability } from '$lib/ordinary-applicability';
 	import { unconfirmedOrdoContext, type OrdoApplicabilityContext } from '$lib/ordo-applicability';
 	import { ordinaryOmission } from '$lib/ordinary-omission';
+	import { AFTER_LOW_MASS, ordoReferenceGroups } from '$lib/ordo-reference-groups';
 	import { DISMISSAL_ROLE } from '$lib/dismissal';
 	import {
 		selectedOrdinaryBodyContext,
@@ -89,7 +90,7 @@
 	const msgs = $derived(M[lang]);
 	const movement = $derived(movementById(data.movement));
 	// Presence comes from the selected assembly, not a possibly missing payload.
-	const entries = $derived(
+	const allEntries = $derived(
 		(movement?.entries ?? []).filter((entry) => !entry.onlyWhenPresent || proper.hasSlot(entry.id))
 	);
 	// Whether this movement has a slot the day fills.
@@ -122,15 +123,15 @@
 		const t = dir === 'prev' ? around.prev : around.next;
 		return t ? dayHref(`/app/${lang}/ordo/${t.id}`) : undefined;
 	});
-	let legendOpen = $state(false);
+	let legendSpeaker = $state<Speaker | null>(null);
 
-	function openLegend() {
+	function openLegend(speaker: Speaker) {
 		panel.close();
-		legendOpen = true;
+		legendSpeaker = speaker;
 	}
 
 	function tapWord(id: string) {
-		legendOpen = false;
+		legendSpeaker = null;
 		panel.toggle(id);
 	}
 
@@ -175,6 +176,13 @@
 		failed: proper.failed,
 		unwritten: proper.unwritten
 	});
+
+	const referenceGroups = $derived(
+		ordoReferenceGroups(movement?.id, allEntries, applicabilityState, massForm.value, lang)
+	);
+	const entries = $derived(
+		allEntries.filter((entry) => !referenceGroups.some((group) => group.entries.includes(entry)))
+	);
 
 	const availableBodiesFor = $derived((e: OrdoEntry) => {
 		if (
@@ -382,6 +390,23 @@
 				if (citation) return { entry: entry.id, ...citation };
 			}
 		}
+		for (const group of referenceGroups) {
+			for (const entry of group.entries) {
+				for (const original of availableBodiesFor(entry)) {
+					const citation = omittedOrdinaryCitation(
+						original,
+						{
+							body: { ...original, doc: { ...original.doc, segments: [] } },
+							omitted: original.doc.segments.map((segment) => segment.id)
+						},
+						url.searchParams.get('w'),
+						url.searchParams.get('s'),
+						url.hash
+					);
+					if (citation) return { entry: entry.id, ...citation };
+				}
+			}
+		}
 		return null;
 	}
 
@@ -397,6 +422,15 @@
 		return requested
 			? requested.date === proper.date && requested.mass === proper.day
 			: proper.day === null;
+	}
+
+	function citationAwaitsDay(url: URL) {
+		return (
+			(hasProper ||
+				(movement?.id === 'praeparatio' &&
+					(url.searchParams.has(DAY_PARAM) || proper.day === 'vigilia-paschalis'))) &&
+			!properMatchesLocation(url)
+		);
 	}
 
 	function withoutDayChoice(url: URL) {
@@ -424,7 +458,7 @@
 		omittedCitation = null;
 		// An absent asynchronous proper is not a stale citation. Keep the
 		// address while loading (or after a failed request) so retry can resolve it.
-		if (hasProper && !properMatchesLocation(url)) {
+		if (citationAwaitsDay(url)) {
 			panel.applyFromLocation();
 			return;
 		}
@@ -445,7 +479,10 @@
 					proper.date !== date ||
 					proper.day !== mass ||
 					lang !== language ||
-					!readingPayloadReady(applicabilityState, language) ||
+					(!referenceGroups.some((group) =>
+						group.entries.some((entry) => entry.id === citation.entry)
+					) &&
+						!readingPayloadReady(applicabilityState, language)) ||
 					!properMatchesLocation(pageUrl())
 				)
 					return false;
@@ -492,7 +529,7 @@
 			const current = pageUrl();
 			if (withoutDayChoice(current) !== withoutDayChoice(url)) return;
 			if (proper.date !== selectedDate || proper.day !== selectedMass) return;
-			if (hasProper && !properMatchesLocation(current)) return;
+			if (citationAwaitsDay(current)) return;
 			const original = current.href;
 			// The picker can canonicalize the same date in this frame. Merge the
 			// citation into that URL, and canonicalize the date here too: either
@@ -550,7 +587,7 @@
 		// for a place, the same rule the reading pages follow
 		() => {
 			const url = pageUrl();
-			if (hasProper && !properMatchesLocation(url)) {
+			if (citationAwaitsDay(url)) {
 				return url.searchParams.has('w') || url.searchParams.has('s');
 			}
 			if (omittedAddress(url)) return true;
@@ -685,6 +722,11 @@
 				!folded &&
 				!partLoading &&
 				!((variantPending || e.kind === 'proper') && proper.failed)}
+			{#if e.id === AFTER_LOW_MASS[0]}
+				<h2 class="after-low-mass">
+					{lang === 'pl' ? 'Modlitwy po Mszy cichej' : 'Prayers after Low Mass'}
+				</h2>
+			{/if}
 			<section
 				class="part"
 				data-part={e.id}
@@ -967,6 +1009,31 @@
 			</section>
 		{/each}
 
+		{#each referenceGroups as group (group.id)}
+			<details
+				class="reference-group"
+				data-reference={group.id}
+				open={group.entries.some((entry) => entry.id === omittedCitation?.entry)}
+			>
+				<summary>{group.title}</summary>
+				<p class="part-note">{group.note}</p>
+				<ul>
+					{#each group.entries as entry (entry.id)}
+						{#if entry.text}
+							<li id={`ordinary-omission-${entry.id}`}>
+								<a
+									lang="la"
+									href={textHref(lang, entry.text) +
+										(omittedCitation?.entry === entry.id ? omittedCitation.query : '')}
+									>{entry.title}</a
+								>
+							</li>
+						{/if}
+					{/each}
+				</ul>
+			</details>
+		{/each}
+
 		<Pager
 			{lang}
 			prev={around.prev && {
@@ -980,11 +1047,17 @@
 		/>
 	</main>
 
-	{#if legendOpen}
-		<MarkLegend {lang} onclose={() => (legendOpen = false)} />
+	{#if legendSpeaker}
+		<MarkLegend
+			{lang}
+			speaker={legendSpeaker}
+			selectable={false}
+			onclose={() => (legendSpeaker = null)}
+		/>
 	{/if}
 
 	<SelectedWordPanel
+		reportMode={helpLevel}
 		word={picked?.word ?? null}
 		details={pickedDetails}
 		lex={mergedLex}
@@ -996,6 +1069,29 @@
 </div>
 
 <style>
+	.reference-group {
+		margin-block: 1.25rem;
+		padding-block-start: 0.7rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.reference-group summary {
+		cursor: pointer;
+	}
+
+	.reference-group ul {
+		margin-block: 0.5rem 1rem;
+	}
+
+	.after-low-mass {
+		margin-block: 1.4rem 0.6rem;
+	}
+
+	@media print {
+		.reference-group {
+			display: none;
+		}
+	}
 	/* The rule closes the top section, so it sits nearer to what it closes
 	   than to what comes after it — overshooting that put it closer to the
 	   first prayer and it read as that prayer's opening rule instead. */

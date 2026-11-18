@@ -29,15 +29,15 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Bibliografia jest pogrupowana według funkcji źródeł. Obejmuje tylko pozycje, których tożsamość, miejsca i użycie zostały sprawdzone bezpośrednio. Rozwiń źródło, aby zobaczyć, co dokładnie poświadcza i gdzie.',
+					lead: 'Rozwiń pozycję, aby zobaczyć sprawdzone miejsca w źródle oraz teksty i hasła, przy których je przywołujemy.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Łacińskie świadectwa tekstu',
 							note: 'Wydania, w których zweryfikowano łacińskie brzmienie i granice tekstu.'
 						},
 						wording_witnesses: {
-							title: 'Świadectwa brzmienia przekładu',
-							note: 'Historyczne przekłady użyte jako podstawa rewizji albo materiał porównawczy.'
+							title: 'Dawne przekłady',
+							note: 'Korzystamy z nich jako podstawy przekładu lub przywołujemy je dla porównania.'
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Dokumenty urzędowe i historia liturgii',
@@ -53,8 +53,8 @@
 						direct_approved_print: 'świadectwo tekstu łacińskiego',
 						corroborating_latin_witness: 'porównawcze świadectwo łacińskie',
 						derived_digital_collation_aid: 'pomocnicza transkrypcja cyfrowa',
-						historical_wording_basis: 'podstawa brzmienia przekładu',
-						historical_wording_comparator: 'porównanie brzmienia przekładu',
+						historical_wording_basis: 'podstawa przekładu',
+						historical_wording_comparator: 'przekład do porównania',
 						official_liturgical_context: 'kontekst doktrynalny lub liturgiczny',
 						scripture_text: 'świadectwo tekstu biblijnego',
 						rubric_control: 'rubryki liturgiczne',
@@ -67,30 +67,31 @@
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => polishCount(n, '1 tekst', 'teksty', 'tekstów'),
 					lemmas: (n: number) => polishCount(n, '1 hasło', 'hasła', 'haseł'),
-					uses: (n: number) => polishCount(n, '1 użycie', 'użycia', 'użyć'),
+					uses: (n: number) => polishCount(n, '1 odwołanie', 'odwołania', 'odwołań'),
 					textReference: 'tekst',
 					word: 'objaśnienie słowa',
 					lemma: 'hasło słownikowe',
 					verse: (n?: number) => (n ? `werset ${n}` : 'wskazany werset'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `wersety ${first}–${last}` : 'wskazane wersety',
-					loading: 'Wczytywanie użyć źródła…',
-					failed: 'Nie udało się wczytać użyć źródła. Zamknij i spróbuj ponownie.',
+					loading: 'Wczytywanie odwołań do źródła…',
+					failed:
+						'Nie udało się wczytać odwołań do źródła. Odśwież stronę i otwórz tę pozycję ponownie.',
 					typeface: [
 						'Wydanie złożono krojem EB Garamond (Georg Duffner, Octavio Pardo), udostępnionym na licencji ',
 						'.'
 					]
 				}
 			: {
-					lead: 'The bibliography is grouped by source function. It includes only records whose identity, locations, and use have been checked directly. Expand a source to see exactly what it supports and where.',
+					lead: 'Open an entry to see the passages we checked and the texts or dictionary entries that cite them.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Latin textual witnesses',
 							note: 'Editions in which the Latin wording and text boundaries were verified.'
 						},
 						wording_witnesses: {
-							title: 'Translation wording witnesses',
-							note: 'Historical translations used as a revision basis or a documented comparator.'
+							title: 'Historical translations',
+							note: 'Translations we draw on for the wording or consult for comparison.'
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Official documents and liturgical history',
@@ -106,10 +107,10 @@
 						direct_approved_print: 'Latin textual witness',
 						corroborating_latin_witness: 'corroborating Latin witness',
 						derived_digital_collation_aid: 'supporting digital transcription',
-						historical_wording_basis: 'translation wording basis',
-						historical_wording_comparator: 'translation wording comparator',
+						historical_wording_basis: 'basis for the translation',
+						historical_wording_comparator: 'translation for comparison',
 						official_liturgical_context: 'doctrinal or liturgical context',
-						scripture_text: 'biblical-text witness',
+						scripture_text: 'witness to the biblical text',
 						rubric_control: 'liturgical rubrics',
 						liturgical_history: 'liturgical history',
 						quotation_control: 'quotation verification',
@@ -120,15 +121,15 @@
 					} satisfies Record<BibliographyRole, string>,
 					texts: (n: number) => (n === 1 ? '1 text' : `${n} texts`),
 					lemmas: (n: number) => (n === 1 ? '1 dictionary entry' : `${n} dictionary entries`),
-					uses: (n: number) => (n === 1 ? '1 use' : `${n} uses`),
+					uses: (n: number) => (n === 1 ? '1 citation' : `${n} citations`),
 					textReference: 'text',
 					word: 'word note',
 					lemma: 'dictionary entry',
 					verse: (n?: number) => (n ? `verse ${n}` : 'indicated verse'),
 					verses: (first?: number, last?: number) =>
 						first && last ? `verses ${first}–${last}` : 'indicated verses',
-					loading: 'Loading source uses…',
-					failed: 'The source uses could not be loaded. Close the entry and try again.',
+					loading: 'Loading citations…',
+					failed: 'We couldn’t load the citations. Reload the page and open this entry again.',
 					typeface: [
 						'This edition is set in EB Garamond (Georg Duffner, Octavio Pardo), released under the ',
 						'.'

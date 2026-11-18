@@ -221,8 +221,11 @@ test('a cited translation states how its wording relates to the historical sourc
 	await setHelp(page, 2);
 	sources = page.locator('main .translation-sources details.source-notes');
 	await sources.locator('summary').click();
-	// Exact, revised and normalized verses share the citation, not a single description.
-	await expect(sources.locator('.relationships')).toHaveCount(0);
+	// The citation accompanies segments with three different relationships.
+	await expect(sources.locator('.relationship-label')).toHaveCount(0);
+	await expect(sources.locator('.relationships [lang="la"]')).toHaveText(
+		'et hæc tua dona… · quæ de tua largitáte sumus…'
+	);
 	await expect(sources).toContainText("The Catholic Girl's Guide");
 
 	for (const [slug, description] of [

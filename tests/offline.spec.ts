@@ -59,6 +59,32 @@ test('a page the reader opens is kept for them @online', async ({ page, context 
 	await context.setOffline(false);
 });
 
+for (const lang of ['pl', 'en'] as const) {
+	test(`an uncached page explains the offline return to the shelf in ${lang} @online`, async ({
+		page,
+		context
+	}) => {
+		await page.goto(`/app/${lang}`);
+		await page.waitForFunction(() => Boolean(navigator.serviceWorker.controller));
+		await expect(page.locator('.offline-fallback')).toHaveCount(0);
+
+		await context.setOffline(true);
+		await page.goto(`/app/${lang}/ordinarium/credo`);
+		await expect(page.locator('h1')).toHaveText('Scrutabor');
+		await expect(page.locator('.offline-fallback')).toHaveText(
+			lang === 'pl'
+				? 'Ta strona jest niedostępna w zapisanej kopii. Odśwież ją po odzyskaniu połączenia.'
+				: 'This page is unavailable in the saved copy. Reload after reconnecting.'
+		);
+		await expect(page).toHaveURL(new RegExp(`/app/${lang}/ordinarium/credo$`));
+
+		await context.setOffline(false);
+		await page.reload();
+		await expect(page.locator('h1')).toHaveText('Credo');
+		await expect(page.locator('.offline-fallback')).toHaveCount(0);
+	});
+}
+
 test('an installed app fetches the whole book @online', async ({ page, context }) => {
 	test.setTimeout(120_000);
 	await page.addInitScript(() => localStorage.setItem('scrutabor-role', 'sacerdos'));

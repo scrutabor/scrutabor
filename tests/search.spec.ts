@@ -39,12 +39,12 @@ test('the visible search control opens a stable dedicated page', async ({ page }
 	expect(Math.abs(after - before)).toBeLessThan(0.6);
 });
 
-test('title, passage, and grammar results remain visibly separate', async ({ page }) => {
+test('titles, passages, and dictionary entries remain visibly separate', async ({ page }) => {
 	const field = await openSearchPage(page);
 	await field.fill('Pater');
 
 	const headings = page.locator('.results h2');
-	await expect(headings).toHaveText(['tytuły modlitw', 'gramatyka', 'fragmenty tekstów']);
+	await expect(headings).toHaveText(['tytuły modlitw', 'hasła słownikowe', 'fragmenty tekstów']);
 	await expect(page.locator('.search-result-badge')).toHaveCount(0);
 	await expect(page.locator('.search-result-context')).toHaveCount(0);
 	await expect(page.locator('#search-titles + ul li').first()).toContainText('Ojcze nasz');

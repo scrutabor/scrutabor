@@ -8,16 +8,30 @@
 	// reader who does not know what V. means does not know what R. means
 	// either. The sheet it arrives on is the shared one.
 	import Sheet from '$lib/components/Sheet.svelte';
+	import type { Speaker } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
+	import { MARKS } from '$lib/speaker-marks';
 
 	let {
 		lang,
 		onclose,
-		devotional = false
-	}: { lang: Lang; onclose: () => void; devotional?: boolean } = $props();
+		speaker,
+		devotional = false,
+		selectable = true
+	}: {
+		lang: Lang;
+		onclose: () => void;
+		speaker: Speaker;
+		devotional?: boolean;
+		selectable?: boolean;
+	} = $props();
 	const msgs = $derived(M[lang]);
 	const KEYS = $derived(
-		devotional ? (['ductor', 'populus'] as const) : (['sacerdos', 'minister', 'omnes'] as const)
+		speaker === 'chronista' || speaker === 'christus' || speaker === 'synagoga'
+			? (['chronista', 'christus', 'synagoga'] as const)
+			: devotional
+				? (['ductor', 'populus'] as const)
+				: (['sacerdos', 'minister', 'omnes'] as const)
 	);
 </script>
 
@@ -32,15 +46,13 @@
 	<dl>
 		{#each KEYS as k (k)}
 			<div class="row">
-				<dt class="mark" lang="la">
-					{k === 'sacerdos' || k === 'ductor' ? 'V.' : k === 'omnes' ? 'O.' : 'R.'}
-				</dt>
-				<dd>{msgs.markTitle[k]}</dd>
+				<dt class="mark" lang="la">{MARKS[k]}</dt>
+				<dd>{k === 'minister' ? msgs.markResponsum : msgs.markTitle[k]}</dd>
 			</div>
 		{/each}
 	</dl>
 	<p class="note">{msgs.markLegendNote}</p>
-	<p class="range-hint">{msgs.segmentRangeHint}</p>
+	{#if selectable}<p class="range-hint">{msgs.segmentRangeHint}</p>{/if}
 </Sheet>
 
 <style>

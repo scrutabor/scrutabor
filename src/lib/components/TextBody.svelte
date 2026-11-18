@@ -3,7 +3,7 @@
 	import TextFlow from '$lib/components/TextFlow.svelte';
 	import { textFlowUnits, type FlowRow } from '$lib/text-flow';
 	import { flowBinding } from '$lib/reading-flow';
-	import type { Citation, GlossDocument, TextDocument } from '$lib/corpus';
+	import type { Citation, GlossDocument, Speaker, TextDocument } from '$lib/corpus';
 	import SourceNotes from '$lib/components/SourceNotes.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { massForm } from '$lib/mass-form.svelte';
@@ -61,7 +61,7 @@
 		idPrefix?: string;
 		ontap?: (id: string) => void;
 		/** Asked for the key to the marks. Without it the mark is inert. */
-		onmark?: () => void;
+		onmark?: (speaker: Speaker) => void;
 		/** Verse numbers by segment id, for the texts that print them —
 		 * the psalter. They take the speaker mark's column and its quiet
 		 * ink; a segment with a speaker keeps its speaker mark instead. */
@@ -147,18 +147,6 @@
 	// to work out where the last mark stopped applying — and it draws a
 	// second line the page needs, between what is SAID and the narrative
 	// around it.
-	const MARKS: Record<string, string> = {
-		sacerdos: 'V.',
-		ductor: 'V.',
-		minister: 'R.',
-		populus: 'R.',
-		omnes: 'O.',
-		schola: 'R.',
-		chronista: 'C.',
-		christus: '†.',
-		synagoga: 'S.'
-	};
-
 	// The editorial rules — who is marked, whose voice is named, which verse
 	// opens with the initial — are pure functions of the segments and live in
 	// $lib/speaker-marks with their reasons and their tests. What is here is
@@ -215,6 +203,26 @@
 	const bilingual = $derived(helpLevel === 2 && !litanyColumns);
 	const translationCitations = $derived(verifiedTranslationCitations);
 	const translationRelationships = $derived(collectTranslationRelationships(segs, gloss));
+	const revisionIncipits = $derived(
+		translationRelationships.length
+			? []
+			: [
+					...new Set(
+						segs.flatMap((seg) =>
+							seg.type === 'verse' &&
+							seg.words?.length &&
+							gloss.segments[seg.id]?.translation_relationship === 'revised'
+								? [
+										seg.words
+											.slice(0, 5)
+											.map((word) => word.form)
+											.join(' ') + '…'
+									]
+								: []
+						)
+					)
+				]
+	);
 	// A body that renders its translation sources after its rows stays linked
 	// to the next body of its slot: on screen the block prices the seam with
 	// its own margins and the last row's tail is neutralised (TextFlow); on
@@ -425,6 +433,7 @@
 			<SourceNotes
 				citations={translationCitations}
 				relationships={translationRelationships}
+				{revisionIncipits}
 				{lang}
 				centered
 			/>
@@ -463,6 +472,7 @@
 	repeatedOpen = false
 )}
 	{#if seg.type === 'verse'}
+		{@const speaker = seg.speaker}
 		<!-- Who says it, and how loudly. Absent attribution renders as
 		     nothing at all: the corpus says "not read yet" by leaving the
 		     field out, and a missal that guessed would be worse than one
@@ -484,10 +494,18 @@
 			marks.namesConditionalParticipation(segs, i, massForm.value)}
 		{@const performance = binding.namesPerformance(i)}
 		{@const hasPerformance = !!seg.participation?.[massForm.value]?.performance && !referenceOnly}
+		{@const quietPriestWithFaithful =
+			joinable &&
+			!hasPerformance &&
+			showVoice &&
+			seg.speaker === 'sacerdos' &&
+			seg.voice === 'secreto'}
+		{@const choirWithFaithful =
+			joinable && !hasPerformance && showVoice && speaker === 'schola' && seg.voice === 'cantus'}
 		{@const nameSpeaker =
 			!hasPerformance && (sharedPrayer ? i === firstSharedVerse : namesSpeaker(i))}
 		{@const speakerName =
-			marks.isSharedPrayer(segs, massForm.value) && !sharedSpeaker
+			sharedPrayer && !sharedSpeaker
 				? M[lang].faithful
 				: faithfulShare && seg.speaker
 					? M[lang].faithfulWith[seg.speaker]
@@ -509,10 +527,16 @@
 				     which ones everybody is about to, and this is the answer
 				     to that one. -->
 				{#if everyones}<span class="who-all">{M[lang].everyone}</span>{/if}
-				{#if joinable}<span class="who-join">{M[lang].mayJoin}</span>{/if}
-				{#if !hasPerformance && showVoice && seg.voice && seg.voice !== 'clara'}<span
+				{#if quietPriestWithFaithful}
+					<span class="who-voice">{M[lang].quietPriest}</span>
+				{:else if choirWithFaithful}
+					<span class="who-voice"
+						>{showSpeakerNames && nameSpeaker ? M[lang].sings : M[lang].choirSings}</span
+					>
+				{:else if !hasPerformance && showVoice && seg.voice && seg.voice !== 'clara'}<span
 						class="who-voice">{M[lang].voices[seg.voice]}</span
 					>{/if}
+				{#if joinable}<span class="who-join">{M[lang].mayJoin}</span>{/if}
 			</p>
 		{/if}
 		{@const showMark = !sharedPrayer && marked(i)}
@@ -601,17 +625,17 @@
 					onclick={() => toggleRepeated(seg.id)}
 					><span class="ink" aria-hidden="true">›</span></button
 				>
-			{:else if showMark && seg.speaker && MARKS[seg.speaker]}{#if onmark}<button
+			{:else if showMark && speaker}{#if onmark}<button
 						type="button"
 						class="mark"
 						class:yours={mine}
-						aria-label={`${M[lang].markTitle[seg.speaker]}, ${M[lang].markLegendTitle}`}
-						onclick={onmark}><span class="ink">{MARKS[seg.speaker]}</span></button
+						aria-label={`${M[lang].markTitle[speaker]}. ${M[lang].markLegendAction}`}
+						onclick={() => onmark?.(speaker)}
+						><span class="ink">{marks.MARKS[speaker]}</span></button
 					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
-						>{MARKS[seg.speaker]}</span
-					>{/if}<span class="sr-only"
-					>{speakerName ?? M[lang].speakers[seg.speaker]}:
-				</span>{:else if verseNo !== undefined}{#if onverse}<button
+						>{marks.MARKS[speaker]}</span
+					>{/if}<span class="sr-only">{speakerName ?? M[lang].speakers[speaker]}:</span
+				>{:else if verseNo !== undefined}{#if onverse}<button
 						type="button"
 						class="mark"
 						aria-label={M[lang].verseAria(verseNo)}
@@ -1421,6 +1445,7 @@
 		   audit's soft-ink floor.) */
 		font-size: calc(var(--reading-bare) * 0.9);
 		line-height: 1.55;
+		white-space: pre-line;
 		text-wrap: pretty;
 	}
 

@@ -149,9 +149,7 @@ async function pickDate(page: Page, date: string, ordinaryOnly = false) {
 	for (let i = 0; i < Math.abs(distance); i++) await direction.click();
 	await dialog.locator(`[data-date="${date}"]`).click();
 	if (ordinaryOnly)
-		await dialog
-			.getByRole('button', { name: /Otwórz bez formularza|Open without a formulary/ })
-			.click();
+		await dialog.getByRole('button', { name: /Otwórz części stałe|Open the Ordinary/ }).click();
 	else await dialog.locator('.modal-actions .primary').click();
 	await expect(dialog).toHaveCount(0);
 }

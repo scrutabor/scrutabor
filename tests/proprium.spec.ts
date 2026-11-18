@@ -104,13 +104,13 @@ test('a date outside the available calendar data is explained plainly', async ({
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo');
 	const dialog = await openPicker(page);
-	await expect(dialog).toContainText('Kalendarz jeszcze niedostępny');
+	await expect(dialog).toContainText('Brak danych dla tego dnia');
 	await expect(dialog).toContainText(
-		'To wydanie nie zawiera jeszcze pełnych danych kalendarzowych dla wybranego dnia.'
+		'W tym wydaniu można otworzyć na ten dzień tylko części stałe Mszy.'
 	);
 	await expect(dialog).not.toContainText('zgadywania');
 	await expect(dialog).toContainText('12. Niedziela po Zesłaniu Ducha Świętego');
-	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
+	await dialog.getByRole('button', { name: 'Otwórz części stałe' }).click();
 	await expect(page).toHaveURL(/\?dies=2026-08-19&missa=none$/);
 });
 
@@ -416,7 +416,9 @@ test('a Mass from a different observance cannot override a valid date', async ({
 	await asIfItWere(page, '2026-09-18T10:00:00');
 	await page.goto('/app/pl/ordo/catechumenorum?dies=2026-12-13&missa=nativitas-domini-in-nocte');
 	await expect(page.locator('.choice-date')).toHaveText('13 grudnia 2026');
-	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
+	await expect(page.locator('.picker.day .state')).toContainText(
+		'Nie można otworzyć Mszy z tego adresu'
+	);
 	await expect(page.locator('[id="nativitas-domini-in-nocte-introitus.w001"]')).toHaveCount(0);
 	const dialog = await openPicker(page);
 	await expect(dialog.locator('.day-detail')).toContainText('III Niedziela Adwentu');
@@ -434,9 +436,12 @@ test('dates outside calendar coverage remain visible and never become an edge oc
 	const dialog = await openPicker(page);
 	await expect(dialog.locator('.detail-date')).toContainText('2200');
 	await expect(
+		dialog.getByRole('heading', { name: 'Data poza zakresem kalendarza' })
+	).toBeVisible();
+	await expect(
 		dialog.getByRole('button', { name: 'Otwórz formularz', exact: true })
 	).toBeDisabled();
-	await dialog.getByRole('button', { name: 'Otwórz bez formularza' }).click();
+	await dialog.getByRole('button', { name: 'Otwórz części stałe' }).click();
 	await expect(page).toHaveURL(/dies=2200-01-01&missa=none/);
 });
 
@@ -689,7 +694,9 @@ test('the folded day control gives its date room without looking like a dropdown
 test('an undated formulary identifier cannot select a Mass in the Ordo', async ({ page }) => {
 	await asIfItWere(page, OUTSIDE_ADVENT);
 	await page.goto('/app/pl/ordo?dies=dominica-iii-adventus');
-	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
+	await expect(page.locator('.picker.day .state')).toContainText(
+		'Nie można otworzyć Mszy z tego adresu'
+	);
 	await expect(page.locator('.choice-date')).toHaveText('19 sierpnia 2026');
 	await expect(page.locator('.choice-title')).not.toContainText('III Niedziela Adwentu');
 });
@@ -701,7 +708,7 @@ test('opening without a formulary preserves the date, including after a reload',
 	await page.goto('/app/pl/ordo?dies=' + DAY_DATE);
 	const dialog = await openPicker(page);
 	await expect(dialog.getByRole('tab')).toHaveCount(0);
-	const without = dialog.getByRole('button', { name: 'Otwórz bez formularza' });
+	const without = dialog.getByRole('button', { name: 'Otwórz części stałe' });
 	await expect(without).toHaveClass(/secondary/);
 	await without.click();
 	await expect(page).toHaveURL(/dies=2026-11-29&missa=none/);
@@ -724,7 +731,7 @@ test('the calendar presents a simple title and a lower-right action bar', async 
 	await expect(dialog).not.toContainText('II klasy');
 
 	const actions = dialog.locator('.modal-actions');
-	const without = actions.getByRole('button', { name: 'Otwórz bez formularza' });
+	const without = actions.getByRole('button', { name: 'Otwórz części stałe' });
 	const withFormulary = actions.getByRole('button', { name: 'Otwórz formularz' });
 	await expect(without).toBeVisible();
 	await expect(withFormulary).toBeEnabled();
@@ -1183,7 +1190,9 @@ test('a malformed day value is answered and not remembered', async ({ page }) =>
 	await page.goto('/app/pl/ordo/catechumenorum?dies=garbage-day');
 	await settled(page);
 	await expect(page.locator('.picker.day .day-open')).toContainText('bez formularza');
-	await expect(page.locator('.picker.day .state')).toContainText('Nieprawidłowy wybór');
+	await expect(page.locator('.picker.day .state')).toContainText(
+		'Nie można otworzyć Mszy z tego adresu'
+	);
 	await page.goto('/app/pl/ordo');
 	await settled(page);
 	await expect(page.locator('.picker.day .day-open')).toContainText('III Niedziela Adwentu');

@@ -7,7 +7,7 @@
     {"id":"s02","tr":"Pokornie Cię prosimy, wszechmogący Boże: rozkaż, aby te dary zostały zaniesione przez ręce Twojego świętego Anioła na Twój ołtarz na wysokości, w obliczu Twojego boskiego majestatu:","tc":[339],"tb":"revised","g":["Pokornie","Cię","prosimy","wszechmogący","Boże",null,null,null,"przez","ręce","świętego","Anioła","Twojego",null,null,null,null,"przed","obliczem","boskiego","majestatu","Twojego"],"a":[{"s":5,"n":3,"a":0,"g":"rozkaż, aby te dary zostały zaniesione"},{"s":13,"n":4,"a":2,"g":"na Twój ołtarz na wysokości"}]},
     {"id":"s04","tr":"abyśmy wszyscy, którzy","g":["abyśmy","wszyscy, którzy"]},
     {"id":"s03","nr":"Kapłan całuje ołtarz."},
-    {"id":"s11","tr":"przez ten udział w ołtarzu","g":["przez","to","w ołtarzu","uczestnictwo","najświętsze","Syna","Twojego"]},
+    {"id":"s11","tr":"przez ten udział w ołtarzu","g":["przez","to","w ołtarzu","uczestnictwo","najświętsze","Syna","Twojego"],"ex":{"w029":"„Najświętsze” określa Ciało. Słowo Corpus pada po znaku krzyża nad Hostią, choć należy do tego samego zdania."}},
     {"id":"s05","nr":"Kapłan składa ręce i czyni jeden znak krzyża nad Hostią i jeden nad kielichem."},
     {"id":"s06","tr":"przyjmiemy Najświętsze Ciało i Krew Twojego Syna,","tc":[339],"tb":"revised","g":["Ciało","i","Krew","przyjmiemy"],"ex":{"w035":"Ta sama forma może znaczyć „przyjmiemy” albo „przyjęlibyśmy”. Kontekst rozstrzyga na rzecz przyszłego „przyjmiemy”."}},
     {"id":"s07","nr":"Kapłan żegna się."},

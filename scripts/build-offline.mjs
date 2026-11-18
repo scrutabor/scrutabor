@@ -173,30 +173,31 @@ Edition v${VERSION} · ${COMMIT.slice(0, 12)}${DIRTY ? ' (modified)' : ''}.
 
     Otwórz / Open: index.html
 
-Działa w każdej przeglądarce, bez internetu. Potrzebuje tylko włączonego
-JavaScriptu, bo tę kopię księgi składa sama przeglądarka. Dotknij słowa,
-aby zobaczyć jego hasło i gramatykę. Tryb czytania wybiera samą łacinę,
-pełny przekład albo interlinearnie, czyli słowo po słowie.
-Można też wybrać, czyje części Mszy się śledzi.
+Kopię otwiera się w przeglądarce z włączonym JavaScriptem. Połączenie
+z internetem nie jest potrzebne. Dotknij słowa, aby zobaczyć jego hasło
+i analizę gramatyczną. Możesz czytać samą łacinę, łacinę z pełnym
+przekładem lub łacinę z podpisami słowo po słowie. We Mszy możesz
+wybrać rolę: wierni, usługujący albo kapłan.
 
-It works in any browser, with no internet. It only needs JavaScript
-turned on, because the browser itself assembles this copy of the book.
-Tap a word for its dictionary entry and its grammar. The reading mode
-chooses bare Latin, the full translation, or the interlinear word by
-word. You can also choose whose parts you are following at Mass.
+Open the copy in a browser with JavaScript enabled. No internet
+connection is needed. Tap a word to see its dictionary entry and
+grammatical analysis. You can read Latin alone, Latin with a full
+translation, or Latin with word-by-word glosses. At Mass, you can
+choose a role: faithful, server, or priest.
 
-Folder "app" to sama księga — nie ma w nim nic do oglądania ani do
-instalowania. OFL.txt to licencja kroju pisma EB Garamond.
+Zachowaj folder "app" obok pliku index.html. Są w nim dane książki
+i kod potrzebny do jej otwarcia. Plik OFL.txt zawiera licencję kroju
+pisma EB Garamond.
 
-The "app" folder holds the book itself. There is nothing to look at in
-there, and nothing to install. OFL.txt is the license of the typeface,
-EB Garamond.
+Keep the "app" folder beside index.html. It contains the book and the
+code needed to open it. OFL.txt contains the license for the EB Garamond
+typeface.
 
-Ta kopia jest Twoja. Nic stąd nie łączy się z siecią, nic nie wygasa,
-a księga będzie działać, nawet jeśli strona kiedyś przestanie działać.
+Pobraną kopię możesz zachować do czytania offline, także gdy strona
+internetowa jest niedostępna.
 
-This copy is yours. Nothing here calls home, nothing expires, and it will
-keep working if the website one day does not.
+Keep this copy for reading offline, even when the website is
+unavailable.
 
 scrutabor.org
 `

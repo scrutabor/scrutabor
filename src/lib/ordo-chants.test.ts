@@ -5,8 +5,8 @@ import { ORDO } from './ordo';
 // Septuagesima proper (MR 1962 p. 51) expressly omits its Tract on the named
 // ferias: absence of Alleluia does not by itself prescribe a Tract.
 const notes = {
-	pl: 'traktus śpiewa się tylko wtedy, gdy przewiduje go formularz dnia. Podobnie sekwencję dodaje się zgodnie z jego rubrykami',
-	en: "the Tract is sung only when prescribed by the day's formulary. The Sequence is likewise included according to its rubrics"
+	pl: 'Traktus i sekwencja pojawiają się zgodnie z rubrykami formularza.',
+	en: 'The Tract and the Sequence are included where prescribed.'
 } as const;
 
 for (const language of ['pl', 'en'] as const) {

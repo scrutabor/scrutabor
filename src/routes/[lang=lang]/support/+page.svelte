@@ -18,7 +18,9 @@
 		description: string;
 		lede: string;
 		appIssues: string;
+		appLink: string;
 		corpusIssues: string;
+		corpusLink: string;
 		mailLead: string;
 		note: string;
 		back: string;
@@ -28,21 +30,25 @@
 		pl: bindProse({
 			title: 'Kontakt',
 			description: 'Pytania, uwagi i zgłoszenia błędów — GitHub albo e-mail.',
-			lede: 'Pytania, uwagi i zgłoszenia błędów są mile widziane.',
+			lede: 'Błąd lub propozycję zmiany możesz zgłosić na GitHubie.',
 			appIssues: 'błędy i propozycje dotyczące aplikacji',
+			appLink: 'zgłoszenia do aplikacji',
 			corpusIssues: 'uwagi do tekstów, przekładów i analiz',
-			mailLead: 'Można również napisać na adres e-mail:',
-			note: 'Scrutabor jest projektem pro bono — odpowiadamy tak szybko, jak to możliwe.',
+			corpusLink: 'zgłoszenia do tekstów',
+			mailLead: 'Nasz adres e-mail to',
+			note: 'Scrutabor prowadzimy społecznie. Odpowiadamy w miarę możliwości.',
 			back: 'wróć na stronę główną'
 		}),
 		en: {
 			title: 'Contact',
 			description: 'Questions, feedback, and bug reports — GitHub or e-mail.',
-			lede: 'Questions, feedback, and bug reports are welcome.',
+			lede: 'Use GitHub to report a problem or suggest a change.',
 			appIssues: 'bugs and suggestions about the app',
+			appLink: 'app issues',
 			corpusIssues: 'corrections to the texts, translations, and analyses',
-			mailLead: 'Or write directly:',
-			note: 'Scrutabor is a pro bono project — we answer as quickly as we can.',
+			corpusLink: 'text and translation issues',
+			mailLead: 'You can also reach us by email at',
+			note: 'We run Scrutabor as volunteers and reply as time allows.',
 			back: 'go to the home page'
 		}
 	};
@@ -65,13 +71,12 @@
 		<p class="lede">{t.lede}</p>
 		<ul class="channels">
 			<li>
-				<a href="https://github.com/scrutabor/scrutabor/issues" rel="external">scrutabor · Issues</a
-				>
+				<a href="https://github.com/scrutabor/scrutabor/issues" rel="external">{t.appLink}</a>
 				<span class="channel-note">{t.appIssues}</span>
 			</li>
 			<li>
 				<a href="https://github.com/scrutabor/scrutabor-corpus/issues" rel="external"
-					>scrutabor-corpus · Issues</a
+					>{t.corpusLink}</a
 				>
 				<span class="channel-note">{t.corpusIssues}</span>
 			</li>

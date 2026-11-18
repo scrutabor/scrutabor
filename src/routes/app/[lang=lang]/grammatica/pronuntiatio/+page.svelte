@@ -66,11 +66,11 @@
 
 		{#if lang === 'pl'}
 			<p class="what">
-				Podajemy transkrypcję wymowy <strong>rzymskiej</strong> (kościelnej). W&nbsp;polskiej wersji
-				czytnika przy słowach, dla których podajemy również odmienny wariant polski, stosujemy
-				skróty <span class="smallcaps">rz.</span> (rzymska) i&nbsp;<span class="smallcaps"
-					>pol.</span
-				>
+				W&nbsp;kartach słów podajemy wymowę <strong>rzymską</strong>. W&nbsp;polskiej wersji
+				modlitewnika przy niektórych słowach zobaczysz też wymowę polską. Obie wersje oznaczamy
+				skrótami
+				<span class="smallcaps">rz.</span>
+				(rzymska) i&nbsp;<span class="smallcaps">pol.</span>
 				(polska). Poniższa tabela zestawia oba warianty.
 			</p>
 			<p class="what">
@@ -81,9 +81,10 @@
 			</p>
 		{:else}
 			<p class="what">
-				The transcriptions use <strong>Roman</strong> (ecclesiastical) pronunciation. In the
-				Polish-language reader, a different Polish reading is also shown where provided, with the
-				labels <span class="smallcaps">rz.</span> (Roman) and <span class="smallcaps">pol.</span>
+				The word cards show <strong>Roman</strong> pronunciation. In the Polish version of the
+				prayer book, some cards also show a Polish pronunciation. You’ll see the labels
+				<span class="smallcaps">rz.</span>
+				(Roman) and <span class="smallcaps">pol.</span>
 				(Polish). The table below compares the two readings.
 			</p>
 			<p class="what">
@@ -138,8 +139,8 @@
 			</div>
 			<p class="fine">
 				{lang === 'pl'
-					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu (hóstia: /ˈɔ.sti.a/). S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery. Starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
-					: 'The “ti” rule does not apply after s, t, x, or at the start of a word (hóstia: /ˈɔ.sti.a/). S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four. Older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
+					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu. W\u00a0słowie hóstia po s wymawia się /ti/. S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery. Starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
+					: 'The “ti” rule does not apply after s, t, or x or at the start of a word. In hóstia, the s is followed by /ti/. S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four. Older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
 			</p>
 		</section>
 

@@ -10,7 +10,19 @@
  * count the marks on it. They are pure functions of the segments, so they
  * are here instead, with the reasons and the tests beside them.
  */
-import type { MassForm, Segment } from '$lib/corpus';
+import type { MassForm, Segment, Speaker } from '$lib/corpus';
+
+export const MARKS: Record<Speaker, string> = {
+	sacerdos: 'V.',
+	ductor: 'V.',
+	minister: 'R.',
+	populus: 'R.',
+	omnes: 'O.',
+	schola: 'R.',
+	chronista: 'C.',
+	christus: '†.',
+	synagoga: 'S.'
+};
 
 /** Resolve who delivers a segment in the selected form of Mass. The stored
  * speaker and voice are the low-Mass base; the corpus names only exceptions. */

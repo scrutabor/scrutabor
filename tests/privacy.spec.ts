@@ -49,19 +49,15 @@ test.describe('the visit counter @online', () => {
 		// (owner, 2026-08-12).
 		await expect(page.getByText('consent banner')).toHaveCount(0);
 
-		// The counts are totals. Said outright, because a list of language,
-		// country and browser can otherwise read as a description of one
-		// visit rather than of a column of numbers (owner, 2026-08-12).
-		// Twice on the page by design: stated here, referred back to by the
-		// closing point about logs.
-		await expect(page.getByText('aggregate counts').first()).toBeVisible();
-		await expect(page.getByText('no trace in them of what any one reader did')).toBeVisible();
+		await expect(page.getByText('measures their performance')).toBeVisible();
+		await expect(page.getByText('We use aggregate statistics')).toBeVisible();
+		await expect(page.getByText('include the selected day or reading location')).toBeVisible();
 
 		await page.goto('/pl/privacy');
 		await expect(page.getByText('Cloudflare Web Analytics')).toBeVisible();
 		await expect(page.getByText('Global Privacy Control')).toBeVisible();
-		// Said once and referred back to once, so anchor on the first.
-		await expect(page.getByText('zagregowane dane').first()).toBeVisible();
-		await expect(page.getByText('Nie ma w nich śladu tego, co robił')).toBeVisible();
+		await expect(page.getByText('pomiary ich wydajności')).toBeVisible();
+		await expect(page.getByText('Korzystamy ze zbiorczych statystyk')).toBeVisible();
+		await expect(page.getByText('umieścić wybrany dzień lub miejsce w lekturze')).toBeVisible();
 	});
 });

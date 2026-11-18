@@ -11,7 +11,8 @@
 		lang,
 		onclose,
 		onnavigate,
-		idPrefix = ''
+		idPrefix = '',
+		reportMode
 	}: {
 		word: Word | null;
 		details: WordPanelSelection | null;
@@ -20,6 +21,7 @@
 		onclose?: () => void;
 		onnavigate: (id: string) => void;
 		idPrefix?: string;
+		reportMode?: number;
 	} = $props();
 </script>
 
@@ -27,6 +29,7 @@
 	<WordPanel
 		{word}
 		{idPrefix}
+		{reportMode}
 		gloss={details.gloss}
 		analysis={details.analysis}
 		{lex}

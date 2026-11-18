@@ -200,7 +200,7 @@ export function describeMorphParts(m: Morph, lang: Lang): MorphPart[] {
 		lang === 'pl' ? { ...part, text: bindOrphans(part.text) } : part;
 
 	if (m.pos === 'prep') return [bind({ text: t.prep(m.governs) })];
-	if (m.pos === 'adv' || m.pos === 'conj' || m.pos === 'intj') return [bind({ text: pos })];
+	if (m.pos === 'conj' || m.pos === 'intj') return [bind({ text: pos })];
 
 	const parts: MorphPart[] = [];
 	if (m.pos === 'verb' && (m.mood === 'ger' || m.mood === 'part')) {

@@ -3,7 +3,7 @@
   "language":"en",
   "about":"The priest signs himself and begins the Mass with In nómine Patris. The antiphon “Introíbo ad altáre Dei” comes from Ps 42:4 in the Vulgate (Ps 43:4 in Hebrew numbering). It precedes the psalm from which it is taken and is repeated after the psalm ends.",
   "seg":[
-    {"id":"s01","nr":"The vested priest approaches the altar, makes the reverence due to it, signs himself from forehead to breast and says aloud:"},
+    {"id":"s01","nr":"The vested priest approaches the altar, makes the required reverence, and signs himself from forehead to breast. Unless a particular rubric directs otherwise, the priest speaks aloud."},
     {"id":"s02","tr":"In the name of the Father, and of the Son, and of the Holy Spirit. Amen.","g":["In","the name","of the Father","and","of the Son","and",null,null,"Amen"],"a":[{"s":6,"n":2,"a":0,"g":"of the Holy Spirit"}],"ex":{"w007":"“Spíritus” can be nominative or genitive. The following “Sancti” (w008) establishes the genitive here: “of the Holy Spirit”."}},
     {"id":"s03","nr":"With hands joined before his breast, the priest begins the antiphon."},
     {"id":"s04","tr":"I will go to the altar of God.","g":["I will go in","to","the altar","of God"]},

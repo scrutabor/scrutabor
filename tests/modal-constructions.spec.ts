@@ -86,7 +86,7 @@ for (const [lang, formulary, part, word, form, gloss] of [
 }
 
 for (const [lang, wording] of [
-	['en', 'Who would not be saddened on contemplating Christ’s Mother suffering with her Son?'],
+	['en', 'Who could look unmoved On the Mother of our Lord, Grieving with her Son?'],
 	['pl', 'Któż mógłby się nie zasmucić, wpatrując się w Matkę Chrystusa, bolejącą wraz z Synem?']
 ]) {
 	test(`${lang} Sorrows stanza retains contemplation and the Mother with her Son`, async ({
@@ -96,5 +96,21 @@ for (const [lang, wording] of [
 		await setHelp(page, 2);
 		const section = page.locator('#text-proprium-septem-dolorum-beatae-mariae-virginis-sequentia');
 		await expect(section.locator('.translation')).toContainText([wording]);
+		if (lang === 'en') {
+			await expect(section.locator('.translation-label')).toHaveText(
+				'J. D. Aylward’s translation, revised against the 1962 Roman Missal'
+			);
+			const stanzas = section.locator('.translation');
+			await expect(stanzas).toHaveCount(20);
+			await expect(stanzas.nth(16)).toContainText('And of the Blood of your dear Son.');
+			await expect(stanzas.last()).toContainText('The glory of Paradise. Amen. Alleluia.');
+			const sources = section.locator('.translation-sources details');
+			await sources.locator('summary').click();
+			await expect(sources.getByRole('link', { name: /Annus Sanctus/ })).toHaveAttribute(
+				'href',
+				'https://archive.org/details/annussanctushymn00shiprich/page/91/mode/2up'
+			);
+			await expect(sources).toContainText('pp. 91–92');
+		}
 	});
 }

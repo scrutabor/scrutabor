@@ -13,7 +13,7 @@
 	import ReadingControls from '$lib/components/ReadingControls.svelte';
 	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
-	import type { GlossDocument, Lexicon, TextDocument } from '$lib/corpus';
+	import type { GlossDocument, Lexicon, Speaker, TextDocument } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { keepAwake } from '$lib/keepawake.svelte';
 	import { openPage } from '$lib/page-navigation';
@@ -90,7 +90,7 @@
 	};
 
 	let helpLevel = $state(initialHelp());
-	let legendOpen = $state(false);
+	let legendSpeaker = $state<Speaker | null>(null);
 	let aboutKey = $state<string | null>(null);
 	// One part's cited lines, exactly as a reading page keeps them: the part
 	// the address names, the verses selected within it, and the anchor a
@@ -192,21 +192,21 @@
 
 	function tapWord(id: string) {
 		aboutKey = null;
-		legendOpen = false;
+		legendSpeaker = null;
 		panel.toggle(id);
 	}
 
-	function openLegend() {
+	function openLegend(speaker: Speaker) {
 		aboutKey = null;
 		panel.close();
-		legendOpen = true;
+		legendSpeaker = speaker;
 	}
 
 	function openAbout(key: string, event: MouseEvent) {
 		if (event.currentTarget instanceof HTMLElement) {
 			event.currentTarget.focus({ preventScroll: true });
 		}
-		legendOpen = false;
+		legendSpeaker = null;
 		panel.close();
 		aboutKey = key;
 	}
@@ -316,7 +316,11 @@
 		/>
 	</main>
 
-	{#if legendOpen}<MarkLegend {lang} onclose={() => (legendOpen = false)} />{/if}
+	{#if legendSpeaker}<MarkLegend
+			{lang}
+			speaker={legendSpeaker}
+			onclose={() => (legendSpeaker = null)}
+		/>{/if}
 	{#if aboutPart}
 		<AboutSheet
 			{lang}
@@ -326,6 +330,7 @@
 		/>
 	{/if}
 	<SelectedWordPanel
+		reportMode={helpLevel}
 		word={picked?.word ?? null}
 		details={pickedDetails}
 		lex={data.lex}

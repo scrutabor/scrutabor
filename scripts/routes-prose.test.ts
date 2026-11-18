@@ -140,12 +140,12 @@ describe('the words the routes say', () => {
 		expect(all.length, 'the walk reaches the route components').toBeGreaterThan(10);
 		const editio = all.find(({ where }) => where.includes('editio'));
 		expect(editio, 'the edition page is among them').toBeDefined();
-		expect(editio!.text).toContain('The analyzers read the');
-		expect(editio!.text).toContain('Analizatory rozpoznają');
+		expect(editio!.text).toContain('The analyzers list the possible grammatical forms.');
+		expect(editio!.text).toContain('Analizatory pokazują');
 		expect(editio!.text, 'the markup is gone').not.toContain('class="what"');
 		expect(editio!.text, 'entities are resolved').not.toContain('&nbsp;');
 		expect(editio!.text, 'and resolved to the character they stand for').toContain(
-			'i wydań liturgii'
+			'z publicznie dostępnych'
 		);
 	});
 

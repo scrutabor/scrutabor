@@ -156,6 +156,7 @@
 		type="button"
 		class="day-open"
 		aria-labelledby={`${labelId} day-value`}
+		aria-describedby={applied && dateShown ? 'day-date' : undefined}
 		aria-haspopup="dialog"
 		aria-expanded={open}
 		aria-busy={!applied}
@@ -165,7 +166,8 @@
 		<span class="choice-copy">
 			<span id="day-value" class="choice-title">{shown}</span>
 			{#if dateShown || !applied}
-				<span class="choice-date" aria-hidden={!applied}>{dateShown || '\u00a0'}</span>
+				<span id="day-date" class="choice-date" aria-hidden={!applied}>{dateShown || '\u00a0'}</span
+				>
 			{/if}
 		</span>
 		<svg

@@ -11,6 +11,7 @@
 	import ReadingControls from '$lib/components/ReadingControls.svelte';
 	import SelectedWordPanel from '$lib/components/SelectedWordPanel.svelte';
 	import TextBody from '$lib/components/TextBody.svelte';
+	import type { Speaker } from '$lib/corpus';
 	import { M, type Lang } from '$lib/i18n';
 	import { prayerForm } from '$lib/prayer-form.svelte';
 	import { openPage } from '$lib/page-navigation';
@@ -235,17 +236,17 @@
 	// introduction and the mark key are chrome — one tap to reopen — so
 	// unlike the word panel they keep no history.
 	let aboutOpen = $state(false);
-	let legendOpen = $state(false);
+	let legendSpeaker = $state<Speaker | null>(null);
 
-	function openLegend() {
+	function openLegend(speaker: Speaker) {
 		panel.close();
 		aboutOpen = false;
-		legendOpen = true;
+		legendSpeaker = speaker;
 	}
 
 	function tapWord(id: string) {
 		aboutOpen = false;
-		legendOpen = false;
+		legendSpeaker = null;
 		panel.toggle(id);
 	}
 
@@ -253,7 +254,7 @@
 		if (event.currentTarget instanceof HTMLElement) {
 			event.currentTarget.focus({ preventScroll: true });
 		}
-		legendOpen = false;
+		legendSpeaker = null;
 		if (!aboutOpen && panel.id !== null) panel.close();
 		aboutOpen = !aboutOpen;
 	}
@@ -390,11 +391,17 @@
 			/>
 		{/if}
 
-		{#if legendOpen}
-			<MarkLegend {lang} devotional={hasDevotionalLeader} onclose={() => (legendOpen = false)} />
+		{#if legendSpeaker}
+			<MarkLegend
+				{lang}
+				speaker={legendSpeaker}
+				devotional={hasDevotionalLeader}
+				onclose={() => (legendSpeaker = null)}
+			/>
 		{/if}
 
 		<SelectedWordPanel
+			reportMode={helpLevel}
 			word={selectedWord}
 			details={selectedDetails}
 			lex={data.lex}

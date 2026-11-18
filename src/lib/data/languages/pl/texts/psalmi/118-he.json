@@ -8,8 +8,8 @@
     {"id":"s03","tr":"Wprowadź mnie na ścieżkę swoich przykazań, bo właśnie jej chciałem.","g":["Prowadź","mnie","po","ścieżce","przykazań","Twoich","bo","właśnie jej","pragnąłem"]},
     {"id":"s04","tr":"Nakłoń moje serce do swoich świadectw, a nie do chciwości.","g":["Skłoń","serce","moje","ku","świadectwom","Twoim","a","nie","ku","chciwości"],"ex":{"w044":"Serce mogłoby się skłonić ku chciwości zamiast ku Bożym świadectwom. Taki kierunek wskazuje „in” (w043)."}},
     {"id":"s05","tr":"Odwróć moje oczy, aby nie widziały marności; na swojej drodze ożyw mnie.","g":["Odwróć","oczy","moje","aby nie","widziały","marności","na","drodze","Twojej","ożyw","mnie"]},
-    {"id":"s06","tr":"Utwierdź swojemu słudze swoje słowo, w bojaźni przed Tobą.","g":["Utwierdź","słudze","Twemu","słowo","Twoje","w","bojaźni","Twojej"]},
-    {"id":"s07","tr":"Odejmij moją hańbę, której się obawiałem, bo Twoje wyroki – miłe.","g":["Oddal","hańbę","moją","której",null,null,"bo","wyroki","Twoje","miłe"],"a":[{"s":4,"n":2,"a":0,"g":"się lękałem"}],"ex":{"w071":"Łacina pomija „są”: „iudícia tua [sunt] iucúnda” — „sądy Twoje [są] wdzięczne”."}},
+    {"id":"s06","tr":"Utwierdź swojemu słudze swoje słowo, w bojaźni przed Tobą.","g":["Utwierdź","słudze","Twemu","słowo","Twoje","w","bojaźni","Twojej"],"ex":{"w062":"W łacińskim psalmie „w bojaźni Twojej” stoi po „Twoim słowie”. Nova Vulgata łączy te człony wprost: jest to słowo, które prowadzi do czci Boga."}},
+    {"id":"s07","tr":"Odejmij moją hańbę, której się obawiałem, bo Twoje wyroki – miłe.","g":["Oddal","hańbę","moją","której",null,null,"bo","wyroki","Twoje","miłe"],"a":[{"s":4,"n":2,"a":0,"g":"się lękałem"}],"ex":{"w071":"Łacina pomija „są”: „iudícia tua [sunt] iucúnda” — „sądy Twoje [są] wdzięczne”, czyli miłe, sprawiające radość."}},
     {"id":"s08","tr":"Oto zapragnąłem Twoich przykazań; w swojej słuszności ożyw mnie.","g":["Oto","pragnąłem","przykazań","Twoich","w","słuszności","Twojej","ożyw","mnie"]}
   ]
 }

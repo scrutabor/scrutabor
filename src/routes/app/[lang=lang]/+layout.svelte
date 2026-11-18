@@ -45,8 +45,8 @@
 <noscript>
 	<p class="noscript-note">
 		{lang === 'pl'
-			? 'Ten tekst czyta się bez JavaScriptu, ale wybory — dzień, rola, tryb czytania, wielkość pisma, analiza słowa — wymagają jego włączenia.'
-			: 'The text reads without JavaScript, but the choices — the day, the part, the reading mode, the text size, the word analysis — need it turned on.'}
+			? 'Możesz czytać bez JavaScriptu. Włącz go, aby zmienić dzień, rolę, tryb czytania albo wielkość pisma lub otworzyć analizę słowa.'
+			: 'You can read without JavaScript. Turn it on to change the day, your role at Mass, the reading mode or the text size, or to open a word analysis.'}
 	</p>
 </noscript>
 

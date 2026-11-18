@@ -1,8 +1,8 @@
 import { expect, test } from './fixtures';
 
 const notes = {
-	pl: 'traktus śpiewa się tylko wtedy, gdy przewiduje go formularz dnia. Podobnie sekwencję dodaje się zgodnie z jego rubrykami',
-	en: "the Tract is sung only when prescribed by the day's formulary. The Sequence is likewise included according to its rubrics"
+	pl: 'Traktus i sekwencja pojawiają się zgodnie z rubrykami formularza.',
+	en: 'The Tract and the Sequence are included where prescribed.'
 } as const;
 
 for (const language of ['pl', 'en'] as const) {

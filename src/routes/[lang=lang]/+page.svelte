@@ -80,7 +80,7 @@
 			zipNote: 'kopia do pobrania',
 			soonNote: 'wkrótce',
 			specimenLead:
-				'Werset, od którego Scrutabor bierze nazwę, w postaci, jaką ma w modlitewniku: można wybrać tryb łaciński, dwujęzyczny albo interlinearny, czyli słowo po słowie, a dotknięcie słowa otwiera jego pełny opis.',
+				'Od tego wersetu pochodzi nazwa Scrutabor. Wybierz dowolne słowo, by zobaczyć jego znaczenie i formę.',
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
 			privacyLine: 'Bez rejestracji, bez plików cookie, bez reklam.',
 			privacyLink: 'prywatność',
@@ -99,7 +99,7 @@
 			zipNote: 'a copy to keep',
 			soonNote: 'coming soon',
 			specimenLead:
-				'The verse Scrutabor takes its name from, exactly as it stands in the prayer book: you can choose Latin, bilingual, or interlinear mode, and a tap on any word opens its analysis.',
+				'Scrutabor takes its name from this verse. Select any word to see what it means and how it’s used.',
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
 			privacyLine: 'No registration, no cookies, no ads.',
 			privacyLink: 'privacy',

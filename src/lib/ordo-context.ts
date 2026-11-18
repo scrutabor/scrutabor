@@ -346,8 +346,8 @@ export function ordoMinisterBlessingContext(
 		return unconfirmed();
 	if (GOSPEL_BLESSING_REQUIEMS.includes(state.mass))
 		return result(
-			'We Mszy za zmarłych opuszcza się prośbę o błogosławieństwo i błogosławieństwo. Munda cor meum wraz ze swoim zakończeniem pozostaje. Wariant dla wykonujących Pasję nie jest przygotowaniem do tej Mszy.',
-			'At Masses for the Dead, the blessing request and blessing are omitted. Munda cor meum and its own conclusion remain. The Passion ministers’ form is not preparation for this Mass.'
+			'We Mszach za zmarłych opuszcza się prośbę o błogosławieństwo i samo błogosławieństwo. Munda cor meum odmawia się z jego własnym zakończeniem.',
+			'At Masses for the Dead, the request for a blessing and the blessing itself are omitted. Munda cor meum is said with its own conclusion.'
 		);
 	const passion =
 		state.mass === 'dominica-ii-passionis' &&

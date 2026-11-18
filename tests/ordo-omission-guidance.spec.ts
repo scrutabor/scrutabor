@@ -13,7 +13,7 @@ const when = {
 		iudica:
 			'omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive — with its doxology and the repeated antiphon',
 		introit:
-			'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. There is no Introit at the Easter Vigil',
+			'The Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. There is no Introit at the Easter Vigil.',
 		lavabo:
 			'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. It is said at the Easter Vigil'
 	}
@@ -30,8 +30,8 @@ for (const language of ['pl', 'en'] as const) {
 			page.locator('section.part').filter({ has: proper }).locator('.part-note')
 		).toHaveText(
 			language === 'pl'
-				? 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem także modlitwy przypadających wspomnień.'
-				: 'The priest greets the people, calls Orémus, and says the day’s prayer, adding the prayers of any commemorations prescribed.'
+				? 'Kapłan pozdrawia wiernych i mówi Orémus. Odmawia modlitwę dnia, a gdy przypadają wspomnienia, także ich modlitwy.'
+				: 'The priest greets the people and says Orémus. The Collect of the day follows, along with the Collect of each prescribed commemoration.'
 		);
 		await page.goto(`/app/${language}/ordo/offertorium?dies=2026-04-04`);
 		const folded = page.locator('section.part').filter({
@@ -508,3 +508,49 @@ test.describe('pending omitted citations', () => {
 		});
 	}
 });
+
+for (const lang of ['pl', 'en'] as const) {
+	test(`${lang} the Easter Vigil sets the preparation and Last Gospel aside for study`, async ({
+		page
+	}) => {
+		await page.addInitScript(() => localStorage.setItem('scrutabor-mass-form', 'cantu'));
+		const route = `/app/${lang}/ordo/`;
+		const day = 'dies=2026-04-04';
+		await page.goto(`${route}praeparatio?${day}`);
+		const foot = page.locator('[data-reference="vigil-preparation"]');
+		await expect(foot).toBeVisible();
+		await expect(foot).not.toHaveAttribute('open', '');
+		await expect(page.locator('[data-part="iudica-me"]')).toHaveCount(0);
+		await foot.locator('summary').click();
+		await expect(foot.getByRole('link', { name: /[IJ][uú]dica/i })).toBeVisible();
+
+		await page.goto(`${route}conclusio?${day}`);
+		const gospel = page.locator('[data-reference="vigil-last-gospel"]');
+		const prayers = page.locator('[data-reference="after-low-mass"]');
+		await expect(gospel).toBeVisible();
+		await expect(prayers).toBeVisible();
+		await expect(page.locator('[data-part="benedictio"]')).toBeVisible();
+		await expect(
+			page.locator('[data-part="evangelium-ultimum"], [data-part="ave-maria"]')
+		).toHaveCount(0);
+		await gospel.locator('summary').click();
+		await expect(gospel.getByRole('link')).toHaveAttribute(
+			'href',
+			/ordinarium\/evangelium-ultimum/
+		);
+		await prayers.locator('summary').click();
+		await expect(prayers.getByRole('link')).toHaveCount(5);
+		await page.emulateMedia({ media: 'print' });
+		await expect(gospel).toBeHidden();
+		await expect(prayers).toBeHidden();
+	});
+
+	test(`${lang} a Vigil citation reaches its complete reference text`, async ({ page }) => {
+		await page.goto(`/app/${lang}/ordo/praeparatio?dies=2026-04-04&w=iudica-me.w005`);
+		const selected = page.locator('#ordinary-omission-iudica-me a');
+		await expect(selected).toBeVisible();
+		await expect(selected).toHaveAttribute('href', /ordinarium\/iudica-me\?w=w005/);
+		await selected.click();
+		await expect(page.locator('aside .form')).toBeVisible();
+	});
+}

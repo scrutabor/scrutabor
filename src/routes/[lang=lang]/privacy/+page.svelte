@@ -1,11 +1,6 @@
 <script lang="ts">
-	// The privacy page: short because the truth is short. There are no
-	// accounts, and the only measurement in the architecture is a count of
-	// pages opened that stores nothing on the device and knows no one — so
-	// this page states that plainly, states what IS kept (the reader's own
-	// settings, on their own device), and states the one thing serving a
-	// website necessarily involves. It is also the page that must never
-	// drift from what src/app.html actually does.
+	// Keep these descriptions aligned with the analytics gates in app.html,
+	// the reader's storage and URL conventions, and the hosting setup.
 	// The app stores will require this URL when the wrapped builds ship.
 	import PageNav from '$lib/components/PageNav.svelte';
 	import type { Lang } from '$lib/i18n';
@@ -27,26 +22,27 @@
 		pl: bindProse({
 			title: 'Prywatność',
 			description:
-				'Scrutabor nie wymaga rejestracji, nie używa plików cookie i nie śledzi czytelników.',
-			lede: 'Scrutabor nie wymaga rejestracji, nie używa plików cookie i nie śledzi czytelników.',
+				'Scrutabor nie wymaga rejestracji i nie używa plików cookie. Odwiedziny mierzymy bez profilowania czytelników.',
+			lede: 'Scrutabor nie wymaga rejestracji i nie używa plików cookie. Odwiedziny mierzymy bez profilowania czytelników.',
 			points: [
-				'Nie używamy plików cookie, reklam ani profilowania. Odwiedziny liczymy narzędziem Cloudflare Web Analytics, które nie zapisuje niczego na urządzeniu i nie przechowuje żadnego identyfikatora, więc nie rozpoznaje czytelnika i nie łączy jego odwiedzin ani między sesjami, ani między witrynami. Zapisywane są wyłącznie zagregowane dane — ile razy otwarto daną stronę, w jakim języku, z jakiego kraju i w jakiej przeglądarce. Nie ma w nich śladu tego, co robił pojedynczy czytelnik.',
-				'Przeglądarka, która prosi o nieśledzenie sygnałem Do Not Track lub Global Privacy Control, nie jest liczona wcale. Pobrana kopia książki działa całkowicie offline — niczego nie liczy i z niczym się nie łączy.',
-				'Ustawienia czytelnika — język, motyw, wielkość pisma, wybrana rola i rodzaj Mszy, forma modlitwy, poziom pomocy, miejsce w lekturze oraz wybrany dzień — są zapisywane wyłącznie w pamięci przeglądarki i nigdy nie opuszczają urządzenia. Wybrany dzień zapisujemy razem z datą, w której go wybrano, i wygasa on o północy. Zainstalowana aplikacja przechowuje na urządzeniu całą książkę, aby działała także bez połączenia z internetem.',
-				'Strona to zbiór statycznych plików serwowanych przez Cloudflare Pages. Jak każdy serwer WWW, Cloudflare widzi adres IP, na który dostarcza pliki. Poza zagregowanymi danymi opisanymi wyżej nie prowadzimy żadnych dzienników i nie przechowujemy niczego, co dałoby się powiązać z osobą.'
+				'W serwisie nie ma reklam. Cloudflare Web Analytics zbiera dane o otwieranych stronach i pomiary ich wydajności, między innymi czas ładowania. Nie używa plików cookie ani trwałego identyfikatora czytelnika. Korzystamy ze zbiorczych statystyk, na przykład liczby otwarć strony według języka, kraju i przeglądarki.',
+				'Nie uruchamiamy skryptu analitycznego, gdy przeglądarka zgłasza Do Not Track lub Global Privacy Control. Pobrana kopia książki działa offline i pozostaje na urządzeniu.',
+				'Przeglądarka zapamiętuje język, motyw, wielkość pisma, rolę i rodzaj Mszy, formę modlitwy, tryb czytania oraz ostatnie miejsce w lekturze. Zapamiętany wybór dnia wygasa o północy. Wersja internetowa może też umieścić wybrany dzień lub miejsce w lekturze w adresie strony. Zainstalowana aplikacja pobiera na urządzenie książkę, aby można było ją czytać bez połączenia z internetem.',
+				'Pliki strony dostarcza Cloudflare Pages. Aby je dostarczyć, Cloudflare otrzymuje adres IP i adres żądanej strony. Scrutabor nie prowadzi własnych dzienników odwiedzin.'
 			],
 			contact: 'Uwagi i poprawki: github.com/scrutabor.',
 			back: 'wróć na stronę główną'
 		}),
 		en: {
 			title: 'Privacy',
-			description: 'Scrutabor requires no registration, uses no cookies, and tracks no one.',
-			lede: 'Scrutabor requires no registration, uses no cookies, and tracks no one.',
+			description:
+				'You can use Scrutabor without an account or cookies. We measure visits without building reader profiles.',
+			lede: 'You can use Scrutabor without an account or cookies. We measure visits without building reader profiles.',
 			points: [
-				'There are no cookies, no ads, and no profiles. Visits are counted with Cloudflare Web Analytics, which stores nothing on the device and keeps no identifier, so it cannot recognize a reader or join their visits across sessions or across sites. What it records are aggregate counts — how often a page was opened, in which language, from which country, and in which browser. There is no trace in them of what any one reader did.',
-				'A browser that asks not to be tracked, by Do Not Track or Global Privacy Control, is not counted at all. A downloaded copy of the book works entirely offline — it counts nothing and connects to nothing.',
-				'A reader’s settings — language, theme, text size, the chosen part and kind of Mass, the prayer form, the help level, the place in the reading, and the chosen day — are stored only in the browser’s own storage and never leave the device. The chosen day is kept with the date it was chosen on, and it expires at midnight. The installed app keeps the whole book on the device so that it works offline.',
-				'The site is a set of static files served by Cloudflare Pages. Like any web server, Cloudflare sees the IP address it delivers files to. Beyond the aggregate counts described above we keep no logs at all and hold nothing that could be tied to a person.'
+				'The site has no ads. Cloudflare Web Analytics collects information about the pages people open and measures their performance, including load time. It uses no cookies or persistent reader identifier. We use aggregate statistics such as page views by language, country, and browser.',
+				'We leave the analytics script off when the browser signals Do Not Track or Global Privacy Control. A downloaded copy of the book works offline and stays on the device.',
+				'The browser remembers your language, theme, text size, role and kind of Mass, prayer form, reading mode, and last place in the book. The saved choice of day expires at midnight. The web version can also include the selected day or reading location in the page address. The installed app downloads the book to your device so you can read offline.',
+				'Cloudflare Pages serves the site’s files. To deliver them, Cloudflare receives your IP address and the address of the requested page. Scrutabor keeps no visit logs of its own.'
 			],
 			contact: 'Questions and corrections: github.com/scrutabor.',
 			back: 'go to the home page'

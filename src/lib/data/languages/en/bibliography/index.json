@@ -18610,6 +18610,22 @@
      "lemmas": []
     },
     {
+     "edition": "edition.annus-sanctus-1884",
+     "roles": [
+      "historical_wording_basis"
+     ],
+     "texts": [
+      {
+       "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
+       "roles": [
+        "historical_wording_basis"
+       ],
+       "uses": 1
+      }
+     ],
+     "lemmas": []
+    },
+    {
      "edition": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
      "roles": [
       "historical_wording_basis"

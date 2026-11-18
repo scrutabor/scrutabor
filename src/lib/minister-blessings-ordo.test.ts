@@ -198,8 +198,8 @@ const occasions = [
 		mass,
 		'2026-11-02',
 		key,
-		'request and blessing are omitted',
-		'request and blessing are omitted'
+		'the request for a blessing and the blessing itself are omitted',
+		'the request for a blessing and the blessing itself are omitted'
 	])
 ];
 it.each(occasions)(
@@ -214,6 +214,10 @@ it.each(occasions)(
 				expect(result.note).toContain(lang === 'pl' ? 'tylko do wglądu' : 'reference only');
 				expect(result.note).not.toContain(';');
 				if (lang === 'en') expect(result.note).toContain(index === 0 ? ordinaryNote : palmNote);
+				if (date === '2026-11-02') {
+					expect(result.note).toContain('Munda cor meum');
+					expect(result.note).not.toMatch(/Pasj|Passion/);
+				}
 			}
 	}
 );

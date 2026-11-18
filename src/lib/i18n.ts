@@ -91,6 +91,7 @@ export interface Messages {
 	aboutLabel: string;
 	sourcesLabel: string;
 	translationRelationshipLabel: string;
+	revisedTranslationScope: string;
 	translationRelationships: Record<
 		'exact' | 'normalized' | 'revised' | 'traditional-composite',
 		string
@@ -168,6 +169,8 @@ export interface Messages {
 		noResults: string;
 		available: string;
 		partial: string;
+		outsideTitle: string;
+		outsideText: string;
 		unresolvedTitle: string;
 		unresolvedText: string;
 		unresolvedWeek: string;
@@ -215,7 +218,9 @@ export interface Messages {
 	>;
 	/** The key to the marks, opened by tapping one. */
 	markLegendTitle: string;
+	markLegendAction: string;
 	markLegendNote: string;
+	markResponsum: string;
 	voices: Record<'submissa' | 'secreto' | 'cantus', string>;
 	/** A verse number that cites its verse in the URL (the psalter). */
 	verseAria: (n: number) => string;
@@ -231,6 +236,9 @@ export interface Messages {
 	/** A conditional faculty: available to the faithful, but not their
 	 * unconditional response. */
 	mayJoin: string;
+	quietPriest: string;
+	choirSings: string;
+	sings: string;
 	participationPerformance: string;
 	/** What the reader in the pew is called over their own lines. The
 	 * corpus's own word for that speaker is `populus`, printed as lud; this
@@ -281,20 +289,20 @@ const MESSAGES: Record<Lang, Messages> = {
 		segmentNarrow: 'zawęź wybór do tego wersetu',
 		segmentDeselect: 'usuń wybór tego wersetu',
 		segmentRangeHint:
-			'Wybrany werset można udostępnić z adresu strony. Shift z kliknięciem zaznacza zakres wersetów.',
+			'Wybrany fragment możesz udostępnić, kopiując adres strony. Aby zaznaczyć zakres, przytrzymaj Shift i kliknij drugi werset.',
 		searchHint: 'Wpisz tytuł modlitwy, znany fragment albo łacińskie słowo.',
 		searchLoading: 'szukam…',
-		searchNoResults: 'Nie znaleziono pasujących miejsc.',
-		searchFailed: 'Nie udało się przeszukać tego wydania.',
+		searchNoResults: 'Brak wyników.',
+		searchFailed: 'Wyszukiwanie nie powiodło się.',
 		searchDegraded:
-			'Wyszukiwanie przekładu jest chwilowo niedostępne. Widać wyniki łacińskie i tytuły.',
+			'Wyszukiwanie w przekładach jest chwilowo niedostępne. Nadal można szukać tytułów modlitw, łacińskich fragmentów i haseł.',
 		searchRetry: 'spróbuj ponownie',
 		searchTitles: 'tytuły modlitw',
 		searchContents: 'fragmenty tekstów',
-		searchGrammar: 'gramatyka',
+		searchGrammar: 'hasła słownikowe',
 		searchMatchedAlias: 'znaleziono także jako',
 		searchCount: (n) =>
-			`Znaleziono ${n} ${
+			`Wyświetlono ${n} ${
 				n === 1
 					? 'wynik'
 					: n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)
@@ -349,7 +357,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		catalogDescription:
 			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
 		editioDescription:
-			'Jak powstaje to wydanie: świadkowie tekstu i ich kolacjonowanie, mechaniczna weryfikacja analiz, etapy przeglądu.',
+			'Z jakich źródeł korzystamy, jak sprawdzamy łacinę i co jeszcze czeka na przegląd.',
 		bibliographyTitle: 'bibliografia',
 		bibliographyPageTitle: 'Bibliografia',
 		bibliographyDescription:
@@ -366,6 +374,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		aboutLabel: 'o modlitwie',
 		sourcesLabel: 'źródła',
 		translationRelationshipLabel: 'relacja z brzmieniem historycznym',
+		revisedTranslationScope: 'W podanych wersetach zredagowano brzmienie historyczne.',
 		translationRelationships: {
 			exact: 'Brzmienie jest zgodne ze wskazanym świadectwem historycznym.',
 			normalized:
@@ -379,7 +388,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoLead: 'Porządek Mszy świętej według Mszału Rzymskiego z 1962 roku',
 		ordoSubtitle: 'Mszał Rzymski z 1962 roku',
 		ordoDescription:
-			'Cały porządek Mszy w rycie z 1962 roku, część po części — z tekstami stałymi i miejscami, w których wchodzą teksty własne dnia.',
+			'Porządek Mszy według Mszału Rzymskiego z 1962 roku. Teksty stałe i modlitwy oraz czytania właściwe dla wybranego dnia.',
 		ordoProper: 'z formularza dnia',
 		ordoCommemoration: 'wspomnienie',
 		commemorationQuiet:
@@ -407,20 +416,20 @@ const MESSAGES: Record<Lang, Messages> = {
 		commemorationPrayersOf: '{commemoration} (modlitwy: {formulary})',
 		commemorationRules: {
 			'dominica-impedita': [
-				'Gdy jedno z poniższych świąt pierwszej klasy przypada w niedzielę, zajmuje miejsce niedzieli, a we Mszy tego święta wspomina się tę niedzielę. Po kolekcie, sekrecie i pokomunii święta następuje za każdym razem odpowiednia modlitwa niedzieli z własnym zakończeniem. To wspomnienie uprzywilejowane odmawia się we wszystkich Mszach.',
-				'Wspominana niedziela zależy od daty: jest to niedziela, która według kalendarza przypadałaby tego dnia. Jej modlitwy pochodzą z jej własnego formularza i pokazuje je porządek Mszy wybranego dnia.'
+				'Gdy jedno z poniższych świąt pierwszej klasy przypada w niedzielę, odprawia się Mszę święta. Po każdej z trzech modlitw święta (kolekcie, sekrecie i pokomunii) odmawia się odpowiednią modlitwę niedzieli z własnym zakończeniem. To wspomnienie jest uprzywilejowane i występuje we wszystkich Mszach.',
+				'Modlitwy bierze się z formularza niedzieli, która przypadałaby tego dnia. Można je przeczytać w porządku Mszy dla wybranej daty.'
 			],
 			'feria-adventus': [
-				'Gdy jedno z poniższych świąt przypada w dzień powszedni Adwentu, zajmuje miejsce dnia powszedniego, a we Mszy tego święta wspomina się ten dzień powszedni. Po kolekcie, sekrecie i pokomunii święta następuje za każdym razem odpowiednia modlitwa dnia powszedniego z własnym zakończeniem. To wspomnienie uprzywilejowane odmawia się we wszystkich Mszach: we Mszy cichej, we Mszy śpiewanej konwentualnej i we Mszy śpiewanej niekonwentualnej.',
-				'Modlitwy wspomnienia zależą od daty: w dzień powszedni Adwentu bierze się Mszę z poprzedniej niedzieli, więc są to modlitwy niedzieli Adwentu, która poprzedza ten dzień. Pochodzą z jej własnego formularza i pokazuje je porządek Mszy wybranego dnia. Wyjątkiem są Suche Dni Adwentu, które mają własną Mszę. Tej Mszy nie ma jeszcze w tym wydaniu, dlatego gdy święto przypada w jeden z Suchych Dni, wydanie zaznacza, że modlitw wspomnienia jeszcze w nim nie ma, i nie zastępuje ich modlitwami niedzieli.'
+				'Gdy jedno z poniższych świąt przypada w dzień powszedni Adwentu, odprawia się Mszę święta ze wspomnieniem dnia powszedniego. Po każdej modlitwie święta (kolekcie, sekrecie i pokomunii) następuje odpowiednia modlitwa wspomnienia z własnym zakończeniem. To wspomnienie jest uprzywilejowane i występuje we wszystkich Mszach.',
+				'Modlitwy wspomnienia zwykle pochodzą z formularza poprzedniej niedzieli Adwentu. Porządek Mszy dla wybranej daty pokazuje właściwe teksty. Suche Dni Adwentu mają własne formularze, które czekają na uzupełnienie. Dla tych dat wskazujemy brak modlitw wspomnienia.'
 			],
 			'festum-impeditum': [
-				'Gdy jedno z poniższych świąt drugiej klasy przypada w niedzielę drugiej klasy, ustępuje niedzieli, a we Mszy niedzieli wspomina się to święto. Po kolekcie, sekrecie i pokomunii niedzieli następuje za każdym razem odpowiednia modlitwa święta z własnym zakończeniem. To wspomnienie zwykłe odmawia się we Mszy cichej i we Mszy śpiewanej konwentualnej, a we Mszy śpiewanej niekonwentualnej pomija się je.',
-				'Wspominane święto zależy od daty: jest to święto, które według kalendarza przypada tego dnia. Jego modlitwy pochodzą z jego własnego formularza i pokazuje je porządek Mszy wybranego dnia.'
+				'Gdy jedno z poniższych świąt drugiej klasy przypada w niedzielę drugiej klasy, odprawia się Mszę niedzieli. Święto wspomina się tylko we Mszy cichej i śpiewanej Mszy konwentualnej. Wtedy po kolekcie, sekrecie i pokomunii niedzieli dodaje się odpowiednie modlitwy święta, każdą z własnym zakończeniem.',
+				'Modlitwy bierze się z formularza święta, które przypada tego dnia. Można je przeczytać w porządku Mszy dla wybranej daty.'
 			],
 			'vigilia-ascensionis-impedita': [
-				'Gdy wskazane w tym wydaniu święto II klasy ma pierwszeństwo przed Wigilią Wniebowstąpienia, we Mszy święta wspomina się tę Wigilię. Po kolekcie, sekrecie i modlitwie po Komunii święta następuje za każdym razem odpowiednia modlitwa z formularza Wigilii z własnym zakończeniem. To wspomnienie odmawia się we Mszy cichej i we Mszy śpiewanej konwentualnej, a we Mszy śpiewanej niekonwentualnej pomija się je.',
-				'Dotyczy to tylko wskazanych świąt i dat. Sam wybór Mszy śpiewanej nie rozstrzyga, czy jest ona konwentualna.'
+				'Gdy wskazane święto drugiej klasy ma pierwszeństwo przed Wigilią Wniebowstąpienia, Wigilię wspomina się tylko we Mszy cichej i śpiewanej Mszy konwentualnej. Po kolekcie, sekrecie i pokomunii święta następują wtedy odpowiednie modlitwy Wigilii, każda z własnym zakończeniem.',
+				'Poniżej podano święta i daty objęte tą regułą. W ustawieniu „Msza śpiewana” pokazujemy wariant konwentualny i niekonwentualny.'
 			]
 		},
 		commemorationDates: 'Święta i daty w tym wydaniu',
@@ -430,14 +439,14 @@ const MESSAGES: Record<Lang, Messages> = {
 			'sabbato-quatuor-temporum-adventus': 'Sobota Suchych Dni Adwentu'
 		},
 		formularyScope:
-			'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, a także wskazane w tym wydaniu wspomnienia świętych w Wigilię Wniebowstąpienia i wspomnienie tej Wigilii, gdy jest przeszkodzona. Nie obejmuje jeszcze wszystkich wspomnień liturgicznych ani kalendarzy lokalnych.',
+			'Przy doborze modlitw uwzględniamy wspomnienia Litanii Większych, św. Petroneli, niedziel i świąt, które ustępują innym obchodom, oraz dni powszednich Adwentu. W wybranych przypadkach uwzględniamy także wspomnienia świętych w Wigilię Wniebowstąpienia oraz wspomnienie samej Wigilii, gdy ustępuje świętu. Pozostałe wspomnienia i kalendarze lokalne czekają na uzupełnienie.',
 		dayLabel: 'dzień',
 		dayStatusLabel: 'o dniu',
 		dayNone: 'bez formularza',
 		dayLoading: 'wczytywanie',
-		dayFailed: 'nie udało się wczytać',
+		dayFailed: 'nie udało się wczytać tekstów dnia',
 		dayUnwritten: 'jeszcze nie w tym wydaniu',
-		dayInPlace: 'teksty dnia są na stronie',
+		dayInPlace: 'wczytano teksty dnia',
 		dayPartial: '(część tekstów)',
 		dayAhead: 'formularz na ten dzień nie jest jeszcze w tym wydaniu — można wybrać inny dzień',
 		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
@@ -450,7 +459,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			catalogTitle: 'Formularze Mszy',
 			catalogDescription:
 				'Teksty do lektury i nauki, bez przypisania do konkretnej daty. Aby przygotować porządek Mszy na wybrany dzień, otwórz Ordo Missae.',
-			invalidChoice: 'Nieprawidłowy wybór dnia lub Mszy w adresie. Wybierz datę w kalendarzu.',
+			invalidChoice: 'Nie można otworzyć Mszy z tego adresu. Wybierz dzień w kalendarzu.',
 			today: 'Dzisiaj',
 			previousMonth: 'poprzedni miesiąc',
 			nextMonth: 'następny miesiąc',
@@ -459,16 +468,17 @@ const MESSAGES: Record<Lang, Messages> = {
 			noResults: 'Nie znaleziono takiego formularza.',
 			available: 'formularz dostępny w tym wydaniu',
 			partial: 'w tym wydaniu dostępna jest część tekstów',
-			unresolvedTitle: 'Kalendarz jeszcze niedostępny',
-			unresolvedText:
-				'To wydanie nie zawiera jeszcze pełnych danych kalendarzowych dla wybranego dnia. Ordo można otworzyć bez tekstów własnych.',
-			unresolvedWeek: 'Dzień należy do tygodnia, którego niedzielą jest',
+			outsideTitle: 'Data poza zakresem kalendarza',
+			outsideText: 'Wybierz datę z kalendarza lub otwórz części stałe Mszy.',
+			unresolvedTitle: 'Brak danych dla tego dnia',
+			unresolvedText: 'W tym wydaniu można otworzyć na ten dzień tylko części stałe Mszy.',
+			unresolvedWeek: 'Niedziela tego tygodnia to',
 			unwrittenTitle: 'Dzień rozpoznany, formularz jeszcze niedostępny',
 			unwrittenText:
 				'Kalendarium rozpoznaje ten dzień, ale jego tekstów nie ma jeszcze w tym wydaniu.',
 			chooseVariant: 'Wybierz formularz Mszy',
 			openFormulary: 'Otwórz formularz',
-			openWithout: 'Otwórz bez formularza',
+			openWithout: 'Otwórz części stałe',
 			dateOnly: 'bez dostępnego formularza'
 		},
 		seasons: {
@@ -497,19 +507,21 @@ const MESSAGES: Record<Lang, Messages> = {
 			synagoga: 'synagoga'
 		},
 		markTitle: {
-			sacerdos: 'Versículus — werset, który mówi kapłan',
+			sacerdos: 'Versículus — werset kapłana',
 			ductor: 'Versículus — werset osoby prowadzącej modlitwę',
-			minister: 'Respónsum — odpowiedź usługującego i wiernych',
+			minister: 'Respónsum — odpowiedź',
 			populus: 'Respónsum — odpowiedź wiernych',
-			omnes: 'Omnes — mówią wszyscy razem',
+			omnes: 'Omnes — wszyscy razem',
 			schola: 'Respónsum — śpiewa schola',
 			chronista: 'Chronista — opowiada wydarzenia Męki Pańskiej',
 			christus: 'Christus — słowa Chrystusa',
 			synagoga: 'Synagoga — słowa pozostałych osób i tłumu'
 		},
 		markLegendTitle: 'znaki przy wierszach',
+		markLegendAction: 'Otwórz legendę',
 		markLegendNote:
-			'Znak stoi tam, gdzie zmienia się mówiący, i powtarza się po każdej rubryce. Wiersze bez znaku należą do głosu powyżej.',
+			'Znak wskazuje zmianę głosu i pojawia się ponownie po rubryce. Bez nowego znaku trwa ten sam głos.',
+		markResponsum: 'Respónsum — odpowiedź lub śpiew scholi',
 		voices: { submissa: 'półgłosem', secreto: 'po cichu', cantus: 'śpiew' },
 		verseAria: (n) => `odnośnik do wersetu ${n}`,
 		roleLabel: 'rola',
@@ -517,6 +529,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'śpiewana', lecta: 'cicha' },
 		everyone: 'odpowiadają wszyscy',
 		mayJoin: 'wierni mogą dołączyć',
+		quietPriest: 'kapłan mówi po cichu.',
+		choirSings: 'schola śpiewa.',
+		sings: 'śpiewa.',
 		participationPerformance:
 			'Schola śpiewa, a wierni mogą dołączyć. Kapłan odmawia ten sam tekst po cichu.',
 		faithful: 'wierni',
@@ -562,19 +577,19 @@ const MESSAGES: Record<Lang, Messages> = {
 		segmentNarrow: 'narrow the selection to this verse',
 		segmentDeselect: 'clear the selected verse',
 		segmentRangeHint:
-			'A selected verse travels in the page address. Shift with a click selects a range of verses.',
+			'Copy the page address to share the selected passage. To select a range, hold Shift and click the second verse.',
 		searchHint: 'Enter a prayer title, a remembered phrase, or a Latin word.',
 		searchLoading: 'searching…',
-		searchNoResults: 'No matching places were found.',
-		searchFailed: 'This edition could not be searched.',
+		searchNoResults: 'No results found.',
+		searchFailed: 'Search failed.',
 		searchDegraded:
-			'Translation search is unavailable right now. Latin and title results are shown.',
+			'Search in translations is temporarily unavailable. You can still search prayer titles, Latin passages, and dictionary entries.',
 		searchRetry: 'try again',
 		searchTitles: 'prayer titles',
 		searchContents: 'text passages',
-		searchGrammar: 'grammar',
+		searchGrammar: 'dictionary entries',
 		searchMatchedAlias: 'also found as',
-		searchCount: (n) => `${n} ${n === 1 ? 'result' : 'results'} found.`,
+		searchCount: (n) => `Showing ${n} ${n === 1 ? 'result' : 'results'}.`,
 		close: 'close',
 		updateAvailable: 'A new version is ready.',
 		updateReload: 'Reload',
@@ -622,7 +637,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		catalogDescription:
 			'A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.',
 		editioDescription:
-			'How this edition is made: text witnesses and collation, mechanical verification of the analyses, review states.',
+			'The sources behind this edition, how we check the Latin, and what still needs review.',
 		bibliographyTitle: 'bibliography',
 		bibliographyPageTitle: 'Bibliography',
 		bibliographyDescription:
@@ -639,6 +654,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		aboutLabel: 'about this prayer',
 		sourcesLabel: 'sources',
 		translationRelationshipLabel: 'relationship to historical wording',
+		revisedTranslationScope: 'The verses listed below revise historical wording.',
 		translationRelationships: {
 			exact: 'The wording matches the cited historical witness.',
 			normalized:
@@ -652,7 +668,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		ordoLead: 'The order of Mass in the Roman Missal of 1962',
 		ordoSubtitle: 'the Roman Missal of 1962',
 		ordoDescription:
-			'The whole order of Mass in the 1962 rite, part by part — the fixed texts, and where the day’s own texts belong.',
+			'The Order of Mass from the 1962 Roman Missal, with the fixed texts and the prayers and readings for the selected day.',
 		ordoProper: 'from the day’s formulary',
 		ordoCommemoration: 'commemoration',
 		commemorationQuiet:
@@ -680,20 +696,20 @@ const MESSAGES: Record<Lang, Messages> = {
 		commemorationPrayersOf: '{commemoration} (prayers: {formulary})',
 		commemorationRules: {
 			'dominica-impedita': [
-				'When one of the first-class feasts below falls on a Sunday, it takes the Sunday’s place, and the Sunday is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the Sunday’s prayer of the same kind, with its own conclusion. This privileged commemoration is made in every Mass.',
-				'The Sunday commemorated depends on the date: it is the Sunday the calendar would have kept that day. Its prayers come from its own formulary, and the order of Mass of the chosen day shows them.'
+				'When one of the first-class feasts below falls on a Sunday, the Mass is that of the feast. After each of the feast’s three prayers (Collect, Secret and Postcommunion), the priest says the corresponding Sunday prayer with its own conclusion. This privileged commemoration is made at every Mass.',
+				'The prayers come from the formulary of the Sunday that would have been kept on that date. You can read them in the Order of Mass for the chosen day.'
 			],
 			'feria-adventus': [
-				'When one of the feasts below falls on a weekday of Advent, it takes the weekday’s place, and the weekday is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the weekday’s prayer of the same kind, with its own conclusion. This privileged commemoration is made in every Mass: in a low Mass, in a sung conventual Mass and in a sung Mass that is not conventual.',
-				'The commemoration’s prayers depend on the date: a weekday of Advent uses the preceding Sunday’s Mass, so they are the prayers of the Sunday of Advent before that day. They come from its own formulary, and the order of Mass of the chosen day shows them. The Ember days of Advent are the exception: they have a Mass of their own. That Mass is not yet in this edition, so when a feast falls on an Ember day, the edition says that the commemoration’s prayers are not yet in it, and does not replace them with the Sunday’s.'
+				'When one of the feasts below falls on a weekday of Advent, the Mass of the feast commemorates the weekday. After each of the feast’s three prayers (Collect, Secret and Postcommunion), the priest says the corresponding weekday prayer with its own conclusion. This privileged commemoration is made at every Mass.',
+				'The prayers usually come from the preceding Sunday of Advent. You can read them in the Order of Mass for the chosen day. The Ember days of Advent have their own formularies, which are still to be added. The dates below show where their prayers are missing.'
 			],
 			'festum-impeditum': [
-				'When one of the second-class feasts below falls on a second-class Sunday, it gives way to the Sunday, and the feast is commemorated in the Sunday’s Mass. The Collect, Secret and Postcommunion of the Sunday are each followed by the feast’s prayer of the same kind, with its own conclusion. This ordinary commemoration is made in a low Mass and in a sung conventual Mass, and omitted in a sung Mass that is not conventual.',
-				'The feast commemorated depends on the date: it is the feast the calendar assigns to that day. Its prayers come from its own formulary, and the order of Mass of the chosen day shows them.'
+				'When one of the second-class feasts below falls on a second-class Sunday, the Mass is that of the Sunday. The feast receives an ordinary commemoration only at Low Mass and sung conventual Mass. In those cases the priest follows each of the Sunday’s prayers (Collect, Secret and Postcommunion) with the corresponding prayer of the feast, using its own conclusion.',
+				'The prayers come from the formulary of the feast that falls on that date. You can read them in the Order of Mass for the chosen day.'
 			],
 			'vigilia-ascensionis-impedita': [
-				'When a second-class feast represented in this edition takes precedence over the Vigil of the Ascension, the Vigil is commemorated in the feast’s Mass. The Collect, Secret and Postcommunion of the feast are each followed by the Vigil’s prayer of the same kind, with its own conclusion. This commemoration is made in a low Mass and in a sung conventual Mass, and omitted in a sung Mass that is not conventual.',
-				'This applies only to the specified feasts and dates. Selecting sung Mass alone does not decide whether it is conventual.'
+				'When a second-class feast listed here takes precedence over the Vigil of the Ascension, the feast’s Mass commemorates the Vigil at Low Mass and sung conventual Mass. After each of the feast’s prayers (Collect, Secret and Postcommunion), the priest says the corresponding Vigil prayer with its own conclusion.',
+				'The dates below show when this happens. When you select sung Mass, the reader shows the conventual and non-conventual forms.'
 			]
 		},
 		commemorationDates: 'Feasts and dates in this edition',
@@ -703,14 +719,14 @@ const MESSAGES: Record<Lang, Messages> = {
 			'sabbato-quatuor-temporum-adventus': 'Ember Saturday of Advent'
 		},
 		formularyScope:
-			'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, as well as this edition’s specified commemorations of saints on the Vigil of the Ascension and of the Vigil when it is impeded. It does not yet cover all liturgical commemorations or local calendars.',
+			'Prayer selection includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',
 		dayLoading: 'loading',
-		dayFailed: 'could not be loaded',
+		dayFailed: 'the day’s texts could not be loaded',
 		dayUnwritten: 'not yet in this edition',
-		dayInPlace: 'the day’s texts are on the page',
+		dayInPlace: 'the day’s texts are ready',
 		dayPartial: '(some texts)',
 		dayAhead: 'the formulary for this day is not yet in this edition — another day can be chosen',
 		dayWeekOf: 'today is a weekday — the last Sunday:',
@@ -723,8 +739,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			catalogTitle: 'Mass formularies',
 			catalogDescription:
 				'Texts for reading and study, without a specific date. To follow the order of Mass for a chosen day, open the Ordo Missae.',
-			invalidChoice:
-				'The address contains an invalid day or Mass selection. Choose a date in the calendar.',
+			invalidChoice: 'The Mass in this link could not be opened. Choose a day in the calendar.',
 			today: 'Today',
 			previousMonth: 'previous month',
 			nextMonth: 'next month',
@@ -733,15 +748,16 @@ const MESSAGES: Record<Lang, Messages> = {
 			noResults: 'No such formulary was found.',
 			available: 'formulary available in this edition',
 			partial: 'some of its texts are available in this edition',
-			unresolvedTitle: 'Calendar not yet available',
-			unresolvedText:
-				'This edition does not yet contain complete calendar data for the selected day. The Ordo can be opened without the day’s proper texts.',
-			unresolvedWeek: 'This day belongs to the week whose Sunday is',
+			outsideTitle: 'Date outside the calendar range',
+			outsideText: 'Choose a date in the calendar or open the Ordinary of the Mass.',
+			unresolvedTitle: 'No calendar entry for this day',
+			unresolvedText: 'For this day, you can open the Ordinary of the Mass.',
+			unresolvedWeek: 'The Sunday for this week is',
 			unwrittenTitle: 'Day resolved, formulary not yet available',
 			unwrittenText: 'The calendar recognises this day, but its texts are not yet in this edition.',
 			chooseVariant: 'Choose the Mass formulary',
 			openFormulary: 'Open formulary',
-			openWithout: 'Open without a formulary',
+			openWithout: 'Open the Ordinary',
 			dateOnly: 'no available formulary'
 		},
 		seasons: {
@@ -770,19 +786,21 @@ const MESSAGES: Record<Lang, Messages> = {
 			synagoga: 'synagoga'
 		},
 		markTitle: {
-			sacerdos: 'Versículus — the verse the priest says',
+			sacerdos: 'Versículus — the priest’s verse',
 			ductor: 'Versículus — the verse said by the prayer leader',
-			minister: 'Respónsum — the answer of the server and the faithful',
+			minister: 'Respónsum — response',
 			populus: 'Respónsum — the answer of the faithful',
-			omnes: 'Omnes — said by all together',
+			omnes: 'Omnes — all together',
 			schola: 'Respónsum — sung by the choir',
 			chronista: 'Chronista — the Passion narrator',
 			christus: 'Christus — the words of Christ',
 			synagoga: 'Synagoga — the words of the other speakers and the crowd'
 		},
-		markLegendTitle: 'the marks beside the lines',
+		markLegendTitle: 'marks beside the lines',
+		markLegendAction: 'Open the key',
 		markLegendNote:
-			'A mark stands where the voice changes, and again after every rubric. Lines without one belong to the voice above them.',
+			'A mark shows where the voice changes and appears again after a rubric. The same voice continues until the next mark.',
+		markResponsum: 'Respónsum — a response or chant by the choir',
 		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
 		verseAria: (n) => `link to verse ${n}`,
 		roleLabel: 'part',
@@ -790,6 +808,9 @@ const MESSAGES: Record<Lang, Messages> = {
 		massForms: { cantu: 'sung', lecta: 'low' },
 		everyone: 'everyone answers',
 		mayJoin: 'the faithful may join',
+		quietPriest: 'the priest says it silently.',
+		choirSings: 'the choir sings.',
+		sings: 'sings.',
 		participationPerformance:
 			'The choir sings, and the faithful may join. The priest recites the same text quietly.',
 		faithful: 'the faithful',

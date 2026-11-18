@@ -368,7 +368,7 @@ test('the mark explains itself when asked', async ({ page }) => {
 	const legend = page.locator('.legend');
 	await expect(legend).toBeVisible();
 	await expect(legend).toContainText('Versículus');
-	await expect(legend).toContainText('Respónsum');
+	await expect(legend).toContainText('Respónsum — odpowiedź lub śpiew scholi');
 	await expect(legend).toContainText('Omnes');
 
 	// it closes, and it does not sit on top of the word panel
@@ -378,6 +378,14 @@ test('the mark explains itself when asked', async ({ page }) => {
 	await expect(page.locator('aside.panel, aside')).toBeVisible();
 	await page.locator('.mark').first().click();
 	await expect(page.locator('.legend')).toBeVisible();
+
+	await page.goto('/app/pl/formularium/dominica-ii-passionis');
+	await page
+		.getByRole('button', { name: /^Christus.*Otwórz legendę/ })
+		.first()
+		.click();
+	await expect(legend.locator('dt')).toHaveText(['C.', '†.', 'S.']);
+	await expect(legend.locator('dd')).toContainText(['Chronista', 'Christus', 'Synagoga']);
 });
 
 test('the reader’s own lines are the red ones, and the other voice recedes', async ({ page }) => {

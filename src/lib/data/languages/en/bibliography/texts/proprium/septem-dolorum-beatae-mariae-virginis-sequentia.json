@@ -1,0 +1,28 @@
+{
+ "id": "proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
+ "source_groups": [
+  {
+   "edition": "edition.annus-sanctus-1884",
+   "digital_item": "item.annus-sanctus-1884.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 91–92",
+    "scan": "PDF pp. 153–154",
+    "page_url": "https://archive.org/details/annussanctushymn00shiprich/page/91/mode/2up"
+   },
+   "entries": [
+    {
+     "id": "use.en.annus-sanctus-1884.stabat-mater",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "J. D. Aylward’s Stabat Mater dolorosa supplies the English verse basis for all twenty stanzas.",
+     "reader_note": "J. D. Aylward’s English verse is the basis of this revision. The Latin of the 1962 Roman Missal guides the revised wording and the closing acclamations."
+    }
+   ],
+   "verified_on": "2026-11-18"
+  }
+ ],
+ "witnesses": [],
+ "language": "en"
+}

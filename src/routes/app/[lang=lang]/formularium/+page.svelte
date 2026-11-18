@@ -53,7 +53,7 @@
 								<li>
 									<a href="/app/{lang}/formularium/{day.id}" data-formulary={day.id}>
 										{day.title[lang]}{#if day.partial}
-											<small>{msgs.dayPartial}</small>{/if}
+											{' '}<small>{msgs.dayPartial}</small>{/if}
 									</a>
 								</li>
 							{/each}

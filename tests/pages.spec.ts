@@ -482,7 +482,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Pojęcia, składnia i wymowa'
 	);
 	await expect(references.locator('a[href="/app/pl/bibliographia"]')).toContainText(
-		'Świadectwa tekstu, przekładu i kontekstu'
+		'Źródła tekstów i przekładów'
 	);
 	await expect(page.locator('.working')).toContainText(
 		'Wydanie robocze przed przeglądem eksperckim'
@@ -526,7 +526,7 @@ test('landing shows the catalog and separates reference pages from edition statu
 		'Grammar Concepts, syntax, and pronunciation'
 	);
 	await expect(page.locator('.footer-links')).toContainText(
-		'Bibliography Textual, translation, and contextual witnesses'
+		'Bibliography Sources for texts and translations'
 	);
 	await expect(page.locator('.working')).toContainText('Working edition awaiting expert review');
 });
@@ -671,7 +671,7 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(page.locator('h1')).toHaveText('Bibliografia');
 	await expect(page.locator('.source-section h2')).toHaveText([
 		'Łacińskie świadectwa tekstu',
-		'Świadectwa brzmienia przekładu',
+		'Dawne przekłady',
 		'Dokumenty urzędowe i historia liturgii',
 		'Pismo Święte, język i opracowania'
 	]);
@@ -734,7 +734,7 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(page.locator('.latin-name')).toHaveCount(0);
 	await expect(page.locator('.source-section h2')).toHaveText([
 		'Latin textual witnesses',
-		'Translation wording witnesses',
+		'Historical translations',
 		'Official documents and liturgical history',
 		'Scripture, language, and scholarship'
 	]);
@@ -779,7 +779,7 @@ test('bibliography details show a reserved loader while their evidence is fetche
 	const body = source.locator('.source-body');
 	await expect(body).toHaveAttribute('aria-busy', 'true');
 	await expect(body.locator('[data-content-loader="source"]')).toBeVisible();
-	await expect(source.getByRole('status')).toHaveText('Wczytywanie użyć źródła…');
+	await expect(source.getByRole('status')).toHaveText('Wczytywanie odwołań do źródła…');
 
 	release();
 	await expect(source.locator('.evidence-group').first()).toBeVisible();

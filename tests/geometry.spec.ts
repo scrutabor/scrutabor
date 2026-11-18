@@ -1,15 +1,17 @@
 import { bare as test, expect, setHelp } from './fixtures';
 
 const PAGES = [
-	'/app/pl/ordo/catechumenorum',
-	'/app/pl/ordo/praeparatio',
+	'/app/pl/ordo/catechumenorum?dies=2026-10-25',
+	'/app/pl/ordo/catechumenorum?dies=2026-11-29',
+	'/app/pl/ordo/catechumenorum?dies=2026-11-02',
+	'/app/pl/ordo/praeparatio?dies=2026-10-25',
 	'/app/pl/ordinarium/credo',
 	'/app/pl/ordinarium/confiteor',
 	'/app/pl/orationes/pater-noster',
 	'/app/pl/orationes/angelus-domini',
 	'/app/pl/litaniae/lauretanae',
 	'/app/pl/psalmi/118-he',
-	'/app/en/ordo/canon',
+	'/app/en/ordo/canon?dies=2026-10-25',
 	'/app/en/ordinarium/gloria',
 	// Easter Sunday: one slot carries the Gradual, the Alleluia and the Sequence,
 	// so a seam between two bodies is on every run, not only on a pinned day.
@@ -36,6 +38,8 @@ const MODES = [0, 2, 1];
 // The proper an Ordo address names by its day. A cell that names a day must
 // show that day's proper; its identity is evidence, not an assumption.
 const DAY_PROPERS: Record<string, string> = {
+	'2026-10-25': 'd-n-iesu-christi-regis',
+	'2026-11-02': 'commemoratio-omnium-fidelium-defunctorum',
 	'2026-04-05': 'dominica-resurrectionis',
 	'2026-11-01': 'omnium-sanctorum',
 	'2026-11-29': 'dominica-i-adventus',
@@ -121,14 +125,9 @@ interface Boundary {
 	before: string;
 	after: string;
 	kind: Kind;
-	/** Present only when the suite runs on this day (SCRUTABOR_TODAY). */
-	day?: string;
 }
 
-const PINNED = (globalThis as { process?: { env: Record<string, string | undefined> } }).process
-	?.env.SCRUTABOR_TODAY;
-const boundariesFor = (url: string) =>
-	(BOUNDARIES[url] ?? []).filter((boundary) => !boundary.day || boundary.day === PINNED);
+const boundariesFor = (url: string) => BOUNDARIES[url] ?? [];
 
 // Permanent source rows at the three Ordo seams whose wrappers hold their
 // margins differently in each mode, the interior rhythm the first seam must
@@ -137,20 +136,23 @@ const boundariesFor = (url: string) =>
 // speaker label is addressed through the row it names, because it carries
 // no id of its own.
 const BOUNDARIES: Record<string, Boundary[]> = {
-	'/app/pl/ordo/catechumenorum': [
+	'/app/pl/ordo/catechumenorum?dies=2026-10-25': [
 		{ before: 'kyrie-s02', after: 'kyrie-s03', kind: 'verse' },
-		{ before: 'kyrie-s03', after: 'kyrie-s04', kind: 'verse' },
+		{ before: 'kyrie-s03', after: 'kyrie-s04', kind: 'verse' }
+	],
+	'/app/pl/ordo/catechumenorum?dies=2026-11-29': [
 		// The Gradual and the Alleluia of the First Sunday of Advent share one
 		// slot as two bodies; their seam is the second body's opening direction.
 		{
 			before: 'dominica-i-adventus-graduale-s02',
 			after: 'dominica-i-adventus-alleluia-s01',
-			kind: 'rubric',
-			day: '2026-11-29'
+			kind: 'rubric'
 		}
 	],
-	'/app/pl/ordo/praeparatio': [{ before: 'introibo-s02', after: 'introibo-s03', kind: 'rubric' }],
-	'/app/en/ordo/canon': [
+	'/app/pl/ordo/praeparatio?dies=2026-10-25': [
+		{ before: 'introibo-s02', after: 'introibo-s03', kind: 'rubric' }
+	],
+	'/app/en/ordo/canon?dies=2026-10-25': [
 		{ before: 'praefatio-dialogus-s02', after: 'praefatio-dialogus-s03', kind: 'who' },
 		{ before: 'per-ipsum-s08', after: 'per-ipsum-s09', kind: 'who' }
 	]
@@ -993,7 +995,10 @@ async function measure(
 	// is also true before the day picker has chosen and on a page showing another
 	// day, so the whole state is polled together; a failure prints what the page
 	// showed instead (address, day label, picker, loading and failure counts).
-	const named = DAY_PROPERS[new URL(url, 'http://localhost').searchParams.get('dies') ?? ''];
+	const address = new URL(url, 'http://localhost');
+	const named = address.pathname.endsWith('/catechumenorum')
+		? DAY_PROPERS[address.searchParams.get('dies') ?? '']
+		: undefined;
 	if (named) {
 		await expect
 			.poll(

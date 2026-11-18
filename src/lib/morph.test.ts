@@ -51,6 +51,13 @@ describe('describeMorph', () => {
 	});
 });
 
+it('renders the degree of a comparative or superlative adverb', () => {
+	expect(describeMorph({ pos: 'adv', degree: 'comp' }, 'pl')).toBe('przysłówek — stopień wyższy');
+	expect(describeMorph({ pos: 'adv', degree: 'sup' }, 'pl')).toBe('przysłówek — stopień najwyższy');
+	expect(describeMorph({ pos: 'adv', degree: 'comp' }, 'en')).toBe('adverb — comparative');
+	expect(describeMorph({ pos: 'adv', degree: 'sup' }, 'en')).toBe('adverb — superlative');
+});
+
 describe('describeMorphParts concept links', () => {
 	it('links cases to their grammar-concept pages', () => {
 		const parts = describeMorphParts({ pos: 'noun', case: 'voc', number: 'sg' }, 'pl');

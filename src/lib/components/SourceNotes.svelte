@@ -6,6 +6,7 @@
 	let {
 		citations,
 		relationships,
+		revisionIncipits,
 		lang,
 		centered = false,
 		label,
@@ -13,6 +14,7 @@
 	}: {
 		citations?: Citation[];
 		relationships?: TranslationRelationship[];
+		revisionIncipits?: string[];
 		lang: Lang;
 		centered?: boolean;
 		label?: string;
@@ -34,6 +36,12 @@
 				{#each relationships as relationship (relationship)}
 					<p>{M[lang].translationRelationships[relationship]}</p>
 				{/each}
+			</div>
+		{/if}
+		{#if revisionIncipits?.length}
+			<div class="relationships">
+				<p>{M[lang].revisedTranslationScope}</p>
+				<p lang="la">{revisionIncipits.join(' · ')}</p>
 			</div>
 		{/if}
 		<ol>

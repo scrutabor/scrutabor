@@ -143,7 +143,11 @@ test.describe('selection interaction', () => {
 	test('the range gesture is explained once, in the mark key', async ({ page }) => {
 		await page.goto('/app/pl/ordinarium/iudica-me');
 		await page.locator('button.mark').first().click();
-		await expect(page.getByText('Shift z kliknięciem zaznacza zakres')).toBeVisible();
+		const instructions = page.getByText(
+			'Aby zaznaczyć zakres, przytrzymaj Shift i kliknij drugi werset.'
+		);
+		await expect(instructions).toHaveCount(1);
+		await expect(instructions).toBeVisible();
 	});
 });
 

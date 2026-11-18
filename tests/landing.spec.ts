@@ -14,6 +14,7 @@ async function analysisTree(locator: Locator) {
 				return text || null;
 			}
 			if (!(node instanceof Element)) return null;
+			if (node.classList.contains('reading-report')) return null;
 			return {
 				tag: node.tagName.toLowerCase(),
 				attributes: Object.fromEntries(
@@ -248,11 +249,16 @@ test.describe('landing @online', () => {
 	});
 
 	test('the landing and reader render one analysis component', async ({ page }) => {
+		const report = 'Kopiuj odsyłacz do zgłoszenia';
 		await page.goto('/pl');
-		const landing = await analysisTree(page.locator('.word-panel-inline .word-analysis'));
+		const specimen = page.locator('.word-panel-inline .word-analysis');
+		await expect(specimen.getByRole('button', { name: report })).toHaveCount(0);
+		const landing = await analysisTree(specimen);
 
 		await page.goto('/app/pl/psalmi/118-he?w=w016');
-		const reader = await analysisTree(page.locator('aside.panel .word-analysis'));
+		const panel = page.locator('aside.panel .word-analysis');
+		await expect(panel.getByRole('button', { name: report })).toBeVisible();
+		const reader = await analysisTree(panel);
 		expect(landing).toEqual(reader);
 	});
 
@@ -369,13 +375,12 @@ test.describe('landing @online', () => {
 	test('the privacy page states the promise in both languages', async ({ page }) => {
 		await page.goto('/pl/privacy');
 		await expect(page.locator('h1')).toHaveText('Prywatność');
-		// The promise as it now stands: no cookie, no tracking. Counting
-		// pages opened is not either of those, and the page says so in full
-		// a paragraph down (tests/privacy.spec.ts).
+		// The lead names cookies and profiling. The page explains what is
+		// measured in the paragraphs below (tests/privacy.spec.ts).
 		await expect(page.locator('.lede')).toContainText('nie używa plików cookie');
 		await page.goto('/en/privacy');
 		await expect(page.locator('h1')).toHaveText('Privacy');
-		await expect(page.locator('.lede')).toContainText('uses no cookies');
+		await expect(page.locator('.lede')).toContainText('without an account or cookies');
 		await expect(page.locator('.trail a.back')).toHaveAttribute('href', '/en');
 		// the store-facing URL must not silently become a 404 shell
 		expect((await page.request.get('/en/privacy')).status()).toBe(200);
@@ -393,14 +398,21 @@ test.describe('landing @online', () => {
 			.locator('.channel-note')
 			.evaluateAll((els) => els.map((el) => el.getBoundingClientRect().x));
 		expect(edges[0]).toBe(edges[1]);
-		await expect(
-			page.locator('a[href="https://github.com/scrutabor/scrutabor/issues"]')
-		).toBeVisible();
+		await expect(page.getByRole('link', { name: 'zgłoszenia do aplikacji' })).toHaveAttribute(
+			'href',
+			'https://github.com/scrutabor/scrutabor/issues'
+		);
+		await expect(page.getByRole('link', { name: 'zgłoszenia do tekstów' })).toHaveAttribute(
+			'href',
+			'https://github.com/scrutabor/scrutabor-corpus/issues'
+		);
 		// the project's own address, not a personal one — the stores and
 		// the readers both get the same door
 		await expect(page.locator('a[href="mailto:contact@scrutabor.org"]')).toBeVisible();
 		await page.goto('/en/support');
 		await expect(page.locator('h1')).toHaveText('Contact');
+		await expect(page.getByRole('link', { name: 'app issues' })).toBeVisible();
+		await expect(page.getByRole('link', { name: 'text and translation issues' })).toBeVisible();
 		expect((await page.request.get('/en/support')).status()).toBe(200);
 	});
 

@@ -128,8 +128,8 @@ it.each(['pl', 'en'] as const)(
 		const entries = ORDO.flatMap((movement) => movement.entries);
 		const expected = bindPlFields({
 			collecta: {
-				pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem także modlitwy przypadających wspomnień.',
-				en: 'The priest greets the people, calls Orémus, and says the day’s prayer, adding the prayers of any commemorations prescribed.'
+				pl: 'Kapłan pozdrawia wiernych i mówi Orémus. Odmawia modlitwę dnia, a gdy przypadają wspomnienia, także ich modlitwy.',
+				en: 'The priest greets the people and says Orémus. The Collect of the day follows, along with the Collect of each prescribed commemoration.'
 			},
 			'suscipe-sancte-pater': {
 				pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.',
@@ -173,10 +173,12 @@ it('explains the Latin Pater faculty without cancelling the priest’s quiet Ame
 	const note = ORDO.flatMap((movement) => movement.entries).find(
 		(entry) => entry.id === 'pater-noster'
 	)!.note;
-	expect(note.en).toContain('priest’s final Amen is said quietly');
-	expect(note.en).toContain('may say the whole prayer with him in Latin, all adding Amen');
-	expect(note.pl).toContain('kapłan mówi końcowe Amen po cichu');
-	expect(note.pl).toContain('całą modlitwę po łacinie, dodając wspólnie Amen');
+	expect(note.en).toContain('the priest says Amen quietly');
+	expect(note.en).toContain('At low Mass the faithful may say the entire prayer with him in Latin');
+	expect(note.en).toContain('join in the final Amen');
+	expect(note.pl).toContain('kapłan mówi Amen po cichu');
+	expect(note.pl).toContain('wierni mogą odmówić z\u00a0nim całą modlitwę po łacinie');
+	expect(note.pl).toContain('wspólnie dodać Amen');
 });
 
 // Independent of lib/polish's own pattern: a one-letter Polish word followed by any

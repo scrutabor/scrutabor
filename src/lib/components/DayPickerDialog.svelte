@@ -148,6 +148,7 @@
 	const canOpenFormulary = $derived(detail.variants.some((day) => day.id === pendingDay));
 
 	function cellLabel(iso: string): string {
+		if (!calendarCovers(iso)) return `${dateLabel(iso, 'full')}, ${msgs.dayPicker.outsideTitle}`;
 		const on = dayOn(iso);
 		const day = properFor(on);
 		if (day) return `${dateLabel(iso, 'full')}, ${day.title[lang]}, ${msgs.dayPicker.available}`;
@@ -337,6 +338,9 @@
 				{:else if detail.on}
 					<h3>{msgs.dayPicker.unwrittenTitle}</h3>
 					<p>{msgs.dayPicker.unwrittenText}</p>
+				{:else if !calendarCovers(pendingDate)}
+					<h3>{msgs.dayPicker.outsideTitle}</h3>
+					<p>{msgs.dayPicker.outsideText}</p>
 				{:else}
 					<h3>{msgs.dayPicker.unresolvedTitle}</h3>
 					<p>{msgs.dayPicker.unresolvedText}</p>

@@ -43,12 +43,12 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'nominativus',
 		label: { pl: 'mianownik', en: 'nominative' },
 		what: {
-			pl: 'Przypadek podmiotu: kto lub co działa albo o kim zdanie orzeka. W modlitwach często stoi przy domyślnym „jest” — łacina chętnie opuszcza łącznik.',
-			en: 'The case of the subject: who or what acts, or whom the sentence is about. In the prayers it often stands with an understood “is” — Latin likes to drop the copula.'
+			pl: 'Mianownik to zwykle przypadek podmiotu zdania. W krótkich formułach modlitwy słowa „jest” często trzeba się domyślić.',
+			en: 'The subject of a sentence is usually in the nominative. In short prayer formulas, the verb “is” is often understood.'
 		},
 		spot: {
-			pl: 'To forma słownikowa rzeczownika w liczbie pojedynczej — ta, która stoi w haśle.',
-			en: 'It is the dictionary form of a noun in the singular — the one that stands in the entry.'
+			pl: 'W słowniku rzeczownik znajdziesz zwykle pod mianownikiem liczby pojedynczej.',
+			en: 'Most nouns are listed under the nominative singular in a dictionary.'
 		},
 		examples: [
 			{
@@ -86,11 +86,11 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'genetivus',
 		label: { pl: 'dopełniacz', en: 'genitive' },
 		what: {
-			pl: 'Przypadek przynależności: czyj? czego? Spina dwa rzeczowniki w jedno wyrażenie.',
-			en: 'The case of belonging: whose? of what? It binds two nouns into one phrase.'
+			pl: 'Dopełniacz często wskazuje, do kogo coś należy albo z czym się wiąże. W „Mater Dei” słowo „Dei” mówi, czyją Matką jest Maryja.',
+			en: 'The genitive often shows who or what something belongs to. In “Mater Dei,” the word “Dei” tells us whose mother Mary is.'
 		},
 		spot: {
-			pl: 'Po polsku prawie zawsze odda go dopełniacz.',
+			pl: 'Polski przekład często zachowuje ten sam przypadek.',
 			en: 'English usually renders it with “of” or a possessive.'
 		},
 		examples: [
@@ -132,8 +132,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'dativus',
 		label: { pl: 'celownik', en: 'dative' },
 		what: {
-			pl: 'Przypadek adresata i odbiorcy: komu? dla kogo? W modlitwach wskazuje, komu coś oddajemy — chwałę, wyznanie, prośbę.',
-			en: 'The case of the addressee and receiver: to whom? for whom? In the prayers it marks the one to whom something is given — glory, confession, a petition.'
+			pl: 'Celownik często wskazuje odbiorcę czynności. Przy „da nobis” odpowiada na pytanie „komu dać?”, a przy „Confíteor Deo” wskazuje, komu wyznajemy winy.',
+			en: 'The dative often identifies the recipient. In “da nobis” it tells us who is to receive the bread. In “Confíteor Deo” it shows to whom the confession is addressed.'
 		},
 		examples: [
 			{
@@ -165,8 +165,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'accusativus',
 		label: { pl: 'biernik', en: 'accusative' },
 		what: {
-			pl: 'Przypadek dopełnienia bliższego: kogo? co? — to, co czynność obejmuje wprost. Z przyimkami takimi jak „in” i „ad” oznacza kierunek.',
-			en: 'The case of the direct object: whom? what? — what the action reaches directly. With prepositions such as “in” and “ad” it marks direction.'
+			pl: 'Biernik często wskazuje dopełnienie bliższe. W „da panem” to chleb ma być dany. W wyrażeniach kierunku biernik stoi po przyimkach takich jak „ad” i „in”.',
+			en: 'The accusative often marks the direct object. In “da panem,” the bread is what is to be given. In phrases of direction, the accusative follows prepositions such as “ad” and “in.”'
 		},
 		examples: [
 			{
@@ -204,8 +204,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'ablativus',
 		label: { pl: 'ablativus', en: 'ablative' },
 		what: {
-			pl: 'Przypadek okoliczności: czym? jak? skąd? kiedy? Polszczyzna nie ma jego odpowiednika — oddajemy go narzędnikiem, miejscownikiem albo wyrażeniem z przyimkiem. Stoi też po przyimkach takich jak „in” (miejsce), „pro”, „a/ab”, „cum”.',
-			en: 'The case of circumstance: by what? how? whence? when? English has no single equivalent — it becomes “by”, “with”, “from”, “in”. It also follows prepositions such as “in” (place), “pro”, “a/ab”, “cum”.'
+			pl: 'Ablativus może wskazywać między innymi środek, sposób, miejsce lub czas. W polszczyźnie tym funkcjom służą na przykład narzędnik i wyrażenia z przyimkami. W łacinie ablativus występuje po „cum”, „pro” i „a/ab”, a w wyrażeniach miejsca także po „in”.',
+			en: 'The ablative can express means, manner, place, or time. English often uses a preposition such as “by,” “with,” “from,” or “in.” In Latin the ablative follows “cum,” “pro,” and “a/ab,” as well as “in” when it indicates location.'
 		},
 		examples: [
 			{
@@ -246,8 +246,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'vocativus',
 		label: { pl: 'wołacz', en: 'vocative' },
 		what: {
-			pl: 'Przypadek bezpośredniego zwrotu: tak wołamy kogoś po imieniu. Modlitwa żyje wołaczem — od „Pater noster” po „Sancta María”.',
-			en: 'The case of direct address: calling someone by name. Prayer lives in the vocative — from “Pater noster” to “Sancta María”.'
+			pl: 'Wołacza używamy, gdy zwracamy się do kogoś wprost. Tak zaczynają się „Ojcze nasz” i „Zdrowaś Maryjo”.',
+			en: 'The vocative is the case of direct address, as in “Father” in the Lord’s Prayer and “Mary” in the Hail Mary.'
 		},
 		examples: [
 			{
@@ -270,8 +270,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w023',
 				note: {
-					pl: 'wołacz, nie celownik — przywołanie osoby, nie element wyliczenia.',
-					en: 'vocative, not dative — an address to the person, not an item in the list.'
+					pl: '„Tibi” to celownik („tobie”). „Pater” to wołacz („ojcze”).',
+					en: '“Tibi” is dative (“to you”). “Pater” is vocative (“father”).'
 				}
 			}
 		]
@@ -282,15 +282,18 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'coniunctivus',
 		label: { pl: 'tryb łączący', en: 'subjunctive' },
 		what: {
-			pl: 'W modlitwach to tryb życzenia i prośby: „niech się stanie”. Tam, gdzie polszczyzna mówi „niech…” albo „abyś nie…”, łacina stawia tryb łączący — nim modlitwa prosi, nie rozkazuje.',
-			en: 'In the prayers it is the mood of wish and petition: “may it be”. Where English says “may…” or “that You not…”, Latin uses the subjunctive — with it the prayer asks rather than commands.'
+			pl: 'W modlitwach tryb łączący często wyraża prośbę lub życzenie. W „Fiat volúntas tua” słowo „fiat” oddajemy jako „niech się stanie”.',
+			en: 'In prayer, the subjunctive often expresses a wish or petition. In “Fiat volúntas tua,” the verb “fiat” means “may it be done.”'
 		},
 		examples: [
 			{
 				la: 'Sanctificétur nomen tuum',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w007',
-				note: { pl: 'niech się święci — prośba-życzenie.', en: 'hallowed be — a wish-petition.' }
+				note: {
+					pl: '„Niech się święci” jest prośbą o uświęcenie imienia Boga.',
+					en: '“Hallowed be” asks that God’s name be held holy.'
+				}
 			},
 			{
 				la: 'Advéniat regnum tuum',
@@ -321,8 +324,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'imperativus',
 		label: { pl: 'tryb rozkazujący', en: 'imperative' },
 		what: {
-			pl: 'Tryb bezpośredniej prośby do „ty”: daj, odpuść, wybaw. W modlitwie to tryb śmiały — mówi wprost do Boga i świętych.',
-			en: 'The mood of direct request to a “thou”: give, forgive, deliver. In prayer it is a bold mood — it speaks straight to God and the saints.'
+			pl: 'Tryb rozkazujący pozwala prosić wprost. W „Ojcze nasz” używamy go, gdy mówimy „daj”, „odpuść” i „zbaw”.',
+			en: 'The imperative can express a direct request. In the Lord’s Prayer we use it when we say “give,” “forgive,” and “deliver.”'
 		},
 		examples: [
 			{
@@ -360,8 +363,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'verbum deponens',
 		label: { pl: 'deponens', en: 'deponent' },
 		what: {
-			pl: 'Czasownik o formie biernej i znaczeniu czynnym: wygląda jak „jestem spowiadany”, znaczy „spowiadam się”. Deponens ma w haśle bezokolicznik na -i: confitéri, precári (uwaga: „fíeri” od „fio” też kończy się na -i, choć „fio” deponensem nie jest).',
-			en: 'A verb passive in form, active in meaning: it looks like “I am confessed”, it means “I confess”. A deponent’s entry shows an infinitive in -i: confitéri, precári (though “fíeri”, from “fio”, also ends in -i without being deponent).'
+			pl: 'Deponens to czasownik o formach strony biernej i znaczeniu czynnym. W haśle „confíteor, confitéri, conféssus sum” widać takie formy, a w modlitwie „confíteor” znaczy „spowiadam się”.',
+			en: 'A deponent verb generally has passive forms and an active meaning. The dictionary lists “confíteor, confitéri, conféssus sum.” In the prayer, “confíteor” means “I confess.”'
 		},
 		examples: [
 			{
@@ -390,8 +393,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'appositio',
 		label: { pl: 'apozycja (dopowiedzenie)', en: 'apposition' },
 		what: {
-			pl: 'Dopowiedzenie: drugi rzeczownik, który bliżej określa pierwszy i dziedziczy jego przypadek — Michałowi Archaniołowi, owoc… Jezus.',
-			en: 'A second noun that restates the first and inherits its case — to Michael the Archangel, the fruit… Jesus.'
+			pl: 'Apozycja to dopowiedzenie, które mówi więcej o tej samej osobie lub rzeczy. W „Michaéli Archángelo” oba słowa stoją w celowniku, tak jak po polsku „Michałowi Archaniołowi”.',
+			en: 'An apposition gives another name or description for the same person or thing. In “Michaéli Archángelo” the two nouns name the same person and both are in the dative.'
 		},
 		examples: [
 			{

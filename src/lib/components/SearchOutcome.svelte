@@ -33,7 +33,14 @@
      thing this line must never say then: a screen-reader user would hear a
      healthy number over a broken pane. -->
 <p id={statusId} class="sr-only" role="status" aria-live="polite">
-	{pending ? msgs.searchLoading : failed ? msgs.searchFailed : ready ? msgs.searchCount(count) : ''}
+	{#if pending}
+		{msgs.searchLoading}
+	{:else if failed}
+		{msgs.searchFailed}
+	{:else if ready}
+		{#if degraded}{msgs.searchDegraded}{' '}{/if}
+		{empty ? msgs.searchNoResults : msgs.searchCount(count)}
+	{/if}
 </p>
 
 <div class="results search-page-results" class:updating={pending && ready} aria-busy={pending}>
@@ -49,13 +56,15 @@
 		</p>
 	{:else if pending && !ready}
 		<ContentLoader variant="search" />
-	{:else if ready && empty}
-		<p class="empty">{msgs.searchNoResults}</p>
 	{:else if ready}
 		{#if degraded}
 			<p class="degraded">{msgs.searchDegraded}</p>
 		{/if}
-		{@render children()}
+		{#if empty}
+			<p class="empty">{msgs.searchNoResults}</p>
+		{:else}
+			{@render children()}
+		{/if}
 	{/if}
 </div>
 

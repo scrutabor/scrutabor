@@ -8,8 +8,8 @@ for (const language of ['pl', 'en'] as const) {
 		// what it does not account for.
 		const message =
 			language === 'pl'
-				? 'Dobór modlitw uwzględnia wspomnienia Litanii Większych, świętej Petroneli, niedzieli przeszkodzonej, święta przeszkodzonego i dnia powszedniego Adwentu, a także wskazane w tym wydaniu wspomnienia świętych w Wigilię Wniebowstąpienia i wspomnienie tej Wigilii, gdy jest przeszkodzona. Nie obejmuje jeszcze wszystkich wspomnień liturgicznych ani kalendarzy lokalnych.'
-				: 'The selection of prayers accounts for the commemorations of the Greater Litanies, Saint Petronilla, the impeded Sunday, the impeded feast and the weekday of Advent, as well as this edition’s specified commemorations of saints on the Vigil of the Ascension and of the Vigil when it is impeded. It does not yet cover all liturgical commemorations or local calendars.';
+				? 'Przy doborze modlitw uwzględniamy wspomnienia Litanii Większych, św. Petroneli, niedziel i świąt, które ustępują innym obchodom, oraz dni powszednich Adwentu. W wybranych przypadkach uwzględniamy także wspomnienia świętych w Wigilię Wniebowstąpienia oraz wspomnienie samej Wigilii, gdy ustępuje świętu. Pozostałe wspomnienia i kalendarze lokalne czekają na uzupełnienie.'
+				: 'Prayer selection includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.';
 		await page.setViewportSize({ width: 320, height: 900 });
 		await page.goto(`/app/${language}/ordo/offertorium?dies=2049-07-25`);
 		await expect(page.locator('.page > header .formulary-scope')).toHaveText(message);
@@ -17,13 +17,10 @@ for (const language of ['pl', 'en'] as const) {
 			language === 'pl' ? 'Petroneli' : 'Petronilla'
 		);
 		await expect(page.locator('.page > header .formulary-scope')).toContainText(
-			language === 'pl' ? 'niedzieli przeszkodzonej' : 'the impeded Sunday'
+			language === 'pl' ? 'niedziel i świąt, które ustępują' : 'Sundays and feasts that give way'
 		);
 		await expect(page.locator('.page > header .formulary-scope')).toContainText(
-			language === 'pl' ? 'święta przeszkodzonego' : 'the impeded feast'
-		);
-		await expect(page.locator('.page > header .formulary-scope')).toContainText(
-			language === 'pl' ? 'dnia powszedniego Adwentu' : 'the weekday of Advent'
+			language === 'pl' ? 'dni powszednich Adwentu' : 'Advent weekdays'
 		);
 		await expect(page.locator('.page > header .formulary-scope')).toContainText(
 			language === 'pl' ? 'Wigilię Wniebowstąpienia' : 'Vigil of the Ascension'

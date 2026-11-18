@@ -188,8 +188,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/misereatur-tui',
 				note: {
-					pl: 'Usługujący odpowiadają mu tą samą modlitwą w liczbie pojedynczej — bez Indulgéntiam, które należy tylko do kapłana.',
-					en: 'The servers answer him with the same prayer in the singular — without the Indulgéntiam, which is the priest\u2019s alone.'
+					pl: 'Usługujący proszą Boga o miłosierdzie dla kapłana.',
+					en: 'The servers ask God to have mercy on the priest.'
 				}
 			},
 			{
@@ -198,8 +198,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/confiteor',
 				note: {
-					pl: 'Spowiedź powszechna pada dwa razy: najpierw mówi ją kapłan, potem usługujący i wierni, a po każdej następuje Misereátur — po drugiej jeszcze Indulgéntiam.',
-					en: 'The general confession is said twice: first by the priest, then by the servers and the faithful, each followed by the Misereátur — and the second by the Indulgéntiam as well.'
+					pl: 'Usługujący odmawiają Confíteor po spowiedzi kapłana. Kapłan odpowiada modlitwami Misereátur i Indulgéntiam.',
+					en: 'After the priest’s confession, the servers say the Confíteor. The priest answers with the Misereátur and Indulgéntiam.'
 				}
 			},
 			{
@@ -250,7 +250,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				},
 				when: {
 					pl: 'Glória Patri opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. W Wigilię Paschalną nie ma Introitu.',
-					en: 'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. There is no Introit at the Easter Vigil'
+					en: 'The Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. There is no Introit at the Easter Vigil.'
 				}
 			},
 			{
@@ -259,8 +259,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/kyrie',
 				note: {
-					pl: 'Kapłan wraca na środek ołtarza i odmawia z usługującym na przemian dziewięć wezwań: trzy razy Kýrie, trzy Christe, trzy Kýrie.',
-					en: 'The priest returns to the middle of the altar and alternates nine invocations with the server: Kýrie three times, Christe three times, Kýrie three times.'
+					pl: 'Kapłan wraca na środek ołtarza. We Mszy cichej odmawia dziewięć wezwań na przemian z usługującym. We Mszy śpiewanej wierni mogą dołączyć do śpiewu.',
+					en: 'The priest returns to the middle of the altar. At low Mass he alternates the nine invocations with the server. At sung Mass the faithful may join the singing.'
 				}
 			},
 			{
@@ -282,8 +282,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Orátio',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i odmawia modlitwę dnia — czasem także modlitwy przypadających wspomnień.',
-					en: 'The priest greets the people, calls Orémus, and says the day’s prayer, adding the prayers of any commemorations prescribed.'
+					pl: 'Kapłan pozdrawia wiernych i mówi Orémus. Odmawia modlitwę dnia, a gdy przypadają wspomnienia, także ich modlitwy.',
+					en: 'The priest greets the people and says Orémus. The Collect of the day follows, along with the Collect of each prescribed commemoration.'
 				}
 			},
 			{
@@ -301,8 +301,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/deo-gratias-epistolae',
 				note: {
-					pl: 'Po zakończeniu Epistoły usługujący odpowiada.',
-					en: 'The server answers at the end of the Epistle.'
+					pl: 'Po lekcji odpowiada usługujący. We Mszy cichej wierni mogą dołączyć do odpowiedzi.',
+					en: 'The server answers at the end of the Epistle. At low Mass the faithful may join in the response.'
 				}
 			},
 			{
@@ -310,12 +310,12 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Graduále, Allelúia, Tractus',
 				kind: 'proper',
 				note: {
-					pl: 'Śpiew między czytaniami, wzięty z formularza dnia. We Mszy cichej kapłan czyta go na głos po stronie lekcji.',
-					en: 'The chant between the readings, taken from the day’s formulary. At low Mass the priest reads it aloud at the Epistle side.'
+					pl: 'Śpiewy między czytaniami pochodzą z formularza dnia. We Mszy cichej kapłan czyta je na głos po stronie lekcji.',
+					en: 'The chants between the readings come from the day’s formulary. At low Mass the priest reads them aloud at the Epistle side.'
 				},
 				when: {
-					pl: 'traktus śpiewa się tylko wtedy, gdy przewiduje go formularz dnia. Podobnie sekwencję dodaje się zgodnie z jego rubrykami',
-					en: "the Tract is sung only when prescribed by the day's formulary. The Sequence is likewise included according to its rubrics"
+					pl: 'Traktus i sekwencja pojawiają się zgodnie z rubrykami formularza.',
+					en: 'The Tract and the Sequence are included where prescribed.'
 				}
 			},
 			{
@@ -381,8 +381,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/laus-tibi-christe',
 				note: {
-					pl: 'Po zakończeniu Ewangelii usługujący odpowiada.',
-					en: 'The server answers at the end of the Gospel.'
+					pl: 'Po Ewangelii odpowiada usługujący. We Mszy cichej wierni mogą dołączyć do odpowiedzi.',
+					en: 'The server answers at the end of the Gospel. At low Mass the faithful may join in the response.'
 				}
 			},
 			{
@@ -490,8 +490,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/orate-fratres',
 				note: {
-					pl: 'Kapłan odwraca się i prosi o modlitwę. Usługujący odpowiada za wszystkich, wyliczając cel ofiary.',
-					en: 'The priest turns and asks for prayer. The server answers for everyone, naming what the sacrifice is for.'
+					pl: 'Kapłan zwraca się do obecnych i prosi o modlitwę. Usługujący lub obecni proszą Boga, by przyjął ofiarę.',
+					en: 'The priest turns to those present and asks them to pray. The server or the people present ask God to accept the sacrifice.'
 				}
 			},
 			{
@@ -527,12 +527,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'proper',
 				text: 'ordinarium/praefatio-communis',
 				note: {
-					pl: 'Prefacja własna albo okresowa z formularza dnia. Gdy formularz nie wyznacza innej, pozostaje tu prefacja wspólna.',
-					en: 'The proper or seasonal preface assigned by the day. When the formulary assigns none, the common preface remains here.'
-				},
-				when: {
-					pl: 'w wiele dni roku ustępuje prefacji własnej albo okresowej',
-					en: 'on many days a proper or seasonal preface takes its place'
+					pl: 'Kapłan odmawia lub śpiewa prefację przewidzianą dla danej Mszy. Gdy nie przepisano innej, wybiera prefację wspólną.',
+					en: 'The priest says or sings the preface appointed for the Mass. The Common Preface is used when no other preface is appointed.'
 				}
 			},
 			{
@@ -611,8 +607,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/simili-modo',
 				note: {
-					pl: 'Konsekracja kielicha, tymi samymi gestami.',
-					en: 'The consecration of the chalice, with the same gestures.'
+					pl: 'Kapłan konsekruje wino, a potem podnosi kielich.',
+					en: 'The priest consecrates the wine and then raises the chalice.'
 				}
 			},
 			{
@@ -661,8 +657,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/nobis-quoque',
 				note: {
-					pl: 'Na te trzy słowa kapłan podnosi głos, uderza się w piersi i wymienia siedem świętych kobiet.',
-					en: 'The priest raises his voice for these three words, striking his breast, and names seven women among the saints.'
+					pl: 'Przy pierwszych trzech słowach kapłan mówi nieco głośniej i uderza się w piersi. Dalej modli się po cichu i wymienia świętych, wśród nich siedem kobiet.',
+					en: 'At the first three words the priest raises his voice a little and strikes his breast. In the quiet prayer that follows, the priest names the saints, including seven women.'
 				}
 			},
 			{
@@ -681,8 +677,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/per-ipsum',
 				note: {
-					pl: 'Małe podniesienie zamyka Kanon. Dopiero Per ómnia sǽcula sæculórum słychać na głos.',
-					en: 'The minor elevation closes the Canon. Only the Per ómnia sǽcula sæculórum is heard aloud.'
+					pl: 'Pod koniec Kanonu następuje małe podniesienie. Po nim kapłan wypowiada głośno lub śpiewa Per ómnia sǽcula sæculórum.',
+					en: 'The minor elevation comes at the end of the Canon. The priest then says aloud or sings Per ómnia sǽcula sæculórum.'
 				}
 			}
 		]
@@ -699,8 +695,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/pater-noster',
 				note: {
-					pl: 'Modlitwę Pańską kapłan śpiewa lub mówi, a usługujący odpowiada Sed líbera nos a malo. Choć kapłan mówi końcowe Amen po cichu, we Mszy cichej lud może odmówić z nim całą modlitwę po łacinie, dodając wspólnie Amen.',
-					en: 'The priest sings or says the Lord’s Prayer and the server answers Sed líbera nos a malo. Although the priest’s final Amen is said quietly, at low Mass the people may say the whole prayer with him in Latin, all adding Amen.'
+					pl: 'Kapłan śpiewa lub odmawia Modlitwę Pańską. Ostatnia prośba, Sed líbera nos a malo, jest odpowiedzią wiernych i usługujących. Po niej kapłan mówi Amen po cichu. We Mszy cichej wierni mogą odmówić z nim całą modlitwę po łacinie i wspólnie dodać Amen.',
+					en: 'The priest sings or says the Lord’s Prayer. The faithful and servers answer with the last petition, Sed líbera nos a malo, and the priest says Amen quietly. At low Mass the faithful may say the entire prayer with him in Latin and join in the final Amen.'
 				}
 			},
 			{
@@ -709,8 +705,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/libera-nos',
 				note: {
-					pl: 'Po cichu kapłan rozwija ostatnią prośbę — od zła przeszłego, obecnego i przyszłego — a w trakcie niej łamie Hostię na trzy części. Głośno wraca dopiero na zakończenie.',
-					en: 'Silently the priest opens out the last petition — evil past, present, and to come — and during it breaks the Host into three. The priest’s voice returns only for the ending.'
+					pl: 'Kapłan prosi po cichu o wybawienie od zła przeszłego, obecnego i przyszłego. Pod koniec modlitwy łamie Hostię. Ostatnie słowa mówi głośno lub śpiewa.',
+					en: 'During this silent prayer for deliverance from past, present, and future evils, the priest breaks the Host. The closing words are said or sung aloud.'
 				}
 			},
 			{
@@ -719,8 +715,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/pax-domini',
 				note: {
-					pl: 'Trzymając odłamaną cząstkę, kapłan trzy razy znaczy nią kielich i pozdrawia lud: Pax Dómini sit semper vobíscum.',
-					en: 'Holding the broken particle, the priest signs the chalice with it three times and greets the people: Pax Dómini sit semper vobíscum.'
+					pl: 'Kapłan czyni cząstką Hostii trzy znaki krzyża nad kielichem, po czym pozdrawia wiernych.',
+					en: 'The priest makes three signs of the cross over the chalice with the particle of the Host and then greets the people.'
 				}
 			},
 			{
@@ -729,8 +725,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/haec-commixtio',
 				note: {
-					pl: 'Cząstka wpada do kielicha. Słowa, które temu towarzyszą, kapłan mówi po cichu.',
-					en: 'The particle falls into the chalice. The words that go with it the priest says silently.'
+					pl: 'Kapłan wpuszcza cząstkę Hostii do kielicha i modli się po cichu.',
+					en: 'The priest drops the particle of the Host into the chalice and prays silently.'
 				}
 			},
 			{
@@ -757,8 +753,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The first of three silent prayers before Communion, for the peace of the Church. At solemn Mass the kiss of peace follows it.'
 				},
 				when: {
-					pl: 'we Mszach za zmarłych opuszcza się ją wraz z pozdrowieniem pokoju',
-					en: 'at Masses for the Dead it is omitted, and so is the peace'
+					pl: 'we Mszach za zmarłych opuszcza się tę modlitwę i pocałunek pokoju',
+					en: 'at Masses for the Dead this prayer and the kiss of peace are omitted'
 				}
 			},
 			{
@@ -767,8 +763,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/fili-dei-vivi',
 				note: {
-					pl: 'Druga: aby Komunia uwolniła kapłana od win i nigdy nie pozwoliła mu odłączyć się od Chrystusa.',
-					en: 'The second: that Communion may free the priest from his sins and never let him be parted from Christ.'
+					pl: 'Kapłan prosi przed Komunią o uwolnienie od win i o to, by nigdy nie odłączyć się od Chrystusa.',
+					en: 'Before Communion the priest asks to be freed from sin and never to be separated from Christ.'
 				}
 			},
 			{
@@ -777,8 +773,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/perceptio-corporis',
 				note: {
-					pl: 'Trzecia: aby przyjęcie Ciała Pańskiego nie obróciło się w sąd, lecz stało się lekarstwem.',
-					en: 'The third: that receiving the Lord’s Body may not turn to judgment but be a remedy.'
+					pl: 'Kapłan prosi, by przyjęcie Ciała Pańskiego stało się dla niego lekarstwem i nie ściągnęło na niego sądu.',
+					en: 'The priest prays that receiving the Lord’s Body may bring him healing and spare him judgment.'
 				}
 			},
 			{
@@ -807,8 +803,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/ecce-agnus-dei',
 				note: {
-					pl: 'Kapłan ukazuje Hostię: Ecce Agnus Dei. Trzy razy powtarza się Dómine, non sum dignus, po czym rozdaje Komunię przy balaskach, mówiąc każdemu Corpus Dómini nostri Iesu Christi.',
-					en: 'The priest shows the Host: Ecce Agnus Dei. Dómine, non sum dignus is said three times, and he gives Communion at the rail, saying Corpus Dómini nostri Iesu Christi to each.'
+					pl: 'Kapłan ukazuje wiernym Hostię. Po trzykrotnym Dómine, non sum dignus udziela Komunii, mówiąc każdemu Corpus Dómini nostri Iesu Christi.',
+					en: 'The priest shows the Host to the faithful. After Dómine, non sum dignus has been said three times, he gives Communion, saying Corpus Dómini nostri Iesu Christi to each person.'
 				},
 				when: {
 					pl: 'gdy wierni przystępują do Komunii',
@@ -821,8 +817,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/quod-ore-sumpsimus',
 				note: {
-					pl: 'Usługujący wlewa wino do kielicha. Kapłan oczyszcza go i spożywa ablucję.',
-					en: 'The server pours wine into the chalice. The priest purifies it and consumes the ablution.'
+					pl: 'Usługujący wlewa do kielicha trochę wina, które kapłan następnie wypija.',
+					en: 'The server pours a little wine into the chalice, and the priest drinks it.'
 				}
 			},
 			{

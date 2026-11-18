@@ -2,6 +2,11 @@
  "schema_version": "1.6.0",
  "works": [
   {
+   "id": "work.annus-sanctus",
+   "responsible": "Orby Shipley (editor)",
+   "title": "Annus Sanctus: Hymns of the Church for the Ecclesiastical Year"
+  },
+  {
    "id": "work.blessed-be-god",
    "responsible": "Charles J. Callan, O.P., and John A. McHugh, O.P.",
    "title": "Blessed Be God: A Complete Catholic Prayer Book"
@@ -42,6 +47,27 @@
   }
  ],
  "editions": [
+  {
+   "id": "edition.annus-sanctus-1884",
+   "work": "work.annus-sanctus",
+   "title": "Annus Sanctus: Hymns of the Church for the Ecclesiastical Year",
+   "contributors": [
+    "Orby Shipley (editor)",
+    "J. D. Aylward (translator of Stabat Mater dolorosa)"
+   ],
+   "place": "London",
+   "publisher": "Burns and Oates",
+   "year": "1884",
+   "publication_type": "other",
+   "authority": "historical_devotional_edition",
+   "languages": [
+    "en"
+   ],
+   "rights": {
+    "status": "public-domain",
+    "basis": "J. D. Aylward’s English verse was published in 1884. Aylward died in 1872."
+   }
+  },
   {
    "id": "edition.blessed-be-god-1925",
    "work": "work.blessed-be-god",
@@ -171,6 +197,15 @@
   }
  ],
  "digital_items": [
+  {
+   "id": "item.annus-sanctus-1884.wikimedia-commons",
+   "edition": "edition.annus-sanctus-1884",
+   "repository": "Wikimedia Commons (Internet Archive scan)",
+   "kind": "scan",
+   "record_url": "https://commons.wikimedia.org/wiki/File:Annus_Sanctus_-_hymns_of_the_church_for_the_ecclesiastical_year_(IA_annussanctushymn00shiprich).pdf",
+   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Annus_Sanctus_-_hymns_of_the_church_for_the_ecclesiastical_year_%28IA_annussanctushymn00shiprich%29.pdf",
+   "access": "open"
+  },
   {
    "id": "item.blessed-be-god-1925.scan",
    "edition": "edition.blessed-be-god-1925",

@@ -1,13 +1,23 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { catalogFor, type CatalogSection } from '$lib/catalog';
 	import SurfaceNav from '$lib/components/SurfaceNav.svelte';
 	import { M, type Lang } from '$lib/i18n';
 	import { bindProse } from '$lib/polish';
+	import { pageUrl } from '$lib/url';
 
 	let { data } = $props();
 	const lang = $derived(data.lang as Lang);
 	const msgs = $derived(M[lang]);
 	const available = $derived(new Set(data.available as string[]));
+	let offlineFallback = $state(false);
+
+	// If the requested page is unavailable offline, the worker serves the
+	// cached shelf while leaving the requested address in the browser.
+	onMount(() => {
+		const path = pageUrl().pathname.replace(/\/$/, '');
+		offlineFallback = path !== `/app/${lang}` && path !== `/${lang}`;
+	});
 	// A section may be declared with no texts — `proprium` is, because the
 	// day's own texts are reached through the Ordo and not through a shelf
 	// (see lib/catalog). Declared-but-empty must not print a bare heading.
@@ -19,14 +29,14 @@
 			? bindProse({
 					aria: 'Strony pomocnicze i informacje o wydaniu',
 					grammar: 'Pojęcia, składnia i wymowa',
-					bibliography: 'Świadectwa tekstu, przekładu i kontekstu',
+					bibliography: 'Źródła tekstów i przekładów',
 					edition: 'O wydaniu',
 					status: 'Wydanie robocze przed przeglądem eksperckim'
 				})
 			: {
 					aria: 'Reference pages and edition information',
 					grammar: 'Concepts, syntax, and pronunciation',
-					bibliography: 'Textual, translation, and contextual witnesses',
+					bibliography: 'Sources for texts and translations',
 					edition: 'About this edition',
 					status: 'Working edition awaiting expert review'
 				}
@@ -48,18 +58,30 @@
 {/snippet}
 
 <svelte:head>
-	<title>Scrutabor — {msgs.tagline.toLowerCase().replace(/\.$/, '')}</title>
+	<title
+		>Scrutabor — {msgs.tagline[0].toLowerCase() + msgs.tagline.slice(1).replace(/\.$/, '')}</title
+	>
 	<meta name="description" content={msgs.catalogDescription} />
 </svelte:head>
 
 <div class="page centered landing">
 	<SurfaceNav {lang} />
 	<main>
+		{#if offlineFallback}
+			<p class="offline-fallback" role="status">
+				{lang === 'pl'
+					? bindProse(
+							'Ta strona jest niedostępna w zapisanej kopii. Odśwież ją po odzyskaniu połączenia.'
+						)
+					: 'This page is unavailable in the saved copy. Reload after reconnecting.'}
+			</p>
+		{/if}
 		<header class="catalog-hero">
 			<h1 class="smallcaps">Scrutabor</h1>
 			<p class="tagline">{msgs.tagline}</p>
 			<p class="motto" lang="la">
-				„Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.”
+				{lang === 'pl' ? '„' : '“'}Da mihi intellectum, et scrutabor legem tuam, et custodiam illam
+				in toto corde meo.”
 			</p>
 			<!-- The citation is a door, as it is on the landing: the verse the
 			     edition is named from is IN the book, and the reader who
@@ -125,6 +147,12 @@
 </div>
 
 <style>
+	.offline-fallback {
+		max-width: 30rem;
+		margin: 1rem auto 0;
+		color: var(--rubric);
+	}
+
 	.formulary-catalog {
 		font-size: 0.85rem;
 		margin: 0.7rem 0 0;
