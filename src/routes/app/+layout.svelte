@@ -178,7 +178,7 @@
 {@render children()}
 
 {#if noticeShown}
-	<aside class="update-notice" class:stale>
+	<aside class="update-notice" class:stale lang={updateLang}>
 		<p role="status">{stale ? updateCopy.updateStale : updateCopy.updateAvailable}</p>
 		<div class="actions">
 			{#if !stale}
@@ -189,7 +189,7 @@
 					onclick={dismissUpdate}
 					disabled={reloading}
 				>
-					{updateCopy.updateLater}
+					<span>{updateCopy.updateLater}</span>
 				</button>
 			{/if}
 			<button type="button" class="reload trim-label" onclick={acceptUpdate} disabled={reloading}>
@@ -209,7 +209,7 @@
 		bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
 		inline-size: min(24rem, 100% - 1.5rem);
 		margin-inline: auto;
-		padding: 0.9rem 1rem 0.85rem;
+		padding: 1.125rem 1rem 0.85rem;
 		border: 1px solid var(--border);
 		border-radius: 0.9rem;
 		background: var(--surface);
@@ -243,16 +243,23 @@
 		flex-wrap: wrap;
 		justify-content: flex-end;
 		gap: 0.5rem;
-		margin-block-start: 0.7rem;
+		margin-block-start: 0.35rem;
 	}
 
 	.update-notice button {
+		/* Balance the visible letter shapes and their weight within the face. */
+		--label-shift: 0.035em;
+		--face-height: 2.375rem;
+
 		appearance: none;
-		min-block-size: 2.5rem;
+		display: grid;
+		place-items: center;
+		position: relative;
+		isolation: isolate;
+		min-block-size: var(--face-height);
 		padding: 0.3rem 0.7rem;
-		border: 1px solid var(--border);
-		border-radius: 0.42rem;
-		background: var(--surface);
+		border: 0;
+		background: transparent;
 		color: var(--ink);
 		font-size: 0.9rem;
 		line-height: 1.2;
@@ -260,7 +267,33 @@
 		cursor: pointer;
 	}
 
-	.update-notice .later:hover {
+	/* Centre the visible face within the button's full touch target. */
+	.update-notice button::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		inset: 0;
+		box-sizing: border-box;
+		block-size: var(--face-height);
+		margin-block: auto;
+		border: 1px solid var(--border);
+		border-radius: 0.42rem;
+		background: var(--surface);
+	}
+
+	.update-notice button:lang(pl) {
+		--label-shift: -0.033em;
+	}
+
+	.update-notice .reload:disabled {
+		--label-shift: -0.037em;
+	}
+
+	.update-notice button > span {
+		translate: 0 var(--label-shift);
+	}
+
+	.update-notice .later:hover::before {
 		background: var(--wash);
 	}
 
@@ -269,12 +302,15 @@
 	}
 
 	.update-notice .reload {
-		border-color: var(--rubric);
-		background: var(--rubric);
+		--label-shift: 0.065em;
+
 		color: var(--surface);
 		font-weight: 600;
-		display: grid;
-		place-items: center;
+	}
+
+	.update-notice .reload::before {
+		border-color: var(--rubric);
+		background: var(--rubric);
 	}
 
 	/* Keep both labels in the same grid cell so pressing the button leaves it in place. */
@@ -286,18 +322,18 @@
 		visibility: hidden;
 	}
 
-	.update-notice .reload:not(:disabled):hover {
+	.update-notice .reload:not(:disabled):hover::before {
 		box-shadow: inset 0 0 0 999px rgb(0 0 0 / 8%);
 	}
 
-	/* The pressed pill is the only progress message there is, so it stays
+	/* The pressed button is the only progress message there is, so it stays
 	   legible (4.7:1 on paper, 5.8:1 at night). */
 	.update-notice button:disabled {
 		cursor: progress;
 		opacity: 0.8;
 	}
 
-	/* A finger gets the full 44 px the chrome's mouse pills do not need. */
+	/* Keep a 44 px target for touch. */
 	@media (pointer: coarse) {
 		.update-notice button {
 			min-block-size: 2.75rem;
@@ -310,9 +346,12 @@
 	@media (forced-colors: active) {
 		.update-notice .reload {
 			forced-color-adjust: none;
+			color: HighlightText;
+		}
+
+		.update-notice .reload::before {
 			border-color: Highlight;
 			background: Highlight;
-			color: HighlightText;
 		}
 	}
 

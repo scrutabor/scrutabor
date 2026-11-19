@@ -836,7 +836,7 @@ const inkGaps = (page: Page) =>
 			});
 		});
 
-		const labels: { above: number; below: number; txt: string }[] = [];
+		const labels: { above: number; below: number; txt: string; firstWord: string }[] = [];
 		document.querySelectorAll('.who').forEach((w) => {
 			const [p, n] = neighbors(w);
 			if (!p || !n || !n.classList.contains('verse')) return;
@@ -851,7 +851,8 @@ const inkGaps = (page: Page) =>
 			labels.push({
 				above: edge(w, 'top')! - edgeOf(visiblePrevious, 'bottom')!,
 				below: edgeOf(n, 'top')! - edge(w, 'bottom')!,
-				txt: w.textContent!.trim().slice(0, 24)
+				txt: w.textContent!.trim().slice(0, 24),
+				firstWord: n.querySelector('.base')?.textContent?.trim() ?? ''
 			});
 		});
 
@@ -951,12 +952,25 @@ test('a speaker label belongs to the verse below it', async ({ page }) => {
 	// 2026-08-09). Two causes, both invisible to the box model: the gloss
 	// row hangs past the box above, and a glossed verse keeps a third of a
 	// line of leading over its first glyph below.
-	await page.goto('/app/pl/ordo/praeparatio');
+	await page.goto('/app/pl/ordo/praeparatio?dies=2026-11-22');
 
 	for (const help of [0, 1, 2] as const) {
 		await setHelp(page, help);
 		const { labels } = await inkGaps(page);
 		expect(labels.length, `a label stands over a verse at help ${help}`).toBeGreaterThan(0);
+		if (help === 1) {
+			for (const [speaker, opening] of [
+				['kapłan', 'Iúdica'],
+				['usługujący', 'Quia']
+			]) {
+				const reading = labels.find(
+					(label) => label.txt === speaker && label.firstWord === opening
+				);
+				expect(reading?.below, `ink clearance between ${speaker} and ${opening}`).toBeGreaterThan(
+					7
+				);
+			}
+		}
 		for (const g of labels) {
 			expect(
 				g.above,

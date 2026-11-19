@@ -12,6 +12,7 @@ test('the ordo is a map of six movements, walked in order', async ({ page }) => 
 	await expect(movements.last()).toContainText('Conclúsio');
 	const catalog = page.getByRole('link', { name: 'Formularze Mszy', exact: true });
 	await expect(catalog).toHaveAttribute('href', '/app/pl/formularium');
+	await expect(catalog).toHaveText('Formularze Mszy');
 	const last = (await movements.last().boundingBox())!;
 	expect((await catalog.boundingBox())!.y).toBeGreaterThan(last.y + last.height);
 

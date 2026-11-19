@@ -18,7 +18,7 @@ import { createServer, type Server } from 'node:http';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import type { AddressInfo } from 'node:net';
-import type { Page } from '@playwright/test';
+import type { Locator, Page } from '@playwright/test';
 import { expect, test } from './fixtures';
 
 const BUILD = 'build';
@@ -100,6 +100,24 @@ async function ready(page: Page) {
 	await expect.poll(() => cacheNames(page)).toHaveLength(1);
 }
 
+async function expectCentredLabel(label: Locator) {
+	const offset = await label.evaluate(async (el) => {
+		await document.fonts.ready;
+		const canvas = document.createElement('canvas').getContext('2d')!;
+		canvas.font = getComputedStyle(el).font;
+		const ink = canvas.measureText(el.textContent!.trim());
+		const range = document.createRange();
+		range.selectNodeContents(el);
+		const line = range.getBoundingClientRect();
+		const baseline =
+			(line.top + line.bottom + ink.fontBoundingBoxAscent - ink.fontBoundingBoxDescent) / 2;
+		const inkCentre = baseline + (ink.actualBoundingBoxDescent - ink.actualBoundingBoxAscent) / 2;
+		const button = el.closest('button')!.getBoundingClientRect();
+		return Math.abs(inkCentre - (button.top + button.bottom) / 2);
+	});
+	expect(offset).toBeLessThan(0.8);
+}
+
 test.describe('two worker versions, one book @online', () => {
 	test('a first visit installs the shell only, and no update notice', async ({ page }) => {
 		await page.goto(`${origin}/app/pl`);
@@ -136,7 +154,7 @@ test.describe('two worker versions, one book @online', () => {
 		const notice = page.locator('.update-notice');
 		await expect(notice).toBeVisible();
 		// A card centred above the page's foot, inside the viewport, with
-		// finger-sized controls, and not printed with the page.
+		// compact controls, and not printed with the page.
 		await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
 		const layout = await page.evaluate(() => ({
 			width: document.documentElement.clientWidth,
@@ -148,16 +166,20 @@ test.describe('two worker versions, one book @online', () => {
 		expect(Math.abs(box.x + box.width / 2 - layout.width / 2)).toBeLessThanOrEqual(1);
 		expect(layout.height - (box.y + box.height)).toBeGreaterThanOrEqual(8);
 		expect(box.width).toBeLessThan(400);
-		const message = (await notice.getByRole('status').boundingBox())!;
+		const status = notice.getByRole('status');
+		await expect(status).toHaveText('Nowa wersja jest dostępna.');
+		const message = (await status.boundingBox())!;
 		const later = notice.getByRole('button', { name: /później|later/i });
 		const secondary = (await later.boundingBox())!;
 		const primary = (await notice.getByRole('button', { name: /wczytaj|reload/i }).boundingBox())!;
-		expect(secondary.y).toBeGreaterThan(message.y + message.height);
+		expect(message.y - box.y).toBeGreaterThan(18);
+		expect(secondary.y - message.y - message.height).toBeCloseTo(5.6, 0);
 		expect(primary.y).toBeCloseTo(secondary.y, 0);
 		expect(primary.x).toBeGreaterThan(secondary.x + secondary.width);
 		expect(box.x + box.width - primary.x - primary.width).toBeLessThan(20);
 		for (const button of await notice.getByRole('button').all()) {
-			expect((await button.boundingBox())!.height).toBeGreaterThanOrEqual(39.5);
+			expect((await button.boundingBox())!.height).toBeCloseTo(38, 0);
+			await expectCentredLabel(button.locator('span:not([aria-hidden])'));
 		}
 		await page.emulateMedia({ media: 'print' });
 		await expect(notice).toBeHidden();
@@ -181,25 +203,32 @@ test.describe('two worker versions, one book @online', () => {
 		).toBe(true);
 	});
 
-	for (const [screen, viewport] of [
-		['phone', { width: 390, height: 844 }],
-		['desktop', { width: 1280, height: 720 }]
+	for (const [screen, viewport, lang] of [
+		['phone', { width: 390, height: 844 }, 'pl'],
+		['desktop', { width: 1280, height: 720 }, 'en']
 	] as const) {
 		test(`accepting holds the card still while it reloads on a ${screen}`, async ({ page }) => {
 			// The pressed label lengthens and the quiet choice leaves; the card
 			// must neither move nor change shape under the finger. The
 			// activation message is swallowed so the reloading state stays.
 			await page.setViewportSize(viewport);
-			await page.goto(`${origin}/app/pl`);
+			await page.goto(`${origin}/app/${lang}`);
 			await ready(page);
 			state.suffix = 'B';
 			await page.reload();
 			const notice = page.locator('.update-notice');
 			await expect(notice).toBeVisible();
+			await expect(notice.getByRole('status')).toHaveText(
+				lang === 'pl' ? 'Nowa wersja jest dostępna.' : 'A new version is available.'
+			);
 			await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
 			const before = (await notice.boundingBox())!;
 			const action = notice.locator('.reload');
 			const position = await action.boundingBox();
+			const label = action.locator('span:not([aria-hidden])');
+			for (const button of await notice.getByRole('button').all()) {
+				await expectCentredLabel(button.locator('span:not([aria-hidden])'));
+			}
 			await page.evaluate(() => {
 				const send = ServiceWorker.prototype.postMessage;
 				ServiceWorker.prototype.postMessage = function (
@@ -213,6 +242,7 @@ test.describe('two worker versions, one book @online', () => {
 			});
 			await notice.getByRole('button', { name: /wczytaj|reload/i }).click();
 			await expect(notice.getByRole('button', { name: /wczytywanie|reloading/i })).toBeDisabled();
+			await expectCentredLabel(label);
 			await expect(notice.getByRole('button', { name: /później|later/i })).toHaveCount(0);
 			expect(await action.boundingBox()).toEqual(position);
 			const after = (await notice.boundingBox())!;

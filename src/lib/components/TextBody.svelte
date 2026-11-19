@@ -863,6 +863,7 @@
 	}
 
 	@media screen {
+		.who:has(+ .verse.glossed),
 		.who:has(
 			:global(.who-voice),
 			:global(.who-join),

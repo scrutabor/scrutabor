@@ -66,7 +66,7 @@
 			{/each}
 			<div class="formulary-catalog">
 				<a class="secondary-nav-link" href="/app/{lang}/formularium">
-					{msgs.dayPicker.catalogTitle}<span aria-hidden="true">›</span>
+					{msgs.dayPicker.catalogTitle}
 				</a>
 			</div>
 		</div>

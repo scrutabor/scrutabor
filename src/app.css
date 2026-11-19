@@ -872,9 +872,7 @@ h2 {
 }
 
 .secondary-nav-link {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.65rem;
+	display: inline-block;
 	border: 1px solid var(--border);
 	border-radius: 0.42rem;
 	background: var(--surface);
@@ -887,10 +885,6 @@ h2 {
 
 .secondary-nav-link:hover {
 	background: var(--wash);
-}
-
-.secondary-nav-link > [aria-hidden] {
-	color: var(--rubric);
 }
 
 /* The line under a title, and the row of reading controls under that:

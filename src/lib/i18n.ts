@@ -310,7 +310,7 @@ const MESSAGES: Record<Lang, Messages> = {
 						: 'wyników'
 			}.`,
 		close: 'zamknij',
-		updateAvailable: 'Nowa wersja jest gotowa.',
+		updateAvailable: 'Nowa wersja jest dostępna.',
 		updateReload: 'Wczytaj',
 		updateReloading: 'Wczytywanie…',
 		updateLater: 'Później',
@@ -591,7 +591,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		searchMatchedAlias: 'also found as',
 		searchCount: (n) => `Showing ${n} ${n === 1 ? 'result' : 'results'}.`,
 		close: 'close',
-		updateAvailable: 'A new version is ready.',
+		updateAvailable: 'A new version is available.',
 		updateReload: 'Reload',
 		updateReloading: 'Reloading…',
 		updateLater: 'Later',
