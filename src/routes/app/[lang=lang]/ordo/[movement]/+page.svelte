@@ -1396,6 +1396,7 @@
 		}
 
 		.part-head,
+		.commemoration-head,
 		.part-note,
 		.unfold {
 			break-after: avoid;

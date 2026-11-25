@@ -7,6 +7,7 @@ import type { Locator } from '@playwright/test';
 import { atRoute, expect, test } from './fixtures';
 
 async function analysisTree(locator: Locator) {
+	await expect(locator.locator('.lemma-sources [data-source-state="loaded"]')).toBeAttached();
 	return locator.evaluate((root) => {
 		function serialize(node: Node): unknown {
 			if (node.nodeType === Node.TEXT_NODE) {

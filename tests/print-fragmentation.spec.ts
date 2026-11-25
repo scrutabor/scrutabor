@@ -128,3 +128,34 @@ test('a continued bilingual source row clears its response on the next actual sh
 		'continued Latin clears its complete response label'
 	).toBeGreaterThan(2);
 });
+
+for (const lang of ['pl', 'en'] as const) {
+	test(`${lang} printed commemoration stays with its invitation and collect`, async ({
+		page
+	}, testInfo) => {
+		await page.addInitScript(() => {
+			localStorage.setItem('scrutabor-help', '1');
+			localStorage.setItem('scrutabor-reading', 'largest');
+			localStorage.setItem('scrutabor-role', 'populus');
+			localStorage.setItem('scrutabor-mass-form', 'cantu');
+		});
+		await page.setViewportSize({ width: 320, height: 800 });
+		await page.goto(`/app/${lang}/ordo/catechumenorum?dies=2026-11-01`);
+		const heading = page.locator('.commemoration-head .mark');
+		await expect(heading).toHaveCount(1);
+		await expect(heading).toBeVisible();
+		await page.evaluate(() => document.fonts.ready);
+		const label = normalizePrintText(await heading.innerText());
+		const pdf = testInfo.outputPath('commemoration.pdf');
+		await page.pdf({ path: pdf, format: 'A4' });
+		const text = execFileSync('pdftotext', ['-layout', pdf, '-'], { encoding: 'utf8' });
+		const sheets = text.split('\f').map(normalizePrintText);
+		const matches = sheets.filter((sheet) => sheet.includes(label));
+		expect(matches, 'one page identifies the commemorated Sunday').toHaveLength(1);
+		const following = matches[0].split(label)[1];
+		const invitation = following.indexOf(normalizePrintText('Orémus.'));
+		const collect = following.indexOf(normalizePrintText('Absólve, quǽsumus, Dómine'));
+		expect(invitation).toBeGreaterThanOrEqual(0);
+		expect(collect).toBeGreaterThan(invitation);
+	});
+}
