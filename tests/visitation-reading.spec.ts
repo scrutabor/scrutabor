@@ -103,7 +103,9 @@ for (const language of ['pl', 'en'] as const) {
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
 		await expect(sources).toContainText(
-			'section marker16, announcement17, reference18, complete direct body19'
+			language === 'pl'
+				? 'znacznik sekcji w w. 16, zapowiedź w w. 17, odsyłacz w w. 18 i pełny tekst bezpośrednio w w. 19'
+				: 'section marker 16, announcement 17, reference 18, complete direct body 19'
 		);
 		await expect(
 			sources.locator(

@@ -164,7 +164,7 @@
 				oninput={() => queueSearch()}
 				onclear={clearQuery}
 			/>
-			<div class="search-notes">
+			<div class="search-notes requires-script">
 				<p id="search-hint">{msgs.searchHint}</p>
 			</div>
 		</header>

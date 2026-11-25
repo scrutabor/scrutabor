@@ -36,7 +36,7 @@
 		<p class="lead">{msgs.dayPicker.catalogDescription}</p>
 		<FormularyScopeNote {lang} />
 		<p class="ordo-link"><a href="/app/{lang}/ordo" lang="la">Ordo Missæ</a></p>
-		<label class="search">
+		<label class="search requires-script">
 			<span class="smallcaps">{msgs.dayPicker.searchLabel}</span>
 			<input type="search" bind:value={query} placeholder={msgs.dayPicker.searchPlaceholder} />
 		</label>

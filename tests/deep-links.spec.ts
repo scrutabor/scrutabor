@@ -286,3 +286,22 @@ test.describe('links into a complete formulary', () => {
 		await expect(page).not.toHaveURL(/[?&]w=/);
 	});
 });
+
+for (const lang of ['en', 'pl'] as const) {
+	test(`verse controls name their actions in the reader’s language: ${lang} @online`, async ({
+		page
+	}) => {
+		await page.goto(`/app/${lang}/orationes/angelus-domini`);
+		for (const selector of [
+			'.segment-control',
+			'.repeated-toggle',
+			'button.mark:not(.repeated-toggle)',
+			'.sr-only'
+		]) {
+			await expect(page.locator(`.verse ${selector}`).first()).toHaveAttribute('lang', lang);
+		}
+		await expect(page.locator('.verse').first()).toHaveAttribute('lang', 'la');
+		await page.goto(`/app/${lang}/psalmi/118-he`);
+		await expect(page.locator('.verse button.mark').first()).toHaveAttribute('lang', lang);
+	});
+}

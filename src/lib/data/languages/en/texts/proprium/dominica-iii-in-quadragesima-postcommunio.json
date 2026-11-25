@@ -1,9 +1,9 @@
 {
   "id":"proprium.dominica-iii-in-quadragesima-postcommunio",
   "language":"en",
-  "about":"The postcommunio of the formulary “Third Sunday of Lent” in the 1962 Roman Missal.",
+  "about":"The Postcommunion of the formulary “Third Sunday of Lent” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"We beseech You, O Lord, graciously absolve us from all guilt and danger, whom You grant to partake of so great a mystery. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,null,null,null,"whom",null,null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":10,"a":9,"g":"Appeased, we beseech You, Lord, absolve us from all guilt and dangers"},{"s":11,"n":5,"a":2,"g":"You grant to be partakers of so great a mystery"},{"s":17,"n":2,"a":0,"g":"our Lord"},{"s":19,"n":2,"a":0,"g":"Jesus Christ"},{"s":21,"n":2,"a":0,"g":"Your Son"},{"s":23,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":30,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":33,"n":4,"a":2,"g":"forever and ever"}]},
+    {"id":"s01","tr":"O Lord, You grant us a share in so great a mystery. In Your mercy, we ask You to free us from all guilt and danger. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":[null,null,null,null,null,null,null,null,null,null,"whom",null,null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":0,"n":10,"a":9,"g":"From all guilt and danger, Lord, we ask You in Your mercy to free us"},{"s":11,"n":5,"a":2,"g":"You grant to be partakers of so great a mystery"},{"s":17,"n":2,"a":0,"g":"our Lord"},{"s":19,"n":2,"a":0,"g":"Jesus Christ"},{"s":21,"n":2,"a":0,"g":"Your Son"},{"s":23,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":30,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":33,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

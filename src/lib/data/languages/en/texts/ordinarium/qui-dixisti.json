@@ -1,9 +1,9 @@
 {
   "id":"ordinarium.qui-dixisti",
   "language":"en",
-  "about":"The first of three prayers said secretly by the priest before Communion. Its opening quotes John 14:27. The priest asks Christ to regard not his sins but the faith of the Church, and to grant the Church peace and unity. The kiss of peace follows where it is given, and in Masses for the Dead neither the peace nor this prayer is said.",
+  "about":"The first of three prayers said in a low voice by the priest before Communion. Its opening quotes John 14:27. The priest asks Christ to regard not his sins but the faith of the Church, and to grant the Church peace and unity. Where the kiss of peace is given, it follows this prayer. At Masses for the Dead the kiss of peace is not given and this prayer is omitted.",
   "seg":[
-    {"id":"s01","nr":"The priest bows over the altar with his hands joined upon it, and says the three prayers that follow silently."},
+    {"id":"s01","nr":"The priest bows over the altar with his hands joined upon it, and says the next three prayers in a low voice."},
     {"id":"s02","tr":"Lord Jesus Christ, who said to Your Apostles:","tc":[305,306],"tb":"revised","g":["Lord","Jesus","Christ","who","said",null,null],"a":[{"s":5,"n":2,"a":0,"g":"to Your Apostles"}]},
     {"id":"s03","tr":"“Peace I leave you; My peace I give you” —","tc":[306],"tb":"revised","g":["Peace","I leave","to you",null,null,"I give","to you"],"a":[{"s":3,"n":2,"a":0,"g":"My peace"}]},
     {"id":"s04","tr":"do not regard my sins, but the faith of Your Church;","tc":[306],"tb":"revised","g":["not","look upon",null,null,"but","the faith",null,null],"a":[{"s":2,"n":2,"a":0,"g":"my sins"},{"s":6,"n":2,"a":0,"g":"of Your Church"}]},

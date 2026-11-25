@@ -22,7 +22,11 @@
 	} = $props();
 </script>
 
-<form class="search-page-field" role="search" onsubmit={(event) => event.preventDefault()}>
+<form
+	class="search-page-field requires-script"
+	role="search"
+	onsubmit={(event) => event.preventDefault()}
+>
 	<label class="sr-only" for={id}>{label}</label>
 	<svg viewBox="0 0 24 24" aria-hidden="true">
 		<circle cx="10.8" cy="10.8" r="6.4" />

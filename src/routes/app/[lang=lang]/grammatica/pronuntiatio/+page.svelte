@@ -43,10 +43,11 @@
 		{ s: 'dz', pl: 'jak dz w „dzwon”', en: 'as ds in lads' },
 		{ s: 's z v r', pl: 'jak s, z, w, r (r drżące)', en: 'as in sit, zeal, vine, with r rolled' },
 		{
-			s: 'kw kv gw',
-			pl: 'jak kw w „kwiat”, gw jak w „gwiazda”',
-			en: 'as qu in quick, gw as in Gwen'
+			s: 'kw gw',
+			pl: 'k lub g, po którym słychać polskie ł',
+			en: 'as qu in quick and gw in Gwen'
 		},
+		{ s: 'kv', pl: 'k, po którym słychać polskie w', en: 'k followed by v as in vine' },
 		{ s: 'ˈ', pl: 'akcent — pada na następną sylabę', en: 'stress — falls on the next syllable' },
 		{ s: '.', pl: 'granica sylaby', en: 'syllable boundary' }
 	]);

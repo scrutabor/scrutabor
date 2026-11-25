@@ -44,7 +44,7 @@
 
 <svelte:head>
 	<title>{data.title.la} — Scrutabor</title>
-	<meta name="description" content={msgs.readingDescription.replace('{title}', data.title[lang])} />
+	{#if rules.length}<meta name="description" content={rules[0]} />{/if}
 </svelte:head>
 
 <div class="page">

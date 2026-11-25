@@ -45,7 +45,7 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(section.locator('.part-note')).toHaveText(
 			language === 'pl'
 				? 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.'
-				: 'The priest raises the paten with the host and offers it silently.'
+				: 'The priest raises the paten with the host and says the offering prayer in a low voice.'
 		);
 	});
 

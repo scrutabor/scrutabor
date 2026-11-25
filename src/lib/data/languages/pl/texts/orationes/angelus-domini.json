@@ -1,7 +1,7 @@
 {
   "id":"orationes.angelus-domini",
   "language":"pl",
-  "about":"Anioł Pański odmawia się trzy razy dziennie: o świcie, w południe i pod wieczór, a odmawia się w nim trzy Zdrowaś Maryjo. W okresie wielkanocnym jego miejsce zajmuje Regína cæli.",
+  "about":"Modlitwę Anioł Pański odmawia się o świcie, w południe i pod wieczór. Obejmuje trzy Zdrowaś Maryjo. W okresie wielkanocnym jej miejsce zajmuje Regína cæli.",
   "seg":[
     {"id":"s01","tr":"Anioł Pański zwiastował Pannie Maryi.","tc":[44],"tb":"normalized","g":["Anioł","Pana","zwiastował","Maryi"]},
     {"id":"s02","tr":"I poczęła z Ducha Świętego.","tc":[44],"tb":"normalized","g":["i","poczęła","z","Ducha","Świętego"]},

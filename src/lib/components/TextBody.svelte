@@ -587,6 +587,7 @@
 			{#if onsegmentselect}<button
 					type="button"
 					class="segment-control"
+					{lang}
 					aria-pressed={selected}
 					aria-label={selected
 						? citedSegments.length === 1
@@ -620,6 +621,7 @@
 			{#if repeated}<button
 					type="button"
 					class="mark repeated-toggle"
+					{lang}
 					aria-expanded={repeatedOpen}
 					aria-label={repeatedOpen ? M[lang].repeatedPrayerHide : M[lang].repeatedPrayerShow}
 					onclick={() => toggleRepeated(seg.id)}
@@ -629,15 +631,17 @@
 						type="button"
 						class="mark"
 						class:yours={mine}
+						{lang}
 						aria-label={`${M[lang].markTitle[speaker]}. ${M[lang].markLegendAction}`}
 						onclick={() => onmark?.(speaker)}
 						><span class="ink">{marks.MARKS[speaker]}</span></button
 					>{:else}<span class="mark" class:yours={mine} aria-hidden="true"
 						>{marks.MARKS[speaker]}</span
-					>{/if}<span class="sr-only">{speakerName ?? M[lang].speakers[speaker]}:</span
+					>{/if}<span class="sr-only" {lang}>{speakerName ?? M[lang].speakers[speaker]}:</span
 				>{:else if verseNo !== undefined}{#if onverse}<button
 						type="button"
 						class="mark"
+						{lang}
 						aria-label={M[lang].verseAria(verseNo)}
 						aria-pressed={verseNo === citedVerse}
 						onclick={() => onverse?.(verseNo)}><span class="ink">{verseNo}</span></button

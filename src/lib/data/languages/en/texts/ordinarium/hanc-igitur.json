@@ -3,7 +3,7 @@
   "language":"en",
   "about":"Holding his hands spread over the offerings, the priest quietly asks God to accept this offering, order our days in peace, deliver us from damnation and number us among the elect.",
   "seg":[
-    {"id":"s01","nr":"The priest holds his hands spread over the offerings, and a little before the Consecration the server warns the faithful with the bell."},
+    {"id":"s01","nr":"The priest holds his hands outstretched over the offerings. Shortly before the Consecration, the server rings the bell to alert the faithful."},
     {"id":"s02","tr":"We therefore ask You, Lord, to accept with favor this offering of our service and of Your whole household;","tc":[206],"tb":"revised","g":["This","therefore","oblation",null,null,"and","also",null,null,null,"we beseech","Lord","that You","appeased","accept"],"a":[{"s":3,"n":2,"a":0,"g":"of our service"},{"s":7,"n":3,"a":1,"g":"of Your whole household"}]},
     {"id":"s03","tr":"and to order our days in Your peace, and bid us be snatched from eternal damnation and counted in the flock of Your chosen ones.","g":[null,null,"in","Your","peace","arrange","and","from","eternal","damnation","us","to be rescued","and","in",null,null,"command","the flock","to be counted"],"a":[{"s":0,"n":2,"a":0,"g":"and our days"},{"s":14,"n":2,"a":0,"g":"of Your chosen ones"}],"ex":{"w032":"“Command” governs both passive infinitives: “us to be rescued” and “to be counted”. The preposition “in” belongs with the later “flock”. The phrase “of Your chosen ones” names the people who make up the flock. The full translation gives the continuous English order."}},
     {"id":"s04","nr":"The priest joins his hands."},

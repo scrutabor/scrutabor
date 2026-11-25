@@ -149,7 +149,7 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(sources).toContainText(
 			'Missale Romanum ex decreto SS. Concilii Tridentini restitutum'
 		);
-		await expect(sources).toContainText('p. 495');
+		await expect(sources).toContainText(language === 'pl' ? 's. 495' : 'p. 495');
 		await expect(sources).toContainText('horas/Latin/Commune/C10a.txt');
 		await expect(sources).toContainText('Tempora/Adv3-3.txt');
 		await expect(

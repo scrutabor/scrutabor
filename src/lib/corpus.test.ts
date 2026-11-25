@@ -10,6 +10,7 @@ import {
 	loadText,
 	loadSenses,
 	textKeysFor,
+	type Citation,
 	type TextDocument,
 	type TextEntry
 } from './corpus';
@@ -296,20 +297,22 @@ describe('vendored corpus snapshot', () => {
 	});
 
 	it('keeps shared citations exact and attached to localized prose', () => {
+		const raw = (citations?: Citation[]) =>
+			citations?.map(({ title, locator, url, notes }) => ({ title, locator, url, notes }));
 		for (const key of textKeysFor('pl').filter((candidate) => candidate in TEXTS.en)) {
 			const citations = (language: Lang) => {
 				const gloss = TEXTS[language][key].gloss;
 				return {
-					about: gloss.about_citations,
+					about: raw(gloss.about_citations),
 					words: Object.fromEntries(
 						Object.entries(gloss.words)
 							.filter(([, entry]) => entry.explanation_citations)
-							.map(([id, entry]) => [id, entry.explanation_citations])
+							.map(([id, entry]) => [id, raw(entry.explanation_citations)])
 					),
 					segments: Object.fromEntries(
 						Object.entries(gloss.segments)
 							.filter(([, entry]) => entry.narrative_citations)
-							.map(([id, entry]) => [id, entry.narrative_citations])
+							.map(([id, entry]) => [id, raw(entry.narrative_citations)])
 					)
 				};
 			};

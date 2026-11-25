@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-xiii-post-pentecosten-alleluia",
   "language":"pl",
-  "about":"Alleluia formularza „13. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
+  "about":"Alleluja formularza „13. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Alleluja, alleluja. Panie, stałeś się dla nas schronieniem z pokolenia na pokolenie. Alleluja.","g":["Alleluja","alleluja","Panie","ucieczką",null,null,"dla nas","z","pokolenia","i","pokolenia","Alleluja"],"a":[{"s":4,"n":2,"a":0,"g":"stałeś się"}]}
+    {"id":"s01","tr":"Alleluja, alleluja. Panie, stałeś się dla nas schronieniem z pokolenia na pokolenie. Alleluja.","g":["Alleluja","alleluja","Panie","ucieczką",null,null,"dla nas",null,null,null,null,"Alleluja"],"a":[{"s":4,"n":2,"a":0,"g":"stałeś się"},{"s":7,"n":4,"a":0,"g":"z pokolenia na pokolenie"}]}
   ]
 }

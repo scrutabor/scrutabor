@@ -4,7 +4,7 @@
   "about":"The first three exchanges are Psalm 84:7–8 and Psalm 101:2 in the Vulgate numbering, from the Gallican psalter the Mass uses: it opens the first of them Deus, tu convérsus where later editions read Nonne tu convérsus. The last is the liturgical greeting “Dóminus vobíscum” and its response.",
   "seg":[
     {"id":"s01","nr":"Bowed, the priest continues."},
-    {"id":"s02","tr":"You will turn back, O God, and give us life.","g":["God","You","having turned","will give life","us"]},
+    {"id":"s02","tr":"You will turn back, O God, and give us life.","g":["God","You","having turned","will give life to","us"]},
     {"id":"s03","tr":"And Your people will rejoice in You.","tc":[429],"tb":"revised","g":["And",null,null,"will rejoice","in","You"],"a":[{"s":1,"n":2,"a":0,"g":"Your people"}]},
     {"id":"s04","tr":"Show us Your mercy, O Lord.","tc":[429],"tb":"revised","g":["Show","us","Lord",null,null],"a":[{"s":3,"n":2,"a":0,"g":"Your mercy"}]},
     {"id":"s05","tr":"And grant us Your salvation.","tc":[429],"tb":"revised","g":["And",null,null,"grant","us"],"a":[{"s":1,"n":2,"a":0,"g":"Your salvation"}]},

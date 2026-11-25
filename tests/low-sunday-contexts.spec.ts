@@ -51,8 +51,8 @@ for (const language of ['pl', 'en'] as const) {
 			);
 			await expect(printed).toHaveCount(1);
 			await expect(printed).toBeVisible();
-			await expect(notes).toContainText('p. 291');
-			await expect(notes).toContainText('p. 288');
+			await expect(notes).toContainText(language === 'pl' ? 's. 291' : 'p. 291');
+			await expect(notes).toContainText(language === 'pl' ? 's. 288' : 'p. 288');
 			await expect(
 				notes.locator(
 					'a[href="https://archive.org/details/missale-romanum-1962/page/n304/mode/1up"]'

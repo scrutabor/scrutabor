@@ -269,7 +269,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/gloria',
 				note: {
-					pl: 'Kapłan intonuje hymn anielski na środku ołtarza. We Mszy śpiewanej podejmuje go chór.',
+					pl: 'Stojąc pośrodku przed ołtarzem, kapłan intonuje hymn anielski. We Mszy śpiewanej podejmuje go chór.',
 					en: 'At the middle of the altar the priest intones the angelic hymn. At a sung Mass the choir takes it up.'
 				},
 				when: {
@@ -329,7 +329,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				},
 				note: {
 					pl: 'W przedstawionym tu wariancie bez diakona kapłan przed Ewangelią Mszy odmawia tę modlitwę po cichu, także gdy sam śpiewa Ewangelię. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. We Mszach za zmarłych opuszcza się odrębną prośbę o błogosławieństwo i samo błogosławieństwo, ale Munda cor meum wraz ze swoim zakończeniem pozostaje. Nie odmawia się jej przed ostatnią Ewangelią.',
-					en: 'In the priest-alone form shown here, the priest says this prayer silently before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon says it, and the celebrant does not repeat it. The separate blessing request and blessing are omitted at Masses for the Dead, but Munda cor meum and its own conclusion remain. It is not said before the Last Gospel.'
+					en: 'In the priest-alone form shown here, the priest says this prayer in a voice only he can hear before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon says it, and the celebrant does not repeat it. The separate blessing request and blessing are omitted at Masses for the Dead, but Munda cor meum and its own conclusion remain. It is not said before the Last Gospel.'
 				}
 			},
 			{
@@ -343,7 +343,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				},
 				note: {
 					pl: 'Po Munda cor meum kapłan odprawiający bez diakona i subdiakona odmawia po cichu tę prośbę i błogosławieństwo przed Ewangelią Mszy, także gdy sam śpiewa Ewangelię. We Mszy uroczystej diakon ma odrębny obrzęd. Sam wybór Mszy śpiewanej nie oznacza jego obecności. We Mszach za zmarłych opuszcza się obie części. Nie odmawia się ich przed ostatnią Ewangelią.',
-					en: 'After Munda cor meum, the priest celebrating without a deacon and subdeacon says this request and blessing silently before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon has a separate rite. Selecting sung Mass alone does not imply his presence. Both parts are omitted at Masses for the Dead. They are not said before the Last Gospel.'
+					en: 'After Munda cor meum, the priest celebrating without a deacon and subdeacon says this request and blessing in a voice only he can hear before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon has a separate rite. Selecting sung Mass alone does not imply his presence. Both parts are omitted at Masses for the Dead. They are not said before the Last Gospel.'
 				}
 			},
 			{
@@ -412,8 +412,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Offertórium',
 				kind: 'proper',
 				note: {
-					pl: 'Kapłan pozdrawia wiernych, wzywa Orémus i czyta antyfonę ofiarowania z formularza dnia, po czym odsłania kielich.',
-					en: 'The priest greets the people, calls Orémus, and reads the day’s Offertory antiphon, then uncovers the chalice.'
+					pl: 'Kapłan pozdrawia wiernych, mówi Orémus i czyta antyfonę ofiarowania z formularza dnia, po czym odsłania kielich.',
+					en: 'The priest greets the people, says Orémus, reads the day’s Offertory antiphon, and then uncovers the chalice.'
 				}
 			},
 			{
@@ -423,7 +423,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/suscipe-sancte-pater',
 				note: {
 					pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.',
-					en: 'The priest raises the paten with the host and offers it silently.'
+					en: 'The priest raises the paten with the host and says the offering prayer in a low voice.'
 				}
 			},
 			{
@@ -500,7 +500,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'proper',
 				note: {
 					pl: 'Modlitwa nad darami z formularza dnia, odmawiana po cichu — słychać dopiero jej zakończenie: Per ómnia sǽcula sæculórum.',
-					en: 'The day’s prayer over the gifts, said silently — only its ending is heard: Per ómnia sǽcula sæculórum.'
+					en: 'The priest says the day’s prayer over the gifts in a low voice. Only its ending is heard aloud: Per ómnia sǽcula sæculórum.'
 				}
 			}
 		]
@@ -548,7 +548,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/te-igitur',
 				note: {
 					pl: 'Kanon zaczyna się po cichu: modlitwa za Kościół, papieża i biskupa.',
-					en: 'The Canon begins in silence: the prayer for the Church, the Pope, and the bishop.'
+					en: 'The priest begins the Canon in a low voice, praying for the Church, the Pope and the bishop.'
 				}
 			},
 			{
@@ -706,7 +706,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/libera-nos',
 				note: {
 					pl: 'Kapłan prosi po cichu o wybawienie od zła przeszłego, obecnego i przyszłego. Pod koniec modlitwy łamie Hostię. Ostatnie słowa mówi głośno lub śpiewa.',
-					en: 'During this silent prayer for deliverance from past, present, and future evils, the priest breaks the Host. The closing words are said or sung aloud.'
+					en: 'The priest prays in a low voice for deliverance from past, present, and future evils and breaks the Host. The closing words are said or sung aloud.'
 				}
 			},
 			{
@@ -726,7 +726,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/haec-commixtio',
 				note: {
 					pl: 'Kapłan wpuszcza cząstkę Hostii do kielicha i modli się po cichu.',
-					en: 'The priest drops the particle of the Host into the chalice and prays silently.'
+					en: 'The priest drops the particle of the Host into the chalice and prays in a low voice.'
 				}
 			},
 			{
@@ -750,7 +750,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/qui-dixisti',
 				note: {
 					pl: 'Pierwsza z trzech cichych modlitw przed Komunią — o pokój dla Kościoła. We Mszy uroczystej po niej następuje pocałunek pokoju.',
-					en: 'The first of three silent prayers before Communion, for the peace of the Church. At solemn Mass the kiss of peace follows it.'
+					en: 'The priest prays for the peace of the Church. This is the first of three prayers he says in a low voice before Communion. At solemn Mass the kiss of peace follows it.'
 				},
 				when: {
 					pl: 'we Mszach za zmarłych opuszcza się tę modlitwę i pocałunek pokoju',
@@ -784,7 +784,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/panem-caelestem',
 				note: {
 					pl: 'Kapłan przyklęka, bierze obie części Hostii i trzy razy uderza się w piersi: Dómine, non sum dignus — pierwsze słowa nieco głośniej, resztę po cichu — po czym przyjmuje Ciało Pańskie.',
-					en: 'The priest genuflects, takes both halves of the Host and strikes his breast three times at Dómine, non sum dignus — the opening words a little louder, the rest silently — and receives the Body of the Lord.'
+					en: 'The priest genuflects, takes both halves of the Host and strikes his breast three times at Dómine, non sum dignus — the opening words a little louder, the rest in a low voice — and receives the Body of the Lord.'
 				}
 			},
 			{
@@ -828,7 +828,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/corpus-tuum',
 				note: {
 					pl: 'Kapłan obmywa palce winem z wodą, wyciera kielich i naczynia. Ta druga cicha modlitwa zamyka obrzęd Komunii.',
-					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels. This second silent prayer closes the Communion rite.'
+					en: 'The priest washes his fingers with wine and water and dries the chalice and vessels. The priest says this second prayer in a low voice to close the Communion rite.'
 				}
 			}
 		]
@@ -892,7 +892,7 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				text: 'ordinarium/placeat-tibi',
 				note: {
 					pl: 'Pochylony nad ołtarzem kapłan prosi po cichu, aby złożona ofiara podobała się Trójcy Świętej, i całuje ołtarz.',
-					en: 'Bowed over the altar the priest asks silently that the sacrifice may please the Holy Trinity, and kisses the altar.'
+					en: 'Bowed over the altar the priest asks in a low voice that the sacrifice may please the Holy Trinity, then kisses the altar.'
 				}
 			},
 			{

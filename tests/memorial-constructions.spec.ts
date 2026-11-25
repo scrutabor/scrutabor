@@ -78,7 +78,7 @@ test('Polish memorial pronouns retain their possessive and correlative functions
 }) => {
 	await page.goto('/app/pl/ordinarium/simili-modo');
 	await setHelp(page, 1);
-	await expect(page.locator('[id="w058"] rt')).toHaveText('moją');
+	await expect(page.locator('[id="w058"] rt')).toHaveText('Moją');
 	await page.goto('/app/pl/formularium/cathedra-sancti-petri');
 	await expect(page.locator('[id="cathedra-sancti-petri-collecta.w056"] rt')).toHaveText('czyją');
 	await expect(page.locator('[id="cathedra-sancti-petri-collecta.w059"] rt')).toHaveText('tego');

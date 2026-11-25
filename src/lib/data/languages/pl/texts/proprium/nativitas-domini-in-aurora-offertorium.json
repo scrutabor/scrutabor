@@ -1,8 +1,8 @@
 {
   "id":"proprium.nativitas-domini-in-aurora-offertorium",
   "language":"pl",
-  "about":"Offertorium formularza „Narodzenie Pańskie — Msza o świcie” w Mszale Rzymskim z 1962 roku.",
+  "about":"Antyfona na ofiarowanie formularza „Narodzenie Pańskie — Msza o świcie” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Bóg utwierdził krąg ziemi, tak iż się nie zachwieje; Twój tron, Boże, jest ustanowiony odtąd, Ty jesteś od wieków.","g":["Bóg","utwierdził","okrąg","ziemi","który","nie","zachwieje się","ustanowiony","tron","Twój","Boże","od","wtedy","od","wieku","Ty","jesteś"]}
+    {"id":"s01","tr":"Bóg utwierdził krąg ziemi, tak iż się nie zachwieje; Twój tron, Boże, jest ustanowiony odtąd, Ty jesteś od wieków.","g":["Bóg","utwierdził","okrąg","ziemi","który","nie","zachwieje się","ustanowiony","tron","Twój","Boże",null,null,"od","wieku","Ty","jesteś"],"a":[{"s":11,"n":2,"a":0,"g":"od tamtej chwili"}]}
   ]
 }

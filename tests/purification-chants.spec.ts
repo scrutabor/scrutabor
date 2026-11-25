@@ -31,7 +31,7 @@ const labels = {
 	pl: {
 		graduale: 'Graduał formularza',
 		alleluia: 'Alleluja formularza',
-		offertorium: 'Offertorium formularza'
+		offertorium: 'Antyfona na ofiarowanie formularza'
 	},
 	en: { graduale: 'The Gradual of', alleluia: 'The Alleluia of', offertorium: 'The Offertory of' }
 } as const;

@@ -136,8 +136,14 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(dialog).toContainText(language === 'pl' ? 'Ewangelia formularza' : 'The Gospel');
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('reference37 to Sancti/02-01');
-		await expect(sources).toContainText('heading57, announcement58, reference59, body60');
+		await expect(sources).toContainText(
+			language === 'pl' ? 'odsyłacz w w. 37 do Sancti/02-01' : 'reference 37 to Sancti/02-01'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 57, zapowiedź w w. 58, odsyłacz w w. 59 i tekst w w. 60'
+				: 'heading 57, announcement 58, reference 59, body 60'
+		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n716/mode/1up"]'

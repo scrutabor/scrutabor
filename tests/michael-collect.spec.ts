@@ -123,9 +123,21 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('heading22 and @Sancti/05-08 reference23');
-		await expect(sources).toContainText('heading19, body20, $Per Dominum command21');
-		await expect(sources).toContainText('heading95, conclusion96, response97');
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 22 i odsyłacz @Sancti/05-08 w w. 23'
+				: 'heading 22 and @Sancti/05-08 reference 23'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 19, tekst w w. 20 i polecenie $Per Dominum w w. 21'
+				: 'heading 19, body 20, $Per Dominum command 21'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
+				: 'heading 95, conclusion 96, response 97'
+		);
 		for (const leaf of ['n765', 'n22', 'n38', 'n39', 'n57']) {
 			await expect(
 				sources.locator(

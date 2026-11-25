@@ -1,8 +1,8 @@
 {
   "id":"proprium.sancti-iacobi-apostoli-communio",
   "language":"pl",
-  "about":"Communio formularza „Świętego Jakuba Apostoła” w Mszale Rzymskim z 1962 roku.",
+  "about":"Antyfona na Komunię formularza „Świętego Jakuba Apostoła” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Wy, którzy poszliście za mną, zasiądziecie na tronach, sądząc dwanaście plemion Izraela.","g":["Wy","którzy",null,null,"Mną","zasiądziecie","na","tronach","sądząc","dwanaście","pokoleń","Izraela"],"a":[{"s":2,"n":2,"a":0,"g":"poszli za"}]}
+    {"id":"s01","tr":"Wy, którzy poszliście za Mną, zasiądziecie na tronach, sądząc dwanaście plemion Izraela.","g":["Wy","którzy",null,null,"Mną","zasiądziecie","na","tronach","sądząc","dwanaście","pokoleń","Izraela"],"a":[{"s":2,"n":2,"a":0,"g":"poszliście za"}]}
   ]
 }

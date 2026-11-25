@@ -369,7 +369,7 @@ const genericEntries = [
 		title: 'Dómine Iesu Christe, qui dixísti',
 		note: {
 			pl: 'Pierwsza z trzech cichych modlitw przed Komunią — o pokój dla Kościoła. We Mszy uroczystej po niej następuje pocałunek pokoju.',
-			en: 'The first of three silent prayers before Communion, for the peace of the Church. At solemn Mass the kiss of peace follows it.'
+			en: 'The priest prays for the peace of the Church. This is the first of three prayers he says in a low voice before Communion. At solemn Mass the kiss of peace follows it.'
 		}
 	},
 	{

@@ -62,18 +62,23 @@ describe('compact litany responses', () => {
 describe('prayer-level translation sources', () => {
 	it('groups one source while retaining its distinct locators', () => {
 		const segments = [verse(undefined, 'Primus.'), verse(undefined, 'Secundus.')];
-		const source = { title: 'Book', locator: 'p. 1', url: 'https://example.com/book' };
+		const source = {
+			title: 'Book',
+			locator: 'p. 1',
+			displayLocator: 's. 1',
+			url: 'https://example.com/book'
+		};
 		const gloss = {
 			segments: {
 				[segments[0].id]: { translation_citations: [source] },
 				[segments[1].id]: {
-					translation_citations: [source, { ...source, locator: 'p. 2' }]
+					translation_citations: [source, { ...source, locator: 'p. 2', displayLocator: 's. 2' }]
 				}
 			}
 		} as unknown as GlossDocument;
 
 		expect(collectTranslationCitations(segments, gloss)).toEqual([
-			{ ...source, locator: 'p. 1; p. 2' }
+			{ ...source, locator: 'p. 1; p. 2', displayLocator: 's. 1; s. 2' }
 		]);
 	});
 

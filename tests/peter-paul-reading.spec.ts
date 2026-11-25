@@ -6,7 +6,7 @@ const groups = [
 	['pl', 'w024', 'przystąpił do', ['appósuit', 'ut']],
 	['pl', 'w034', 'Gdy go', ['Quem', 'cum']],
 	['pl', 'w074', 'tej samej', ['in', 'ipsa']],
-	['pl', 'w156', 'że widzi widzenie', ['se', 'visum', 'vidére']],
+	['pl', 'w156', 'że ma widzenie', ['se', 'visum', 'vidére']],
 	['en', 'w074', 'that same', ['in', 'ipsa']],
 	['en', 'w122', 'put on', ['cálcea', 'te']]
 ] as const;
@@ -112,7 +112,11 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('marker27, announcement28, reference29, complete body30');
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'znacznik w w. 27, zapowiedź w w. 28, odsyłacz w w. 29 i cały tekst w w. 30'
+				: 'marker 27, announcement 28, reference 29, complete body 30'
+		);
 		for (const sourcePage of ['n657', 'n658']) {
 			await expect(
 				sources.locator(

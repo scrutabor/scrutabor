@@ -133,7 +133,7 @@ it.each(['pl', 'en'] as const)(
 			},
 			'suscipe-sancte-pater': {
 				pl: 'Kapłan unosi patenę z hostią i ofiaruje ją po cichu.',
-				en: 'The priest raises the paten with the host and offers it silently.'
+				en: 'The priest raises the paten with the host and says the offering prayer in a low voice.'
 			},
 			postcommunio: {
 				pl: 'Kapłan całuje ołtarz, pozdrawia wiernych i wraca na stronę lekcji po modlitwę końcową — tyle modlitw, ile było kolekt.',

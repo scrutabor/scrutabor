@@ -17,19 +17,22 @@ const expectedCitations = {
 	veneror: [
 		{
 			title: 'A Latin Dictionary',
-			locator: 'Perseus TEI entry n50434',
+			locator: { pl: 'hasło TEI w zbiorze Perseus: n50434', en: 'Perseus TEI entry n50434' },
 			url: 'https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml'
 		},
 		{
 			title: "Allen and Greenough's New Latin Grammar for Schools and Colleges",
-			locator: '§190 and §190d · pp. 103–105 · Physical PDF pages 121–123 (one-based)',
+			locator: {
+				pl: '§190 i §190d · s. 103–105 · strony w pliku PDF (numeracja od 1): 121–123',
+				en: '§190 and §190d · pp. 103–105 · PDF pages 121–123 (counting from 1)'
+			},
 			url: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=123'
 		}
 	],
 	in: [
 		{
 			title: 'A Latin Dictionary',
-			locator: 'Perseus TEI entry n22111',
+			locator: { pl: 'hasło TEI w zbiorze Perseus: n22111', en: 'Perseus TEI entry n22111' },
 			url: 'https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml'
 		}
 	]
@@ -42,13 +45,17 @@ async function expectClosedSources(sources: Locator, lang: 'pl' | 'en') {
 	await expect(sources.locator('summary')).toHaveText(sourceLabels[lang]);
 }
 
-async function expectExactCitations(sources: Locator, lemma: keyof typeof expectedCitations) {
+async function expectExactCitations(
+	sources: Locator,
+	lemma: keyof typeof expectedCitations,
+	lang: 'en' | 'pl'
+) {
 	await expect(sources.locator('ol > li')).toHaveCount(expectedCitations[lemma].length);
 	for (const citation of expectedCitations[lemma]) {
 		const link = sources.getByRole('link', { name: citation.title, exact: true });
 		await expect(link).toHaveCount(1);
 		await expect(link).toHaveAttribute('href', citation.url);
-		await expect(link.locator('..')).toHaveText(`${citation.title}, ${citation.locator}`);
+		await expect(link.locator('..')).toHaveText(`${citation.title}, ${citation.locator[lang]}`);
 	}
 }
 
@@ -69,12 +76,12 @@ for (const host of ['', ' @static-host']) {
 			await expectClosedSources(sources, lang);
 			await sources.locator('summary').click();
 			await expect(sources.locator('.source-scope')).toHaveText(scope[lang]);
-			await expect(sources.locator('ol')).toContainText('Perseus TEI entry n50434');
+
 			await expect(sources.locator('ol a', { hasText: 'A Latin Dictionary' })).toHaveAttribute(
 				'href',
 				/^https:/
 			);
-			await expectExactCitations(sources, 'veneror');
+			await expectExactCitations(sources, 'veneror', lang);
 			await expect(entry.locator('.morph')).toBeVisible();
 			await expect(page.locator('aside .gloss')).toBeVisible();
 			await expect(page.locator('aside .context-layer .lemma-sources')).toHaveCount(0);
@@ -92,9 +99,9 @@ for (const host of ['', ' @static-host']) {
 			await expect(sources.locator('summary')).toBeVisible();
 			await expectClosedSources(sources, lang);
 			await sources.locator('summary').click();
-			await expect(sources.locator('ol')).toContainText('Perseus TEI entry n22111');
+
 			await expect(sources.locator('.source-scope')).toHaveText(scope[lang]);
-			await expectExactCitations(sources, 'in');
+			await expectExactCitations(sources, 'in', lang);
 			await expect(page.locator('aside .construction-context .lemma-sources')).toHaveCount(0);
 		});
 	}
@@ -264,9 +271,9 @@ for (const host of ['', ' @static-host']) {
 				expect(Math.abs(loaded!.height - pending!.height)).toBeLessThanOrEqual(1);
 				await expectClosedSources(current, 'en');
 				await current.locator('summary').click();
-				await expect(current.locator('ol')).toContainText('Perseus TEI entry n22111');
+
 				await expect(current.locator('ol')).not.toContainText('n50434');
-				await expectExactCitations(current, 'in');
+				await expectExactCitations(current, 'in', 'en');
 				expect(control.matches()).toBe(1);
 			} finally {
 				await control.dispose();
@@ -324,8 +331,8 @@ for (const host of ['', ' @static-host']) {
 			await expect(entry.locator('.morph')).toBeVisible();
 			await expectClosedSources(sources, 'en');
 			await sources.locator('summary').click();
-			await expect(sources.locator('ol')).toContainText('Perseus TEI entry n50434');
-			await expectExactCitations(sources, 'veneror');
+
+			await expectExactCitations(sources, 'veneror', 'en');
 		} finally {
 			await control.dispose();
 		}

@@ -87,7 +87,7 @@ const VIGIL: Record<string, Record<Lang, string>> = {
 	},
 	'munda-cor-meum': {
 		pl: 'Przed Ewangelią Mszy Wigilii Paschalnej zachowuje się Munda cor meum oraz odrębną prośbę o błogosławieństwo i błogosławieństwo. W pokazanym wariancie bez diakona kapłan odmawia Munda po cichu. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. Przy Ewangelii nie niesie się świateł, ale nie pomija się tego przygotowania.',
-		en: 'Before the Gospel of the Easter Vigil Mass, Munda cor meum and the separate blessing request and blessing remain. In the priest-alone form shown here, the priest says Munda silently. At solemn Mass the deacon says it, and the celebrant does not repeat it. No lights are carried at the Gospel, but this preparation is not omitted.'
+		en: 'Before the Gospel of the Easter Vigil Mass, Munda cor meum and the separate blessing request and blessing remain. In the priest-alone form shown here, the priest says Munda in a voice only he can hear. At solemn Mass the deacon says it, and the celebrant does not repeat it. No lights are carried at the Gospel, but this preparation is not omitted.'
 	},
 	'ite-missa-est': {
 		pl: 'W Wigilię rozesłanie śpiewa diakon lub sam kapłan.',
@@ -110,7 +110,7 @@ const PENTECOST_VIGIL: Record<string, Record<Lang, string>> = {
 const PALM: Record<string, Record<Lang, string>> = {
 	'munda-cor-meum': {
 		pl: 'Ten wpis dotyczy przygotowania do Pasji we Mszy Niedzieli Palmowej. Gdy kapłan wykonuje Pasję sam, odmawia Munda cor meum po cichu, po czym odmawia zwykłą odrębną prośbę o błogosławieństwo i błogosławieństwo. Gdy Pasję wykonują wyznaczeni duchowni mający co najmniej święcenia diakonatu, każdy z nich odmawia Munda półgłosem. Proszą następnie celebransa o odrębne błogosławieństwo dla nich. Sam wybór Mszy śpiewanej nie rozstrzyga, który wariant zachodzi. Ewangelia w poprzedzających Mszę obrzędach palm ma osobne przygotowanie, nie drugi wpis w tym miejscu Mszy.',
-		en: 'This entry prepares for the Passion at the Palm Sunday Mass. When the priest delivers the Passion alone, he says Munda cor meum silently, followed by the usual separate blessing request and blessing. When appointed clergy who are at least deacons deliver the Passion, each says Munda in a low voice. They then request the celebrant’s separate blessing for them. Selecting sung Mass alone does not determine which form applies. The Gospel in the preceding palm ceremonies has its own preparation, not a second entry at this point of the Mass.'
+		en: 'This entry prepares for the Passion at the Palm Sunday Mass. When the priest delivers the Passion alone, he says Munda cor meum in a voice only he can hear, followed by the usual separate blessing request and blessing. When appointed clergy who are at least deacons deliver the Passion, each says Munda in a low voice. They then request the celebrant’s separate blessing for them. Selecting sung Mass alone does not determine which form applies. The Gospel in the preceding palm ceremonies has its own preparation, not a second entry at this point of the Mass.'
 	},
 	evangelium: {
 		pl: 'Przed Pasją zachowuje się Munda cor meum oraz właściwą dla wykonujących ją odrębną prośbę o błogosławieństwo i błogosławieństwo. Nie odmawia się Dominus vobiscum ani nie znaczy krzyżem księgi i siebie. Nie stosuje się tu zwykłego wprowadzenia do Ewangelii.',
@@ -369,8 +369,8 @@ export function ordoMinisterBlessingContext(
 		);
 	if (state.mass === 'vigilia-paschalis')
 		return result(
-			'Przed Ewangelią Mszy Wigilii Paschalnej zachowuje się zwykłe przygotowanie. Jeśli wykonuje ją diakon, prosi o błogosławieństwo. Nie niesie się świateł, ale nie opuszcza się z tego powodu prośby i błogosławieństwa.',
-			'The usual preparation remains before the Easter Vigil Mass Gospel. If a deacon delivers it, he requests the blessing. No lights are carried, but this does not omit the request and blessing.'
+			'Przed Ewangelią Mszy Wigilii Paschalnej zachowuje się zwykłe przygotowanie. Jeśli Ewangelię głosi diakon, prosi celebransa o błogosławieństwo i je otrzymuje. Nie niesie się świateł.',
+			'The usual preparation is observed before the Gospel at the Easter Vigil Mass. If a deacon proclaims the Gospel, he asks for and receives the celebrant’s blessing. No lights are carried.'
 		);
 	return result(
 		'To przygotowanie dotyczy diakona wykonującego Ewangelię, jeśli jest obecny.',

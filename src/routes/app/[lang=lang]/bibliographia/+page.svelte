@@ -187,7 +187,7 @@
 
 	<main>
 		<h1 class="minor">{msgs.bibliographyPageTitle}</h1>
-		<p class="what">{lead}</p>
+		<p class="what requires-script">{lead}</p>
 
 		<div class="sections">
 			{#each sections as section (section.id)}
@@ -222,6 +222,8 @@
 										{:else if details[sourceKey(source)]}
 											<ul class="evidence-groups">
 												{#each details[sourceKey(source)] ?? [] as group (group.key)}
+													{@const raw = locator(group)}
+													{@const formatted = group.displayLocator ?? raw}
 													<li class="evidence-group">
 														<p class="role smallcaps">{copy.roles[group.role]}</p>
 														{#if group.url}
@@ -230,15 +232,17 @@
 																href={group.url}
 																target="_blank"
 																rel="external noopener"
-																lang="und"
-																>{locator(group)}<svg
+																lang={formatted === raw ? 'und' : lang}
+																>{formatted}<svg
 																	class="external-mark"
 																	viewBox="0 0 12 12"
 																	aria-hidden="true"><path d="M4 2h6v6M10 2 2 10"></path></svg
 																></a
 															>
 														{:else}
-															<p class="locator" lang="und">{locator(group)}</p>
+															<p class="locator" lang={formatted === raw ? 'und' : lang}>
+																{formatted}
+															</p>
 														{/if}
 														<ul class="uses">
 															{#each group.uses as use (use.key)}

@@ -150,7 +150,7 @@
 
 <svelte:window onhashchange={onHashChange} onpopstate={applyFromLocation} />
 
-<div class="picker day row" class:on={!!chosen || !!selectedDate}>
+<div class="picker day row requires-script" class:on={!!chosen || !!selectedDate}>
 	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
 	<button
 		type="button"

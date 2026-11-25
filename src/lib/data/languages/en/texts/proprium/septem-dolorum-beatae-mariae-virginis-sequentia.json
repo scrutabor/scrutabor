@@ -1,13 +1,13 @@
 {
   "id":"proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
   "language":"en",
-  "about":"The sequentia of the formulary “Seven Sorrows of the Blessed Virgin Mary” in the 1962 Roman Missal.",
+  "about":"The Sequence of the formulary “Seven Sorrows of the Blessed Virgin Mary” in the 1962 Roman Missal.",
   "translation_label":"J. D. Aylward’s translation, revised against the 1962 Roman Missal",
   "seg":[
     {"id":"s01","tr":"Weeping sore, the Mother stood\nNear the Cross, the fatal wood,\nWhere her Son hung dying.","tb":"revised","g":["Stood","the Mother","sorrowful","Beside","the Cross","weeping","while","was hanging","the Son"]},
     {"id":"s02","tr":"Through her soul, in anguish crying,\nSunk in sorrow, spent with sighing,\nA sword had pierced her through.","tb":"revised","g":["Her","soul","groaning","saddened","and","sorrowing","pierced through","a sword"]},
     {"id":"s03","tr":"Oh, how sad, how heavy laden,\nWas that meek and blessed Maiden,\nMother of God’s only Son!","tb":"revised","g":["O","how","sad","and","afflicted","was","that","blessed","Mother","of the Only-begotten"]},
-    {"id":"s04","tr":"Grieving, bowed beneath her woes,\nThe loving Mother watched the throes\nOf her own glorious Son.","tb":"revised","g":["Who","grieved","and","sorrowed","tender","Mother","while","saw","of her Son","the torments","glorious"]},
+    {"id":"s04","tr":"Grieving, bowed beneath her woes,\nThe loving Mother watched the throes\nOf her own glorious Son.","tb":"revised","g":["Who","grieved","and","sorrowed","tender","Mother","while","saw",null,null,null],"a":[{"s":8,"n":3,"a":1,"g":"the torments of her glorious Son"}]},
     {"id":"s05","tr":"Who could look and fail to weep,\nSeeing grief so sore and deep\nIn the Mother of our Lord?","tb":"revised","g":["Who","is","the man","who",null,null,"the Mother","of Christ","if","he saw","in","such great","suffering"],"a":[{"s":4,"n":2,"a":1,"g":"would not weep"}]},
     {"id":"s06","tr":"Who could look unmoved\nOn the Mother of our Lord,\nGrieving with her Son?","tb":"revised","g":["Who",null,null,"be sorrowful",null,null,null,"sorrowing","with","the Son"],"a":[{"s":1,"n":2,"a":1,"g":"would not"},{"s":4,"n":3,"a":2,"g":"on beholding Christ’s Mother"}]},
     {"id":"s07","tr":"For the sins of His own people,\nShe saw Jesus in His torment,\nGiven over to the scourge.","tb":"revised","g":["For","the sins","of His own","nation","She saw","Jesus","in","torments","and","scourges","subjected"]},

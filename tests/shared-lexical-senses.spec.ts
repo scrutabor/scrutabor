@@ -27,7 +27,9 @@ for (const language of ['pl', 'en']) {
 				}
 				const sources = page.locator('.lexical-summary .source-notes').last();
 				await sources.locator('summary').click();
-				await expect(sources).toContainText(`Perseus TEI entry ${node}`);
+				await expect(sources).toContainText(
+					language === 'pl' ? `hasło TEI w zbiorze Perseus: ${node}` : `Perseus TEI entry ${node}`
+				);
 				await expect(sources).not.toContainText('evidence_sha256');
 				await expect
 					.poll(() => page.evaluate(() => document.documentElement.scrollWidth - innerWidth))

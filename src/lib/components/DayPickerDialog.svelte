@@ -151,7 +151,10 @@
 		if (!calendarCovers(iso)) return `${dateLabel(iso, 'full')}, ${msgs.dayPicker.outsideTitle}`;
 		const on = dayOn(iso);
 		const day = properFor(on);
-		if (day) return `${dateLabel(iso, 'full')}, ${day.title[lang]}, ${msgs.dayPicker.available}`;
+		if (day) {
+			const availability = day.partial ? msgs.dayPicker.partial : msgs.dayPicker.available;
+			return `${dateLabel(iso, 'full')}, ${day.title[lang]}, ${availability}`;
+		}
 		if (on) return `${dateLabel(iso, 'full')}, ${msgs.dayPicker.unwrittenTitle}`;
 		return `${dateLabel(iso, 'full')}, ${msgs.dayPicker.unresolvedTitle}`;
 	}

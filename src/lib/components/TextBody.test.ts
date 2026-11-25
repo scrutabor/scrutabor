@@ -319,11 +319,11 @@ describe.each([0, 1, 2])('a reference response at help level %i', (helpLevel) =>
 			const active = rendered(false, [faculty]),
 				reference = rendered(true, [faculty]);
 			expect(active).toContain('the faithful may join');
-			expect(active).toContain('silently');
+			expect(active).toContain('the priest says it in a low voice');
 			expect(verseClasses(active)).toContain('quiet');
 			expect(verseClasses(active)).toContain('answer');
 			expect(reference).not.toContain('the faithful may join');
-			expect(reference).not.toContain('silently');
+			expect(reference).not.toContain('the priest says it in a low voice');
 			expect(reference).not.toContain('class="who');
 			expect(verseClasses(reference)).not.toContain('quiet');
 			expect(verseClasses(reference)).not.toContain('answer');

@@ -246,7 +246,14 @@
 
 		{#if data.specimen && doc && gloss}
 			<section class="specimen-section">
-				<p class="lead">{t.specimenLead}</p>
+				<p class="lead requires-script">{t.specimenLead}</p>
+				<noscript>
+					<p class="lead">
+						{lang === 'pl'
+							? 'Od tego wersetu pochodzi nazwa Scrutabor. Włącz JavaScript, aby sprawdzić znaczenie i formę dowolnego słowa.'
+							: 'The name Scrutabor comes from this verse. Turn on JavaScript to explore the meaning and form of each word.'}
+					</p>
+				</noscript>
 
 				<!-- The book itself, for one verse: the real mode control, corpus text
 			     and WordPanel. The panel changes only its placement here: it

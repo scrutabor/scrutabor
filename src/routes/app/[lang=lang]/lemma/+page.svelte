@@ -52,7 +52,16 @@
 	const entry = $derived(payload?.entry ?? null);
 	const gender = $derived(describeLemmaGender(entry));
 	const sense = $derived(payload?.sense ?? null);
-	const headword = $derived((entry?.head ?? lemma).split(',')[0].trim());
+	const headword = $derived.by(() => {
+		const forms = (entry?.head ?? lemma).split(',').map((form) => form.trim());
+		if (entry?.pos === 'prep') {
+			return (
+				forms.find((form) => form.localeCompare(lemma, 'la', { sensitivity: 'base' }) === 0) ??
+				forms[0]
+			);
+		}
+		return forms[0];
+	});
 	const texts = $derived(payload?.occurrences ?? []);
 </script>
 
@@ -67,8 +76,9 @@
 	<PageNav {lang} />
 
 	{#if loading}
-		<span class="sr-only" role="status" aria-live="polite">{msgs.lemmaLoading}</span>
-		<main aria-busy="true">
+		<span class="sr-only requires-script" role="status" aria-live="polite">{msgs.lemmaLoading}</span
+		>
+		<main class="requires-script" aria-busy="true">
 			<ContentLoader variant="lemma" />
 		</main>
 	{:else if failed}

@@ -12,7 +12,11 @@ for (const language of ['pl', 'en'] as const) {
 		await source.locator('summary').click();
 		const body = source.locator('a[href$="/web/www/horas/Latin/Commune/C3a-1.txt"]');
 		await expect(body).toBeVisible();
-		await expect(body).toContainText('heading 55, reference 56, body 57');
+		await expect(body).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 55, odsyłacz w w. 56 i tekst w w. 57'
+				: 'heading 55, reference 56, body 57'
+		);
 		const prayer = source.locator('a[href$="/web/www/horas/Latin/Psalterium/Common/Prayers.txt"]');
 		await expect(prayer).toHaveCount(1);
 		const edition = page.locator('li.source').filter({

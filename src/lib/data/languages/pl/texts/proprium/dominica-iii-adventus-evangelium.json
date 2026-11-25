@@ -14,6 +14,6 @@
     {"id":"s09","tr":"I zapytali go, i powiedzieli mu: Dlaczego więc chrzcisz, skoro nie jesteś Chrystusem ani Eliaszem, ani prorokiem?","g":["i","zapytali","go","i","rzekli","mu","Dlaczego","więc","chrzcisz","jeśli","ty","nie","jesteś","Chrystusem","ani","Eliaszem","ani","prorokiem"]},
     {"id":"s10","tr":"Jan im odpowiedział: Ja chrzczę w wodzie; pośród was stoi jednak Ten, którego nie znacie.","g":["odpowiedział","im","Jan","mówiąc","Ja","chrzczę","w","wodzie","w środku","zaś","was","stoi","Ten, którego","wy","nie znacie"],"ex":{"w116":"Znaczy „ktoś z was”, nie „ktoś wasz”."}},
     {"id":"s11","tr":"On jest Tym, który ma przyjść po mnie, który stał się przede mną; a ja nie jestem godzien rozwiązać rzemyka Jego sandała.","g":["To Ten","jest","który","po","mnie",null,null,"który","przede","mną",null,null,"którego","ja","nie","jestem","godzien","abym","rozwiązał","Jego","rzemyk","sandała"],"a":[{"s":5,"n":2,"a":0,"g":"ma przyjść"},{"s":10,"n":2,"a":0,"g":"stał się"}],"ex":{"w140":"Idąc za biblijnym hebraizmem, łacina wskazuje dwa razy na tego samego Chrystusa: „którego… Jego rzemyk”."}},
-    {"id":"s12","tr":"To działo się w Betanii za Jordanem, gdzie Jan chrzcił.","g":["To","w","Betanii",null,null,"za","Jordanem","gdzie","był","Jan","chrzcząc"],"a":[{"s":3,"n":2,"a":0,"g":"działo się"}]}
+    {"id":"s12","tr":"To działo się w Betanii za Jordanem, gdzie Jan chrzcił.","g":["To","w","Betanii",null,null,"za","Jordanem","gdzie",null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"działo się"},{"s":8,"n":3,"a":2,"g":"Jan chrzcił"}]}
   ]
 }

@@ -99,9 +99,19 @@ for (const language of ['pl', 'en'] as const) {
 		);
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('reference 39 to Commune/C3a-1');
-		await expect(sources).toContainText('heading 55, reference 56, body 57');
-		await expect(sources).toContainText('seasonal rubric 58 and replacement 59 excluded');
+		await expect(sources).toContainText(
+			language === 'pl' ? 'odsyłacz w w. 39 do Commune/C3a-1' : 'reference 39 to Commune/C3a-1'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 55, odsyłacz w w. 56 i tekst w w. 57'
+				: 'heading 55, reference 56, body 57'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'z wyłączeniem rubryki okresowej w w. 58 i tekstu zastępczego w w. 59'
+				: 'seasonal rubric 58 and replacement 59 excluded'
+		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n800/mode/1up"]'

@@ -64,6 +64,32 @@ for (const host of ['@online', '@online @static-host']) {
 
 bare.describe('without scripting', () => {
 	bare.use({ javaScriptEnabled: false });
+	for (const [lang] of languages) {
+		bare(
+			`search, dictionary and bibliography explain their limits: ${lang} @online`,
+			async ({ page }) => {
+				await page.goto(`/app/${lang}/search`);
+				await expect(page.locator('.noscript-note')).toContainText(
+					lang === 'pl' ? 'wyszukiwać' : 'search the prayer book'
+				);
+				await expect(page.locator('#book-search-page')).toBeHidden();
+
+				await page.goto(`/app/${lang}/lemma?l=de`);
+				await expect(page.locator('.noscript-note')).toContainText(
+					lang === 'pl' ? 'hasło słownikowe' : 'dictionary entry'
+				);
+				await expect(page.getByRole('status')).toHaveCount(0);
+				await expect(page.locator('[data-content-loader="lemma"]')).toBeHidden();
+
+				await page.goto(`/app/${lang}/bibliographia`);
+				await expect(page.locator('.noscript-note')).toContainText(
+					lang === 'pl' ? 'odwołania' : 'citations'
+				);
+				await expect(page.locator('.source summary').first()).toBeVisible();
+				await expect(page.locator('main .what')).toBeHidden();
+			}
+		);
+	}
 	for (const movement of ['canon', 'conclusio'] as const)
 		for (const [lang, pending] of languages) {
 			bare(
@@ -72,6 +98,7 @@ bare.describe('without scripting', () => {
 					await page.goto(`/app/${lang}/ordo/${movement}?dies=2026-07-12`);
 					await expect(page.locator('.day-open .choice-title')).toHaveText(pending);
 					await expect(page.locator('.day-open')).toBeDisabled();
+					await expect(page.locator('.day-open')).toBeHidden();
 					const notes = page.locator('.noscript-note');
 					await expect(
 						notes.filter({

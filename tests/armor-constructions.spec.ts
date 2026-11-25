@@ -87,10 +87,16 @@ for (const language of ['pl', 'en'] as const) {
 		await sources.locator('summary').click();
 		await expect(sources.locator('li')).toHaveCount(3);
 		await expect(sources).toContainText(
-			'Latin/Tempora/Pent21-0.txt [Lectio], marker25, title26, reference27, body28'
+			language === 'pl'
+				? 'Latin/Tempora/Pent21-0.txt [Lectio], znacznik w w. 25, tytuł w w. 26, odsyłacz w w. 27 i tekst w w. 28'
+				: 'Latin/Tempora/Pent21-0.txt [Lectio], marker 25, title 26, reference 27, body 28'
 		);
-		await expect(sources).toContainText('p. 408 · leaf n489 / PDF p. 490');
-		await expect(sources).toContainText('p. 409 · leaf n490 / PDF p. 491');
+		await expect(sources).toContainText(
+			language === 'pl' ? 's. 408 · obraz n489 / PDF, s. 490' : 'p. 408 · leaf n489 / PDF p. 490'
+		);
+		await expect(sources).toContainText(
+			language === 'pl' ? 's. 409 · obraz n490 / PDF, s. 491' : 'p. 409 · leaf n490 / PDF p. 491'
+		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n489/mode/1up"]'

@@ -113,7 +113,11 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('marker41, announcement42, reference43, complete body44');
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'znacznik w w. 41, zapowiedź w w. 42, odsyłacz w w. 43 i cały tekst w w. 44'
+				: 'marker 41, announcement 42, reference 43, complete body 44'
+		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n81/mode/1up"]'

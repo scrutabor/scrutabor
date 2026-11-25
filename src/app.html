@@ -159,6 +159,13 @@
 				document.head.appendChild(s);
 			})();
 		</script>
+		<noscript>
+			<style>
+				.requires-script {
+					display: none !important;
+				}
+			</style>
+		</noscript>
 		%sveltekit.head%
 	</head>
 	<!-- Every page is a complete static document. Full-document navigation

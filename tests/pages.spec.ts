@@ -220,6 +220,20 @@ test('the lemma page displays its liturgical headword', async ({ page }) => {
 	await expect(page.locator('h1')).toHaveText('Ioánnes');
 });
 
+test('preposition headings identify the selected form and keep its alternatives', async ({
+	page
+}) => {
+	for (const [lemma, entry] of [
+		['e', 'e'],
+		['ex', 'e, ex'],
+		['ab', 'a, ab']
+	]) {
+		await page.goto('/app/pl/lemma?l=' + lemma);
+		await expect(page.locator('h1')).toHaveText(lemma);
+		await expect(page.locator('.lexical-summary .head i')).toHaveText(entry);
+	}
+});
+
 test('a global lemma note does not pretend that a verse is present', async ({ page }) => {
 	await page.goto('/app/pl/lemma?l=intellectus');
 	await expect(page.locator('.note')).toHaveText(

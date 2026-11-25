@@ -1,8 +1,8 @@
 {
   "id":"proprium.d-n-iesu-christi-regis-offertorium",
   "language":"en",
-  "about":"The offertorium of the formulary “Christ the King” in the 1962 Roman Missal.",
+  "about":"The Offertory of the formulary “Christ the King” in the 1962 Roman Missal.",
   "seg":[
-    {"id":"s01","tr":"Ask of Me, and I will give You the nations as Your inheritance, and the bounds of the earth as Your possession.","g":["Ask","from","Me","and","will give","You","the nations",null,null,"and",null,null,"the ends","of the earth"],"a":[{"s":7,"n":2,"a":0,"g":"Your inheritance"},{"s":10,"n":2,"a":0,"g":"Your possession"}]}
+    {"id":"s01","tr":"Ask of Me, and I will give You the nations as Your inheritance, and the bounds of the earth as Your possession.","g":["Ask","from","Me","and","I will give","You","the nations",null,null,"and",null,null,"the ends","of the earth"],"a":[{"s":7,"n":2,"a":0,"g":"Your inheritance"},{"s":10,"n":2,"a":0,"g":"Your possession"}]}
   ]
 }

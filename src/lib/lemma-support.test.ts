@@ -53,7 +53,7 @@ function group(role = 'lexical_support', lemma = 'veneror') {
 		digital_item: 'item.lexicon',
 		role,
 		locator: {
-			section: 'entry 42',
+			section: 'Perseus TEI entry n42',
 			printed: 'p. 10',
 			scan: 'PDF page 12',
 			page_url: 'https://example.org/book#page=12'
@@ -105,7 +105,10 @@ describe('neutral dictionary support for word cards', () => {
 		expect(await load(lang)).toEqual([
 			{
 				title: 'Lexicon',
-				locator: 'entry 42 · p. 10 · PDF page 12',
+				locator: 'Perseus TEI entry n42 · p. 10 · PDF page 12',
+				...(lang === 'pl'
+					? { displayLocator: 'hasło TEI w\u00a0zbiorze Perseus: n42 · s. 10 · PDF, s. 12' }
+					: {}),
 				url: 'https://example.org/book#page=12'
 			}
 		]);

@@ -1,8 +1,8 @@
 {
   "id":"proprium.dominica-vi-post-pentecosten-graduale",
   "language":"pl",
-  "about":"Graduale formularza „6. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
+  "about":"Graduał formularza „6. Niedziela po Zesłaniu Ducha Świętego” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Zwróć się, Panie, choć trochę, i daj się ubłagać dla swoich sług. Panie, stałeś się dla nas schronieniem z pokolenia na pokolenie.","g":["Zwróć się","Panie","trochę","i","daj się ubłagać","nad","sługami","Twoimi","Panie","ucieczką",null,null,"dla nas","z","pokolenia","i","pokolenia"],"a":[{"s":10,"n":2,"a":0,"g":"stałeś się"}]}
+    {"id":"s01","tr":"Zwróć się, Panie, choć trochę, i daj się ubłagać dla swoich sług. Panie, stałeś się dla nas schronieniem z pokolenia na pokolenie.","g":["Zwróć się","Panie","trochę","i","daj się ubłagać","nad","sługami","Twoimi","Panie","ucieczką",null,null,"dla nas",null,null,null,null],"a":[{"s":10,"n":2,"a":0,"g":"stałeś się"},{"s":13,"n":4,"a":0,"g":"z pokolenia na pokolenie"}]}
   ]
 }

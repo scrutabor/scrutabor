@@ -51,14 +51,16 @@
 		     each-key does not degrade, it throws, on hydration, in
 		     production. -->
 			{#each citations as citation (`${citation.title}:${citation.locator}:${citation.url ?? ''}`)}
+				{@const locator = citation.displayLocator ?? citation.locator}
 				<li>
 					{#if citation.url}<a
 							href={citation.url}
 							target="_blank"
 							rel="external noopener"
 							lang="und">{citation.title}</a
-						>{:else}<cite lang="und">{citation.title}</cite>{/if}<span class="locator" lang="und"
-						>, {citation.locator}</span
+						>{:else}<cite lang="und">{citation.title}</cite>{/if}<span
+						class="locator"
+						lang={locator === citation.locator ? 'und' : lang}>, {locator}</span
 					>
 					{#each citation.notes ?? [] as note (note)}
 						<p class="citation-note">{lang === 'pl' ? bindProse(note) : note}</p>

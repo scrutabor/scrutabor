@@ -68,7 +68,7 @@
     {"id":"s063","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
     {"id":"s064","tr":"Heart of Jesus, pierced with a lance.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus","with a lance","pierced"]},
     {"id":"s065","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
-    {"id":"s066","tr":"Heart of Jesus, source of all consolation.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus","fountain","of the whole","consolation"]},
+    {"id":"s066","tr":"Heart of Jesus, source of all consolation.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus","fountain",null,null],"a":[{"s":3,"n":2,"a":1,"g":"of all consolation"}]},
     {"id":"s067","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
     {"id":"s068","tr":"Heart of Jesus, our life and resurrection.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus",null,null,null,null],"a":[{"s":2,"n":4,"a":0,"g":"our life and resurrection"}]},
     {"id":"s069","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},

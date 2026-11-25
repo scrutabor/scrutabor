@@ -89,7 +89,7 @@ for (const transport of ['', '@static-host '] as const) {
 		const href = (segments: string) =>
 			`/app/en/formularium/dominica-i-adventus?s=${slug}.${segments}#text-proprium-${slug}`;
 		// The bibliography cites p. 88 of this Missal under two scan locators: s02 under
-		// "PDF p. 100" and the re-verified s03–s04 under "PDF pages 100 (one-based)". Distinct
+		// "PDF p. 100" and the re-verified s03–s04 under "PDF page 100 (counting from 1)". Distinct
 		// locators are distinct evidence groups, so the uses are one verse and one verse range.
 		const uses = source.locator(
 			`.uses a[href^="/app/en/formularium/dominica-i-adventus?s=${slug}."]`
@@ -104,7 +104,7 @@ for (const transport of ['', '@static-host '] as const) {
 			});
 		await expect(group('s02').locator('.locator')).toHaveText('p. 88 · PDF p. 100');
 		await expect(group('s03-s04').locator('.locator')).toHaveText(
-			'p. 88 · PDF pages 100 (one-based)'
+			'p. 88 · PDF page 100 (counting from 1)'
 		);
 		await source.locator(`.uses a[href="${href('s03-s04')}"]`).click();
 		const selected = page.locator('.segment-selected');

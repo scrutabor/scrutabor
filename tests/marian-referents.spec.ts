@@ -88,9 +88,21 @@ for (const language of ['pl', 'en'] as const) {
 		const dialog = page.getByRole('dialog');
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('expanded conclusion w027–w047 and textual Amen w048');
-		await expect(sources).toContainText('heading 206, body 207 and $Per Dominum at line 208');
-		await expect(sources).toContainText('heading 95, conclusion 96, response 97');
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'rozwinięte zakończenie w027–w047 i Amen w tekście w048'
+				: 'the ending written out in full (w027–w047) and Amen (w048)'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 206, tekst w w. 207 i $Per Dominum w w. 208'
+				: 'heading 206, body 207 and $Per Dominum at line 208'
+		);
+		await expect(sources).toContainText(
+			language === 'pl'
+				? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
+				: 'heading 95, conclusion 96, response 97'
+		);
 		for (const leaf of ['n549', 'n22']) {
 			await expect(
 				sources.locator(
@@ -101,7 +113,12 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(
 			sources
 				.locator('li')
-				.filter({ hasText: 'heading 95, conclusion 96, response 97' })
+				.filter({
+					hasText:
+						language === 'pl'
+							? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
+							: 'heading 95, conclusion 96, response 97'
+				})
 				.locator('a')
 		).toHaveAttribute(
 			'href',

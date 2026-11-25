@@ -42,7 +42,7 @@ for (const language of ['pl', 'en'] as const) {
 				await expect(source).toHaveCount(1);
 				await expect(source).toBeVisible();
 				await expect(notes.locator('li').filter({ has: page.locator(rubricSource) })).toContainText(
-					'p. 225'
+					language === 'pl' ? 's. 225' : 'p. 225'
 				);
 				expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(
 					0

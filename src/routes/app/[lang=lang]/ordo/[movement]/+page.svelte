@@ -976,7 +976,7 @@
 					{/if}
 				{/if}
 				{#if partLoading}
-					<div class="part-loading">
+					<div class="part-loading requires-script">
 						<ContentLoader variant="text" />
 					</div>
 				{:else if (variantPending || e.kind === 'proper') && proper.failed}

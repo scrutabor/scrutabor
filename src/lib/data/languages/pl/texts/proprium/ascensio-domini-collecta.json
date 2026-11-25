@@ -1,9 +1,9 @@
 {
   "id":"proprium.ascensio-domini-collecta",
   "language":"pl",
-  "about":"Collecta formularza „Wniebowstąpienie Pańskie” w Mszale Rzymskim z 1962 roku.",
+  "about":"Kolekta formularza „Wniebowstąpienie Pańskie” w Mszale Rzymskim z 1962 roku.",
   "seg":[
-    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy, którzy wierzymy, że w dzisiejszym dniu Twój Jednorodzony, Odkupiciel nasz, wstąpił do nieba, sami również umysłem przebywali w niebie. Przez tegoż Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy","wszechmogący","Boże","abyśmy","którzy","w dzisiejszym","dniu","Jednorodzony","Twój","Odkupiciel","nasz","do","nieba","wstąpił","wierzymy","sami","także","myślą","w","niebie","przebywali","Przez","tegoż","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"]},
+    {"id":"s01","tr":"Spraw, prosimy, wszechmogący Boże, abyśmy, którzy wierzymy, że w dzisiejszym dniu Twój Jednorodzony, Odkupiciel nasz, wstąpił do nieba, sami również umysłem przebywali w niebie. Przez tegoż Pana naszego Jezusa Chrystusa, Syna Twojego, który z Tobą żyje i króluje w jedności Ducha Świętego, Bóg, na wieki wieków.","g":["Spraw","prosimy","wszechmogący","Boże","abyśmy",null,null,null,null,null,null,null,null,null,null,null,"sami","także","myślą","w","niebie","przebywali","Przez","tegoż","Pana","naszego","Jezusa","Chrystusa","Syna","Twojego","który","z Tobą","żyje","i","króluje","w","jedności","Ducha","Świętego","Bóg","na","wszystkie","wieki","wieków"],"a":[{"s":5,"n":11,"a":10,"g":"którzy wierzymy, że dziś Twój Jednorodzony, nasz Odkupiciel, wstąpił do nieba"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id":"proprium.septem-dolorum-beatae-mariae-virginis-sequentia",
   "language":"pl",
-  "about":"Sequentia formularza „Siedmiu Boleści Najświętszej Maryi Panny” w Mszale Rzymskim z 1962 roku.",
+  "about":"Sekwencja formularza „Siedmiu Boleści Najświętszej Maryi Panny” w Mszale Rzymskim z 1962 roku.",
   "seg":[
     {"id":"s01","tr":"Stała Matka bolesna przy Krzyżu, we łzach, gdy wisiał Syn.","g":["Stała","Matka","bolejąca","przy","Krzyżu","płacząca","gdy","wisiał","Syn"]},
     {"id":"s02","tr":"Jej duszę jęczącą, zasmuconą i bolejącą przeszył miecz.","g":["Jej","duszę","jęczącą","zasmuconą","i","bolejącą","przeszył","miecz"]},
@@ -13,13 +13,13 @@
     {"id":"s08","tr":"Ujrzała swego słodkiego syna, opuszczonego w konaniu, gdy oddał ducha.","g":["Widziała","swego","słodkiego","Syna","umierającego","opuszczonego","gdy","oddał","ducha"]},
     {"id":"s09","tr":"O matko, źródło miłości, spraw, abym poczuł siłę boleści, bym z tobą trwał w żałobie.","g":["Nuże","matko","źródło","miłości","mi","odczuć","moc","bólu","spraw","abym","z tobą","bolał"]},
     {"id":"s10","tr":"Spraw, aby moje serce płonęło w miłowaniu Chrystusa Boga, abym Mu się podobał.","g":["Spraw","aby","pałało","serce","moje","w","miłowaniu","Chrystusa","Boga","abym","Jemu","się podobał"]},
-    {"id":"s11","tr":"Święta Matko, uczyń to: rany Ukrzyżowanego wyryj mocno w moim sercu.","g":["Święta","Matko","to","uczyń","Ukrzyżowanego","wyryj","rany","sercu","moim","mocno"]},
+    {"id":"s11","tr":"Święta Matko, uczyń to: rany Ukrzyżowanego wyryj mocno w moim sercu.","g":["Święta","Matko","to","uczyń","Ukrzyżowanego","wyryj","rany","w sercu","moim","mocno"]},
     {"id":"s12","tr":"Męki twojego zranionego syna, który tak zechciał za mnie cierpieć, podziel ze mną.","g":["Twego","Syna","zranionego","tak","raczącego","za","mnie","cierpieć","męki","ze mną","podziel"]},
     {"id":"s13","tr":"Spraw, abym z tobą płakał z miłością, współcierpiał z Ukrzyżowanym, dopóki będę żył.","g":["Spraw","mi","z tobą","pobożnie","płakać","z Ukrzyżowanym","współboleć","dopóki","ja","będę żył"]},
     {"id":"s14","tr":"Pragnę stać z tobą przy Krzyżu i przyłączyć się do ciebie w lamencie.","g":["Przy","Krzyżu","z tobą","stać","i","siebie","z tobą","zjednoczyć","w","płaczu","pragnę"]},
     {"id":"s15","tr":"Dziewico dziewic przesławna, nie bądź już dla mnie surowa: spraw, abym z tobą lamentował.","g":["Dziewico","dziewic","przesławna","dla mnie","już","nie","bądź","gorzka","spraw","mi","z tobą","opłakiwać"]},
     {"id":"s16","tr":"Spraw, abym nosił śmierć Chrystusa, spraw, abym był uczestnikiem Męki i rozpamiętywał rany.","g":["Spraw","abym","niósł","Chrystusa","śmierć","męki","uczyń","uczestnikiem","i","rany","rozpamiętywał"]},
-    {"id":"s17","tr":"Spraw, aby rany mnie zraniły, spraw, abym się upoił Krzyżem i krwią Syna.","g":["Spraw","mnie","ranami","być zranionym","spraw","mnie","Krzyżem","być upojonym","i","krwią","Syna"]},
+    {"id":"s17","tr":"Spraw, aby rany mnie zraniły, spraw, abym się upoił Krzyżem i krwią Syna.","g":[null,null,null,null,null,null,null,null,null,null,null],"a":[{"s":0,"n":4,"a":0,"g":"Spraw, abym został zraniony Jego ranami"},{"s":4,"n":7,"a":0,"g":"spraw, abym upoił się Krzyżem i krwią Syna"}]},
     {"id":"s18","tr":"Abym nie płonął objęty płomieniami, niech przez ciebie, Dziewico, będę obroniony w dniu sądu.","g":["płomieniami","abym nie","płonął","podpalony","Przez","ciebie","Dziewico",null,null,"w","dniu","sądu"],"a":[{"s":7,"n":2,"a":1,"g":"obym był obroniony"}]},
     {"id":"s19","tr":"Chryste, gdy przyjdzie mi stąd odejść, daj, abym przez Matkę doszedł do palmy zwycięstwa.","g":["Chryste","gdy","trzeba","stąd","odejść","daj","przez","Matkę","mi","dojść","do","palmy","zwycięstwa"]},
     {"id":"s20","tr":"Gdy ciało umrze, spraw, aby duszy dana została chwała raju. Amen. Alleluja.","g":["Kiedy","ciało","umrze","spraw","aby","duszy","została dana","raju","chwała","Amen","Alleluja"]}

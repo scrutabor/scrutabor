@@ -44,9 +44,23 @@
      site's pages get the same honesty. -->
 <noscript>
 	<p class="noscript-note">
-		{lang === 'pl'
-			? 'Możesz czytać bez JavaScriptu. Włącz go, aby zmienić dzień, rolę, tryb czytania albo wielkość pisma lub otworzyć analizę słowa.'
-			: 'You can read without JavaScript. Turn it on to change the day, your role at Mass, the reading mode or the text size, or to open a word analysis.'}
+		{#if rest === '/search'}
+			{lang === 'pl'
+				? 'Włącz JavaScript, aby wyszukiwać w modlitewniku.'
+				: 'Turn on JavaScript to search the prayer book.'}
+		{:else if rest === '/lemma'}
+			{lang === 'pl'
+				? 'Włącz JavaScript, aby otworzyć hasło słownikowe.'
+				: 'Turn on JavaScript to open a dictionary entry.'}
+		{:else if rest === '/bibliographia'}
+			{lang === 'pl'
+				? 'Spis źródeł można czytać bez JavaScriptu. Włącz go, aby zobaczyć odwołania przy poszczególnych źródłach.'
+				: 'You can read the list of sources without JavaScript. Turn it on to see the citations for each source.'}
+		{:else}
+			{lang === 'pl'
+				? 'Możesz czytać bez JavaScriptu. Włącz go, aby zmienić dzień, rolę, tryb czytania albo wielkość pisma lub otworzyć analizę słowa.'
+				: 'You can read without JavaScript. Turn it on to change the day, your role at Mass, the reading mode or the text size, or to open a word analysis.'}
+		{/if}
 	</p>
 </noscript>
 

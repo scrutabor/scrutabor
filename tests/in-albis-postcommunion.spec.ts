@@ -132,7 +132,11 @@ for (const language of ['pl', 'en'] as const) {
 		);
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		for (const locator of ['body 53 and reference 54', 'conclusion 96, response 97', 'RG 115 a']) {
+		for (const locator of [
+			language === 'pl' ? 'tekst w w. 53 i odsyłacz w w. 54' : 'body 53 and reference 54',
+			language === 'pl' ? 'zakończenie w w. 96, odpowiedź w w. 97' : 'conclusion 96, response 97',
+			'RG 115 a'
+		]) {
 			await expect(sources).toContainText(locator);
 		}
 		for (const leaf of [416, 22]) {

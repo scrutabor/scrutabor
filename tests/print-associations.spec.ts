@@ -44,7 +44,7 @@ test('internal voice stays with its complete short utterance on paper @reader', 
 		),
 		initial: node.querySelector('.initial')?.textContent ?? null
 	}));
-	expect(voice.label).toBe('silently');
+	expect(voice.label).toBe('audible only to the speaker');
 	expect(voice.words).toHaveLength(11);
 	expect(voice.words[0]).toBe('ut');
 	// Its long neighbor must not inherit the bounded short-row policy.

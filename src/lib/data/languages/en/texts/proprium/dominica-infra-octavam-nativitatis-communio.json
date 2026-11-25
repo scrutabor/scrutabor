@@ -1,7 +1,7 @@
 {
   "id":"proprium.dominica-infra-octavam-nativitatis-communio",
   "language":"en",
-  "about":"The communio of the formulary “Sunday within the Octave of the Nativity of the Lord” in the 1962 Roman Missal.",
+  "about":"The Communion antiphon of the formulary “Sunday within the Octave of the Nativity of the Lord” in the 1962 Roman Missal.",
   "seg":[
     {"id":"s01","tr":"Take the Child and His Mother, and go into the land of Israel; for they are dead who sought the life of the Child.","g":["Take","the Child","and",null,null,"and","go","into","the land","of Israel",null,null,null,"who","sought","the life","of the Child"],"a":[{"s":3,"n":2,"a":0,"g":"His Mother"},{"s":10,"n":3,"a":0,"g":"for they are dead"}]}
   ]

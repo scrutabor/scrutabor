@@ -181,9 +181,11 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(dialog).toContainText(language === 'pl' ? 'Epistoła' : 'The Epistle');
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText('p. 726');
+		await expect(sources).toContainText(language === 'pl' ? 's. 726' : 'p. 726');
 		await expect(sources).toContainText('Latin/Sancti/11-02m3.txt');
-		await expect(sources).toContainText('direct body line 19');
+		await expect(sources).toContainText(
+			language === 'pl' ? 'tekst bezpośrednio w w. 19' : 'direct body line 19'
+		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n807/mode/1up"]'

@@ -166,9 +166,9 @@ test('the Baptist Secret preserves due honor and both acts before the Christ con
 }) => {
 	await page.goto('/app/en/formularium/nativitas-sancti-ioannis-baptistae');
 	await setHelp(page, 2);
-	const secret = page.locator('.translation').filter({ hasText: 'We heap Your altar' });
+	const secret = page.locator('.translation').filter({ hasText: 'We heap Your altars' });
 	await expect(secret).toContainText(
-		'celebrating with due honor the birth of him who both foretold the coming of the Savior of the world and made His presence known: our Lord Jesus Christ, Your Son. He lives and reigns with You'
+		'duly honoring the birth of the one who foretold the coming of Your Son, our Lord Jesus Christ, the Savior of the world, and pointed Him out when He came. He lives and reigns with You'
 	);
 });
 

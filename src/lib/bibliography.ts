@@ -7,6 +7,7 @@ import {
 import type { Citation } from './corpus';
 import type { Lang } from './i18n';
 import { remember } from './remember';
+import { formatSourceLocator } from './source-locator';
 import { lemmaHref } from './lemma-url';
 import { textHref } from './content-url';
 
@@ -170,6 +171,7 @@ export interface BibliographyUse {
 }
 
 export interface BibliographyDetailGroup {
+	displayLocator?: string;
 	key: string;
 	role: BibliographyRole;
 	printed?: string;
@@ -414,8 +416,12 @@ export async function loadBibliographySource(
 	return [...groups.entries()].map(([key, group]) => {
 		const item = items.get(group.source.digital_item);
 		if (!item) throw new Error(`${group.source.digital_item} has no catalogue record`);
+		const { section, printed, scan } = group.source.locator;
+		const raw = [section, printed, scan].filter(Boolean).join(' · ');
+		const displayLocator = formatSourceLocator(raw, lang);
 		return {
 			key,
+			...(displayLocator === raw ? {} : { displayLocator }),
 			role: group.source.role,
 			printed: group.source.locator.printed,
 			scan: group.source.locator.scan,
@@ -428,7 +434,14 @@ export async function loadBibliographySource(
 	});
 }
 
+/** The original locator remains the key for grouping and links. */
+export function citationForLanguage(citation: Citation, lang: Lang): Citation {
+	const displayLocator = formatSourceLocator(citation.locator, lang);
+	return displayLocator === citation.locator ? citation : { ...citation, displayLocator };
+}
+
 function evidenceCitation(
+	lang: Lang,
 	group: EvidenceSourceGroup,
 	editions: Map<string, EditionRecord>,
 	items: Map<string, DigitalItemRecord>
@@ -440,14 +453,17 @@ function evidenceCitation(
 	const notes = [
 		...new Set(group.entries.flatMap(({ reader_note }) => (reader_note ? [reader_note] : [])))
 	];
-	return {
-		title: edition.title,
-		...(notes.length ? { notes } : {}),
-		locator: [group.locator.section, group.locator.printed, group.locator.scan]
-			.filter(Boolean)
-			.join(' · '),
-		url: group.locator.page_url ?? item.scan_url ?? item.record_url
-	};
+	return citationForLanguage(
+		{
+			title: edition.title,
+			...(notes.length ? { notes } : {}),
+			locator: [group.locator.section, group.locator.printed, group.locator.scan]
+				.filter(Boolean)
+				.join(' · '),
+			url: group.locator.page_url ?? item.scan_url ?? item.record_url
+		},
+		lang
+	);
 }
 
 export function uniqueCitations(citations: Citation[]): Citation[] {
@@ -461,10 +477,10 @@ export function uniqueCitations(citations: Citation[]): Citation[] {
 	return [...found.values()];
 }
 
-function citationMapper(catalog: Catalog): (group: EvidenceSourceGroup) => Citation {
+function citationMapper(lang: Lang, catalog: Catalog): (group: EvidenceSourceGroup) => Citation {
 	const editions = new Map(catalog.editions.map((record) => [record.id, record]));
 	const items = new Map(catalog.digital_items.map((record) => [record.id, record]));
-	return (group) => evidenceCitation(group, editions, items);
+	return (group) => evidenceCitation(lang, group, editions, items);
 }
 
 function lemmaSourceGroups(index: BibliographyIndex, lemma: string): EvidenceSourceGroup[] {
@@ -482,7 +498,7 @@ export async function loadLemmaSupport(lang: Lang, lemma: string): Promise<Citat
 		loadResource<Catalog>(paths.catalog),
 		loadResource<BibliographyIndex>(paths.index)
 	]);
-	const cite = citationMapper(catalog);
+	const cite = citationMapper(lang, catalog);
 	return uniqueCitations(
 		lemmaSourceGroups(index, lemma)
 			.filter(({ role }) => role === 'lexical_support' || role === 'grammatical_support')
@@ -523,7 +539,7 @@ export async function lemmataWithSupport(lang: Lang): Promise<Set<string>> {
 /** Dictionary-level support is not evidence for an entire prayer or translation. */
 export async function loadLemmaBibliography(lang: Lang, lemma: string): Promise<Citation[]> {
 	const { catalog, index } = await resources(lang);
-	const cite = citationMapper(catalog);
+	const cite = citationMapper(lang, catalog);
 	return uniqueCitations(lemmaSourceGroups(index, lemma).map(cite));
 }
 
@@ -548,10 +564,10 @@ export async function loadTextBibliography(
 	]);
 	return {
 		context: uniqueCitations(
-			(neutral?.source_groups ?? []).map((group) => evidenceCitation(group, editions, items))
+			(neutral?.source_groups ?? []).map((group) => evidenceCitation(lang, group, editions, items))
 		),
 		translation: uniqueCitations(
-			(language?.source_groups ?? []).map((group) => evidenceCitation(group, editions, items))
+			(language?.source_groups ?? []).map((group) => evidenceCitation(lang, group, editions, items))
 		)
 	};
 }

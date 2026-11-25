@@ -8,6 +8,7 @@ import parseTable from './data/tables/morphology.json';
 import headsData from './data/lexicon/heads.json';
 import { LANGS, type Lang } from './i18n';
 import { bindProse } from './polish';
+import { citationForLanguage } from './bibliography';
 import { remember } from './remember';
 import { validateParticipationPerformance } from './participation-performance';
 import {
@@ -59,6 +60,7 @@ export interface Analysis {
 export interface Citation {
 	title: string;
 	locator: string;
+	displayLocator?: string;
 	url?: string;
 	notes?: string[];
 }
@@ -320,9 +322,19 @@ export function expandDocument(
 	languageCitations: (Citation | null)[]
 ): TextEntry {
 	const shared = (indices?: number[]) =>
-		indices?.map((index) => at(SHARED_CITATIONS, index, 'shared citations'));
+		indices?.map((index) =>
+			citationForLanguage(
+				at(SHARED_CITATIONS, index, 'shared citations'),
+				languageArtifact.language
+			)
+		);
 	const localized = (indices?: number[]) =>
-		indices?.map((index) => at(languageCitations, index, `${languageArtifact.language} citations`));
+		indices?.map((index) =>
+			citationForLanguage(
+				at(languageCitations, index, `${languageArtifact.language} citations`),
+				languageArtifact.language
+			)
+		);
 
 	const text = expandCoreMetadata(artifact);
 
@@ -431,7 +443,10 @@ async function loadLanguageResources(language: Lang) {
 				Object.entries(raw).map(([lemma, value]) => {
 					const entry = { ...value };
 					const noteCitations = LEXICON.lemmata[lemma]?.localization?.note_citations;
-					if (noteCitations) entry.note_citations = noteCitations;
+					if (noteCitations)
+						entry.note_citations = noteCitations.map((citation) =>
+							citationForLanguage(citation, language)
+						);
 					return [lemma, entry];
 				})
 			);

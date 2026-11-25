@@ -256,8 +256,14 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 				await expect(
 					sources.locator('li').filter({ has: page.locator(conclusionLeaf) })
 				).toHaveText([
-					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, Rubricae generales 115 d, terminal Amen · p. xviii · leaf n23 / PDF p. 24',
-					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, Rubricae generales, 115 d · p. xviii · leaf n23 / PDF p. 24'
+					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, ' +
+						(language === 'pl'
+							? 'Rubricae generales 115 d, końcowe Amen · s. xviii · obraz n23 / PDF, s. 24'
+							: 'Rubricae generales 115 d, terminal Amen · p. xviii · leaf n23 / PDF p. 24'),
+					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, ' +
+						(language === 'pl'
+							? 'Rubricae generales, 115 d · s. xviii · obraz n23 / PDF, s. 24'
+							: 'Rubricae generales, 115 d · p. xviii · leaf n23 / PDF p. 24')
 				]);
 			} else {
 				await expect(sources.locator(conclusionLeaf)).toHaveCount(1);
@@ -276,7 +282,11 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 				).toHaveCount(0);
 			}
 			if (formulary === 'dominica-vi-post-pentecosten') {
-				await expect(sources).toContainText('Dominica VI post Pentecosten, Oratio (continued)');
+				await expect(sources).toContainText(
+					language === 'pl'
+						? 'Dominica VI post Pentecosten, Oratio (dalszy ciąg)'
+						: 'Dominica VI post Pentecosten, Oratio (continued)'
+				);
 				await expect(
 					sources.locator(
 						'a[href="https://archive.org/details/missale-romanum-1962/page/n459/mode/1up"]'

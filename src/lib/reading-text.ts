@@ -41,24 +41,28 @@ export function litanyRows(segments: Segment[]): LitanyRow[] {
 
 /** One prayer-level list, grouped by source while retaining every locator. */
 export function collectTranslationCitations(segments: Segment[], gloss: GlossDocument): Citation[] {
-	const grouped = new Map<string, { citation: Citation; locators: string[] }>();
+	const grouped = new Map<string, { citation: Citation; locators: Map<string, string> }>();
 
 	for (const segment of segments) {
 		for (const citation of gloss.segments[segment.id]?.translation_citations ?? []) {
 			const key = `${citation.title}\u0000${citation.url ?? ''}`;
 			const found = grouped.get(key);
 			if (!found) {
-				grouped.set(key, { citation, locators: [citation.locator] });
-			} else if (!found.locators.includes(citation.locator)) {
-				found.locators.push(citation.locator);
+				grouped.set(key, {
+					citation,
+					locators: new Map([[citation.locator, citation.displayLocator ?? citation.locator]])
+				});
+			} else {
+				found.locators.set(citation.locator, citation.displayLocator ?? citation.locator);
 			}
 		}
 	}
 
-	return [...grouped.values()].map(({ citation, locators }) => ({
-		...citation,
-		locator: locators.join('; ')
-	}));
+	return [...grouped.values()].map(({ citation, locators }) => {
+		const locator = [...locators.keys()].join('; ');
+		const displayLocator = [...locators.values()].join('; ');
+		return { ...citation, locator, ...(displayLocator === locator ? {} : { displayLocator }) };
+	});
 }
 
 /** A prayer-level description is valid only for a uniform, complete relationship. */

@@ -70,7 +70,7 @@ it.each(['pl', 'en'] as const)(
 				]
 			: [
 					'without a deacon and subdeacon',
-					'silently',
+					'in a voice only he can hear',
 					'sings the Gospel himself',
 					'separate rite',
 					'Selecting sung Mass alone',

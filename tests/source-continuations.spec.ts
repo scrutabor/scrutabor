@@ -5,23 +5,24 @@ const subjects = [
 		day: 'sancti-thomae-apostoli',
 		part: 'evangelium',
 		leaves: [416, 521, 522],
-		locators: ['p. 335', 'p. 440', 'p. 441']
+		pages: [335, 440, 441]
 	},
 	{
 		day: 'maternitas-beatae-mariae-virginis',
 		part: 'secreta',
 		leaves: [22, 23, 782],
-		locators: ['p. xvii', 'p. xviii', 'p. 701']
+		pages: ['xvii', 'xviii', 701]
 	},
 	{
 		day: 'omnium-sanctorum',
 		part: 'secreta',
 		leaves: [22, 800],
-		locators: ['p. xvii', 'p. 719']
+		pages: ['xvii', 719]
 	}
 ] as const;
 
 for (const language of ['pl', 'en'] as const) {
+	const pageLabel = language === 'pl' ? 's.' : 'p.';
 	for (const subject of subjects) {
 		test(`${language} ${subject.day} discloses source continuations separately`, async ({
 			page
@@ -41,7 +42,8 @@ for (const language of ['pl', 'en'] as const) {
 					)
 				).toHaveCount(1);
 			}
-			for (const locator of subject.locators) await expect(notes).toContainText(locator);
+			for (const printedPage of subject.pages)
+				await expect(notes).toContainText(`${pageLabel} ${printedPage}`);
 			await page.keyboard.press('Escape');
 			await expect(dialog).toHaveCount(0);
 		});
@@ -67,7 +69,7 @@ for (const language of ['pl', 'en'] as const) {
 					await expect(link).toHaveCount(1);
 					await expect(link).toBeVisible();
 					await expect(notes.locator('li').filter({ has: page.locator(selector) })).toContainText(
-						`p. ${printedPage}`
+						`${pageLabel} ${printedPage}`
 					);
 				}
 				expect(await page.evaluate(() => document.documentElement.scrollWidth - innerWidth)).toBe(
@@ -93,7 +95,7 @@ for (const language of ['pl', 'en'] as const) {
 				await expect(link).toHaveCount(1);
 				await expect(link).toBeVisible();
 				await expect(notes.locator('li').filter({ has: page.locator(selector) })).toContainText(
-					`p. ${printedPage}`
+					`${pageLabel} ${printedPage}`
 				);
 			}
 		});

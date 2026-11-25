@@ -1,7 +1,7 @@
 {
   "id":"proprium.dominica-i-passionis-collecta",
   "language":"en",
-  "about":"The collecta of the formulary “First Passion Sunday” in the 1962 Roman Missal.",
+  "about":"The Collect of the formulary “First Passion Sunday” in the 1962 Roman Missal.",
   "seg":[
     {"id":"s01","tr":"We beseech You, almighty God, look graciously upon Your household, that by Your bounty it may be governed in body and by Your protection guarded in mind. Through our Lord Jesus Christ, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["We beseech","almighty","God",null,null,"graciously","look upon","that",null,null,"it may be governed","in","body","and",null,null,"it may be guarded","in","mind","Through",null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":3,"n":2,"a":0,"g":"Your household"},{"s":8,"n":2,"a":1,"g":"through Your bounty"},{"s":14,"n":2,"a":1,"g":"by Your protection"},{"s":20,"n":2,"a":0,"g":"our Lord"},{"s":22,"n":2,"a":0,"g":"Jesus Christ"},{"s":24,"n":2,"a":0,"g":"Your Son"},{"s":26,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":33,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":36,"n":4,"a":2,"g":"forever and ever"}],"ex":{"w006":"The adjective describes God, the unexpressed subject of “réspice” (w007): look upon Your household, being gracious. A predicate of the subject of an imperative stands in the nominative."}},
     {"id":"s02","tr":"Amen.","g":["Amen"]}

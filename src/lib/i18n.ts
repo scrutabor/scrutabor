@@ -801,14 +801,14 @@ const MESSAGES: Record<Lang, Messages> = {
 		markLegendNote:
 			'A mark shows where the voice changes and appears again after a rubric. The same voice continues until the next mark.',
 		markResponsum: 'Respónsum — a response or chant by the choir',
-		voices: { submissa: 'in a low voice', secreto: 'silently', cantus: 'sung' },
+		voices: { submissa: 'in a low voice', secreto: 'audible only to the speaker', cantus: 'sung' },
 		verseAria: (n) => `link to verse ${n}`,
 		roleLabel: 'part',
 		massLabel: 'Mass',
 		massForms: { cantu: 'sung', lecta: 'low' },
 		everyone: 'everyone answers',
 		mayJoin: 'the faithful may join',
-		quietPriest: 'the priest says it silently.',
+		quietPriest: 'the priest says it in a low voice.',
 		choirSings: 'the choir sings.',
 		sings: 'sings.',
 		participationPerformance:
@@ -830,7 +830,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		// The article belongs in the sentence underneath, where it reads as
 		// English rather than as three repetitions of "the".
 		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
-		quietCollapsed: 'the priest prays silently',
+		quietCollapsed: 'the priest prays in a low voice',
 		quietReveal: 'show',
 		quietHide: 'hide',
 		quietAside: 'the priest’s prayer',

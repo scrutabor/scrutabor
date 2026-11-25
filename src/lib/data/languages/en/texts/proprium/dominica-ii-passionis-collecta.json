@@ -1,7 +1,7 @@
 {
   "id":"proprium.dominica-ii-passionis-collecta",
   "language":"en",
-  "about":"The collecta of the formulary “Palm Sunday” in the 1962 Roman Missal.",
+  "about":"The Collect of the formulary “Palm Sunday” in the 1962 Roman Missal.",
   "seg":[
     {"id":"s01","tr":"Almighty, eternal God, who caused our Savior to take flesh and undergo the cross, that mankind might imitate His example of humility, graciously grant that we may be worthy both to learn from His patience and to share in His resurrection. Through the same Jesus Christ, our Lord, Your Son, who lives and reigns with You in the unity of the Holy Spirit, God, forever and ever.","g":["Almighty","eternal","God","who",null,null,"to","imitate",null,null,null,null,null,null,null,null,null,null,"grant","graciously","that",null,null,null,null,null,null,null,null,null,"Through",null,null,null,null,null,null,null,null,null,null,null,null,"in","the unity",null,null,"God",null,null,null,null],"a":[{"s":4,"n":2,"a":1,"g":"for the human race"},{"s":8,"n":2,"a":1,"g":"the example of humility"},{"s":10,"n":8,"a":7,"g":"caused our Savior to take flesh and to undergo the Cross"},{"s":21,"n":9,"a":8,"g":"we may be worthy both to learn from His patience and to share in His resurrection"},{"s":31,"n":5,"a":1,"g":"this same Jesus Christ, our Lord"},{"s":36,"n":2,"a":0,"g":"Your Son"},{"s":38,"n":5,"a":2,"g":"who lives and reigns with You"},{"s":45,"n":2,"a":0,"g":"of the Holy Spirit"},{"s":48,"n":4,"a":2,"g":"forever and ever"}]},
     {"id":"s02","tr":"Amen.","g":["Amen"]}
