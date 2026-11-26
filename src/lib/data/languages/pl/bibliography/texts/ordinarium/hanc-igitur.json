@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 57",
-    "scan": "PDF s. 60",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 57",
+    "scan": "PDF, s. 60",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=60"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa Pana naszego. Amen.”"
+     "claim": "Po Hanc igitur modlitewnik podaje pełne zakończenie „Przez Chrystusa, Pana naszego. Amen”."
     },
     {
      "id": "use.pl.88b916a97f83e7881014",
@@ -36,7 +36,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „uporządkował nasze dni w Twoim pokoju oraz rozkazał wyrwać nas od wiecznego potępienia i zaliczyć do grona Twoich wybranych.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

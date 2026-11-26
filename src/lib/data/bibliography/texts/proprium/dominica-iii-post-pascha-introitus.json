@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc3-0.txt [Introitus] (lines 12-17); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)"
+    "section": "web/www/missa/Latin/Tempora/Pasc3-0.txt [Introitus] (lines 12-17); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc3-0.txt#L11-L13",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc3-0.txt#L11-L13"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc3-0.txt#L15-L17"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -36,10 +51,10 @@
       "kind": "word",
       "word": "w034"
      },
-     "claim": "This same-edition common passage supplies the full literal w034–w053 expansion of the proper page’s Glória Patri cue. The following repeated antiphon comes from the proper page’s Iubiláte cue, not from the Ordo’s different antiphon. Reuse of the wording does not import the Ordo role distribution or constitute an independent edition."
+     "claim": "The common Ordo passage supplies the twenty words at w034–w053. It prints semper: et, while w048 of the selected Introit reads semper, before et. The subsequent repeated antiphon comes from the proper Iubiláte cue. The Ordo’s division of voices and its different antiphon do not accompany this reuse."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

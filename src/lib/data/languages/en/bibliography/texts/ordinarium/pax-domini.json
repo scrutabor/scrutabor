@@ -7,9 +7,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 119",
-    "scan": "DJVU physical pages 132 (one-based); indices 131 (zero-based)"
+    "scan": "DjVu p. 132",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=132"
    },
    "entries": [
+    {
+     "id": "use.en.5db11c9f54aca09f8c0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The source prints “May the peace of the Lord be always with you.” The current text transposes “be always” to “always be”, retaining the same petition."
+    },
     {
      "id": "use.en.71621e7fbecfd9cbee02",
      "address": {
@@ -19,27 +28,7 @@
      "claim": "Historical English source expression: “And with thy spirit.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 119",
-    "scan": "scan p. 132"
-   },
-   "entries": [
-    {
-     "id": "use.en.5db11c9f54aca09f8c0f",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "May the peace of the Lord always be with you."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

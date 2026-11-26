@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, 123, 226",
     "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
-    "section": "RG115a; w021–w041 and Amen w042 only; proper body excluded; stress/punctuation controls, not a contiguous occasion paragraph"
+    "section": "RG115a; w021–w041 and Amen w042 only; proper body excluded; stress/punctuation controls, not a contiguous occasion paragraph",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "This setting’s RG115a supplies the complete Father-directed conclusion and response w021–w041 and Amen w042 only; proper body excluded. The literal RG115a list has tuum, qui and Amen; and is unaccented. Same-edition p.123 supports selected common stress and tuum: Qui, not the selected Deus comma; that comma is printed in RG115a. The p.226 terminal supports duration stress and the separate Amen period. These controls do not establish actors, singing or the distribution of conclusions in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 537",
-    "scan": "PDF physical618 / leaf n617",
-    "section": "05-26 S. Philippi Nerii Confessoris; postcommunio 2656; proper w001–w020 only; supplied conclusion and Amen excluded",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n617/mode/1up"
+    "scan": "PDF p. 618",
+    "section": "Die 26 maii. S. Philippi Nerii Conf. Postcommunio, n. 2656.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=618"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the complete 20-word postcommunio proper w001–w020, followed by the literal local cue “Per Dóminum.” The supplied complete conclusion and Amen are not printed at this proper locus. This separately set manifestation corroborates one received tradition, not independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 import { interlinearGeometry } from './interlinear-geometry';
 
@@ -123,21 +124,9 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 22 i odsyłacz @Sancti/05-08 w w. 23'
-				: 'heading 22 and @Sancti/05-08 reference 23'
-		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 19, tekst w w. 20 i polecenie $Per Dominum w w. 21'
-				: 'heading 19, body 20, $Per Dominum command 21'
-		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
-				: 'heading 95, conclusion 96, response 97'
-		);
+		await expectSourcePassage(sources, language, 'Oratio', 'Missa/Sancti/09-29.txt', 22, 23);
+		await expectSourcePassage(sources, language, 'Oratio', 'Missa/Sancti/05-08.txt', 19, 21);
+		await expectSourcePassage(sources, language, 'Per Dominum', 'Missa/Ordo/Prayers.txt', 95, 97);
 		for (const leaf of ['n765', 'n22', 'n38', 'n39', 'n57']) {
 			await expect(
 				sources.locator(

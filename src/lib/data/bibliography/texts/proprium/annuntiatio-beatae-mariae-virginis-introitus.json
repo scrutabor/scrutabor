@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-horae.44667ff.doc10b",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "horas/Latin/Commune/C10b.txt lines 18-24"
+    "section": "horas/Latin/Commune/C10b.txt lines 18-24",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10b.txt#L18-L24"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10b.txt#L18-L24"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "missa/Latin/Ordo/Prayers.txt lines 12-14"
+    "section": "missa/Latin/Ordo/Prayers.txt lines 12-14",
+    "passages": [
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
    },
    "entries": [
     {
@@ -35,14 +49,21 @@
      "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "missa/Latin/Sancti/03-25.txt [Introitus]; exact inherited dependencies declared separately"
+    "section": "missa/Latin/Sancti/03-25.txt [Introitus], 10–11",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L10-L11"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L10-L11"
    },
    "entries": [
     {
@@ -50,10 +71,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
+     "claim": "The feast file gives the reference for the Introit. The Common supplies the chant."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -74,6 +95,28 @@
     }
    ],
    "verified_on": "2026-09-19"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "Dominica I Adventus, Introitus",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.annuntiatio-beatae-mariae-virginis-introitus.gloria-formula-and-repetition.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w032"
+     },
+     "claim": "The first Sunday of Advent prints the common doxology in full. Its rubric directs repetition of the Introit antiphon throughout the year. The words of this particular repeated antiphon are supplied by its proper."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

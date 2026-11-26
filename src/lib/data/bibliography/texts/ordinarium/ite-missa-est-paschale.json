@@ -27,7 +27,8 @@
    "role": "rubric_control",
    "locator": {
     "printed": "Rubricae generales 507 b, p. XXXIII",
-    "scan": "leaf n038 / PDF p. 39"
+    "scan": "leaf n038 / PDF p. 39",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -36,7 +37,7 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Double Alleluia belongs to the Vigil and to Masses De Tempore within the Easter octave through Saturday, not Low Sunday or a coincident sanctoral Mass."
+     "claim": "Rubricae generales 507 b prescribes two Alleluias at the dismissal and response in Masses of the temporal cycle within the octave of Easter. The Vigil has its own explicit direction and chant on p. 218. The dismissal tones on p. 316 specify the period from the Vigil through Saturday."
     }
    ],
    "verified_on": "2026-10-13"
@@ -47,7 +48,8 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 215, final greeting, dismissal and response",
-    "scan": "PDF page index 295 / physical page 296"
+    "scan": "PDF page index 295 / physical page 296",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=296"
    },
    "entries": [
     {
@@ -58,7 +60,7 @@
      "claim": "The source prints the complete 15-word final greeting, doubled-Alleluia dismissal and response. The sung dismissal rubric expressly permits the deacon or the priest; it does not establish one sole performer."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

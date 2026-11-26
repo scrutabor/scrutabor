@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, test } from './fixtures';
 
 const formulary = 'dominica-vi-post-pentecosten';
@@ -89,14 +90,14 @@ for (const reading of readings) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			reading.language === 'pl' ? 'całe czytanie w w. 28' : 'complete reading at line 28'
+		await expectSourcePassage(
+			sources,
+			reading.language,
+			'Lectio',
+			'Missa/Tempora/Pent06-0.txt',
+			28
 		);
-		await expect(sources).toContainText(
-			reading.language === 'pl'
-				? 'z wyłączeniem zapowiedzi w w. 26'
-				: 'announcement at line 26 excluded'
-		);
+		await expect(sources.locator('a.source-passage')).toHaveCount(1);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n460/mode/1up"]'

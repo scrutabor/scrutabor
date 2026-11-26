@@ -6,7 +6,26 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Sancti/05-31 [Introitus], missa/Latin/Sancti/05-31 source lines 11-15, with &Gloria from Ordo/Prayers [Gloria] source lines 13-14"
+    "section": "web/www/missa/Latin/Sancti/05-31.txt [Introitus], 10–11 · web/www/missa/Latin/Sancti/05-31.txt [Introitus], 13–14 · web/www/missa/Latin/Ordo/Prayers.txt [Gloria], 12–14 · web/www/missa/Latin/Sancti/05-31.txt [Introitus], 15",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L10-L11"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L13-L14"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L15"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L10-L11"
    },
    "entries": [
     {
@@ -17,7 +36,29 @@
      "claim": "The pinned Latin data give the same chant; the parenthesized Paschaltide Alleluia is applied according to the witness's declared seasonal mode, and any omission or slip is declared in the apparatus."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "printed": "p. 1",
+    "scan": "leaf n80 / PDF p. 81",
+    "section": "Dominica I Adventus, Introitus",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n80/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.proprium.beata-maria-virgo-regina-introitus.gloria-formula-and-repetition.mr1962",
+     "address": {
+      "kind": "word",
+      "word": "w035"
+     },
+     "claim": "The first Sunday of Advent prints the common doxology in full. Its rubric directs repetition of the Introit antiphon throughout the year. The words of this particular repeated antiphon are supplied by its proper."
+    }
+   ],
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +75,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The directly viewed page (p. 543) prints this component; its conditional (T. P.) marks are framing for the declared recension."
+     "claim": "The proper on p. 543 prints the antiphon, its psalm verse, and the cues Glória Patri. Gaudeámus. The complete doxology and return follow the complete doxology and the annual direction to repeat the proper antiphon on p. 1."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

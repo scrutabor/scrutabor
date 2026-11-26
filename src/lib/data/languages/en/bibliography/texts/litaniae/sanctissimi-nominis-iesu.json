@@ -3,11 +3,12 @@
  "source_groups": [
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 543",
-    "scan": "PDF pages 551 (one-based)"
+    "scan": "PDF p. 551",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=551"
    },
    "entries": [
     {
@@ -99,6 +100,14 @@
      "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
     },
     {
+     "id": "use.en.633be948085f59444a29",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "In the Litany of the Holy Name, the first and third calls read “Lord, have mercy on us.” The current text uses the shorter “Lord, have mercy.”"
+    },
+    {
      "id": "use.en.65ddd045cc7f91a34b7b",
      "address": {
       "kind": "segment",
@@ -145,6 +154,14 @@
       "segment": "s025"
      },
      "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
+    },
+    {
+     "id": "use.en.8cdb2f18663753068b05",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "In the Litany of the Holy Name, the first and third calls read “Lord, have mercy on us.” The current text uses the shorter “Lord, have mercy.”"
     },
     {
      "id": "use.en.9005b7915e82f042cadf",
@@ -283,15 +300,16 @@
      "claim": "Historical English source expression: “Have mercy on us!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 544",
-    "scan": "PDF pages 552 (one-based)"
+    "scan": "PDF p. 552",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=552"
    },
    "entries": [
     {
@@ -524,7 +542,7 @@
       "kind": "segment",
       "segment": "s080"
      },
-     "claim": "Historical English source expression: “Jesus, Teacher of Evangelists”. The addressed English wording adds “the” before “Evangelists” and changes capitalization and terminal punctuation; it is revised, not a verbatim quotation."
+     "claim": "The printed invocation reads “Jesus, Teacher of the Evangelists,” with an article before “Evangelists”. The current text retains all the words, lowercases “teacher” and ends the invocation with a period."
     },
     {
      "id": "use.en.8fdcf0dde4e0eb4e4cf4",
@@ -695,15 +713,16 @@
      "claim": "Historical English source expression: “Jesus, God of peace” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 545",
-    "scan": "PDF pages 553 (one-based)"
+    "scan": "PDF p. 553",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=553"
    },
    "entries": [
     {
@@ -947,15 +966,16 @@
      "claim": "Historical English source expression: “Deliver us, O Jesus!” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 546",
-    "scan": "PDF pages 554 (one-based)"
+    "scan": "PDF p. 554",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=554"
    },
    "entries": [
     {
@@ -1047,15 +1067,16 @@
      "claim": "Historical English source expression: “Lamb of God, etc.” The addressed English expands an explicitly abbreviated or instructed repetition; it is not a separately printed full repetition."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 553",
-    "scan": "scan 561"
+    "scan": "PDF p. 561",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=561"
    },
    "entries": [
     {
@@ -1064,7 +1085,8 @@
       "kind": "segment",
       "segment": "s002"
      },
-     "claim": "Christ, have mercy."
+     "claim": "In the Litany of the Saints, p. 553, the English reads “Christ, have mercy”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     },
     {
      "id": "use.en.a46199988bc72260491c",
@@ -1072,7 +1094,8 @@
       "kind": "segment",
       "segment": "s003"
      },
-     "claim": "Lord, have mercy."
+     "claim": "In the Litany of the Saints, p. 553, the English reads “Lord, have mercy”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     },
     {
      "id": "use.en.b74e2d30307e61d3518a",
@@ -1080,18 +1103,20 @@
       "kind": "segment",
       "segment": "s001"
      },
-     "claim": "Lord, have mercy."
+     "claim": "In the Litany of the Saints, p. 553, the English reads “Lord, have mercy”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 556",
-    "scan": "scan 564"
+    "scan": "PDF p. 564",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=564"
    },
    "entries": [
     {
@@ -1100,18 +1125,20 @@
       "kind": "segment",
       "segment": "s104"
      },
-     "claim": "From everlasting death."
+     "claim": "In the Litany of the Saints, p. 556, the English reads “From everlasting death”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 557",
-    "scan": "scan 565"
+    "scan": "PDF p. 565",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=565"
    },
    "entries": [
     {
@@ -1120,7 +1147,8 @@
       "kind": "segment",
       "segment": "s108"
      },
-     "claim": "Through the mystery of Thy holy Incarnation."
+     "claim": "In the Litany of the Saints, p. 557, the English reads “Through the mystery of Thy holy Incarnation”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     },
     {
      "id": "use.en.aa81fa501049e60aa770",
@@ -1128,7 +1156,8 @@
       "kind": "segment",
       "segment": "s110"
      },
-     "claim": "Through Thy nativity."
+     "claim": "In the Litany of the Saints, p. 557, the English reads “Through Thy nativity”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     },
     {
      "id": "use.en.c0eca2753a74b8818864",
@@ -1136,46 +1165,20 @@
       "kind": "segment",
       "segment": "s124"
      },
-     "claim": "Through Thy death and burial."
+     "claim": "In the Litany of the Saints, p. 557, the English reads “Through Thy death and burial”. This wording also occurs in this Holy Name invocation.",
+     "reader_note": "The wording comes from the Litany of the Saints in this book."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 543–546",
-    "scan": "scan pp. 551–554"
-   },
-   "entries": [
-    {
-     "id": "use.en.633be948085f59444a29",
-     "address": {
-      "kind": "segment",
-      "segment": "s001"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8cdb2f18663753068b05",
-     "address": {
-      "kind": "segment",
-      "segment": "s003"
-     },
-     "claim": "Lord, have mercy."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "pp. 543–546",
-    "scan": "scan pp. 551–554"
+    "printed": "p. 543",
+    "scan": "PDF p. 551",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=551"
    },
    "entries": [
     {
@@ -1185,7 +1188,41 @@
       "segment": "s022"
      },
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
-    },
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 544",
+    "scan": "PDF p. 552",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=552"
+   },
+   "entries": [
+    {
+     "id": "use.en.a333bf60469530fc133b",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "p. 545",
+    "scan": "PDF p. 553",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=553"
+   },
+   "entries": [
     {
      "id": "use.en.1143c4cd2324b4955139",
      "address": {
@@ -1275,14 +1312,6 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     },
     {
-     "id": "use.en.a333bf60469530fc133b",
-     "address": {
-      "kind": "segment",
-      "segment": "s052"
-     },
-     "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
-    },
-    {
      "id": "use.en.bda2f2962e9932ab6428",
      "address": {
       "kind": "segment",
@@ -1323,7 +1352,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -1331,7 +1360,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 18",
-    "scan": "scan 31"
+    "scan": "DjVu p. 31",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=31"
    },
    "entries": [
     {
@@ -1343,7 +1373,7 @@
      "claim": "Jesus, sun of justice."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -1351,7 +1381,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 19",
-    "scan": "scan 32"
+    "scan": "DjVu p. 32",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=32"
    },
    "entries": [
     {
@@ -1363,7 +1394,7 @@
      "claim": "Jesus, model of virtues."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -1371,7 +1402,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 21",
-    "scan": "scan 34"
+    "scan": "DjVu p. 34",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=34"
    },
    "entries": [
     {
@@ -1455,7 +1487,7 @@
      "claim": "Through Thy sufferings."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -1463,7 +1495,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 22",
-    "scan": "scan 35"
+    "scan": "DjVu p. 35",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=35"
    },
    "entries": [
     {
@@ -1491,7 +1524,7 @@
      "claim": "Through Thy glory."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-raccolta-1910",
@@ -1499,7 +1532,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 51",
-    "scan": "scan 71"
+    "scan": "PDF p. 71",
+    "page_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf#page=71"
    },
    "entries": [
     {
@@ -1511,7 +1545,7 @@
      "claim": "Jesus, sun of justice."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-raccolta-1910",
@@ -1519,7 +1553,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 52",
-    "scan": "scan 72"
+    "scan": "PDF p. 72",
+    "page_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf#page=72"
    },
    "entries": [
     {
@@ -1539,7 +1574,7 @@
      "claim": "Be merciful unto us."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-raccolta-1910",
@@ -1547,7 +1582,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 53",
-    "scan": "scan 73"
+    "scan": "PDF p. 73",
+    "page_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf#page=73"
    },
    "entries": [
     {
@@ -1620,7 +1656,7 @@
       "kind": "segment",
       "segment": "s116"
      },
-     "claim": "Through Thy labors."
+     "claim": "The printed expression is “Through thy labours,”. The current invocation uses the spelling “labors”, divine capitalization and a full stop."
     },
     {
      "id": "use.en.b1f710b772c980f50a56",
@@ -1663,7 +1699,7 @@
      "claim": "Through Thy nativity."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

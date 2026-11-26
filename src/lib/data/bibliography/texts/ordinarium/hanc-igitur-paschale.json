@@ -8,7 +8,8 @@
    "locator": {
     "printed": "216",
     "scan": "Archive leaf n295",
-    "section": "Baptismal Hanc igitur"
+    "section": "Baptismal Hanc igitur",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n295/mode/1up"
    },
    "entries": [
     {
@@ -28,7 +29,8 @@
    "locator": {
     "printed": "305",
     "scan": "Archive leaf n386",
-    "section": "Baptismal Hanc igitur"
+    "section": "Baptismal Hanc igitur",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n386/mode/1up"
    },
    "entries": [
     {
@@ -46,29 +48,10 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "rubric_control",
    "locator": {
-    "printed": "lv",
-    "scan": "Archive leaf n60",
-    "section": "Ritus servandus VIII 4"
-   },
-   "entries": [
-    {
-     "id": "use.ordinarium.hanc-igitur-paschale.general-rite",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Hands extended over offerings during Hanc igitur, then joined at Per Christum; inserted baptismal relative clause does not change the gesture sequence."
-    }
-   ],
-   "verified_on": "2026-10-12"
-  },
-  {
-   "edition": "edition.missale-romanum.1962-typica",
-   "digital_item": "item.missale-romanum.1962-typica.ia",
-   "role": "rubric_control",
-   "locator": {
     "printed": "xxxiii",
     "scan": "Archive leaf n38",
-    "section": "Rubricae generales 500"
+    "section": "Rubricae generales 500",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -88,7 +71,8 @@
    "locator": {
     "printed": "xxxiii",
     "scan": "Archive leaf n38",
-    "section": "Rubricae generales 501"
+    "section": "Rubricae generales 501",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -102,13 +86,35 @@
    "verified_on": "2026-10-12"
   },
   {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "lv",
+    "scan": "Archive leaf n60",
+    "section": "Ritus servandus VIII 4",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n60/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.hanc-igitur-paschale.general-rite",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "Hands extended over offerings during Hanc igitur, then joined at Per Christum; inserted baptismal relative clause does not change the gesture sequence."
+    }
+   ],
+   "verified_on": "2026-10-12"
+  },
+  {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
    "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
    "role": "official_text",
    "locator": {
     "printed": "305",
     "scan": "PDF page 386",
-    "section": "Baptismal Hanc igitur"
+    "section": "Baptismal Hanc igitur",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=386"
    },
    "entries": [
     {
@@ -119,7 +125,7 @@
      "claim": "Complete baptismal Hanc igitur in this one printed occurrence, including Per Christum and Amen; source-local aqua/peccatorum punctuation is preserved. Not a Joseph amendment."
     }
    ],
-   "verified_on": "2026-10-12"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -128,7 +134,8 @@
    "locator": {
     "printed": "213",
     "scan": "PDF page 294",
-    "section": "Easter Vigil rubric 7"
+    "section": "Easter Vigil rubric 7",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=294"
    },
    "entries": [
     {
@@ -139,7 +146,7 @@
      "claim": "Incipit/reference sends these proper prayers to the Canon table; not a second freshly printed full-body Vatican Vigil witness."
     }
    ],
-   "verified_on": "2026-10-12"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

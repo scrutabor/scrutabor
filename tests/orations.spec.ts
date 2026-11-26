@@ -256,11 +256,11 @@ for (const { formulary, kind, response, conclusion, opening, constructions } of 
 				await expect(
 					sources.locator('li').filter({ has: page.locator(conclusionLeaf) })
 				).toHaveText([
-					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, ' +
+					'Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum, ' +
 						(language === 'pl'
 							? 'Rubricae generales 115 d, końcowe Amen · s. xviii · obraz n23 / PDF, s. 24'
-							: 'Rubricae generales 115 d, terminal Amen · p. xviii · leaf n23 / PDF p. 24'),
-					'Missale Romanum ex decreto SS. Concilii Tridentini restitutum, ' +
+							: 'Rubricae generales 115 d, final Amen · p. xviii · leaf n23 / PDF p. 24'),
+					'Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum, ' +
 						(language === 'pl'
 							? 'Rubricae generales, 115 d · s. xviii · obraz n23 / PDF, s. 24'
 							: 'Rubricae generales, 115 d · p. xviii · leaf n23 / PDF p. 24')

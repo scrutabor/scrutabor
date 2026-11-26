@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-misereatur-tui; closed-literal-selection} (line 33; line 35); complete source contexts 31–37"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-misereatur-tui; closed-literal-selection} (line 33; line 35); complete source contexts 31–37",
+    "passages": [
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L33"
+     },
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L35"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L33"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Mass Ordo supplies this 14-word literal selection in the stated selection order (33, then 35), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +45,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 220 prints the ministers’ singular Misereátur tui, the priest’s Amen and the direction to stand upright."
     }
    ],
    "verified_on": "2026-09-25"

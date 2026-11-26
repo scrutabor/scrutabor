@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const day = 'dominica-ix-post-pentecosten';
@@ -86,10 +87,7 @@ for (const language of ['pl', 'en'] as const) {
 			language === 'pl' ? 'Czytanie' : 'The Epistle'
 		);
 		await dialog.locator('details.source-notes summary').click();
-		await expect(dialog).toContainText('Pent09-0');
-		await expect(dialog).toContainText(
-			language === 'pl' ? 'pełny tekst bezpośrednio w w. 28' : 'complete direct body 28'
-		);
+		await expectSourcePassage(dialog, language, 'Lectio', 'Missa/Tempora/Pent09-0.txt', 28);
 	});
 
 	for (const [number, lemma, polish, english] of [

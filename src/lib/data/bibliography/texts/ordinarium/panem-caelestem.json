@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-panem-caelestem; closed-literal-selection} (line 327; line 329; line 330; line 331; line 334); complete source contexts 325–336"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-panem-caelestem; closed-literal-selection} (line 327; line 329; line 330; line 331; line 334); complete source contexts 325–336",
+    "passages": [
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L327"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L329-L331"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L334"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L327"
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The pinned Mass Ordo supplies this 70-word literal selection in the stated selection order (327, then 329, then 330, then 331, then 334), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

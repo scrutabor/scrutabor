@@ -6,9 +6,51 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 59–60",
-    "scan": "PDF ss. 73–74",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 59",
+    "scan": "PDF, s. 73",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=73"
+   },
+   "entries": [
+    {
+     "id": "use.pl.a987c58a5f2853492954",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 59–60",
+    "scan": "PDF, s. 73–74",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=73"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ad5fbfd163d274274960",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I w jednego Pana, Jezusa Chrystusa, Syna Bożego jednorodzonego.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 60",
+    "scan": "PDF, s. 74",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=74"
    },
    "entries": [
     {
@@ -92,22 +134,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Bóg z Boga, Światłość ze Światłości, Bóg prawdziwy z Boga prawdziwego.”"
     },
     {
-     "id": "use.pl.a987c58a5f2853492954",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wierzę w jednego Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi, wszystkich rzeczy widzialnych i niewidzialnych.”"
-    },
-    {
-     "id": "use.pl.ad5fbfd163d274274960",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I w jednego Pana, Jezusa Chrystusa, Syna Bożego jednorodzonego.”"
-    },
-    {
      "id": "use.pl.bb1cb578de25441a6195",
      "address": {
       "kind": "segment",
@@ -148,7 +174,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „On to dla nas ludzi i dla naszego zbawienia zstąpił z nieba.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

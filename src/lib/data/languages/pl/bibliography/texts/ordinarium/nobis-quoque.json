@@ -6,19 +6,11 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 60–61",
-    "scan": "PDF ss. 63–64",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 60",
+    "scan": "PDF, s. 63",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=63"
    },
    "entries": [
-    {
-     "id": "use.pl.04e977b73b233100413a",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa, Pana naszego.”"
-    },
     {
      "id": "use.pl.05ed8ab2c7ca153687ec",
      "address": {
@@ -26,7 +18,20 @@
       "segment": "s04"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Twoim sługom, pokładającym nadzieję w obfitości Twoich zmiłowań, racz dać pewien udział i wspólnotę z Twoimi świętymi Apostołami i Męczennikami:”"
-    },
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 60–61",
+    "scan": "PDF, s. 63–64",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=63"
+   },
+   "entries": [
     {
      "id": "use.pl.c7ddaa39852535b4d487",
      "address": {
@@ -36,7 +41,28 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „z Janem, Szczepanem, Maciejem, Barnabą, Ignacym, Aleksandrem, Marcelinem, Piotrem, Felicytą, Perpetuą, Agatą, Łucją, Agnieszką, Cecylią, Anastazją i wszystkimi Twoimi świętymi:”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 61",
+    "scan": "PDF, s. 64",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=64"
+   },
+   "entries": [
+    {
+     "id": "use.pl.04e977b73b233100413a",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez Chrystusa, Pana naszego.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

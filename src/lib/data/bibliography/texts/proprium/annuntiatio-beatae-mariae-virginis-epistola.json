@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/03-25.txt [Lectio] (lines 18-18); web/www/horas/Latin/Commune/C10a.txt [Lectio] (lines 22-22); web/www/missa/Latin/Tempora/Adv3-3.txt [Lectio] (lines 46-46); titles, headings and scripture reference excluded"
+    "section": "web/www/missa/Latin/Sancti/03-25.txt [Lectio] (lines 18-18); web/www/horas/Latin/Commune/C10a.txt [Lectio] (lines 22-22); web/www/missa/Latin/Tempora/Adv3-3.txt [Lectio] (lines 46-46); titles, headings and scripture reference excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Adv3-3.txt#L46",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Adv3-3.txt#L46"
+     },
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L17-L18"
+     },
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10a.txt#L21-L22"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The pinned Mass proper and Horae common references resolve to the complete 80-word Mass Advent reading. The three exact original files and both reference edges are bound in the declared raw reading; this is a derived comparison, not independent textual ancestry."
     }
    ],
-   "verified_on": "2026-10-01"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

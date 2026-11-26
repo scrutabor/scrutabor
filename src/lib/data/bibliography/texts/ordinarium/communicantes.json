@@ -1,0 +1,71 @@
+{
+ "id": "ordinarium.communicantes",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "official_text",
+   "locator": {
+    "section": "Canon Missæ, Infra actionem, n. 1090",
+    "printed": "pp. 302–303",
+    "scan": "PDF pp. 383–384",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n382/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes.ordinary-vatican",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The ordinary Communicantes includes Saint Joseph, the two lists of saints, the petition, Iungit manus and the conclusion through Amen. The word omnibus continues on the next page. This copy has no comma after méritis."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
+   "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
+   "role": "rubric_control",
+   "locator": {
+    "section": "Canon Missæ, Infra actionem, n. 1090",
+    "printed": "p. 303",
+    "scan": "PDF p. 384",
+    "page_url": "https://archive.org/details/missale_romanum-1962/page/n383/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes.ordinary-hands-vatican",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "After auxílio and before Per eúndem, the rubric reads Iungit manus."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
+   "digital_item": "item.sacra-rituum-congregatio.de-s-ioseph.1962-aas54.vatican",
+   "role": "official_liturgical_context",
+   "locator": {
+    "section": "De S. Ioseph nomine Canoni Missae inserendo",
+    "printed": "p. 873",
+    "scan": "PDF p. 873",
+    "page_url": "https://www.vatican.va/archive/aas/documents/AAS-54-1962-ocr.pdf#page=873"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.communicantes.joseph-amendment",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The decree of 13 November 1962 gives the words naming Saint Joseph after the Virgin Mary, effective from 8 December 1962."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": []
+}

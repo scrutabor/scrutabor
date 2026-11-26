@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 210",
-    "scan": "scan p. 226"
+    "scan": "PDF p. 226",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=226"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "Historical English basis of the Epistle (the Douay Eph. 5:1–9 through this missal), revised against the Latin in contemporary language: Be followers (the Missal prints no ergo), the service of idols, Do not become partakers (éffici), once."
+     "claim": "The 1846 English Epistle begins “Be ye therefore followers of God”. The 1962 liturgical Latin has no ergo here. The current English omits “therefore” and also revises the expressions for serving idols, becoming partakers, and former darkness."
     }
    ],
-   "verified_on": "2026-10-11"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

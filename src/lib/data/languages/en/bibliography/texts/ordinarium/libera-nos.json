@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 70",
-    "scan": "scan p. 82"
+    "scan": "PDF p. 82",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=82"
    },
    "entries": [
     {
@@ -19,7 +20,7 @@
      "claim": "Historical English source expression: “For ever and ever.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -27,7 +28,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 71",
-    "scan": "PDF pages 83 (one-based)"
+    "scan": "PDF p. 83",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=83"
    },
    "entries": [
     {
@@ -39,7 +41,36 @@
      "claim": "Historical English source expression: “mercifully grant peace in our days” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 71–72",
+    "scan": "PDF pp. 83–84",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=83"
+   },
+   "entries": [
+    {
+     "id": "use.en.3e3366723a0ffa1ab0b5",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "Historical English source expression: “that through the assistance of thy mercy, we may be always free from sin, and secure from all disturbance.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.8a2f28ed8dc177545306",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Deliver us, we pray, Lord, from all evils, past, present, and future; and through the intercession of blessed and glorious Mary, ever Virgin and Mother of God, together with Your blessed Apostles Peter and Paul, Andrew, and all the saints,"
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -47,7 +78,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 72",
-    "scan": "PDF pages 84 (one-based)"
+    "scan": "PDF p. 84",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=84"
    },
    "entries": [
     {
@@ -67,47 +99,7 @@
      "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 71–72",
-    "scan": "PDF pages 83, 84 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.3e3366723a0ffa1ab0b5",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Historical English source expression: “that through the assistance of thy mercy, we may be always free from sin, and secure from all disturbance.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 71–72",
-    "scan": "scan pp. 83–84"
-   },
-   "entries": [
-    {
-     "id": "use.en.8a2f28ed8dc177545306",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Deliver us, we pray, Lord, from all evils, past, present, and future; and through the intercession of blessed and glorious Mary, ever Virgin and Mother of God, together with Your blessed Apostles Peter and Paul, Andrew, and all the saints,"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -115,27 +107,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 29",
-    "scan": "PDF pages 56 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.692226711230f7d12fb3",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Historical English wording for Christ’s divine life and reign with the Father in the unity of the Holy Ghost; the current wording fronts the divine predication, modernizes the address and uses “Holy Spirit”."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
-   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 29",
-    "scan": "scan p. 56"
+    "scan": "PDF p. 56",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=56"
    },
    "entries": [
     {
@@ -145,9 +118,17 @@
       "segment": "s02"
      },
      "claim": "Deliver us, we pray, Lord, from all evils, past, present, and future; and through the intercession of blessed and glorious Mary, ever Virgin and Mother of God, together with Your blessed Apostles Peter and Paul, Andrew, and all the saints,"
+    },
+    {
+     "id": "use.en.692226711230f7d12fb3",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historical English wording for Christ’s divine life and reign with the Father in the unity of the Holy Ghost; the current wording fronts the divine predication, modernizes the address and uses “Holy Spirit”."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading 95, conclusion 96, response 97; evidence lines 95–97"
+    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading 95, conclusion 96, response 97; evidence lines 95–97",
+    "passages": [
+     {
+      "heading": "Per Dominum",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L95-L97"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L95-L97"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "The exact shared digital formula supplies w025–w045 and the distinct Amen w046 after resolving $Per Dominum. The source prints Jesum, a comma after Christum, lowercase qui and no comma after Sancti. The r. and R. prefixes are framing, not prayer words."
     }
    ],
-   "verified_on": "2026-09-29"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/10-18.txt [Postcommunio], heading 47, body 48, $Per Dominum reference 49"
+    "section": "missa/Latin/Sancti/10-18.txt [Postcommunio], 47–49",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-18.txt#L47-L49",
+    "passages": [
+     {
+      "heading": "Postcommunio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-18.txt#L47-L49"
+     }
+    ]
    },
    "entries": [
     {
@@ -35,7 +49,7 @@
      "claim": "The pinned file prints the 24-word body and a reference to the shared Per Dominum formula. The latter has a separate exact source use and raw reading span, not inherited body text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -44,7 +58,8 @@
    "locator": {
     "printed": "pp. xxxiii–xxxiv, lii, lviii",
     "scan": "leaves n38–39, n57, n63 / PDF pp. 39–40, 58, 64",
-    "section": "RG 505, 511 d/i, 513–514; Ritus servandus V 1–2, XI 1"
+    "section": "RG 505, 511 d/i, 513–514; Ritus servandus V 1–2, XI 1",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -55,7 +70,7 @@
      "claim": "Postcommunions are recited by the celebrant in the mode, number and order of the opening orations. The cited rules establish audible delivery at low Mass and sung orations at solemn or sung Mass. The separate Amen is supplied by the conclusion sources. These passages do not alone establish its complete performer or participation mapping."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

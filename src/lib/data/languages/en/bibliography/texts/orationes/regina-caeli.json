@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 28",
-    "scan": "DJVU physical pages 41 (one-based); indices 40 (zero-based)"
+    "scan": "DjVu p. 41",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=41"
    },
    "entries": [
     {
@@ -17,6 +18,14 @@
       "segment": "s05"
      },
      "claim": "Historical English source expression: “Rejoice and be glad, O Virgin Mary. Alleluia.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.2332edd0e0e880da5b7c",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The source opens “O Queen of heaven, rejoice! Alleluia.” The current text omits the opening “O” and changes punctuation and case."
     },
     {
      "id": "use.en.86a24c693c7451d54838",
@@ -43,27 +52,7 @@
      "claim": "Historical English source expression: “For He whom thou didst merit to bear, Alleluia,” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 28",
-    "scan": "scan p. 41"
-   },
-   "entries": [
-    {
-     "id": "use.en.2332edd0e0e880da5b7c",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Queen of heaven, rejoice, alleluia;"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -71,7 +60,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 29 and 193",
-    "scan": "scan pp. 42 and 206"
+    "scan": "DjVu pp. 42, 206",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=42"
    },
    "entries": [
     {
@@ -80,10 +70,10 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "For the Lord has truly risen, alleluia."
+     "claim": "Page 29 reads “For the Lord hath risen indeed. Alleluia.” Page 193 reads “Because our Lord is truly risen. Alleluia.” The current response draws on this tradition and reads “For the Lord has truly risen, alleluia.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

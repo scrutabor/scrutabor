@@ -7,8 +7,9 @@
    "role": "scripture_text",
    "locator": {
     "printed": "pp. 556–557",
-    "scan": "Internet Archive BookReader leaves n579–n580",
-    "section": "Psalmus 129"
+    "scan": "PDF pp. 580–581",
+    "section": "Psalmus 129 (130)",
+    "page_url": "https://archive.org/details/bibliasacravulga00helzuoft/bibliasacravulga00helzuoft/page/556/mode/1up"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The source controls the Gallican/Sixto-Clementine recension and numbering of Psalm 129 used for De profundis."
+     "claim": "The Gallican Psalter in this edition prints De profundis as Psalm 129, with 130 as the alternate numbering."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

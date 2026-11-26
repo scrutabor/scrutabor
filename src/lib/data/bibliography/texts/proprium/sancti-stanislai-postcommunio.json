@@ -8,7 +8,8 @@
    "locator": {
     "printed": "p. 522",
     "scan": "leaf n603 / PDF physical 604",
-    "section": "05-07 postcommunio; Postcommunio C2; right column, before votive rubric; proper body and literal printed cue only"
+    "section": "05-07 postcommunio; Postcommunio C2; right column, before votive rubric; proper body and literal printed cue only",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n603/mode/1up"
    },
    "entries": [
     {
@@ -19,7 +20,7 @@
      "claim": "The approved Benziger1962 printing gives this postcommunio from w001 through w020, followed by the literal cue “Per Dóminum nostrum.” The full supplied conclusion and Amen are established separately, not printed in full at this proper locus."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -28,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, 123, 226",
     "scan": "leaves n22, n202, n305 / PDF physical23,203,306",
-    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen"
+    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -39,7 +41,7 @@
      "claim": "RG115a supplies the complete Father-directed Per Dominum ending for this prayer’s printed cue. The same-edition expanded stem and terminal-response typography control the supplied conclusion w021–w041 and distinct Amen w042, not the proper prayer body."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -48,7 +50,8 @@
    "locator": {
     "printed": "pp. XXX, XXXIII–XXXIV",
     "scan": "leaves n35,n38–n39 / PDF physical36,39–40",
-    "section": "RG436–437,505,511i,513–514"
+    "section": "RG436–437,505,511i,513–514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n35/mode/1up"
    },
    "entries": [
     {
@@ -59,7 +62,7 @@
      "claim": "This postcommunion follows the Mass postcommunion when used as its sole separately concluded commemoration, retaining its own conclusion; priestly read/sung delivery follows the corresponding oration rules. This claim is not a rule for each member of larger groups."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -67,9 +70,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 521",
-    "scan": "PDF physical p. 602; leaf n601",
-    "section": "Postcommunio2522 C2; left column, before votive rubric and May9heading; proper body and literal printed cue only",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n601/mode/1up"
+    "scan": "PDF p. 602",
+    "section": "Die 7 maii. S. Stanislai Episcopi et Martyris. Postcommunio, n. 2522.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=602"
    },
    "entries": [
     {
@@ -80,7 +83,7 @@
      "claim": "This separate setting prints the 20-word proper body, w001–w020, and its literal cue. Separate setting corroborates the proper letters, accents and punctuation, which agree in these two settings. The literal conclusion cues differ: Benziger “Per Dóminum nostrum.”, Vatican “Per Dóminum.” The cue is not the full supplied conclusion or Amen. Not independent historical transmission. The full conclusion and Amen are supplied separately from this setting’s RG115a, not from the proper face."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

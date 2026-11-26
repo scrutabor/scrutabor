@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt [Munda Cor Passionis], heading240, separate preceding spoken Munda241, complete request/blessing/Amen242-244."
+    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt [Munda Cor Passionis], heading240, separate preceding spoken Munda241, complete request/blessing/Amen242-244.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0r.txt#L242-L244",
+    "passages": [
+     {
+      "heading": "Munda Cor Passionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0r.txt#L242-L244"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "Contains the complete 28-word plural request, blessing and Amen. The pinned digital body writes Jube, lacks the first vestris comma, has a colon after the second vestris and capital In. D./S. labels and + are source actor/action framing, not additional spoken tokens. This is derived digital comparison, not an independent genealogical print or preparation voice authority."
     }
    ],
-   "verified_on": "2026-10-17"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -26,7 +33,7 @@
    "locator": {
     "printed": "139",
     "scan": "IA leaf n218; one-based PDF page 219",
-    "section": "Palm Passion preparation, rubric 8; fully visible blessing start",
+    "section": "Dominica II Passionis, 8 — Iube, domne / Dóminus sit in córdibus vestris",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n218/mode/1up"
    },
    "entries": [
@@ -35,7 +42,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Directly corroborates only the complete visible local words w004-w018, Dóminus through evangélium. Its lower-case evangélium differs from selected V. The unresolved request accent and clipped w019-w024 receive no full diplomatic collation credit. This is not a complete second print witness."
+     "claim": "The visible request Iube, domne, benedícere and the blessing through lower-case evangélium corroborate w001–w018. The bottom of the left column cuts off the next line. The words visible again at the top right do not supply the missing continuous span."
     }
    ],
    "verified_on": "2026-10-17"
@@ -123,6 +130,9 @@
    "coverage": {
     "kind": "words",
     "words": [
+     "w001",
+     "w002",
+     "w003",
      "w004",
      "w005",
      "w006",

@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-in-spiritu-humilitatis; closed-literal-selection} (line 164; line 166); complete source contexts 162–168"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-in-spiritu-humilitatis; closed-literal-selection} (line 164; line 166); complete source contexts 162–168",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L164"
+     },
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L166"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L164"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Mass Ordo supplies this 38-word literal selection in the stated selection order (164, then 166), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +45,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 224 gives In spíritu humilitátis and the following Veni, sanctificátor with their directions. The latter ends hoc sacrifícium, tuo sancto nómini præparátum."
     }
    ],
    "verified_on": "2026-09-25"

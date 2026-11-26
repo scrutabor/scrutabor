@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/08-15.txt; [Lectio] section at line 23, heading at line 24"
+    "section": "web/www/missa/Latin/Sancti/08-15.txt; [Lectio] section at line 23, heading at line 24",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-15.txt#L23-L24",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-15.txt#L23-L24"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "Prints the complete 3-word heading as its own line in the pinned file that the reading's own digital witness binds; compared with the selected print it differs only in Judith for Iudith (orthography). It is a derived digital comparison, not proof of an independent manuscript family."
     }
    ],
-   "verified_on": "2026-10-23"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -26,7 +33,7 @@
    "locator": {
     "printed": "640",
     "scan": "IA leaf n721; one-based PDF page 722",
-    "section": "Proprium, heading of the Epistle of proprium.assumptio-beatae-mariae-virginis-epistola",
+    "section": "Léctio libri Iudith — Iudith 13, 22–25; 15, 10",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n721/mode/1up"
    },
    "entries": [
@@ -47,7 +54,8 @@
    "locator": {
     "scan": "PDF page 708",
     "section": "In Assumptione B. Mariae Virginis; complete announcement heading; Iudith 13, 22-25; 15, 10",
-    "printed": "No printed page numeral (illustrated opening)"
+    "printed": "No printed page numeral (illustrated opening)",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=708"
    },
    "entries": [
     {
@@ -58,7 +66,7 @@
      "claim": "Directly prints the complete 3-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 import { expectSharedGloss } from './shared-gloss';
 import { interlinearGeometry } from './interlinear-geometry';
@@ -132,9 +133,10 @@ for (const language of ['pl', 'en'] as const) {
 				)
 			).toHaveCount(1);
 		}
-		await expect(notes).toContainText('Latin/Ordo/Prayers.txt [Per eumdem]');
-		await expect(notes).toContainText('108–109');
-		await expect(notes).not.toContainText('lines 113-114');
+		await expectSourcePassage(notes, language, 'Per eumdem', 'Missa/Ordo/Prayers.txt', 107, 109);
+		await expectSourcePassage(notes, language, 'Postcommunio', 'Missa/Tempora/Nat2-0.txt', 67, 69);
+		await expect(notes.locator('a.source-passage')).toHaveCount(2);
+		await expect(notes.locator('a[href$="/Prayers.txt#L113-L114"]')).toHaveCount(0);
 		const wordingLinks =
 			'a[href*="missal_for_use_of_laity_1853-f_c_husenbeth"], a[href*="TheMissalForTheLaity"]';
 		await expect(notes.locator(wordingLinks)).toHaveCount(0);
@@ -153,13 +155,13 @@ for (const language of ['pl', 'en'] as const) {
 			);
 			await expect(
 				translationNotes.locator(
-					'a[href="https://archive.org/details/TheMissalForTheLaity/page/n613/mode/1up"]'
+					'a[href="https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=614"]'
 				)
 			).toHaveCount(1);
-			for (const leaf of [121, 55]) {
+			for (const pdfPage of [122, 56]) {
 				await expect(
 					translationNotes.locator(
-						`a[href="https://archive.org/details/missal_for_use_of_laity_1853-f_c_husenbeth/page/n${leaf}/mode/1up"]`
+						`a[href="https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=${pdfPage}"]`
 					)
 				).toHaveCount(1);
 			}

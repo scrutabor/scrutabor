@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Adv1-0.txt [Evangelium], marker41, announcement42, reference43, complete body44; Offertorium starts46"
+    "section": "Latin/Tempora/Adv1-0.txt [Evangelium], marker41, announcement42, reference43, complete body44; Offertorium starts46",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt#L44",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt#L44"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned 119-word reading has fifteen spelling or punctuation differences from the selected Latin. No inherited text, macro or concluding response is part of this reading."
     }
    ],
-   "verified_on": "2026-09-30"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

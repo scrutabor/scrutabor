@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Quad6-6r.txt [Prelude], physical lines 753, 755, 756, 757, 758, 759, 760, 761, 762"
+    "section": "Quad6-6r.txt [Prelude], physical lines 753, 755, 756, 757, 758, 759, 760, 761, 762",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L753",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L753"
+     },
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L755-L762"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned digital witness preserves a different recension of this complete Lauds chant. It is a comparison witness, not the selected Latin transcription base."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

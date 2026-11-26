@@ -192,7 +192,7 @@ test('a prayer identifies its translation sources once after the text', async ({
 	await expect(sources.getByText('źródła', { exact: true })).toBeVisible();
 	await sources.locator('summary').click();
 	await expect(sources).toContainText('Droga do Nieba');
-	await expect(sources).toContainText('druk. s. 10 · PDF s. 12');
+	await expect(sources).toContainText('s. 10 · PDF, s. 12');
 	await expect(sources.getByRole('link', { name: 'pełna bibliografia' })).toHaveAttribute(
 		'href',
 		'/app/pl/bibliographia'
@@ -226,7 +226,9 @@ test('a cited translation states how its wording relates to the historical sourc
 	await expect(sources.locator('.relationships [lang="la"]')).toHaveText(
 		'et hæc tua dona… · quæ de tua largitáte sumus…'
 	);
-	await expect(sources).toContainText("The Catholic Girl's Guide");
+	await expect(sources).toContainText(
+		'The Catholic Girl’s Guide. Counsels and Devotions for Girls in the Ordinary Walks of Life, and in Particular for the Children of Mary'
+	);
 
 	for (const [slug, description] of [
 		[

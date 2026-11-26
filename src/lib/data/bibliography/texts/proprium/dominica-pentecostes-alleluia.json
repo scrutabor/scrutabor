@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (lines 31-32); web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (line 33, chars 0:73); web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (lines 34-34)"
+    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (lines 31-32); web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (line 33, chars 0:73); web/www/missa/Latin/Tempora/Pasc7-0.txt [Graduale] (lines 34-34)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc7-0.txt#L30-L31",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc7-0.txt#L30-L31"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc7-0.txt#L33-L34"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Latin Mass data supply the two sacred Alleluia verses as a derived digital comparison reading, with line33 limited to chars0:73. The excluded literal inline Hic genuflectitur rubric remains source evidence and is represented separately in neutral s02. This is not an independent printed witness."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

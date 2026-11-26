@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-qui-dixisti; closed-literal-selection} (line 312; line 316; line 317); complete source contexts 310–320"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-qui-dixisti; closed-literal-selection} (line 312; line 316; line 317); complete source contexts 310–320",
+    "passages": [
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L312"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L316-L317"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L312"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Mass Ordo supplies this 46-word literal selection in the stated selection order (312, then 316, then 317), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +45,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 314 prints the prayer from Dómine Iesu Christe, qui dixísti Apóstolis tuis to Amen, the conditional Pax tecum and its response, and the Requiem exception (s02–s10). The opening hand and voice direction (s01) is on p. 313."
     }
    ],
    "verified_on": "2026-10-29"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 313",
+    "scan": "leaf n394 / PDF p. 395",
+    "section": "Ordo Missæ — Deinde, iunctis manibus super altare",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n394/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.qui-dixisti.opening-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The final red direction on p. 313 tells the priest to join his hands on the altar, bow and say the ensuing prayers quietly. The first prayer follows on p. 314."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

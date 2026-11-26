@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 37",
-    "scan": "PDF pages 49 (one-based)"
+    "scan": "PDF p. 49",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=49"
    },
    "entries": [
     {
@@ -27,7 +28,7 @@
      "claim": "Historical English source expression: “As it was in the beginning, is now, and ever shall be, world without end. Amen.” This supplies the corresponding English expression at the addressed scope. This is a shared-formula counterpart printed in another prayer context, not a claim that the page prints the complete addressed prayer."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -35,7 +36,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 50",
-    "scan": "PDF pages 62 (one-based)"
+    "scan": "PDF p. 62",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=62"
    },
    "entries": [
     {
@@ -55,7 +57,28 @@
      "claim": "Historical English source expression: “That I may hear the voice of thy praise; and tell of all thy wondrous works.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 50–51",
+    "scan": "PDF pp. 62–63",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=62"
+   },
+   "entries": [
+    {
+     "id": "use.en.9fe2cd4a45aba81c3238",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -63,7 +86,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 51",
-    "scan": "PDF pages 63 (one-based)"
+    "scan": "PDF p. 63",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=63"
    },
    "entries": [
     {
@@ -83,35 +107,16 @@
      "claim": "Historical English source expression: “But as for me I have walked in my innocence: redeem me, and have mercy on me.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 50–51",
-    "scan": "PDF pp. 62–63"
-   },
-   "entries": [
-    {
-     "id": "use.en.9fe2cd4a45aba81c3238",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "I will wash my hands among the innocent and go around Your altar, O Lord,"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "pp. 50–51",
-    "scan": "PDF pp. 62–63"
+    "printed": "p. 50",
+    "scan": "PDF p. 62",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=62"
    },
    "entries": [
     {
@@ -123,7 +128,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -131,7 +136,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 13",
-    "scan": "scan p. 40"
+    "scan": "PDF p. 40",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=40"
    },
    "entries": [
     {
@@ -143,7 +149,7 @@
      "claim": "O Lord, I have loved the beauty of Your house and the place where Your glory dwells."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

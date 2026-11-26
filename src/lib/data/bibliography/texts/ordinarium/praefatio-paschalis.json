@@ -16,7 +16,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The approved Benziger printing supplies the complete Easter Preface from Vere dignum through sine fine dicentes, with the seasonal alternative in hoc potissimum. Its adjoining rubric distinguishes this wording from the night and day alternatives. The preceding dialogue, following Sanctus and surrounding rubrics are outside the selected body."
+     "claim": "Page 291 prints the seasonal alternative in hoc potíssimum and its selection rubric. In the spoken preface it reads Vere dignum et iustem est. The selected iustum is printed in the same edition’s sung preface on p. 236 and in the separate Vatican reproduction on p. 288."
     }
    ],
    "verified_on": "2026-10-14"
@@ -48,7 +48,8 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 288",
-    "scan": "physical PDF p. 369"
+    "scan": "physical PDF p. 369",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=369"
    },
    "entries": [
     {
@@ -59,7 +60,7 @@
      "claim": "The retained Vatican typical-text reproduction supplies the complete same seasonal Easter Preface and its in hoc potissimum alternative. The comparison setting lacks the Benziger comma after destruxit. Its unproved reproduction date is distinct from the underlying 1962 text; dialogue, Sanctus and rubrics remain outside this body."
     }
    ],
-   "verified_on": "2026-10-14"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

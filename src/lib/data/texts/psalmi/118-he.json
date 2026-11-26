@@ -8,6 +8,7 @@
   "st":"working-edition",
   "ad":5,
   "adw":2,
+  "ac":[465],
   "seg":[
     {"id":"s01","type":"verse","verse":33,"w":[{"i":"w001","f":"Legem","l":"lex","m":7},{"i":"w002","f":"pone","l":"pono","m":86},{"i":"w003","f":"mihi","l":"ego","p":",","m":139},{"i":"w004","f":"Dómine","l":"dominus","p":",","m":5},{"i":"w005","f":"viam","l":"via","m":141},{"i":"w006","f":"iustificatiónum","l":"iustificatio","m":63},{"i":"w007","f":"tuárum","l":"tuus","p":":","m":110,"h":"w006"},{"i":"w008","f":"et","l":"et","m":15},{"i":"w009","f":"exquíram","l":"exquiro","m":320,"a":4},{"i":"w010","f":"eam","l":"is","m":291},{"i":"w011","f":"semper","l":"semper","p":".","m":32}]},
     {"id":"s02","type":"verse","verse":34,"w":[{"i":"w012","f":"Da","l":"do","m":41},{"i":"w013","f":"mihi","l":"ego","m":139},{"i":"w014","f":"intelléctum","l":"intellectus","p":",","m":160},{"i":"w015","f":"et","l":"et","m":15},{"i":"w016","f":"scrutábor","l":"scrutor","m":429},{"i":"w017","f":"legem","l":"lex","m":7},{"i":"w018","f":"tuam","l":"tuus","p":":","m":8,"h":"w017"},{"i":"w019","f":"et","l":"et","m":15},{"i":"w020","f":"custódiam","l":"custodio","m":430},{"i":"w021","f":"illam","l":"ille","m":291},{"i":"w022","f":"in","l":"in","m":0,"h":"w024"},{"i":"w023","f":"toto","l":"totus","m":149,"h":"w024"},{"i":"w024","f":"corde","l":"cor","m":135},{"i":"w025","f":"meo","l":"meus","p":".","m":149,"h":"w024"}]},

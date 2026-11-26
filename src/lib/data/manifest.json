@@ -77,7 +77,8 @@
     {
       "id": "orationes.ave-maria",
       "path": "texts/orationes/ave-maria.json",
-      "title": "Ave María"
+      "title": "Ave María",
+      "evidence": "bibliography/texts/orationes/ave-maria.json"
     },
     {
       "id": "orationes.ave-regina-caelorum",
@@ -106,7 +107,8 @@
     {
       "id": "orationes.gloria-patri",
       "path": "texts/orationes/gloria-patri.json",
-      "title": "Glória Patri"
+      "title": "Glória Patri",
+      "evidence": "bibliography/texts/orationes/gloria-patri.json"
     },
     {
       "id": "orationes.magnificat",
@@ -147,7 +149,8 @@
     {
       "id": "orationes.signum-crucis",
       "path": "texts/orationes/signum-crucis.json",
-      "title": "Signum crucis"
+      "title": "Signum crucis",
+      "evidence": "bibliography/texts/orationes/signum-crucis.json"
     },
     {
       "id": "orationes.sub-tuum-praesidium",
@@ -254,7 +257,8 @@
     {
       "id": "ordinarium.communicantes",
       "path": "texts/ordinarium/communicantes.json",
-      "title": "Communicántes"
+      "title": "Communicántes",
+      "evidence": "bibliography/texts/ordinarium/communicantes.json"
     },
     {
       "id": "ordinarium.confiteor-sacerdotis",
@@ -415,7 +419,8 @@
     {
       "id": "ordinarium.laus-tibi-christe",
       "path": "texts/ordinarium/laus-tibi-christe.json",
-      "title": "Laus tibi, Christe"
+      "title": "Laus tibi, Christe",
+      "evidence": "bibliography/texts/ordinarium/laus-tibi-christe.json"
     },
     {
       "id": "ordinarium.lavabo",
@@ -7332,7 +7337,8 @@
     {
       "id": "psalmi.118-he",
       "path": "texts/psalmi/118-he.json",
-      "title": "Psalmus 118, HE"
+      "title": "Psalmus 118, HE",
+      "evidence": "bibliography/texts/psalmi/118-he.json"
     }
   ],
   "languages": [
@@ -7372,6 +7378,6 @@
     2101
   ],
   "analyses": 26,
-  "citations": 460,
-  "bibliography_schema": "1.6.0"
+  "citations": 470,
+  "bibliography_schema": "1.7.0"
 }

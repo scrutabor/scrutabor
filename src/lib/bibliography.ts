@@ -4,10 +4,10 @@ import {
 	languageTextMetadataFor,
 	textMetadataFor
 } from './corpus-metadata';
-import type { Citation } from './corpus';
+import type { Citation, CitationLink } from './corpus';
 import type { Lang } from './i18n';
 import { remember } from './remember';
-import { formatSourceLocator } from './source-locator';
+import { formatSourceLocator, sourcePassageLink, sourcePassageNote } from './source-locator';
 import { lemmaHref } from './lemma-url';
 import { textHref } from './content-url';
 
@@ -40,12 +40,30 @@ interface WorkRecord {
 	responsible?: string;
 }
 
+interface PublicationEvent {
+	kind:
+		| 'copyright'
+		| 'imprimatur'
+		| 'typical_edition'
+		| 'title_page'
+		| 'ecclesiastical_approval'
+		| 'digital_publication'
+		| 'digital_reproduction'
+		| 'revision'
+		| 'reprint_of';
+	date: string;
+}
+
 interface EditionRecord {
 	id: string;
 	work: string;
 	title: string;
 	recension?: string;
 	edition_statement?: string;
+	contributors?: string[];
+	additional_imprints?: { place: string; publisher: string }[];
+	publication_events?: PublicationEvent[];
+	volume?: string;
 	place?: string;
 	publisher?: string;
 	year?: string;
@@ -61,6 +79,8 @@ interface DigitalItemRecord {
 	record_url?: string;
 	scan_url?: string;
 	access: string;
+	accessed_on?: string;
+	publication_events?: PublicationEvent[];
 }
 
 interface Catalog {
@@ -108,6 +128,7 @@ interface EvidenceSourceGroup {
 		scan?: string;
 		section?: string;
 		page_url?: string;
+		passages?: { heading: string; url: string }[];
 	};
 	entries: { id: string; address: EvidenceAddress; claim: string; reader_note?: string }[];
 }
@@ -172,6 +193,7 @@ export interface BibliographyUse {
 
 export interface BibliographyDetailGroup {
 	displayLocator?: string;
+	passages?: CitationLink[];
 	key: string;
 	role: BibliographyRole;
 	printed?: string;
@@ -208,13 +230,162 @@ function mergeCatalog(root: Catalog, language: Catalog): Catalog {
 	};
 }
 
-function sourceMeta(work: WorkRecord, edition: EditionRecord): string[] {
-	const publication = [edition.place, edition.publisher].filter(Boolean).join(': ');
+const contributorRoles: Record<Lang, Record<string, string>> = {
+	pl: {
+		editor: 'red.',
+		editors: 'red.',
+		translator: 'tłum.',
+		reviser: 'oprac.',
+		collaborator: 'współpr.',
+		compiler: 'zebr.',
+		preface: 'przedm.',
+		'commissioning body': 'na polecenie',
+		'arranger and translator': 'układ i przekład',
+		'arranger and principal translator': 'układ i przekład większości tekstów'
+	},
+	en: {
+		editor: 'ed.',
+		editors: 'eds.',
+		translator: 'trans.',
+		reviser: 'rev.',
+		collaborator: 'with',
+		compiler: 'comp.',
+		preface: 'preface by',
+		'commissioning body': 'by order of the',
+		'arranger and translator': 'arranged and translated by',
+		'arranger and principal translator': 'arranged and largely translated by'
+	}
+};
+
+const publicationEventLabels: Record<Lang, Record<PublicationEvent['kind'], string>> = {
+	pl: {
+		copyright: '©',
+		imprimatur: 'imprimatur',
+		typical_edition: 'dekret o wydaniu typicznym',
+		title_page: 'na karcie tytułowej',
+		ecclesiastical_approval: 'aprobata kościelna',
+		digital_publication: 'wydanie elektroniczne',
+		digital_reproduction: 'reprodukcja cyfrowa',
+		revision: 'wersja z',
+		reprint_of: 'przedruk wydania z'
+	},
+	en: {
+		copyright: '©',
+		imprimatur: 'imprimatur',
+		typical_edition: 'decree on the typical edition',
+		title_page: 'title-page date',
+		ecclesiastical_approval: 'ecclesiastical approval',
+		digital_publication: 'electronic publication',
+		digital_reproduction: 'digital reproduction',
+		revision: 'revised',
+		reprint_of: 'reprint of the edition of'
+	}
+};
+
+function publicationDate(value: string, lang: Lang): string {
+	if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return value;
+	return new Intl.DateTimeFormat(lang === 'pl' ? 'pl-PL' : 'en-GB', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric',
+		timeZone: 'UTC'
+	}).format(new Date(value + 'T12:00:00Z'));
+}
+
+function publicationYear(year: string | undefined, events: PublicationEvent[], lang: Lang) {
+	if (year === 's.a.') {
+		if (events.some((event) => event.kind === 'title_page')) return undefined;
+		return lang === 'pl' ? 'b.r.' : 'n.d.';
+	}
+	const lowerBound = year && /^([0-9]{4})\/\.\.$/.exec(year);
+	if (lowerBound) {
+		return lang === 'pl'
+			? '[nie wcześniej niż ' + lowerBound[1] + ']'
+			: '[not before ' + lowerBound[1] + ']';
+	}
+	return year;
+}
+
+function credit(value: string, lang: Lang): string {
+	const parts = /^(.+) \(([^()]+)\)$/.exec(value);
+	const role = parts && contributorRoles[lang][parts[2]];
+	if (!parts || !role) return value;
+	const polishNames: Record<string, string> = {
+		'Benedictines of Solesmes': 'benedyktyni z Solesmes',
+		'Third Plenary Council of Baltimore': 'III Synodu Plenarnego w Baltimore'
+	};
+	const name = lang === 'pl' ? (polishNames[parts[1]] ?? parts[1]) : parts[1];
+	return role + ' ' + name;
+}
+
+function sourceMeta(
+	work: WorkRecord,
+	edition: EditionRecord,
+	items: DigitalItemRecord[],
+	lang: Lang
+): string[] {
+	const statement = edition.edition_statement;
+	const printer = !edition.publisher && statement?.startsWith('Drukiem ') ? statement : undefined;
+	const publication = [edition.place, edition.publisher ?? printer].filter(Boolean).join(': ');
+	const events = edition.publication_events ?? [];
+	const copies = items.filter((item) => item.edition === edition.id);
+	const copyEvents = copies.flatMap((item) => item.publication_events ?? []);
+	const journal =
+		edition.publication_type === 'periodical' || edition.publication_type === 'official_act';
+	const dateInCitation =
+		journal && edition.year && statement?.match(/\b\d{4}\b/g)?.includes(edition.year);
+	const revision = events.find((event) => event.kind === 'revision');
+	const undated = edition.year === 's.a.';
+	const year = publicationYear(edition.year, events, lang);
+	const volume =
+		edition.volume && /^[IVXLCDM]+(?:[.,]|$)/.test(edition.volume)
+			? (lang === 'pl' ? 't. ' : 'vol. ') + edition.volume
+			: edition.volume;
+	const version = Boolean(
+		revision && edition.edition_statement && /^[a-f0-9]{8}$/.test(edition.edition_statement)
+	);
+	const eventDetails = new Set(
+		[...events, ...copyEvents].map(({ kind, date }) => {
+			const label = publicationEventLabels[lang][kind];
+			const identifier =
+				kind === 'revision' && version ? ' (' + edition.edition_statement + ')' : '';
+			return label + ' ' + publicationDate(date, lang) + identifier;
+		})
+	);
+	const contributors = edition.contributors ?? [];
+	const editorsOnly =
+		contributors.length > 1 && contributors.every((name) => name.endsWith(' (editor)'));
+	const credits = editorsOnly
+		? [
+				contributorRoles[lang].editors +
+					' ' +
+					new Intl.ListFormat(lang === 'pl' ? 'pl' : 'en-GB').format(
+						contributors.map((name) => name.slice(0, -' (editor)'.length))
+					)
+			]
+		: contributors.map((person) => credit(person, lang));
+	const versionYear =
+		edition.publication_type === 'web_resource' && !revision && year && !undated
+			? lang === 'pl'
+				? 'wersja z ' + year
+				: year + ' version'
+			: year;
+	const byline = work.responsible && credit(work.responsible, lang);
+	const accessDates = new Set(
+		copies.flatMap((item) => (item.accessed_on ? [item.accessed_on] : []))
+	);
+	const accessLabel = lang === 'pl' ? 'dostęp ' : 'accessed ';
+
 	return [
-		work.responsible,
-		edition.edition_statement,
-		publication || undefined,
-		edition.year
+		byline,
+		...credits,
+		volume,
+		version || printer ? undefined : statement,
+		publication === byline ? undefined : publication,
+		...(edition.additional_imprints ?? []).map(({ place, publisher }) => place + ': ' + publisher),
+		dateInCitation || revision?.date.slice(0, 4) === year ? undefined : versionYear,
+		...eventDetails,
+		...[...accessDates].sort().map((value) => accessLabel + publicationDate(value, lang))
 	].filter((value): value is string => Boolean(value));
 }
 
@@ -248,7 +419,7 @@ export async function buildBibliography(lang: Lang): Promise<BibliographyPageDat
 				id: edition.id,
 				section: section.id,
 				title: edition.title,
-				meta: sourceMeta(work, edition),
+				meta: sourceMeta(work, edition, catalog.digital_items, lang),
 				authority: edition.authority,
 				roles: entry.roles,
 				texts: entry.texts,
@@ -367,6 +538,16 @@ function compactUses(
 	];
 }
 
+function evidenceNotes(group: EvidenceSourceGroup, lang: Lang): string[] {
+	const notes = new Set(
+		group.entries.flatMap(({ reader_note }) => (reader_note ? [reader_note] : []))
+	);
+	const passageNote =
+		group.locator.passages?.length && sourcePassageNote(group.locator.section, lang);
+	if (passageNote) notes.add(passageNote);
+	return [...notes];
+}
+
 export async function loadBibliographySource(
 	lang: Lang,
 	source: BibliographySource
@@ -407,9 +588,7 @@ export async function loadBibliographySource(
 			const key = [group.digital_item, group.role, JSON.stringify(group.locator)].join('\u0000');
 			const found = groups.get(key) ?? { source: group, entries: [], notes: new Set<string>() };
 			found.entries.push(...group.entries.map(({ address }) => ({ textId, address })));
-			for (const entry of group.entries) {
-				if (entry.reader_note) found.notes.add(entry.reader_note);
-			}
+			for (const note of evidenceNotes(group, lang)) found.notes.add(note);
 			groups.set(key, found);
 		}
 	}
@@ -418,10 +597,13 @@ export async function loadBibliographySource(
 		if (!item) throw new Error(`${group.source.digital_item} has no catalogue record`);
 		const { section, printed, scan } = group.source.locator;
 		const raw = [section, printed, scan].filter(Boolean).join(' · ');
-		const displayLocator = formatSourceLocator(raw, lang);
+		const passages = group.source.locator.passages?.map((part) => sourcePassageLink(part, lang));
+		const displayLocator =
+			passages?.map((part) => part.label).join(' · ') ?? formatSourceLocator(raw, lang);
 		return {
 			key,
 			...(displayLocator === raw ? {} : { displayLocator }),
+			...(passages ? { passages } : {}),
 			role: group.source.role,
 			printed: group.source.locator.printed,
 			scan: group.source.locator.scan,
@@ -436,7 +618,9 @@ export async function loadBibliographySource(
 
 /** The original locator remains the key for grouping and links. */
 export function citationForLanguage(citation: Citation, lang: Lang): Citation {
-	const displayLocator = formatSourceLocator(citation.locator, lang);
+	const displayLocator =
+		citation.passages?.map((part) => part.label).join(' · ') ??
+		formatSourceLocator(citation.locator, lang);
 	return displayLocator === citation.locator ? citation : { ...citation, displayLocator };
 }
 
@@ -450,12 +634,13 @@ function evidenceCitation(
 	if (!edition) throw new Error(`${group.edition} has no catalogue record`);
 	const item = items.get(group.digital_item);
 	if (!item) throw new Error(`${group.digital_item} has no catalogue record`);
-	const notes = [
-		...new Set(group.entries.flatMap(({ reader_note }) => (reader_note ? [reader_note] : [])))
-	];
+	const notes = evidenceNotes(group, lang);
 	return citationForLanguage(
 		{
 			title: edition.title,
+			...(group.locator.passages
+				? { passages: group.locator.passages.map((part) => sourcePassageLink(part, lang)) }
+				: {}),
 			...(notes.length ? { notes } : {}),
 			locator: [group.locator.section, group.locator.printed, group.locator.scan]
 				.filter(Boolean)

@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 58",
-    "scan": "PDF s. 61",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 58",
+    "scan": "PDF, s. 61",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=61"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „To jest bowiem Ciało moje.”"
+     "claim": "Przy konsekracji chleba modlitewnik podaje słowa „To jest bowiem ciało moje”."
     },
     {
      "id": "use.pl.1828896e837fbe07723d",
@@ -33,7 +33,7 @@
       "kind": "segment",
       "segment": "s02"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,”"
+     "claim": "W tym wydaniu zwykłe Qui pridie zaczyna się od słów „Który w dzień przed męką swoją”."
     },
     {
      "id": "use.pl.ordinarium.qui-pridie.s13.pamiatka1903",
@@ -41,10 +41,10 @@
       "kind": "segment",
       "segment": "s13"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Który w przeddzień swej męki wziął chleb w swe święte i czcigodne ręce,”"
+     "claim": "Przy opisie ustanowienia Eucharystii modlitewnik ma „wziął chleb w święte, czcigodne ręce swoje”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

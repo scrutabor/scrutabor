@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-lavabo; literal-composite-not-macro-expansion} (line 183; line 22; line 23); complete source contexts 21–24, 181–185"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt [Incensatio], 183 · web/www/missa/Latin/Ordo/Ordo.txt [Incipit], 22–23",
+    "passages": [
+     {
+      "heading": "Incensatio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L183"
+     },
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L22-L23"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L183"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Ordo supplies the complete 94-word literal composite: the Lavabo psalm at line183, then its own printed Gloria Patri at lines22–23, retaining semper: with a colon. This comparison does not execute &Gloria or claim a textual contribution from Prayers, seasonal performance or independent transmission."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +45,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 225 prints the full Lavabo, Psalm 25, 6–12, with the Gloria Patri. The adjacent rubric names the Masses in which the doxology is omitted."
     }
    ],
    "verified_on": "2026-09-25"

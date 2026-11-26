@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/02-02.txt [Graduale], Alleluia-only lines 177–178; preceding gradual excluded"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Graduale], Alleluia-only lines 177–178; preceding gradual excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L177-L178",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L177-L178"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned direct Latin Mass body at lines 177–178 corroborates the complete 10-word Alleluia and verse as a derived digital witness. The digital Graduale section prints it after the Gradual, which is excluded here; no inherited reference or expansion supplies this body."
     }
    ],
-   "verified_on": "2026-10-02"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

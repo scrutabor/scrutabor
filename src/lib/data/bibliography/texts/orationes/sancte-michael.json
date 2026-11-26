@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-sancte-michael; closed-literal-selection} (line 408); complete source contexts 406–411"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-sancte-michael; closed-literal-selection} (line 408); complete source contexts 406–411",
+    "passages": [
+     {
+      "heading": "Orationes Leonis XIII",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L408"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L408"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 40-word literal selection in the stated selection order (408), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -26,7 +33,8 @@
    "locator": {
     "printed": "p. 520",
     "scan": "PDF scan 541",
-    "section": "n. 675"
+    "section": "n. 675",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=541"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "Sancte Michael follows the collect in the prayers after low Mass."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -46,7 +54,8 @@
    "locator": {
     "printed": "pp. 520–521",
     "scan": "PDF pp. 541–542",
-    "section": "n. 675"
+    "section": "n. 675",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=541"
    },
    "entries": [
     {
@@ -57,7 +66,7 @@
      "claim": "The complete Latin prayer follows n. 675, with house accents and ligatures, and retains its current sentence punctuation, capital Caelestis and lower-case satanam. The page's praelio is retained with the house ligature and stress mark. The book supplies the underlying prayer; it is not a 1962 Missal witness or evidence that Leo XIII personally composed it."
     }
    ],
-   "verified_on": "2026-11-04"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

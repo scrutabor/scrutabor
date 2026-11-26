@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/07-22.txt lines 28-29; Graduale section; reached by Sancti/07-26 Graduale delegation"
+    "section": "web/www/missa/Latin/Sancti/07-22.txt [Graduale], 26–29 · web/www/missa/Latin/Sancti/07-26.txt [Graduale], 27–28",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/07-22.txt#L26-L29"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/07-26.txt#L27-L28"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/07-22.txt#L26-L29"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The exact pinned dependency supplies this complete chant. Its spelling and punctuation are retained independently; it is a derived comparison, not another independent printed edition."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

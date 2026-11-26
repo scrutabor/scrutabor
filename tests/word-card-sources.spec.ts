@@ -17,23 +17,30 @@ const expectedCitations = {
 	veneror: [
 		{
 			title: 'A Latin Dictionary',
-			locator: { pl: 'hasło TEI w zbiorze Perseus: n50434', en: 'Perseus TEI entry n50434' },
-			url: 'https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml'
+			locator: {
+				en: 's.v. veneror',
+				pl: 's.v. veneror'
+			},
+			url: 'https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n50434/'
 		},
 		{
-			title: "Allen and Greenough's New Latin Grammar for Schools and Colleges",
+			title:
+				'Allen and Greenough’s New Latin Grammar for Schools and Colleges. Founded on Comparative Grammar',
 			locator: {
-				pl: '§190 i §190d · s. 103–105 · strony w pliku PDF (numeracja od 1): 121–123',
-				en: '§190 and §190d · pp. 103–105 · PDF pages 121–123 (counting from 1)'
+				en: '§ 190 d · pp. 103–105 · PDF pp. 121–123',
+				pl: '§ 190 d · s. 103–105 · PDF, s. 121–123'
 			},
-			url: 'https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf#page=123'
+			url: 'https://archive.org/download/allengreenoughsn00alleiala/allengreenoughsn00alleiala.pdf#page=123'
 		}
 	],
 	in: [
 		{
 			title: 'A Latin Dictionary',
-			locator: { pl: 'hasło TEI w zbiorze Perseus: n22111', en: 'Perseus TEI entry n22111' },
-			url: 'https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml'
+			locator: {
+				en: 's.v. in 1',
+				pl: 's.v. in 1'
+			},
+			url: 'https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n22111/'
 		}
 	]
 };
@@ -176,7 +183,7 @@ for (const host of ['', ' @static-host']) {
 			const neutral =
 				body.includes('source_groups') &&
 				body.includes('latin_textual_sources') &&
-				body.includes('Perseus TEI entry n50434') &&
+				body.includes('lat.ls.perseus-eng2-n50434/') &&
 				!body.includes('wording_witnesses');
 			let receipt: (typeof receipts)[number] | undefined;
 			if (neutral) {

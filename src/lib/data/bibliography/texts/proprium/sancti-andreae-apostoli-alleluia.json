@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/11-30.txt [Graduale], lines 33–34; no inherited reference"
+    "section": "web/www/missa/Latin/Sancti/11-30.txt [Graduale], lines 33–34; no inherited reference",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/11-30.txt#L33-L34",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/11-30.txt#L33-L34"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned Latin Mass reading corroborates the 9-word Alleluia and verse (printed after the gradual in the same section of the pinned file) as a derived digital witness, bound to its raw archives; its spellings, accents and punctuation are recorded in the apparatus."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

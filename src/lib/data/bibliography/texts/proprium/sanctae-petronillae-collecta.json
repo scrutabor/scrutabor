@@ -49,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 540",
-    "scan": "PDF physical p. 621",
-    "section": "no.2684, Et fit commemoratio S. Petronillae Virginis, Oratio",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n620/mode/1up"
+    "scan": "PDF p. 621",
+    "section": "Die 31 maii. Beatæ Mariæ Virginis Reginæ. Pro S. Petronilla. Oratio, n. 2684.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=621"
    },
    "entries": [
     {
@@ -62,7 +62,7 @@
      "claim": "This proper page prints the 19-word body (w001–w019) and the abbreviated Per Dóminum cue. The full w020–w041 conclusion and Amen are not printed in full on this proper page; the same-edition RG 115 a dependency supplies them. Adjacent Queenship material, Common references and headings are excluded. This is a narrow textual source claim, not commemoration, calendar or actor approval."
     }
    ],
-   "verified_on": "2026-10-22"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Direct shared Common web/www/horas/Latin/Commune/C7a.txt [Lectio], section line 74, reference line 76 and body line 77. Heading line 75 is outside-body context. Proper Sancti/07-26 contains ex C7a and vide C7a, not a direct Lectio."
+    "section": "Direct shared Common web/www/horas/Latin/Commune/C7a.txt [Lectio], section line 74, reference line 76 and body line 77. Heading line 75 is outside-body context. Proper Sancti/07-26 contains ex C7a and vide C7a, not a direct Lectio.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C7a.txt#L77",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C7a.txt#L77"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The directly consulted pinned shared Common Lectio prints the complete comparison body. Its literal spelling and the selected edition’s differences are declared in the apparatus. This present documentary reading does not establish the original import route or an executed feast-selection result."
     }
    ],
-   "verified_on": "2026-10-28"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-salve-regina; closed-literal-selection} (line 402; line 403; line 404); complete source contexts 393–406"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-salve-regina; closed-literal-selection} (line 402; line 403; line 404); complete source contexts 393–406",
+    "passages": [
+     {
+      "heading": "Orationes Leonis XIII",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L402-L404"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L402-L404"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 67-word literal selection in the stated selection order (402, then 403, then 404), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -26,7 +33,8 @@
    "locator": {
     "printed": "p. 520",
     "scan": "PDF scan 541",
-    "section": "n. 675"
+    "section": "n. 675",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=541"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "Salve Regina precedes its versicle and collect in the prayers after low Mass."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -46,7 +54,8 @@
    "locator": {
     "printed": "pp. 215, 520",
     "scan": "PDF pp. 234, 541",
-    "section": "n. 332 (antiphon); n. 675 (versicle and response)"
+    "section": "n. 332 (antiphon); n. 675 (versicle and response)",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=234"
    },
    "entries": [
     {
@@ -57,7 +66,7 @@
      "claim": "The complete antiphon follows n. 332 and the closing versicle/response n. 675, with house accents and ligatures. This edition retains Eva/exilium/genetrix spellings, devotional capitals and the separately noted pointing instead of presenting them as a diplomatic transcription of Hevae/exsilium/Genitrix. The book supplies the underlying Latin formula; it is not a 1962 Missal witness or an independent attestation of every digital-source accidental."
     }
    ],
-   "verified_on": "2026-11-04"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

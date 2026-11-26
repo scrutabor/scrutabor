@@ -7,9 +7,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 101",
-    "scan": "DJVU physical pages 114 (one-based); indices 113 (zero-based)"
+    "scan": "DjVu p. 114",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=114"
    },
    "entries": [
+    {
+     "id": "use.en.932870123d940f5ffc58",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Holy, Holy, Holy Lord God of hosts."
+    },
     {
      "id": "use.en.e322fb2c7db1d38f5243",
      "address": {
@@ -27,27 +36,7 @@
      "claim": "Historical English source expression: “Hosanna in the highest.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 101",
-    "scan": "scan p. 114"
-   },
-   "entries": [
-    {
-     "id": "use.en.932870123d940f5ffc58",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Holy, Holy, Holy Lord God of hosts."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

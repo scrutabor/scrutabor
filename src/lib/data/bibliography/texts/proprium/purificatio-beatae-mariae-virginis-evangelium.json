@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/02-02.txt [Evangelium]; heading 190, title 191, Luke 2:22–32 reference 192, complete direct body 193; next section 195"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Evangelium]; heading 190, title 191, Luke 2:22–32 reference 192, complete direct body 193; next section 195",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L193",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L193"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned Latin Mass body corroborates the complete Gospel as a derived digital comparison witness. This unit is direct, not inherited and not an independent controlling print; its thirteen accidentals are declared in the apparatus."
     }
    ],
-   "verified_on": "2026-10-02"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

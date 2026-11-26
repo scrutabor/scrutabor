@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-horae.44667ff.doc10",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "horas/Latin/Commune/C10.txt lines 213-214"
+    "section": "horas/Latin/Commune/C10.txt [Offertorium], 213–214",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10.txt#L213-L214"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10.txt#L213-L214"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-horae.44667ff",
    "digital_item": "item.divinum-officium-horae.44667ff.doc11",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "horas/Latin/Commune/C11.txt lines 396-398"
+    "section": "horas/Latin/Commune/C11.txt lines 396-398",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C11.txt#L396-L398"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C11.txt#L396-L398"
    },
    "entries": [
     {
@@ -35,14 +49,21 @@
      "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "missa/Latin/Sancti/03-25.txt [Offertorium]; exact inherited dependencies declared separately"
+    "section": "missa/Latin/Sancti/03-25.txt [Offertorium], 44–45",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L44-L45"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L44-L45"
    },
    "entries": [
     {
@@ -50,10 +71,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
+     "claim": "The feast file gives the reference for the Offertory. The Common supplies the chant."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

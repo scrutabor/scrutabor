@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Ordo/Prayers.txt [Gloria], heading12, text13-14"
+    "section": "Latin/Ordo/Prayers.txt [Gloria], heading12, text13-14",
+    "passages": [
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "The called Gloria supplies exactly lines13-14, including Amen. Uppercase V./R. source markers are preserved as framing evidence, not an automatic introit performance assignment."
     }
    ],
-   "verified_on": "2026-09-30"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/12-25m3.txt: Christmas heading11/reference12; inherited heading16/reference17 and psalm reference19; textual lines18,20,22 surround &Gloria21; shared Gloria heading12/body13-14. The repetition is material, not deduplicated."
+    "section": "missa/Latin/Sancti/12-25m3.txt [Introitus], 11–12",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/12-25m3.txt#L11-L12",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/12-25m3.txt#L11-L12"
+     }
+    ]
    },
    "entries": [
     {
@@ -35,14 +49,21 @@
      "claim": "The Christmas source directs this introit to Tempora/Nat30; inherited body and shared doxology have separately declared dependencies."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Nat30.txt [Introitus], heading16, reference17, body18-22"
+    "section": "Latin/Tempora/Nat30.txt [Introitus], heading16, reference17, body18-22",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Nat30.txt#L16-L22"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Nat30.txt#L16-L22"
    },
    "entries": [
     {
@@ -53,7 +74,7 @@
      "claim": "The inherited Introitus supplies antiphon18, psalm20, &Gloria21 and repeated antiphon22; the shared doxology is a separate declared dependency."
     }
    ],
-   "verified_on": "2026-09-30"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -71,10 +92,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Mass of the Octave Day prints this Introit's antiphon and verse in full. Their letters and accents equal page 20 and the selected text; it has a colon after novum (cánticum novum: quia) where page 20 and the selected text have a comma. The Gloria Patri and the repetition are cues on both pages (Puer.)."
+     "claim": "The Octave Day prints the antiphon and psalm verse. Both printed settings have Angelus without a capital accent; the reader displays Ángelus. The Octave prints cánticum novum: quia, where Christmas Day and the reader have a comma. Both printed settings abbreviate the doxology and reprise as Glória Patri. Puer."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

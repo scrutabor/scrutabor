@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const day = 'commemoratio-omnium-fidelium-defunctorum-missa-iii';
@@ -182,10 +183,8 @@ for (const language of ['pl', 'en'] as const) {
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
 		await expect(sources).toContainText(language === 'pl' ? 's. 726' : 'p. 726');
-		await expect(sources).toContainText('Latin/Sancti/11-02m3.txt');
-		await expect(sources).toContainText(
-			language === 'pl' ? 'tekst bezpośrednio w w. 19' : 'direct body line 19'
-		);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Sancti/11-02m3.txt', 19);
+		await expect(sources.locator('a.source-passage')).toHaveCount(1);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n807/mode/1up"]'

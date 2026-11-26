@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/02-01.txt [Evangelium], heading57, announcement58, reference59, body60"
+    "section": "Latin/Sancti/02-01.txt [Evangelium], heading57, announcement58, reference59, body60",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-01.txt#L57-L60"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-01.txt#L57-L60"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "The exact inherited 71-word body is a derived digital comparison, not an independent printed witness. Source framing on lines57-59 is excluded; Jesus, amen comma and ministrat accent are preserved as printed in the pinned data."
     }
    ],
-   "verified_on": "2026-10-01"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/08-10.txt [Evangelium], heading36, reference37 to Sancti/02-01"
+    "section": "missa/Latin/Sancti/08-10.txt [Evangelium], 36–37",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-10.txt#L36-L37",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-10.txt#L36-L37"
+     }
+    ]
    },
    "entries": [
     {
@@ -35,7 +49,7 @@
      "claim": "The pinned source supplies the inheritance directive, not the Gospel body itself. The exact body in Sancti/02-01 is a separately declared derived digital dependency; independent textual transmission is not claimed."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

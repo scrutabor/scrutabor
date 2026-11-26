@@ -1,0 +1,29 @@
+{
+ "id": "psalmi.118-he",
+ "source_groups": [
+  {
+   "edition": "edition.biblia-wujka-1923",
+   "digital_item": "item.biblia-wujka-1923.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Ps 118, 33–40 (He)",
+    "printed": "s. 584",
+    "scan": "DjVu, s. 588",
+    "page_url": "https://commons.wikimedia.org/wiki/File:PL_Wujek-Biblia_to_jest_ksi%C4%99gi_Starego_i_Nowego_Testamentu_1923.djvu?page=588"
+   },
+   "entries": [
+    {
+     "id": "use.pl.psalmi.118-he.wujek-1923-porownanie",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "W prawej kolumnie, między nagłówkami He i Vau, wydrukowano wszystkie osiem wersetów strofy. W w. 38 Wujek używa słów „wyrok twój”.",
+     "reader_note": "W w. 38 Wujek oddaje łacińskie eloquium słowem „wyrok”. W obecnym przekładzie czytamy „swoje słowo”."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": [],
+ "language": "pl"
+}

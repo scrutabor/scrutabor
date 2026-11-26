@@ -57,10 +57,16 @@ export interface Analysis {
 	review: string;
 }
 
+export interface CitationLink {
+	label: string;
+	url: string;
+}
+
 export interface Citation {
 	title: string;
 	locator: string;
 	displayLocator?: string;
+	passages?: CitationLink[];
 	url?: string;
 	notes?: string[];
 }

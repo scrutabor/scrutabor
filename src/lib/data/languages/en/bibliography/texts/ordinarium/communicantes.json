@@ -6,8 +6,38 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 63–64",
-    "scan": "scan pp. 75–76"
+    "printed": "p. 63",
+    "scan": "PDF p. 75",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=75"
+   },
+   "entries": [
+    {
+     "id": "use.en.6c859c87986295ab5cfa",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "The corresponding English in the 1846 Missal reads “Linus, Cletus, Clement, Xystus, Cornelius, Cyprian, Lawrence, Chrysogonus, John and Paul, Cosmas and Damian,” The current text uses the conventional spelling Sixtus."
+    },
+    {
+     "id": "use.en.bb774450d6349d77f12b",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The corresponding English in the 1846 Missal reads “as also of the blessed Apostles and Martyrs, Peter and Paul, Andrew, James, John, Thomas, James, Philip, Bartholomew, Matthew, Simon and Thaddeus,”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 64",
+    "scan": "PDF p. 76",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=76"
    },
    "entries": [
     {
@@ -16,26 +46,10 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
-    },
-    {
-     "id": "use.en.6c859c87986295ab5cfa",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
-    },
-    {
-     "id": "use.en.bb774450d6349d77f12b",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "In communion, we venerate the memory above all of the glorious Mary, ever Virgin, Mother of our God and Lord Jesus Christ:"
+     "claim": "The corresponding English in the 1846 Missal reads “Through the same Christ our Lord. Amen.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

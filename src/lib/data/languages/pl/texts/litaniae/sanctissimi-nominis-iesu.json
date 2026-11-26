@@ -1,7 +1,7 @@
 {
   "id":"litaniae.sanctissimi-nominis-iesu",
   "language":"pl",
-  "about":"Litania do Najświętszego Imienia Jezus, którą Enchiridion Indulgentiarum z 1952 r. odnotowuje pod dekretem Kongregacji Odpustów z 16 stycznia 1886 r. W tej księdze dwie końcowe prośby tworzą jedną modlitwę z jedną doksologią. Tak kończy się litania w tej łacińskiej redakcji.",
+  "about":"W Enchiridion indulgentiarum z 1952 r. litanię zamykają dwie modlitwy ze wspólnym zakończeniem. Pod tekstem przywołano akty Kongregacji Odpustów z 16 stycznia 1886 r. i Penitencjarii Apostolskiej z 2 stycznia 1933 r.",
   "seg":[
     {"id":"s001","tr":"Kyrie, eleison.","tc":[26],"tb":"traditional-composite","g":["Panie","zmiłuj się"]},
     {"id":"s002","tr":"Christe, eleison.","tc":[26],"tb":"traditional-composite","g":["Chryste","zmiłuj się"]},

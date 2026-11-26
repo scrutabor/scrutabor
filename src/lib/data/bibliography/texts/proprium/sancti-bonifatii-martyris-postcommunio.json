@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, 123, 226",
     "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
-    "section": "RG115a complete ending and Amen wording; same-edition accented common stem and terminal typography"
+    "section": "RG115a complete ending and Amen wording; same-edition accented common stem and terminal typography",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "RG115a supplies the Father-directed Per Dominum ending w020–w040 and Amen w041. Its literal rubric formula is unaccented. Same-edition p.123 controls matching accented formula words, and p.226 controls the accented four-word terminal and separately marked Amen period. These controls do not make the proper page a full-ending witness or establish response actors, singing, or larger-group conclusion distribution."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 530",
-    "scan": "PDF physical611 / leaf n610",
-    "section": "05-14 postcommunio; Postcommunio2600 C4; right column before explicit May15 heading",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n610/mode/1up"
+    "scan": "PDF p. 611",
+    "section": "Die 14 maii. S. Bonifatii Mart. Postcommunio, n. 2600.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=611"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the 19-word postcommunio proper w001–w019, followed by the distinct abbreviated cue “Per Dóminum.” The full supplied ending and Amen are not printed at this proper locus. The printed feast heading identifies Boniface as a commemoration. The setting is typographically distinct, not evidence of independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

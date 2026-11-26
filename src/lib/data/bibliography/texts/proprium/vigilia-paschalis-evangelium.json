@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 532"
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 532",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L532",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L532"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "This dependent same-recension digital comparison supplies the explicitly resolved Latin reading; it does not establish independent transmission or another printed edition."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

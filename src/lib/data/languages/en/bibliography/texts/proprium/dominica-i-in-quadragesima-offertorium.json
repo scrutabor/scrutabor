@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 173–174",
-    "scan": "scan pp. 189–190"
+    "scan": "PDF pp. 189–190",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=189"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "Historical English basis of the Offertory (the Douay Ps 90:4–5 through this missal), revised in contemporary language as the Tract of the same Mass renders the same words: you will hope (sperábis), will surround you."
+     "claim": "The 1846 English Offertory prints “under his wings thou shalt trust” and “his truth shall compass thee with a shield”. The Tract of the same Mass also uses trust and compass. The present translation renders these expressions as “you will hope” and “will surround you”."
     }
    ],
-   "verified_on": "2026-10-11"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

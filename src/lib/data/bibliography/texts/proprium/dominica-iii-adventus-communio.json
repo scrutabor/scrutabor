@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.21cb2d37.advent-iii",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv3-0.txt [Communio] (lines 60-61)"
+    "section": "web/www/missa/Latin/Tempora/Adv3-0.txt [Communio] (lines 60-61)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt#L59-L61",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt#L59-L61"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact revision supplies this component as a derived digital comparison. The declared complete reading preserves the source spelling, accents, punctuation and component boundary. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Sancti/02-02 [Offertorium] -> @Commune/C6b, which inherits @Commune/C6-1 [Offertorium], horas/Latin/Commune/C6-1 source line 55"
+    "section": "web/www/horas/Latin/Commune/C6-1.txt [Offertorium], 53–55 · web/www/horas/Latin/Commune/C6b.txt [Referentia], 1 · web/www/missa/Latin/Sancti/02-02.txt [Offertorium], 195–196",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C6-1.txt#L53-L55"
+     },
+     {
+      "heading": "Referentia",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C6b.txt#L1"
+     },
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L195-L196"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C6-1.txt#L53-L55"
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -25,7 +40,8 @@
    "role": "official_liturgical_context",
    "locator": {
     "printed": "pp. 1365, 1258",
-    "scan": "PDF pp. 1569, 1452"
+    "scan": "PDF pp. 1569, 1452",
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n1568/mode/1up"
    },
    "entries": [
     {
@@ -37,7 +53,7 @@
      "claim": "At None of 2 February the Office sings the short responsory Elégit eam and then the versicle Diffúsa est grátia in lábiis tuis with its response Proptérea benedíxit te Deus in ætérnum; the feast thus applies this verse to Mary. This supports the reading of te and tuis on this feast, not a rule for every use of Psalm 44:3."
     }
    ],
-   "verified_on": "2026-10-04"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.b5e250b.advent-i",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (lines 30-31); web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (line 32, chars 0:63)"
+    "section": "web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (lines 30-31); web/www/missa/Latin/Tempora/Adv1-0.txt [Graduale] (line 32, chars 0:63)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt#L29-L32",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt#L29-L32"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact revision supplies this component as a derived digital comparison. The declared complete reading preserves the source spelling, accents, punctuation and component boundary. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -1,7 +1,7 @@
 {
   "id":"litaniae.sacratissimi-cordis-iesu",
   "language":"pl",
-  "about":"Litania do Najświętszego Serca Pana Jezusa wraz z wersetem i modlitwą końcową, w redakcji poświadczonej przez Enchiridion Indulgentiarum z 1952 r., które odnotowuje ją pod aktem Kongregacji Obrzędów z 2 kwietnia 1899 r.",
+  "about":"W Enchiridion indulgentiarum z 1952 r. po litanii następują werset z odpowiedzią i modlitwa końcowa. Księga przywołuje dokument Kongregacji Obrzędów z 2 kwietnia 1899 r. i akt Penitencjarii Apostolskiej z 10 marca 1933 r.",
   "seg":[
     {"id":"s001","tr":"Kyrie, eleison.","tc":[21],"tb":"traditional-composite","g":["Panie","zmiłuj się"]},
     {"id":"s002","tr":"Christe, eleison.","tc":[21],"tb":"traditional-composite","g":["Chryste","zmiłuj się"]},

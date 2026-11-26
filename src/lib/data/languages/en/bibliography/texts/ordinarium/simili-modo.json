@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 65",
-    "scan": "PDF pages 77 (one-based)"
+    "scan": "PDF p. 77",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=77"
    },
    "entries": [
     {
@@ -35,7 +36,28 @@
      "claim": "Historical English source expression: “giving thee also thanks” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 65–66",
+    "scan": "PDF pp. 77–78",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=77"
+   },
+   "entries": [
+    {
+     "id": "use.en.904623c5c194df8dd0e1",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "In like manner, after supper was ended,"
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -43,7 +65,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 66",
-    "scan": "PDF pages 78 (one-based)"
+    "scan": "PDF p. 78",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=78"
    },
    "entries": [
     {
@@ -71,27 +94,7 @@
      "claim": "Historical English source expression: “Take and drink ye all of this” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 65–66",
-    "scan": "scan pp. 77–78"
-   },
-   "entries": [
-    {
-     "id": "use.en.904623c5c194df8dd0e1",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "In like manner, after supper was ended,"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -99,7 +102,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "pp. 65–66",
-    "scan": "scan pp. 77–78"
+    "scan": "PDF pp. 77–78",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=77"
    },
    "entries": [
     {
@@ -111,7 +115,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -119,7 +123,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
-    "scan": "PDF pages 52 (one-based)"
+    "scan": "PDF p. 52",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=52"
    },
    "entries": [
     {
@@ -131,7 +136,7 @@
      "claim": "Historical English source expression: “he blessed it, and gave it to his disciples, saying” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -139,7 +144,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 25–26",
-    "scan": "scan pp. 52–53"
+    "scan": "PDF pp. 52–53",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=52"
    },
    "entries": [
     {
@@ -151,7 +157,7 @@
      "claim": "In like manner, after supper was ended,"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

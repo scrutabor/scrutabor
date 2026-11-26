@@ -1,6 +1,10 @@
 {
- "schema_version": "1.6.0",
+ "schema_version": "1.7.0",
  "works": [
+  {
+   "id": "work.acta-nuntiaturae-polonae.ratti.57-8",
+   "title": "Acta Nuntiaturae Polonae. Achilles Ratti (1918–1921)"
+  },
   {
    "id": "work.adam.rudiments",
    "responsible": "Alexander Adam",
@@ -8,12 +12,12 @@
   },
   {
    "id": "work.allen-greenough.latin-grammar",
-   "responsible": "J. H. Allen and J. B. Greenough",
+   "responsible": "J. H. Allen, J. B. Greenough",
    "title": "Allen and Greenough's New Latin Grammar"
   },
   {
    "id": "work.biblia-sacra-vulgatae-editionis",
-   "responsible": "Michael Hetzenauer",
+   "responsible": "Michael Hetzenauer, O.M.Cap. (editor)",
    "title": "Biblia Sacra Vulgatae Editionis"
   },
   {
@@ -23,27 +27,37 @@
   },
   {
    "id": "work.britt.dictionary-psalter",
-   "responsible": "Dom Matthew Britt, O.S.B.",
+   "responsible": "Dom Matthew Britt, O.S.B. (editor)",
    "title": "A Dictionary of the Psalter"
   },
   {
    "id": "work.catechismus-catholicae-ecclesiae",
-   "responsible": "Catholic Church",
+   "responsible": "Ecclesia Catholica",
    "title": "Catechismus Catholicae Ecclesiae"
   },
   {
    "id": "work.clementine-text-project",
-   "responsible": "Michael Tweedale and the Clementine Text Project",
+   "responsible": "Michael Tweedale (editor)",
    "title": "Biblia Sacra juxta Vulgatam Clementinam, editio electronica"
   },
   {
    "id": "work.compendium-of-the-catechism-of-the-catholic-church",
-   "responsible": "Catholic Church",
+   "responsible": "Ecclesia Catholica",
    "title": "Compendium of the Catechism of the Catholic Church"
   },
   {
+   "id": "work.congregatio-cultus.dla-polski.130-14",
+   "responsible": "Kongregacja ds. Kultu Bożego i Dyscypliny Sakramentów",
+   "title": "Dla Polski"
+  },
+  {
+   "id": "work.congregatio-cultus.litaniae-lauretanae.2020",
+   "responsible": "Congregatio de Cultu Divino et Disciplina Sacramentorum",
+   "title": "Litterae circulares ad praesides Conferentiarum Episcoporum de invocationibus «Mater misericordiae», «Mater spei» et «Solacium migrantium» in Litanias Lauretanas inserendis"
+  },
+  {
    "id": "work.divinum-officium",
-   "responsible": "Divinum Officium Project",
+   "responsible": "Divinum Officium",
    "title": "Divinum Officium"
   },
   {
@@ -57,27 +71,27 @@
    "title": "Latin-English Hand Missal for the Traditional Latin Mass (with Kyriale for 4 Masses)"
   },
   {
-   "id": "work.katolik-w-modlitwie",
-   "responsible": "ks. Józef Kühn",
-   "title": "Katolik w modlitwie czyli książka do nabożeństwa oraz śpiewnik kościelny"
-  },
-  {
    "id": "work.key-of-heaven",
    "title": "Key of Heaven"
   },
   {
+   "id": "work.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "responsible": "Konferencja Episkopatu Polski",
+   "title": "Uchwała nr 28/386/2020 Konferencji Episkopatu Polski z dnia 28 sierpnia 2020 r. w sprawie zatwierdzenia polskiego tłumaczenia nowych wezwań Litanii loretańskiej do Najświętszej Maryi Panny"
+  },
+  {
    "id": "work.lewis-short.latin-dictionary",
-   "responsible": "Charlton T. Lewis and Charles Short",
+   "responsible": "Charlton T. Lewis, Charles Short",
    "title": "A Latin Dictionary"
   },
   {
    "id": "work.liber-usualis",
-   "responsible": "Abbaye Saint-Pierre de Solesmes",
+   "responsible": "Benedictines of Solesmes (editors)",
    "title": "Liber Usualis"
   },
   {
    "id": "work.liddell-scott-jones.greek-english-lexicon",
-   "responsible": "Henry George Liddell; Robert Scott; Henry Stuart Jones; Roderick McKenzie",
+   "responsible": "Henry George Liddell, Robert Scott",
    "title": "A Greek-English Lexicon"
   },
   {
@@ -86,8 +100,18 @@
    "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum"
   },
   {
+   "id": "work.notitiae.mater-ecclesiae.1980",
+   "responsible": "Sacra Congregatio pro Sacramentis et Cultu Divino",
+   "title": "Litterae circulares ad praesides Conferentiarum episcopalium de invocatione «Mater Ecclesiae» in Litanias Lauretanas inserenda"
+  },
+  {
+   "id": "work.notitiae.regina-familiae.1996",
+   "responsible": "Congregatio de Cultu Divino et Disciplina Sacramentorum",
+   "title": "Litterae circulares ad praesides Conferentiarum episcopalium de invocatione «Regina Familiae» in Litanias Lauretanas inserenda"
+  },
+  {
    "id": "work.rituale-romanum",
-   "responsible": "Catholic Church",
+   "responsible": "Ecclesia Catholica",
    "title": "Rituale Romanum"
   },
   {
@@ -98,12 +122,17 @@
   {
    "id": "work.sacra-rituum-congregatio.de-s-ioseph",
    "responsible": "Sacra Rituum Congregatio",
-   "title": "De S. Joseph nomine Canoni Missae inserendo"
+   "title": "De S. Ioseph nomine Canoni Missae inserendo"
   },
   {
    "id": "work.the-raccolta",
-   "responsible": "Ambrose St John (English translation)",
+   "responsible": "Ambrose St John (translator)",
    "title": "The Raccolta"
+  },
+  {
+   "id": "work.thesaurus-precum-latinarum",
+   "responsible": "Michael W. Martin",
+   "title": "Thesaurus Precum Latinarum"
   },
   {
    "id": "work.valla.elegantiae",
@@ -113,12 +142,33 @@
  ],
  "editions": [
   {
+   "id": "edition.acta-nuntiaturae-polonae.ratti.57-8",
+   "work": "work.acta-nuntiaturae-polonae.ratti.57-8",
+   "title": "Acta Nuntiaturae Polonae. Achilles Ratti (1918–1921)",
+   "contributors": [
+    "Stanislaus Wilk SDB (editor)"
+   ],
+   "place": "Cracoviae",
+   "publisher": "Academia Scientiarum et Litterarum Polona",
+   "year": "2022",
+   "volume": "Tomus LVII, volumen 8 (2 II 1920 – 31 V 1920)",
+   "publication_type": "scholarly_book",
+   "authority": "scholarly_edition",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic reference to the issuing institution’s publication."
+   }
+  },
+  {
    "id": "edition.adam-johnson.1831",
    "work": "work.adam.rudiments",
    "title": "Dr. A. Adam's Rudiments of Latin and English Grammar",
-   "edition_statement": "With expansions and additions by James D. Johnson",
+   "edition_statement": "With Numerous Expansions and Additions",
    "contributors": [
-    "James D. Johnson"
+    "James D. Johnson (reviser)"
    ],
    "place": "Philadelphia",
    "publisher": "Key & Mielke",
@@ -137,17 +187,22 @@
   {
    "id": "edition.allen-greenough.1903",
    "work": "work.allen-greenough.latin-grammar",
-   "title": "Allen and Greenough's New Latin Grammar for Schools and Colleges",
-   "edition_statement": "1903 edition; the consulted scan has an undated title and a 1903 copyright notice, without an identified later impression date",
+   "title": "Allen and Greenough’s New Latin Grammar for Schools and Colleges. Founded on Comparative Grammar",
    "contributors": [
-    "J. B. Greenough",
-    "G. L. Kittredge",
-    "A. A. Howard",
-    "Benj. L. D'Ooge"
+    "J. B. Greenough (editor)",
+    "G. L. Kittredge (editor)",
+    "A. A. Howard (editor)",
+    "Benj. L. D’Ooge (editor)"
    ],
-   "place": "Boston / New York / Chicago / London",
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1903"
+    }
+   ],
+   "place": "Boston, New York, Chicago, London",
    "publisher": "Ginn & Company",
-   "year": "1903",
+   "year": "s.a.",
    "publication_type": "grammar",
    "authority": "reference_work",
    "languages": [
@@ -162,7 +217,9 @@
   {
    "id": "edition.biblia-sacra-vulgatae-editionis-1914",
    "work": "work.biblia-sacra-vulgatae-editionis",
-   "title": "Biblia Sacra Vulgatae Editionis",
+   "title": "Biblia sacra Vulgatae editionis Sixti V Pont. Max. iussu recognita et Clementis VIII auctoritate edita",
+   "place": "Ratisbonae et Romae",
+   "publisher": "Fridericus Pustet",
    "year": "1914",
    "publication_type": "scripture",
    "authority": "scriptural_edition",
@@ -179,10 +236,11 @@
    "work": "work.breviarium-romanum",
    "recension": "Roman Breviary after the recognitions of Clement VIII, Urban VIII and Leo XIII",
    "title": "Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum",
-   "edition_statement": "Editio nona post typicam, pars autumnalis",
-   "place": "Ratisbonae",
-   "publisher": "Friderici Pustet",
+   "edition_statement": "Editio nona post typicam",
+   "place": "Ratisbonae, Romae, Neo Eboraci et Cincinnati",
+   "publisher": "Fridericus Pustet",
    "year": "1902",
+   "volume": "Pars autumnalis",
    "publication_type": "breviary",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
@@ -197,12 +255,10 @@
    "id": "edition.britt.dictionary-psalter.1928",
    "work": "work.britt.dictionary-psalter",
    "title": "A Dictionary of the Psalter",
-   "edition_statement": "1928 Benziger Brothers printing",
    "contributors": [
-    "Dom Matthew Britt, O.S.B.",
     "John B. Peterson (preface)"
    ],
-   "place": "New York / Cincinnati / Chicago",
+   "place": "New York, Cincinnati, Chicago",
    "publisher": "Benziger Brothers",
    "year": "1928",
    "publication_type": "lexicon",
@@ -235,9 +291,15 @@
   {
    "id": "edition.clementine-text-project.electronic-2005",
    "work": "work.clementine-text-project",
-   "title": "Biblia Sacra juxta Vulgatam Clementinam",
-   "edition_statement": "Electronic edition, London 2005 title; two-column project PDF at website revision 48da7dbf64990b44afb7fb809dc7e28bc119817f",
-   "place": "London",
+   "title": "Biblia sacra juxta Vulgatam Clementinam",
+   "edition_statement": "Editio electronica",
+   "publication_events": [
+    {
+     "kind": "ecclesiastical_approval",
+     "date": "2006-01-09"
+    }
+   ],
+   "place": "Londini",
    "year": "2005",
    "publication_type": "scripture",
    "authority": "scriptural_edition",
@@ -253,6 +315,7 @@
    "id": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "work": "work.compendium-of-the-catechism-of-the-catholic-church",
    "title": "Compendium of the Catechism of the Catholic Church",
+   "publisher": "Libreria Editrice Vaticana",
    "year": "2005",
    "publication_type": "official_act",
    "authority": "official_document",
@@ -266,11 +329,52 @@
    }
   },
   {
+   "id": "edition.congregatio-cultus.dla-polski.2014.akta-kep",
+   "work": "work.congregatio-cultus.dla-polski.130-14",
+   "title": "Poloniae. Dla Polski (Prot. 130/14)",
+   "edition_statement": "Akta Konferencji Episkopatu Polski, nr 2 (26)/2014, s. 48",
+   "place": "Warszawa",
+   "publisher": "Biuro Prasowe Konferencji Episkopatu Polski",
+   "year": "2014",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la",
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic reference to the Polish publication of the decree."
+   }
+  },
+  {
+   "id": "edition.congregatio-cultus.litaniae-lauretanae.2020",
+   "work": "work.congregatio-cultus.litaniae-lauretanae.2020",
+   "title": "Litterae circulares ad praesides Conferentiarum Episcoporum de invocationibus «Mater misericordiae», «Mater spei» et «Solacium migrantium» in Litanias Lauretanas inserendis",
+   "edition_statement": "Bollettino della Sala Stampa della Santa Sede, n. 0350, 20 VI 2020, p. 3",
+   "year": "2020",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic reference to the issuing institution’s publication."
+   }
+  },
+  {
    "id": "edition.divinum-officium-horae.44667ff",
    "work": "work.divinum-officium",
    "recension": "Latin Office data at commit 44667ff518b8ff1439780470828b39714f5306a2",
-   "title": "Divinum Officium: Horae, Latin data",
-   "edition_statement": "Pinned source revision",
+   "title": "Divinum Officium. Horae (Latine)",
+   "edition_statement": "44667ff5",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2026-08-29"
+    }
+   ],
    "year": "2026",
    "publication_type": "web_resource",
    "authority": "reference_work",
@@ -286,9 +390,15 @@
    "id": "edition.divinum-officium-missa.21cb2d37",
    "work": "work.divinum-officium",
    "recension": "Latin Mass data, including the obsolete Marian common, at commit 21cb2d370337ec1fd668e96d035622b4296c32cb",
-   "title": "Divinum Officium: Latin Mass data",
-   "edition_statement": "Pinned exact source revision; publication date not established",
-   "year": "n.d.",
+   "title": "Divinum Officium. Missa (Latine)",
+   "edition_statement": "21cb2d37",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2026-08-17"
+    }
+   ],
+   "year": "2026",
    "publication_type": "web_resource",
    "authority": "reference_work",
    "languages": [
@@ -303,8 +413,14 @@
    "id": "edition.divinum-officium-missa.44667ff",
    "work": "work.divinum-officium",
    "recension": "Latin Mass data at commit 44667ff518b8ff1439780470828b39714f5306a2",
-   "title": "Divinum Officium: Missa, Latin data",
-   "edition_statement": "Pinned source revision",
+   "title": "Divinum Officium. Missa (Latine)",
+   "edition_statement": "44667ff5",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2026-08-29"
+    }
+   ],
    "year": "2026",
    "publication_type": "web_resource",
    "authority": "reference_work",
@@ -320,8 +436,14 @@
    "id": "edition.divinum-officium-missa.b5e250b",
    "work": "work.divinum-officium",
    "recension": "Latin Mass data at commit b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19",
-   "title": "Divinum Officium: Missa, Latin data",
-   "edition_statement": "Pinned source revision",
+   "title": "Divinum Officium. Missa (Latine)",
+   "edition_statement": "b5e250b0",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2026-08-08"
+    }
+   ],
    "year": "2026",
    "publication_type": "web_resource",
    "authority": "reference_work",
@@ -336,7 +458,8 @@
   {
    "id": "edition.enchiridion-indulgentiarum-fourth-edition",
    "work": "work.enchiridion-indulgentiarum",
-   "title": "Enchiridion Indulgentiarum, editio quarta",
+   "title": "Enchiridion indulgentiarum. Normae et concessiones",
+   "edition_statement": "Editio quarta",
    "year": "1999",
    "publication_type": "official_act",
    "authority": "official_document",
@@ -352,9 +475,10 @@
    "id": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "work": "work.enchiridion-indulgentiarum",
    "recension": "Preces et Pia Opera",
-   "title": "Enchiridion Indulgentiarum: Preces et Pia Opera",
+   "title": "Enchiridion indulgentiarum. Preces et pia opera in favorem omnium christifidelium vel quorumdam coetuum personarum indulgentiis ditata et opportune recognita",
    "edition_statement": "Editio altera",
    "place": "Civitas Vaticana",
+   "publisher": "Typis Polyglottis Vaticanis",
    "year": "1952",
    "publication_type": "official_act",
    "authority": "official_document",
@@ -371,7 +495,13 @@
    "work": "work.extraordinaryform.handmissal-chant",
    "recension": "Cover revision 12/12/2025 of the hand missal first issued at Epiphany 2020",
    "title": "Latin-English Hand Missal for the Traditional Latin Mass (with Kyriale for 4 Masses)",
-   "edition_statement": "First edition Epiphany 2020; revised 12/12/2025",
+   "edition_statement": "First edition, Epiphany 2020",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2025-12-12"
+    }
+   ],
    "publisher": "ExtraordinaryForm.org",
    "year": "2025",
    "publication_type": "missal",
@@ -386,28 +516,18 @@
    }
   },
   {
-   "id": "edition.katolik-w-modlitwie-1902",
-   "work": "work.katolik-w-modlitwie",
-   "title": "Katolik w modlitwie czyli książka do nabożeństwa oraz śpiewnik kościelny",
-   "place": "Gliwice",
-   "year": "1902",
-   "publication_type": "prayer_book",
-   "authority": "approved_ecclesiastical_edition",
-   "languages": [
-    "pl"
-   ],
-   "rights": {
-    "status": "unverified",
-    "basis": "Bibliographic and factual citation only; this audit does not assert permission to reproduce the digitized manifestation."
-   }
-  },
-  {
    "id": "edition.key-of-heaven-1901",
    "work": "work.key-of-heaven",
    "title": "Key of Heaven: A Manual of Devotions and Instructions for the Use of Catholics",
-   "place": "Baltimore and New York",
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1901"
+    }
+   ],
+   "place": "Baltimore, New York",
    "publisher": "John Murphy Company",
-   "year": "1901",
+   "year": "[1901–1906]",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
@@ -415,13 +535,31 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "United States devotional manual published in 1901, before 1931; only wording verified in this edition is cited."
+    "basis": "The United States copy bears John Murphy Company’s 1901 copyright notice. Its table begins in 1901; an owner dated an inscription 16 April 1906. The claim applies to the historical wording attested in this copy."
+   }
+  },
+  {
+   "id": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "work": "work.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "title": "Uchwała nr 28/386/2020 Konferencji Episkopatu Polski z dnia 28 sierpnia 2020 r. w sprawie zatwierdzenia polskiego tłumaczenia nowych wezwań Litanii loretańskiej do Najświętszej Maryi Panny",
+   "edition_statement": "Akta Konferencji Episkopatu Polski 32 (2020), s. 105–107",
+   "place": "Warszawa",
+   "year": "2021",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "pl"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The conference adopted the resolution on 28 August 2020. Its publication is in the 2020 annual volume of Akta, issued in Warsaw in 2021."
    }
   },
   {
    "id": "edition.lewis-short.1879",
    "work": "work.lewis-short.latin-dictionary",
    "title": "A Latin Dictionary",
+   "edition_statement": "Founded on Andrews’ Edition of Freund’s Latin Dictionary",
    "place": "Oxford",
    "publisher": "Clarendon Press",
    "year": "1879",
@@ -433,7 +571,7 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "Oxford printing of 1879; the consulted digital transcription has separately declared rights."
+    "basis": "The Oxford edition was first published in 1879. The electronic transcription has its own publication and licence information."
    }
   },
   {
@@ -441,7 +579,8 @@
    "work": "work.liber-usualis",
    "recension": "Roman chant book with English rubrics",
    "title": "The Liber Usualis with Introduction and Rubrics in English",
-   "publisher": "Desclée",
+   "place": "Tournai, New York",
+   "publisher": "Desclée Company",
    "year": "1961",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
@@ -458,7 +597,10 @@
    "id": "edition.liddell-scott-jones.greek-english-lexicon.1940",
    "work": "work.liddell-scott-jones.greek-english-lexicon",
    "title": "A Greek-English Lexicon",
-   "edition_statement": "Revised and augmented throughout by Henry Stuart Jones, with the assistance of Roderick McKenzie",
+   "contributors": [
+    "Henry Stuart Jones (reviser)",
+    "Roderick McKenzie (collaborator)"
+   ],
    "place": "Oxford",
    "publisher": "Clarendon Press",
    "year": "1940",
@@ -476,28 +618,34 @@
    "id": "edition.missale-romanum.1962-typica",
    "work": "work.missale-romanum",
    "recension": "Roman Missal governed by the 1960 Code of Rubrics",
-   "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum",
+   "title": "Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum",
    "edition_statement": "Editio iuxta typicam",
-   "place": "New York",
-   "publisher": "Benziger Brothers",
-   "year": "1962",
+   "place": "Novi Eboraci",
+   "publisher": "Benziger Brothers, Inc.",
+   "year": "[1962]",
    "publication_type": "missal",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
     "la"
    ],
    "rights": {
-    "status": "public-domain",
-    "basis": "Liturgical Latin of the 1962 typical edition."
+    "status": "unverified",
+    "basis": "The authorization of the Benziger printing, dated 1962, identifies the edition. The rights to the printed setting and its digitization have not been established."
    }
   },
   {
    "id": "edition.missale-romanum.1962-vatican-joseph-bearing",
    "work": "work.missale-romanum",
    "recension": "Roman Missal with the Saint Joseph amendment effective 8 December 1962",
-   "title": "Missale Romanum, editio typica (Saint Joseph-bearing reproduction)",
-   "edition_statement": "Editio typica. The manifestation lacks a printed production year; 1962 identifies the underlying typical text, not a proved reproduction date.",
-   "year": "1962",
+   "title": "Missale Romanum ex decreto SS. Concilii Tridentini restitutum, summorum pontificum cura recognitum",
+   "edition_statement": "Editio typica",
+   "publication_events": [
+    {
+     "kind": "typical_edition",
+     "date": "1962-06-23"
+    }
+   ],
+   "year": "s.a.",
    "publication_type": "missal",
    "authority": "typical_liturgical_edition",
    "languages": [
@@ -509,13 +657,51 @@
    }
   },
   {
+   "id": "edition.notitiae.mater-ecclesiae.1980",
+   "work": "work.notitiae.mater-ecclesiae.1980",
+   "title": "Litterae circulares ad praesides Conferentiarum episcopalium de invocatione «Mater Ecclesiae» in Litanias Lauretanas inserenda",
+   "edition_statement": "Notitiae 16 (1980), n. 165, p. 159",
+   "year": "1980",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic reference to the issuing institution’s publication."
+   }
+  },
+  {
+   "id": "edition.notitiae.regina-familiae.1996",
+   "work": "work.notitiae.regina-familiae.1996",
+   "title": "Litterae circulares ad praesides Conferentiarum episcopalium de invocatione «Regina Familiae» in Litanias Lauretanas inserenda",
+   "edition_statement": "Notitiae 32 (1996), n. 357, pp. 189–190",
+   "year": "1996",
+   "publication_type": "official_act",
+   "authority": "official_document",
+   "languages": [
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "Bibliographic reference to the issuing institution’s publication."
+   }
+  },
+  {
    "id": "edition.rituale-romanum.1937-pustet-quinta",
    "work": "work.rituale-romanum",
-   "title": "Rituale Romanum",
-   "edition_statement": "Editio quinta iuxta typicam; episcopal approval dated 12 March 1937",
-   "place": "Ratisbona",
+   "title": "Rituale Romanum Pauli V Pontif. Maximi jussu editum",
+   "edition_statement": "Editio quinta juxta typicam",
+   "publication_events": [
+    {
+     "kind": "imprimatur",
+     "date": "1937-03-12"
+    }
+   ],
+   "place": "Ratisbonae",
    "publisher": "Fridericus Pustet",
-   "year": "1937",
+   "year": "s.a.",
    "publication_type": "ritual",
    "authority": "official_liturgical_edition",
    "languages": [
@@ -523,7 +709,7 @@
    ],
    "rights": {
     "status": "unverified",
-    "basis": "Bibliographic and formula attestation only. The ancient Latin prayer is cited at its checked ritual locus; no licence to reproduce the 1937 scan or surrounding editorial material is asserted."
+    "basis": "The volume bears an approval dated 1937. The ancient Latin prayer is cited at its place in the ritual. Rights in the scan and surrounding editorial material have not been established."
    }
   },
   {
@@ -531,11 +717,10 @@
    "work": "work.sacra-rituum-congregatio.de-musica-sacra-1958",
    "recension": "Instruction of 3 September 1958, approved by Pius XII",
    "title": "Instructio de musica sacra et sacra liturgia ad mentem litterarum encyclicarum Pii Papae XII Musicae sacrae disciplina et Mediator Dei",
-   "edition_statement": "Official printing in Acta Apostolicae Sedis 50 (1958), pp. 630–663",
-   "place": "Vatican City",
+   "edition_statement": "Acta Apostolicae Sedis 50 (1958), pp. 630–663",
+   "place": "Civitas Vaticana",
    "publisher": "Typis Polyglottis Vaticanis",
    "year": "1958",
-   "volume": "50",
    "publication_type": "official_act",
    "authority": "official_document",
    "languages": [
@@ -549,9 +734,11 @@
   {
    "id": "edition.sacra-rituum-congregatio.de-s-ioseph.1962-aas54",
    "work": "work.sacra-rituum-congregatio.de-s-ioseph",
-   "title": "Acta Apostolicae Sedis LIV (1962), De S. Joseph nomine Canoni Missae inserendo",
+   "title": "De S. Ioseph nomine Canoni Missae inserendo",
+   "edition_statement": "Acta Apostolicae Sedis 54 (1962), p. 873",
+   "place": "Civitas Vaticana",
+   "publisher": "Typis Polyglottis Vaticanis",
    "year": "1962",
-   "volume": "54",
    "publication_type": "official_act",
    "authority": "official_document",
    "languages": [
@@ -565,7 +752,18 @@
   {
    "id": "edition.the-raccolta-1910",
    "work": "work.the-raccolta",
-   "title": "The Raccolta or Collection of Indulgenced Prayers and Good Works",
+   "title": "The Raccolta or Collection of Indulgenced Prayers & Good Works",
+   "contributors": [
+    "R. G. B. (editor)"
+   ],
+   "additional_imprints": [
+    {
+     "place": "New York, Chicago, Cincinnati",
+     "publisher": "Benziger Bros."
+    }
+   ],
+   "place": "London",
+   "publisher": "Burns & Oates",
    "year": "1910",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
@@ -575,7 +773,41 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "English translation attributed to Ambrose St John (d. 1875), in an edition published in 1910; only wording verified on the original page image is cited."
+    "basis": "The preface credits Ambrose St John (d. 1875) with the English translation. The editor of this edition signs the preface R. G. B. on p. viii. The volume was published in 1910."
+   }
+  },
+  {
+   "id": "edition.thesaurus-precum-latinarum.sacratissimi-cordis-iesu",
+   "work": "work.thesaurus-precum-latinarum",
+   "title": "Litaniae de Sacratissimo Corde Iesu",
+   "edition_statement": "Thesaurus Precum Latinarum",
+   "year": "2026",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The website carries Michael W. Martin’s copyright notice. The citation identifies its Latin reading."
+   }
+  },
+  {
+   "id": "edition.thesaurus-precum-latinarum.sanctissimi-nominis-iesu",
+   "work": "work.thesaurus-precum-latinarum",
+   "title": "Litaniae Sanctissimi Nominis Iesu",
+   "edition_statement": "Thesaurus Precum Latinarum",
+   "year": "2026",
+   "publication_type": "web_resource",
+   "authority": "reference_work",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The website carries Michael W. Martin’s copyright notice. The citation identifies its Latin reading."
    }
   },
   {
@@ -598,21 +830,30 @@
  ],
  "digital_items": [
   {
-   "id": "item.adam-johnson.1831.commons",
-   "edition": "edition.adam-johnson.1831",
-   "repository": "Wikimedia Commons; Library of Congress / Internet Archive scan",
-   "kind": "scan",
-   "record_url": "https://commons.wikimedia.org/w/index.php?title=File:Dr._A._Adam%27s_Rudiments_of_Latin_and_English_grammar_(IA_draadamsrudiment00adam).pdf&oldid=1134331977",
-   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Dr._A._Adam%27s_Rudiments_of_Latin_and_English_grammar_%28IA_draadamsrudiment00adam%29.pdf",
+   "id": "item.acta-nuntiaturae-polonae.ratti.57-8.pdf",
+   "edition": "edition.acta-nuntiaturae-polonae.ratti.57-8",
+   "repository": "Polska Akademia Umiejętności",
+   "kind": "born-digital",
+   "record_url": "https://pau.krakow.pl/ANP/ANP_LVII_8_2022.pdf",
+   "scan_url": "https://pau.krakow.pl/ANP/ANP_LVII_8_2022.pdf",
    "access": "open"
   },
   {
-   "id": "item.allen-greenough.1903.commons",
-   "edition": "edition.allen-greenough.1903",
-   "repository": "Wikimedia Commons; California Digital Library / Internet Archive scan",
+   "id": "item.adam-johnson.1831.ia",
+   "edition": "edition.adam-johnson.1831",
+   "repository": "Internet Archive",
    "kind": "scan",
-   "record_url": "https://commons.wikimedia.org/w/index.php?title=File:Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges,_founded_on_comparative_grammar;_(IA_allengreenoughsn00alleiala).pdf&oldid=873200795",
-   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Allen_and_Greenough%27s_New_Latin_grammar_for_schools_and_colleges%2C_founded_on_comparative_grammar%3B_%28IA_allengreenoughsn00alleiala%29.pdf",
+   "record_url": "https://archive.org/details/draadamsrudiment00adam",
+   "scan_url": "https://archive.org/download/draadamsrudiment00adam/draadamsrudiment00adam.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.allen-greenough.1903.ia",
+   "edition": "edition.allen-greenough.1903",
+   "repository": "Internet Archive",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/allengreenoughsn00alleiala",
+   "scan_url": "https://archive.org/download/allengreenoughsn00alleiala/allengreenoughsn00alleiala.pdf",
    "access": "open"
   },
   {
@@ -621,7 +862,7 @@
    "repository": "Internet Archive",
    "kind": "scan",
    "record_url": "https://archive.org/details/bibliasacravulga00helzuoft",
-   "scan_url": "https://archive.org/details/bibliasacravulga00helzuoft",
+   "scan_url": "https://archive.org/download/bibliasacravulga00helzuoft/bibliasacravulga00helzuoft.pdf",
    "access": "open"
   },
   {
@@ -648,7 +889,8 @@
    "repository": "Holy See official website",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm",
-   "access": "open"
+   "access": "open",
+   "accessed_on": "2026-11-25"
   },
   {
    "id": "item.catechismus-catholicae-ecclesiae.septem-petitiones",
@@ -656,7 +898,8 @@
    "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm",
-   "access": "open"
+   "access": "open",
+   "accessed_on": "2026-11-25"
   },
   {
    "id": "item.clementine-text-project.48da7db.two-column",
@@ -665,7 +908,13 @@
    "kind": "born-digital",
    "record_url": "https://bitbucket.org/clementinetextproject/website/src/48da7dbf64990b44afb7fb809dc7e28bc119817f/htdocs/index.html",
    "revision": "48da7dbf64990b44afb7fb809dc7e28bc119817f",
-   "access": "open"
+   "access": "open",
+   "publication_events": [
+    {
+     "kind": "revision",
+     "date": "2022-10-22"
+    }
+   ]
   },
   {
    "id": "item.compendium-of-the-catechism-2005.html",
@@ -673,6 +922,25 @@
    "repository": "The Holy See",
    "kind": "born-digital",
    "record_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html",
+   "access": "open",
+   "accessed_on": "2026-11-25"
+  },
+  {
+   "id": "item.congregatio-cultus.dla-polski.2014.akta-kep",
+   "edition": "edition.congregatio-cultus.dla-polski.2014.akta-kep",
+   "repository": "Konferencja Episkopatu Polski",
+   "kind": "scan",
+   "record_url": "https://episkopat.pl/files/24.bkt/04/04/242039_mQtD_26._Akta_KEP_20142.pdf",
+   "scan_url": "https://episkopat.pl/files/24.bkt/04/04/242039_mQtD_26._Akta_KEP_20142.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.congregatio-cultus.litaniae-lauretanae.2020.pdf",
+   "edition": "edition.congregatio-cultus.litaniae-lauretanae.2020",
+   "repository": "Sala Stampa della Santa Sede",
+   "kind": "born-digital",
+   "record_url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350.pdf",
+   "scan_url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350.pdf",
    "access": "open"
   },
   {
@@ -811,6 +1079,16 @@
    "access": "open"
   },
   {
+   "id": "item.divinum-officium-missa.44667ff.sancti-02-22",
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "repository": "GitHub",
+   "kind": "born-digital",
+   "record_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-22.txt",
+   "scan_url": "https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-22.txt",
+   "revision": "44667ff518b8ff1439780470828b39714f5306a2",
+   "access": "open"
+  },
+  {
    "id": "item.divinum-officium-missa.b5e250b.advent-i",
    "edition": "edition.divinum-officium-missa.b5e250b",
    "repository": "GitHub",
@@ -829,21 +1107,28 @@
    "access": "open"
   },
   {
-   "id": "item.enchiridion-indulgentiarum-1999.scan",
-   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
-   "repository": "Holy See",
-   "kind": "scan",
-   "record_url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html",
-   "access": "open"
-  },
-  {
    "id": "item.enchiridion-indulgentiarum.1952.ia",
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
-   "repository": "Internet Archive",
+   "repository": "Internet Archive / canadienfrancais.org",
    "kind": "scan",
    "record_url": "https://archive.org/details/enchiridion_indulgentiarum_1952",
    "scan_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf",
-   "access": "open"
+   "access": "open",
+   "publication_events": [
+    {
+     "kind": "digital_reproduction",
+     "date": "2023"
+    }
+   ]
+  },
+  {
+   "id": "item.enchiridion-indulgentiarum.1999.vatican-latin",
+   "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
+   "repository": "Sancta Sedes",
+   "kind": "born-digital",
+   "record_url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html",
+   "access": "open",
+   "accessed_on": "2026-11-25"
   },
   {
    "id": "item.extraordinaryform.handmissal-chant.2025-12-12.pdf",
@@ -851,15 +1136,6 @@
    "repository": "ExtraordinaryForm.org",
    "kind": "born-digital",
    "record_url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf",
-   "access": "open"
-  },
-  {
-   "id": "item.katolik-w-modlitwie-1902.obc",
-   "edition": "edition.katolik-w-modlitwie-1902",
-   "repository": "Opolska Biblioteka Cyfrowa",
-   "kind": "scan",
-   "record_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny",
-   "scan_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny",
    "access": "open"
   },
   {
@@ -872,17 +1148,13 @@
    "access": "open"
   },
   {
-   "id": "item.lewis-short.perseus.40038e4.eng1",
-   "edition": "edition.lewis-short.1879",
-   "repository": "Perseus Digital Library",
+   "id": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "repository": "Konferencja Episkopatu Polski",
    "kind": "born-digital",
-   "record_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng1.xml",
-   "revision": "40038e40937fa639639802e73dac15e6c938496b",
-   "access": "open",
-   "digitization_rights": {
-    "status": "permission",
-    "basis": "PerseusDL lexica CC BY-SA 4.0, license.md at the pinned revision. Dictionary prose is not reproduced in the reading text."
-   }
+   "record_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf",
+   "scan_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf",
+   "access": "open"
   },
   {
    "id": "item.lewis-short.perseus.40038e4.eng2",
@@ -892,6 +1164,12 @@
    "record_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/lat/ls/lat.ls.perseus-eng2.xml",
    "revision": "40038e40937fa639639802e73dac15e6c938496b",
    "access": "open",
+   "publication_events": [
+    {
+     "kind": "digital_publication",
+     "date": "1997-10-28"
+    }
+   ],
    "digitization_rights": {
     "status": "unverified",
     "basis": "Retained pinned Perseus eng2 XML. Existing repository CC BY-SA assertion is not a fresh rights adjudication; local lexical consultation only, no full extraction publication."
@@ -911,9 +1189,15 @@
    "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
    "repository": "Perseus Digital Library",
    "kind": "born-digital",
-   "record_url": "https://github.com/PerseusDL/lexica/tree/40038e40937fa639639802e73dac15e6c938496b",
+   "record_url": "https://github.com/PerseusDL/lexica/blob/40038e40937fa639639802e73dac15e6c938496b/CTS_XML_TEI/perseus/pdllex/grc/lsj/grc.lsj.perseus-eng17.xml",
    "revision": "40038e40937fa639639802e73dac15e6c938496b",
    "access": "open",
+   "publication_events": [
+    {
+     "kind": "digital_publication",
+     "date": "1995"
+    }
+   ],
    "digitization_rights": "PerseusDL lexica distributes its digital repository under CC-BY-SA 4.0. This reference does not republish the dictionary entry."
   },
   {
@@ -928,12 +1212,36 @@
   {
    "id": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
-   "repository": "Internet Archive",
+   "repository": "Church Music Association of America / Internet Archive",
    "kind": "scan",
    "record_url": "https://archive.org/details/missale_romanum-1962",
    "scan_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf",
    "access": "open",
+   "publication_events": [
+    {
+     "kind": "digital_publication",
+     "date": "2007-10-04"
+    }
+   ],
    "digitization_rights": "Repository assertion CC BY-NC-ND 3.0 is retained as an assertion, not a new rights determination."
+  },
+  {
+   "id": "item.notitiae.mater-ecclesiae.1980.pdf",
+   "edition": "edition.notitiae.mater-ecclesiae.1980",
+   "repository": "Dicastero per il Culto Divino e la Disciplina dei Sacramenti",
+   "kind": "scan",
+   "record_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1980/notitiae-16-%281980%29/Notitiae-165-1980.pdf",
+   "scan_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1980/notitiae-16-%281980%29/Notitiae-165-1980.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.notitiae.regina-familiae.1996.pdf",
+   "edition": "edition.notitiae.regina-familiae.1996",
+   "repository": "Dicastero per il Culto Divino e la Disciplina dei Sacramenti",
+   "kind": "scan",
+   "record_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1990/notitiae-32-%281996%29/Notitiae-357-1996.pdf",
+   "scan_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1990/notitiae-32-%281996%29/Notitiae-357-1996.pdf",
+   "access": "open"
   },
   {
    "id": "item.raccolta-1910.scan",
@@ -972,6 +1280,24 @@
    "scan_url": "https://www.vatican.va/archive/aas/documents/AAS-54-1962-ocr.pdf",
    "access": "open",
    "digitization_rights": "Unverified; local consultation only."
+  },
+  {
+   "id": "item.thesaurus-precum-latinarum.sacratissimi-cordis-iesu.html",
+   "edition": "edition.thesaurus-precum-latinarum.sacratissimi-cordis-iesu",
+   "repository": "Thesaurus Precum Latinarum",
+   "kind": "born-digital",
+   "record_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html",
+   "access": "open",
+   "accessed_on": "2026-11-26"
+  },
+  {
+   "id": "item.thesaurus-precum-latinarum.sanctissimi-nominis-iesu.html",
+   "edition": "edition.thesaurus-precum-latinarum.sanctissimi-nominis-iesu",
+   "repository": "Thesaurus Precum Latinarum",
+   "kind": "born-digital",
+   "record_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSNI.html",
+   "access": "open",
+   "accessed_on": "2026-11-26"
   },
   {
    "id": "item.valla.elegantiae.1538.mateo",

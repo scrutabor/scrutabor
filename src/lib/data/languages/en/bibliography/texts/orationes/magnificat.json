@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 55",
-    "scan": "DJVU physical pages 68 (one-based); indices 67 (zero-based)"
+    "scan": "DjVu p. 68",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=68"
    },
    "entries": [
     {
@@ -17,19 +18,7 @@
       "segment": "s12"
      },
      "claim": "Historical English source expression: “As it was in the beginning, is now, and ever shall be, world without end. Amen.” This supplies the corresponding English expression at the addressed scope. The cited occurrence is the Ordinary’s Psalm42doxology, not the Magnificat."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 55",
-    "scan": "scan p. 68"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.f9925498255e94ecc3a7",
      "address": {
@@ -40,7 +29,7 @@
      "reader_note": "This page prints “Holy Ghost”; the formula shown here uses “Holy Spirit”."
     }
    ],
-   "verified_on": "2026-11-06"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -49,28 +38,8 @@
    "locator": {
     "printed": "p. 346",
     "scan": "PDF p. 373",
-    "section": "Canticle of B.V.M."
-   },
-   "entries": [
-    {
-     "id": "use.en.af0e5a5bd74338c5f6e0",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "As He spoke to our fathers, to Abraham and to his seed forever."
-    }
-   ],
-   "verified_on": "2026-09-26"
-  },
-  {
-   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
-   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 346",
-    "scan": "PDF p. 373",
-    "section": "Canticle of B.V.M."
+    "section": "Canticle of B.V.M.",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=373"
    },
    "entries": [
     {
@@ -96,9 +65,17 @@
       "segment": "s09"
      },
      "claim": "Historical English wording basis for receiving Israel His servant and being mindful of His mercy. The selected text modernizes hath to has and capitalizes divine pronouns. The complete verse is revised rather than verbatim."
+    },
+    {
+     "id": "use.en.af0e5a5bd74338c5f6e0",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "As He spoke to our fathers, to Abraham and to his seed forever."
     }
    ],
-   "verified_on": "2026-11-06"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

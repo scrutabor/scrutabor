@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 79",
-    "scan": "DJVU physical pages 92 (one-based); indices 91 (zero-based)"
+    "scan": "DjVu p. 92",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=92"
    },
    "entries": [
     {
@@ -17,9 +18,38 @@
       "segment": "s03"
      },
      "claim": "Historical English source expression: “And in one Lord Jesus Christ, the only begotten Son of God” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.d6adfbc856dec9592b3f",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The source opens “I believe in one God, the Father Almighty, maker of heaven and earth, and of all things visible and invisible.” The current English places “almighty” before “Father” and omits “and” before “of all things”."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79,81",
+    "scan": "DjVu pp. 92, 94",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=92"
+   },
+   "entries": [
+    {
+     "id": "use.en.8aadaa22e95dfeed99a8",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “God of God; Light of Light; true God of true God” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -27,7 +57,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 81",
-    "scan": "DJVU physical pages 94 (one-based); indices 93 (zero-based)"
+    "scan": "DjVu p. 94",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=94"
    },
    "entries": [
     {
@@ -52,7 +83,7 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Historical English source expression: “and the third day He rose again, according to the Scriptures.” The addressed English wording is revised, not a verbatim quotation."
+     "claim": "Historical English source expression: “and the third day He rose again, according to the scriptures.” The addressed English wording is revised, not a verbatim quotation."
     },
     {
      "id": "use.en.989e46b24dc12d61c262",
@@ -79,7 +110,7 @@
      "claim": "Historical English source expression: “Who for us men, and for our salvation, came down from heaven” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -87,7 +118,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 83",
-    "scan": "DJVU physical pages 96 (one-based); indices 95 (zero-based)"
+    "scan": "DjVu p. 96",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=96"
    },
    "entries": [
     {
@@ -147,55 +179,16 @@
      "claim": "Historical English source expression: “I confess one Baptism for the remission of sins.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 79,81",
-    "scan": "DJVU physical pages 92, 94 (one-based); indices 91, 93 (zero-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.8aadaa22e95dfeed99a8",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historical English source expression: “God of God; Light of Light; true God of true God” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 79–83",
-    "scan": "scan pp. 92–96"
-   },
-   "entries": [
-    {
-     "id": "use.en.d6adfbc856dec9592b3f",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "I believe in one God, the almighty Father, maker of heaven and earth, of all things visible and invisible."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "pp. 79–83",
-    "scan": "scan pp. 92–96"
+    "printed": "p. 79",
+    "scan": "DjVu p. 92",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=92"
    },
    "entries": [
     {
@@ -207,7 +200,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -215,7 +208,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 9",
-    "scan": "scan p. 36"
+    "scan": "PDF p. 36",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=36"
    },
    "entries": [
     {
@@ -227,7 +221,7 @@
      "claim": "And born of the Father before all ages."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

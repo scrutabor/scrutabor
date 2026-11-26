@@ -1,0 +1,25 @@
+{
+ "id": "orationes.ave-maria",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
+   "role": "official_text",
+   "locator": {
+    "section": "Appendix A · Ave, Maria",
+    "page_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html#A%29%20COMMON%20PRAYERS:~:text=Ave%2C%20Mar%C3%ADa%2C%20gr%C3%A1tia%20plena"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.ave-maria.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Latin prayer includes both the greeting and the petition from Sancta María to Amen."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": []
+}

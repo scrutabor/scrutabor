@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'dominica-i-adventus';
@@ -113,20 +114,20 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'znacznik w w. 41, zapowiedź w w. 42, odsyłacz w w. 43 i cały tekst w w. 44'
-				: 'marker 41, announcement 42, reference 43, complete body 44'
+		await expectSourcePassage(
+			sources,
+			language,
+			'Evangelium',
+			'Missa/Tempora/Adv1-0.txt',
+			44,
+			44,
+			'b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19'
 		);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n81/mode/1up"]'
 			)
 		).toHaveCount(1);
-		await expect(
-			sources.locator(
-				'a[href="https://raw.githubusercontent.com/DivinumOfficium/divinum-officium/b5e250b0af79bc3fb4fc3ac631a622d8cb0f2a19/web/www/missa/Latin/Tempora/Adv1-0.txt"]'
-			)
-		).toHaveCount(1);
+		await expect(sources.locator('a.source-passage')).toHaveCount(1);
 	});
 }

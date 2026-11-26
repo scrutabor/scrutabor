@@ -6,19 +6,11 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 56–57",
-    "scan": "PDF ss. 59–60",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 56",
+    "scan": "PDF, s. 59",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=59"
    },
    "entries": [
-    {
-     "id": "use.pl.0e868f1e6c1ae3a42a39",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i Tobie, Bogu wiecznemu, żywemu i prawdziwemu, wypełniają swoje śluby.”"
-    },
     {
      "id": "use.pl.1faf61b780c83184b010",
      "address": {
@@ -44,7 +36,28 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pamiętaj, Panie, o Twoich sługach i służebnicach”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 56–57",
+    "scan": "PDF, s. 59–60",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=59"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0e868f1e6c1ae3a42a39",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i Tobie, Bogu wiecznemu, żywemu i prawdziwemu, wypełniają swoje śluby.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad1-0.txt; [Lectio] section at line 25, heading at line 26"
+    "section": "web/www/missa/Latin/Tempora/Quad1-0.txt; [Lectio] section at line 25, heading at line 26",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad1-0.txt#L25-L26",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad1-0.txt#L25-L26"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "Prints the complete 7-word heading as its own line in the pinned file that the reading's own digital witness binds; it agrees with the selected print letter for letter. It is a derived digital comparison, not proof of an independent manuscript family."
     }
    ],
-   "verified_on": "2026-10-23"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -26,7 +33,7 @@
    "locator": {
     "printed": "64",
     "scan": "IA leaf n143; one-based PDF page 144",
-    "section": "Proprium, heading of the Epistle of proprium.dominica-i-in-quadragesima-epistola",
+    "section": "Léctio Epístolæ beáti Pauli Apóstoli ad Corínthios — 2 Cor. 6, 1–10",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n143/mode/1up"
    },
    "entries": [
@@ -47,7 +54,8 @@
    "locator": {
     "scan": "PDF page 144",
     "section": "Dominica I in Quadragesima; complete announcement heading; 2 Cor. 6, 1-10",
-    "printed": "63"
+    "printed": "63",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=144"
    },
    "entries": [
     {
@@ -58,7 +66,7 @@
      "claim": "Directly prints the complete 7-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

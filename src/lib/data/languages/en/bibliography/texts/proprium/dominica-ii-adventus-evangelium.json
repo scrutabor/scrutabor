@@ -6,18 +6,11 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 91–92",
-    "scan": "PDF pp. 103–104"
+    "printed": "p. 91",
+    "scan": "PDF p. 103",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=103"
    },
    "entries": [
-    {
-     "id": "use.en.2bfd4ff507b7bb15ecac",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "As they went away, Jesus began to speak to the crowds about John: What did you go out into the desert to see? A reed shaken by the wind?"
-    },
     {
      "id": "use.en.409d173e802b919764e2",
      "address": {
@@ -25,14 +18,6 @@
       "segment": "s02"
      },
      "claim": "Are You the One who is to come, or should we look for another?"
-    },
-    {
-     "id": "use.en.4c06d74f2c97bb4b94ef",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You."
     },
     {
      "id": "use.en.c5b60b5a1b8ef01193de",
@@ -51,6 +36,56 @@
      "claim": "The blind see, the lame walk, lepers are cleansed, the deaf hear, the dead rise, and the Gospel is preached to the poor; blessed is the one who does not stumble because of Me."
     },
     {
+     "id": "use.en.ee82075e5ab500d4f1e6",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "At that time, when John heard in prison of the works of Christ, he sent two of his disciples and asked Him:"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 91–92",
+    "scan": "PDF pp. 103–104",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=103"
+   },
+   "entries": [
+    {
+     "id": "use.en.2bfd4ff507b7bb15ecac",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "As they went away, Jesus began to speak to the crowds about John: What did you go out into the desert to see? A reed shaken by the wind?"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 92",
+    "scan": "PDF p. 104",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=104"
+   },
+   "entries": [
+    {
+     "id": "use.en.4c06d74f2c97bb4b94ef",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "For this is the one of whom it is written: Behold, I send My messenger before Your face, who will prepare Your way before You."
+    },
+    {
      "id": "use.en.ddec77a783c29b7665a9",
      "address": {
       "kind": "segment",
@@ -65,17 +100,9 @@
       "segment": "s08"
      },
      "claim": "What then did you go out to see? A prophet? Yes, I tell you, and more than a prophet."
-    },
-    {
-     "id": "use.en.ee82075e5ab500d4f1e6",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "At that time, when John heard in prison of the works of Christ, he sent two of his disciples and asked Him:"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

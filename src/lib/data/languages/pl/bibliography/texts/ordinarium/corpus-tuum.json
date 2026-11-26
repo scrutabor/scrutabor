@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 65",
-    "scan": "PDF s. 68",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 65",
+    "scan": "PDF, s. 68",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=68"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który żyjesz i królujesz przez wszystkie wieki wieków. Amen.”"
+     "claim": "Po modlitwie Corpus tuum modlitewnik podaje zakończenie „Który żyjesz i królujesz na wieki wieków. Amen”."
     },
     {
      "id": "use.pl.41b2fe9b7b93d6d8d44b",
@@ -28,7 +28,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i spraw, aby we mnie, pokrzepionym czystymi i świętymi sakramentami, nie pozostała żadna skaza grzechów:”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

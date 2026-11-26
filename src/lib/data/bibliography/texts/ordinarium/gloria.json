@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-gloria; closed-literal-selection} (line 89); complete source contexts 87–91"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-gloria; closed-literal-selection} (line 89); complete source contexts 87–91",
+    "passages": [
+     {
+      "heading": "Kyrie",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L89"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L89"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 84-word literal selection in the stated selection order (89), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -59,6 +66,28 @@
     }
    ],
    "verified_on": "2026-10-30"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 220",
+    "scan": "leaf n299 / PDF p. 300",
+    "section": "Ordo Missæ — Postea in medio altaris … Glória in excélsis Deo",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n299/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.gloria.opening-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Page 220 introduces the Gloria and prescribes its hand movements, bows and sign of the cross. The seven musical intonations and complete text follow on pp. 221–222."
+    }
+   ],
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

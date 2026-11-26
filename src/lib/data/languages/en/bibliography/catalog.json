@@ -1,5 +1,5 @@
 {
- "schema_version": "1.6.0",
+ "schema_version": "1.7.0",
  "works": [
   {
    "id": "work.annus-sanctus",
@@ -13,27 +13,27 @@
   },
   {
    "id": "work.douay-rheims-bible-challoner",
-   "responsible": "Richard Challoner (revision)",
+   "responsible": "Richard Challoner (reviser)",
    "title": "The Holy Bible: Douay-Rheims Version"
   },
   {
    "id": "work.francis-x-lasance-the-catholic-girl-s-guide",
-   "responsible": "Francis X. Lasance",
+   "responsible": "Francis X. Lasance (editor)",
    "title": "The Catholic Girl's Guide"
   },
   {
    "id": "work.manual-of-prayers-catholic-laity",
-   "responsible": "Third Plenary Council of Baltimore",
+   "responsible": "Third Plenary Council of Baltimore (commissioning body)",
    "title": "A Manual of Prayers for the Use of the Catholic Laity"
   },
   {
    "id": "work.patrick-francis-moran-the-catholic-prayer-book",
-   "responsible": "Patrick Francis Moran",
+   "responsible": "Patrick Francis Moran (compiler)",
    "title": "The Catholic Prayer Book and Manual of Meditations"
   },
   {
    "id": "work.the-family-prayer-book",
-   "responsible": "John Richard Best (Philalethes)",
+   "responsible": "Philalethes (compiler)",
    "title": "The Family Prayer-book"
   },
   {
@@ -42,7 +42,7 @@
   },
   {
    "id": "work.the-missal-for-the-use-of-the-laity",
-   "responsible": "Frederick Charles Husenbeth",
+   "responsible": "Frederick Charles Husenbeth (arranger and principal translator)",
    "title": "The Missal for the Use of the Laity"
   }
  ],
@@ -51,13 +51,10 @@
    "id": "edition.annus-sanctus-1884",
    "work": "work.annus-sanctus",
    "title": "Annus Sanctus: Hymns of the Church for the Ecclesiastical Year",
-   "contributors": [
-    "Orby Shipley (editor)",
-    "J. D. Aylward (translator of Stabat Mater dolorosa)"
-   ],
-   "place": "London",
+   "place": "London, New York",
    "publisher": "Burns and Oates",
    "year": "1884",
+   "volume": "I. Seasons of the Church, Canonical Hours, and Hymns of our Lord",
    "publication_type": "other",
    "authority": "historical_devotional_edition",
    "languages": [
@@ -72,7 +69,15 @@
    "id": "edition.blessed-be-god-1925",
    "work": "work.blessed-be-god",
    "title": "Blessed Be God: A Complete Catholic Prayer Book",
-   "year": "1925",
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1925"
+    }
+   ],
+   "place": "New York",
+   "publisher": "P. J. Kenedy & Sons",
+   "year": "[1925]",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
@@ -81,14 +86,47 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "The examined United States edition was published and copyrighted in 1925. Reliance is limited to the traditional Te Deum wording verified on its original page images."
+    "basis": "The 744-page United States edition is recorded in the Catalog of Copyright Entries under A 872601 (1925). The cited English Te Deum appears on pp. 490–491 of the Fuller Seminary copy."
+   }
+  },
+  {
+   "id": "edition.blessed-be-god.princeton",
+   "work": "work.blessed-be-god",
+   "title": "Blessed Be God: A Complete Catholic Prayer Book",
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1925"
+    }
+   ],
+   "place": "New York",
+   "publisher": "P. J. Kenedy & Sons",
+   "year": "1952/..",
+   "publication_type": "prayer_book",
+   "authority": "approved_ecclesiastical_edition",
+   "languages": [
+    "en",
+    "la"
+   ],
+   "rights": {
+    "status": "unverified",
+    "basis": "The title verso retains the 1925 copyright. The Princeton copy includes later material: “Feasts and Fasts” on p. vii is copyrighted 1952. Its Te Deum on pp. 500–501 can be compared with the earlier edition. Rights in later additions have not been established."
    }
   },
   {
    "id": "edition.douay-rheims-bible-challoner",
    "work": "work.douay-rheims-bible-challoner",
-   "title": "The Holy Bible: Douay-Rheims Version",
-   "year": "1914",
+   "title": "The Holy Bible, Translated from the Latin Vulgate",
+   "edition_statement": "Douay Version",
+   "publication_events": [
+    {
+     "kind": "reprint_of",
+     "date": "1914"
+    }
+   ],
+   "place": "New York",
+   "publisher": "P. J. Kenedy & Sons",
+   "year": "1924/..",
    "publication_type": "scripture",
    "authority": "scriptural_edition",
    "languages": [
@@ -96,14 +134,26 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "Challoner revision, 18th century."
+    "basis": "The biblical passages are from the eighteenth-century Challoner revision. On p. 300 the historical table at the back cites a book published in 1924. The Kenedy copy reprints the John Murphy edition of 1914."
    }
   },
   {
    "id": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
    "work": "work.francis-x-lasance-the-catholic-girl-s-guide",
-   "title": "The Catholic Girl's Guide",
-   "year": "1906",
+   "title": "The Catholic Girl’s Guide. Counsels and Devotions for Girls in the Ordinary Walks of Life, and in Particular for the Children of Mary",
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1906"
+    },
+    {
+     "kind": "imprimatur",
+     "date": "1905-12-18"
+    }
+   ],
+   "place": "New York, Cincinnati, Chicago",
+   "publisher": "Benziger Brothers",
+   "year": "[1906]",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
@@ -111,17 +161,32 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "Original United States edition published and copyrighted in 1906; Francis X. Lasance died in 1946. Only wording verified on the cited original pages, including the Holy Name litany, Deus refugium collect and short grace before meals, is used."
+    "basis": "The 679-page United States edition was registered in 1906 (A 140251). Francis X. Lasance is credited as editor. The cited devotional wording was checked in that edition."
    }
   },
   {
    "id": "edition.manual-of-prayers-catholic-laity-1888",
    "work": "work.manual-of-prayers-catholic-laity",
    "title": "A Manual of Prayers for the Use of the Catholic Laity",
-   "edition_statement": "Prepared and published by order of the Third Plenary Council of Baltimore. The consulted copy bears the copyright notice of 1888 and an approval dated Baltimore, 17 May 1889",
-   "place": "New York / London",
-   "publisher": "The Catholic Publication Society Co. / Burns & Oates",
-   "year": "1888",
+   "additional_imprints": [
+    {
+     "place": "London",
+     "publisher": "Burns & Oates, Limited"
+    }
+   ],
+   "publication_events": [
+    {
+     "kind": "copyright",
+     "date": "1888"
+    },
+    {
+     "kind": "ecclesiastical_approval",
+     "date": "1889-05-17"
+    }
+   ],
+   "place": "New York",
+   "publisher": "The Catholic Publication Society Co.",
+   "year": "s.a.",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
    "languages": [
@@ -130,13 +195,15 @@
    ],
    "rights": {
     "status": "public-domain",
-    "basis": "United States prayer book with a copyright notice of 1888. Reliance is limited to the Te Deum wording verified on printed p. 162 of its original page images."
+    "basis": "The volume bears a United States copyright notice dated 1888. Cardinal Gibbons signed his approval on 17 May 1889. The separate imprimatur below his approval is undated. The cited petitions appear on p. 162."
    }
   },
   {
    "id": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
    "work": "work.patrick-francis-moran-the-catholic-prayer-book",
    "title": "The Catholic Prayer Book and Manual of Meditations",
+   "place": "Dublin",
+   "publisher": "Browne & Nolan",
    "year": "1883",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
@@ -151,7 +218,9 @@
   {
    "id": "edition.the-family-prayer-book-1839",
    "work": "work.the-family-prayer-book",
-   "title": "The Family Prayer-book: Containing All the Public and Private Devotions in Use Amongst English Catholics",
+   "title": "The Family Prayer-Book. Containing All the Public and Private Devotions in Use Amongst English Catholics",
+   "place": "London",
+   "publisher": "Thomas Jones",
    "year": "1839",
    "publication_type": "prayer_book",
    "authority": "approved_ecclesiastical_edition",
@@ -167,6 +236,9 @@
    "id": "edition.the-missal-for-the-laity-1846",
    "work": "work.the-missal-for-the-laity",
    "title": "The Missal for the Laity, According to the Use of the Holy Roman Church",
+   "edition_statement": "For the Catholic Book Society",
+   "place": "Derby, Dublin, London",
+   "publisher": "Thomas Richardson and Son",
    "year": "1846",
    "publication_type": "missal",
    "authority": "approved_ecclesiastical_edition",
@@ -182,7 +254,10 @@
   {
    "id": "edition.the-missal-for-the-use-of-the-laity-1853",
    "work": "work.the-missal-for-the-use-of-the-laity",
-   "title": "The Missal for the Use of the Laity, new edition improved",
+   "title": "The Missal for the Use of the Laity",
+   "edition_statement": "New edition, improved",
+   "place": "London",
+   "publisher": "Charles Dolman",
    "year": "1853",
    "publication_type": "missal",
    "authority": "approved_ecclesiastical_edition",
@@ -208,20 +283,29 @@
   },
   {
    "id": "item.blessed-be-god-1925.scan",
-   "edition": "edition.blessed-be-god-1925",
-   "repository": "Wikimedia Commons",
+   "edition": "edition.blessed-be-god.princeton",
+   "repository": "Wikimedia Commons (Princeton Theological Seminary)",
    "kind": "scan",
    "record_url": "https://commons.wikimedia.org/wiki/File:Blessedbegodcomp00call.pdf",
    "scan_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Blessedbegodcomp00call.pdf",
    "access": "open"
   },
   {
-   "id": "item.catholic-girls-guide-1906.scan",
+   "id": "item.blessed-be-god.fuller",
+   "edition": "edition.blessed-be-god-1925",
+   "repository": "Internet Archive (Fuller Seminary)",
+   "kind": "scan",
+   "record_url": "https://archive.org/details/blessed-be-god-a-complete-catholic-prayer-book",
+   "scan_url": "https://archive.org/download/blessed-be-god-a-complete-catholic-prayer-book/Blessed%20Be%20God%20A%20Complete%20Catholic%20Prayer%20Book.pdf",
+   "access": "open"
+  },
+  {
+   "id": "item.catholic-girls-guide-1906.ia",
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "repository": "University of Notre Dame / Internet Archive",
+   "repository": "Internet Archive",
    "kind": "scan",
    "record_url": "https://archive.org/details/catholicgirlsgui00lasa",
-   "scan_url": "https://resources.library.nd.edu/repository/Catholic%20Youth%20Literature/catholicgirlsgui00lasa.pdf",
+   "scan_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf",
    "access": "open"
   },
   {
@@ -248,7 +332,7 @@
    "repository": "Wikimedia Commons / Internet Archive",
    "kind": "scan",
    "record_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf",
-   "scan_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/The_family_prayer-book%2C_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._%28IA_TheFamilyPrayerBookContaining%29.pdf",
+   "scan_url": "https://archive.org/download/TheFamilyPrayerBookContaining/TheFamilyPrayerBookContaining.pdf",
    "access": "open"
   },
   {

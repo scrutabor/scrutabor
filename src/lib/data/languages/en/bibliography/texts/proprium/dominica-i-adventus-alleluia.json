@@ -7,27 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 88",
-    "scan": "PDF p. 100"
-   },
-   "entries": [
-    {
-     "id": "use.en.f94cb2344e2b3aced681",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Alleluia, alleluia."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 88",
-    "scan": "PDF pages 100 (one-based)"
+    "scan": "PDF p. 100",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=100"
    },
    "entries": [
     {
@@ -45,9 +26,17 @@
       "segment": "s04"
      },
      "claim": "Historical English source expression: “Alleluia.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.f94cb2344e2b3aced681",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Alleluia, alleluia."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

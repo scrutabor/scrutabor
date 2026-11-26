@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-horae.44667ff.doc10a",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "horas/Latin/Commune/C10a.txt lines 39-41"
+    "section": "horas/Latin/Commune/C10a.txt lines 39-41",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10a.txt#L39-L41"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C10a.txt#L39-L41"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "Exact inherited source or expansion in the declared Mass dependency chain, not another independent printed witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "missa/Latin/Sancti/03-25.txt [Communio]; exact inherited dependencies declared separately"
+    "section": "missa/Latin/Sancti/03-25.txt [Communio], 50–51",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L50-L51"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L50-L51"
    },
    "entries": [
     {
@@ -32,10 +46,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The actual pinned proper delegates to the preserved source chain. Communion supplies eleven words only, without a Paschal Alleluia; no full twelve-word digital agreement is asserted."
+     "claim": "The feast file directs the reader to the Common. Its Communion antiphon has eleven words, with no Paschal Alleluia."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, 123, 226",
     "scan": "PDF physical23,203,306 / leaves n22,n202,n305",
-    "section": "RG115a; complete supplied conclusion w022–w042 and Amen w043 only; accented common words and terminal; proper body excluded"
+    "section": "RG115a; complete supplied conclusion w022–w042 and Amen w043 only; accented common words and terminal; proper body excluded",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "This setting’s RG115a supplies the complete Father-directed Per Dominum ending w022–w042 and Amen w043, excluding the proper body. The literal rubric list is unaccented. The matching common words on p.123 and terminal on p.226 control selected stress; p.226 also distinguishes the Amen response period. These controls do not establish response actors, singing or the distribution of conclusions in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 532",
-    "scan": "PDF physical613 / leaf n612",
-    "section": "05-18 postcommunio; proper w001–w021 and literal cue only; supplied conclusion/Amen excluded",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n612/mode/1up"
+    "scan": "PDF p. 613",
+    "section": "Die 18 maii. S. Venantii Mart. Postcommunio, n. 2620.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=613"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the 21-word postcommunio proper w001–w021, followed by the separate literal cue “Per Dóminum nostrum.” The supplied complete conclusion and Amen are not printed at this proper locus. This is a separately set witness of the same received tradition, not proof of independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

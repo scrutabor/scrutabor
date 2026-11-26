@@ -9,7 +9,8 @@ for (const transport of ['', '@static-host '] as const) {
 			const section = page.locator('section[aria-labelledby="section-latin_textual_sources"]');
 			const source = section.locator('li.source').filter({
 				has: page.locator('cite', {
-					hasText: /^Missale Romanum ex decreto SS\. Concilii Tridentini restitutum$/
+					hasText:
+						/^Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum$/
 				})
 			});
 			await source.locator('summary').click();
@@ -32,7 +33,8 @@ for (const transport of ['', '@static-host '] as const) {
 				.locator('section[aria-labelledby="section-latin_textual_sources"] li.source')
 				.filter({
 					has: page.locator('cite', {
-						hasText: /^Missale Romanum ex decreto SS\. Concilii Tridentini restitutum$/
+						hasText:
+							/^Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum$/
 					})
 				});
 			await source.locator('summary').click();
@@ -63,7 +65,7 @@ for (const transport of ['', '@static-host '] as const) {
 		await page.goto('/app/en/bibliographia');
 		const source = page.locator('li.source').filter({
 			has: page.locator('cite', {
-				hasText: /^The Missal for the Use of the Laity, new edition improved$/
+				hasText: /^The Missal for the Use of the Laity$/
 			})
 		});
 		await source.locator('summary').click();
@@ -88,29 +90,24 @@ for (const transport of ['', '@static-host '] as const) {
 		const slug = 'dominica-i-adventus-alleluia';
 		const href = (segments: string) =>
 			`/app/en/formularium/dominica-i-adventus?s=${slug}.${segments}#text-proprium-${slug}`;
-		// The bibliography cites p. 88 of this Missal under two scan locators: s02 under
-		// "PDF p. 100" and the re-verified s03–s04 under "PDF page 100 (counting from 1)". Distinct
-		// locators are distinct evidence groups, so the uses are one verse and one verse range.
 		const uses = source.locator(
 			`.uses a[href^="/app/en/formularium/dominica-i-adventus?s=${slug}."]`
 		);
-		await expect(uses).toHaveCount(2);
-		expect(
-			await uses.evaluateAll((links) => links.map((link) => link.getAttribute('href')))
-		).toEqual([href('s02'), href('s03-s04')]);
-		const group = (segments: string) =>
-			source.locator('.evidence-group').filter({
-				has: page.locator(`.uses a[href="${href(segments)}"]`)
-			});
-		await expect(group('s02').locator('.locator')).toHaveText('p. 88 · PDF p. 100');
-		await expect(group('s03-s04').locator('.locator')).toHaveText(
-			'p. 88 · PDF page 100 (counting from 1)'
+		await expect(uses).toHaveCount(1);
+		await expect(uses).toHaveAttribute('href', href('s02-s04'));
+		const group = source
+			.locator('.evidence-group')
+			.filter({ has: page.locator(`a[href="${href('s02-s04')}"]`) });
+		await expect(group.locator('.locator')).toHaveText('p. 88 · PDF p. 100');
+		await expect(group.locator('.locator')).toHaveAttribute(
+			'href',
+			'https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=100'
 		);
-		await source.locator(`.uses a[href="${href('s03-s04')}"]`).click();
+		await uses.click();
 		const selected = page.locator('.segment-selected');
-		await expect(selected).toHaveCount(2);
+		await expect(selected).toHaveCount(3);
 		expect(await selected.evaluateAll((nodes) => nodes.map((node) => node.id))).toEqual(
-			['s03', 's04'].map((id) => `${slug}-${id}`)
+			['s02', 's03', 's04'].map((id) => `${slug}-${id}`)
 		);
 	});
 }
@@ -125,7 +122,8 @@ for (const transport of ['', '@static-host '] as const) {
 				.locator('section[aria-labelledby="section-latin_textual_sources"] li.source')
 				.filter({
 					has: page.locator('cite', {
-						hasText: /^Missale Romanum ex decreto SS\. Concilii Tridentini restitutum$/
+						hasText:
+							/^Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum$/
 					})
 				});
 			await source.locator('summary').click();

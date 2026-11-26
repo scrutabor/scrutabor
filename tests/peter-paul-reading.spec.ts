@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'sancti-petri-et-pauli-apostolorum';
@@ -112,11 +113,7 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'znacznik w w. 27, zapowiedź w w. 28, odsyłacz w w. 29 i cały tekst w w. 30'
-				: 'marker 27, announcement 28, reference 29, complete body 30'
-		);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Sancti/06-29.txt', 30);
 		for (const sourcePage of ['n657', 'n658']) {
 			await expect(
 				sources.locator(

@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc6-6r.txt [Postcommunio] (lines 57-58); web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum eiusdem] (lines 100-101)"
+    "section": "web/www/missa/Latin/Tempora/Pasc6-6r.txt [Postcommunio] (lines 57-58); web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum eiusdem] (lines 100-101)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc6-6r.txt#L56-L58",
+    "passages": [
+     {
+      "heading": "Postcommunio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc6-6r.txt#L56-L58"
+     },
+     {
+      "heading": "Per Dominum eiusdem",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L99-L101"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Latin Mass data supply a derived digital comparison reading for this component. They are not an independent printed witness of the controlling 1962 edition. Exact source readings and declared framing remain separately attributable."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -133,9 +144,10 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
+    "printed": "pp. xxxiii–xxxiv",
+    "scan": "PDF pp. 39–40",
+    "section": "Rubricae generales Missalis romani, nn. 505, 511 i, 513 a, 514.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -143,10 +155,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "The celebrant says or sings the postcommunion and its conclusion."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

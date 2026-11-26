@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt. Branch !*RnD at line 118, # Evangelium at line 119, exact priest-alone rubric at line 120, preceding Munda at line 121 and complete blessing body at line 122."
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt. Branch !*RnD at line 118, # Evangelium at line 119, exact priest-alone rubric at line 120, preceding Munda at line 121 and complete blessing body at line 122.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L122",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L122"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "Prints the complete 20-word priest-alone request and blessing through Amen, after the separate Munda. Compared with the selected Benziger print, it writes Jube in place of Iube and omits the comma after meo. This is derived digital textual comparison, not an independent print family or performer or voice proof."
     }
    ],
-   "verified_on": "2026-10-17"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const day = 'annuntiatio-beatae-mariae-virginis';
@@ -147,11 +148,12 @@ for (const language of ['pl', 'en'] as const) {
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
 		await expect(sources).toContainText(
-			'Missale Romanum ex decreto SS. Concilii Tridentini restitutum'
+			'Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum'
 		);
 		await expect(sources).toContainText(language === 'pl' ? 's. 495' : 'p. 495');
-		await expect(sources).toContainText('horas/Latin/Commune/C10a.txt');
-		await expect(sources).toContainText('Tempora/Adv3-3.txt');
+		await expectSourcePassage(sources, language, 'Lectio', 'Horae/Commune/C10a.txt', 21, 22);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Sancti/03-25.txt', 17, 18);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Tempora/Adv3-3.txt', 46);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n576/mode/1up"]'

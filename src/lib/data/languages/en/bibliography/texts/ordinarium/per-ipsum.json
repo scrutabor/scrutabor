@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 70",
-    "scan": "PDF pages 82 (one-based)"
+    "scan": "PDF p. 82",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=82"
    },
    "entries": [
     {
@@ -43,7 +44,7 @@
      "claim": "Historical English source expression: “is to thee, God the Father, Almighty, in the unity of the Holy Ghost” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -51,7 +52,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "p. 70",
-    "scan": "scan p. 82"
+    "scan": "PDF p. 82",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=82"
    },
    "entries": [
     {
@@ -63,7 +65,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -71,7 +73,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 28",
-    "scan": "scan p. 55"
+    "scan": "PDF p. 55",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=55"
    },
    "entries": [
     {
@@ -83,7 +86,7 @@
      "claim": "Through Him, and with Him, and in Him,"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -91,7 +94,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "p. 28",
-    "scan": "scan p. 55"
+    "scan": "PDF p. 55",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=55"
    },
    "entries": [
     {
@@ -103,7 +107,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.prayers",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Ordo/Prayers, [Deo gratias], pinned heading line 81 and response line 82"
+    "section": "Ordo/Prayers, [Deo gratias], pinned heading line 81 and response line 82",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L81-L82",
+    "passages": [
+     {
+      "heading": "Deo gratias",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L81-L82"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The retained pinned Prayers section supplies the literal reusable two-word Deo grátias response after removal of its R. marker. This section alone does not establish Epistle occurrence, minister identity or independent transmission."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

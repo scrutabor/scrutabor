@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, XVIII, 123, 226",
     "scan": "PDF physical23,24,203,306 / leaves n22,n23,n202,n305",
-    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. RG115b-e exception check and named same-setting running stress/response controls are distinct from the occasion paragraph."
+    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. RG115b-e exception check and named same-setting running stress/response controls are distinct from the occasion paragraph.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "This setting’s RG115a supplies the Father conclusion w022–w042 and response Amen w043 only; proper body excluded. The literal list is unaccented and has “tuum,”, “qui” and “Amen;”. The same-setting p.123 running conclusion supports stress and tuum: Qui, not the selected Deus comma; that comma is in RG115a. The p.226 terminal supports duration stress and the separate response period. This does not establish actors, singing, participation or separate conclusions in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 542",
-    "scan": "PDF physical623 / leaf n622",
-    "section": "06-02 Ss. Marcellini, Petri atque Erasmi Episcopi Martyrum; collecta; proper w001–w021 only; supplied conclusion and Amen excluded",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n622/mode/1up"
+    "scan": "PDF p. 623",
+    "section": "Die 2 iunii. Ss. Marcellini, Petri atque Erasmi Ep., Mm. Oratio, n. 2701.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=623"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the complete 21-word collecta proper w001–w021, followed by the local cue “Per Dóminum nostrum Iesum Christum, Fílium tuum: Qui tecum vivit et regnat in unitáte.” The supplied full conclusion and Amen are excluded from this proper-page claim. The body is printed once at §2701, not again at the Paschal Common II reference."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -70,7 +71,8 @@
    "locator": {
     "printed": "p. XIX",
     "scan": "PDF physical17 / leaf n16",
-    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. Same-setting RG115b-e exceptions were examined; no Benziger running passage is attributed to this Vatican list."
+    "section": "RG115a conclusion w022–w042 and Amen w043 only; proper excluded. Same-setting RG115b-e exceptions were examined; no Benziger running passage is attributed to this Vatican list.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=17"
    },
    "entries": [
     {
@@ -81,7 +83,7 @@
      "claim": "This setting’s RG115a supplies the Father conclusion w022–w042 and response Amen w043 only; proper body excluded. The literal list is accented and has “Christum,”, “tuum,”, “qui” and “Amen;”. This does not establish actors, singing, participation or separate conclusions in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": [

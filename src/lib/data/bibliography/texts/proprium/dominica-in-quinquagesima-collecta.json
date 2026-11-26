@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quadp3-0.txt [Oratio] (lines 28-29); web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum] (lines 96-97)"
+    "section": "web/www/missa/Latin/Tempora/Quadp3-0.txt [Oratio] (lines 28-29); web/www/missa/Latin/Ordo/Prayers.txt [Per Dominum] (lines 96-97)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quadp3-0.txt#L27-L29",
+    "passages": [
+     {
+      "heading": "Oratio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quadp3-0.txt#L27-L29"
+     },
+     {
+      "heading": "Per Dominum",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L95-L97"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +25,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -27,7 +38,7 @@
     "printed": "pp. 98–100",
     "scan": "PDF pp. 210–212",
     "section": "Common prayer tones, festal and ancient tones; the long conclusion followed by the response Amen",
-    "page_url": "https://archive.org/details/TheLiberUsualis1961"
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n209/mode/1up"
    },
    "entries": [
     {
@@ -38,7 +49,7 @@
      "claim": "The 1961 common prayer-tone pages print a responsive Amen after the long Father-addressed ending. This corroborates the response boundary only; it is not the controlling 1962 calendar or rubric system, and the proper page does not print this response."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -46,7 +57,7 @@
    "role": "official_liturgical_context",
    "locator": {
     "printed": "p. xvii; p. 123",
-    "scan": "leaf n22 / PDF p. 23",
+    "scan": "leaves n22, n202 / PDF pp. 23, 203",
     "section": "RG 115 a, leaf n22; full Father-addressed conclusion, leaf n202",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
@@ -59,17 +70,17 @@
      "claim": "RG 115 a supplies the full Father-addressed long conclusion cued after this proper body. Page 123 supplies an accented punctuation comparator. Neither proper page prints the full expansion or a separate terminal response marker."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxiv, lii",
-    "scan": "leaves n39, n57 / PDF pp. 40, 58",
-    "section": "RG 511 d, 513–514; Ritus V 1",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n39/mode/1up"
+    "printed": "pp. xxxiii–xxxiv, lii",
+    "scan": "leaves n38–n39, n57 / PDF pp. 39–40, 58",
+    "section": "RG 511 d (read Mass); RG 513 a and 514 (solemn and sung Masses); Ritus servandus V 1",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -80,7 +91,7 @@
      "claim": "Ritus V 1 identifies the priestly opening oration; RG 511 d and 513–514 distinguish its spoken and sung delivery. A separate responsive Amen is supported by the common prayer-tone comparator, not printed after the proper cue."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

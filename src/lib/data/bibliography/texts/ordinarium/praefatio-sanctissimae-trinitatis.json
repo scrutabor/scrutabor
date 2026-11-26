@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Prefationes.txt [Trinitate] (lines 52-53)"
+    "section": "web/www/missa/Latin/Ordo/Prefationes.txt [Trinitate] (lines 52-53)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L53",
+    "passages": [
+     {
+      "heading": "Trinitate",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L53"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +21,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +41,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page of the approved Benziger printing identifies and prints the body of the Trinity Preface. The imported hand-position rubric is outside this use. Printed readings and declared selected-text variants remain distinct. The page prints semper ut ubique; selected et remains an apparatus adjudication."
+     "claim": "The Trinity Preface on p. 296 reads nos tibi semper ut ubíque. Its sung setting on p. 246 reads nos tibi semper, et ubíque. The selected prose reads semper et ubíque, as does the pinned digital text. The hand-position rubric has its own citation."
     }
    ],
    "verified_on": "2026-08-31"

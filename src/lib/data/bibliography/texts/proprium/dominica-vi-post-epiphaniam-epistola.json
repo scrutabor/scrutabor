@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Epi6-0.txt [Lectio], body line 22"
+    "section": "web/www/missa/Latin/Tempora/Epi6-0.txt [Lectio], body line 22",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi6-0.txt#L22",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi6-0.txt#L22"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,15 +24,16 @@
      "claim": "The pinned digital file supplies a complete comparison body. Its own readings, including substantive variants where present, are retained without claiming it is an independent copy of the controlling 1962 printing."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liddell-scott-jones.greek-english-lexicon.1940",
    "digital_item": "item.liddell-scott-jones.greek-english-lexicon.1940.perseus40038e4",
    "role": "lexical_support",
    "locator": {
-    "section": "s.v. plērophoria, TEI entry n83833, sense I, expressly citing 1 Thessalonians 1:5; grc.lsj.perseus-eng17.xml",
-    "page_url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0057%3Aentry%3Dplhrofori%2Fa"
+    "section": "s.v. πληροφορία, I (1 Thess. 1, 5)",
+    "page_url": "https://atlas.perseus.tufts.edu/dictionaries/entry/urn:cite2:scaife-viewer:dictionaries.v1:lsj-n83833/",
+    "printed": "p. 1419, col. 2"
    },
    "entries": [
     {
@@ -34,10 +42,10 @@
       "kind": "word",
       "word": "w064"
      },
-     "claim": "The English lexicon gives assurance or certainty for plērophoria and explicitly cites 1 Thessalonians 1:5. This supports the contextual explanation of Latin plenitudine here; it does not replace the selected Latin wording or supply a target translation."
+     "claim": "Under πληροφορία the lexicon gives fullness of assurance or certainty and cites 1 Thessalonians 1:5."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

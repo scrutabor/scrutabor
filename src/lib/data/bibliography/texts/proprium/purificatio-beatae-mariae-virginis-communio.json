@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/02-02.txt [Communio]; heading 202, Luke 2:26 reference 203, complete direct body 204; next section 206"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Communio]; heading 202, Luke 2:26 reference 203, complete direct body 204; next section 206",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L202-L204",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L202-L204"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned Latin Mass body corroborates the complete Communion as a derived digital witness. This section is direct, not an inherited reference or an independent controlling print; its framing is excluded."
     }
    ],
-   "verified_on": "2026-10-02"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

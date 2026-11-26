@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "pinned source key Sancti/02-22; resolved section [Graduale] with declared inherited references"
+    "section": "Graduale ad Missam votivam",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Commune/Coronatio.txt#L26-L29"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-22.txt#L44-L45"
+     },
+     {
+      "heading": "Graduale (communi Summorum Pontificum)",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C4b.txt#L50-L51"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Commune/Coronatio.txt#L26-L29"
    },
    "entries": [
     {
@@ -14,10 +29,39 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Graduale of the votive form follows the Common of Supreme Pontiffs. The annual feast has a separate reading."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.divinum-officium-missa.44667ff",
+   "digital_item": "item.divinum-officium-missa.44667ff.sancti-02-22",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "In Cathedra S. Petri. Gradual in the Tractus section.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-22.txt#L50-L53",
+    "passages": [
+     {
+      "heading": "Tractus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-22.txt#L50-L53"
+     },
+     {
+      "heading": "getitem",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/cgi-bin/missa/propers.pl#L844-L850"
+     }
+    ]
+   },
+   "entries": [
+    {
+     "id": "use.proprium.cathedra-sancti-petri-graduale.do44667ff-feb22",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "On 22 February the program takes the two Gradual verses from the seasonal block before the Tract."
+    }
+   ],
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

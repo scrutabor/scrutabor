@@ -1,7 +1,7 @@
 {
   "id":"litaniae.sacratissimi-cordis-iesu",
   "language":"en",
-  "about":"The Litany of the Most Sacred Heart of Jesus with its versicle and concluding collect, in the recension attested by the 1952 Enchiridion Indulgentiarum, which records it under an act of the Sacred Congregation of Rites of 2 April 1899.",
+  "about":"In the 1952 Enchiridion indulgentiarum, the litany is followed by a versicle and response and a concluding prayer. The book cites a document of the Congregation of Rites dated 2 April 1899 and an act of the Apostolic Penitentiary dated 10 March 1933.",
   "seg":[
     {"id":"s001","tr":"Lord, have mercy.","tc":[22,23],"tb":"traditional-composite","g":["Lord","have mercy"]},
     {"id":"s002","tr":"Christ, have mercy.","tc":[23],"tb":"traditional-composite","g":["Christ","have mercy"]},
@@ -78,7 +78,7 @@
     {"id":"s073","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
     {"id":"s074","tr":"Heart of Jesus, salvation of those who trust in Thee.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus","salvation","in","You","of those who trust"]},
     {"id":"s075","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
-    {"id":"s076","tr":"Heart of Jesus, hope of those who die in Thee.","tc":[23],"tb":"traditional-composite","g":["Heart","of Jesus","hope","in","You","of the dying"]},
+    {"id":"s076","tr":"Heart of Jesus, hope of those who die in Thee.","tc":[22,23],"tb":"traditional-composite","g":["Heart","of Jesus","hope","in","You","of the dying"]},
     {"id":"s077","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},
     {"id":"s078","tr":"Heart of Jesus, delight of all the Saints.","tc":[22],"tb":"traditional-composite","g":["Heart","of Jesus","delight",null,null],"a":[{"s":3,"n":2,"a":0,"g":"of all the Saints"}]},
     {"id":"s079","tr":"Have mercy on us.","tc":[22],"tb":"traditional-composite","g":["have mercy","on us"]},

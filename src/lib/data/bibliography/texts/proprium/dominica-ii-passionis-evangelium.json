@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-0r.txt ([Evangelium] overlay), continued in web/www/missa/Latin/Tempora/Quad6-0.txt ([Evangelium3]); resolved spans: web/www/missa/Latin/Tempora/Quad6-0r.txt (lines 213-218); web/www/missa/Latin/Tempora/Quad6-0.txt (lines 236-239)"
+    "section": "web/www/missa/Latin/Tempora/Quad6-0.txt [Evangelium3], 236–237 · web/www/missa/Latin/Tempora/Quad6-0.txt [Evangelium3], 239 · web/www/missa/Latin/Tempora/Quad6-0r.txt [Evangelium], 218",
+    "passages": [
+     {
+      "heading": "Evangelium3",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0.txt#L236-L237"
+     },
+     {
+      "heading": "Evangelium3",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0.txt#L239"
+     },
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0r.txt#L218"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-0.txt#L236-L237"
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

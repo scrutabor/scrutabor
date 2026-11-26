@@ -3,11 +3,12 @@
  "source_groups": [
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 440",
-    "scan": "scan p. 448"
+    "scan": "PDF p. 448",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=448"
    },
    "entries": [
     {
@@ -18,7 +19,7 @@
      "claim": "Historical English wording witness for the complete orationes.benedic-domine text."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

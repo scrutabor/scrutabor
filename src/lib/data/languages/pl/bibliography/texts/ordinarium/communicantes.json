@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 57",
-    "scan": "PDF s. 60",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 57",
+    "scan": "PDF, s. 60",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=60"
    },
    "entries": [
     {
@@ -26,17 +26,32 @@
       "segment": "s03"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „oraz Twoich świętych Apostołów i Męczenników: Piotra i Pawła, Andrzeja, Jakuba, Jana, Tomasza, Jakuba, Filipa, Bartłomieja, Mateusza, Szymona i Tadeusza;”"
-    },
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 60",
+    "scan": "PDF, s. 63",
+    "section": "Zakończenie Supplices te rogamus",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=63"
+   },
+   "entries": [
     {
      "id": "use.pl.edca1b0f38741940e6ac",
      "address": {
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przez tegoż Chrystusa Pana naszego. Amen.”"
+     "claim": "Na s. 60 modlitewnik drukuje całe powtarzane zakończenie słowo w słowo. Na s. 57 w samym Communicantes pomija „Amen”.",
+     "reader_note": "Na s. 57, na końcu Communicantes, brak „Amen”. Całe zakończenie wydrukowano na s. 60, po Supplices te rogamus."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

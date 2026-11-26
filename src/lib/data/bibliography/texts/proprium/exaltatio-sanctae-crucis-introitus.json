@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/09-14.txt [Introitus] (lines 18-23); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)"
+    "section": "web/www/missa/Latin/Sancti/09-14.txt [Introitus] (lines 18-23); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/09-14.txt#L17-L19",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/09-14.txt#L17-L19"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/09-14.txt#L21-L23"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

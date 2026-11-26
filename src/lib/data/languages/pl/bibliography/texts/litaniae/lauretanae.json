@@ -6,9 +6,10 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 143–144",
-    "scan": "PDF ss. 157–158",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 143–144",
+    "scan": "PDF, s. 157–158",
+    "section": "Kolekta po hymnie i kantyku w nieszporach",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=157"
    },
    "entries": [
     {
@@ -17,19 +18,197 @@
       "kind": "segment",
       "segment": "s133"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, nasz Boże, daj nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała, i za wstawiennictwem Najświętszej Maryi, zawsze Dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością. Przez Chrystusa, Pana naszego. Amen.”"
+     "claim": "W nieszporach po hymnie Ave maris stella i odsyłaczu do Magnificat wydrukowano tę samą modlitwę o zdrowie duszy i ciała."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Matko Kościoła",
+    "printed": "s. 106",
+    "scan": "PDF, s. 106",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=106"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s022",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "W załączniku do uchwały czytamy „Matko Kościoła”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Matko miłosierdzia",
+    "printed": "s. 106",
+    "scan": "PDF, s. 106",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=106"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s024",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "W załączniku do uchwały czytamy „Matko miłosierdzia”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Matko nadziei",
+    "printed": "s. 106",
+    "scan": "PDF, s. 106",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=106"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s028",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "W załączniku do uchwały czytamy „Matko nadziei”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Pociecho migrantów",
+    "printed": "s. 106",
+    "scan": "PDF, s. 106",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=106"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s090",
+     "address": {
+      "kind": "segment",
+      "segment": "s090"
+     },
+     "claim": "W załączniku do uchwały czytamy „Pociecho migrantów”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Królowo Polski",
+    "printed": "s. 107",
+    "scan": "PDF, s. 107",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=107"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s122",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "W załączniku do uchwały czytamy „Królowo Polski”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "section": "Załącznik. Litania loretańska do Najświętszej Maryi Panny · Królowo rodzin",
+    "printed": "s. 107",
+    "scan": "PDF, s. 107",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=107"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.s118",
+     "address": {
+      "kind": "segment",
+      "segment": "s118"
+     },
+     "claim": "W załączniku do uchwały czytamy „Królowo rodzin”."
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.ksiazka-do-nabozenstwa-1883",
    "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "druk. ss. 350–352",
-    "scan": "DjVu ss. 362–364",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+    "printed": "s. 350",
+    "scan": "DjVu, s. 362",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=362"
+   },
+   "entries": [
+    {
+     "id": "use.pl.72ec2aba7760e93965f7",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko nadziei” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.9cc16c0276ac5e7f0c1d",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko miłosierdzia” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.ae3a8834234e4b002886",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko Kościoła” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.dbb4f13f4e860ae88525",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko dobrej rady” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "s. 350",
+    "scan": "DjVu, s. 362",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=362"
    },
    "entries": [
     {
@@ -49,22 +228,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.073dae1c703545cd5538",
-     "address": {
-      "kind": "segment",
-      "segment": "s128"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
-     "id": "use.pl.08d75031a005eabc7fb7",
-     "address": {
-      "kind": "segment",
-      "segment": "s067"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.0ae2a71b3e47f6288193",
      "address": {
       "kind": "segment",
@@ -73,10 +236,301 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Maryjo.”"
     },
     {
-     "id": "use.pl.0b59d34d99f5952bb6a0",
+     "id": "use.pl.1c532686902152c2b26c",
      "address": {
       "kind": "segment",
-      "segment": "s113"
+      "segment": "s003"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.1d87e72d7aed905a103b",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko nienaruszona.”"
+    },
+    {
+     "id": "use.pl.2131bd99a92fd7f97021",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.21ec58e79353e2df0c0d",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.24ce1fe5a79751d0c8de",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.2dfce0b9bb73b934b827",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.2e43fff79f6f432aee85",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.33d5ba1c85c99a8b1f39",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Ojcze z nieba, Boże.”"
+    },
+    {
+     "id": "use.pl.44a7586e18449e0e7bda",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.4f583b65126acc61fe5a",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.5244ae2cda1959a57ede",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.593af4e9adb29e68805b",
+     "address": {
+      "kind": "segment",
+      "segment": "s018"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Panno nad pannami.”"
+    },
+    {
+     "id": "use.pl.5a4b341dfc8ffdb7f587",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Chryste, usłysz nas.”"
+    },
+    {
+     "id": "use.pl.6bb29e0ebd537f69a275",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.6daab33c0a42e2d6439e",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.6fa305a09e2b3cacfc83",
+     "address": {
+      "kind": "segment",
+      "segment": "s038"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko najmilsza.”"
+    },
+    {
+     "id": "use.pl.762d049c9532ecdc73a4",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Duchu Święty, Boże.”"
+    },
+    {
+     "id": "use.pl.8836b8ff7eb7f9297a25",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.8d95f5b2b798e04a21c6",
+     "address": {
+      "kind": "segment",
+      "segment": "s039"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.93df4d674290249177c2",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko łaski Bożej.”"
+    },
+    {
+     "id": "use.pl.9858bfbb3cfd950a7b22",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Christe, eleison.”"
+    },
+    {
+     "id": "use.pl.a1ad6bbbcff08b1dcf10",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Synu, Odkupicielu świata, Boże.”"
+    },
+    {
+     "id": "use.pl.a6228e6794cd3a2d28d1",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.aabc7991c05769666dc3",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.b6d0aff0148567171e4e",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.ccaa4a1ddf35a84c68a2",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko Chrystusowa.”"
+    },
+    {
+     "id": "use.pl.e958b929b0477b93f194",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Boża Rodzicielko.”"
+    },
+    {
+     "id": "use.pl.f1533d5c49eaebb8d72b",
+     "address": {
+      "kind": "segment",
+      "segment": "s040"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko przedziwna.”"
+    },
+    {
+     "id": "use.pl.f2f64e801150864caa46",
+     "address": {
+      "kind": "segment",
+      "segment": "s044"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko Stworzyciela.”"
+    },
+    {
+     "id": "use.pl.f3f4f1918381c8651297",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.f934797e697b1d12ca93",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.fc939ab0e6656768f817",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Trójco, Jedyny Boże.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "s. 351",
+    "scan": "DjVu, s. 363",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=363"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2c1bed05e416ad9d9c70",
+     "address": {
+      "kind": "segment",
+      "segment": "s091"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Pociecho migrantów” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "s. 351",
+    "scan": "DjVu, s. 363",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=363"
+   },
+   "entries": [
+    {
+     "id": "use.pl.08d75031a005eabc7fb7",
+     "address": {
+      "kind": "segment",
+      "segment": "s067"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -105,28 +559,12 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.1531ea32cb330cf8571d",
-     "address": {
-      "kind": "segment",
-      "segment": "s042"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko dobrej rady.”"
-    },
-    {
      "id": "use.pl.16382b76d042c3565da0",
      "address": {
       "kind": "segment",
       "segment": "s095"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.1c532686902152c2b26c",
-     "address": {
-      "kind": "segment",
-      "segment": "s003"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Kyrie, eleison.”"
     },
     {
      "id": "use.pl.1c627df69efc623c974c",
@@ -137,14 +575,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Przyczyno naszej radości.”"
     },
     {
-     "id": "use.pl.1d87e72d7aed905a103b",
-     "address": {
-      "kind": "segment",
-      "segment": "s036"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko nienaruszona.”"
-    },
-    {
      "id": "use.pl.1f497731e3d35b335409",
      "address": {
       "kind": "segment",
@@ -153,108 +583,12 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Wieżo Dawidowa.”"
     },
     {
-     "id": "use.pl.2131bd99a92fd7f97021",
-     "address": {
-      "kind": "segment",
-      "segment": "s027"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.21ec58e79353e2df0c0d",
-     "address": {
-      "kind": "segment",
-      "segment": "s041"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.224da9ec04ebc5e00933",
-     "address": {
-      "kind": "segment",
-      "segment": "s123"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.225b1f698ce1a08f1ac0",
      "address": {
       "kind": "segment",
       "segment": "s065"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.22876bc8a48ff9514657",
-     "address": {
-      "kind": "segment",
-      "segment": "s125"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Przepuść nam, Panie.”"
-    },
-    {
-     "id": "use.pl.24ce1fe5a79751d0c8de",
-     "address": {
-      "kind": "segment",
-      "segment": "s001"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Kyrie, eleison.”"
-    },
-    {
-     "id": "use.pl.274ba7e2b993f8b28df2",
-     "address": {
-      "kind": "segment",
-      "segment": "s117"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.2c1bed05e416ad9d9c70",
-     "address": {
-      "kind": "segment",
-      "segment": "s091"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.2dfce0b9bb73b934b827",
-     "address": {
-      "kind": "segment",
-      "segment": "s021"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.2e43fff79f6f432aee85",
-     "address": {
-      "kind": "segment",
-      "segment": "s031"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.2e6996226176193bf48e",
-     "address": {
-      "kind": "segment",
-      "segment": "s124"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
-     "id": "use.pl.3307ec270a4d1a7500bb",
-     "address": {
-      "kind": "segment",
-      "segment": "s112"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo bez zmazy pierworodnej poczęta.”"
-    },
-    {
-     "id": "use.pl.33d5ba1c85c99a8b1f39",
-     "address": {
-      "kind": "segment",
-      "segment": "s006"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Ojcze z nieba, Boże.”"
     },
     {
      "id": "use.pl.3b77330d1e5c6734d2d7",
@@ -281,14 +615,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Panno łaskawa.”"
     },
     {
-     "id": "use.pl.44a7586e18449e0e7bda",
-     "address": {
-      "kind": "segment",
-      "segment": "s013"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
      "id": "use.pl.4d775faa46b16adcd531",
      "address": {
       "kind": "segment",
@@ -297,60 +623,12 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo Patriarchów.”"
     },
     {
-     "id": "use.pl.4f583b65126acc61fe5a",
-     "address": {
-      "kind": "segment",
-      "segment": "s037"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.5244ae2cda1959a57ede",
-     "address": {
-      "kind": "segment",
-      "segment": "s045"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.535b01cc56d18543929d",
-     "address": {
-      "kind": "segment",
-      "segment": "s130"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami, Święta Boża Rodzicielko.”"
-    },
-    {
-     "id": "use.pl.53a671770678aa9fb17d",
-     "address": {
-      "kind": "segment",
-      "segment": "s127"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Wysłuchaj nas, Panie.”"
-    },
-    {
      "id": "use.pl.55d9d9f38b4948fb6102",
      "address": {
       "kind": "segment",
       "segment": "s084"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Gwiazdo zaranna.”"
-    },
-    {
-     "id": "use.pl.593af4e9adb29e68805b",
-     "address": {
-      "kind": "segment",
-      "segment": "s018"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Panno nad pannami.”"
-    },
-    {
-     "id": "use.pl.5a4b341dfc8ffdb7f587",
-     "address": {
-      "kind": "segment",
-      "segment": "s004"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Chryste, usłysz nas.”"
     },
     {
      "id": "use.pl.5b55286e29f46855f6c1",
@@ -401,62 +679,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.6bb29e0ebd537f69a275",
-     "address": {
-      "kind": "segment",
-      "segment": "s017"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.6daab33c0a42e2d6439e",
-     "address": {
-      "kind": "segment",
-      "segment": "s047"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.6fa305a09e2b3cacfc83",
-     "address": {
-      "kind": "segment",
-      "segment": "s038"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko najmilsza.”"
-    },
-    {
-     "id": "use.pl.6fac0024c73fec299268",
-     "address": {
-      "kind": "segment",
-      "segment": "s120"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo pokoju.”"
-    },
-    {
-     "id": "use.pl.728a5065111eab0a540c",
-     "address": {
-      "kind": "segment",
-      "segment": "s115"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.72ec2aba7760e93965f7",
-     "address": {
-      "kind": "segment",
-      "segment": "s029"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.762d049c9532ecdc73a4",
-     "address": {
-      "kind": "segment",
-      "segment": "s010"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Duchu Święty, Boże.”"
-    },
-    {
      "id": "use.pl.76638a32a18fcf499770",
      "address": {
       "kind": "segment",
@@ -469,14 +691,6 @@
      "address": {
       "kind": "segment",
       "segment": "s083"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.8364e39f0fd650405e40",
-     "address": {
-      "kind": "segment",
-      "segment": "s111"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -497,22 +711,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.8836b8ff7eb7f9297a25",
-     "address": {
-      "kind": "segment",
-      "segment": "s011"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.8c080758028ae51994e4",
-     "address": {
-      "kind": "segment",
-      "segment": "s131"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Abyśmy się stali godnymi obietnic Chrystusowych.”"
-    },
-    {
      "id": "use.pl.8c780a8b84ce8c747797",
      "address": {
       "kind": "segment",
@@ -521,52 +719,12 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Panno można.”"
     },
     {
-     "id": "use.pl.8d95f5b2b798e04a21c6",
-     "address": {
-      "kind": "segment",
-      "segment": "s039"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.8eeeb5e7301df8474420",
-     "address": {
-      "kind": "segment",
-      "segment": "s110"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo wszystkich Świętych.”"
-    },
-    {
      "id": "use.pl.8f5ca3d15b1f139e169e",
      "address": {
       "kind": "segment",
       "segment": "s061"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.93df4d674290249177c2",
-     "address": {
-      "kind": "segment",
-      "segment": "s026"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko łaski Bożej.”"
-    },
-    {
-     "id": "use.pl.9656535dea72181e9837",
-     "address": {
-      "kind": "segment",
-      "segment": "s129"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.9858bfbb3cfd950a7b22",
-     "address": {
-      "kind": "segment",
-      "segment": "s002"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Christe, eleison.”"
     },
     {
      "id": "use.pl.99ae3ace950c117128e4",
@@ -585,14 +743,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Uzdrowienie chorych.”"
     },
     {
-     "id": "use.pl.9cc16c0276ac5e7f0c1d",
-     "address": {
-      "kind": "segment",
-      "segment": "s025"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.9ce8058a01aeccdca419",
      "address": {
       "kind": "segment",
@@ -601,52 +751,12 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.a1ad6bbbcff08b1dcf10",
-     "address": {
-      "kind": "segment",
-      "segment": "s008"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Synu, Odkupicielu świata, Boże.”"
-    },
-    {
-     "id": "use.pl.a41987a3541681218845",
-     "address": {
-      "kind": "segment",
-      "segment": "s126"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
      "id": "use.pl.a4fadaeaed4c52cb62e0",
      "address": {
       "kind": "segment",
       "segment": "s092"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Pocieszycielko strapionych.”"
-    },
-    {
-     "id": "use.pl.a6228e6794cd3a2d28d1",
-     "address": {
-      "kind": "segment",
-      "segment": "s019"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.aabc7991c05769666dc3",
-     "address": {
-      "kind": "segment",
-      "segment": "s033"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.ae3a8834234e4b002886",
-     "address": {
-      "kind": "segment",
-      "segment": "s023"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.b4a50ced7d66ab6e3582",
@@ -673,26 +783,10 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo Apostołów.”"
     },
     {
-     "id": "use.pl.b6d0aff0148567171e4e",
-     "address": {
-      "kind": "segment",
-      "segment": "s009"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
      "id": "use.pl.b6eb62428ed7c8521e7c",
      "address": {
       "kind": "segment",
       "segment": "s105"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.b782d816e5cc931769d6",
-     "address": {
-      "kind": "segment",
-      "segment": "s109"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -777,22 +871,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.ccaa4a1ddf35a84c68a2",
-     "address": {
-      "kind": "segment",
-      "segment": "s020"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko Chrystusowa.”"
-    },
-    {
-     "id": "use.pl.cdc91f0ed29752af2896",
-     "address": {
-      "kind": "segment",
-      "segment": "s121"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.cf7ec3ab038fbeaf21bb",
      "address": {
       "kind": "segment",
@@ -807,22 +885,6 @@
       "segment": "s076"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Wieżo z kości słoniowej.”"
-    },
-    {
-     "id": "use.pl.d7fe24205e09c7da8f17",
-     "address": {
-      "kind": "segment",
-      "segment": "s116"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo różańca świętego.”"
-    },
-    {
-     "id": "use.pl.dbb4f13f4e860ae88525",
-     "address": {
-      "kind": "segment",
-      "segment": "s043"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.dc6059eb388742aba522",
@@ -849,22 +911,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.e958b929b0477b93f194",
-     "address": {
-      "kind": "segment",
-      "segment": "s016"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Boża Rodzicielko.”"
-    },
-    {
-     "id": "use.pl.ea836b9993554ead3f5b",
-     "address": {
-      "kind": "segment",
-      "segment": "s132"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módlmy się.”"
-    },
-    {
      "id": "use.pl.ebe765da6f07b3ef840c",
      "address": {
       "kind": "segment",
@@ -879,14 +925,6 @@
       "segment": "s071"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.f1533d5c49eaebb8d72b",
-     "address": {
-      "kind": "segment",
-      "segment": "s040"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko przedziwna.”"
     },
     {
      "id": "use.pl.f23087456802eb888a29",
@@ -905,22 +943,6 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zwierciadło sprawiedliwości.”"
     },
     {
-     "id": "use.pl.f2f64e801150864caa46",
-     "address": {
-      "kind": "segment",
-      "segment": "s044"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Matko Stworzyciela.”"
-    },
-    {
-     "id": "use.pl.f3f4f1918381c8651297",
-     "address": {
-      "kind": "segment",
-      "segment": "s007"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
      "id": "use.pl.f77d8124554eb5f615e6",
      "address": {
       "kind": "segment",
@@ -937,28 +959,58 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.f934797e697b1d12ca93",
-     "address": {
-      "kind": "segment",
-      "segment": "s035"
-     },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.fbd0196fe8b0d278f78f",
      "address": {
       "kind": "segment",
       "segment": "s062"
      },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Stolico mądrości.”"
-    },
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "s. 352",
+    "scan": "DjVu, s. 364",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=364"
+   },
+   "entries": [
     {
-     "id": "use.pl.fc939ab0e6656768f817",
+     "id": "use.pl.224da9ec04ebc5e00933",
      "address": {
       "kind": "segment",
-      "segment": "s012"
+      "segment": "s123"
      },
-     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Święta Trójco, Jedyny Boże.”"
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo Polski” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.274ba7e2b993f8b28df2",
+     "address": {
+      "kind": "segment",
+      "segment": "s117"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo różańca świętego” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.728a5065111eab0a540c",
+     "address": {
+      "kind": "segment",
+      "segment": "s115"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo wniebowzięta” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.cdc91f0ed29752af2896",
+     "address": {
+      "kind": "segment",
+      "segment": "s121"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo pokoju” nie występuje w tym egzemplarzu."
     },
     {
      "id": "use.pl.fe9f96543b20e5254266",
@@ -966,19 +1018,291 @@
       "kind": "segment",
       "segment": "s119"
      },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo rodzin” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ksiazka-do-nabozenstwa-1883",
+   "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
+   "role": "historical_wording_comparator",
+   "locator": {
+    "printed": "s. 352",
+    "scan": "DjVu, s. 364",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=364"
+   },
+   "entries": [
+    {
+     "id": "use.pl.073dae1c703545cd5538",
+     "address": {
+      "kind": "segment",
+      "segment": "s128"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.0b59d34d99f5952bb6a0",
+     "address": {
+      "kind": "segment",
+      "segment": "s113"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.22876bc8a48ff9514657",
+     "address": {
+      "kind": "segment",
+      "segment": "s125"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Przepuść nam, Panie.”"
+    },
+    {
+     "id": "use.pl.2e6996226176193bf48e",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.3307ec270a4d1a7500bb",
+     "address": {
+      "kind": "segment",
+      "segment": "s112"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo bez zmazy pierworodnej poczęta.”"
+    },
+    {
+     "id": "use.pl.535b01cc56d18543929d",
+     "address": {
+      "kind": "segment",
+      "segment": "s130"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami, Święta Boża Rodzicielko.”"
+    },
+    {
+     "id": "use.pl.53a671770678aa9fb17d",
+     "address": {
+      "kind": "segment",
+      "segment": "s127"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Wysłuchaj nas, Panie.”"
+    },
+    {
+     "id": "use.pl.8364e39f0fd650405e40",
+     "address": {
+      "kind": "segment",
+      "segment": "s111"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.8c080758028ae51994e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s131"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Abyśmy się stali godnymi obietnic Chrystusowych.”"
+    },
+    {
+     "id": "use.pl.8eeeb5e7301df8474420",
+     "address": {
+      "kind": "segment",
+      "segment": "s110"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Królowo wszystkich Świętych.”"
+    },
+    {
+     "id": "use.pl.9656535dea72181e9837",
+     "address": {
+      "kind": "segment",
+      "segment": "s129"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.a41987a3541681218845",
+     "address": {
+      "kind": "segment",
+      "segment": "s126"
+     },
+     "claim": "Historyczny komparator polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.b782d816e5cc931769d6",
+     "address": {
+      "kind": "segment",
+      "segment": "s109"
+     },
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Módl się za nami.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 37–40",
-    "scan": "PDF ss. 39–42",
-    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+    "printed": "s. 37",
+    "scan": "PDF, s. 39",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=39"
+   },
+   "entries": [
+    {
+     "id": "use.pl.34ad42ff85ba20325cab",
+     "address": {
+      "kind": "segment",
+      "segment": "s005"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, wysłuchaj nas.”"
+    },
+    {
+     "id": "use.pl.460dbbba73dd3d94d4d5",
+     "address": {
+      "kind": "segment",
+      "segment": "s011"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.6cbce046bd0de8e55ad0",
+     "address": {
+      "kind": "segment",
+      "segment": "s006"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze z nieba, Boże.”"
+    },
+    {
+     "id": "use.pl.72c66594cd48aad409ae",
+     "address": {
+      "kind": "segment",
+      "segment": "s008"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Synu, Odkupicielu świata, Boże.”"
+    },
+    {
+     "id": "use.pl.777cf4736a82043f8fb1",
+     "address": {
+      "kind": "segment",
+      "segment": "s012"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Trójco, Jedyny Boże.”"
+    },
+    {
+     "id": "use.pl.8faa71a97ddb0ab4ebe7",
+     "address": {
+      "kind": "segment",
+      "segment": "s010"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Duchu Święty, Boże.”"
+    },
+    {
+     "id": "use.pl.9a3bda6d3b8fee5e5878",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Christe, eleison.”"
+    },
+    {
+     "id": "use.pl.a594176d96742b1ab816",
+     "address": {
+      "kind": "segment",
+      "segment": "s007"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.cc6d0f97a09c806e90b7",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.e30b6223a23d9675af0e",
+     "address": {
+      "kind": "segment",
+      "segment": "s013"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.ea560bd9f3d5c6cdd649",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
+    },
+    {
+     "id": "use.pl.eb42634b149869e6a5a6",
+     "address": {
+      "kind": "segment",
+      "segment": "s004"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, usłysz nas.”"
+    },
+    {
+     "id": "use.pl.fe1c30e4e4d299cda3e7",
+     "address": {
+      "kind": "segment",
+      "segment": "s009"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 38",
+    "scan": "PDF, s. 40",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=40"
+   },
+   "entries": [
+    {
+     "id": "use.pl.7ef14d4dd34fd4cd6a0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s029"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko nadziei” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.85adc5efdcc045a47575",
+     "address": {
+      "kind": "segment",
+      "segment": "s023"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko Kościoła” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.92b64cded8ac0f252213",
+     "address": {
+      "kind": "segment",
+      "segment": "s025"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Matko miłosierdzia” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 38",
+    "scan": "PDF, s. 40",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=40"
    },
    "entries": [
     {
@@ -986,22 +1310,6 @@
      "address": {
       "kind": "segment",
       "segment": "s039"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.0448a939034e98a6c6b3",
-     "address": {
-      "kind": "segment",
-      "segment": "s131"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Abyśmy się stali godnymi obietnic Chrystusowych.”"
-    },
-    {
-     "id": "use.pl.063b4fd2fa45f8194cbd",
-     "address": {
-      "kind": "segment",
-      "segment": "s099"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -1020,6 +1328,361 @@
       "segment": "s014"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Maryjo.”"
+    },
+    {
+     "id": "use.pl.1e0e42faad456fcf96b7",
+     "address": {
+      "kind": "segment",
+      "segment": "s053"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.30cd9d412d64602a2735",
+     "address": {
+      "kind": "segment",
+      "segment": "s059"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.4839c0495824f5c0ebf0",
+     "address": {
+      "kind": "segment",
+      "segment": "s017"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.4bb04f3273462c160be6",
+     "address": {
+      "kind": "segment",
+      "segment": "s016"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Boża Rodzicielko.”"
+    },
+    {
+     "id": "use.pl.5401ea496b6666ab16dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s026"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko łaski Bożej.”"
+    },
+    {
+     "id": "use.pl.5b8c99caaf0b22773977",
+     "address": {
+      "kind": "segment",
+      "segment": "s061"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.622a612d19fb10392845",
+     "address": {
+      "kind": "segment",
+      "segment": "s031"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.6488c6bdb4b6663a0e7f",
+     "address": {
+      "kind": "segment",
+      "segment": "s045"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.6b2236905ec1a969503e",
+     "address": {
+      "kind": "segment",
+      "segment": "s064"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyczyno naszej radości.”"
+    },
+    {
+     "id": "use.pl.6e34dce98d571922997c",
+     "address": {
+      "kind": "segment",
+      "segment": "s044"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko Stworzyciela.”"
+    },
+    {
+     "id": "use.pl.74936e406795aaae47a7",
+     "address": {
+      "kind": "segment",
+      "segment": "s065"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.785f1e94383f7e4fd1b9",
+     "address": {
+      "kind": "segment",
+      "segment": "s033"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.7bec60274ae971b56cad",
+     "address": {
+      "kind": "segment",
+      "segment": "s056"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno łaskawa.”"
+    },
+    {
+     "id": "use.pl.80a85af618c423240da9",
+     "address": {
+      "kind": "segment",
+      "segment": "s048"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno roztropna.”"
+    },
+    {
+     "id": "use.pl.83a1f4550cb5ebe35d84",
+     "address": {
+      "kind": "segment",
+      "segment": "s054"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno można.”"
+    },
+    {
+     "id": "use.pl.8425faa13b6823af5abf",
+     "address": {
+      "kind": "segment",
+      "segment": "s035"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.88b76291d98c37eedbbb",
+     "address": {
+      "kind": "segment",
+      "segment": "s050"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno czcigodna.”"
+    },
+    {
+     "id": "use.pl.8c19c2208a7787775db9",
+     "address": {
+      "kind": "segment",
+      "segment": "s015"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.8e10034de108d98731d7",
+     "address": {
+      "kind": "segment",
+      "segment": "s042"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko dobrej rady.”"
+    },
+    {
+     "id": "use.pl.903d491627bfef880aae",
+     "address": {
+      "kind": "segment",
+      "segment": "s047"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.90f94d82387e9ee1853d",
+     "address": {
+      "kind": "segment",
+      "segment": "s055"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.9657cda07cb3bdd95d41",
+     "address": {
+      "kind": "segment",
+      "segment": "s049"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.99f84d318c8eb779585a",
+     "address": {
+      "kind": "segment",
+      "segment": "s063"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.9c9b80adb47a0e3124b3",
+     "address": {
+      "kind": "segment",
+      "segment": "s037"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.9ee7a113a0a1a598eaa2",
+     "address": {
+      "kind": "segment",
+      "segment": "s020"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko Chrystusowa.”"
+    },
+    {
+     "id": "use.pl.9fb08f9468ea83c3c924",
+     "address": {
+      "kind": "segment",
+      "segment": "s019"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.b60a535baa3aeda8f79e",
+     "address": {
+      "kind": "segment",
+      "segment": "s062"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Stolico mądrości.”"
+    },
+    {
+     "id": "use.pl.badf003c9e1acd18faa8",
+     "address": {
+      "kind": "segment",
+      "segment": "s038"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko najmilsza.”"
+    },
+    {
+     "id": "use.pl.d13382425e837908a28f",
+     "address": {
+      "kind": "segment",
+      "segment": "s021"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.da77dfef4bf42ad7a596",
+     "address": {
+      "kind": "segment",
+      "segment": "s018"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Panno nad pannami.”"
+    },
+    {
+     "id": "use.pl.e0529835a4cd10515f7b",
+     "address": {
+      "kind": "segment",
+      "segment": "s043"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.e0c2c3d77f46b4405c51",
+     "address": {
+      "kind": "segment",
+      "segment": "s052"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno wsławiona.”"
+    },
+    {
+     "id": "use.pl.e381fac1d726c2d372e7",
+     "address": {
+      "kind": "segment",
+      "segment": "s057"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.e5b6b17c69fc950b9f72",
+     "address": {
+      "kind": "segment",
+      "segment": "s027"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.ec8fa3585051484ea837",
+     "address": {
+      "kind": "segment",
+      "segment": "s051"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.fb51a3073008fd568521",
+     "address": {
+      "kind": "segment",
+      "segment": "s058"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno wierna.”"
+    },
+    {
+     "id": "use.pl.fc5770837d73ae7ced0f",
+     "address": {
+      "kind": "segment",
+      "segment": "s041"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.fcaf841fd3b289b35949",
+     "address": {
+      "kind": "segment",
+      "segment": "s060"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zwierciadło sprawiedliwości.”"
+    },
+    {
+     "id": "use.pl.ff16bed0c035f1cdb68e",
+     "address": {
+      "kind": "segment",
+      "segment": "s036"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko nienaruszona.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 39",
+    "scan": "PDF, s. 41",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=41"
+   },
+   "entries": [
+    {
+     "id": "use.pl.7aa856b6b366e93fa671",
+     "address": {
+      "kind": "segment",
+      "segment": "s091"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Pociecho migrantów” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 39",
+    "scan": "PDF, s. 41",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=41"
+   },
+   "entries": [
+    {
+     "id": "use.pl.063b4fd2fa45f8194cbd",
+     "address": {
+      "kind": "segment",
+      "segment": "s099"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.0b38bae5d738c0cadec3",
@@ -1062,22 +1725,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.1e0e42faad456fcf96b7",
-     "address": {
-      "kind": "segment",
-      "segment": "s053"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.1f2701cbe26eeb21d610",
-     "address": {
-      "kind": "segment",
-      "segment": "s130"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami, Święta Boża Rodzicielko.”"
-    },
-    {
      "id": "use.pl.25c28733f93845b001d7",
      "address": {
       "kind": "segment",
@@ -1092,30 +1739,6 @@
       "segment": "s078"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Domie złoty.”"
-    },
-    {
-     "id": "use.pl.30cd9d412d64602a2735",
-     "address": {
-      "kind": "segment",
-      "segment": "s059"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.34ad42ff85ba20325cab",
-     "address": {
-      "kind": "segment",
-      "segment": "s005"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, wysłuchaj nas.”"
-    },
-    {
-     "id": "use.pl.3b2da4ce99a728835cd4",
-     "address": {
-      "kind": "segment",
-      "segment": "s119"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.3bd577d8ad7a4898e1ed",
@@ -1142,52 +1765,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ucieczko grzesznych.”"
     },
     {
-     "id": "use.pl.430d45853325877a0ff3",
-     "address": {
-      "kind": "segment",
-      "segment": "s117"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.460dbbba73dd3d94d4d5",
-     "address": {
-      "kind": "segment",
-      "segment": "s011"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.477a03af3867a6b1f1d9",
-     "address": {
-      "kind": "segment",
-      "segment": "s128"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
-     "id": "use.pl.4839c0495824f5c0ebf0",
-     "address": {
-      "kind": "segment",
-      "segment": "s017"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.4b28c65c74e0ff7d96da",
      "address": {
       "kind": "segment",
       "segment": "s097"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.4bb04f3273462c160be6",
-     "address": {
-      "kind": "segment",
-      "segment": "s016"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Boża Rodzicielko.”"
     },
     {
      "id": "use.pl.4f395166a32baad7fd9e",
@@ -1198,42 +1781,10 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo Męczenników.”"
     },
     {
-     "id": "use.pl.52fb3218799da39b3051",
-     "address": {
-      "kind": "segment",
-      "segment": "s121"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.5401ea496b6666ab16dc",
-     "address": {
-      "kind": "segment",
-      "segment": "s026"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko łaski Bożej.”"
-    },
-    {
-     "id": "use.pl.55f0e694f02a3b5cf7f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s126"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
      "id": "use.pl.56ccfa2d281c25c8d331",
      "address": {
       "kind": "segment",
       "segment": "s069"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.5b8c99caaf0b22773977",
-     "address": {
-      "kind": "segment",
-      "segment": "s061"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -1246,68 +1797,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.5ed478dad8f2b29c7e48",
-     "address": {
-      "kind": "segment",
-      "segment": "s129"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.622a612d19fb10392845",
-     "address": {
-      "kind": "segment",
-      "segment": "s031"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.6488c6bdb4b6663a0e7f",
-     "address": {
-      "kind": "segment",
-      "segment": "s045"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.682cf00663d12b93b9dc",
-     "address": {
-      "kind": "segment",
-      "segment": "s115"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.6b2236905ec1a969503e",
-     "address": {
-      "kind": "segment",
-      "segment": "s064"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przyczyno naszej radości.”"
-    },
-    {
      "id": "use.pl.6c5601e3dab590fff222",
      "address": {
       "kind": "segment",
       "segment": "s085"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.6cbce046bd0de8e55ad0",
-     "address": {
-      "kind": "segment",
-      "segment": "s006"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze z nieba, Boże.”"
-    },
-    {
-     "id": "use.pl.6e34dce98d571922997c",
-     "address": {
-      "kind": "segment",
-      "segment": "s044"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko Stworzyciela.”"
     },
     {
      "id": "use.pl.721c8f8ca16632057af0",
@@ -1318,140 +1813,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.72c66594cd48aad409ae",
-     "address": {
-      "kind": "segment",
-      "segment": "s008"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Synu, Odkupicielu świata, Boże.”"
-    },
-    {
-     "id": "use.pl.74936e406795aaae47a7",
-     "address": {
-      "kind": "segment",
-      "segment": "s065"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.75c656993eb2b6b0a5a4",
-     "address": {
-      "kind": "segment",
-      "segment": "s132"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
-    },
-    {
-     "id": "use.pl.777cf4736a82043f8fb1",
-     "address": {
-      "kind": "segment",
-      "segment": "s012"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Trójco, Jedyny Boże.”"
-    },
-    {
-     "id": "use.pl.785f1e94383f7e4fd1b9",
-     "address": {
-      "kind": "segment",
-      "segment": "s033"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.7aa856b6b366e93fa671",
-     "address": {
-      "kind": "segment",
-      "segment": "s091"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.7bec60274ae971b56cad",
-     "address": {
-      "kind": "segment",
-      "segment": "s056"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno łaskawa.”"
-    },
-    {
-     "id": "use.pl.7ef14d4dd34fd4cd6a0f",
-     "address": {
-      "kind": "segment",
-      "segment": "s029"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.80a85af618c423240da9",
-     "address": {
-      "kind": "segment",
-      "segment": "s048"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno roztropna.”"
-    },
-    {
-     "id": "use.pl.83a1f4550cb5ebe35d84",
-     "address": {
-      "kind": "segment",
-      "segment": "s054"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno można.”"
-    },
-    {
-     "id": "use.pl.8425faa13b6823af5abf",
-     "address": {
-      "kind": "segment",
-      "segment": "s035"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.85adc5efdcc045a47575",
-     "address": {
-      "kind": "segment",
-      "segment": "s023"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.85b8a2cc0e9a52486dfe",
-     "address": {
-      "kind": "segment",
-      "segment": "s116"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo różańca świętego.”"
-    },
-    {
      "id": "use.pl.8858529aade01dee9049",
      "address": {
       "kind": "segment",
       "segment": "s110"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo wszystkich Świętych.”"
-    },
-    {
-     "id": "use.pl.88b76291d98c37eedbbb",
-     "address": {
-      "kind": "segment",
-      "segment": "s050"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno czcigodna.”"
-    },
-    {
-     "id": "use.pl.8ba8b4fa3434c3fd7249",
-     "address": {
-      "kind": "segment",
-      "segment": "s124"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
-    },
-    {
-     "id": "use.pl.8c19c2208a7787775db9",
-     "address": {
-      "kind": "segment",
-      "segment": "s015"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.8c89fb718bcac46fc388",
@@ -1470,14 +1837,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pocieszycielko strapionych.”"
     },
     {
-     "id": "use.pl.8e10034de108d98731d7",
-     "address": {
-      "kind": "segment",
-      "segment": "s042"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko dobrej rady.”"
-    },
-    {
      "id": "use.pl.8e5352c02c4737c72ba2",
      "address": {
       "kind": "segment",
@@ -1486,42 +1845,10 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Arko przymierza.”"
     },
     {
-     "id": "use.pl.8faa71a97ddb0ab4ebe7",
-     "address": {
-      "kind": "segment",
-      "segment": "s010"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Duchu Święty, Boże.”"
-    },
-    {
-     "id": "use.pl.903d491627bfef880aae",
-     "address": {
-      "kind": "segment",
-      "segment": "s047"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.904d5e30bdd3a6b3c241",
      "address": {
       "kind": "segment",
       "segment": "s079"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.90f94d82387e9ee1853d",
-     "address": {
-      "kind": "segment",
-      "segment": "s055"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.92b64cded8ac0f252213",
-     "address": {
-      "kind": "segment",
-      "segment": "s025"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -1542,30 +1869,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.9657cda07cb3bdd95d41",
-     "address": {
-      "kind": "segment",
-      "segment": "s049"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.99f84d318c8eb779585a",
-     "address": {
-      "kind": "segment",
-      "segment": "s063"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.9a3bda6d3b8fee5e5878",
-     "address": {
-      "kind": "segment",
-      "segment": "s002"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Christe, eleison.”"
-    },
-    {
      "id": "use.pl.9bfa9b36b47c1ccffc21",
      "address": {
       "kind": "segment",
@@ -1574,52 +1877,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Różo duchowna.”"
     },
     {
-     "id": "use.pl.9c9b80adb47a0e3124b3",
-     "address": {
-      "kind": "segment",
-      "segment": "s037"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.9ce0e378849d2368872f",
      "address": {
       "kind": "segment",
       "segment": "s094"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wspomożenie wiernych.”"
-    },
-    {
-     "id": "use.pl.9ee7a113a0a1a598eaa2",
-     "address": {
-      "kind": "segment",
-      "segment": "s020"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko Chrystusowa.”"
-    },
-    {
-     "id": "use.pl.9fb08f9468ea83c3c924",
-     "address": {
-      "kind": "segment",
-      "segment": "s019"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.a594176d96742b1ab816",
-     "address": {
-      "kind": "segment",
-      "segment": "s007"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.a682f8bbea64c99e918a",
-     "address": {
-      "kind": "segment",
-      "segment": "s120"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo pokoju.”"
     },
     {
      "id": "use.pl.ab7409ea0c7c37ddce29",
@@ -1638,36 +1901,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.b60a535baa3aeda8f79e",
-     "address": {
-      "kind": "segment",
-      "segment": "s062"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Stolico mądrości.”"
-    },
-    {
      "id": "use.pl.b8f89f26ea390697db96",
      "address": {
       "kind": "segment",
       "segment": "s067"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.badf003c9e1acd18faa8",
-     "address": {
-      "kind": "segment",
-      "segment": "s038"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko najmilsza.”"
-    },
-    {
-     "id": "use.pl.bc358565d7aca4356e10",
-     "address": {
-      "kind": "segment",
-      "segment": "s125"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przepuść nam, Panie.”"
     },
     {
      "id": "use.pl.bf5cf3f6edbf0c20f3b5",
@@ -1702,14 +1941,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo Proroków.”"
     },
     {
-     "id": "use.pl.cc6d0f97a09c806e90b7",
-     "address": {
-      "kind": "segment",
-      "segment": "s001"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
-    },
-    {
      "id": "use.pl.cca231f8ee7999ab711c",
      "address": {
       "kind": "segment",
@@ -1718,26 +1949,10 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wieżo z kości słoniowej.”"
     },
     {
-     "id": "use.pl.cdce594ab9b56953646f",
-     "address": {
-      "kind": "segment",
-      "segment": "s127"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wysłuchaj nas, Panie.”"
-    },
-    {
      "id": "use.pl.ce66ac474445cc08883c",
      "address": {
       "kind": "segment",
       "segment": "s071"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.d13382425e837908a28f",
-     "address": {
-      "kind": "segment",
-      "segment": "s021"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -1758,74 +1973,10 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.da77dfef4bf42ad7a596",
-     "address": {
-      "kind": "segment",
-      "segment": "s018"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Święta Panno nad pannami.”"
-    },
-    {
      "id": "use.pl.dddb67188041430acfb3",
      "address": {
       "kind": "segment",
       "segment": "s105"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.e0529835a4cd10515f7b",
-     "address": {
-      "kind": "segment",
-      "segment": "s043"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.e0c2c3d77f46b4405c51",
-     "address": {
-      "kind": "segment",
-      "segment": "s052"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno wsławiona.”"
-    },
-    {
-     "id": "use.pl.e306081f46c671c6bb30",
-     "address": {
-      "kind": "segment",
-      "segment": "s123"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.e30b6223a23d9675af0e",
-     "address": {
-      "kind": "segment",
-      "segment": "s013"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.e370a1fb9ff86995ef99",
-     "address": {
-      "kind": "segment",
-      "segment": "s113"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.e381fac1d726c2d372e7",
-     "address": {
-      "kind": "segment",
-      "segment": "s057"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.e5b6b17c69fc950b9f72",
-     "address": {
-      "kind": "segment",
-      "segment": "s027"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
@@ -1838,44 +1989,151 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
-     "id": "use.pl.ea560bd9f3d5c6cdd649",
-     "address": {
-      "kind": "segment",
-      "segment": "s003"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Kyrie, eleison.”"
-    },
-    {
-     "id": "use.pl.eb42634b149869e6a5a6",
-     "address": {
-      "kind": "segment",
-      "segment": "s004"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chryste, usłysz nas.”"
-    },
-    {
-     "id": "use.pl.ec8fa3585051484ea837",
-     "address": {
-      "kind": "segment",
-      "segment": "s051"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
      "id": "use.pl.efb549f51175e5adf052",
      "address": {
       "kind": "segment",
       "segment": "s096"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo Aniołów.”"
-    },
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 40",
+    "scan": "PDF, s. 42",
+    "section": "Powtarzana odpowiedź w Litanii loretańskiej",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=42"
+   },
+   "entries": [
     {
-     "id": "use.pl.fb51a3073008fd568521",
+     "id": "use.pl.3b2da4ce99a728835cd4",
      "address": {
       "kind": "segment",
-      "segment": "s058"
+      "segment": "s119"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panno wierna.”"
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo rodzin” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.682cf00663d12b93b9dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s115"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo wniebowzięta” nie występuje w tym egzemplarzu."
+    },
+    {
+     "id": "use.pl.e306081f46c671c6bb30",
+     "address": {
+      "kind": "segment",
+      "segment": "s123"
+     },
+     "claim": "Druk poświadcza powtarzaną odpowiedź „Módl się za nami”. Poprzedzające ją tutaj wezwanie „Królowo Polski” nie występuje w tym egzemplarzu."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 40",
+    "scan": "PDF, s. 42",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=42"
+   },
+   "entries": [
+    {
+     "id": "use.pl.430d45853325877a0ff3",
+     "address": {
+      "kind": "segment",
+      "segment": "s117"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.477a03af3867a6b1f1d9",
+     "address": {
+      "kind": "segment",
+      "segment": "s128"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.52fb3218799da39b3051",
+     "address": {
+      "kind": "segment",
+      "segment": "s121"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
+    },
+    {
+     "id": "use.pl.55f0e694f02a3b5cf7f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s126"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.5ed478dad8f2b29c7e48",
+     "address": {
+      "kind": "segment",
+      "segment": "s129"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
+    },
+    {
+     "id": "use.pl.85b8a2cc0e9a52486dfe",
+     "address": {
+      "kind": "segment",
+      "segment": "s116"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo różańca świętego.”"
+    },
+    {
+     "id": "use.pl.8ba8b4fa3434c3fd7249",
+     "address": {
+      "kind": "segment",
+      "segment": "s124"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Baranku Boży, który gładzisz grzechy świata.”"
+    },
+    {
+     "id": "use.pl.a682f8bbea64c99e918a",
+     "address": {
+      "kind": "segment",
+      "segment": "s120"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo pokoju.”"
+    },
+    {
+     "id": "use.pl.bc358565d7aca4356e10",
+     "address": {
+      "kind": "segment",
+      "segment": "s125"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przepuść nam, Panie.”"
+    },
+    {
+     "id": "use.pl.cdce594ab9b56953646f",
+     "address": {
+      "kind": "segment",
+      "segment": "s127"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wysłuchaj nas, Panie.”"
+    },
+    {
+     "id": "use.pl.e370a1fb9ff86995ef99",
+     "address": {
+      "kind": "segment",
+      "segment": "s113"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
     },
     {
      "id": "use.pl.fbcd92feed8c03292f06",
@@ -1884,41 +2142,75 @@
       "segment": "s112"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Królowo bez zmazy pierworodnej poczęta.”"
-    },
-    {
-     "id": "use.pl.fc5770837d73ae7ced0f",
-     "address": {
-      "kind": "segment",
-      "segment": "s041"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami.”"
-    },
-    {
-     "id": "use.pl.fcaf841fd3b289b35949",
-     "address": {
-      "kind": "segment",
-      "segment": "s060"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zwierciadło sprawiedliwości.”"
-    },
-    {
-     "id": "use.pl.fe1c30e4e4d299cda3e7",
-     "address": {
-      "kind": "segment",
-      "segment": "s009"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Zmiłuj się nad nami.”"
-    },
-    {
-     "id": "use.pl.ff16bed0c035f1cdb68e",
-     "address": {
-      "kind": "segment",
-      "segment": "s036"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Matko nienaruszona.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 41",
+    "scan": "PDF, s. 43",
+    "section": "Odpowiedź po antyfonie „Pod Twoją obronę”",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=43"
+   },
+   "entries": [
+    {
+     "id": "use.pl.0448a939034e98a6c6b3",
+     "address": {
+      "kind": "segment",
+      "segment": "s131"
+     },
+     "claim": "Odpowiedź na s. 41 ma dodatkowe słowo „Pana” przed „Chrystusowych”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 41",
+    "scan": "PDF, s. 43",
+    "section": "Werset po antyfonie „Pod Twoją obronę”",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=43"
+   },
+   "entries": [
+    {
+     "id": "use.pl.1f2701cbe26eeb21d610",
+     "address": {
+      "kind": "segment",
+      "segment": "s130"
+     },
+     "claim": "Werset na s. 41 zawiera „Módl się za nami, święta Boża Rodzicielko”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 41",
+    "scan": "PDF, s. 43",
+    "section": "Wezwanie przed modlitwą „Łaskę Twoją”, po antyfonie „Pod Twoją obronę”",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=43"
+   },
+   "entries": [
+    {
+     "id": "use.pl.75c656993eb2b6b0a5a4",
+     "address": {
+      "kind": "segment",
+      "segment": "s132"
+     },
+     "claim": "Na s. 41 przed modlitwą „Łaskę Twoją” wydrukowano „Módlmy się”."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

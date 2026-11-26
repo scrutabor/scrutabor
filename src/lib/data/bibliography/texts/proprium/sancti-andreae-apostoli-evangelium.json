@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Sancti/11-30 [Evangelium], body line 39; heading line 36 and intervening framing excluded"
+    "section": "Sancti/11-30 [Evangelium], body line 39; heading line 36 and intervening framing excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/11-30.txt#L39",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/11-30.txt#L39"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass archive directly supplies the complete 81-word body at line 39, with the exact digital accidentals recorded in its transcript. No inherited reference or independent textual transmission is claimed."
     }
    ],
-   "verified_on": "2026-10-01"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

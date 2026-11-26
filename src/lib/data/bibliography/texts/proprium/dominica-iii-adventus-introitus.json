@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.21cb2d37.advent-iii",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv3-0.txt [Introitus] (lines 19-23); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14); web/www/missa/Latin/Tempora/Adv3-0.txt [Introitus] (lines 24-24)"
+    "section": "missa/Latin/Tempora/Adv3-0.txt [Introitus], 18–20 · missa/Latin/Tempora/Adv3-0.txt [Introitus], 22–24",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt#L18-L20",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt#L18-L20"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv3-0.txt#L22-L24"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,14 +28,21 @@
      "claim": "The exact revision supplies this component as a derived digital comparison. This primary file contributes the proper antiphon, psalm and literal reprise; the common Gloria is separately inventoried. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.21cb2d37",
    "digital_item": "item.divinum-officium-missa.21cb2d37.prayers",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Gloria], heading12, complete V./R. lines13–14"
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Gloria], heading12, complete V./R. lines13–14",
+    "passages": [
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
    },
    "entries": [
     {
@@ -35,7 +53,7 @@
      "claim": "This exact common source contributes only the complete Gloria Patri after the proper-file &Gloria cue; its textual markers are source framing."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -3,11 +3,12 @@
  "source_groups": [
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 630",
-    "scan": "scan p. 638"
+    "scan": "PDF p. 638",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=638"
    },
    "entries": [
     {
@@ -15,10 +16,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording witness for the complete orationes.signum-crucis text."
+     "claim": "At the blessing the source prints “Bless me, O Lord!” before the sign of the cross, which reads “in the name of the Father, and of the Son, and of the Holy Ghost. Amen.” The current formula omits the personal blessing and uses Holy Spirit."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

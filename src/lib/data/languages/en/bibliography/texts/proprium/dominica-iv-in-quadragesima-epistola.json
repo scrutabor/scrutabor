@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 231–232",
-    "scan": "scan pp. 247–248"
+    "scan": "PDF pp. 247–248",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=247"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "Historical English basis of the Epistle (the Douay Gal. 4:22–31 through this missal), revised against the Latin in contemporary language: by way of allegory, covenants, on Mount Sinai (in monte, as the Missal prints), bearing children into bondage, Hagar, is joined (coniúnctus est), will not be heir."
+     "claim": "The 1846 English Epistle reads “from mount Sina, engendering unto bondage” and “hath affinity to that Jerusalem which now is”. The current English follows in monte and coniúnctus est in the 1962 Latin and gives “on Mount Sinai” and “is joined”."
     }
    ],
-   "verified_on": "2026-10-11"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

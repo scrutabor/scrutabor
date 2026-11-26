@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc5-0.txt [Introitus] (lines 13-18); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)"
+    "section": "web/www/missa/Latin/Tempora/Pasc5-0.txt [Introitus] (lines 13-18); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc5-0.txt#L12-L14",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc5-0.txt#L12-L14"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc5-0.txt#L16-L18"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -25,7 +40,8 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "p. 830",
-    "scan": "PDF p. 1016"
+    "scan": "PDF p. 1016",
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n1015/mode/1up"
    },
    "entries": [
     {
@@ -36,7 +52,7 @@
      "claim": "The chant book prints the Introit antiphon of the Fifth Sunday after Easter with nuntiáte where the Missal repeats annuntiáte. The directly viewed antiphon forms this declared partial comparison; the edition follows the Missal."
     }
    ],
-   "verified_on": "2026-10-20"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

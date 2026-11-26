@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/03-25.txt [GradualeP], body lines 21, 23, 25"
+    "section": "web/www/missa/Latin/Sancti/03-25.txt [GradualeP], body lines 21, 23, 25",
+    "passages": [
+     {
+      "heading": "GradualeP",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L20-L21"
+     },
+     {
+      "heading": "GradualeP",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L23"
+     },
+     {
+      "heading": "GradualeP",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L25"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L20-L21"
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The exact proper Paschal section supplies the complete thirty-word pair in the printed verse order. This derived comparison is not another independent printed edition."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

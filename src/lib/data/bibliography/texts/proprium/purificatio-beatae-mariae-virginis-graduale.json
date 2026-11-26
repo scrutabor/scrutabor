@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/02-02.txt [Graduale], gradual-only lines 175–176; following Alleluia excluded"
+    "section": "web/www/missa/Latin/Sancti/02-02.txt [Graduale], gradual-only lines 175–176; following Alleluia excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L173-L176",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/02-02.txt#L173-L176"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned direct Latin Mass body at lines 175–176 corroborates the complete 32-word Gradual as a derived digital witness. The same runtime section also contains the following Alleluia, excluded here; no inherited reference or expansion supplies this body."
     }
    ],
-   "verified_on": "2026-10-02"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII–XVIII, 123, 226",
     "scan": "PDF physical23,24,203,306 / leaves n22,n23,n202,n305",
-    "section": "RG115a; conclusion w038–w058 and response w059 only; proper excluded; RG115b-e exception check and distinct running stress/response controls, not a contiguous occasion paragraph"
+    "section": "RG115a; conclusion w038–w058 and response w059 only; proper excluded; RG115b-e exception check and distinct running stress/response controls, not a contiguous occasion paragraph",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "This setting’s RG115a supplies its full Father-directed conclusion w038–w058 and response w059 only; proper excluded. Its literal list is unaccented and prints “tuum,”, “qui” and “Amen;”. Same-edition p.123 supplies selected common stress and “tuum: Qui”, not the selected comma after “Deus”; RG115a prints that comma. The p.226 terminal supplies duration stress and the separate response period. These passages do not establish occurrence actors, singing, participation or conclusion distribution in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 538",
-    "scan": "PDF physical619 / leaf n618",
-    "section": "05-28 S. Augustini Ep. et Conf.; collecta §2665; proper w001–w037 only; full supplied conclusion and Amen excluded",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n618/mode/1up"
+    "scan": "PDF p. 619",
+    "section": "Die 28 maii. S. Augustini Ep. et Conf. Oratio, n. 2665.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=619"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the complete 37-word collecta proper w001–w037, followed by the literal local cue “Per Dóminum.” The cue does not print the supplied full conclusion or Amen. Separate settings corroborate one received tradition, not independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

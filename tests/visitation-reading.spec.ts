@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'visitatio-beatae-mariae-virginis';
@@ -102,21 +103,13 @@ for (const language of ['pl', 'en'] as const) {
 		await expect(dialog).toContainText(language === 'pl' ? 'Epistoła' : 'The Epistle');
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'znacznik sekcji w w. 16, zapowiedź w w. 17, odsyłacz w w. 18 i pełny tekst bezpośrednio w w. 19'
-				: 'section marker 16, announcement 17, reference 18, complete direct body 19'
-		);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Sancti/07-02.txt', 19);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n665/mode/1up"]'
 			)
 		).toHaveCount(1);
-		await expect(
-			sources.locator(
-				'a[href="https://github.com/DivinumOfficium/divinum-officium/commit/44667ff518b8ff1439780470828b39714f5306a2"]'
-			)
-		).toHaveCount(1);
+		await expect(sources.locator('a.source-passage')).toHaveCount(1);
 	});
 }
 

@@ -1,0 +1,46 @@
+{
+ "id": "orationes.signum-crucis",
+ "source_groups": [
+  {
+   "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
+   "digital_item": "item.compendium-of-the-catechism-2005.html",
+   "role": "official_text",
+   "locator": {
+    "section": "Appendix A · Signum Crucis",
+    "page_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html#A%29%20COMMON%20PRAYERS:~:text=In%20n%C3%B3mine%20Patris"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.signum-crucis.compendium-2005",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Latin column prints the standalone sign of the cross in nine words. Line breaks follow Patris and Fílii."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "section": "Ordo Missæ",
+    "printed": "p. 219",
+    "scan": "PDF p. 299",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n298/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.orationes.signum-crucis.ordinary-benziger",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Ordo gives the nine words of the formula and prescribes the gesture in the preceding rubric. The text of the formula has commas after Patris and Filii."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": []
+}

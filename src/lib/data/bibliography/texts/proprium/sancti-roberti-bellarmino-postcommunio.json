@@ -6,7 +6,7 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "direct_approved_print",
    "locator": {
-    "printed": "pp. 533",
+    "printed": "p. 533",
     "scan": "PDF physical615 / leaf n614",
     "section": "05-13 postcommunio; Postcommunio; left top under Robert Communion, before explicit May14 Boniface boundary; proper bodies and literal cues only",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n614/mode/1up"
@@ -20,7 +20,7 @@
      "claim": "This setting prints the 22-word postcommunio proper, w001–w022, followed by the distinct cue “Per Dóminum.” The supplied conclusion and Amen are not printed in full at this proper locus."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII, 123, 226",
     "scan": "leaves n22, n202, n305 / PDF physical23,203,306",
-    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen"
+    "section": "RG115a full Father-directed ending; accented full stem through Deus; four-word terminal with separate R.Amen",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "RG115a supplies the full Father-directed Per Dominum ending w023–w043 and Amen w044. The same-edition accented stem and terminal-response typography control accents and the separate response. This does not claim that the proper face prints the whole composite or establish every member’s conclusion in a larger group."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -49,7 +50,8 @@
    "locator": {
     "printed": "pp. XXX, XXXIII–XXXIV",
     "scan": "leaves n35,n38–n39 / PDF physical36,39–40",
-    "section": "RG436–437,505,511i,513–514"
+    "section": "RG436–437,505,511i,513–514",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n35/mode/1up"
    },
    "entries": [
     {
@@ -60,17 +62,17 @@
      "claim": "This postcommunion follows the Mass postcommunion when used as its sole separately concluded commemoration, retaining its own conclusion; priestly read/sung delivery follows the corresponding oration rules. This claim is not a rule for each member of larger groups."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
    "digital_item": "item.missale-romanum.1962-vatican-joseph-bearing.ia",
    "role": "corroborating_latin_witness",
    "locator": {
-    "printed": "pp. 530",
-    "scan": "PDF physical611 / leaf n610",
-    "section": "05-13 postcommunio; Postcommunio2597; left column before explicit May14 Boniface boundary; runningheader includes14/15; proper bodies and literal cues only",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n610/mode/1up"
+    "printed": "p. 530",
+    "scan": "PDF p. 611",
+    "section": "Die 13 maii. S. Roberti Bellarmino Ep., Conf. et Eccl. Doctoris. Postcommunio, n. 2597.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=611"
    },
    "entries": [
     {
@@ -81,7 +83,7 @@
      "claim": "This setting prints the 22-word postcommunio proper, w001–w022, followed by the distinct cue “Per Dóminum nostrum.” The supplied conclusion and Amen are not printed in full at this proper locus.  This is a separate printed setting of the same received tradition, not independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

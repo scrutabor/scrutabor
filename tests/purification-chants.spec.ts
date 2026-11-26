@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const day = 'purificatio-beatae-mariae-virginis';
@@ -77,7 +78,15 @@ for (const language of ['pl', 'en'] as const) {
 			await expect(dialog).not.toContainText('inherited references');
 			await expect(dialog).not.toContainText('[Allelúia]');
 			if (part !== 'offertorium') {
-				await expect(dialog).toContainText(part === 'graduale' ? '175–176' : '177–178');
+				const [first, last] = part === 'graduale' ? [173, 176] : [177, 178];
+				await expectSourcePassage(
+					dialog,
+					language,
+					'Graduale',
+					'Missa/Sancti/02-02.txt',
+					first,
+					last
+				);
 			}
 		});
 	}

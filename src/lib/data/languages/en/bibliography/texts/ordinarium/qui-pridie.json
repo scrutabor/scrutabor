@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 65",
-    "scan": "PDF pages 77 (one-based)"
+    "scan": "PDF p. 77",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=77"
    },
    "entries": [
     {
@@ -41,19 +42,7 @@
       "segment": "s11"
      },
      "claim": "Historical English source expression: “FOR THIS IS MY BODY.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 65",
-    "scan": "scan p. 77"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.fd454a801ae34848a048",
      "address": {
@@ -71,7 +60,7 @@
      "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -79,7 +68,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
-    "scan": "PDF pages 52 (one-based)"
+    "scan": "PDF p. 52",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=52"
    },
    "entries": [
     {
@@ -89,19 +79,7 @@
       "segment": "s04"
      },
      "claim": "Historical English wording for the raising of the eyes to heaven and address to God, His almighty Father; the current wording recasts the introductory construction and modernizes the address."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
-   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 25",
-    "scan": "scan p. 52"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.cec54d3bbed071abd734",
      "address": {
@@ -119,7 +97,7 @@
      "claim": "Who, on the day before He suffered, took bread into His holy and venerable hands,"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

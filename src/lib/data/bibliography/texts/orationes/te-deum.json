@@ -6,8 +6,10 @@
    "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
    "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 18, Te Deum laudamus",
-    "scan": "PDF scan 62"
+    "printed": "p. 18",
+    "scan": "PDF p. 62",
+    "section": "Dominica ad Matutinum. Pro ix. Lectione. Hymnus Ss. Ambrosii et Augustini, cols. 1–2",
+    "page_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf#page=62"
    },
    "entries": [
     {
@@ -15,17 +17,18 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+     "claim": "The complete hymn occupies two columns. The right column reads in glória numerári."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "official_text",
    "locator": {
-    "section": "APPENDIX / A) COMMON PRAYERS / Te Deum"
+    "section": "APPENDIX / A) COMMON PRAYERS / Te Deum",
+    "page_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html#A%29%20COMMON%20PRAYERS:~:text=Te%20Deum%20laud%C3%A1mus"
    },
    "entries": [
     {
@@ -36,7 +39,7 @@
      "claim": "The complete 194-word Latin prayer and its printed boundary in this section."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -44,7 +47,8 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "pp. 1832–1834, Hymn of Thanksgiving",
-    "scan": "PDF scans 2078–2080"
+    "scan": "PDF scans 2078–2080",
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n2077/mode/1up"
    },
    "entries": [
     {
@@ -55,7 +59,7 @@
      "claim": "Direct witness for the selected Latin text and the stated text boundary."
     }
    ],
-   "verified_on": "2026-10-04"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": [

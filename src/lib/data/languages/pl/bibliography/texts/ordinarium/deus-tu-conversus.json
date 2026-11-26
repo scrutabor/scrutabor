@@ -6,19 +6,11 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 44–45",
-    "scan": "PDF ss. 47–48",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 45",
+    "scan": "PDF, s. 48",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=48"
    },
    "entries": [
-    {
-     "id": "use.pl.2a82ee32be1e5342a5fd",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Pan z wami.”"
-    },
     {
      "id": "use.pl.4d487ecfc01948abff1c",
      "address": {
@@ -52,7 +44,30 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie, wysłuchaj mojej modlitwy.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 54",
+    "scan": "PDF, s. 57",
+    "section": "Dialog przed prefacją",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=57"
+   },
+   "entries": [
+    {
+     "id": "use.pl.2a82ee32be1e5342a5fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "W dialogu przed prefacją wydrukowano cały polski odpowiednik. Ta sama książka w modlitwach u stopni ołtarza ma „Pan z nami”.",
+     "reader_note": "Modlitewnik na s. 45 podaje „Pan z nami”. Na s. 54, w dialogu przed prefacją, te same słowa łacińskie oddaje jako „Pan z wami”."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

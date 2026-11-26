@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 40",
-    "scan": "scan p. 53"
+    "scan": "DjVu p. 53",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=53"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+     "claim": "The source begins “We fly to thy patronage” and petitions “deliver us from all dangers, O ever glorious and blessed Virgin.” The current text has “protection”, adds “always” to the petition and omits “ever” before “glorious”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
@@ -27,7 +28,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 52",
-    "scan": "scan p. 83"
+    "scan": "PDF p. 83",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=83"
    },
    "entries": [
     {
@@ -36,10 +38,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "We fly to thy protection, O holy Mother of God; despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin."
+     "claim": "Historical wording basis for the prayer. The print begins “We fly to thy patronage” and asks Mary to “obtain our deliverance from all dangers”. The current prayer uses “protection” and “deliver us always” and reworks “O ever glorious and blessed Virgin”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,8 +6,10 @@
    "digital_item": "item.breviarium-romanum.1902-pustet.ia-breviariumromanu04cath",
    "role": "direct_approved_print",
    "locator": {
-    "printed": "p. 233, Benedictio Mensae, Post Prandium",
-    "scan": "PDF scan 877"
+    "printed": "p. [233]",
+    "scan": "PDF p. 877",
+    "section": "Benedictio mensæ. Post Prandium, col. 2",
+    "page_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf#page=877"
    },
    "entries": [
     {
@@ -15,19 +17,18 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+     "claim": "Post Prandium gives Agimus tibi gratias, its conclusion Qui vivis et regnas and the answering Amen."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
-   "digital_item": "item.enchiridion-indulgentiarum-1999.scan",
+   "digital_item": "item.enchiridion-indulgentiarum.1999.vatican-latin",
    "role": "official_text",
    "locator": {
-    "printed": "p. 27",
-    "scan": "PDF p. 27",
-    "section": "Concessio 26 §2, 3° — Agimus tibi gratias"
+    "section": "Concessio 26 § 2, n. 3",
+    "page_url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html#:~:text=pro%20universis%20beneficiis%20tuis"
    },
    "entries": [
     {
@@ -35,10 +36,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The source prints and identifies Ágimus tibi grátias."
+     "claim": "The examples of prayers after meals include Agimus tibi gratias."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

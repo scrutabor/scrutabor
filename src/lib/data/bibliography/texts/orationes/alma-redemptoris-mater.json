@@ -2,32 +2,14 @@
  "id": "orationes.alma-redemptoris-mater",
  "source_groups": [
   {
-   "edition": "edition.katolik-w-modlitwie-1902",
-   "digital_item": "item.katolik-w-modlitwie-1902.obc",
-   "role": "direct_approved_print",
-   "locator": {
-    "printed": "druk. s. 117",
-    "scan": "PDF s. 131",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
-   },
-   "entries": [
-    {
-     "id": "use.neutral.a0a23c585c7b7ac1d97d",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Historical evidence for the complete Alma Redemptoris Mater antiphon; not a claim of current normative wording."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
    "edition": "edition.key-of-heaven-1901",
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "direct_approved_print",
    "locator": {
-    "printed": "pp. 182–185",
-    "scan": "DJVU scans 195–198"
+    "printed": "pp. 182, 184",
+    "scan": "DjVu pp. 195, 197",
+    "section": "Vespers for Sundays. Alma Redemptoris mater",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=195"
    },
    "entries": [
     {
@@ -35,10 +17,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Prints Alma Redemptoris Mater and its associated versicle and collect."
+     "claim": "The Latin antiphon begins on p. 182 and ends on p. 184, before the seasonal versicle and collect."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

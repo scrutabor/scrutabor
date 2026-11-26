@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 62",
-    "scan": "PDF s. 65",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 62",
+    "scan": "PDF, s. 65",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=65"
    },
    "entries": [
     {
@@ -17,7 +17,7 @@
       "kind": "segment",
       "segment": "s02"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wybaw nas, prosimy Cię, Panie, od wszelkiego zła przeszłego, obecnego i przyszłego; i za wstawiennictwem błogosławionej i chwalebnej Maryi, zawsze Dziewicy, Bożej Rodzicielki, wraz z Twoimi błogosławionymi apostołami Piotrem i Pawłem, Andrzejem i wszystkimi świętymi,”"
+     "claim": "W przekładzie Libera nos wymieniono zło przeszłe, teraźniejsze i przyszłe, a wśród orędowników Bogarodzicę i apostołów. Imię Andrzeja ma formę „Jędrzeja”."
     },
     {
      "id": "use.pl.3cb1e3807c7b7cb91090",
@@ -60,7 +60,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyje i króluje z Tobą w jedności Ducha Świętego,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

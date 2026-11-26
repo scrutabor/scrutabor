@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 88",
-    "scan": "PDF p. 100"
+    "scan": "PDF p. 100",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=100"
    },
    "entries": [
     {
@@ -32,10 +33,10 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Let us therefore cast off the works of darkness, and put on the armour of light."
+     "claim": "The printed clause reads “let us therefore cast off the works of darkness, and put on the armour of light.” It begins after a colon. The current text begins a new sentence with “Let”."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

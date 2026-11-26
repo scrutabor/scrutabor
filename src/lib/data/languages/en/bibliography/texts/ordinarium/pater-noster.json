@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 115",
-    "scan": "scan p. 128"
+    "scan": "DjVu p. 128",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=128"
    },
    "entries": [
     {
@@ -19,7 +20,7 @@
      "claim": "Let us pray."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -27,9 +28,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 9",
-    "scan": "DJVU physical pages 22 (one-based); indices 21 (zero-based)"
+    "scan": "DjVu p. 22",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=22"
    },
    "entries": [
+    {
+     "id": "use.en.1ab65fda5c91a66ef7f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Our Father, who art in heaven,"
+    },
     {
      "id": "use.en.3559b962f69c49632368",
      "address": {
@@ -95,27 +105,7 @@
      "claim": "Historical English source expression: “and lead us not into temptation” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 9",
-    "scan": "scan p. 22"
-   },
-   "entries": [
-    {
-     "id": "use.en.1ab65fda5c91a66ef7f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Our Father, who art in heaven,"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

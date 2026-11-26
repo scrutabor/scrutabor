@@ -27,8 +27,13 @@ for (const language of ['pl', 'en']) {
 				}
 				const sources = page.locator('.lexical-summary .source-notes').last();
 				await sources.locator('summary').click();
-				await expect(sources).toContainText(
-					language === 'pl' ? `hasło TEI w zbiorze Perseus: ${node}` : `Perseus TEI entry ${node}`
+				const entry = sources.getByRole('link', { name: 'A Latin Dictionary', exact: true });
+				await expect(entry.locator('..')).toHaveText(
+					`A Latin Dictionary, s.v. ${lemma === 'opus' ? 'opus 1' : lemma}`
+				);
+				await expect(entry).toHaveAttribute(
+					'href',
+					`https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-${node}/`
 				);
 				await expect(sources).not.toContainText('evidence_sha256');
 				await expect

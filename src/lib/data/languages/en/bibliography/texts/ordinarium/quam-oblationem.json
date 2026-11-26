@@ -7,9 +7,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 64–65",
-    "scan": "PDF pages 76, 77 (one-based)"
+    "scan": "PDF pp. 76–77",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=76"
    },
    "entries": [
+    {
+     "id": "use.en.1080638d07ec50aea606",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
     {
      "id": "use.en.24e6a5eadd315d87fe80",
      "address": {
@@ -27,27 +36,7 @@
      "claim": "Historical English source expression: “that it may be made for us the body and blood of thy most beloved Son” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 64–65",
-    "scan": "scan pp. 76–77"
-   },
-   "entries": [
-    {
-     "id": "use.en.1080638d07ec50aea606",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "O God, we ask You graciously to make this offering in all respects"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -55,7 +44,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "pp. 64–65",
-    "scan": "scan pp. 76–77"
+    "scan": "PDF pp. 76–77",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=76"
    },
    "entries": [
     {
@@ -67,7 +57,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -75,27 +65,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
-    "scan": "PDF pages 52 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.b0a45364a3ac58ce052b",
-     "address": {
-      "kind": "segment",
-      "segment": "s07"
-     },
-     "claim": "Historical English source expression: “our Lord Jesus Christ.” This supplies the corresponding English expression at the addressed scope."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
-   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 25",
-    "scan": "scan p. 52"
+    "scan": "PDF p. 52",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=52"
    },
    "entries": [
     {
@@ -105,9 +76,17 @@
       "segment": "s01"
      },
      "claim": "O God, we ask You graciously to make this offering in all respects"
+    },
+    {
+     "id": "use.en.b0a45364a3ac58ce052b",
+     "address": {
+      "kind": "segment",
+      "segment": "s07"
+     },
+     "claim": "Historical English source expression: “our Lord Jesus Christ.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

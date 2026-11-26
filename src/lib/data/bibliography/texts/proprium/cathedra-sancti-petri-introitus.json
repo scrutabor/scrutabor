@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "horas/Latin/Commune/C2.txt [Introitus], lines 349–355; &Gloria resolved from missa/Latin/Ordo/Prayers.txt [Gloria], lines 12–14"
+    "section": "horas/Latin/Commune/C2.txt [Introitus], lines 349–355; &Gloria resolved from missa/Latin/Ordo/Prayers.txt [Gloria], lines 12–14",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C2.txt#L349-L351",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C2.txt#L349-L351"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C2.txt#L353-L355"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The exact pinned Latin data give the Statuit antiphon, psalm verse, full Gloria and repeated antiphon in the Common whose chant the Benziger page prints. The digital proper for 22 February resolves to a different introit (In virtute tua, @Commune/C2a), so this attests the chant text, not that assignment. This is a derived digital comparison, not an independent page image."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -25,7 +40,8 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "pp. 1390, 1330–1331, 1182",
-    "scan": "PDF pp. 1594, 1530–1531, 1376"
+    "scan": "PDF pp. 1594, 1530–1531, 1376",
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n1593/mode/1up"
    },
    "entries": [
     {
@@ -36,7 +52,7 @@
      "claim": "22 February directs the Mass of St Peter's Chair at Rome, whose Introit is Statuit on page 1182. The directly viewed antiphon and psalm verse form this declared partial comparison."
     }
    ],
-   "verified_on": "2026-10-04"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

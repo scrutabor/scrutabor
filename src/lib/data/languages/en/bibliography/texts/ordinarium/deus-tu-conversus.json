@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 39",
-    "scan": "PDF p. 51"
+    "scan": "PDF p. 51",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=51"
    },
    "entries": [
     {
@@ -16,7 +17,7 @@
       "kind": "segment",
       "segment": "s09"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “And with thy spirit.”"
     },
     {
      "id": "use.en.8b126457de89915fa547",
@@ -24,7 +25,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “O Lord, hear my prayer.”"
     },
     {
      "id": "use.en.8b2c5f1aed89d2f8dace",
@@ -32,7 +33,7 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “And thy people shall rejoice in thee.”"
     },
     {
      "id": "use.en.cd4029489c8e09970bea",
@@ -40,7 +41,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “Show us, O Lord, thy mercy.”"
     },
     {
      "id": "use.en.d66606fa862c600ba276",
@@ -48,7 +49,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “The Lord be with you.”"
     },
     {
      "id": "use.en.e74ae84504dc16cafe0c",
@@ -56,7 +57,7 @@
       "kind": "segment",
       "segment": "s05"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “And grant us thy salvation.”"
     },
     {
      "id": "use.en.e7516f540e66ca677d01",
@@ -64,10 +65,10 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "O God, You will turn toward us and give us life."
+     "claim": "The corresponding English in the 1846 Missal reads “And let my cry come to thee.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

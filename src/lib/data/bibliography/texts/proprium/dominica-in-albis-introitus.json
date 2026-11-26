@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc1-0.txt [Introitus] (lines 12-17); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)"
+    "section": "web/www/missa/Latin/Tempora/Pasc1-0.txt [Introitus] (lines 12-17); web/www/missa/Latin/Ordo/Prayers.txt [Gloria] (lines 13-14)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc1-0.txt#L11-L13",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc1-0.txt#L11-L13"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc1-0.txt#L15-L17"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The pinned digital reading supplies a derived comparison with the printed component, including substantive rationabiles at both antiphon occurrences and the declared accidental differences; it does not corroborate the printed singular at those two places."
     }
    ],
-   "verified_on": "2026-10-14"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

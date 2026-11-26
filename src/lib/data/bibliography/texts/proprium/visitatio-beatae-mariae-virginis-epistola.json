@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/07-02.txt [Lectio]: section marker16, announcement17, reference18, complete direct body19; Graduale starts21"
+    "section": "Latin/Sancti/07-02.txt [Lectio]: section marker16, announcement17, reference18, complete direct body19; Graduale starts21",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/07-02.txt#L19",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/07-02.txt#L19"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned 107-word direct reading differs from the selected Latin at seven punctuation loci, the spelling Jam and the substantive inflection petra. No inherited text, macro or concluding response is part of this body."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/10-07.txt [Introitus], lines 13–18; &Gloria resolved from Latin/Ordo/Prayers.txt [Gloria], lines 12–14"
+    "section": "Latin/Sancti/10-07.txt [Introitus], lines 13–18; &Gloria resolved from Latin/Ordo/Prayers.txt [Gloria], lines 12–14",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-07.txt#L13-L14",
+    "passages": [
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-07.txt#L13-L14"
+     },
+     {
+      "heading": "Introitus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-07.txt#L16-L18"
+     },
+     {
+      "heading": "Gloria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L12-L14"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +32,7 @@
      "claim": "The exact pinned Latin data resolve the antiphon, psalm verse, full Gloria and repeated antiphon through the named sections. This is a derived digital comparison, not an independent page image."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

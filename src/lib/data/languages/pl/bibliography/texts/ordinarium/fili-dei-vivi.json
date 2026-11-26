@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 63–64",
-    "scan": "PDF ss. 66–67",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 63",
+    "scan": "PDF, s. 66",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=66"
    },
    "entries": [
     {
@@ -20,20 +20,12 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Panie Jezu Chryste, Synu Boga żywego,”"
     },
     {
-     "id": "use.pl.a0b7f05e3bfcca690e03",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „który, będąc Bogiem, żyjesz i królujesz z tym samym Bogiem Ojcem i z Duchem Świętym przez wszystkie wieki wieków. Amen.”"
-    },
-    {
      "id": "use.pl.ac3da557086733caafe8",
      "address": {
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „wybaw mnie przez to najświętsze Ciało i Twoją Krew od wszystkich moich nieprawości i od wszelkiego zła:”"
+     "claim": "W modlitwie przed przyjęciem Komunii znajdują się słowa „uwolnij mnie przez to najświętsze Ciało i Krew Twoją od wszystkich nieprawości moich i wszelkiego złego”."
     },
     {
      "id": "use.pl.dd6f9a183400521f6112",
@@ -44,7 +36,28 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „i spraw, abym zawsze trwał przy Twoich przykazaniach, i nigdy nie dopuść, bym został odłączony od Ciebie:”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
+   "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 63–64",
+    "scan": "PDF, s. 66–67",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=66"
+   },
+   "entries": [
+    {
+     "id": "use.pl.a0b7f05e3bfcca690e03",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Na dole s. 63 rozpoczyna się zakończenie „Który z tymże Bogiem Ojcem i Duchem świętym żyjesz i królujesz Bóg na wieki wieków. Amen”. Kończy się na następnej stronie."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

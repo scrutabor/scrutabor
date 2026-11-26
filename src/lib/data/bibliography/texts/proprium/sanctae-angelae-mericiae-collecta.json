@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVII–XVIII, 123, 226",
     "scan": "PDF physical23,24,203,306 / leaves n22,n23,n202,n305",
-    "section": "RG115a; conclusion w030–w050 and response w051 only; proper excluded; RG115b-e exception check and distinct running stress/response controls, not a contiguous occasion paragraph"
+    "section": "RG115a; conclusion w030–w050 and response w051 only; proper excluded; RG115b-e exception check and distinct running stress/response controls, not a contiguous occasion paragraph",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n22/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "This setting’s RG115a supplies its full Father-directed conclusion w030–w050 and response w051 only; proper excluded. Its literal list is unaccented and prints “tuum,”, “qui” and “Amen;”. Same-edition p.123 supplies selected common stress and “tuum: Qui”, not the selected comma after “Deus”; RG115a prints that comma. The p.226 terminal supplies duration stress and the separate response period. These passages do not establish occurrence actors, singing, participation or conclusion distribution in grouped orations."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 542",
-    "scan": "PDF physical623 / leaf n622",
-    "section": "06-01 S. Angelae Mericiae Virginis; collecta §2697; proper w001–w029 only; full supplied conclusion and Amen excluded",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n622/mode/1up"
+    "scan": "PDF p. 623",
+    "section": "Die 1 iunii. S. Angelæ Mericiæ Virg. Oratio, n. 2697.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=623"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the complete 29-word collecta proper w001–w029, followed by the literal local cue “Per Dóminum nostrum Iesum Christum, Fílium tuum: Qui tecum vivit et regnat in unitáte.” The cue does not print the supplied full conclusion or Amen. Separate settings corroborate one received tradition, not independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

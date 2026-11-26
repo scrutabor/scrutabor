@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-iudica-me; closed-literal-selection} (line 16; line 17; line 18; line 19; line 20; line 21; line 22; line 23; line 25; line 26); complete source contexts 7–26"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-iudica-me; closed-literal-selection} (line 16; line 17; line 18; line 19; line 20; line 21; line 22; line 23; line 25; line 26); complete source contexts 7–26",
+    "passages": [
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L16-L23"
+     },
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L25-L26"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L16-L23"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Mass Ordo supplies this 124-word literal selection in the stated selection order (16, then 17, then 18, then 19, then 20, then 21, then 22, then 23, then 25, then 26), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +45,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 219 gives Psalm 42, the doxology, the repeated Introíbo antiphon and the rubric for omission of the psalm in the specified Masses."
     }
    ],
    "verified_on": "2026-09-25"

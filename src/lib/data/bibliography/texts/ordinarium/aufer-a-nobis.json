@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Ordo Missae, Incipit; spoken lines 55–56 and 58 within complete local context 53–61 at the pinned revision"
+    "section": "Ordo Missae, Incipit; spoken lines 55–56 and 58 within complete local context 53–61 at the pinned revision",
+    "passages": [
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L55-L56"
+     },
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L58"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L55-L56"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The exact retained pinned Latin Ordo supplies these 42 spoken words after exclusion of its literal v. markers and the two explicitly bound inline rubrics. This is a derived digital comparison, not independent transmission or ritual-performance evidence."
     }
    ],
-   "verified_on": "2026-10-22"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
@@ -26,7 +37,8 @@
    "locator": {
     "printed": "p. 4",
     "scan": "physical PDF p. 6, left half",
-    "section": "Orémus, Aufer a nobis and Orámus te, including their conclusions, on the left half of physical PDF page 6"
+    "section": "Orémus, Aufer a nobis and Orámus te, including their conclusions, on the left half of physical PDF page 6",
+    "page_url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf#page=6"
    },
    "entries": [
     {
@@ -37,7 +49,7 @@
      "claim": "The left half of physical PDF page 6, printed page 4, of the hand missal revised 12/12/2025 prints the invitation Orémus, Aufer a nobis and Orámus te with their conclusions. The 42 Latin spoken words were checked manually against the page image. This is not an English wording basis or a claim of genealogical independence."
     }
    ],
-   "verified_on": "2026-10-22"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

@@ -6,8 +6,9 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 93–94",
-    "scan": "PDF pp. 105–106"
+    "printed": "p. 93",
+    "scan": "PDF p. 105",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=105"
    },
    "entries": [
     {
@@ -35,14 +36,6 @@
      "claim": "At that time the Jews sent priests and Levites from Jerusalem to John to ask him:"
     },
     {
-     "id": "use.en.5b16df50870c74498b72",
-     "address": {
-      "kind": "segment",
-      "segment": "s12"
-     },
-     "claim": "These things were done in Bethania beyond the Jordan, where John was baptizing."
-    },
-    {
      "id": "use.en.607bff4c15dca6cdf466",
      "address": {
       "kind": "segment",
@@ -59,14 +52,6 @@
      "claim": "They asked him: What then? Are you Elijah?"
     },
     {
-     "id": "use.en.6e75ded137132d6310e1",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "They asked him: Why then do you baptize, if you are not the Christ, nor Elijah, nor the prophet?"
-    },
-    {
      "id": "use.en.ae9f679a1c281d2adf5d",
      "address": {
       "kind": "segment",
@@ -80,7 +65,7 @@
       "kind": "segment",
       "segment": "s08"
      },
-     "claim": "Those who had been sent were Pharisees."
+     "claim": "The 1846 Missal reads “And they that were sent were of the Pharisees.” The current translation has “from among the Pharisees”."
     },
     {
      "id": "use.en.fe6d6c9bb8054bd45e2e",
@@ -91,7 +76,49 @@
      "claim": "They said therefore to him: Who are you, that we may give an answer to those who sent us? What do you say of yourself?"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 93–94",
+    "scan": "PDF pp. 105–106",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=105"
+   },
+   "entries": [
+    {
+     "id": "use.en.6e75ded137132d6310e1",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "They asked him: Why then do you baptize, if you are not the Christ, nor Elijah, nor the prophet?"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 94",
+    "scan": "PDF p. 106",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=106"
+   },
+   "entries": [
+    {
+     "id": "use.en.5b16df50870c74498b72",
+     "address": {
+      "kind": "segment",
+      "segment": "s12"
+     },
+     "claim": "These things were done in Bethania beyond the Jordan, where John was baptizing."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

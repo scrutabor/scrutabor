@@ -3,11 +3,12 @@
  "source_groups": [
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "p. 503",
-    "scan": "PDF scan 511"
+    "scan": "PDF p. 511",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=511"
    },
    "entries": [
     {
@@ -18,7 +19,7 @@
      "claim": "A different historical English Act of Contrition recension; semantic comparator only, not current wording."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -26,7 +27,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "pp. 15–16",
-    "scan": "DjVu scans 28–29"
+    "scan": "DjVu pp. 28–29",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=28"
    },
    "entries": [
     {
@@ -37,7 +39,7 @@
      "claim": "A different historical English Act of Contrition recension; semantic comparator only, not current wording."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

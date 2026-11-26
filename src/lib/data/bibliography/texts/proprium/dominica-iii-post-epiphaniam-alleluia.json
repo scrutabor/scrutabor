@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Epi3-0.txt [Graduale], suffix line 32, chars 67:86 and complete line 34"
+    "section": "web/www/missa/Latin/Tempora/Epi3-0.txt [Graduale], suffix line 32, chars 67:86 and complete line 34",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi3-0.txt#L32",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi3-0.txt#L32"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi3-0.txt#L34"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "Exact selected Alleluia suffix and complete psalm line, excluding neighboring Gradual verse and citation; mid-line framing does not identify a performer."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

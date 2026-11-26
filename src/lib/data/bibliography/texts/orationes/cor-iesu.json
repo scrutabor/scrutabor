@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-cor-iesu; closed-literal-selection} (line 410; line 411); complete source contexts 393–415"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-cor-iesu; closed-literal-selection} (line 410; line 411); complete source contexts 393–415",
+    "passages": [
+     {
+      "heading": "Orationes Leonis XIII",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L410-L411"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L410-L411"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 5-word literal selection in the stated selection order (410, then 411), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -26,7 +33,8 @@
    "locator": {
     "printed": "p. 521",
     "scan": "PDF scan 542",
-    "section": "n. 675"
+    "section": "n. 675",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=542"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "The page prints the invocation once, after the prayers after private Mass and their grant, as an addition said three times (Praeterea, si addatur ter) that carries its own indulgence."
     }
    ],
-   "verified_on": "2026-10-30"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -46,7 +54,8 @@
    "locator": {
     "printed": "p. 521",
     "scan": "PDF p. 542",
-    "section": "n. 675, Praeterea, si addatur ter"
+    "section": "n. 675, Praeterea, si addatur ter",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=542"
    },
    "entries": [
     {
@@ -54,10 +63,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The page prints the complete invocation once as Cor Iesu sacratissimum, miserere nobis. The present edition adds house accents and keeps its two display segments, full stops and sentence capital Miserere. Three repetitions are described in the introduction. The conditional threefold addition and indulgence are historical context, not an unconditional rubric for every Mass."
+     "claim": "No. 675 prints Cor Iesu sacratissimum, miserere nobis once, followed by a colon introducing the indulgence. The preceding rubric calls for three repetitions when the invocation is added."
     }
    ],
-   "verified_on": "2026-11-04"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

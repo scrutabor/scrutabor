@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-adiutorium; closed-literal-selection} (line 29; line 30); complete source contexts 27–32"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-adiutorium; closed-literal-selection} (line 29; line 30); complete source contexts 27–32",
+    "passages": [
+     {
+      "heading": "Incipit",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L29-L30"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L29-L30"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 10-word literal selection in the stated selection order (29, then 30), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +41,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "The sign of the cross and the two clauses Adiutórium nostrum in nómine Dómini and Qui fecit cælum et terram appear together on p. 219."
     }
    ],
    "verified_on": "2026-09-25"

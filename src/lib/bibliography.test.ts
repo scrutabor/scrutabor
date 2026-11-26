@@ -20,10 +20,67 @@ describe('the reader-facing bibliography', () => {
 			sources.map(({ title }) => title)
 		);
 		expect(titles).toContain('Breviarium Romanum ex decreto SS. Concilii Tridentini restitutum');
-		expect(titles).toContain('Gazeta Kościelna, R. 9, nr 16');
-		expect(titles).not.toContain('Powściągliwość i Praca (1912)');
-		expect(titles.join(' ')).not.toContain('De musica sacra et sacra liturgia');
+		expect(titles.join(' ')).not.toContain('Gazeta Kościelna');
+		expect(titles).toContain('Droga do Nieba. Wyborek modlitw i pieśni');
+		expect(titles.join(' ')).not.toContain('Powściągliwość i Praca');
+		const documents = bibliography.sections.find(
+			({ id }) => id === 'official_documents_and_liturgical_history'
+		)!;
+		expect(documents.sources.map(({ id }) => id)).toContain(
+			'edition.sacra-rituum-congregatio.de-musica-sacra.1958-aas50'
+		);
 	});
+
+	test.each(['pl', 'en'] as const)(
+		'sets out the credits and publication dates in %s',
+		async (lang) => {
+			const sources = (await buildBibliography(lang)).sections.flatMap(
+				(section) => section.sources
+			);
+			const meta = (id: string) => sources.find((source) => source.id === 'edition.' + id)!.meta;
+			expect(
+				meta('congregatio-cultus.litaniae-lauretanae.2020').join(' ').match(/2020/g)
+			).toHaveLength(1);
+			expect(meta('missale-romanum.1962-vatican-joseph-bearing')).toContain(
+				lang === 'pl'
+					? 'wydanie elektroniczne 4 października 2007'
+					: 'electronic publication 4 October 2007'
+			);
+			expect(meta('enchiridion-indulgentiarum.1952-editio-altera')).toContain(
+				lang === 'pl' ? 'reprodukcja cyfrowa 2023' : 'digital reproduction 2023'
+			);
+			const grammar = meta('allen-greenough.1903');
+			expect(grammar.find((part) => part.includes('Kittredge'))).toMatch(
+				lang === 'pl'
+					? /^red\. J\. B\. Greenough,.*i Benj\. L\. D’Ooge$/
+					: /^eds\. J\. B\. Greenough,.*and Benj\. L\. D’Ooge$/
+			);
+			expect(meta('thesaurus-precum-latinarum.sacratissimi-cordis-iesu')).toContain(
+				lang === 'pl' ? 'wersja z 2026' : '2026 version'
+			);
+			if (lang === 'en') {
+				expect(meta('blessed-be-god.princeton')).toContain('[not before 1952]');
+				expect(meta('blessed-be-god-1925')).toContain('[1925]');
+				expect(meta('douay-rheims-bible-challoner')).toContain('[not before 1924]');
+				expect(meta('key-of-heaven-1901')).toContain('[1901–1906]');
+				expect(meta('manual-of-prayers-catholic-laity-1888')).toContain(
+					'ecclesiastical approval 17 May 1889'
+				);
+				expect(meta('manual-of-prayers-catholic-laity-1888')).toContain(
+					'by order of the Third Plenary Council of Baltimore'
+				);
+			}
+			if (lang === 'pl') {
+				const catechism = meta('katechizm-religji-rzymsko-katolickiej-1925');
+				expect(catechism).toContain('na karcie tytułowej 1925');
+				expect(catechism).toContain('imprimatur 3 marca 1926');
+				expect(meta('katolik-w-modlitwie-1902')).toContain(
+					'Gliwice: Drukiem Teodora Zalewskiego (Fr. Feldhussa)'
+				);
+				expect(meta('siedlecki-spiewnik.1928-jubileuszowe')).toContain('1928');
+			}
+		}
+	);
 
 	test('loads the exact evidence only when a source is opened', async () => {
 		const loadedBefore = loadedTextKeys();
@@ -31,28 +88,23 @@ describe('the reader-facing bibliography', () => {
 		expect(loadedTextKeys()).toEqual(loadedBefore);
 		const source = bibliography.sections
 			.find(({ id }) => id === 'wording_witnesses')!
-			.sources.find(({ title }) => title === 'Gazeta Kościelna, R. 9, nr 16')!;
+			.sources.find(
+				({ id }) => id === 'edition.konferencja-episkopatu-polski.uchwala-28-386.2020'
+			)!;
 		const details = await loadBibliographySource('pl', source);
 		expect(loadedTextKeys()).toEqual(loadedBefore);
 
-		expect(details).toHaveLength(1);
-		expect(details[0]).toMatchObject({
-			role: 'historical_wording_basis',
-			printed: 'druk. s. 167',
-			scan: 'PDF s. 3',
-			repository: 'Jagiellońska Biblioteka Cyfrowa'
+		expect(details).toHaveLength(6);
+		const invocation = details.find(({ section }) => section?.endsWith('Królowo Polski'))!;
+		expect(invocation).toMatchObject({
+			role: 'historical_wording_comparator',
+			printed: 's. 107',
+			scan: 'PDF, s. 107',
+			repository: 'Konferencja Episkopatu Polski'
 		});
-		expect(details[0].url).toContain('/edition/913560/');
-		expect(details[0].uses).toEqual([
-			{
-				key: 'orationes.angelus-domini:s07:s08',
-				title: 'Anioł Pański',
-				href: '/app/pl/orationes/angelus-domini?s=s07-s08',
-				kind: 'range',
-				first: 7,
-				last: 8
-			}
-		]);
+		expect(invocation.url).toMatch(/Akta_KEP_2020[.]pdf#page=107$/);
+		expect(invocation.uses).toHaveLength(1);
+		expect(invocation.uses[0].href).toBe('/app/pl/litaniae/lauretanae?s=s122');
 	});
 
 	test.each(['pl', 'en'] as const)(
@@ -91,15 +143,16 @@ describe('the reader-facing bibliography', () => {
 			const details = await loadBibliographySource(lang, source);
 			const lemmaEvidence = details.filter(({ uses }) => uses.some(({ kind }) => kind === 'lemma'));
 			expect(lemmaEvidence).toHaveLength(2);
-			for (const [lemma, section] of [
-				['Iesus', '430'],
-				['Christus', '436']
+			for (const [lemma, section, anchor] of [
+				['Iesus', '430', 'I.%20Iesus'],
+				['Christus', '436', 'II.%20Christus']
 			]) {
 				const groups = lemmaEvidence.filter((group) => group.section === section);
+				const url = `https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm#${anchor}`;
 				expect(groups).toHaveLength(1);
 				expect(groups[0]).toMatchObject({
 					role: 'official_liturgical_context',
-					url: 'https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm',
+					url,
 					uses: [
 						{
 							key: `lemma:${lemma}`,
@@ -113,13 +166,16 @@ describe('the reader-facing bibliography', () => {
 				expect(sources).toContainEqual({
 					title: source.title,
 					locator: section,
-					url: 'https://www.vatican.va/archive/catechism_lt/p1s2c2a2_lt.htm'
+					url
 				});
 			}
 			const prayerEvidence = await loadTextBibliography(lang, 'orationes/pater-noster');
 			const catechism = prayerEvidence.context.filter(({ title }) => title === source.title);
 			expect(catechism).toHaveLength(1);
-			expect(catechism[0].locator).toBe('2851, 2854');
+			expect(catechism[0]).toMatchObject({
+				locator: '2851, 2854',
+				url: 'https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm#VII.%20%C2%AB%20Sed%20libera%20nos%20a%20Malo%20%C2%BB'
+			});
 		}
 	);
 
@@ -165,7 +221,8 @@ describe('the reader-facing bibliography', () => {
 			expect(sources).toContainEqual(
 				expect.objectContaining({
 					title: 'A Latin Dictionary',
-					locator: 'Perseus TEI entry n21759'
+					locator: 's.v. immortalitas',
+					url: 'https://atlas.perseus.tufts.edu/dictionaries/entry/urn%3Acite2%3Ascaife-viewer%3Adictionary-entries.atlas_v1%3Alat.ls.perseus-eng2-n21759/'
 				})
 			);
 			expect(await loadLemmaBibliography(lang, 'not-a-dictionary-entry')).toEqual([]);
@@ -178,7 +235,10 @@ describe('the reader-facing bibliography', () => {
 
 		const accepted = await loadTextBibliography('pl', 'ordinarium/gloria');
 		expect(accepted.translation).toContainEqual(
-			expect.objectContaining({ title: 'Pamiątka Missyi dla ludu katolickiego' })
+			expect.objectContaining({
+				title: 'Pamiątka Missyi dla ludu katolickiego. Nauka dobrego korzystania z missyi św.',
+				url: 'https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=49'
+			})
 		);
 	});
 });

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Prefationes.txt [Communis], heading line67, label line68, complete body line69; textual v. cue excluded"
+    "section": "web/www/missa/Latin/Ordo/Prefationes.txt [Communis], heading line67, label line68, complete body line69; textual v. cue excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L69",
+    "passages": [
+     {
+      "heading": "Communis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L69"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Latin Mass data print the complete Common Preface body, including their declared accidental differences. This use does not establish the imported hand-position rubric or a sung performer."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.extraordinaryform.handmissal-chant.2025-12-12",
@@ -26,7 +33,8 @@
    "locator": {
     "printed": "p. 14",
     "scan": "physical PDF p. 16, left half",
-    "section": "Complete Common Preface below the Sunday Preface and above Sanctus; printed47 Kyriale on the right is outside this use"
+    "section": "Complete Common Preface below the Sunday Preface and above Sanctus; printed47 Kyriale on the right is outside this use",
+    "page_url": "https://extraordinaryform.org/handmissals/HandMissalChant.pdf#page=16"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "The hand missal revised12/12/2025 prints the complete56-word Common Preface body on the left half of physical PDF16. Its literal ætérnæ is retained in transcription and separately declared as a corrigendum for comparison. This is Latin corroboration, not an English wording basis or proof of identity with an older download."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

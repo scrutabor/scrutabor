@@ -1,7 +1,7 @@
 {
   "id":"litaniae.lauretanae",
   "language":"pl",
-  "about":"Litania loretańska w postaci, w jakiej modli się nią Polska: tekst rzymski z jednym wezwaniem własnym. W 1962 r. tekst rzymski kończył się wezwaniem Regína pacis, a w Polsce następowało po nim Regína Polóniæ. Do tekstu poświadczonego w Enchiridion Indulgentiarum z 1952 r. Stolica Apostolska dodała Mater Ecclésiæ (1980), Regína famíliæ (1995) oraz w 2020 r. Mater misericórdiæ, Mater spei i Solácium migrántium, a obok nich Polska mówi Regína Polóniæ, zatwierdzone dla niej w 1920 r. Wezwanie Mater misericórdiæ Polska otrzymała już w 2014 r., a list z 2020 r. przeniósł je na miejsce, które zajmuje tutaj, po Mater Ecclésiæ.",
+  "about":"Litanię podajemy w porządku przyjętym w Polsce. W rzymskim wydaniu z 1952 r. ostatnim wezwaniem do Maryi jest Regína pacis. W Polsce po nim następuje Regína Polóniæ. Abp Józef Bilczewski poświadczył zgodę na to wezwanie w liście z 1920 r. W 1980 r. Stolica Apostolska zezwoliła na dodanie Mater Ecclésiæ, w 1995 r. wprowadziła Regína famíliæ, a w 2020 r. dodała Mater misericórdiæ, Mater spei i Solácium migrántium. W Polsce „Matko miłosierdzia” od 2014 r. można było odmawiać po „Matko łaski Bożej”. W tekście ogłoszonym przez polskich biskupów w 2020 r. wezwanie to stoi po „Matko Kościoła”.",
   "seg":[
     {"id":"s001","tr":"Kyrie, eleison.","tc":[7,8],"tb":"traditional-composite","g":["Panie","zmiłuj się"]},
     {"id":"s002","tr":"Christe, eleison.","tc":[7,8],"tb":"traditional-composite","g":["Chryste","zmiłuj się"]},
@@ -44,7 +44,7 @@
     {"id":"s039","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
     {"id":"s040","tr":"Matko przedziwna.","tc":[7,8],"tb":"traditional-composite","g":["Matko","godna podziwu"]},
     {"id":"s041","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
-    {"id":"s042","tr":"Matko dobrej rady.","tc":[7,8],"tb":"traditional-composite","g":["Matko","dobrej","rady"]},
+    {"id":"s042","tr":"Matko dobrej rady.","tc":[7],"tb":"traditional-composite","g":["Matko","dobrej","rady"]},
     {"id":"s043","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
     {"id":"s044","tr":"Matko Stworzyciela.","tc":[7,8],"tb":"traditional-composite","g":["Matko","Stworzyciela"]},
     {"id":"s045","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
@@ -118,11 +118,11 @@
     {"id":"s113","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
     {"id":"s114","tr":"Królowo wniebowzięta.","g":["Królowo","w","niebo","wzięta"]},
     {"id":"s115","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
-    {"id":"s116","tr":"Królowo różańca świętego.","tc":[7,8],"tb":"traditional-composite","g":["Królowo","Najświętszego","różańca"]},
+    {"id":"s116","tr":"Królowo różańca świętego.","tc":[7],"tb":"traditional-composite","g":["Królowo","Najświętszego","różańca"]},
     {"id":"s117","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
     {"id":"s118","tr":"Królowo rodzin.","g":["Królowo","rodziny"],"ex":{"w309":"Dodane w 1995 r. Nie ma go w tekście z 1962 r."}},
     {"id":"s119","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
-    {"id":"s120","tr":"Królowo pokoju.","tc":[7,8],"tb":"traditional-composite","g":["Królowo","pokoju"]},
+    {"id":"s120","tr":"Królowo pokoju.","tc":[7],"tb":"traditional-composite","g":["Królowo","pokoju"]},
     {"id":"s121","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
     {"id":"s122","tr":"Królowo Polski.","g":["Królowo","Polski"],"ex":{"w319":"Wezwanie własne Polski, zatwierdzone w 1920 r."}},
     {"id":"s123","tr":"Módl się za nami.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami"]},
@@ -134,7 +134,7 @@
     {"id":"s129","tr":"Zmiłuj się nad nami.","tc":[7,8],"tb":"traditional-composite","g":["zmiłuj się","nad nami"]},
     {"id":"s130","tr":"Módl się za nami, Święta Boża Rodzicielko.","tc":[7,8],"tb":"traditional-composite","g":["módl się","za","nami","Święta","Boga","Rodzicielko"]},
     {"id":"s131","tr":"Abyśmy się stali godnymi obietnic Chrystusowych.","tc":[7,8],"tb":"traditional-composite","g":["Abyśmy","godnymi","stali się","obietnic","Chrystusa"]},
-    {"id":"s132","tr":"Módlmy się.","tc":[7,8],"tb":"traditional-composite","g":["módlmy się"]},
+    {"id":"s132","tr":"Módlmy się.","tc":[7],"tb":"traditional-composite","g":["módlmy się"]},
     {"id":"s133","tr":"Panie, nasz Boże, daj nam, sługom swoim, cieszyć się trwałym zdrowiem duszy i ciała, i za wstawiennictwem Najświętszej Maryi, zawsze Dziewicy, uwolnij nas od doczesnych utrapień i obdarz wieczną radością. Przez Chrystusa, Pana naszego. Amen.","tc":[11],"tb":"traditional-composite","g":["daj","nam","sługom","Twoim","prosimy","Panie","Boże","trwałym","umysłu","i","ciała","zdrowiem","cieszyć się","i","chwalebnym","błogosławionej","Maryi","zawsze","Dziewicy","wstawiennictwem",null,null,null,null,"i",null,null,null,"Przez","Chrystusa","Pana","naszego","Amen"],"a":[{"s":20,"n":4,"a":2,"g":"być uwolnionymi od doczesnego smutku"},{"s":25,"n":3,"a":1,"g":"cieszyć się w pełni wieczną radością"}]}
   ]
 }

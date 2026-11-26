@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pent06-0.txt; [Evangelium] section at line 38, heading at line 39"
+    "section": "web/www/missa/Latin/Tempora/Pent06-0.txt; [Evangelium] section at line 38, heading at line 39",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pent06-0.txt#L38-L39",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pent06-0.txt#L38-L39"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "Prints the complete 5-word heading as its own line in the pinned file that the reading's own digital witness binds; it agrees with the selected print letter for letter, its ++ being the source's cross sign. It is a derived digital comparison, not proof of an independent manuscript family."
     }
    ],
-   "verified_on": "2026-10-23"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -26,7 +33,7 @@
    "locator": {
     "printed": "379",
     "scan": "IA leaf n460; one-based PDF page 461",
-    "section": "Proprium, heading of the Gospel of proprium.dominica-vi-post-pentecosten-evangelium",
+    "section": "Sequéntia sancti Evangélii secúndum Marcum — Marc. 8, 1–9",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n460/mode/1up"
    },
    "entries": [
@@ -47,7 +54,8 @@
    "locator": {
     "scan": "PDF page 466",
     "section": "Dominica VI post Pentecosten; complete announcement heading; Marc. 8, 1-9",
-    "printed": "385"
+    "printed": "385",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=466"
    },
    "entries": [
     {
@@ -58,7 +66,7 @@
      "claim": "Directly prints the complete 5-word heading, with a closing full stop and no expansion. Separately set Vatican reproduction corroborates the Benziger lexical reading; shared typical text is not independent manuscript-family testimony and the reproduction production year is unproved."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

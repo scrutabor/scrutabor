@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 486–487; web/www/missa/Latin/Ordo/Prayers.txt, [Per eundem] at physical line 111, selected evidence lines 112–113; $Per eundem at physical line 487 resolves the named prayer ending"
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 486–487; web/www/missa/Latin/Ordo/Prayers.txt, [Per eundem] at physical line 111, selected evidence lines 112–113; $Per eundem at physical line 487 resolves the named prayer ending",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L486-L487",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L486-L487"
+     },
+     {
+      "heading": "Per eundem",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L111-L113"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "This dependent same-recension digital comparison supplies the explicitly resolved Latin reading; it does not establish independent transmission or another printed edition."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -65,9 +76,10 @@
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
+    "printed": "pp. xxxiii–xxxiv",
+    "scan": "PDF pp. 39–40",
+    "section": "Rubricae generales Missalis romani, nn. 511 d, 513 a, 514.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -75,10 +87,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "The celebrant says or sings the collect and its conclusion."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -117,10 +129,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The rule prescribes Per eundem when the prayer has mentioned the Son; it supports the same abbreviated ending printed in the Vigil collect. It does not supply eiusdem in this collect."
+     "claim": "RG 115 b gives Per eundem Dominum nostrum, etc. ut supra when an oration addressed to the Father mentions the Son at its beginning. The Vigil proper independently prints Per eúndem Dóminum after referring to the Lord’s Resurrection. The rule identifies that form; the Vigil text does not name the Son explicitly and supplies no eiusdem in the conclusion."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

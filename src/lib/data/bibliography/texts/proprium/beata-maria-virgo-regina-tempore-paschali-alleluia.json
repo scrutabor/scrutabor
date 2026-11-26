@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Sancti/05-31 [GradualeP], missa/Latin/Sancti/05-31 source lines 36-39"
+    "section": "Sancti/05-31 [GradualeP], missa/Latin/Sancti/05-31 source lines 36-39",
+    "passages": [
+     {
+      "heading": "GradualeP",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L36-L39"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/05-31.txt#L36-L39"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Latin data give the same chant; the parenthesized Paschaltide Alleluia is applied according to the witness's declared seasonal mode, and any omission or slip is declared in the apparatus."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

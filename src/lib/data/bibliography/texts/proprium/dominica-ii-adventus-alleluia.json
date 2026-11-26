@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.21cb2d37.advent-ii",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv2-0.txt [Graduale] (line 38, chars 85:104); web/www/missa/Latin/Tempora/Adv2-0.txt [Graduale] (lines 39-40)"
+    "section": "web/www/missa/Latin/Tempora/Adv2-0.txt [Graduale] (line 38, chars 85:104); web/www/missa/Latin/Tempora/Adv2-0.txt [Graduale] (lines 39-40)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv2-0.txt#L38",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv2-0.txt#L38"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv2-0.txt#L40"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The exact revision supplies this component as a derived digital comparison. The declared complete reading preserves the source spelling, accents, punctuation and component boundary. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

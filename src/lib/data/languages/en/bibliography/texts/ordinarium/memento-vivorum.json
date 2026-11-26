@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 62",
-    "scan": "PDF pages 74 (one-based)"
+    "scan": "PDF p. 74",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=74"
    },
    "entries": [
     {
@@ -19,27 +20,7 @@
      "claim": "Historical English source expression: “And of all here present whose faith and devotion are known unto thee, for whom we offer” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 63",
-    "scan": "PDF pages 75 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.09f24bde3736a1a3fe5d",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historical English source expression: “and for which they now pay their vows to thee, the eternal, living, and true God.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -47,7 +28,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 62–63",
-    "scan": "PDF pp. 74–75"
+    "scan": "PDF pp. 74–75",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=74"
    },
    "entries": [
     {
@@ -59,7 +41,28 @@
      "claim": "Remember, O Lord, Your servants, both men and women"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 63",
+    "scan": "PDF p. 75",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=75"
+   },
+   "entries": [
+    {
+     "id": "use.en.09f24bde3736a1a3fe5d",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “and for which they now pay their vows to thee, the eternal, living, and true God.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,7 +6,26 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-libera-nos; closed-literal-selection} (line 282; line 284; line 286; line 288; line 289); complete source contexts 280–291"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-libera-nos; closed-literal-selection} (line 282; line 284; line 286; line 288; line 289); complete source contexts 280–291",
+    "passages": [
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L282"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L284"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L286"
+     },
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L288-L289"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L282"
    },
    "entries": [
     {
@@ -17,7 +36,7 @@
      "claim": "The pinned Mass Ordo supplies this 78-word literal selection in the stated selection order (282, then 284, then 286, then 288, then 289), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +53,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 312 prints Líbera nos, its intercessions, the fraction and the two successive parts of the conclusion. The final Per ómnia sǽcula sæculórum and Amen appear on the staff below."
     }
    ],
    "verified_on": "2026-09-25"

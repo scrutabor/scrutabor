@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 498; web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 510; web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 513; web/www/missa/Latin/Tempora/Quad6-6r.txt, [Prelude] at physical line 11, selected evidence lines 514"
+    "section": "missa/Latin/Tempora/Quad6-6r.txt [Prelude], 498 · missa/Latin/Tempora/Quad6-6r.txt [Prelude], 510 · missa/Latin/Tempora/Quad6-6r.txt [Prelude], 513–514",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L498",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L498"
+     },
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L510"
+     },
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L513-L514"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,14 +32,21 @@
      "claim": "This dependent same-recension digital comparison supplies the explicitly resolved Latin reading; it does not establish independent transmission or another printed edition."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "rubric_control",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt [Prelude], physical lines 497–508; ritual rubric line 499, six utterances lines 498, 500, 502–503, 505–506"
+    "section": "web/www/missa/Latin/Tempora/Quad6-6r.txt [Prelude], physical lines 497–508; ritual rubric line 499, six utterances lines 498, 500, 502–503, 505–506",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L497-L508"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L497-L508"
    },
    "entries": [
     {
@@ -36,7 +58,7 @@
      "claim": "The source prescribes three progressively higher celebrant intonations, each repeated by all in the same tone; five selected utterances derive from this ritual prescription, not five additional printed witness words."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

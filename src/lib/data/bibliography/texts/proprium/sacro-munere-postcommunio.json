@@ -49,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 543",
-    "scan": "PDF physical p. 624; leaf n623",
-    "section": "no. 2709; 06-02 joint marcellinus peter erasmus, Postcommunion; Paschal reference on p.543 / physical624",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n623/mode/1up"
+    "scan": "PDF p. 624",
+    "section": "Die 2 iunii. Ss. Marcellini, Petri atque Erasmi Ep., Mm. Postcommunio, n. 2709.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=624"
    },
    "entries": [
     {
@@ -62,7 +62,7 @@
      "claim": "The 06-02 joint marcellinus peter erasmus Postcommunion, item 2709, prints the 17-word body (w001–w017) followed by the cue Per Dóminum. Its full conclusion and Amen are separately supplied by this setting’s RG115a. This representative comparison does not claim a new literal transcript of all other dates, independent historical transmission, or whole-copy unaltered recension. The oration is printed in the non-Paschal context; the same face’s tempore paschali direction carries forward the preceding orations and Epistle only, not the entire non-Paschal Mass or its chants."
     }
    ],
-   "verified_on": "2026-10-24"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -117,7 +117,7 @@
    "witness.proprium.sacro-munere-postcommunio.vatican1962"
   ],
   "apparatus": {
-   "entries": 10,
+   "entries": 9,
    "classes": [
     "accent",
     "punctuation"

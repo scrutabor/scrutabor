@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/08-15.txt [Offertorium] (lines 41-42)"
+    "section": "web/www/missa/Latin/Sancti/08-15.txt [Offertorium] (lines 41-42)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-15.txt#L40-L42",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/08-15.txt#L40-L42"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Offertorium line agrees with the component's twelve substantive Latin words; its lowercase mulierem and second semen differ from the printed capitals recorded in the apparatus."
     }
    ],
-   "verified_on": "2026-10-21"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

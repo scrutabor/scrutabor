@@ -7,27 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 79",
-    "scan": "PDF p. 91"
-   },
-   "entries": [
-    {
-     "id": "use.en.ce15d6b240d314747bf9",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "May almighty God bless you,"
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 79",
-    "scan": "PDF pages 91 (one-based)"
+    "scan": "PDF p. 91",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=91"
    },
    "entries": [
     {
@@ -45,9 +26,17 @@
       "segment": "s06"
      },
      "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
+    },
+    {
+     "id": "use.en.ce15d6b240d314747bf9",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "May almighty God bless you,"
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

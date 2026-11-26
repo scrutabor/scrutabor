@@ -3,11 +3,12 @@
  "source_groups": [
   {
    "edition": "edition.francis-x-lasance-the-catholic-girl-s-guide-1906",
-   "digital_item": "item.catholic-girls-guide-1906.scan",
+   "digital_item": "item.catholic-girls-guide-1906.ia",
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 448",
-    "scan": "scan p. 456"
+    "scan": "PDF p. 456",
+    "page_url": "https://archive.org/download/catholicgirlsgui00lasa/catholicgirlsgui00lasa.pdf#page=456"
    },
    "entries": [
     {
@@ -68,7 +69,7 @@
      "claim": "Historical English wording basis for the complete closing eternity clause and Amen. The printed For ever is normalized to forever, with sentence capitalization adjusted."
     }
    ],
-   "verified_on": "2026-11-06"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

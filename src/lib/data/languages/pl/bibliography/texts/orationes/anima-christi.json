@@ -6,9 +6,9 @@
    "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 158",
-    "scan": "PDF s. 163",
-    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+    "printed": "s. 158",
+    "scan": "PDF, s. 163",
+    "page_url": "https://sbc.org.pl/Content/320337/PDF/Publikacja-KC-8052.pdf#page=163"
    },
    "entries": [
     {
@@ -116,16 +116,16 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Krwi Chrystusowa, napój mnie.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.katolik-w-modlitwie-1902",
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 157",
-    "scan": "PDF s. 171",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 157",
+    "scan": "PDF, s. 171",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=171"
    },
    "entries": [
     {
@@ -233,7 +233,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Nie dozwól mi odłączyć się od Ciebie.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

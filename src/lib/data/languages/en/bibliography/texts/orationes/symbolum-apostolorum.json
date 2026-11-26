@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 10–11",
-    "scan": "scan pp. 23–24"
+    "scan": "DjVu pp. 23–24",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=23"
    },
    "entries": [
     {
@@ -18,7 +19,7 @@
      "claim": "Historical English wording witness for the complete orationes.symbolum-apostolorum text."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
@@ -26,7 +27,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 2",
-    "scan": "scan p. 33"
+    "scan": "PDF p. 33",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=33"
    },
    "entries": [
     {
@@ -34,10 +36,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording witness for the complete orationes.symbolum-apostolorum text."
+     "claim": "Historical English basis of the complete Apostles’ Creed, with revisions. The print has “Holy Ghost”, “was crucified, dead, and buried”, “sitteth”, and “and life everlasting”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

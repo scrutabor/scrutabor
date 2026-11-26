@@ -6,8 +6,30 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "pp. 39–40",
+    "scan": "PDF pp. 51–52",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=51"
+   },
+   "entries": [
+    {
+     "id": "use.en.5ce24a11d98030c7481b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Historical English source expression: “Take away from us our iniquities, we beseech thee, O Lord, that we may be worthy to enter with pure minds into the Holy of Holies.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 40",
-    "scan": "PDF pages 52 (one-based)"
+    "scan": "PDF p. 52",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=52"
    },
    "entries": [
     {
@@ -35,27 +57,7 @@
      "claim": "Historical English source expression: “whose relics are here, and of all the saints, that thou wouldst vouchsafe to forgive me all my sins. Amen.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 39–40",
-    "scan": "PDF pages 51, 52 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.5ce24a11d98030c7481b",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Historical English source expression: “Take away from us our iniquities, we beseech thee, O Lord, that we may be worthy to enter with pure minds into the Holy of Holies.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -63,7 +65,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 6",
-    "scan": "scan p. 33"
+    "scan": "PDF p. 33",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=33"
    },
    "entries": [
     {
@@ -75,7 +78,7 @@
      "claim": "Let us pray."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

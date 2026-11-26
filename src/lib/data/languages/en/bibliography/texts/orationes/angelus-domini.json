@@ -6,8 +6,49 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "pp. 9–10 and 26–27",
+    "scan": "DjVu pp. 22–23, 39–40",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=22"
+   },
+   "entries": [
+    {
+     "id": "use.en.675e174cad5776c0c67c",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "The Angelic Salutation on pp. 9–10 reads “blessed art thou amongst women”. The English prayer here has “among women”. The Angelus on pp. 26–27 directs the reader to repeat the Hail Mary.",
+     "reader_note": "The 1901 edition reads “amongst women” at this point."
+    },
+    {
+     "id": "use.en.9c6697143509b97d2d46",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The Angelic Salutation on pp. 9–10 reads “blessed art thou amongst women”. The English prayer here has “among women”. The Angelus on pp. 26–27 directs the reader to repeat the Hail Mary.",
+     "reader_note": "The 1901 edition reads “amongst women” at this point."
+    },
+    {
+     "id": "use.en.b27e1c461b15d85662af",
+     "address": {
+      "kind": "segment",
+      "segment": "s06"
+     },
+     "claim": "The Angelic Salutation on pp. 9–10 reads “blessed art thou amongst women”. The English prayer here has “among women”. The Angelus on pp. 26–27 directs the reader to repeat the Hail Mary.",
+     "reader_note": "The 1901 edition reads “amongst women” at this point."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 26",
-    "scan": "DJVU physical pages 39 (one-based); indices 38 (zero-based)"
+    "scan": "DjVu p. 39",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=39"
    },
    "entries": [
     {
@@ -16,7 +57,8 @@
       "kind": "segment",
       "segment": "s11"
      },
-     "claim": "Historical English source expression: “That we may be made worthy of the promises of Christ.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading."
+     "claim": "Historical English source expression: “That we may be made worthy of the promises of Christ.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading.",
+     "reader_note": "This line follows the Salve Regina on the cited page. The Angelus printed immediately afterwards proceeds from its last Hail Mary to the collect."
     },
     {
      "id": "use.en.7bf4685135f5e5593ac5",
@@ -24,7 +66,8 @@
       "kind": "segment",
       "segment": "s10"
      },
-     "claim": "Historical English source expression: “Pray for us, O holy Mother of God.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading."
+     "claim": "Historical English source expression: “Pray for us, O holy Mother of God.” This supplies the corresponding English expression at the addressed scope. The cited occurrence follows Salve Regina, before the Angelus heading.",
+     "reader_note": "This line follows the Salve Regina on the cited page. The Angelus printed immediately afterwards proceeds from its last Hail Mary to the collect."
     },
     {
      "id": "use.en.d90d59f5d6e2c0b6ffd2",
@@ -33,19 +76,7 @@
       "segment": "s02"
      },
      "claim": "Historical English source expression: “And she conceived by the Holy Ghost.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 26",
-    "scan": "scan p. 39"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.f52662261fbda1a05672",
      "address": {
@@ -55,7 +86,7 @@
      "claim": "The Angel of the Lord declared unto Mary."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -63,7 +94,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 27",
-    "scan": "DJVU physical pages 40 (one-based); indices 39 (zero-based)"
+    "scan": "DjVu p. 40",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=40"
    },
    "entries": [
     {
@@ -91,6 +123,14 @@
      "claim": "Historical English source expression: “Be it done unto me according to Thy word.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
+     "id": "use.en.cd6c7884c6ad1fc687ba",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "Behold the handmaid of the Lord."
+    },
+    {
      "id": "use.en.f0191584feca0c7a8f4b",
      "address": {
       "kind": "segment",
@@ -99,63 +139,7 @@
      "claim": "Historical English source expression: “Let us pray.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 27",
-    "scan": "scan p. 40"
-   },
-   "entries": [
-    {
-     "id": "use.en.cd6c7884c6ad1fc687ba",
-     "address": {
-      "kind": "segment",
-      "segment": "s04"
-     },
-     "claim": "Behold the handmaid of the Lord."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 9–10 and 26–27",
-    "scan": "scan pp. 22–23 and 39–40"
-   },
-   "entries": [
-    {
-     "id": "use.en.675e174cad5776c0c67c",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
-    },
-    {
-     "id": "use.en.9c6697143509b97d2d46",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
-    },
-    {
-     "id": "use.en.b27e1c461b15d85662af",
-     "address": {
-      "kind": "segment",
-      "segment": "s06"
-     },
-     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.patrick-francis-moran-the-catholic-prayer-book-1883",
@@ -163,7 +147,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 11",
-    "scan": "scan p. 29"
+    "scan": "PDF p. 29",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_Catholic_prayer_book.djvu?page=29"
    },
    "entries": [
     {
@@ -175,7 +160,7 @@
      "claim": "Pour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ, our Lord. Amen."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

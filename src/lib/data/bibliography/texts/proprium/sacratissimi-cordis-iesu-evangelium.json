@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Pent02-5.txt: Evangelium heading51, announcement52, scripture reference53; direct body54. Standalone hyphens and adjacent commas remain exact source punctuation."
+    "section": "Latin/Tempora/Pent02-5.txt: Evangelium heading51, announcement52, scripture reference53; direct body54. Standalone hyphens and adjacent commas remain exact source punctuation.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pent02-5.txt#L54",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pent02-5.txt#L54"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned direct 111-word body is preserved as a derived comparison, including its declared variants. No inherited text or concluding response is included."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

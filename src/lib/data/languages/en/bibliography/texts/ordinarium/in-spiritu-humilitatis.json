@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 48",
-    "scan": "PDF pages 60 (one-based)"
+    "scan": "PDF p. 60",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=60"
    },
    "entries": [
     {
@@ -17,19 +18,7 @@
       "segment": "s04"
      },
      "claim": "Historical English source expression: “Come, O almighty and eternal God, the sanctifier” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 48",
-    "scan": "scan p. 60"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.46d01326682a67afed5d",
      "address": {
@@ -39,7 +28,7 @@
      "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -47,7 +36,8 @@
    "role": "historical_wording_comparator",
    "locator": {
     "printed": "p. 48",
-    "scan": "scan p. 60"
+    "scan": "PDF p. 60",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=60"
    },
    "entries": [
     {
@@ -59,7 +49,7 @@
      "claim": "Historical English wording comparator for this passage; it is not the exact current wording."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -67,7 +57,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 11",
-    "scan": "scan p. 38"
+    "scan": "PDF p. 38",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=38"
    },
    "entries": [
     {
@@ -79,7 +70,7 @@
      "claim": "Lord, receive us in a spirit of humility and with a contrite heart; and may our sacrifice in Your sight today be such as to please You, Lord God."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -87,7 +78,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 12",
-    "scan": "PDF pages 39 (one-based)"
+    "scan": "PDF p. 39",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=39"
    },
    "entries": [
     {
@@ -99,7 +91,7 @@
      "claim": "Historical English source expression: “and bless this sacrifice prepared for thy holy name.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

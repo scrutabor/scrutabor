@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Ordo/Prayers.txt [Qui tecum], heading 119, conclusion 120, response 121. Evidence lines 119–121."
+    "section": "Latin/Ordo/Prayers.txt [Qui tecum], heading 119, conclusion 120, response 121. Evidence lines 119–121.",
+    "passages": [
+     {
+      "heading": "Qui tecum",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L119-L121"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L119-L121"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "The exact shared digital formula supplies the fourteen-word ending and distinct Amen after resolving $Qui tecum. The source has no commas after Sancti or Deus. The r. and R. prefixes are framing, not prayer words."
     }
    ],
-   "verified_on": "2026-09-29"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Sancti/10-DU.txt [Postcommunio], heading 65, body 66, $Qui tecum reference 67"
+    "section": "missa/Latin/Sancti/10-DU.txt [Postcommunio], 65–67",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-DU.txt#L65-L67",
+    "passages": [
+     {
+      "heading": "Postcommunio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/10-DU.txt#L65-L67"
+     }
+    ]
    },
    "entries": [
     {
@@ -35,7 +49,7 @@
      "claim": "The pinned file prints the 21-word body and a reference to the shared Qui tecum formula. The latter has a separate exact source use and raw reading span, not inherited body text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -44,7 +58,8 @@
    "locator": {
     "printed": "pp. xxxiii–xxxiv, lii, lviii",
     "scan": "leaves n38–39, n57, n63 / PDF pp. 39–40, 58, 64",
-    "section": "RG 505, 511 d/i, 513–514; Ritus servandus V 1–2, XI 1"
+    "section": "RG 505, 511 d/i, 513–514; Ritus servandus V 1–2, XI 1",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -55,7 +70,7 @@
      "claim": "Postcommunions are recited by the celebrant in the mode, number and order of the opening orations. The cited rules establish audible delivery at low Mass and sung orations at solemn or sung Mass. The separate Amen is supplied by the conclusion sources. These passages do not alone establish its complete performer or participation mapping."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -73,10 +88,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Father-directed conclusion, referring to the Son mentioned near the end of the prayer, supplies the fourteen-word ending and separate Amen. The proper page prints only Qui tecum. The rubric is unaccented and uses ae. House accents, ligatures and a terminal period are declared in the witness."
+     "claim": "The Father-directed conclusion referring to the Son named at the end supplies Qui tecum through Amen. RG 115 c prints unaccented sæcula sæculorum. Amen; with æ ligatures. The reader adds stress accents and ends the response with a period."
     }
    ],
-   "verified_on": "2026-09-29"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

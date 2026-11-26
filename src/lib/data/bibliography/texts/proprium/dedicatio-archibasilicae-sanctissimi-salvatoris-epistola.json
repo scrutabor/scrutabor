@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Direct Common C8 [Lectio], body line 587 (heading 584), web/www/horas/Latin/Commune/C8.txt"
+    "section": "Direct Common C8 [Lectio], body line 587 (heading 584), web/www/horas/Latin/Commune/C8.txt",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C8.txt#L587",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C8.txt#L587"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,16 +24,17 @@
      "claim": "The pinned Common C8 [Lectio] directly corroborates the complete 82-word reading, with the declared spelling and punctuation differences. Sancti/11-09 says ex C8 but has no [Lectio]. This is current direct textual corroboration, not a verified historical inherited runtime selection."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_text",
    "locator": {
-    "printed": "pp. 41–42",
+    "printed": "pp. (41)–(42)",
     "scan": "leaves n868–n869 / PDF pp. 869–870",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n868/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n868/mode/1up",
+    "section": "Commune Dedicationis ecclesiæ · Léctio libri Apocalýpsis beáti Ioánnis Apóstoli · Apoc. 21, 2–5"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

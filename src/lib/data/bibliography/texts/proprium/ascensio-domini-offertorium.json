@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc5-4.txt [Offertorium] (lines 52-53)"
+    "section": "web/www/missa/Latin/Tempora/Pasc5-4.txt [Offertorium] (lines 52-53)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc5-4.txt#L51-L53",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc5-4.txt#L51-L53"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +21,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.liber-usualis.1961",
@@ -25,7 +32,8 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "p. 849",
-    "scan": "PDF p. 1037"
+    "scan": "PDF p. 1037",
+    "page_url": "https://archive.org/details/TheLiberUsualis1961/page/n1036/mode/1up"
    },
    "entries": [
     {
@@ -36,7 +44,7 @@
      "claim": "The chant book prints the complete Offertory of the Ascension without et before Dóminus. The directly viewed page forms this declared complete comparison; the edition follows the Missal."
     }
    ],
-   "verified_on": "2026-10-20"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

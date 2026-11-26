@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-credo; closed-literal-selection} (line 142); complete source contexts 140–144"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-credo; closed-literal-selection} (line 142); complete source contexts 140–144",
+    "passages": [
+     {
+      "heading": "Credo",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L142"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L142"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 163-word literal selection in the stated selection order (142), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,7 +41,7 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 223 prints the chant incipit Credo in unum Deum, the remainder of the Creed through Et vitam ventúri sǽculi. Amen., and the directions for the prayer."
     }
    ],
    "verified_on": "2026-09-25"
@@ -46,7 +53,8 @@
    "locator": {
     "printed": "pp.XIII, XXXIII",
     "scan": "PDF pp.11,31 (one-based)",
-    "section": "Rubricae generales 28,31a,35; Rubricae generales Missalis Romani 475–476, especially 476e"
+    "section": "Rubricae generales 28,31a,35; Rubricae generales Missalis Romani 475–476, especially 476e",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=11"
    },
    "entries": [
     {
@@ -57,7 +65,7 @@
      "claim": "RG 28,31a and 35 distinguish the second-class Ascension Vigil from a feast. RGM 475 does not include this weekday Vigil among the Masses requiring the Creed, and 476e excludes a commemoration as an independent reason to add it. Together these rules support omission of the Creed in the temporal weekday Ascension Vigil Mass. They do not prescribe a Sunday or votive use or determine the Mass selected when a higher-ranking feast prevents the Vigil."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

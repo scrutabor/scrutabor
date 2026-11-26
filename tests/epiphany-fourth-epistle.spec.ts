@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const day = 'dominica-iv-post-epiphaniam';
@@ -73,9 +74,7 @@ for (const language of ['pl', 'en'] as const) {
 		);
 		await dialog.locator('details.source-notes summary').click();
 		await expect(dialog).toContainText('Epi4-0');
-		await expect(dialog).toContainText(
-			language === 'pl' ? 'pełny tekst bezpośrednio w w. 22' : 'complete direct body 22'
-		);
+		await expectSourcePassage(dialog, language, 'Lectio', 'Missa/Tempora/Epi4-0.txt', 22);
 	});
 
 	test(`${language} Epiphany IV quidquam keeps its contextual neuter without new approval`, async ({

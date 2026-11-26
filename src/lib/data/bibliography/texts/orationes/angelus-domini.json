@@ -3,12 +3,11 @@
  "source_groups": [
   {
    "edition": "edition.enchiridion-indulgentiarum-fourth-edition",
-   "digital_item": "item.enchiridion-indulgentiarum-1999.scan",
+   "digital_item": "item.enchiridion-indulgentiarum.1999.vatican-latin",
    "role": "official_text",
    "locator": {
-    "printed": "p. 23",
-    "scan": "PDF p. 23",
-    "section": "Concessio 17 §2, 2° — Angelus Domini and Regina caeli"
+    "section": "Concessio 17 § 2, n. 2",
+    "page_url": "https://www.vatican.va/roman_curia/tribunals/apost_penit/documents/rc_trib_appen_doc_20020826_enchiridion-indulgentiarum_lt.html#:~:text=Angelus%20Domini%20nuntiavit%20Mariae"
    },
    "entries": [
     {
@@ -16,18 +15,20 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The source prints and identifies Ángelus Dómini."
+     "claim": "The grant gives the Angelus versicles, responses and collect. Each Ave Maria is indicated by its opening words."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
    "role": "official_text",
    "locator": {
-    "printed": "n. 331, pp. 213–215",
-    "scan": "PDF scans 232–234"
+    "printed": "pp. 213–215",
+    "scan": "PDF pp. 232–234",
+    "section": "n. 331 a. Angelus Domini; b. Regina caeli",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=232"
    },
    "entries": [
     {
@@ -35,10 +36,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Prints the Angelus, its textual variants and collect within the identified prayer unit."
+     "claim": "No. 331 a gives the Angelus and its collect. No. 331 b gives the Easter prayer Regina caeli."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

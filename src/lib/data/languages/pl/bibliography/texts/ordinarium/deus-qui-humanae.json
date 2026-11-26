@@ -6,9 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 51",
-    "scan": "PDF s. 54",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 51",
+    "scan": "PDF, s. 54",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=54"
    },
    "entries": [
     {
@@ -17,10 +17,10 @@
       "kind": "segment",
       "segment": "s02"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Boże, Ty przedziwnie stworzyłeś godność ludzkiej natury i jeszcze przedziwniej ją odnowiłeś. Spraw, abyśmy przez tajemnicę tej wody i wina mieli udział w bóstwie Jezusa Chrystusa, Twojego Syna, naszego Pana, który raczył stać się uczestnikiem naszego człowieczeństwa i, będąc Bogiem, żyje i króluje z Tobą w jedności Ducha Świętego przez wszystkie wieki wieków. Amen.”"
+     "claim": "Modlitwa przy dolewaniu wody do wina mówi o stworzeniu i odnowieniu człowieka oraz o uczestnictwie w Bóstwie Chrystusa. Polski przekład w aplikacji oddaje także łacińskie słowa humanae substantiae dignitatem."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -40,7 +40,7 @@ const sourceScopes = [
 		lang: 'en',
 		key: 'orationes/te-deum',
 		edition: 'edition.blessed-be-god-1925',
-		fragment: 'The printed hymn ends with',
+		fragment: 'The final petitions in the reader are also found in A Manual of Prayers, p. 162.',
 		other: 'pl'
 	},
 	{

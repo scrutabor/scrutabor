@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 73–74",
-    "scan": "scan pp. 85–86"
+    "scan": "PDF pp. 85–86",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=85"
    },
    "entries": [
     {
@@ -15,10 +16,11 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording witness for the complete ordinarium.fili-dei-vivi text."
+     "claim": "The English prayer on pp. 73–74 supplies the body and begins the conclusion “who livest and reignest with God the Father, &c. Amen.” The intervening words of the full conclusion are supplied from the liturgical Latin.",
+     "reader_note": "The 1846 English prayer abbreviates its conclusion after “with God the Father”."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -26,7 +28,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 30–31",
-    "scan": "scan pp. 57–58"
+    "scan": "PDF pp. 57–58",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=57"
    },
    "entries": [
     {
@@ -37,7 +40,7 @@
      "claim": "Historical English wording witness for the complete ordinarium.fili-dei-vivi text."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

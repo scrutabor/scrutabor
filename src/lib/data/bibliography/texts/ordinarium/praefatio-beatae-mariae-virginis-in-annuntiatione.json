@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "witnesses/raw/do-ordinarium-praefatio-beatae-mariae-virginis-in-annuntiatione.txt (line 4) (resolved snapshot); web/www/missa/Latin/Ordo/Prefationes.txt (lines 56-58) (section [Maria]); web/www/missa/Latin/Sancti/03-25.txt (line 8) (variable assignment)"
+    "section": "Praefatio de beata Maria Virgine · Festivitáte",
+    "passages": [
+     {
+      "heading": "Maria",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L57"
+     },
+     {
+      "heading": "Rule",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L8"
+     },
+     {
+      "heading": "prefatio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/cgi-bin/missa/propers.pl#L1106-L1113"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prefationes.txt#L57"
    },
    "entries": [
     {
@@ -14,10 +29,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The digital preface reads Festivitáte on this feast. The printed Missal supplies the feast name in the selected text."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

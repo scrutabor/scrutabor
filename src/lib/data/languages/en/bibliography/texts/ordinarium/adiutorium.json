@@ -8,7 +8,8 @@
    "locator": {
     "printed": "Old Testament p. 649",
     "scan": "PDF p. 662",
-    "section": "Psalm 123:8 (Vulgate numbering)"
+    "section": "Psalm 123:8 (Vulgate numbering)",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_Holy_Bible_-_Douay_Rheims_Version.pdf?page=662"
    },
    "entries": [
     {
@@ -20,7 +21,7 @@
      "claim": "Our help is in the name of the Lord."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -28,7 +29,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 4",
-    "scan": "PDF pages 31 (one-based)"
+    "scan": "PDF p. 31",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=31"
    },
    "entries": [
     {
@@ -38,19 +40,7 @@
       "segment": "s03"
      },
      "claim": "Historical English source expression: “Who made heaven and earth.” This supplies the corresponding English expression at the addressed scope."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
-   "digital_item": "item.missal-for-the-use-of-the-laity-1853.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 4",
-    "scan": "scan p. 31"
-   },
-   "entries": [
+    },
     {
      "id": "use.en.a14988cccfb488b75c29",
      "address": {
@@ -60,7 +50,7 @@
      "claim": "Our help is in the name of the Lord."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

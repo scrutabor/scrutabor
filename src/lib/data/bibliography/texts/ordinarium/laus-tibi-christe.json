@@ -1,0 +1,48 @@
+{
+ "id": "ordinarium.laus-tibi-christe",
+ "source_groups": [
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "direct_approved_print",
+   "locator": {
+    "section": "Rubricae generales Missalis Romani, 471",
+    "printed": "p. xxxii",
+    "scan": "PDF p. 38",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n37/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.laus-tibi-christe.response-1962",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "No. 471 prints the three-word response after the Gospel as a complete sentence, with a full stop."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "section": "Ritus servandus in celebratione Missae, VI, 2",
+    "printed": "p. liii",
+    "scan": "PDF p. 59",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n58/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.laus-tibi-christe.ritus-servandus-vi-2",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Gospel rubric puts the response on the lips of the server. A comma after Christe continues the sentence with the priest kissing the book."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": []
+}

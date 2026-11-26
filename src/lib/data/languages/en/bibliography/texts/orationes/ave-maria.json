@@ -6,8 +6,31 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "pp. 9–10",
+    "scan": "DjVu pp. 22–23",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=22"
+   },
+   "entries": [
+    {
+     "id": "use.en.499b6add6f453cf79850",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "The Angelic Salutation on pp. 9–10 reads “blessed art thou amongst women”. The English prayer here has “among women”.",
+     "reader_note": "The 1901 edition reads “amongst women” at this point."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 10",
-    "scan": "scan p. 23"
+    "scan": "DjVu p. 23",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=23"
    },
    "entries": [
     {
@@ -19,27 +42,7 @@
      "claim": "Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
     }
    ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 9–10",
-    "scan": "scan pp. 22–23"
-   },
-   "entries": [
-    {
-     "id": "use.en.499b6add6f453cf79850",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Hail Mary, full of grace, the Lord is with thee, blessed art thou among women, and blessed is the fruit of thy womb, Jesus."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

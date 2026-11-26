@@ -3,11 +3,33 @@
  "source_groups": [
   {
    "edition": "edition.blessed-be-god-1925",
-   "digital_item": "item.blessed-be-god-1925.scan",
+   "digital_item": "item.blessed-be-god.fuller",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "pp. 490–491",
+    "scan": "PDF p. 267",
+    "page_url": "https://archive.org/details/blessed-be-god-a-complete-catholic-prayer-book/page/n266/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.en.orationes.te-deum.blessed-be-god-1925",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The English translation follows pp. 490–491 for segments 1–25 and the first petition of segment 27. It adds “the” before “Prophets” and “Martyrs”, reads “doth praise” for “praise”, and alters the word order in the line about the Church. For segment 26 the book reads “to keep us from sin”.",
+     "reader_note": "The hymn on pp. 490–491 ends with the first “Have mercy on us, O Lord, have mercy on us.” The final petitions in the reader are also found in A Manual of Prayers, p. 162."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.blessed-be-god.princeton",
+   "digital_item": "item.blessed-be-god-1925.scan",
+   "role": "historical_wording_comparator",
+   "locator": {
     "printed": "pp. 500–501",
-    "scan": "scan pp. 550–551"
+    "scan": "PDF pp. 550–551",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Blessedbegodcomp00call.pdf?page=550"
    },
    "entries": [
     {
@@ -15,11 +37,11 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording basis of this text as far as “Have mercy on us, O Lord, have mercy on us.”, where the book ends the hymn. This text departs from the print in four places. The book reads “the admirable company of prophets”, “the white-robed army of martyrs, praise” and “Thee, the holy Church throughout the world doth acknowledge”, and at the petition for this day it has “from” where this text reads “without”. Capitals, spelling and punctuation are otherwise normalized.",
-     "reader_note": "The printed hymn ends with “Have mercy on us, O Lord, have mercy on us.” Several phrases differ from the wording shown here; the remaining petitions are attested by other sources listed here."
+     "claim": "The Princeton copy has the same text on pp. 500–501 as the 744-page edition on pp. 490–491. Both end with “Have mercy on us, O Lord, have mercy on us.”",
+     "reader_note": "The section “Feasts and Fasts” (p. vii) bears a 1952 copyright. The Te Deum on pp. 500–501 has the same wording as the hymn on pp. 490–491 in the 1925 edition."
     }
    ],
-   "verified_on": "2026-11-06"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.douay-rheims-bible-challoner",
@@ -28,7 +50,8 @@
    "locator": {
     "printed": "Old Testament p. 594",
     "scan": "PDF p. 607",
-    "section": "Psalm 30:2 (Vulgate numbering)"
+    "section": "Psalm 30:2 (Vulgate numbering)",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_Holy_Bible_-_Douay_Rheims_Version.pdf?page=607"
    },
    "entries": [
     {
@@ -40,7 +63,7 @@
      "claim": "Historical English source expression: “In thee, O Lord, have I hoped, let me never be confounded:” The corresponding English expression is retained with capitalization and punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-11-05"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.douay-rheims-bible-challoner",
@@ -49,7 +72,8 @@
    "locator": {
     "printed": "Old Testament p. 596",
     "scan": "PDF p. 609",
-    "section": "Psalm 32:22 (Vulgate numbering)"
+    "section": "Psalm 32:22 (Vulgate numbering)",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_Holy_Bible_-_Douay_Rheims_Version.pdf?page=609"
    },
    "entries": [
     {
@@ -62,7 +86,7 @@
      "reader_note": "This psalm attests the second petition, “Let Thy mercy, O Lord, be upon us, as we have hoped in Thee.” It is not a witness to the whole hymn."
     }
    ],
-   "verified_on": "2026-11-05"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.manual-of-prayers-catholic-laity-1888",
@@ -70,7 +94,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 162",
-    "scan": "PDF p. 174"
+    "scan": "PDF p. 174",
+    "page_url": "https://archive.org/download/manualofprayersf00cath/manualofprayersf00cath.pdf#page=174"
    },
    "entries": [
     {
@@ -82,24 +107,37 @@
      "claim": "Historical English wording basis of this segment. Printed p. 162 reads “Vouchsafe, O Lord, this day : to keep us without sin.” The words are retained. The mediant colon of the chant pointing is dropped."
     },
     {
-     "id": "use.en.orationes.te-deum.s27.manual1888",
-     "address": {
-      "kind": "segment",
-      "segment": "s27"
-     },
-     "claim": "Further historical English witness of the whole segment, printed inside the Te Deum. Printed p. 162 reads “Have mercy on us, O Lord ; have mercy on us. Let Thy mercy, O Lord, be upon us : as we have hoped in Thee.” The words are retained. The semicolon after the first vocative and the mediant colon of the chant pointing become commas."
-    },
-    {
      "id": "use.en.orationes.te-deum.s28.manual1888",
      "address": {
       "kind": "segment",
       "segment": "s28"
      },
      "claim": "Second historical English witness of this verse, printed inside the Te Deum. Printed p. 162 reads “O Lord, in Thee have I hoped : let me never be confounded.” The vocative stands first in print. The second clause is identical to this text. The first clause is reordered here, so the page is not an exact witness of the segment.",
-     "reader_note": "The printed line begins “O Lord, in Thee have I hoped”. Its word order differs from the line shown here."
+     "reader_note": "In verse 28 the printed line begins “O Lord, in Thee have I hoped”. Its word order differs from the line shown here."
     }
    ],
-   "verified_on": "2026-11-06"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.manual-of-prayers-catholic-laity-1888",
+   "digital_item": "item.manual-of-prayers-catholic-laity-1888.ia",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 162",
+    "scan": "PDF p. 174",
+    "page_url": "https://archive.org/download/manualofprayersf00cath/manualofprayersf00cath.pdf#page=174"
+   },
+   "entries": [
+    {
+     "id": "use.en.orationes.te-deum.s27.manual1888",
+     "address": {
+      "kind": "segment",
+      "segment": "s27"
+     },
+     "claim": "The Manual prints both petitions together on p. 162. It reads “Have mercy on us, O Lord : have mercy on us. Let Thy mercy, O Lord, be upon us : as we have hoped in Thee.” The reader has commas at both chant divisions."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": [],

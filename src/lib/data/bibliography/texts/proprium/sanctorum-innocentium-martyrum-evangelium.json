@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/12-28.txt [Evangelium], direct body line 61; heading 58, title 59, reference 60"
+    "section": "web/www/missa/Latin/Sancti/12-28.txt [Evangelium], direct body line 61; heading 58, title 59, reference 60",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/12-28.txt#L61",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/12-28.txt#L61"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact pinned inline Latin Gospel corroborates the substantive 136-word body. Its source spelling, accent, capitalization and punctuation variants are recorded in the apparatus; this is a derived comparison source, not the controlling print or an inherited reading."
     }
    ],
-   "verified_on": "2026-10-01"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

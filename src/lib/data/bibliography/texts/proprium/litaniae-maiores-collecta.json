@@ -70,8 +70,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 510",
-    "scan": "PDF physical p. 591",
-    "section": "no.2442, commemoration Oratio"
+    "scan": "PDF p. 591",
+    "section": "Die 25 aprilis. S. Marci Evangelistæ. Et fit commemoratio Rogationum. Oratio, n. 2442.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=591"
    },
    "entries": [
     {
@@ -82,7 +83,7 @@
      "claim": "This proper page prints the 20-word Collect body (w001–w020) and the abbreviated Per Dominum cue. The full w021–w042 conclusion and Amen are not printed in full on this proper page; the same-edition RG115a dependency supplies them. Headings and adjoining rubrics are excluded. This is a narrow textual source claim, not complete commemoration/calendar or actor approval."
     }
    ],
-   "verified_on": "2026-10-18"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -91,7 +92,8 @@
    "locator": {
     "printed": "p. XIX",
     "scan": "PDF physical p. 17",
-    "section": "Rubricae generales115a, full Father-directed conclusion; neighbouring115b–e excluded"
+    "section": "Rubricae generales115a, full Father-directed conclusion; neighbouring115b–e excluded",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=17"
    },
    "entries": [
     {
@@ -102,7 +104,7 @@
      "claim": "RG115a prescribes the 21-word Father-directed conclusion and Amen (w021–w042). This formula is supplied after the proper body’s abbreviated cue, not printed continuously on the proper page. The rubric prints a comma after Christum, lowercase qui, the seven selected house stress accents and terminal “Amen;”. The selected response period is an editorial setting. The rule does not assign a response actor; two loci of one edition are not two independent witnesses."
     }
    ],
-   "verified_on": "2026-10-18"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

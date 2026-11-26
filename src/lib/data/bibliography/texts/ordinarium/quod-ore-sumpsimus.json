@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-quod-ore-sumpsimus; closed-literal-selection} (line 347); complete source contexts 345–349"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-ordinarium-quod-ore-sumpsimus; closed-literal-selection} (line 347); complete source contexts 345–349",
+    "passages": [
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L347"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L347"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass Ordo supplies this 15-word literal selection in the stated selection order (347), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +41,32 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The cited page image prints and identifies the complete 1962 liturgical component selected here; shared expansions are bounded in the witness record."
+     "claim": "Page 316 gives the spoken Quod ore súmpsimus and the direction for the wine (s02–s03). The introductory Postea dicit (s01) is at the foot of p. 315."
     }
    ],
    "verified_on": "2026-09-25"
+  },
+  {
+   "edition": "edition.missale-romanum.1962-typica",
+   "digital_item": "item.missale-romanum.1962-typica.ia",
+   "role": "rubric_control",
+   "locator": {
+    "printed": "p. 315",
+    "scan": "leaf n396 / PDF p. 397",
+    "section": "Ordo Missæ — Postea dicit",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n396/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.ordinarium.quod-ore-sumpsimus.opening-rubric.mr1962",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Postea dicit stands at the foot of p. 315 immediately before Quod ore súmpsimus on p. 316."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

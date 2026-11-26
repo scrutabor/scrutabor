@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading line 95, conclusion line 96, response line 97. Original evidence lines 95–97."
+    "section": "Latin/Ordo/Prayers.txt [Per Dominum], heading line 95, conclusion line 96, response line 97. Original evidence lines 95–97.",
+    "passages": [
+     {
+      "heading": "Per Dominum",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L95-L97"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L95-L97"
    },
    "entries": [
     {
@@ -17,14 +24,21 @@
      "claim": "The unmodified pinned shared formula supplies the twenty-one-word conclusion and distinct Amen after resolving $Per Dominum. Its original coordinates are 96–97. Earlier coordinates 97–98 referred to a local copy with an inserted preparation comment. Speaker markers are framing."
     }
    ],
-   "verified_on": "2026-09-29"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Epi4-0.txt [Oratio], heading line 15, proper body line 16, $Per Dominum reference line 17"
+    "section": "missa/Latin/Tempora/Epi4-0.txt [Oratio], 15–17",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi4-0.txt#L15-L17",
+    "passages": [
+     {
+      "heading": "Oratio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi4-0.txt#L15-L17"
+     }
+    ]
    },
    "entries": [
     {
@@ -35,7 +49,7 @@
      "claim": "The pinned file provides the thirty-word proper body and an explicit call to the shared Per Dominum formula. The full ending is established by its separate original-byte source use and raw binding."
     }
    ],
-   "verified_on": "2026-09-12"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

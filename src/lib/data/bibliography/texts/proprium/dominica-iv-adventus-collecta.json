@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Ordo/Prayers.txt lines116-117"
+    "section": "Latin/Ordo/Prayers.txt lines116-117",
+    "passages": [
+     {
+      "heading": "Qui vivis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L115-L117"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L115-L117"
    },
    "entries": [
     {
@@ -18,14 +25,21 @@
      "claim": "Exact selected full conclusion macro and separate response, used with the proper body as one digital comparison witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Adv4-0.txt, lines27-28, selected proper and macro cue"
+    "section": "missa/Latin/Tempora/Adv4-0.txt [Oratio], 26–28",
+    "passages": [
+     {
+      "heading": "Oratio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Adv4-0.txt#L26-L28"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Adv4-0.txt#L26-L28"
    },
    "entries": [
     {
@@ -36,16 +50,17 @@
      "claim": "Pinned proper body and exact selected macro cue. The separately cited formula dependency completes this one derived witness."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
    "digital_item": "item.missale-romanum.1962-typica.ia",
    "role": "official_liturgical_context",
    "locator": {
-    "printed": "pp. xxxii–xxxiv, 225–226",
-    "scan": "leaves n37–n39, n304–n305 / PDF pp. 38–40, 305–306",
-    "section": "RG 480–481, 511 d/i, 513–514; Ordo Missae rubric and chant formula after the secrets"
+    "printed": "pp. xxxiii–xxxiv",
+    "scan": "PDF pp. 39–40",
+    "section": "Rubricae generales Missalis romani, nn. 511 d, 513 a, 514.",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n38/mode/1up"
    },
    "entries": [
     {
@@ -53,10 +68,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The final secret has an audible Per omnia saecula saeculorum followed by the response Amen. Collects and postcommunions are priestly orations with a separate response. These rules determine the modeled boundaries, not the completeness of a date-specific commemoration inventory."
+     "claim": "The celebrant says or sings the collect and its conclusion."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

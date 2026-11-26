@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quad5-5.txt [Graduale], body lines 39–41"
+    "section": "web/www/missa/Latin/Tempora/Quad5-5.txt [Graduale], body lines 39–41",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad5-5.txt#L39"
+     },
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad5-5.txt#L41"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad5-5.txt#L39"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The exact Passion-week passage supplies a Latin parallel, not a September delegation or another independent printed edition."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,7 +36,7 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "pp. 670–671",
-    "scan": "leaf n751 / PDF p. 752",
+    "scan": "leaves n751–n752 / PDF pp. 752–753",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n751/mode/1up"
    },
    "entries": [
@@ -37,7 +48,7 @@
      "claim": "The tract begins at the foot of p. 670 and continues on p. 671. A separate continuation use binds the second page."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

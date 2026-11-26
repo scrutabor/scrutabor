@@ -108,7 +108,7 @@ for (const [lang, wording] of [
 			await sources.locator('summary').click();
 			await expect(sources.getByRole('link', { name: /Annus Sanctus/ })).toHaveAttribute(
 				'href',
-				'https://archive.org/details/annussanctushymn00shiprich/page/91/mode/2up'
+				'https://commons.wikimedia.org/wiki/File:Annus_Sanctus_-_hymns_of_the_church_for_the_ecclesiastical_year_(IA_annussanctushymn00shiprich).pdf?page=153'
 			);
 			await expect(sources).toContainText('pp. 91–92');
 		}

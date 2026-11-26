@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/03-25.txt [Tractus] wrapper lines 27–30; Latin lines 29–30, before separator line 31 and !Tractus line 32"
+    "section": "web/www/missa/Latin/Sancti/03-25.txt [Tractus] wrapper lines 27–30; Latin lines 29–30, before separator line 31 and !Tractus line 32",
+    "passages": [
+     {
+      "heading": "Tractus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L27-L30"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-25.txt#L27-L30"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned wrapper contains two separate printed chants. This use addresses only the graduale body at the stated lines; its exact accidental differences are preserved."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

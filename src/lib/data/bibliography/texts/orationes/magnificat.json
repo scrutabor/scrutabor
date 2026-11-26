@@ -7,7 +7,8 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "p. 143 (canticle and Gloria Patri cue); p. 4 (fixed doxology)",
-    "scan": "PDF scans 187 and 48"
+    "scan": "PDF scans 187 and 48",
+    "page_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf#page=187"
    },
    "entries": [
     {
@@ -18,7 +19,7 @@
      "claim": "Direct witness for the selected Latin text and the stated text boundary."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.breviarium-romanum.1902-pustet",
@@ -26,8 +27,9 @@
    "role": "official_liturgical_context",
    "locator": {
     "printed": "p. 143",
-    "scan": "PDF scan 187",
-    "section": "Feria secunda ad Vesperas; Canticum B. Mariae Virg."
+    "scan": "PDF p. 187",
+    "section": "Dominica ad Vesperas. Canticum B. Mariæ Virg., Lucæ 1 c., col. 1",
+    "page_url": "https://archive.org/download/breviariumromanu04cath/breviariumromanu04cath.pdf#page=187"
    },
    "entries": [
     {
@@ -35,17 +37,18 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Breviary identifies Magnificat as the Canticle of the Blessed Virgin at Monday Vespers."
+     "claim": "The Magnificat appears in the left column at Sunday Vespers. Monday Vespers begins in the next column."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.compendium-of-the-catechism-of-the-catholic-church",
    "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "official_text",
    "locator": {
-    "section": "APPENDIX / A) COMMON PRAYERS / Magnificat"
+    "section": "APPENDIX / A) COMMON PRAYERS / Magnificat",
+    "page_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html#A%29%20COMMON%20PRAYERS:~:text=%C3%81braham%20et%20s%C3%A9mini%20eius%20in%20s%C3%A6cula."
    },
    "entries": [
     {
@@ -57,7 +60,7 @@
      "claim": "The complete Latin doxology only, w090–w109 from Gloria Patri through Amen; not the preceding canticle recension."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": [

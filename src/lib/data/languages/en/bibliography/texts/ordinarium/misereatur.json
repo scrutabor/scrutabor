@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 37",
-    "scan": "PDF p. 49"
+    "scan": "PDF p. 49",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=49"
    },
    "entries": [
     {
@@ -19,7 +20,7 @@
      "claim": "May almighty God have mercy on you and, having forgiven your sins, bring you to eternal life."
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -27,7 +28,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 38",
-    "scan": "PDF pages 50 (one-based)"
+    "scan": "PDF p. 50",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=50"
    },
    "entries": [
     {
@@ -39,7 +41,28 @@
      "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 38–39",
+    "scan": "PDF pp. 50–51",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=50"
+   },
+   "entries": [
+    {
+     "id": "use.en.d847653074f03f178208",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “May the almighty and merciful Lord grant us pardon, absolution, and remission of our sins.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -47,7 +70,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 39",
-    "scan": "PDF pages 51 (one-based)"
+    "scan": "PDF p. 51",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=51"
    },
    "entries": [
     {
@@ -59,27 +83,7 @@
      "claim": "Historical English source expression: “Amen.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 38–39",
-    "scan": "PDF pages 50, 51 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.d847653074f03f178208",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historical English source expression: “May the almighty and merciful Lord grant us pardon, absolution and remission of our sins.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
-    }
-   ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

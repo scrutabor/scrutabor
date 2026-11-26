@@ -6,9 +6,9 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 341",
-    "scan": "PDF s. 355",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 341",
+    "scan": "PDF, s. 355",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=355"
    },
    "entries": [
     {
@@ -20,16 +20,16 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Niech odpoczywają w pokoju wiecznym.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 456",
-    "scan": "PDF s. 458",
-    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+    "printed": "s. 456",
+    "scan": "PDF, s. 458",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=458"
    },
    "entries": [
     {
@@ -41,7 +41,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wieczny odpoczynek racz im dać, Panie, a światłość wiekuista niechaj im świeci.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

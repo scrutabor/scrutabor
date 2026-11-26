@@ -6,9 +6,9 @@
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 10",
-    "scan": "PDF s. 12",
-    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+    "printed": "s. 10",
+    "scan": "PDF, s. 12",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=12"
    },
    "entries": [
     {
@@ -84,16 +84,16 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ojcze nasz, któryś jest w niebie,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 61",
-    "scan": "PDF s. 64",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 61",
+    "scan": "PDF, s. 64",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=64"
    },
    "entries": [
     {
@@ -105,7 +105,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módlmy się.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 for (const [formulary, text, word, gloss] of [
@@ -93,16 +94,15 @@ for (const language of ['pl', 'en'] as const) {
 				? 'rozwinięte zakończenie w027–w047 i Amen w tekście w048'
 				: 'the ending written out in full (w027–w047) and Amen (w048)'
 		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 206, tekst w w. 207 i $Per Dominum w w. 208'
-				: 'heading 206, body 207 and $Per Dominum at line 208'
+		await expectSourcePassage(
+			sources,
+			language,
+			'Postcommunio',
+			'Missa/Sancti/02-02.txt',
+			206,
+			208
 		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
-				: 'heading 95, conclusion 96, response 97'
-		);
+		await expectSourcePassage(sources, language, 'Per Dominum', 'Missa/Ordo/Prayers.txt', 95, 97);
 		for (const leaf of ['n549', 'n22']) {
 			await expect(
 				sources.locator(
@@ -110,20 +110,7 @@ for (const language of ['pl', 'en'] as const) {
 				)
 			).toHaveCount(1);
 		}
-		await expect(
-			sources
-				.locator('li')
-				.filter({
-					hasText:
-						language === 'pl'
-							? 'nagłówek w w. 95, zakończenie w w. 96, odpowiedź w w. 97'
-							: 'heading 95, conclusion 96, response 97'
-				})
-				.locator('a')
-		).toHaveAttribute(
-			'href',
-			'https://github.com/DivinumOfficium/divinum-officium/commit/44667ff518b8ff1439780470828b39714f5306a2'
-		);
+		await expect(sources.locator('a.source-passage')).toHaveCount(2);
 		for (const width of [320, 1280]) {
 			await page.setViewportSize({ width, height: 900 });
 			for (const theme of ['light', 'dark'] as const) {

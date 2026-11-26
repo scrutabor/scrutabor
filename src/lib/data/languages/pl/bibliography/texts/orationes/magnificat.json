@@ -6,9 +6,9 @@
    "digital_item": "item.ksiazka-do-nabozenstwa-1883.commons",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "druk. s. 498",
-    "scan": "DjVu s. 510",
-    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu"
+    "printed": "s. 498",
+    "scan": "DjVu, s. 510",
+    "page_url": "https://commons.wikimedia.org/wiki/File:Ksi%C4%85%C5%BCka_do_nabo%C5%BCe%C5%84stwa_O._Karola_Antoniewicza.djvu?page=510"
    },
    "entries": [
     {
@@ -28,16 +28,16 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 12",
-    "scan": "PDF s. 14",
-    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+    "printed": "s. 12",
+    "scan": "PDF, s. 14",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=14"
    },
    "entries": [
     {
@@ -57,16 +57,16 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Chwała Ojcu i Synowi, i Duchowi Świętemu.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
    "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 324–325",
-    "scan": "PDF ss. 326–327",
-    "page_url": "https://sbc.org.pl/dlibra/publication/230307/edition/217677/droga-do-nieba-wyborek-modlitw-i-piesni"
+    "printed": "s. 324",
+    "scan": "PDF, s. 326",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=326"
    },
    "entries": [
     {
@@ -76,14 +76,6 @@
       "segment": "s01"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Wielbi dusza moja Pana.”"
-    },
-    {
-     "id": "use.pl.578b7381bece5cf26863",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Głodnych napełnił dobrami, a bogatych odesłał z niczym.”"
     },
     {
      "id": "use.pl.73e5389bd97f0e654067",
@@ -110,22 +102,6 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Gdyż wielkie rzeczy uczynił mi Ten, który jest potężny, i święte jest Jego imię.”"
     },
     {
-     "id": "use.pl.a768941703395898fd3b",
-     "address": {
-      "kind": "segment",
-      "segment": "s09"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ujął się za Izraelem, swoim sługą, pamiętając o swoim miłosierdziu.”"
-    },
-    {
-     "id": "use.pl.a983b1ee91c112b1f746",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak powiedział naszym ojcom, Abrahamowi i jego potomstwu na wieki.”"
-    },
-    {
      "id": "use.pl.b04d6d6e8efb30a222f0",
      "address": {
       "kind": "segment",
@@ -150,7 +126,44 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „I rozradował się duch mój w Bogu, moim Zbawicielu.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.ludwik-skowronek-droga-do-nieba-1907",
+   "digital_item": "item.ludwik-skowronek-droga-do-nieba-1907.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 325",
+    "scan": "PDF, s. 327",
+    "page_url": "https://sbc.org.pl/Content/217677/PDF/i738477-0000-00-0001.pdf#page=327"
+   },
+   "entries": [
+    {
+     "id": "use.pl.578b7381bece5cf26863",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Głodnych napełnił dobrami, a bogatych odesłał z niczym.”"
+    },
+    {
+     "id": "use.pl.a768941703395898fd3b",
+     "address": {
+      "kind": "segment",
+      "segment": "s09"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Ujął się za Izraelem, swoim sługą, pamiętając o swoim miłosierdziu.”"
+    },
+    {
+     "id": "use.pl.a983b1ee91c112b1f746",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Jak powiedział naszym ojcom, Abrahamowi i jego potomstwu na wieki.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

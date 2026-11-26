@@ -7,8 +7,9 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 55",
-    "scan": "scan p. 68",
-    "section": "Gloria Patri only (s01/w037–056); Holy Ghost becomes Holy Spirit"
+    "scan": "DjVu p. 68",
+    "section": "Gloria Patri only (s01/w037–056); Holy Ghost becomes Holy Spirit",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=68"
    },
    "entries": [
     {
@@ -20,7 +21,7 @@
      "claim": "Historical English wording basis for the Gloria Patri only (s01/w037–056). The received formula uses Holy Spirit for the printed Holy Ghost; the other material wording is retained. This page does not supply the Introit proper, psalm verse or repeated antiphon."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -28,8 +29,9 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 231",
-    "scan": "scan p. 247",
-    "section": "Psalm verse only (s01/w025–036); shall becomes will"
+    "scan": "PDF p. 247",
+    "section": "Psalm verse only (s01/w025–036); shall becomes will",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=247"
    },
    "entries": [
     {
@@ -41,7 +43,7 @@
      "claim": "Historical English wording basis for the psalm verse only (s01/w025–036). The retained sentence uses will in place of printed shall. This use does not attribute the new proper, expanded Gloria Patri or reprise to this page."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

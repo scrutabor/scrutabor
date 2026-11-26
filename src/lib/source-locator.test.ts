@@ -1,7 +1,26 @@
 import { describe, expect, it } from 'vitest';
-import { formatSourceLocator } from './source-locator';
+import { formatSourceLocator, sourcePassageLink, sourcePassageNote } from './source-locator';
 
 describe('source locators', () => {
+	it('keeps the source file and localizes single lines and ranges', () => {
+		const url = 'https://example.org/blob/commit/web/www/missa/Latin/Sancti/02-22.txt#L52-L53';
+		const passage = { heading: 'Graduale', url };
+		expect(sourcePassageLink(passage, 'pl')).toEqual({
+			label: 'Graduale · Missa/Sancti/02-22.txt · w. 52–53',
+			url
+		});
+		expect(sourcePassageLink(passage, 'en').label).toBe(
+			'Graduale · Missa/Sancti/02-22.txt · lines 52–53'
+		);
+		const office = {
+			heading: 'Gloria Patri',
+			url: url.replace('/missa/', '/horas/').replace('#L52-L53', '#L13')
+		};
+		expect(sourcePassageLink(office, 'en').label).toBe(
+			'Gloria Patri · Horae/Sancti/02-22.txt · line 13'
+		);
+	});
+
 	it('distinguishes a prayer and its abbreviated ending from the pages supplying that ending', () => {
 		const raw =
 			'Proper body and abbreviated conclusion cue; full ending supplied from the printed formulae on pp. 123 and 226 under RG 115 a · p. 43 · leaf n122 / PDF p. 123';
@@ -11,6 +30,45 @@ describe('source locators', () => {
 		expect(formatSourceLocator(raw, 'en')).toContain(
 			'The full ending comes from the formulas printed on pp. 123 and 226, following RG 115 a'
 		);
+	});
+
+	it('distinguishes the archived Mass file from the Hours file with the same name', () => {
+		const base = 'https://example.org/blob/revision/';
+		const archived = {
+			heading: 'Communio',
+			url: base + 'obsolete/missa/Latin/Commune/C10a.txt#L47-L49'
+		};
+		const office = {
+			heading: 'Communio',
+			url: base + 'web/www/horas/Latin/Commune/C10a.txt#L39-L41'
+		};
+		expect(sourcePassageLink(archived, 'pl')).toEqual({
+			url: archived.url,
+			label: 'Communio · obsolete/missa/Latin/Commune/C10a.txt · w. 47–49'
+		});
+		expect(sourcePassageLink(archived, 'en').label).toBe(
+			'Communio · obsolete/missa/Latin/Commune/C10a.txt · lines 47–49'
+		);
+		expect(sourcePassageLink(office, 'pl').label).toBe(
+			'Communio · Horae/Commune/C10a.txt · w. 39–41'
+		);
+		expect(sourcePassageLink(office, 'en').label).toBe(
+			'Communio · Horae/Commune/C10a.txt · lines 39–41'
+		);
+	});
+
+	it('explains which file supplies the Communion and how the February Gradual is selected', () => {
+		for (const lang of ['pl', 'en'] as const) {
+			expect(sourcePassageNote('The Communion in the archived Marian Common.', lang)).toContain(
+				'Ecce, Virgo'
+			);
+			expect(
+				sourcePassageNote('In Cathedra S. Petri. Gradual in the Tractus section.', lang)
+			).toContain('Tractus');
+			expect(sourcePassageNote('Praefatio de beata Maria Virgine · Festivitáte', lang)).toContain(
+				'Festivitáte'
+			);
+		}
 	});
 
 	it('keeps dictionary IDs, leaf IDs and physical page numbers distinct', () => {
@@ -37,9 +95,13 @@ describe('source locators', () => {
 		expect(formatSourceLocator('printed p. 117; printed pp. 182–185', 'pl')).toBe(
 			'wyd. drukowane, s. 117; wyd. drukowane, s. 182–185'
 		);
+		const teDeum = {
+			pl: 'Dodatek, część A. Modlitwy wspólne · Te Deum',
+			en: 'Appendix, part A. Common prayers · Te Deum'
+		};
 		for (const lang of ['pl', 'en'] as const) {
 			expect(formatSourceLocator('APPENDIX / A) COMMON PRAYERS / Te Deum', lang)).toBe(
-				'APPENDIX / A) COMMON PRAYERS / Te Deum'
+				teDeum[lang]
 			);
 			expect(formatSourceLocator('Nova canticorum editio · tabula IV', lang)).toBe(
 				'Nova canticorum editio · tabula IV'

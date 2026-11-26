@@ -6,8 +6,9 @@
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s.58",
-    "scan": "PDF61"
+    "printed": "s. 58",
+    "scan": "PDF, s. 61",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=61"
    },
    "entries": [
     {
@@ -59,15 +60,16 @@
      "claim": "Strona drukuje „To jest bowiem ciało moje.”; zachowane brzmienie różni się jedynie wielką literą w „Ciało”."
     }
    ],
-   "verified_on": "2026-10-12"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "druk. s.58",
-    "scan": "PDF61"
+    "printed": "s. 58",
+    "scan": "PDF, s. 61",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=61"
    },
    "entries": [
     {
@@ -79,7 +81,7 @@
      "claim": "Starsze brzmienie zaproszenia potwierdza „bierzcie i jedzcie wszyscy”; nie zawiera „z tego”, odpowiadającego łacińskiemu ex hoc."
     }
    ],
-   "verified_on": "2026-10-12"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

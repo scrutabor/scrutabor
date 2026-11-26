@@ -6,28 +6,9 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 282",
-    "scan": "scan p. 295"
-   },
-   "entries": [
-    {
-     "id": "use.en.3cef4ab3a78de318c9fd",
-     "address": {
-      "kind": "segment",
-      "segment": "s002"
-     },
-     "claim": "May they rest in peace."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
     "printed": "pp. 281–282",
-    "scan": "scan pp. 294–295"
+    "scan": "DjVu pp. 294–295",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=294"
    },
    "entries": [
     {
@@ -39,7 +20,28 @@
      "claim": "Eternal rest grant unto them, O Lord, and let perpetual light shine upon them."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 282",
+    "scan": "DjVu p. 295",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=295"
+   },
+   "entries": [
+    {
+     "id": "use.en.3cef4ab3a78de318c9fd",
+     "address": {
+      "kind": "segment",
+      "segment": "s002"
+     },
+     "claim": "May they rest in peace."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

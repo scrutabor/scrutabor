@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 254",
-    "scan": "scan p. 270"
+    "scan": "PDF p. 270",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=270"
    },
    "entries": [
     {
@@ -16,10 +17,10 @@
       "kind": "segment",
       "segment": "s01"
      },
-     "claim": "Historical English basis of the Tract (the Douay Ps 128:1–4 through this missal), revised against the Latin: sinners (peccatóres), their iniquities, has cut (the Missal prints concídit)."
+     "claim": "The 1846 English Tract reads “the wicked”, “their iniquity” and “will cut the necks of sinners”. The current English follows peccatóres, iniquitátes and concídit in the 1962 Latin and gives “sinners”, “their iniquities” and “has cut”."
     }
    ],
-   "verified_on": "2026-10-11"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

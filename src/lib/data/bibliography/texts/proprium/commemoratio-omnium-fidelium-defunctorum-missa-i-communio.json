@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/horas/Latin/Commune/C9.txt [Communio] (lines 419-419); web/www/horas/Latin/Commune/C9.txt [Communio] (line 420, chars 2:44); web/www/horas/Latin/Commune/C9.txt [Communio] (lines 421-421); web/www/horas/Latin/Commune/C9.txt [Communio] (line 422, chars 2:44)"
+    "section": "web/www/horas/Latin/Commune/C9.txt [Communio] (lines 419-419); web/www/horas/Latin/Commune/C9.txt [Communio] (line 420, chars 2:44); web/www/horas/Latin/Commune/C9.txt [Communio] (lines 421-421); web/www/horas/Latin/Commune/C9.txt [Communio] (line 422, chars 2:44)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C9.txt#L417-L422",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C9.txt#L417-L422"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Common C9 section supplies the complete literal chant comparison. This use does not independently establish the Mass I assignment, performer, or genealogical independence from the printed tradition."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

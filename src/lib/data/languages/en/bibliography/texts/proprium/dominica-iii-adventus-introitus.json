@@ -6,28 +6,9 @@
    "digital_item": "item.missal-for-the-laity-1846.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 37",
-    "scan": "PDF p. 49"
-   },
-   "entries": [
-    {
-     "id": "use.en.a0037df0268fb6aafed6",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Rejoice in the Lord always; again I say, rejoice. Let your gentleness be known to all people, for the Lord is near. Be anxious about nothing, but in every prayer make your petitions known to God."
-    }
-   ],
-   "verified_on": "2026-09-26"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
     "printed": "pp. 92–93",
-    "scan": "PDF pp. 104–105"
+    "scan": "PDF pp. 104–105",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=104"
    },
    "entries": [
     {
@@ -36,10 +17,31 @@
       "kind": "segment",
       "segment": "s02"
      },
-     "claim": "Rejoice in the Lord always; again I say, rejoice. Let your gentleness be known to all people, for the Lord is near. Be anxious about nothing, but in every prayer make your petitions known to God."
+     "claim": "The corresponding English in the 1846 Missal reads “O Lord, thou hast blessed thy land: thou hast turned away the captivity of Jacob.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "p. 37",
+    "scan": "PDF p. 49",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=49"
+   },
+   "entries": [
+    {
+     "id": "use.en.a0037df0268fb6aafed6",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "The corresponding English in the 1846 Missal reads “Glory be to the Father, and to the Son, and to the Holy Ghost. As it was in the beginning, is now, and ever shall be, world without end. Amen.” The cited words are the common doxology in the Ordinary. This Introit uses Holy Spirit for the printed Holy Ghost."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

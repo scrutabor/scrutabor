@@ -6,7 +6,22 @@
    "digital_item": "item.divinum-officium-missa.21cb2d37.advent-iv",
    "role": "rubric_control",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv4-0.txt [Communio], heading56, literal @Commune/C10a:Communio reference57"
+    "section": "The Advent Communion and its reference to the Marian Common.",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv4-0.txt#L56-L57"
+     },
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/horas/Latin/Commune/C10a.txt#L39-L41"
+     },
+     {
+      "heading": "setupstring",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/cgi-bin/DivinumOfficium/SetupString.pl#L569-L574"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/web/www/missa/Latin/Tempora/Adv4-0.txt#L56-L57"
    },
    "entries": [
     {
@@ -14,17 +29,24 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Advent IV caller supplies the literal same-section reference to Commune/C10a, not the Communion words. At this revision the retained destination is obsolete/missa/Latin/Commune/C10a.txt."
+     "claim": "The Advent formulary refers to Commune/C10a:Communio. In this revision the Mass program reads that section from the Hours directory."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.21cb2d37",
    "digital_item": "item.divinum-officium-missa.21cb2d37.marian-common",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Adv4-0.txt [Communio] (lines 57-57); obsolete/missa/Latin/Commune/C10a.txt [Communio] (lines 48-49)"
+    "section": "The Communion in the archived Marian Common.",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/obsolete/missa/Latin/Commune/C10a.txt#L47-L49",
+    "passages": [
+     {
+      "heading": "Communio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/21cb2d370337ec1fd668e96d035622b4296c32cb/obsolete/missa/Latin/Commune/C10a.txt#L47-L49"
+     }
+    ]
    },
    "entries": [
     {
@@ -32,10 +54,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The exact revision supplies this component as a derived digital comparison. The common file supplies the complete Communion; the Advent IV caller reference is separately inventoried. Agreement or byte-identical later data does not establish historical transcription genesis or genealogical independence."
+     "claim": "The archived Marian Common supplies the Communion antiphon Ecce, Virgo. The Advent formulary and the file used by the Mass program are cited separately."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

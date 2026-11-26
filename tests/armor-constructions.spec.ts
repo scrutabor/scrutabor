@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'dominica-xxi-post-pentecosten';
@@ -86,11 +87,7 @@ for (const language of ['pl', 'en'] as const) {
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
 		await expect(sources.locator('li')).toHaveCount(3);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'Latin/Tempora/Pent21-0.txt [Lectio], znacznik w w. 25, tytuł w w. 26, odsyłacz w w. 27 i tekst w w. 28'
-				: 'Latin/Tempora/Pent21-0.txt [Lectio], marker 25, title 26, reference 27, body 28'
-		);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Tempora/Pent21-0.txt', 28);
 		await expect(sources).toContainText(
 			language === 'pl' ? 's. 408 · obraz n489 / PDF, s. 490' : 'p. 408 · leaf n489 / PDF p. 490'
 		);

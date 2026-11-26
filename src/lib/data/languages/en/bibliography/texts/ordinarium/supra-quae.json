@@ -7,27 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 67",
-    "scan": "PDF pages 79 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.4277eda43a657b0875e4",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Historical English source expression: “and that which thy high-priest Melchisedech offered to thee, a holy sacrifice, an unspotted victim.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 67",
-    "scan": "scan p. 79"
+    "scan": "PDF p. 79",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=79"
    },
    "entries": [
     {
@@ -37,9 +18,17 @@
       "segment": "s02"
      },
      "claim": "Deign to look upon them with a gracious and serene countenance and to regard them as accepted, as You deigned to accept the gifts of Your righteous servant Abel and the sacrifice of our Patriarch Abraham:"
+    },
+    {
+     "id": "use.en.4277eda43a657b0875e4",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historical English source expression: “and that which thy high-priest Melchisedech offered to thee, a holy sacrifice and unspotted victim.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-use-of-the-laity-1853",
@@ -47,7 +36,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 26",
-    "scan": "scan p. 53"
+    "scan": "PDF p. 53",
+    "page_url": "https://archive.org/download/missal_for_use_of_laity_1853-f_c_husenbeth/missal_for_use_of_laity_1853-f_c_husenbeth.pdf#page=53"
    },
    "entries": [
     {
@@ -59,7 +49,7 @@
      "claim": "Deign to look upon them with a gracious and serene countenance and to regard them as accepted, as You deigned to accept the gifts of Your righteous servant Abel and the sacrifice of our Patriarch Abraham:"
     }
    ],
-   "verified_on": "2026-09-26"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

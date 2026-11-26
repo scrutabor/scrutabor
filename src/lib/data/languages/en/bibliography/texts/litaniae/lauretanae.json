@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 40",
-    "scan": "DJVU physical pages 53 (one-based); indices 52 (zero-based)"
+    "scan": "DjVu p. 53",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=53"
    },
    "entries": [
     {
@@ -17,6 +18,14 @@
       "segment": "s009"
      },
      "claim": "Historical English source expression: “have mercy on us” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.51c3f49bd588b1740a99",
+     "address": {
+      "kind": "segment",
+      "segment": "s003"
+     },
+     "claim": "This litany prints “Lord, have mercy on us.” The shorter current invocation omits “on us”."
     },
     {
      "id": "use.en.7e07c517f68cfb74fe41",
@@ -33,6 +42,14 @@
       "segment": "s008"
      },
      "claim": "Historical English source expression: “God the Son, Redeemer of the world” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    },
+    {
+     "id": "use.en.8982dc209e38ca2571a3",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "This litany prints “Lord, have mercy on us.” The shorter current invocation omits “on us”."
     },
     {
      "id": "use.en.a08670b5088455e236c0",
@@ -59,7 +76,7 @@
      "claim": "Historical English source expression: “have mercy on us” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -67,7 +84,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 41",
-    "scan": "DJVU physical pages 54 (one-based); indices 53 (zero-based)"
+    "scan": "DjVu p. 54",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=54"
    },
    "entries": [
     {
@@ -359,7 +377,7 @@
      "claim": "Historical English source expression: “Pray for us.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -367,7 +385,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 42",
-    "scan": "DJVU physical pages 55 (one-based); indices 54 (zero-based)"
+    "scan": "DjVu p. 55",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=55"
    },
    "entries": [
     {
@@ -440,7 +459,7 @@
       "kind": "segment",
       "segment": "s072"
      },
-     "claim": "Historical English source expression: “Mystical Rose” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+     "claim": "Historical English source expression: “Mystical rose” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.60986a7c43a6385ef1e5",
@@ -659,7 +678,7 @@
      "claim": "Historical English source expression: “Pray for us.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription. A printed response or response brace supplies this repeated response, not an additional adjacent invocation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -667,7 +686,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 43",
-    "scan": "DJVU physical pages 56 (one-based); indices 55 (zero-based)"
+    "scan": "DjVu p. 56",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=56"
    },
    "entries": [
     {
@@ -868,7 +888,7 @@
       "kind": "segment",
       "segment": "s110"
      },
-     "claim": "Historical English source expression: “Queen of all saints” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+     "claim": "Historical English source expression: “Queen of all Saints” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.b3c2b9d548e3cb906554",
@@ -951,7 +971,7 @@
      "claim": "Historical English source expression: “Queen of Virgins” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -959,7 +979,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 44",
-    "scan": "DJVU physical pages 57 (one-based); indices 56 (zero-based)"
+    "scan": "DjVu p. 57",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=57"
    },
    "entries": [
     {
@@ -1019,35 +1040,7 @@
      "claim": "Historical English source expression: “have mercy on us” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 40–45",
-    "scan": "scan pp. 53–58"
-   },
-   "entries": [
-    {
-     "id": "use.en.51c3f49bd588b1740a99",
-     "address": {
-      "kind": "segment",
-      "segment": "s003"
-     },
-     "claim": "Lord, have mercy."
-    },
-    {
-     "id": "use.en.8982dc209e38ca2571a3",
-     "address": {
-      "kind": "segment",
-      "segment": "s001"
-     },
-     "claim": "Lord, have mercy."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
@@ -1055,7 +1048,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 219",
-    "scan": "scan p. 250"
+    "scan": "PDF p. 250",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=250"
    },
    "entries": [
     {
@@ -1067,7 +1061,7 @@
      "claim": "Historical basis for the revised English collect body. The selected wording uses lasting health for perpetual health, singular present sorrow for present sorrows, and enjoy eternal gladness for come to eternal joys. Its conclusion follows the shorter selected Latin: Through Christ our Lord. The source prints through our Lord Jesus Christ and does not separately print Amen after this paragraph. This is not a verbatim witness to the complete selected paragraph."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-raccolta-1910",
@@ -1075,9 +1069,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 168",
-    "scan": "PDF pages 188 (one-based)"
+    "scan": "PDF p. 188",
+    "page_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf#page=188"
    },
    "entries": [
+    {
+     "id": "use.en.212afcf69ea31801500e",
+     "address": {
+      "kind": "segment",
+      "segment": "s001"
+     },
+     "claim": "Lord, have mercy."
+    },
     {
      "id": "use.en.37e312cdff72549516af",
      "address": {
@@ -1093,26 +1096,6 @@
       "segment": "s042"
      },
      "claim": "Historical English source expression: “Mother of Good Counsel” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-raccolta-1910",
-   "digital_item": "item.raccolta-1910.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 167–170",
-    "scan": "scan pp. 187–190"
-   },
-   "entries": [
-    {
-     "id": "use.en.212afcf69ea31801500e",
-     "address": {
-      "kind": "segment",
-      "segment": "s001"
-     },
-     "claim": "Lord, have mercy."
     },
     {
      "id": "use.en.6078809bcdad1ec010ae",
@@ -1123,7 +1106,7 @@
      "claim": "Lord, have mercy."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

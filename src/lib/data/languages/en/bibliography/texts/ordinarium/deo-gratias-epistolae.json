@@ -6,8 +6,9 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "p. 30",
-    "scan": "scan p. 43"
+    "printed": "p. 74",
+    "scan": "DjVu p. 87",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=87"
    },
    "entries": [
     {
@@ -15,10 +16,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Historical English wording witness for the complete ordinarium.deo-gratias-epistolae text."
+     "claim": "The Missal portion prints “R. Thanks be to God.” after the Epistle, paired with “R. Deo gratias.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const text = 'dominica-in-albis-postcommunio';
@@ -132,13 +133,16 @@ for (const language of ['pl', 'en'] as const) {
 		);
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		for (const locator of [
-			language === 'pl' ? 'tekst w w. 53 i odsyłacz w w. 54' : 'body 53 and reference 54',
-			language === 'pl' ? 'zakończenie w w. 96, odpowiedź w w. 97' : 'conclusion 96, response 97',
-			'RG 115 a'
-		]) {
-			await expect(sources).toContainText(locator);
-		}
+		await expectSourcePassage(
+			sources,
+			language,
+			'Postcommunio',
+			'Missa/Tempora/Pasc1-0.txt',
+			52,
+			54
+		);
+		await expectSourcePassage(sources, language, 'Per Dominum', 'Missa/Ordo/Prayers.txt', 95, 97);
+		await expect(sources).toContainText('RG 115 a');
 		for (const leaf of [416, 22]) {
 			await expect(
 				sources.locator(

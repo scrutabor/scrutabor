@@ -695,7 +695,7 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(page.locator('h1')).toHaveText('Bibliografia');
 	await expect(page.locator('.source-section h2')).toHaveText([
 		'Łacińskie świadectwa tekstu',
-		'Dawne przekłady',
+		'Źródła przekładów',
 		'Dokumenty urzędowe i historia liturgii',
 		'Pismo Święte, język i opracowania'
 	]);
@@ -708,7 +708,11 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	expect(await sources.count()).toBeGreaterThan(0);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
 	await expect(page.locator('main')).not.toContainText('Powściągliwość i Praca');
-	await expect(page.locator('main')).not.toContainText('De musica sacra et sacra liturgia');
+	await expect(
+		page
+			.locator('section[aria-labelledby="section-official_documents_and_liturgical_history"] cite')
+			.filter({ hasText: 'Instructio de musica sacra et sacra liturgia' })
+	).toHaveCount(1);
 
 	const breviary = page
 		.locator('.source-section')
@@ -739,18 +743,22 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(compendium).toContainText('świadectwo tekstu łacińskiego');
 	await expect(compendium).not.toContainText('wydaniu urzędowym');
 
-	const gazeta = page.locator('details', {
-		hasText: 'Gazeta Kościelna, R. 9, nr 16'
-	});
-	await gazeta.locator('summary').click();
-	await expect(gazeta).toContainText('druk. s. 167 · PDF s. 3');
-	await expect(gazeta.getByRole('link', { name: /druk\. s\. 167/ })).toHaveAttribute(
+	await expect(page.locator('details', { hasText: 'Gazeta Kościelna' })).toHaveCount(0);
+	const resolution = page
+		.locator('.source-section', {
+			has: page.getByRole('heading', { name: 'Źródła przekładów' })
+		})
+		.locator('details', { hasText: 'Uchwała nr 28/386/2020' });
+	await resolution.locator('summary').click();
+	const invocation = resolution.locator('.evidence-group', { hasText: 'Królowo Polski' });
+	await expect(invocation.locator('.role')).toHaveText('przekład do porównania');
+	await expect(invocation.locator('a.locator')).toHaveAttribute(
 		'href',
-		/edition\/913560/
+		/Akta_KEP_2020[.]pdf#page=107$/
 	);
-	await expect(gazeta.getByRole('link', { name: 'Anioł Pański' })).toHaveAttribute(
+	await expect(invocation.locator('.uses a')).toHaveAttribute(
 		'href',
-		/orationes\/angelus-domini\?s=s07-s08$/
+		/litaniae\/lauretanae\?s=s122$/
 	);
 
 	await page.goto('/app/en/bibliographia');
@@ -758,11 +766,21 @@ test('the audited bibliography groups sources by role and loads exact uses on di
 	await expect(page.locator('.latin-name')).toHaveCount(0);
 	await expect(page.locator('.source-section h2')).toHaveText([
 		'Latin textual witnesses',
-		'Historical translations',
+		'Sources for the translations',
 		'Official documents and liturgical history',
 		'Scripture, language, and scholarship'
 	]);
 	await expect(page.locator('.source details[open]')).toHaveCount(0);
+	const englishMissal = page
+		.locator('section[aria-labelledby="section-wording_witnesses"] details')
+		.filter({ has: page.getByText('The Missal for the Use of the Laity', { exact: true }) });
+	await englishMissal.locator('summary').click();
+	await expect(
+		englishMissal.getByText('basis for the translation', { exact: true }).first()
+	).toBeVisible();
+	await expect(
+		englishMissal.getByText('translation for comparison', { exact: true }).first()
+	).toBeVisible();
 });
 
 for (const lang of ['pl', 'en'] as const) {

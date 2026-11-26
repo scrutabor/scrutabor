@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'dominica-v-post-epiphaniam';
@@ -91,14 +92,8 @@ for (const language of ['pl', 'en'] as const) {
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
 		await expect(sources.locator('li')).toHaveCount(2);
-		await expect(sources).toContainText(
-			language === 'pl' ? 'znacznik w w. 19 i odsyłacz w w. 20' : 'marker 19 and reference 20'
-		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'znacznik w w. 32, tytuł w w. 33, odsyłacz w w. 34 i cały tekst w w. 35'
-				: 'marker 32, title 33, reference 34 and complete body 35'
-		);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Tempora/Epi5-0.txt', 19, 20);
+		await expectSourcePassage(sources, language, 'Lectio', 'Missa/Tempora/Epi1-0.txt', 35);
 		await expect(sources).toContainText(language === 'pl' ? 's. 415' : 'p. 415');
 		await expect(
 			sources.locator(

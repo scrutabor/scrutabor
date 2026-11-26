@@ -7,27 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 78",
-    "scan": "PDF p. 90"
-   },
-   "entries": [
-    {
-     "id": "use.en.92a0a164d64a8d0f3e1a",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "The Lord be with you."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 78",
-    "scan": "PDF pages 90 (one-based)"
+    "scan": "PDF p. 90",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=90"
    },
    "entries": [
     {
@@ -45,9 +26,17 @@
       "segment": "s03"
      },
      "claim": "Historical English source expression: “And with thy spirit.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.92a0a164d64a8d0f3e1a",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The Lord be with you."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

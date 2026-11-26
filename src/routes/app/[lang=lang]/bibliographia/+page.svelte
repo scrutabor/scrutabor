@@ -29,23 +29,23 @@
 	const copy = $derived(
 		lang === 'pl'
 			? {
-					lead: 'Rozwiń pozycję, aby zobaczyć sprawdzone miejsca w źródle oraz teksty i hasła, przy których je przywołujemy.',
+					lead: 'Rozwiń pozycję, aby przejść do cytowanego miejsca i zobaczyć, gdzie je przywołujemy.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Łacińskie świadectwa tekstu',
-							note: 'Wydania, w których zweryfikowano łacińskie brzmienie i granice tekstu.'
+							note: 'Wydania, z których pochodzi łaciński tekst lub które służą do porównania jego wariantów.'
 						},
 						wording_witnesses: {
-							title: 'Dawne przekłady',
-							note: 'Korzystamy z nich jako podstawy przekładu lub przywołujemy je dla porównania.'
+							title: 'Źródła przekładów',
+							note: 'Wydania wykorzystane przy przekładzie lub przywołane dla porównania brzmienia.'
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Dokumenty urzędowe i historia liturgii',
-							note: 'Dokumenty objaśniające doktrynę oraz użycie, status lub miejsce tekstu w liturgii.'
+							note: 'Dokumenty objaśniające naukę Kościoła, pochodzenie modlitw i ich użycie w liturgii.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Pismo Święte, język i opracowania',
-							note: 'Wydania biblijne oraz opracowania wspierające rozstrzygnięcia językowe.'
+							note: 'Wydania Biblii, słowniki i opracowania przywołane w objaśnieniach.'
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
@@ -83,23 +83,23 @@
 					]
 				}
 			: {
-					lead: 'Open an entry to see the passages we checked and the texts or dictionary entries that cite them.',
+					lead: 'Open an entry to find the source passage and see where it is cited.',
 					sections: {
 						latin_textual_sources: {
 							title: 'Latin textual witnesses',
-							note: 'Editions in which the Latin wording and text boundaries were verified.'
+							note: 'Editions used for the Latin text or for comparison with other readings.'
 						},
 						wording_witnesses: {
-							title: 'Historical translations',
-							note: 'Translations we draw on for the wording or consult for comparison.'
+							title: 'Sources for the translations',
+							note: 'Editions used in preparing the translations or cited to compare their wording.'
 						},
 						official_documents_and_liturgical_history: {
 							title: 'Official documents and liturgical history',
-							note: 'Documents explaining doctrine or a text’s use, status, or place in the liturgy.'
+							note: 'Documents on Church teaching, the history of the prayers, and their use in the liturgy.'
 						},
 						scripture_language_and_scholarship: {
 							title: 'Scripture, language, and scholarship',
-							note: 'Biblical editions and scholarship supporting linguistic decisions.'
+							note: 'Bible editions, dictionaries, and other works cited in the notes.'
 						}
 					} satisfies Record<BibliographySectionId, { title: string; note: string }>,
 					roles: {
@@ -226,7 +226,17 @@
 													{@const formatted = group.displayLocator ?? raw}
 													<li class="evidence-group">
 														<p class="role smallcaps">{copy.roles[group.role]}</p>
-														{#if group.url}
+														{#if group.passages?.length}
+															{#each group.passages as passage (passage.url)}
+																<a
+																	class="external locator passage"
+																	href={passage.url}
+																	target="_blank"
+																	rel="external noopener"
+																	{lang}>{passage.label}</a
+																>
+															{/each}
+														{:else if group.url}
 															<a
 																class="external locator"
 																href={group.url}
@@ -418,6 +428,12 @@
 		color: var(--ink);
 		font-size: 0.9rem;
 		line-height: 1.45;
+	}
+
+	.locator.passage {
+		display: block;
+		width: fit-content;
+		max-width: 100%;
 	}
 
 	.uses {

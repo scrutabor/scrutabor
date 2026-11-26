@@ -6,9 +6,32 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 22",
-    "scan": "PDF s. 36",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 22",
+    "scan": "PDF, s. 36",
+    "section": "Modlitwa do Anioła Stróża",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=36"
+   },
+   "entries": [
+    {
+     "id": "use.pl.3d7a9d3648f0c5ff0502",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Druk poświadcza „strzeż” w szeregu „strzeż, rządź i kieruj”.",
+     "reader_note": "Dawny przekład ma „strzeż, rządź i kieruj”. Słowo „oświecaj” odpowiada łacińskiemu illúmina."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 22",
+    "scan": "PDF, s. 36",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=36"
    },
    "entries": [
     {
@@ -18,14 +41,6 @@
       "segment": "s06"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „rządź i prowadź. Amen.”"
-    },
-    {
-     "id": "use.pl.3d7a9d3648f0c5ff0502",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „oświecaj, strzeż,”"
     },
     {
      "id": "use.pl.dd0144a36f0078e64f7b",
@@ -52,7 +67,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „z dobroci Bożej,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

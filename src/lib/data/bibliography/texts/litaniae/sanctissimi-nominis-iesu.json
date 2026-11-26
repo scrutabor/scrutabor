@@ -7,7 +7,9 @@
    "role": "official_text",
    "locator": {
     "printed": "n. 114, pp. 52–56",
-    "scan": "PDF scans 69–73"
+    "scan": "PDF pp. 69–73",
+    "section": "In honorem Sanctissimi Nominis Iesu. II. Litaniae",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=69"
    },
    "entries": [
     {
@@ -15,10 +17,69 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+     "claim": "The 1952 text includes the invocations and their responses, the three Agnus Dei petitions and both final prayers. The second prayer carries the common conclusion."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.thesaurus-precum-latinarum.sanctissimi-nominis-iesu",
+   "digital_item": "item.thesaurus-precum-latinarum.sanctissimi-nominis-iesu.html",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Domine Iesu Christe, qui dixisti · et a tua numquam laude cessemus",
+    "page_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSNI.html"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sanctissimi-nominis-iesu.thesaurus-precum-latinarum.w447",
+     "address": {
+      "kind": "word",
+      "word": "w447"
+     },
+     "claim": "The Latin column gives the spelling numquam at this word."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.thesaurus-precum-latinarum.sanctissimi-nominis-iesu",
+   "digital_item": "item.thesaurus-precum-latinarum.sanctissimi-nominis-iesu.html",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Iesu oboedientissime",
+    "page_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSNI.html"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sanctissimi-nominis-iesu.thesaurus-precum-latinarum.w103",
+     "address": {
+      "kind": "word",
+      "word": "w103"
+     },
+     "claim": "The Latin column gives the spelling oboedientissime at this word."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.thesaurus-precum-latinarum.sanctissimi-nominis-iesu",
+   "digital_item": "item.thesaurus-precum-latinarum.sanctissimi-nominis-iesu.html",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Litaniae Sanctissimi Nominis Iesu (Latine)",
+    "page_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSNI.html"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sanctissimi-nominis-iesu.thesaurus-precum-latinarum",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Latin column gives the invocations, the Agnus Dei and both concluding prayers. The response to the first Agnus Dei ends in Domine."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

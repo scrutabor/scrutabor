@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const formulary = 'commemoratio-baptismatis-domini';
@@ -87,16 +88,14 @@ for (const language of ['pl', 'en'] as const) {
 			.click();
 		const sources = page.getByRole('dialog').locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 26, tytuł w w. 27, odsyłacz w w. 28 i tekst w w. 29'
-				: 'heading 26, title 27, reference 28, body 29'
-		);
+		await expectSourcePassage(sources, language, 'Evangelium', 'Missa/Sancti/01-13.txt', 29);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n122/mode/1up"]'
 			)
-		).toHaveText('Missale Romanum ex decreto SS. Concilii Tridentini restitutum');
+		).toHaveText(
+			'Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum'
+		);
 		await sources.locator('.bibliography-link a').click();
 		const edition = page
 			.getByRole('region', {
@@ -105,7 +104,8 @@ for (const language of ['pl', 'en'] as const) {
 			})
 			.locator('.source', {
 				has: page.locator('cite', {
-					hasText: 'Missale Romanum ex decreto SS. Concilii Tridentini restitutum'
+					hasText:
+						'Missale Romanum ex decreto Sacrosancti Concilii Tridentini restitutum, summorum pontificum cura recognitum'
 				})
 			});
 		await expect(edition.locator('.edition-meta')).toContainText('Benziger');

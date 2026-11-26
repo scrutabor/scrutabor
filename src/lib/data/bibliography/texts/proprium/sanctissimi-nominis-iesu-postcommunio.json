@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Per eumdem], heading line 107; full conclusion and R. Amen. at lines 108–109"
+    "section": "web/www/missa/Latin/Ordo/Prayers.txt [Per eumdem], heading line 107; full conclusion and R. Amen. at lines 108–109",
+    "passages": [
+     {
+      "heading": "Per eumdem",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L107-L109"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Prayers.txt#L107-L109"
    },
    "entries": [
     {
@@ -18,14 +25,21 @@
      "claim": "The literal $Per eumdem directive at Nat2-0 line 69 resolves to this full conclusion and Amen. The equal-text Per eundem alias at lines 111–113 is not the invoked section."
     }
    ],
-   "verified_on": "2026-10-05"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Nat2-0.txt [Postcommunio], section line 67; body line 68 and $Per eumdem reference line 69"
+    "section": "missa/Latin/Tempora/Nat2-0.txt [Postcommunio], 67–69",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Nat2-0.txt#L67-L69",
+    "passages": [
+     {
+      "heading": "Postcommunio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Nat2-0.txt#L67-L69"
+     }
+    ]
    },
    "entries": [
     {
@@ -36,7 +50,7 @@
      "claim": "The pinned Latin Mass file supplies the Postcommunion body and its literal $Per eumdem reference. Its complete conclusion is resolved separately from the declared Prayers.txt dependency; this file alone is not a continuous full-text witness."
     }
    ],
-   "verified_on": "2026-10-05"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

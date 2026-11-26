@@ -1,0 +1,27 @@
+{
+ "id": "psalmi.118-he",
+ "source_groups": [
+  {
+   "edition": "edition.biblia-sacra-vulgatae-editionis-1914",
+   "digital_item": "item.biblia-sacra-vulgatae-1914.scan",
+   "role": "scripture_text",
+   "locator": {
+    "section": "Psalmus 118, 33–40 (HE)",
+    "printed": "pp. 550–551",
+    "scan": "PDF pp. 574–575",
+    "page_url": "https://archive.org/details/bibliasacravulga00helzuoft/bibliasacravulga00helzuoft/page/550/mode/1up"
+   },
+   "entries": [
+    {
+     "id": "use.psalmi.118-he.hetzenauer-1914",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The complete HE stanza begins on p. 550 and finishes on p. 551. Verse 38 reads Statue servo tuo eloquium tuum, in timore tuo."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  }
+ ],
+ "witnesses": []
+}

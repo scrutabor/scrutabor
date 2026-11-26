@@ -6,9 +6,9 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 107",
-    "scan": "PDF s. 121",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 107",
+    "scan": "PDF, s. 121",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=121"
    },
    "entries": [
     {
@@ -33,7 +33,7 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „świętego Józefa, Jej Oblubieńca, Twoich świętych Apostołów Piotra i Pawła oraz wszystkich Świętych,”"
+     "claim": "Druk wymienia św. Józefa jako Oblubieńca Maryi oraz apostołów Piotra i Pawła. Imionom apostołów towarzyszy określenie „świętymi”."
     },
     {
      "id": "use.pl.8c97d97c8054107276fa",
@@ -60,7 +60,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „a za wstawiennictwem chwalebnej i niepokalanej Dziewicy Maryi, Bożej Rodzicielki,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

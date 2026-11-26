@@ -2,32 +2,14 @@
  "id": "orationes.ave-regina-caelorum",
  "source_groups": [
   {
-   "edition": "edition.katolik-w-modlitwie-1902",
-   "digital_item": "item.katolik-w-modlitwie-1902.obc",
-   "role": "direct_approved_print",
-   "locator": {
-    "printed": "druk. s. 139",
-    "scan": "PDF s. 153",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
-   },
-   "entries": [
-    {
-     "id": "use.neutral.4a5fc94788b5cf7456f1",
-     "address": {
-      "kind": "text"
-     },
-     "claim": "Historical evidence for the complete Ave Regina Caelorum antiphon; not a claim of current normative wording."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
    "edition": "edition.key-of-heaven-1901",
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "direct_approved_print",
    "locator": {
-    "printed": "pp. 189 and 191",
-    "scan": "DJVU scans 202 and 204"
+    "printed": "pp. 188, 190",
+    "scan": "DjVu pp. 201, 203",
+    "section": "Vespers for Sundays. From the Purification till Easter",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=201"
    },
    "entries": [
     {
@@ -35,10 +17,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Prints Ave Regina caelorum and its associated versicle and collect."
+     "claim": "The Latin antiphon begins on p. 188 and ends on p. 190, before the versicle Dignare me."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

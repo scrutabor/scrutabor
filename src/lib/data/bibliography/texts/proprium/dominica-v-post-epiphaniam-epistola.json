@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Latin/Tempora/Epi5-0.txt [Lectio], marker 19 and reference 20; inherited Latin/Tempora/Epi1-0.txt [Lectio], marker 32, title 33, reference 34 and complete body 35"
+    "section": "Latin/Tempora/Epi5-0.txt [Lectio], marker 19 and reference 20; inherited Latin/Tempora/Epi1-0.txt [Lectio], marker 32, title 33, reference 34 and complete body 35",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi1-0.txt#L35",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi1-0.txt#L35"
+     },
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Epi5-0.txt#L19-L20"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The source key refers to the Holy Family Epistle. The inherited body has 108 words and ends per ipsum; its seven word-level accidental differences and the complete closing-span variant are recorded."
     }
    ],
-   "verified_on": "2026-08-31"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

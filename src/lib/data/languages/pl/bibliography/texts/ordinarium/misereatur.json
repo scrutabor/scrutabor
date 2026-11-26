@@ -2,13 +2,35 @@
  "id": "ordinarium.misereatur",
  "source_groups": [
   {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 56",
+    "scan": "PDF, s. 70",
+    "section": "Zakończenie prośby o miłosierdzie po spowiedzi powszechnej",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=70"
+   },
+   "entries": [
+    {
+     "id": "use.pl.ordinarium.misereatur.s03.kuehn1902",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Druk ma „Amen” po prośbie ze słowami „niech nas doprowadzi do żywota wiecznego”."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
    "edition": "edition.pamiatka-missyi-dla-ludu-katolickiego-1903",
    "digital_item": "item.pamiatka-missyi-dla-ludu-katolickiego-1903.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. ss. 44–45",
-    "scan": "PDF ss. 47–48",
-    "page_url": "https://sbc.org.pl/dlibra/publication/337480/edition/318796/pamiatka-missyi-dla-ludu-katolickiego"
+    "printed": "s. 44",
+    "scan": "PDF, s. 47",
+    "page_url": "https://sbc.org.pl/Content/318796/PDF/Publikacja-KC-8251.pdf#page=47"
    },
    "entries": [
     {
@@ -34,17 +56,9 @@
       "segment": "s05"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Przebaczenia, rozgrzeszenia i odpuszczenia grzechów naszych niech nam udzieli wszechmogący i miłosierny Pan.”"
-    },
-    {
-     "id": "use.pl.f602ca585c59f1ea4655",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Amen.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

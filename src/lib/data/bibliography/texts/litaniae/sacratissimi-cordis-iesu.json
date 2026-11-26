@@ -7,7 +7,9 @@
    "role": "official_text",
    "locator": {
     "printed": "n. 245, pp. 150–153",
-    "scan": "PDF scans 167–170"
+    "scan": "PDF pp. 167–170",
+    "section": "Ad Sacratissimum Cor Iesu. III. Litaniae",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=167"
    },
    "entries": [
     {
@@ -15,10 +17,49 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Direct witness for the selected Latin text and the stated text boundary."
+     "claim": "The 1952 text includes the invocations, their responses, the versicle and the concluding collect. The response columns on pp. 151–152 abbreviate miserere nobis."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.thesaurus-precum-latinarum.sacratissimi-cordis-iesu",
+   "digital_item": "item.thesaurus-precum-latinarum.sacratissimi-cordis-iesu.html",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Cor Iesu, usque ad mortem oboediens factum",
+    "page_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sacratissimi-cordis-iesu.thesaurus-precum-latinarum.w239",
+     "address": {
+      "kind": "word",
+      "word": "w239"
+     },
+     "claim": "The Latin column gives the spelling oboediens at this word."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.thesaurus-precum-latinarum.sacratissimi-cordis-iesu",
+   "digital_item": "item.thesaurus-precum-latinarum.sacratissimi-cordis-iesu.html",
+   "role": "derived_digital_collation_aid",
+   "locator": {
+    "section": "Litaniae de Sacratissimo Corde Iesu (Latine)",
+    "page_url": "https://www.preces-latinae.org/thesaurus/Filius/LitSCI.html"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.sacratissimi-cordis-iesu.thesaurus-precum-latinarum",
+     "address": {
+      "kind": "text"
+     },
+     "claim": "The Latin column gives the five opening invocations with repeated responses, all subsequent petitions and the concluding prayer."
+    }
+   ],
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

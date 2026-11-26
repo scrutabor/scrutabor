@@ -6,9 +6,32 @@
    "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 154",
-    "scan": "PDF s. 159",
-    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+    "printed": "s. 154",
+    "scan": "PDF, s. 159",
+    "section": "Odpowiedź po Aniele Pańskim",
+    "page_url": "https://sbc.org.pl/Content/320337/PDF/Publikacja-KC-8052.pdf#page=159"
+   },
+   "entries": [
+    {
+     "id": "use.pl.abf2727b695e2024222d",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Wspólna formuła maryjna znajduje się po Aniele Pańskim. Samą antyfonę „Witaj, Królowo” wydrukowano na następnej stronie."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
+   "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 154",
+    "scan": "PDF, s. 159",
+    "section": "Werset po Aniele Pańskim",
+    "page_url": "https://sbc.org.pl/Content/320337/PDF/Publikacja-KC-8052.pdf#page=159"
    },
    "entries": [
     {
@@ -17,27 +40,19 @@
       "kind": "segment",
       "segment": "s07"
      },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami, Święta Boża Rodzicielko.”"
-    },
-    {
-     "id": "use.pl.abf2727b695e2024222d",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Abyśmy się stali godnymi obietnic Chrystusowych.”"
+     "claim": "Wspólna formuła maryjna znajduje się po Aniele Pańskim. Samą antyfonę „Witaj, Królowo” wydrukowano na następnej stronie."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.katechizm-religji-rzymsko-katolickiej-1925",
    "digital_item": "item.katechizm-religji-rzymsko-katolickiej-1925.sbc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 155",
-    "scan": "PDF s. 160",
-    "page_url": "https://sbc.org.pl/dlibra/publication/339133/edition/320337/katechizm-religji-rzymsko-katolickiej-dla-uzytku-szkol-polskich-w-republice-czechoslowackiej"
+    "printed": "s. 155",
+    "scan": "PDF, s. 160",
+    "page_url": "https://sbc.org.pl/Content/320337/PDF/Publikacja-KC-8052.pdf#page=160"
    },
    "entries": [
     {
@@ -89,18 +104,76 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.katolik-w-modlitwie-1902",
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 107",
-    "scan": "PDF s. 121",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 106",
+    "scan": "PDF, s. 120",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=120"
    },
    "entries": [
+    {
+     "id": "use.pl.2d489f035ed40b311aee",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.”"
+    },
+    {
+     "id": "use.pl.4a5478b68916062f7a80",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Do Ciebie wołamy wygnańcy, synowie Ewy.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 106–107",
+    "scan": "PDF, s. 120–121",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=120"
+   },
+   "entries": [
+    {
+     "id": "use.pl.412cdbce0d1351a8bb81",
+     "address": {
+      "kind": "segment",
+      "segment": "s03"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole.”"
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.katolik-w-modlitwie-1902",
+   "digital_item": "item.katolik-w-modlitwie-1902.obc",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "s. 107",
+    "scan": "PDF, s. 121",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=121"
+   },
+   "entries": [
+    {
+     "id": "use.pl.22c3d52584fa14dafffa",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.”"
+    },
     {
      "id": "use.pl.4ed083ae7a8f64016d4c",
      "address": {
@@ -116,51 +189,6 @@
       "segment": "s07"
      },
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Módl się za nami, Święta Boża Rodzicielko.”"
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.katolik-w-modlitwie-1902",
-   "digital_item": "item.katolik-w-modlitwie-1902.obc",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "druk. ss. 106–107",
-    "scan": "PDF ss. 120–121",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
-   },
-   "entries": [
-    {
-     "id": "use.pl.22c3d52584fa14dafffa",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „A Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.”"
-    },
-    {
-     "id": "use.pl.2d489f035ed40b311aee",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Witaj, Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.”"
-    },
-    {
-     "id": "use.pl.412cdbce0d1351a8bb81",
-     "address": {
-      "kind": "segment",
-      "segment": "s03"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole.”"
-    },
-    {
-     "id": "use.pl.4a5478b68916062f7a80",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „Do Ciebie wołamy wygnańcy, synowie Ewy.”"
     },
     {
      "id": "use.pl.cbe6478019882ccdeb86",
@@ -179,7 +207,7 @@
      "claim": "Historyczna podstawa rewizji polskiego brzmienia segmentu: „O łaskawa, o litościwa, o słodka Panno Maryjo.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

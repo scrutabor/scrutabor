@@ -8,7 +8,8 @@
    "locator": {
     "printed": "New Testament p. 67",
     "scan": "PDF p. 1170",
-    "section": "Luke 2:14"
+    "section": "Luke 2:14",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_Holy_Bible_-_Douay_Rheims_Version.pdf?page=1170"
    },
    "entries": [
     {
@@ -20,7 +21,7 @@
      "claim": "Glory to God in the highest."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
@@ -28,9 +29,34 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 65",
-    "scan": "PDF pages 96 (one-based)"
+    "scan": "PDF p. 96",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=96"
    },
    "entries": [
+    {
+     "id": "use.en.00c8cd782b363b22826d",
+     "address": {
+      "kind": "segment",
+      "segment": "s11"
+     },
+     "claim": "The printed invocation reads “Who sittest at the right hand of the Father, have mercy on us.” The current English modernizes the verb and gives “at the Father’s right hand”."
+    },
+    {
+     "id": "use.en.3642a2f8d3ba85d2ea15",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "The printed acclamation reads “We give thee thanks for thy great glory,”. The current English uses You and Your."
+    },
+    {
+     "id": "use.en.95e30e5fbba6cc0ce97b",
+     "address": {
+      "kind": "segment",
+      "segment": "s04"
+     },
+     "claim": "We praise You. We bless You. We adore You. We glorify You."
+    },
     {
      "id": "use.en.a69bf2aaa2325fe0c523",
      "address": {
@@ -48,67 +74,7 @@
      "claim": "Historical English source expression: “O Lord God, Lamb of God, Son of the Father” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-family-prayer-book-1839",
-   "digital_item": "item.family-prayer-book-1839.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 65",
-    "scan": "scan p. 96"
-   },
-   "entries": [
-    {
-     "id": "use.en.3642a2f8d3ba85d2ea15",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "We give You thanks for Your great glory."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-family-prayer-book-1839",
-   "digital_item": "item.family-prayer-book-1839.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 65",
-    "scan": "scan p. 96"
-   },
-   "entries": [
-    {
-     "id": "use.en.00c8cd782b363b22826d",
-     "address": {
-      "kind": "segment",
-      "segment": "s11"
-     },
-     "claim": "You who sit at the Father's right hand, have mercy on us."
-    }
-   ],
-   "verified_on": "2026-09-26"
-  },
-  {
-   "edition": "edition.the-family-prayer-book-1839",
-   "digital_item": "item.family-prayer-book-1839.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "p. 66",
-    "scan": "scan p. 97"
-   },
-   "entries": [
-    {
-     "id": "use.en.bc0573a61c0e3ef9ac0d",
-     "address": {
-      "kind": "segment",
-      "segment": "s13"
-     },
-     "claim": "You who sit at the Father's right hand, have mercy on us."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
@@ -116,8 +82,9 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "pp. 65–66",
-    "scan": "scan pp. 96–97",
-    "section": "Gloria — threefold confession of Christ"
+    "scan": "PDF pp. 96–97",
+    "section": "Gloria — threefold confession of Christ",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=96"
    },
    "entries": [
     {
@@ -129,27 +96,28 @@
      "claim": "The historical Gloria begins the threefold confession at the foot of p. 65 and continues on p. 66: Christ alone is holy, Lord and Most High. The present wording modernizes the pronouns and separates the clauses; it is a revision, not a verbatim transcription."
     }
    ],
-   "verified_on": "2026-10-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-family-prayer-book-1839",
    "digital_item": "item.family-prayer-book-1839.scan",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "pp. 65–66",
-    "scan": "scan pp. 96–97"
+    "printed": "p. 66",
+    "scan": "PDF p. 97",
+    "page_url": "https://commons.wikimedia.org/wiki/File:The_family_prayer-book,_containing_all_the_public_and_private_devotions_in_use_amongst_English_Catholics._(IA_TheFamilyPrayerBookContaining).pdf?page=97"
    },
    "entries": [
     {
-     "id": "use.en.95e30e5fbba6cc0ce97b",
+     "id": "use.en.bc0573a61c0e3ef9ac0d",
      "address": {
       "kind": "segment",
-      "segment": "s04"
+      "segment": "s13"
      },
-     "claim": "We praise You. We bless You. We adore You. We glorify You."
+     "claim": "The printed ending has “together with the Holy Ghost, are most high in the glory of God the Father. Amen.” The current ending uses Holy Spirit and carries “Most High” in the preceding verse."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

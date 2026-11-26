@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt [Evangelium], body line 81"
+    "section": "web/www/missa/Latin/Tempora/Pasc7-0.txt [Evangelium], body line 81",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc7-0.txt#L81",
+    "passages": [
+     {
+      "heading": "Evangelium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc7-0.txt#L81"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned digital file supplies a complete comparison body. Its own readings, including substantive variants where present, are retained without claiming it is an independent copy of the controlling 1962 printing."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -44,8 +51,9 @@
    "digital_item": "item.valla.elegantiae.1538.mateo",
    "role": "grammatical_support",
    "locator": {
-    "printed": "Liber III, caput XIX, pp. 184–186; Gospel example p. 185",
-    "scan": "MATEO/CAMENA images valla184–valla186; Sch 102/218",
+    "printed": "pp. 184–186",
+    "scan": "MATEO, valla184–valla186",
+    "section": "Liber III, cap. XIX, p. 185",
     "page_url": "https://mateo.uni-mannheim.de/itali/valla3/jpg/valla185.jpg"
    },
    "entries": [
@@ -55,10 +63,10 @@
       "kind": "word",
       "word": "w038"
      },
-     "claim": "Valla explicitly cites sermonem quem vos audistis, non est meus while explaining an antecedent attracted into the relative pronoun's case. This supports the grammatical explanation of the retained accusative sermonem, not a change to the printed reading."
+     "claim": "Valla cites sermonem quem vos audistis, non est meus when discussing the attraction of the antecedent into the case of the relative pronoun."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

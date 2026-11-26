@@ -6,9 +6,9 @@
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_basis",
    "locator": {
-    "printed": "druk. s. 139",
-    "scan": "PDF s. 153",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 139",
+    "scan": "PDF, s. 153",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=153"
    },
    "entries": [
     {
@@ -36,16 +36,16 @@
      "claim": "Historyczna podstawa zrewidowanego polskiego powitania i tytułu Królowej. Druk ma „Witaj, Królowo, Gwiazdo niebieska!”. Wybrane „Bądź pozdrowiona, Królowo niebios” oddaje łacińskie Ave Regina caelorum bez dodanej w druku Gwiazdy. Nie jest to świadectwo dosłownej zgodności całego współczesnego segmentu."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.katolik-w-modlitwie-1902",
    "digital_item": "item.katolik-w-modlitwie-1902.obc",
    "role": "historical_wording_comparator",
    "locator": {
-    "printed": "druk. s. 139",
-    "scan": "PDF s. 153",
-    "page_url": "https://obc.opole.pl/dlibra/publication/13965/edition/12961/katolik-w-modlitwie-czyli-ksiazka-do-nabozenstwa-oraz-spiewnik-koscielny"
+    "printed": "s. 139",
+    "scan": "PDF, s. 153",
+    "page_url": "https://obc.opole.pl/Content/12961/PDF/10097s.pdf#page=153"
    },
    "entries": [
     {
@@ -57,7 +57,7 @@
      "claim": "Historyczny komparator polskiego brzmienia segmentu: „piękna ponad wszystkie,”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

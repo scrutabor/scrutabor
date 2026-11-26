@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Quad6-6r.txt [Prelude], physical lines 766, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785"
+    "section": "Quad6-6r.txt [Prelude], physical lines 766, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L766",
+    "passages": [
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L766"
+     },
+     {
+      "heading": "Prelude",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quad6-6r.txt#L771-L785"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned digital witness preserves a different recension of this complete Lauds chant. It is a comparison witness, not the selected Latin transcription base."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -34,10 +45,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The approved printing supplies the complete selected Lauds chant, with its antiphon, Scripture, doxology and repeated antiphon."
+     "claim": "Pages 217–218 print the Easter antiphon, its canticle and full doxology. The rubric Repetita antiphona on p. 218 directs the return of the opening antiphon, whose words are written out on p. 217."
     }
    ],
-   "verified_on": "2026-10-13"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

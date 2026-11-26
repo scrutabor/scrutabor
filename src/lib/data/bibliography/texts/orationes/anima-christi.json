@@ -6,7 +6,8 @@
    "digital_item": "item.compendium-of-the-catechism-2005.html",
    "role": "official_text",
    "locator": {
-    "section": "APPENDIX / A) COMMON PRAYERS / Anima Christi"
+    "section": "APPENDIX / A) COMMON PRAYERS / Anima Christi",
+    "page_url": "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html#A%29%20COMMON%20PRAYERS:~:text=%C3%81nima%20Christi%2C%20sanct%C3%ADfica%20me"
    },
    "entries": [
     {
@@ -17,7 +18,7 @@
      "claim": "The complete 64-word Latin prayer and its printed boundary in this section."
     }
    ],
-   "verified_on": "2026-10-26"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
@@ -25,8 +26,9 @@
    "role": "official_text",
    "locator": {
     "printed": "pp. 73–74",
-    "scan": "scan pp. 92–93",
-    "section": "nn. 131–132"
+    "scan": "PDF pp. 90–91",
+    "section": "N. 131. Anima Christi",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=90"
    },
    "entries": [
     {
@@ -34,10 +36,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The source prints and identifies Ánima Christi."
+     "claim": "No. 131 gives the Anima Christi. The next numbered item begins a different prayer."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [

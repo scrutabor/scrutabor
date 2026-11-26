@@ -6,8 +6,30 @@
    "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
    "role": "historical_wording_basis",
    "locator": {
+    "printed": "pp. 11–12",
+    "scan": "DjVu pp. 24–25",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=24"
+   },
+   "entries": [
+    {
+     "id": "use.en.4cb2b9c00b4b1b4b7173",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The printed Confiteor addresses “(and to you, Father,)”. This response retains that addressee and normalizes punctuation and case."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
     "printed": "p. 12",
-    "scan": "DJVU physical pages 25 (one-based); indices 24 (zero-based)"
+    "scan": "DjVu p. 25",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=25"
    },
    "entries": [
     {
@@ -35,27 +57,7 @@
      "claim": "Historical English source expression: “that I have sinned exceedingly in thought, word, and deed” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 12–13",
-    "scan": "scan pp. 25–26"
-   },
-   "entries": [
-    {
-     "id": "use.en.4cb2b9c00b4b1b4b7173",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "I confess to almighty God, to blessed Mary ever Virgin, to blessed Michael the Archangel, to blessed John the Baptist, to the holy Apostles Peter and Paul, to all the Saints, and to you, father:"
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

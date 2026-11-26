@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 79",
-    "scan": "PDF pages 91 (one-based)"
+    "scan": "PDF p. 91",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=91"
    },
    "entries": [
     {
@@ -35,7 +36,57 @@
      "claim": "Historical English source expression: “Glory be to thee, O Lord.” The addressed English wording is revised, not a verbatim quotation."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 79–80",
+    "scan": "PDF pp. 91–92",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=91"
+   },
+   "entries": [
+    {
+     "id": "use.en.73d5d0525f1f802922dc",
+     "address": {
+      "kind": "segment",
+      "segment": "s08"
+     },
+     "claim": "Historical English source expression: “In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him, and without him was made nothing that was made. In him was life, and the life was the light of men; and the light shineth in darkness, and the darkness did not comprehend it.” The addressed English wording is revised, not a verbatim quotation."
+    },
+    {
+     "id": "use.en.9ff41f0c5b70439c7823",
+     "address": {
+      "kind": "segment",
+      "segment": "s02"
+     },
+     "claim": "The Lord be with you."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.the-missal-for-the-laity-1846",
+   "digital_item": "item.missal-for-the-laity-1846.scan",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 80–81",
+    "scan": "PDF pp. 92–93",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=92"
+   },
+   "entries": [
+    {
+     "id": "use.en.6975dfa58b37bc55a802",
+     "address": {
+      "kind": "segment",
+      "segment": "s10"
+     },
+     "claim": "Historical English source expression: “That was the true light, which enlighteneth every man that cometh into this world. He was in the world, and the world was made by him, and the world knew him not. He came unto his own, and his own received him not. But as many as received him, to them he gave power to be made the sons of God; to them that believe in his name, who are born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.” The addressed English wording is revised, not a verbatim quotation."
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-missal-for-the-laity-1846",
@@ -43,7 +94,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 81",
-    "scan": "PDF pages 93 (one-based)"
+    "scan": "PDF p. 93",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=93"
    },
    "entries": [
     {
@@ -52,7 +104,7 @@
       "kind": "segment",
       "segment": "s12"
      },
-     "claim": "Historical English source expression: “AND THE WORD WAS MADE FLESH” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+     "claim": "Historical English source expression: “And THE WORD WAS MADE FLESH” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     },
     {
      "id": "use.en.b67d7d280f8e535cb1b9",
@@ -71,67 +123,7 @@
      "claim": "Historical English source expression: “Thanks be to God.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 79–80",
-    "scan": "PDF pages 91, 92 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.73d5d0525f1f802922dc",
-     "address": {
-      "kind": "segment",
-      "segment": "s08"
-     },
-     "claim": "Historical English source expression: “In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him, and without him was made nothing that was made. In him was life, and the life was the light of men; and the light shineth in darkness, and the darkness did not comprehend it.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 79–80",
-    "scan": "PDF pp. 91–92"
-   },
-   "entries": [
-    {
-     "id": "use.en.9ff41f0c5b70439c7823",
-     "address": {
-      "kind": "segment",
-      "segment": "s02"
-     },
-     "claim": "The Lord be with you."
-    }
-   ],
-   "verified_on": "2026-08-28"
-  },
-  {
-   "edition": "edition.the-missal-for-the-laity-1846",
-   "digital_item": "item.missal-for-the-laity-1846.scan",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 80–81",
-    "scan": "PDF pages 92, 93 (one-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.6975dfa58b37bc55a802",
-     "address": {
-      "kind": "segment",
-      "segment": "s10"
-     },
-     "claim": "Historical English source expression: “That was the true light, which enlighteneth every man that cometh into this world. He was in the world, and the world was made by him, and the world knew him not. He came unto his own, and his own received him not. But as many as received him, to them he gave power to be made the sons of God; to them that believe in his name, who are born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.” The addressed English wording is revised, not a verbatim quotation."
-    }
-   ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

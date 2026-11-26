@@ -7,9 +7,18 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 25",
-    "scan": "DJVU physical pages 38 (one-based); indices 37 (zero-based)"
+    "scan": "DjVu p. 38",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=38"
    },
    "entries": [
+    {
+     "id": "use.en.007a10ccc7237aa371f4",
+     "address": {
+      "kind": "segment",
+      "segment": "s01"
+     },
+     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
+    },
     {
      "id": "use.en.9d81fb2d70305195b89c",
      "address": {
@@ -35,7 +44,28 @@
      "claim": "Historical English source expression: “to thee do we send up our sighs, mourning and weeping in this valley of tears.” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
     }
    ],
-   "verified_on": "2026-10-16"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.key-of-heaven-1901",
+   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
+   "role": "historical_wording_basis",
+   "locator": {
+    "printed": "pp. 25–26",
+    "scan": "DjVu pp. 38–39",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=38"
+   },
+   "entries": [
+    {
+     "id": "use.en.2cfdd00c200901efc584",
+     "address": {
+      "kind": "segment",
+      "segment": "s05"
+     },
+     "claim": "Historical English source expression: “and after this our exile, show unto us the blessed fruit of thy womb, Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
+    }
+   ],
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.key-of-heaven-1901",
@@ -43,7 +73,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 26",
-    "scan": "DJVU physical pages 39 (one-based); indices 38 (zero-based)"
+    "scan": "DjVu p. 39",
+    "page_url": "https://commons.wikimedia.org/wiki/File:KeyOfHeaven.djvu?page=39"
    },
    "entries": [
     {
@@ -63,47 +94,7 @@
      "claim": "Historical English source expression: “That we may be made worthy of the promises of Christ.” This supplies the corresponding English expression at the addressed scope."
     }
    ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 25–26",
-    "scan": "DJVU physical pages 38, 39 (one-based); indices 37, 38 (zero-based)"
-   },
-   "entries": [
-    {
-     "id": "use.en.2cfdd00c200901efc584",
-     "address": {
-      "kind": "segment",
-      "segment": "s05"
-     },
-     "claim": "Historical English source expression: “and after this our exile, show unto us the blessed fruit of thy womb, Jesus” The corresponding English expression is retained with orthographic, capitalization or punctuation normalization, not a diplomatic transcription."
-    }
-   ],
-   "verified_on": "2026-10-16"
-  },
-  {
-   "edition": "edition.key-of-heaven-1901",
-   "digital_item": "item.key-of-heaven-1901.wikimedia-commons",
-   "role": "historical_wording_basis",
-   "locator": {
-    "printed": "pp. 25–26",
-    "scan": "scan pp. 38–39"
-   },
-   "entries": [
-    {
-     "id": "use.en.007a10ccc7237aa371f4",
-     "address": {
-      "kind": "segment",
-      "segment": "s01"
-     },
-     "claim": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope."
-    }
-   ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.the-raccolta-1910",
@@ -111,7 +102,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 167",
-    "scan": "scan p. 187"
+    "scan": "PDF p. 187",
+    "page_url": "https://archive.org/download/theraccoltaorcol00unknuoft/theraccoltaorcol00unknuoft.pdf#page=187"
    },
    "entries": [
     {
@@ -123,7 +115,7 @@
      "claim": "O clement, O loving, O sweet Virgin Mary."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

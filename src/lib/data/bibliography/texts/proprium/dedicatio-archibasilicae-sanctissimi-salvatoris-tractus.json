@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/horas/Latin/Commune/C8.txt [Tractus], tract-only lines 605–606; preceding gradual excluded"
+    "section": "web/www/horas/Latin/Commune/C8.txt [Tractus], tract-only lines 605–606; preceding gradual excluded",
+    "passages": [
+     {
+      "heading": "Tractus",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C8.txt#L605-L606"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C8.txt#L605-L606"
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The exact named pinned dependency corroborates the tract. Its enclosing runtime section also contains a separately printed gradual, excluded here."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -26,7 +33,8 @@
    "locator": {
     "printed": "p. (42)",
     "scan": "leaf n869 / PDF p. 870",
-    "page_url": "https://archive.org/details/missale-romanum-1962/page/n869/mode/1up"
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n869/mode/1up",
+    "section": "Commune Dedicationis ecclesiæ · Tractus · Ps. 124, 1–2"
    },
    "entries": [
     {
@@ -37,7 +45,7 @@
      "claim": "The named Benziger page image(s) print this tract separately from the preceding gradual. Tract from the Common of a church dedication, replacing Alleluia after Septuagesima; not an additional chant in the ordinary November 9 Mass."
     }
    ],
-   "verified_on": "2026-09-19"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

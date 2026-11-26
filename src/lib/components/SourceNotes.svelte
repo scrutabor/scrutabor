@@ -58,10 +58,15 @@
 							target="_blank"
 							rel="external noopener"
 							lang="und">{citation.title}</a
-						>{:else}<cite lang="und">{citation.title}</cite>{/if}<span
-						class="locator"
-						lang={locator === citation.locator ? 'und' : lang}>, {locator}</span
-					>
+						>{:else}<cite lang="und">{citation.title}</cite>{/if}{#if citation.passages?.length}
+						{#each citation.passages as passage (passage.url)}
+							<a class="source-passage" href={passage.url} target="_blank" rel="external noopener"
+								>{passage.label}</a
+							>
+						{/each}
+					{:else}<span class="locator" lang={locator === citation.locator ? 'und' : lang}
+							>, {locator}</span
+						>{/if}
 					{#each citation.notes ?? [] as note (note)}
 						<p class="citation-note">{lang === 'pl' ? bindProse(note) : note}</p>
 					{/each}
@@ -77,6 +82,12 @@
 {/if}
 
 <style>
+	.source-passage {
+		display: block;
+		width: fit-content;
+		overflow-wrap: anywhere;
+	}
+
 	.source-notes {
 		margin: 0.78rem 0 0;
 		overflow-wrap: anywhere;

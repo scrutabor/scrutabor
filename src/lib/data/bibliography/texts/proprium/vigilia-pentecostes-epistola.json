@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Pasc6-6r.txt [Lectio], body line 29; heading 26, title 27 and reference 28 excluded"
+    "section": "web/www/missa/Latin/Tempora/Pasc6-6r.txt [Lectio], body line 29; heading 26, title 27 and reference 28 excluded",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc6-6r.txt#L29",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Pasc6-6r.txt#L29"
+     }
+    ]
    },
    "entries": [
     {
@@ -17,7 +24,7 @@
      "claim": "The pinned Mass data directly print the complete 120-word reading on line 29, without inherited reference or expansion. The exact digital spelling and punctuation provide a comparison witness."
     }
    ],
-   "verified_on": "2026-10-01"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

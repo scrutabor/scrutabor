@@ -2,12 +2,124 @@
  "id": "litaniae.lauretanae",
  "source_groups": [
   {
+   "edition": "edition.acta-nuntiaturae-polonae.ratti.57-8",
+   "digital_item": "item.acta-nuntiaturae-polonae.ratti.57-8.pdf",
+   "role": "liturgical_history",
+   "locator": {
+    "section": "N. 1627. Józef Bilczewski ad Achillem Ratti, Leopoli, 20 II 1920",
+    "printed": "p. 115",
+    "scan": "PDF p. 149",
+    "page_url": "https://pau.krakow.pl/ANP/ANP_LVII_8_2022.pdf#page=149"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.bilczewski.s122",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "Bilczewski’s letter of 20 February 1920 reports the grant and records both Regina Regni Poloniae and Regina Poloniae – ora pro nobis."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.congregatio-cultus.dla-polski.2014.akta-kep",
+   "digital_item": "item.congregatio-cultus.dla-polski.2014.akta-kep",
+   "role": "official_liturgical_context",
+   "locator": {
+    "section": "Poloniae / Dla Polski · Prot. 130/14",
+    "printed": "p. 48",
+    "scan": "PDF p. 48",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242039_mQtD_26._Akta_KEP_20142.pdf#page=48"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.mater-misericordiae.poland-2014",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "The decree permits the invocation Matko Miłosierdzia in Poland and places it after Matko Łaski Bożej."
+    }
+   ],
+   "verified_on": "2026-11-26"
+  },
+  {
+   "edition": "edition.congregatio-cultus.litaniae-lauretanae.2020",
+   "digital_item": "item.congregatio-cultus.litaniae-lauretanae.2020.pdf",
+   "role": "official_text",
+   "locator": {
+    "section": "Lettera in lingua latina · Mater misericordiae",
+    "printed": "p. 3",
+    "scan": "PDF p. 3",
+    "page_url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350.pdf#page=3"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.bulletin2020.s024",
+     "address": {
+      "kind": "segment",
+      "segment": "s024"
+     },
+     "claim": "The Latin circular places Mater misericordiae immediately after Mater Ecclesiae."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.congregatio-cultus.litaniae-lauretanae.2020",
+   "digital_item": "item.congregatio-cultus.litaniae-lauretanae.2020.pdf",
+   "role": "official_text",
+   "locator": {
+    "section": "Lettera in lingua latina · Mater spei",
+    "printed": "p. 3",
+    "scan": "PDF p. 3",
+    "page_url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350.pdf#page=3"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.bulletin2020.s028",
+     "address": {
+      "kind": "segment",
+      "segment": "s028"
+     },
+     "claim": "The Latin circular places Mater spei immediately after Mater divinae gratiae."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.congregatio-cultus.litaniae-lauretanae.2020",
+   "digital_item": "item.congregatio-cultus.litaniae-lauretanae.2020.pdf",
+   "role": "official_text",
+   "locator": {
+    "section": "Lettera in lingua latina · Solacium migrantium",
+    "printed": "p. 3",
+    "scan": "PDF p. 3",
+    "page_url": "https://press.vatican.va/content/salastampa/it/bollettino/pubblico/2020/06/20/0350.pdf#page=3"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.bulletin2020.s090",
+     "address": {
+      "kind": "segment",
+      "segment": "s090"
+     },
+     "claim": "The Latin circular places Solacium migrantium immediately after Refugium peccatorum."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
    "edition": "edition.enchiridion-indulgentiarum.1952-editio-altera",
    "digital_item": "item.enchiridion-indulgentiarum.1952.ia",
    "role": "official_text",
    "locator": {
-    "printed": "n. 319, pp. 200–203",
-    "scan": "PDF scans 219–222"
+    "printed": "pp. 200–203",
+    "scan": "PDF pp. 219–222",
+    "section": "N. 319. Litaniae Beatae Mariae Virginis (1952)",
+    "page_url": "https://archive.org/download/enchiridion_indulgentiarum_1952/enchiridion_indulgentiarum_1952.pdf#page=219"
    },
    "entries": [
     {
@@ -15,10 +127,76 @@
      "address": {
       "kind": "text"
      },
-     "claim": "Prints the complete Litany of Loreto and its collect."
+     "claim": "No. 319 gives the litany and collect as printed in 1952. The six additional invocations in the present form have separate sources."
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.konferencja-episkopatu-polski.uchwala-28-386.2020",
+   "digital_item": "item.konferencja-episkopatu-polski.uchwala-28-386.2020.pdf",
+   "role": "official_liturgical_context",
+   "locator": {
+    "section": "Litania loretańska do Najświętszej Maryi Panny",
+    "printed": "s. 107",
+    "scan": "PDF, s. 107",
+    "page_url": "https://episkopat.pl/files/24.bkt/04/04/242488_HSZP_32_Akta_KEP_2020.pdf#page=107"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.kep2020.polish-order",
+     "address": {
+      "kind": "segment",
+      "segment": "s122"
+     },
+     "claim": "The Polish litany appended to the resolution places Królowo Polski immediately after Królowo pokoju."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.notitiae.mater-ecclesiae.1980",
+   "digital_item": "item.notitiae.mater-ecclesiae.1980.pdf",
+   "role": "official_text",
+   "locator": {
+    "section": "Prot. CD 700/80 · Mater Ecclesiae",
+    "printed": "p. 159",
+    "scan": "PDF p. 41",
+    "page_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1980/notitiae-16-%281980%29/Notitiae-165-1980.pdf#page=41"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.notitiae165.s022",
+     "address": {
+      "kind": "segment",
+      "segment": "s022"
+     },
+     "claim": "The circular of 13 March 1980 permits episcopal conferences to insert Mater Ecclesiae after Mater Christi."
+    }
+   ],
+   "verified_on": "2026-11-25"
+  },
+  {
+   "edition": "edition.notitiae.regina-familiae.1996",
+   "digital_item": "item.notitiae.regina-familiae.1996.pdf",
+   "role": "official_text",
+   "locator": {
+    "section": "Prot. 2500/95/L · Regina Familiae",
+    "printed": "p. 190",
+    "scan": "PDF p. 12",
+    "page_url": "https://www.cultodivino.va/content/dam/cultodivino/rivista-notitiae/1990/notitiae-32-%281996%29/Notitiae-357-1996.pdf#page=12"
+   },
+   "entries": [
+    {
+     "id": "use.litaniae.lauretanae.notitiae357.s118",
+     "address": {
+      "kind": "segment",
+      "segment": "s118"
+     },
+     "claim": "The circular dated 31 December 1995 places Regina Familiae after Regina Sacratissimi Rosarii and before Regina pacis."
+    }
+   ],
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": []

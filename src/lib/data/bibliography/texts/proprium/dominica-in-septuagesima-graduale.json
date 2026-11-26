@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Tempora/Quadp1-0.txt [Graduale] (lines 37-39)"
+    "section": "web/www/missa/Latin/Tempora/Quadp1-0.txt [Graduale] (lines 37-39)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quadp1-0.txt#L36-L39",
+    "passages": [
+     {
+      "heading": "Graduale",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Tempora/Quadp1-0.txt#L36-L39"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +21,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-07"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -56,10 +63,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The Gradual continues from p. 50 onto p. 51, beginning Quoniam non in finem oblivio erit pauperis. The complete thirty-five-word body therefore needs both leaves."
+     "claim": "The top of p. 51 continues in finem oblívio erit páuperis, after Quóniam non at the foot of p. 50, and ends non præváleat homo. Both leaves are needed for the complete Gradual."
     }
    ],
-   "verified_on": "2026-10-10"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []

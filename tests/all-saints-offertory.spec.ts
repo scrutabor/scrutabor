@@ -1,3 +1,4 @@
+import { expectSourcePassage } from './source-passage';
 import { expect, setHelp, setTheme, test } from './fixtures';
 
 const text = 'omnium-sanctorum-offertorium';
@@ -99,27 +100,22 @@ for (const language of ['pl', 'en'] as const) {
 		);
 		const sources = dialog.locator('details.source-notes');
 		await sources.locator('summary').click();
-		await expect(sources).toContainText(
-			language === 'pl' ? 'odsyłacz w w. 39 do Commune/C3a-1' : 'reference 39 to Commune/C3a-1'
-		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'nagłówek w w. 55, odsyłacz w w. 56 i tekst w w. 57'
-				: 'heading 55, reference 56, body 57'
-		);
-		await expect(sources).toContainText(
-			language === 'pl'
-				? 'z wyłączeniem rubryki okresowej w w. 58 i tekstu zastępczego w w. 59'
-				: 'seasonal rubric 58 and replacement 59 excluded'
-		);
+		const mass = sources.locator('ol > li').filter({
+			has: page.getByRole('link', { name: 'Divinum Officium. Missa (Latine)', exact: true })
+		});
+		const hours = sources.locator('ol > li').filter({
+			has: page.getByRole('link', { name: 'Divinum Officium. Horae (Latine)', exact: true })
+		});
+		await expect(mass.locator('a.source-passage')).toHaveCount(1);
+		await expect(hours.locator('a.source-passage')).toHaveCount(1);
+		await expectSourcePassage(mass, language, 'Offertorium', 'Missa/Sancti/11-01.txt', 38, 39);
+		await expectSourcePassage(hours, language, 'Offertorium', 'Horae/Commune/C3a-1.txt', 55, 57);
 		await expect(
 			sources.locator(
 				'a[href="https://archive.org/details/missale-romanum-1962/page/n800/mode/1up"]'
 			)
 		).toHaveCount(1);
-		await expect(sources.locator('a[href$="/web/www/horas/Latin/Commune/C3a-1.txt"]')).toHaveCount(
-			1
-		);
+		await expect(sources.locator('a[href$="C3a-1.txt#L55-L59"]')).toHaveCount(0);
 		await page.keyboard.press('Escape');
 		await expect(dialog).toHaveCount(0);
 	});

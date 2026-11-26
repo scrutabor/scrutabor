@@ -6,7 +6,18 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "Sancti/03-19 [Offertorium] -> @Commune/C2 [Offertorium], horas/Latin/Commune/C2 source line 385"
+    "section": "web/www/horas/Latin/Commune/C2.txt [Offertorium], 383–385 · web/www/missa/Latin/Sancti/03-19.txt [Offertorium], 49–50",
+    "passages": [
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C2.txt#L383-L385"
+     },
+     {
+      "heading": "Offertorium",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/03-19.txt#L49-L50"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/horas/Latin/Commune/C2.txt#L383-L385"
    },
    "entries": [
     {
@@ -17,7 +28,7 @@
      "claim": "The pinned Latin data give the same chant; the parenthesized Paschaltide Alleluia is applied according to the witness's declared seasonal mode."
     }
    ],
-   "verified_on": "2026-09-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

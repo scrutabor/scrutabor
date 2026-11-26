@@ -7,7 +7,8 @@
    "role": "historical_wording_basis",
    "locator": {
     "printed": "p. 76",
-    "scan": "PDF p. 88"
+    "scan": "PDF p. 88",
+    "page_url": "https://archive.org/download/TheMissalForTheLaity/TheMissalForTheLaity.pdf#page=88"
    },
    "entries": [
     {
@@ -16,7 +17,7 @@
       "kind": "segment",
       "segment": "s06"
      },
-     "claim": "What shall I give back to the Lord for all He has given me?"
+     "claim": "The corresponding English in the 1846 Missal reads “May the Blood of our Lord Jesus Christ preserve my soul to everlasting life. Amen.”"
     },
     {
      "id": "use.en.b46357526564c6c7d63f",
@@ -24,7 +25,7 @@
       "kind": "segment",
       "segment": "s03"
      },
-     "claim": "What shall I give back to the Lord for all He has given me?"
+     "claim": "The corresponding English in the 1846 Missal reads “I will take the Chalice of salvation, and will call upon the name of the Lord.”"
     },
     {
      "id": "use.en.dc6bcb8256cc90fee6c1",
@@ -32,10 +33,10 @@
       "kind": "segment",
       "segment": "s04"
      },
-     "claim": "What shall I give back to the Lord for all He has given me?"
+     "claim": "The corresponding English in the 1846 Missal reads “Praising, I will call upon the Lord, and shall be saved from my enemies.”"
     }
    ],
-   "verified_on": "2026-08-28"
+   "verified_on": "2026-11-25"
   }
  ],
  "witnesses": [],

@@ -6,7 +6,14 @@
    "digital_item": "item.divinum-officium-missa.44667ff.github",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Sancti/01-06.txt [Lectio] (lines 23-24)"
+    "section": "web/www/missa/Latin/Sancti/01-06.txt [Lectio] (lines 23-24)",
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/01-06.txt#L24",
+    "passages": [
+     {
+      "heading": "Lectio",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Sancti/01-06.txt#L24"
+     }
+    ]
    },
    "entries": [
     {
@@ -14,10 +21,10 @@
      "address": {
       "kind": "text"
      },
-     "claim": "The pinned Latin Mass data independently corroborate the component's substantive Latin and expose accidental editorial variants for collation."
+     "claim": "The Latin text in this revision of Divinum Officium is used for comparison with the printed Missal."
     }
    ],
-   "verified_on": "2026-10-09"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",
@@ -25,7 +32,7 @@
    "role": "direct_approved_print",
    "locator": {
     "printed": "pp. 42–43",
-    "scan": "leaf n121 / PDF p. 122",
+    "scan": "leaves n121–n122 / PDF pp. 122–123",
     "section": "In Commemoratione Baptismatis D.N.I.C., Léctio Isaíæ Prophétæ, Isai. 60, 1-6 (leaves n121–n122)",
     "page_url": "https://archive.org/details/missale-romanum-1962/page/n121/mode/1up"
    },
@@ -38,7 +45,7 @@
      "claim": "The Mass of the Commemoration of the Baptism prints this lesson in full. Its letters and accents equal pages 37–38 and the selected text; it has no comma after illumináre (Surge, illumináre Ierúsalem) and none after tuos (óculos tuos et vide), where pages 37–38 and the selected text have both."
     }
    ],
-   "verified_on": "2026-10-09"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-typica",

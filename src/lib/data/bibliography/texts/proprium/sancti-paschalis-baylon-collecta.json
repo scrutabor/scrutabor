@@ -29,7 +29,8 @@
    "locator": {
     "printed": "pp. XVIII, 123, 226",
     "scan": "PDF physical24,203,306 / leaves n23,n202,n305",
-    "section": "RG115d complete ending and Amen wording; same-edition accented common stem and terminal typography"
+    "section": "RG115d complete ending and Amen wording; same-edition accented common stem and terminal typography",
+    "page_url": "https://archive.org/details/missale-romanum-1962/page/n23/mode/1up"
    },
    "entries": [
     {
@@ -40,7 +41,7 @@
      "claim": "RG115d supplies the Son-directed Qui vivis ending w034–w049 and Amen w050. Its literal rubric formula is unaccented. Same-edition p.123 controls matching accented formula words, and p.226 controls the accented four-word terminal and separately marked Amen period. These controls do not make the proper page a full-ending witness or establish response actors, singing, or larger-group conclusion distribution."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",
@@ -48,9 +49,9 @@
    "role": "corroborating_latin_witness",
    "locator": {
     "printed": "p. 532",
-    "scan": "PDF physical613 / leaf n612",
-    "section": "05-17 collecta; Oratio2615 P; left column after May17 heading and Common Os iusti direction, before Secreta2616 C; May18 begins right column",
-    "page_url": "https://archive.org/details/missale_romanum-1962/page/n612/mode/1up"
+    "scan": "PDF p. 613",
+    "section": "Die 17 maii. S. Paschalis Baylon Conf. Oratio, n. 2615.",
+    "page_url": "https://archive.org/download/missale_romanum-1962/missale_romanum-1962.pdf#page=613"
    },
    "entries": [
     {
@@ -61,7 +62,7 @@
      "claim": "This setting prints the 33-word collecta proper w001–w033, followed by the distinct abbreviated cue “Qui vivis et regnas cum Deo Patre.” The full supplied ending and Amen are not printed at this proper locus. The setting is typographically distinct, not evidence of independent historical transmission."
     }
    ],
-   "verified_on": "2026-10-25"
+   "verified_on": "2026-11-25"
   },
   {
    "edition": "edition.missale-romanum.1962-vatican-joseph-bearing",

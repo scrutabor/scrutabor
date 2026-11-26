@@ -6,7 +6,8 @@
    "digital_item": "item.catechismus-catholicae-ecclesiae.septem-petitiones",
    "role": "official_liturgical_context",
    "locator": {
-    "section": "2851, 2854"
+    "section": "2851, 2854",
+    "page_url": "https://www.vatican.va/archive/catechism_lt/p4s2a3_lt.htm#VII.%20%C2%AB%20Sed%20libera%20nos%20a%20Malo%20%C2%BB"
    },
    "entries": [
     {
@@ -18,14 +19,21 @@
      "claim": "The Catechism identifies the Evil One in the final petition as Satan and explains that deliverance from him includes deliverance from every evil. This supports the petition's theological meaning, not an exclusive grammatical analysis of malo."
     }
    ],
-   "verified_on": "2026-09-18"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.divinum-officium-missa.44667ff",
    "digital_item": "item.divinum-officium-missa.44667ff.ordo",
    "role": "derived_digital_collation_aid",
    "locator": {
-    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-pater-noster; closed-literal-selection} (line 277; line 278; line 279); complete source contexts 275–281"
+    "section": "web/www/missa/Latin/Ordo/Ordo.txt {main-ordo:main-ordo-orationes-pater-noster; closed-literal-selection} (line 277; line 278; line 279); complete source contexts 275–281",
+    "passages": [
+     {
+      "heading": "Preparatio Communionis",
+      "url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L277-L279"
+     }
+    ],
+    "page_url": "https://github.com/DivinumOfficium/divinum-officium/blob/44667ff518b8ff1439780470828b39714f5306a2/web/www/missa/Latin/Ordo/Ordo.txt#L277-L279"
    },
    "entries": [
     {
@@ -36,7 +44,7 @@
      "claim": "The pinned Mass Ordo supplies this 50-word literal selection in the stated selection order (277, then 278, then 279), with only the explicitly bound framing exclusions or cross joins and whitespace collapse. This is a derived textual comparison, not independent transmission, completion of name slots, seasonal selection or performer evidence."
     }
    ],
-   "verified_on": "2026-10-27"
+   "verified_on": "2026-11-26"
   },
   {
    "edition": "edition.rituale-romanum.1937-pustet-quinta",
@@ -45,7 +53,8 @@
    "locator": {
     "printed": "p. 16",
     "scan": "PDF p. 24",
-    "section": "Tit. II cap. 2, n. 11"
+    "section": "Tit. II cap. 2, n. 11",
+    "page_url": "https://librinostri.catholica.cz/download/RitualRom1937-OCR.pdf#page=24"
    },
    "entries": [
     {
@@ -56,7 +65,7 @@
      "claim": "The page prints the complete Latin Pater noster, including quotidianum and the final Amen, in the baptism rite. Its formula is adopted here as a standalone prayer; the present edition retains its period after caelis and the capitals Sanctificetur and Sed. Baptismal participants, volume and placement are not transferred to the standalone prayer, and this is not the Mass-recension witness."
     }
    ],
-   "verified_on": "2026-11-04"
+   "verified_on": "2026-11-26"
   }
  ],
  "witnesses": []
