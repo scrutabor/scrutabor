@@ -69,15 +69,15 @@ describe('Munda before the Mass Gospel', () => {
 					'sam śpiewa',
 					'mówi ją diakon',
 					'celebrans jej nie powtarza',
-					'Munda cor meum wraz ze swoim zakończeniem pozostaje',
+					'Munda cor meum z zakończeniem Per Christum',
 					'przed ostatnią Ewangelią'
 				]
 			: [
-					'priest-alone',
+					'without a deacon',
 					'sings the Gospel himself',
 					'the deacon says it',
 					'celebrant does not repeat it',
-					'Munda cor meum and its own conclusion remain',
+					'Munda cor meum is said through its conclusion, Per Christum',
 					'before the Last Gospel'
 				])
 			expect(note).toContain(phrase);
@@ -89,19 +89,19 @@ describe('Munda before the Mass Gospel', () => {
 			const note = ordoContext('munda-cor-meum', 'dominica-ii-passionis', false, lang)!;
 			for (const phrase of lang === 'pl'
 				? [
-						'kapłan wykonuje Pasję sam',
+						'kapłan sam czyta lub śpiewa Pasję',
 						'co najmniej święcenia diakonatu',
 						bindOrphans('każdy z nich'),
 						'półgłosem',
-						'Sam wybór Mszy śpiewanej nie rozstrzyga',
-						'obrzędach palm ma osobne przygotowanie'
+						'Obie formy przygotowania są możliwe także we Mszy śpiewanej',
+						'poświęceniu palm przed Mszą ma własne przygotowanie'
 					]
 				: [
-						'priest delivers the Passion alone',
+						'priest reads or chants the Passion himself',
 						'at least deacons',
 						'each says Munda in a low voice',
-						'Selecting sung Mass alone does not determine',
-						'palm ceremonies has its own preparation'
+						'Either form of preparation is possible at sung Mass',
+						'blessing of palms before Mass has its own preparation'
 					])
 				expect(note).toContain(phrase);
 			const gospel = ordoContext('evangelium', 'dominica-ii-passionis', false, lang)!;
@@ -110,8 +110,8 @@ describe('Munda before the Mass Gospel', () => {
 			);
 			expect(gospel).toContain(
 				lang === 'pl'
-					? bindOrphans('ani nie znaczy krzyżem księgi i siebie')
-					: 'neither the book nor the reader is signed'
+					? bindOrphans('nie kreśli znaku krzyża ani na księdze, ani na sobie')
+					: 'makes no sign of the cross on the book or on himself'
 			);
 			expect(gospel).not.toContain(
 				lang === 'pl' ? 'znaczy krzyżem księgę' : 'the priest signs the book'
@@ -130,13 +130,13 @@ describe('Munda before the Mass Gospel', () => {
 			const note = ordoContext('munda-cor-meum', 'vigilia-paschalis', true, lang)!;
 			expect(note).toContain(
 				lang === 'pl'
-					? 'zachowuje się Munda cor meum'
-					: 'Munda cor meum and the separate blessing request and blessing remain'
+					? bindOrphans('Munda cor meum, a potem prosi Boga')
+					: 'Munda cor meum quietly, asks God for a blessing'
 			);
 			expect(note).toContain(
 				lang === 'pl'
-					? 'Przy Ewangelii nie niesie się świateł, ale nie pomija się tego przygotowania.'
-					: 'No lights are carried at the Gospel, but this preparation is not omitted.'
+					? 'Do Ewangelii nie niesie się świec.'
+					: 'No candles are carried for the Gospel.'
 			);
 			expect(note).not.toContain(lang === 'pl' ? 'opuszcza się Munda' : 'Munda is omitted');
 			expect(ordoContext('introibo', 'vigilia-paschalis', true, lang)).toContain(

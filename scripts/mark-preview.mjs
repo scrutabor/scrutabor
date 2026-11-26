@@ -17,13 +17,10 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const OUT = 'build';
-const PRODUCTION_BRANCH = 'release';
+import { isPreview } from './pages-preview.mjs';
+export { isPreview } from './pages-preview.mjs';
 
-/** Is this build a deployment of something other than the release branch? */
-export function isPreview(branch = process.env.CF_PAGES_BRANCH) {
-	return Boolean(branch) && branch !== PRODUCTION_BRANCH;
-}
+const OUT = 'build';
 
 /** The preview rule APPENDED to what the build already carries. Pages reads
  * ONE _headers file, and writing only the noindex rule here silently threw
@@ -39,7 +36,7 @@ export function markedHeaders(existing) {
 `;
 }
 
-if (!isPreview()) {
+if (!isPreview(process.env.CF_PAGES_BRANCH)) {
 	console.log(`mark-preview: branch ${process.env.CF_PAGES_BRANCH ?? '(none)'} — nothing to mark`);
 } else {
 	let existing = '';

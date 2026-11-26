@@ -144,8 +144,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest stands at the foot of the altar, signs himself, and says the first words of the Mass — he has not gone up yet.'
 				},
 				when: {
-					pl: 'opuszcza się wraz ze wszystkimi modlitwami u stopni ołtarza, gdy Mszę poprzedza poświęcenie świec albo palm z procesją, poświęcenie popiołu lub procesja błagalna, a także w Wigilię Paschalną — kapłan od razu wstępuje na ołtarz i całuje go',
-					en: 'omitted with all the prayers at the foot of the altar when the Mass follows the blessing and procession of candles or of palms, the blessing of ashes or a Rogation procession, and at the Easter Vigil — the priest goes straight up to the altar and kisses it'
+					pl: 'Modlitwy u stopni ołtarza opuszcza się w Wigilię Paschalną oraz wtedy, gdy Mszę poprzedza poświęcenie świec lub palm z procesją, poświęcenie popiołu albo procesja błagalna. Kapłan podchodzi wówczas do ołtarza i całuje go.',
+					en: 'The prayers at the foot of the altar are omitted at the Easter Vigil and when Mass follows the blessing and procession of candles or palms, the blessing of ashes, or a Rogation procession. The priest goes directly to the altar and kisses it.'
 				}
 			},
 			{
@@ -158,8 +158,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'Psalm 42, said in alternation with the server, closed by the Glória Patri and the antiphon again.'
 				},
 				when: {
-					pl: 'opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie — wraz z doksologią i powtórzoną antyfoną',
-					en: 'omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive — with its doxology and the repeated antiphon'
+					pl: 'Psalm, doksologię i powtórzenie antyfony opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie.',
+					en: 'The psalm, the doxology and the repetition of the antiphon are omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday.'
 				}
 			},
 			{
@@ -273,8 +273,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'At the middle of the altar the priest intones the angelic hymn. At a sung Mass the choir takes it up.'
 				},
 				when: {
-					pl: 'opuszcza się w Adwencie, Przedpościu i Wielkim Poście oraz we Mszach za zmarłych, wraca w święta tych okresów',
-					en: 'omitted in Advent, Pre-Lent, and Lent and at Masses for the Dead, and returns on the feasts of those seasons'
+					pl: 'Gloria opuszcza się we Mszach za zmarłych oraz w niedziele Adwentu, Przedpościa i Wielkiego Postu. W święta przypadające w tych okresach hymn odmawia się zgodnie z rubrykami.',
+					en: 'The Gloria is omitted at Masses for the Dead and on the Sundays of Advent, Septuagesima and Lent. On feasts during these seasons it is said as the rubrics prescribe.'
 				}
 			},
 			{
@@ -291,8 +291,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				title: 'Epístola',
 				kind: 'proper',
 				note: {
-					pl: 'Po stronie lekcji kapłan czyta lekcję dnia.',
-					en: 'At the Epistle side the priest reads the day’s Epistle.'
+					pl: 'Kapłan stoi po stronie lekcji i czyta wyznaczony na ten dzień fragment Pisma Świętego.',
+					en: 'The priest reads the lesson of the day at the Epistle side of the altar.'
 				}
 			},
 			{
@@ -328,8 +328,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'preparation for the Gospel'
 				},
 				note: {
-					pl: 'W przedstawionym tu wariancie bez diakona kapłan przed Ewangelią Mszy odmawia tę modlitwę po cichu, także gdy sam śpiewa Ewangelię. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. We Mszach za zmarłych opuszcza się odrębną prośbę o błogosławieństwo i samo błogosławieństwo, ale Munda cor meum wraz ze swoim zakończeniem pozostaje. Nie odmawia się jej przed ostatnią Ewangelią.',
-					en: 'In the priest-alone form shown here, the priest says this prayer in a voice only he can hear before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon says it, and the celebrant does not repeat it. The separate blessing request and blessing are omitted at Masses for the Dead, but Munda cor meum and its own conclusion remain. It is not said before the Last Gospel.'
+					pl: 'Przed Ewangelią kapłan odprawiający bez diakona odmawia tę modlitwę po cichu, także gdy sam śpiewa Ewangelię. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. We Mszach za zmarłych odmawia się Munda cor meum z zakończeniem Per Christum, a opuszcza prośbę o błogosławieństwo i samo błogosławieństwo. Modlitwy tej nie odmawia się przed ostatnią Ewangelią.',
+					en: 'When the priest celebrates without a deacon, he says this prayer quietly before the Gospel, even when he sings the Gospel himself. At solemn Mass the deacon says it, and the celebrant does not repeat it. At Masses for the Dead, Munda cor meum is said through its conclusion, Per Christum. The request for a blessing and the blessing itself are omitted. This prayer is not said before the Last Gospel.'
 				}
 			},
 			{
@@ -342,8 +342,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'prayer for a blessing'
 				},
 				note: {
-					pl: 'Po Munda cor meum kapłan odprawiający bez diakona i subdiakona odmawia po cichu tę prośbę i błogosławieństwo przed Ewangelią Mszy, także gdy sam śpiewa Ewangelię. We Mszy uroczystej diakon ma odrębny obrzęd. Sam wybór Mszy śpiewanej nie oznacza jego obecności. We Mszach za zmarłych opuszcza się obie części. Nie odmawia się ich przed ostatnią Ewangelią.',
-					en: 'After Munda cor meum, the priest celebrating without a deacon and subdeacon says this request and blessing in a voice only he can hear before the Mass Gospel, including when he sings the Gospel himself. At solemn Mass the deacon has a separate rite. Selecting sung Mass alone does not imply his presence. Both parts are omitted at Masses for the Dead. They are not said before the Last Gospel.'
+					pl: 'Po Munda cor meum kapłan odprawiający bez diakona i subdiakona prosi Boga o błogosławieństwo słowami Iube, Domine, a następnie odmawia Dominus sit in corde meo. Obie modlitwy mówi po cichu, także gdy sam śpiewa Ewangelię. We Mszy uroczystej diakon prosi celebransa o błogosławieństwo. We Mszach za zmarłych i przed ostatnią Ewangelią obie modlitwy się opuszcza.',
+					en: 'After Munda cor meum, the priest celebrating without a deacon and subdeacon asks God for a blessing with Iube, Domine, then says Dominus sit in corde meo. The priest says both prayers in a voice only he can hear, even when singing the Gospel himself. At solemn Mass the deacon asks the celebrant for a blessing. Both prayers are omitted at Masses for the Dead and before the Last Gospel.'
 				}
 			},
 			{
@@ -352,8 +352,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/iube-domne-benedicere',
 				note: {
-					pl: 'Odrębna forma przygotowania do Ewangelii z udziałem diakona. Prośbę wypowiada diakon. Celebrans udziela błogosławieństwa i sam mówi końcowe Amen. Nie odmawia się tej formuły po przygotowaniu kapłana odprawiającego bez diakona i subdiakona. Opuszcza się ją we Mszach za zmarłych. Nie stosuje się jej przed ostatnią Ewangelią.',
-					en: 'A separate form of preparation for the Gospel with a deacon. The deacon makes the request. The celebrant gives the blessing and says the final Amen himself. This formula is not said after the preparation of the priest celebrating without a deacon and subdeacon. It is omitted at Masses for the Dead and is not used before the Last Gospel.'
+					pl: 'Przed Ewangelią diakon prosi celebransa o błogosławieństwo. Celebrans błogosławi go i sam mówi końcowe Amen. Gdy kapłan głosi Ewangelię bez diakona, odmawia własne modlitwy. Błogosławieństwo diakona opuszcza się we Mszach za zmarłych i przed ostatnią Ewangelią.',
+					en: 'Before the Gospel the deacon asks the celebrant for a blessing. The celebrant blesses him and says the final Amen himself. A priest who proclaims the Gospel without a deacon says his own prayers. The deacon’s blessing is omitted at Masses for the Dead and before the Last Gospel.'
 				}
 			},
 			{
@@ -362,8 +362,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/iube-domne-benedicere-in-passione',
 				note: {
-					pl: 'Gdy w Niedzielę Palmową Pasję śpiewają wyznaczeni duchowni mający co najmniej święcenia diakonatu, po Munda cor meum proszą celebransa o błogosławieństwo. Celebrans udziela im błogosławieństwa w liczbie mnogiej, głosem umiarkowanym (media voce). Ci duchowni odpowiadają Amen. Jest to odrębna forma od przygotowania kapłana wykonującego Pasję sam. Nie dotyczy Ewangelii w obrzędach palm przed Mszą.',
-					en: 'When appointed clergy who are at least deacons sing the Palm Sunday Passion, they request the celebrant’s blessing after Munda cor meum. The celebrant gives them the plural blessing in a moderate voice (media voce). Those ministers answer Amen. This is distinct from the preparation of a priest delivering the Passion alone. It is not the preparation for the Gospel in the palm ceremonies before Mass.'
+					pl: 'Gdy w Niedzielę Palmową Pasję śpiewają lub czytają wyznaczeni duchowni mający co najmniej święcenia diakonatu, po Munda cor meum proszą celebransa o błogosławieństwo. Celebrans błogosławi ich razem, głosem umiarkowanym (media voce), a oni odpowiadają Amen. Gdy kapłan sam czyta lub śpiewa Pasję, odmawia własne modlitwy. Ewangelia przy poświęceniu palm przed Mszą ma odrębne przygotowanie.',
+					en: 'On Palm Sunday, if appointed clergy who are at least deacons chant or read the Passion, they ask the celebrant for a blessing after Munda cor meum. The celebrant blesses them together in a moderate voice (media voce), and they answer Amen. A priest who reads or chants the Passion himself says his own prayers. The Gospel at the blessing of palms before Mass has its own preparation.'
 				}
 			},
 			{
@@ -395,8 +395,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'After the Gospel — on Sundays usually after the sermon — the priest intones the profession of faith. All genuflect at the words of the Incarnation.'
 				},
 				when: {
-					pl: 'w niedziele i większe święta',
-					en: 'on Sundays and greater feasts'
+					pl: 'Credo odmawia się m.in. w niedziele i w większe święta.',
+					en: 'The Creed is said on Sundays and on greater feasts, among other occasions.'
 				}
 			}
 		]
@@ -436,8 +436,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'A drop of water goes into the wine. The prayer said over it is an old Christmas collect.'
 				},
 				when: {
-					pl: 'we Mszach za zmarłych wody się nie błogosławi',
-					en: 'at Masses for the Dead the water is not blessed'
+					pl: 'We Mszach za zmarłych wody się nie błogosławi.',
+					en: 'At Masses for the Dead the water is not blessed.'
 				}
 			},
 			{
@@ -470,8 +470,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest washes his fingertips, saying Psalm 25 from the verse that names the altar.'
 				},
 				when: {
-					pl: 'Chwały Ojcu nie odmawia się we Mszach za zmarłych ani we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. W Wigilię Paschalną odmawia się Chwała Ojcu.',
-					en: 'the Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday inclusive. It is said at the Easter Vigil'
+					pl: 'Doksologię Chwała Ojcu opuszcza się we Mszach za zmarłych oraz we Mszach okresowych (de Tempore) od I Niedzieli Męki Pańskiej do Wielkiego Czwartku włącznie. W Wigilię Paschalną kapłan ją odmawia.',
+					en: 'The Glória Patri is omitted at Masses for the Dead and at Masses of the season (de Tempore) from the First Sunday of the Passion through Holy Thursday. It is said at the Easter Vigil.'
 				}
 			},
 			{
@@ -557,8 +557,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/memento-vivorum',
 				note: {
-					pl: 'Kapłan milknie i wspomina żywych — w miejscu, gdzie mszał drukuje N. et N.',
-					en: 'The priest falls silent and remembers the living — where the missal prints N. et N.'
+					pl: 'W miejscu oznaczonym w mszale literami N. et N. kapłan zatrzymuje się, by polecić Bogu żywych. Może po cichu wymienić ich imiona.',
+					en: 'At the place marked N. et N. in the missal, the priest pauses to pray for the living and may say their names quietly.'
 				}
 			},
 			{
@@ -597,8 +597,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/qui-pridie',
 				note: {
-					pl: 'Konsekracja chleba. Kapłan przyklęka, unosi Hostię, przyklęka znowu. Usługujący dzwoni przy każdym geście.',
-					en: 'The consecration of the bread. The priest genuflects, raises the Host, genuflects again. The bell rings at each.'
+					pl: 'Po konsekracji chleba kapłan przyklęka, podnosi Hostię, kładzie ją na korporale i ponownie przyklęka. Przy podniesieniu Hostii, a potem kielicha, usługujący dzwoni trzykrotnie lub nieprzerwanie, aż kapłan je opuści.',
+					en: 'After consecrating the bread, the priest genuflects, raises the Host, sets it on the corporal and genuflects again. At each elevation, first of the Host and then of the chalice, the server rings the bell three times or continuously until the priest lowers it.'
 				}
 			},
 			{
@@ -617,8 +617,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/unde-et-memores',
 				note: {
-					pl: 'Kapłan ofiaruje to, co już jest obecne, i czyni pięć znaków krzyża nad darami konsekrowanymi.',
-					en: 'The priest offers what is now present, and makes five crosses over the consecrated gifts.'
+					pl: 'Wspominając Mękę, Zmartwychwstanie i Wniebowstąpienie Chrystusa, kapłan ofiaruje Bogu Chleb życia i Kielich zbawienia. Czyni pięć znaków krzyża nad konsekrowanymi darami.',
+					en: 'Recalling Christ’s Passion, Resurrection and Ascension, the priest offers God the Bread of life and the Chalice of salvation. In making this offering, the priest traces five signs of the cross over the consecrated gifts.'
 				}
 			},
 			{
@@ -667,8 +667,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'ordinarium/per-quem-haec-omnia',
 				note: {
-					pl: 'Krótka modlitwa, w której miejscu dawniej błogosławiono oleje i płody ziemi.',
-					en: 'A short prayer. At this point the oils and the fruits of the earth were once blessed.'
+					pl: 'Kapłan zwraca się do Boga, który przez Chrystusa stwarza te dobra, uświęca je, ożywia, błogosławi i nam ich udziela.',
+					en: 'The priest addresses God, who through Christ creates these gifts, sanctifies them, gives them life, blesses them and gives them to us.'
 				}
 			},
 			{
@@ -739,8 +739,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The invocations come after the breaking of the Host and the greeting of peace, just before Communion.'
 				},
 				when: {
-					pl: 'we Mszach za zmarłych zamiast miserére nobis mówi się dona eis réquiem',
-					en: 'at Masses for the Dead dona eis réquiem takes the place of miserére nobis'
+					pl: 'We Mszach za zmarłych pierwsze dwa wezwania kończą się słowami dona eis réquiem, a trzecie słowami dona eis réquiem sempitérnam.',
+					en: 'At Masses for the Dead the first two invocations end with dona eis réquiem and the third with dona eis réquiem sempitérnam.'
 				}
 			},
 			{
@@ -753,8 +753,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest prays for the peace of the Church. This is the first of three prayers he says in a low voice before Communion. At solemn Mass the kiss of peace follows it.'
 				},
 				when: {
-					pl: 'we Mszach za zmarłych opuszcza się tę modlitwę i pocałunek pokoju',
-					en: 'at Masses for the Dead this prayer and the kiss of peace are omitted'
+					pl: 'We Mszach za zmarłych opuszcza się tę modlitwę i pocałunek pokoju.',
+					en: 'At Masses for the Dead this prayer and the kiss of peace are omitted.'
 				}
 			},
 			{
@@ -807,8 +807,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest shows the Host to the faithful. After Dómine, non sum dignus has been said three times, he gives Communion, saying Corpus Dómini nostri Iesu Christi to each person.'
 				},
 				when: {
-					pl: 'gdy wierni przystępują do Komunii',
-					en: 'when the faithful receive Communion'
+					pl: 'Jeśli nikt z wiernych nie przystępuje do Komunii, kapłan pomija tę część.',
+					en: 'If none of the faithful receive Communion, the priest omits this part.'
 				}
 			},
 			{
@@ -867,8 +867,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest kisses the altar, greets the people, and returns to the Epistle side for the closing prayer — as many prayers as there were collects.'
 				},
 				when: {
-					pl: 'w dni powszednie Wielkiego Postu dochodzi jeszcze Orátio super pópulum',
-					en: 'on the ferias of Lent an Orátio super pópulum is added'
+					pl: 'Po ostatniej modlitwie w dni powszednie Wielkiego Postu, z wyjątkiem Triduum, kapłan odmawia jeszcze modlitwę nad ludem (Orátio super pópulum).',
+					en: 'At weekday Masses of Lent and Passiontide, except during the Triduum, the priest adds the prayer over the people (Orátio super pópulum) after the last Postcommunion.'
 				}
 			},
 			{
@@ -881,8 +881,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest turns to the people and dismisses them with Ite, missa est. The server answers Deo grátias.'
 				},
 				when: {
-					pl: 'gdy po Mszy następuje procesja, mówi się Benedicámus Dómino, a we Mszach za zmarłych — Requiéscant in pace',
-					en: 'when a procession follows the Mass the dismissal is Benedicámus Dómino, and at Masses for the Dead Requiéscant in pace'
+					pl: 'Gdy po Mszy następuje procesja liturgiczna, śpiewa się lub mówi Benedicámus Dómino. We Mszach za zmarłych kapłan lub diakon mówi albo śpiewa Requiéscant in pace, a odpowiedź brzmi Amen.',
+					en: 'When a liturgical procession follows Mass, the dismissal is Benedicámus Dómino. At Masses for the Dead the priest or deacon says or sings Requiéscant in pace, and the response is Amen.'
 				}
 			},
 			{
@@ -905,8 +905,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest raises his eyes, extends his hands, and blesses the people with one sign of the cross.'
 				},
 				when: {
-					pl: 'we Mszach za zmarłych błogosławieństwa się nie udziela',
-					en: 'at Masses for the Dead no blessing is given'
+					pl: 'Po Benedicámus Dómino i po Requiéscant in pace opuszcza się końcowe błogosławieństwo.',
+					en: 'The final blessing is omitted after Benedicámus Dómino and after Requiéscant in pace.'
 				}
 			},
 			{
@@ -934,8 +934,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 					en: 'The priest kneels at the foot of the altar and begins three Hail Marys with the people, who answer the second half of each.'
 				},
 				when: {
-					pl: 'po Mszy cichej, a po śpiewanej opuszcza się je',
-					en: 'after low Mass, and omitted after a sung Mass'
+					pl: 'Modlitwy te odmawia się po Mszy cichej.',
+					en: 'These prayers are said after Low Mass.'
 				}
 			},
 			{
@@ -954,8 +954,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/deus-refugium',
 				note: {
-					pl: 'Kolekta, którą kapłan zamyka antyfonę. Leon XIII prosił w niej o wolność Kościoła. Od roku 1930 modlitwy te ofiarowuje się w intencji Rosji.',
-					en: 'The collect with which the priest closes the antiphon. Leo XIII asked in it for the freedom of the Church. Since 1930 these prayers have been offered for Russia.'
+					pl: 'Po antyfonie kapłan prosi za grzeszników oraz o wolność i wywyższenie Kościoła. W 1930 roku Pius XI polecił odmawiać modlitwy po Mszy cichej o pokój i swobodę wyznawania wiary w Rosji.',
+					en: 'After the antiphon the priest prays for sinners and for the freedom and exaltation of the Church. In 1930 Pius XI directed that the prayers after Low Mass be offered for peace and the freedom to practice the faith in Russia.'
 				}
 			},
 			{
@@ -964,8 +964,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/sancte-michael',
 				note: {
-					pl: 'Modlitwa do świętego Michała Archanioła, ułożona przez samego Leona XIII.',
-					en: 'The prayer to St Michael the Archangel, composed by Leo XIII himself.'
+					pl: 'W modlitwie Leona XIII wierni proszą świętego Michała Archanioła o obronę przed złem.',
+					en: 'In this prayer of Leo XIII, the faithful ask Saint Michael the Archangel to defend them against evil.'
 				}
 			},
 			{
@@ -974,8 +974,8 @@ const ORDO_SOURCE: OrdoMovement[] = [
 				kind: 'text',
 				text: 'orationes/cor-iesu',
 				note: {
-					pl: 'Wezwanie powtarzane trzykrotnie, którym kończą się modlitwy. Dodał je Pius X w roku 1904.',
-					en: 'The invocation that ends the prayers, said three times. Pius X added it in 1904.'
+					pl: 'Na zakończenie można trzykrotnie wezwać Najświętsze Serce Jezusa, prosząc o miłosierdzie.',
+					en: 'These prayers may end with a threefold invocation of the Sacred Heart of Jesus, asking for mercy.'
 				}
 			}
 		]

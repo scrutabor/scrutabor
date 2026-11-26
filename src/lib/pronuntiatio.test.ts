@@ -5,7 +5,7 @@ import { PRONUNCIATION_RULES } from './pronuntiatio-rules';
 
 const TEXTS = await loadAllCoreTexts();
 
-// The pronunciation page teaches twelve rules and prints a transcription
+// The pronunciation page teaches the rules and prints a transcription
 // beside each. The transcriptions are hand-written prose on a page, and the
 // app generates its own from `pronunciation.ts` — two statements of one fact,
 // which is the shape that drifts. A reader who reads the rule and then taps

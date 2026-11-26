@@ -130,6 +130,8 @@ export interface Messages {
 	commemorationRules: Record<string, readonly string[]>;
 	/** The heading over those dates, grouped by the Mass that makes the commemoration. */
 	commemorationDates: string;
+	/** Standalone title. The short calendar label is part of a longer phrase. */
+	impededVigilHeading: string;
 	/** A listed date whose formulary's orations the edition does not yet carry. */
 	commemorationPrayersMissing: string;
 	/** A Mass a resolved commemoration names on a listed date that this edition does not yet
@@ -280,7 +282,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		levelsLabel: 'tryb',
 		themeAria: { toLight: 'przełącz na tryb jasny', toDark: 'przełącz na tryb ciemny' },
 		textSizeAria: 'wielkość pisma',
-		textSizes: { normal: 'normalne', larger: 'większe', largest: 'największe' },
+		textSizes: { normal: 'standardowa', larger: 'większa', largest: 'największa' },
 		langMenuAria: 'wybór języka',
 		searchLabel: 'szukaj',
 		searchTitle: 'Wyszukiwanie',
@@ -289,14 +291,14 @@ const MESSAGES: Record<Lang, Messages> = {
 		segmentNarrow: 'zawęź wybór do tego wersetu',
 		segmentDeselect: 'usuń wybór tego wersetu',
 		segmentRangeHint:
-			'Wybrany fragment możesz udostępnić, kopiując adres strony. Aby zaznaczyć zakres, przytrzymaj Shift i kliknij drugi werset.',
+			'Wybrany fragment możesz udostępnić, kopiując adres strony. Jeśli używasz klawiatury, przytrzymaj Shift i wybierz drugi werset, aby zaznaczyć cały fragment.',
 		searchHint: 'Wpisz tytuł modlitwy, znany fragment albo łacińskie słowo.',
 		searchLoading: 'szukam…',
 		searchNoResults: 'Brak wyników.',
 		searchFailed: 'Wyszukiwanie nie powiodło się.',
 		searchDegraded:
 			'Wyszukiwanie w przekładach jest chwilowo niedostępne. Nadal można szukać tytułów modlitw, łacińskich fragmentów i haseł.',
-		searchRetry: 'spróbuj ponownie',
+		searchRetry: 'Spróbuj ponownie',
 		searchTitles: 'tytuły modlitw',
 		searchContents: 'fragmenty tekstów',
 		searchGrammar: 'hasła słownikowe',
@@ -355,7 +357,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		externalDict: 'słownik zewnętrzny',
 		notFound: 'Nie ma takiego hasła.',
 		catalogDescription:
-			'Modlitewnik łaciński z analizą słowo po słowie — przekład, gramatyka i wymowa każdego słowa.',
+			'Modlitewnik łaciński z przekładami, objaśnieniami gramatycznymi i wymową łaciny.',
 		editioDescription:
 			'Z jakich źródeł korzystamy, jak sprawdzamy łacinę i co jeszcze czeka na przegląd.',
 		bibliographyTitle: 'bibliografia',
@@ -370,7 +372,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'{title} — tekst łaciński z analizą słowo po słowie, przekładem i objaśnieniami gramatycznymi.',
 		pageNotFound: 'Ta strona nie istnieje.',
 		errorGeneric: 'Wystąpił błąd.',
-		goHome: 'wróć na stronę główną',
+		goHome: 'Wróć na stronę główną',
 		aboutLabel: 'o modlitwie',
 		sourcesLabel: 'źródła',
 		translationRelationshipLabel: 'relacja z brzmieniem historycznym',
@@ -433,6 +435,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			]
 		},
 		commemorationDates: 'Święta i daty w tym wydaniu',
+		impededVigilHeading: 'Wigilia Wniebowstąpienia Pańskiego ustępująca świętu',
 		commemorationPrayersMissing: 'modlitw nie ma jeszcze w tym wydaniu',
 		commemorationAbsentMasses: {
 			'feria-sexta-quatuor-temporum-adventus': 'Piątek Suchych Dni Adwentu',
@@ -446,7 +449,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		dayLoading: 'wczytywanie',
 		dayFailed: 'nie udało się wczytać tekstów dnia',
 		dayUnwritten: 'jeszcze nie w tym wydaniu',
-		dayInPlace: 'wczytano teksty dnia',
+		dayInPlace: 'wczytano dostępne teksty dnia',
 		dayPartial: '(część tekstów)',
 		dayAhead: 'formularz na ten dzień nie jest jeszcze w tym wydaniu — można wybrać inny dzień',
 		dayWeekOf: 'dziś dzień powszedni — ostatnia niedziela to',
@@ -473,9 +476,9 @@ const MESSAGES: Record<Lang, Messages> = {
 			unresolvedTitle: 'Brak danych dla tego dnia',
 			unresolvedText: 'W tym wydaniu można otworzyć na ten dzień tylko części stałe Mszy.',
 			unresolvedWeek: 'Niedziela tego tygodnia to',
-			unwrittenTitle: 'Dzień rozpoznany, formularz jeszcze niedostępny',
+			unwrittenTitle: 'Brak tekstów Mszy na ten dzień',
 			unwrittenText:
-				'Kalendarium rozpoznaje ten dzień, ale jego tekstów nie ma jeszcze w tym wydaniu.',
+				'Ten dzień figuruje w kalendarzu. Jego formularz mszalny czeka jeszcze na dodanie do tego wydania.',
 			chooseVariant: 'Wybierz formularz Mszy',
 			openFormulary: 'Otwórz formularz',
 			openWithout: 'Otwórz części stałe',
@@ -577,14 +580,14 @@ const MESSAGES: Record<Lang, Messages> = {
 		segmentNarrow: 'narrow the selection to this verse',
 		segmentDeselect: 'clear the selected verse',
 		segmentRangeHint:
-			'Copy the page address to share the selected passage. To select a range, hold Shift and click the second verse.',
+			'Copy the page address to share the selected passage. If you use a keyboard, hold Shift and select the second verse to mark the whole passage.',
 		searchHint: 'Enter a prayer title, a remembered phrase, or a Latin word.',
 		searchLoading: 'searching…',
 		searchNoResults: 'No results found.',
 		searchFailed: 'Search failed.',
 		searchDegraded:
 			'Search in translations is temporarily unavailable. You can still search prayer titles, Latin passages, and dictionary entries.',
-		searchRetry: 'try again',
+		searchRetry: 'Try again',
 		searchTitles: 'prayer titles',
 		searchContents: 'text passages',
 		searchGrammar: 'dictionary entries',
@@ -635,7 +638,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		externalDict: 'external dictionary',
 		notFound: 'No such entry.',
 		catalogDescription:
-			'A Latin prayer book with word-by-word analysis — translation, grammar, and pronunciation for every word.',
+			'A Latin prayer book with translations, grammar notes, and a guide to pronunciation.',
 		editioDescription:
 			'The sources behind this edition, how we check the Latin, and what still needs review.',
 		bibliographyTitle: 'bibliography',
@@ -650,7 +653,7 @@ const MESSAGES: Record<Lang, Messages> = {
 			'{title} — the Latin text with word-by-word analysis, translation, and grammar notes.',
 		pageNotFound: 'This page does not exist.',
 		errorGeneric: 'Something went wrong.',
-		goHome: 'go to the home page',
+		goHome: 'Go to the home page',
 		aboutLabel: 'about this prayer',
 		sourcesLabel: 'sources',
 		translationRelationshipLabel: 'relationship to historical wording',
@@ -713,20 +716,21 @@ const MESSAGES: Record<Lang, Messages> = {
 			]
 		},
 		commemorationDates: 'Feasts and dates in this edition',
+		impededVigilHeading: 'When a feast takes precedence over the Vigil of the Ascension',
 		commemorationPrayersMissing: 'prayers not yet in this edition',
 		commemorationAbsentMasses: {
 			'feria-sexta-quatuor-temporum-adventus': 'Ember Friday of Advent',
 			'sabbato-quatuor-temporum-adventus': 'Ember Saturday of Advent'
 		},
 		formularyScope:
-			'Prayer selection includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.',
+			'This edition includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.',
 		dayLabel: 'day',
 		dayStatusLabel: 'about the day',
 		dayNone: 'no formulary',
 		dayLoading: 'loading',
 		dayFailed: 'the day’s texts could not be loaded',
 		dayUnwritten: 'not yet in this edition',
-		dayInPlace: 'the day’s texts are ready',
+		dayInPlace: 'the available texts are ready',
 		dayPartial: '(some texts)',
 		dayAhead: 'the formulary for this day is not yet in this edition — another day can be chosen',
 		dayWeekOf: 'today is a weekday — the last Sunday:',
@@ -752,9 +756,10 @@ const MESSAGES: Record<Lang, Messages> = {
 			outsideText: 'Choose a date in the calendar or open the Ordinary of the Mass.',
 			unresolvedTitle: 'No calendar entry for this day',
 			unresolvedText: 'For this day, you can open the Ordinary of the Mass.',
-			unresolvedWeek: 'The Sunday for this week is',
-			unwrittenTitle: 'Day resolved, formulary not yet available',
-			unwrittenText: 'The calendar recognises this day, but its texts are not yet in this edition.',
+			unresolvedWeek: 'Sunday of this week:',
+			unwrittenTitle: 'Mass texts not yet available',
+			unwrittenText:
+				'This day is listed in the calendar. Its Mass texts have yet to be added to this edition.',
 			chooseVariant: 'Choose the Mass formulary',
 			openFormulary: 'Open formulary',
 			openWithout: 'Open the Ordinary',
@@ -803,7 +808,7 @@ const MESSAGES: Record<Lang, Messages> = {
 		markResponsum: 'Respónsum — a response or chant by the choir',
 		voices: { submissa: 'in a low voice', secreto: 'audible only to the speaker', cantus: 'sung' },
 		verseAria: (n) => `link to verse ${n}`,
-		roleLabel: 'part',
+		roleLabel: 'role',
 		massLabel: 'Mass',
 		massForms: { cantu: 'sung', lecta: 'low' },
 		everyone: 'everyone answers',
@@ -825,11 +830,8 @@ const MESSAGES: Record<Lang, Messages> = {
 			christus: 'Christ and faithful',
 			synagoga: 'synagoga and faithful'
 		},
-		// Bare nouns, no article: this is a label, and a label is what the
-		// missals put in the margin beside a line — Priest, Server, Faithful.
-		// The article belongs in the sentence underneath, where it reads as
-		// English rather than as three repetitions of "the".
-		roles: { populus: 'faithful', minister: 'server', sacerdos: 'priest' },
+		// The congregation takes the collective label “the faithful”.
+		roles: { populus: 'the faithful', minister: 'server', sacerdos: 'priest' },
 		quietCollapsed: 'the priest prays in a low voice',
 		quietReveal: 'show',
 		quietHide: 'hide',

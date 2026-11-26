@@ -146,6 +146,8 @@ test('an Ordinary prayer shared with the faithful is named without a false versi
 	// At sung Mass the Agnus Dei belongs to the schola, as the Sanctus does (DMS 25 b; 26):
 	// the faithful may join and the priest says it quietly. At low Mass both are named again.
 	await page.goto('/app/pl/ordinarium/agnus-dei');
+	await expect(page.locator('.who-performance')).toHaveCSS('text-transform', 'none');
+	await expect(page.locator('.who-performance')).toHaveCSS('font-variant-caps', 'normal');
 	await expect(page.locator('.who-performance')).toHaveText(
 		'Schola śpiewa, a wierni mogą dołączyć. Kapłan odmawia ten sam tekst po cichu.'
 	);
@@ -543,8 +545,8 @@ test('choosing a part does not shift the parts beside it', async ({ page }) => {
 	// the gate must never pass by matching nothing — it did once, when the
 	// selector outlived the compact form it named
 	expect(first.length).toBeGreaterThan(0);
-	for (const name of ['server', 'priest', 'faithful']) {
-		await page.getByRole('radio', { name }).click();
+	for (const name of ['server', 'priest', 'the faithful']) {
+		await page.getByRole('radio', { name, exact: true }).click();
 		expect(await lefts(), `the row moved after choosing ${name}`).toEqual(first);
 	}
 });

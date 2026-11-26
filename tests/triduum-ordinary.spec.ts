@@ -100,6 +100,23 @@ for (const lang of ['pl', 'en'] as const)
 					await expect(part(page, 'agnus-dei').locator('[id^="agnus-dei.w"]')).toHaveCount(25);
 					await expect(part(page, 'qui-dixisti').locator('[id="qui-dixisti.w001"]')).toBeVisible();
 				}
+				await page.goto(`/app/${lang}/ordo/conclusio?dies=2026-04-02`);
+				const dismissal = part(page, 'ite-missa-est');
+				await expect(dismissal.locator('.part-title')).toHaveText(
+					form === 'cantu' ? 'Benedicámus Dómino' : 'Ite, missa est'
+				);
+				for (const word of ['w001', 'w006', 'w010', 'w011'])
+					await expect(dismissal.locator(`[id="ite-missa-est.${word}"]`)).toBeVisible();
+				await expect(dismissal.locator('[id="ite-missa-est.w007"]')).toHaveCount(
+					form === 'cantu' ? 0 : 1
+				);
+				if (form === 'cantu') {
+					await page.goto(`/app/${lang}/ordo/conclusio?dies=2026-04-02&w=ite-missa-est.w007`);
+					const link = dismissal.locator('.ordinary-segment-omission a');
+					await expect(link).toHaveAttribute('href', /ordinarium\/ite-missa-est\?w=w007$/);
+					await link.click();
+					await expect(page.locator('aside .form').first()).toContainText('Ite');
+				}
 			});
 
 		for (const row of cases)

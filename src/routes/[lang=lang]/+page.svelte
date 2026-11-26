@@ -50,6 +50,7 @@
 		openNote: string;
 		zipTitle: string;
 		zipNote: string;
+		publishedNote: string;
 		soonNote: string;
 		specimenLead: string;
 		stanzaLink: string;
@@ -73,12 +74,13 @@
 		pl: bindProse({
 			title: 'Scrutabor — modlitwa po łacinie ze zrozumieniem',
 			description:
-				'Darmowy łaciński modlitewnik z analizą słowo po słowie: przekład, gramatyka i wymowa każdego słowa. Ordo Missæ z 1962 roku i modlitwy, także do pobrania.',
+				'Bezpłatny modlitewnik łaciński z przekładami, objaśnieniami gramatycznymi i wymową. Zawiera porządek Mszy według Mszału z 1962 roku i modlitwy do osobistej lektury.',
 			open: 'Otwórz modlitewnik',
 			openNote: 'w przeglądarce, bez instalacji',
 			zipTitle: 'Plik ZIP',
 			zipNote: 'kopia do pobrania',
-			soonNote: 'wkrótce',
+			publishedNote: 'z wydania na GitHubie',
+			soonNote: 'jeszcze niedostępne',
 			specimenLead:
 				'Od tego wersetu pochodzi nazwa Scrutabor. Wybierz dowolne słowo, by zobaczyć jego znaczenie i formę.',
 			stanzaLink: 'Psalm\u00a0118, He — w.\u00a034',
@@ -92,12 +94,13 @@
 		en: {
 			title: 'Scrutabor — prayer in Latin with understanding',
 			description:
-				'A free Latin prayer book with word-by-word analysis: translation, grammar, and pronunciation for every word. The 1962 Ordo Missæ and common prayers, downloadable too.',
+				'A free Latin prayer book with translations, grammar notes, and pronunciation. It includes the Order of Mass from the 1962 Roman Missal and prayers for personal use.',
 			open: 'Open the prayer book',
 			openNote: 'in the browser, no installation',
 			zipTitle: 'ZIP file',
 			zipNote: 'a copy to keep',
-			soonNote: 'coming soon',
+			publishedNote: 'from the GitHub release',
+			soonNote: 'not yet available',
 			specimenLead:
 				'Scrutabor takes its name from this verse. Select any word to see what it means and how it’s used.',
 			stanzaLink: 'Psalm\u00a0118, He — v.\u00a034',
@@ -232,8 +235,8 @@
 			<a class="way" href={ZIP} rel="external">
 				{@render doorIcon('download')}
 				<span class="way-title">{t.zipTitle}</span>
-				<span class="way-note">{t.zipNote}</span>
-				<span class="way-version">v{data.version}</span>
+				<span class="way-note">{data.version ? t.zipNote : t.publishedNote}</span>
+				{#if data.version}<span class="way-version">v{data.version}</span>{/if}
 			</a>
 			{#each SOON as channel (channel.name)}
 				<div class="way soon">
@@ -346,7 +349,7 @@
 
 	@media (max-width: 40rem) {
 		.ways {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 
@@ -397,6 +400,7 @@
 	}
 
 	.way-note {
+		overflow-wrap: anywhere;
 		font-size: 0.8rem;
 		color: var(--ink-soft);
 	}

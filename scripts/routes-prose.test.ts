@@ -145,7 +145,7 @@ describe('the words the routes say', () => {
 		expect(editio!.text, 'the markup is gone').not.toContain('class="what"');
 		expect(editio!.text, 'entities are resolved').not.toContain('&nbsp;');
 		expect(editio!.text, 'and resolved to the character they stand for').toContain(
-			'z publicznie dostępnych'
+			'porównujemy z nim tekst'
 		);
 	});
 

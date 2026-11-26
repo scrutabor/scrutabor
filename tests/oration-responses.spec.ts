@@ -57,7 +57,7 @@ for (const secret of secrets) {
 					? `/app/en/ordo/offertorium?${secret.choice}`
 					: `/app/en/formularium/${secret.formulary}`
 			);
-			await page.getByRole('radio', { name: 'faithful', exact: true }).click();
+			await page.getByRole('radio', { name: 'the faithful', exact: true }).click();
 			const tail = page.locator(`[id="${slug}-${secret.tail}"]`);
 			const response = page.locator(`[id="${slug}-${secret.response}"]`);
 			const part = page

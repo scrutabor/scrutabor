@@ -98,6 +98,28 @@ export function ordinarySegmentView<T extends OrdinaryBody>(
 	};
 }
 
+/** On Holy Thursday the sung Mass uses the processional formula in the Ordinary’s
+ * rubric (s04). Keep the greeting, its reply and Deo gratias, each with its own word IDs. */
+export function processionalDismissalView<T extends OrdinaryBody>(body: T): OrdinarySegmentView<T> {
+	const segments = body.doc.segments;
+	const rubric = segments.find((segment) => segment.id === 's04');
+	const dismissal = segments.find((segment) => segment.id === 's05');
+	if (
+		body.doc.id !== 'ordinarium.ite-missa-est' ||
+		!rubric?.text?.includes('Benedicámus Dómino') ||
+		dismissal?.words?.map((word) => word.form).join(' ') !== 'Ite missa est'
+	)
+		throw new Error('processional dismissal missing from the Ordinary');
+	const omitted = ['s05', 's07'];
+	return {
+		body: {
+			...body,
+			doc: { ...body.doc, segments: segments.filter((segment) => !omitted.includes(segment.id)) }
+		},
+		omitted
+	};
+}
+
 /** Preserve an explicit omitted citation as intent, without restoring its liturgical rows.
  * The returned query addresses the complete canonical study page, not this occurrence. */
 export function omittedOrdinaryCitation<T extends OrdinaryBody>(

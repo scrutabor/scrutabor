@@ -2,7 +2,7 @@
 	// The support page: the live contact door the app stores require
 	// (Apple's reviewers visit the Support URL and reject pages without a
 	// real contact mechanism), and the honest description of how this
-	// project answers — through its public issue trackers, and by mail.
+	// project answers — through its public issue trackers.
 	// jscpd:ignore-start — the same scaffolding as the privacy page,
 	// deliberately: landing subpages share one shape.
 	import PageNav from '$lib/components/PageNav.svelte';
@@ -21,7 +21,7 @@
 		appLink: string;
 		corpusIssues: string;
 		corpusLink: string;
-		mailLead: string;
+		publicNotice: string;
 		note: string;
 		back: string;
 	}
@@ -29,25 +29,25 @@
 	const T: Record<Lang, Copy> = {
 		pl: bindProse({
 			title: 'Kontakt',
-			description: 'Pytania, uwagi i zgłoszenia błędów — GitHub albo e-mail.',
+			description: 'Gdzie zgłosić błąd w aplikacji lub poprawkę do tekstu.',
 			lede: 'Błąd lub propozycję zmiany możesz zgłosić na GitHubie.',
 			appIssues: 'błędy i propozycje dotyczące aplikacji',
 			appLink: 'zgłoszenia do aplikacji',
 			corpusIssues: 'uwagi do tekstów, przekładów i analiz',
 			corpusLink: 'zgłoszenia do tekstów',
-			mailLead: 'Nasz adres e-mail to',
+			publicNotice: 'Zgłoszenia na GitHubie są publiczne. Pomiń w nich dane osobowe.',
 			note: 'Scrutabor prowadzimy społecznie. Odpowiadamy w miarę możliwości.',
 			back: 'wróć na stronę główną'
 		}),
 		en: {
 			title: 'Contact',
-			description: 'Questions, feedback, and bug reports — GitHub or e-mail.',
+			description: 'Where to report an app problem or suggest a correction to a text.',
 			lede: 'Use GitHub to report a problem or suggest a change.',
 			appIssues: 'bugs and suggestions about the app',
 			appLink: 'app issues',
 			corpusIssues: 'corrections to the texts, translations, and analyses',
 			corpusLink: 'text and translation issues',
-			mailLead: 'You can also reach us by email at',
+			publicNotice: 'GitHub issues are public. Please leave personal details out of your report.',
 			note: 'We run Scrutabor as volunteers and reply as time allows.',
 			back: 'go to the home page'
 		}
@@ -81,9 +81,7 @@
 				<span class="channel-note">{t.corpusIssues}</span>
 			</li>
 		</ul>
-		<p class="mail">
-			{t.mailLead} <a href="mailto:contact@scrutabor.org">contact@scrutabor.org</a>
-		</p>
+		<p class="visibility">{t.publicNotice}</p>
 		<p class="note">{t.note}</p>
 		<p class="back"><a href="/{lang}">{t.back} ›</a></p>
 	</main>
@@ -182,12 +180,8 @@
 		font-size: 0.95rem;
 	}
 
-	.mail {
+	.visibility {
 		margin: 1.6rem 0 0;
-	}
-
-	.mail a {
-		color: inherit;
 	}
 
 	.note {

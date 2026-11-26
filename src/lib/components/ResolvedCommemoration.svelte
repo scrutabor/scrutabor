@@ -51,7 +51,9 @@
 	<header>
 		<PageNav {lang} parent="/app/{lang}/ordo" parentLabel="Ordo Missæ" parentLang="la" />
 		<h1 lang="la">{data.title.la}</h1>
-		<p class="subtitle">{data.title[lang]}</p>
+		<p class="subtitle">
+			{data.day === 'vigilia-ascensionis-impedita' ? msgs.impededVigilHeading : data.title[lang]}
+		</p>
 		<FormularyScopeNote {lang} centered />
 	</header>
 

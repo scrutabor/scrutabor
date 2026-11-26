@@ -45,8 +45,8 @@ export function unconfirmedOrdoContext(
 		};
 	if (entry !== 'deus-qui-humanae') return undefined;
 	const note = guidance(
-		'Zastosowanie poniższej rubryki w wybranej Mszy nie zostało jeszcze potwierdzone. Rubrykę i modlitwę pokazano tylko do wglądu.',
-		'The application of the following rubric at the selected Mass has not yet been confirmed. The rubric and prayer are shown for reference only.'
+		'Nie ustalono jeszcze, czy w wybranej Mszy błogosławi się wodę. Rubrykę i modlitwę pokazano tylko do wglądu.',
+		'It is not yet clear whether the water is blessed at the selected Mass. The rubric and prayer are shown for reference only.'
 	);
 	return { referenceOnly: true, unconfirmed: true, note, openingRubricContext: note };
 }

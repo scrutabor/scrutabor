@@ -844,6 +844,12 @@
 		align-items: baseline;
 	}
 
+	.who-performance {
+		font-variant-caps: normal;
+		letter-spacing: normal;
+		text-transform: none;
+	}
+
 	.who:has(+ .verse.glossed) {
 		margin-bottom: calc(var(--reading) * -0.26);
 	}

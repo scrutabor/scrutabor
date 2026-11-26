@@ -74,6 +74,15 @@ describe('stress', () => {
 		expect(stressIndex(syllabify('sanctificétur'))).toBe(3);
 	});
 
+	it('keeps the opening of Eucharístiæ together and Latin e-u in separate syllables', () => {
+		expect(syllabized('Eucharístiæ')).toBe('Eu-cha-rí-sti-æ');
+		expect(ipa('Eucharístiæ', 'roman')).toBe('ɛu.kaˈri.sti.ɛ');
+		expect(ipa('Eucharístiæ', 'polish')).toBe('ɛu.xaˈri.sti.ɛ');
+		expect(syllabized('Deus')).toBe('De-us');
+		expect(syllabized('eum')).toBe('e-um');
+		expect(syllabized('eúndem')).toBe('e-ún-dem');
+	});
+
 	it('falls on the first of one or two syllables', () => {
 		expect(stressIndex(syllabify('mater'))).toBe(0);
 		expect(stressIndex(syllabify('et'))).toBe(0);
@@ -108,7 +117,7 @@ describe('ipa', () => {
 			['áccipe', 'ˈat.tʃi.pɛ', 'ˈak.tsi.pɛ'],
 			['peccávi', 'pɛkˈka.vi', 'pɛkˈka.vi'],
 			['cælis', 'ˈtʃɛ.lis', 'ˈtsɛ.lis'],
-			['Christum', 'ˈkri.stum', 'ˈkri.stum'],
+			['Christum', 'ˈkri.stum', 'ˈxri.stum'],
 			['descéndit', 'dɛˈʃɛn.dit', 'dɛˈstsɛn.dit'],
 			['excélsis', 'ɛkˈʃɛl.sis', 'ɛksˈtsɛl.sis']
 		])('preserves both readings of %s', (form, roman, polish) => {
@@ -155,6 +164,31 @@ describe('ipa', () => {
 		expect(ipa('hódie', 'polish')).toBe('ˈxɔ.di.ɛ');
 		expect(ipa('qui', 'roman')).toBe('kwi');
 		expect(ipa('qui', 'polish')).toBe('kvi');
+	});
+
+	it('distinguishes Roman and traditional Polish ch', () => {
+		for (const [word, roman, polish] of [
+			['Christe', 'ˈkri.stɛ', 'ˈxri.stɛ'],
+			['chorus', 'ˈkɔ.rus', 'ˈxɔ.rus'],
+			['Michaéli', 'mi.kaˈɛ.li', 'mi.xaˈɛ.li'],
+			['pulchra', 'ˈpul.kra', 'ˈpul.xra']
+		]) {
+			expect(ipa(word, 'roman')).toBe(roman);
+			expect(ipa(word, 'polish')).toBe(polish);
+		}
+	});
+
+	it('sounds Roman h as k in mihi, nihil and their derivatives', () => {
+		for (const [form, roman, polish] of [
+			['mihi', 'ˈmi.ki', 'ˈmi.xi'],
+			['nihil', 'ˈni.kil', 'ˈni.xil'],
+			['níhilum', 'ˈni.ki.lum', 'ˈni.xi.lum'],
+			['mihíque', 'miˈki.kwɛ', 'miˈxi.kvɛ']
+		]) {
+			expect(ipa(form, 'roman')).toBe(roman);
+			expect(ipa(form, 'polish')).toBe(polish);
+		}
+		expect(syllabized('Mihi')).toBe('Mi-hi');
 	});
 
 	it('applies ti+vowel in both traditions, syllable-preserving', () => {

@@ -39,8 +39,8 @@ function requiemBlessingNote(
 export function requiemLastGospelContext(entry: string, state: GospelPreparationState, lang: Lang) {
 	if (entry !== 'evangelium-ultimum') return undefined;
 	return requiemBlessingNote(state, lang, {
-		pl: 'Ostatnią Ewangelię zwykle się zachowuje. Pomija się ją, gdy po Mszy następuje absolucja nad katafalkiem.',
-		en: 'The Last Gospel is normally retained. It is omitted when absolution over the tumulus follows Mass.'
+		pl: 'Ostatnią Ewangelię opuszcza się, gdy bezpośrednio po Mszy następuje absolucja przy trumnie lub katafalku. W pozostałych Mszach za zmarłych kapłan ją odczytuje.',
+		en: 'The Last Gospel is omitted when Mass is followed immediately by the absolution at the coffin or catafalque. At other Masses for the Dead the priest reads it as usual.'
 	});
 }
 
@@ -49,7 +49,7 @@ export function requiemLastGospelContext(entry: string, state: GospelPreparation
 export function requiemWaterContext(entry: string, state: GospelPreparationState, lang: Lang) {
 	if (entry !== 'deus-qui-humanae') return undefined;
 	return requiemBlessingNote(state, lang, {
-		pl: 'Podczas tej Mszy za zmarłych wody się nie błogosławi. Modlitwę Deus, qui humanae i pozostałe opisane poniżej czynności zachowuje się.',
-		en: 'At this Mass for the Dead, the water is not blessed. The prayer Deus, qui humanae and the other actions described below are retained.'
+		pl: 'We Mszy za zmarłych kapłan odmawia Deus, qui humanae i dolewa wody do wina. W tej Mszy wody się nie błogosławi.',
+		en: 'At a Mass for the Dead the priest says Deus, qui humanae and adds water to the wine. The water is not blessed.'
 	});
 }

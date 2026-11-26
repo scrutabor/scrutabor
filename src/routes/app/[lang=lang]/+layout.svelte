@@ -56,10 +56,14 @@
 			{lang === 'pl'
 				? 'Spis źródeł można czytać bez JavaScriptu. Włącz go, aby zobaczyć odwołania przy poszczególnych źródłach.'
 				: 'You can read the list of sources without JavaScript. Turn it on to see the citations for each source.'}
-		{:else}
+		{:else if rest === '/ordo' || rest.startsWith('/ordo/')}
 			{lang === 'pl'
 				? 'Możesz czytać bez JavaScriptu. Włącz go, aby zmienić dzień, rolę, tryb czytania albo wielkość pisma lub otworzyć analizę słowa.'
 				: 'You can read without JavaScript. Turn it on to change the day, your role at Mass, the reading mode or the text size, or to open a word analysis.'}
+		{:else}
+			{lang === 'pl'
+				? 'Możesz czytać tę stronę bez JavaScriptu. Włącz go, aby zmienić wielkość pisma. Na stronach modlitw możesz wtedy także przełączać tryb czytania i otwierać karty słów.'
+				: 'You can read this page without JavaScript. Turn it on to change the text size. On a prayer page, you can then also switch reading modes and open word cards.'}
 		{/if}
 	</p>
 </noscript>

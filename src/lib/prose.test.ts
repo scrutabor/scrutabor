@@ -48,9 +48,9 @@ describe('the words the app says', () => {
 				`${table} was not reached`
 			).toBe(true);
 		// and it reaches the deep ones, not just the top level
-		expect(all.some(({ text }) => text.includes('Usługujący dzwoni przy każdym geście'))).toBe(
-			true
-		);
+		expect(
+			all.some(({ text }) => text.includes('usługujący dzwoni trzykrotnie lub nieprzerwanie'))
+		).toBe(true);
 	});
 
 	it('never reaches for a semicolon', () => {

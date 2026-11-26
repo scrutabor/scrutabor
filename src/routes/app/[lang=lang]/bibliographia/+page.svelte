@@ -257,7 +257,9 @@
 														<ul class="uses">
 															{#each group.uses as use (use.key)}
 																<li>
-																	<a href={use.href}>{use.title}</a><span> — {location(use)}</span>
+																	<a href={use.href}>{use.title}</a><span
+																		>{' — '}{location(use)}</span
+																	>
 																</li>
 															{/each}
 														</ul>

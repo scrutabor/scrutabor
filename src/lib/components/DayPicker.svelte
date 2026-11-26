@@ -22,7 +22,6 @@
 
 	let { lang, route }: { lang: Lang; route: string } = $props();
 	const msgs = $derived(M[lang]);
-	const labelId = 'day-label';
 
 	let chosen = $state('');
 	let selectedDate = $state<string | null>(null);
@@ -151,11 +150,11 @@
 <svelte:window onhashchange={onHashChange} onpopstate={applyFromLocation} />
 
 <div class="picker day row requires-script" class:on={!!chosen || !!selectedDate}>
-	<span class="label smallcaps" id={labelId}>{msgs.dayLabel}</span>
+	<span class="label smallcaps">{msgs.dayLabel}</span>
 	<button
 		type="button"
 		class="day-open"
-		aria-labelledby={`${labelId} day-value`}
+		aria-label={applied ? `${msgs.dayPicker.open} — ${shown}` : `${msgs.dayLabel} — ${shown}`}
 		aria-describedby={applied && dateShown ? 'day-date' : undefined}
 		aria-haspopup="dialog"
 		aria-expanded={open}
@@ -180,7 +179,6 @@
 			<rect x="3" y="4.5" width="14" height="12.5" rx="1.75"></rect>
 			<path d="M6.5 2.75v3.5M13.5 2.75v3.5M3 8h14"></path>
 		</svg>
-		{#if applied}<span class="sr-only"> — {msgs.dayPicker.open}</span>{/if}
 	</button>
 	<span class="states" aria-live="polite">
 		{#if applied}

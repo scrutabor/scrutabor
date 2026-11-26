@@ -82,12 +82,12 @@ const VIGIL: Record<string, Record<Lang, string>> = {
 		en: 'The Last Gospel is omitted at the Easter Vigil. After the Placeat and blessing, all return to the sacristy.'
 	},
 	evangelium: {
-		pl: 'W Wigilię Paschalną prosi się o błogosławieństwo przed Ewangelią i używa kadzidła, ale nie niesie się świateł. Pozostałe obrzędy odbywają się jak zwykle.',
-		en: 'At the Easter Vigil the blessing before the Gospel is requested and incense is used, but no lights are carried. The other ceremonies are performed as usual.'
+		pl: 'W Wigilię Paschalną przed Ewangelią prosi się o błogosławieństwo i używa kadzidła. Do Ewangelii nie niesie się świec.',
+		en: 'At the Easter Vigil the blessing is requested and incense is used as usual before the Gospel. No candles are carried for the Gospel.'
 	},
 	'munda-cor-meum': {
-		pl: 'Przed Ewangelią Mszy Wigilii Paschalnej zachowuje się Munda cor meum oraz odrębną prośbę o błogosławieństwo i błogosławieństwo. W pokazanym wariancie bez diakona kapłan odmawia Munda po cichu. We Mszy uroczystej mówi ją diakon, a celebrans jej nie powtarza. Przy Ewangelii nie niesie się świateł, ale nie pomija się tego przygotowania.',
-		en: 'Before the Gospel of the Easter Vigil Mass, Munda cor meum and the separate blessing request and blessing remain. In the priest-alone form shown here, the priest says Munda in a voice only he can hear. At solemn Mass the deacon says it, and the celebrant does not repeat it. No lights are carried at the Gospel, but this preparation is not omitted.'
+		pl: 'W Wigilię Paschalną kapłan głoszący Ewangelię bez diakona odmawia po cichu Munda cor meum, a potem prosi Boga o błogosławieństwo słowami Iube, Domine i odmawia Dominus sit in corde meo. We Mszy uroczystej Munda odmawia diakon, który następnie prosi celebransa o błogosławieństwo. Celebrans nie powtarza Munda. Do Ewangelii nie niesie się świec.',
+		en: 'At the Easter Vigil, a priest who proclaims the Gospel without a deacon says Munda cor meum quietly, asks God for a blessing with Iube, Domine, and says Dominus sit in corde meo. At solemn Mass the deacon says Munda and then asks the celebrant for a blessing. The celebrant does not repeat Munda. No candles are carried for the Gospel.'
 	},
 	'ite-missa-est': {
 		pl: 'W Wigilię rozesłanie śpiewa diakon lub sam kapłan.',
@@ -109,12 +109,12 @@ const PENTECOST_VIGIL: Record<string, Record<Lang, string>> = {
 
 const PALM: Record<string, Record<Lang, string>> = {
 	'munda-cor-meum': {
-		pl: 'Ten wpis dotyczy przygotowania do Pasji we Mszy Niedzieli Palmowej. Gdy kapłan wykonuje Pasję sam, odmawia Munda cor meum po cichu, po czym odmawia zwykłą odrębną prośbę o błogosławieństwo i błogosławieństwo. Gdy Pasję wykonują wyznaczeni duchowni mający co najmniej święcenia diakonatu, każdy z nich odmawia Munda półgłosem. Proszą następnie celebransa o odrębne błogosławieństwo dla nich. Sam wybór Mszy śpiewanej nie rozstrzyga, który wariant zachodzi. Ewangelia w poprzedzających Mszę obrzędach palm ma osobne przygotowanie, nie drugi wpis w tym miejscu Mszy.',
-		en: 'This entry prepares for the Passion at the Palm Sunday Mass. When the priest delivers the Passion alone, he says Munda cor meum in a voice only he can hear, followed by the usual separate blessing request and blessing. When appointed clergy who are at least deacons deliver the Passion, each says Munda in a low voice. They then request the celebrant’s separate blessing for them. Selecting sung Mass alone does not determine which form applies. The Gospel in the preceding palm ceremonies has its own preparation, not a second entry at this point of the Mass.'
+		pl: 'Gdy kapłan sam czyta lub śpiewa Pasję, po cichu odmawia Munda cor meum, prosi Boga o błogosławieństwo słowami Iube, Domine i odmawia Dominus sit in corde meo. Jeśli Pasję czytają lub śpiewają wyznaczeni duchowni mający co najmniej święcenia diakonatu, każdy z nich odmawia Munda półgłosem. Potem razem proszą celebransa o błogosławieństwo. Obie formy przygotowania są możliwe także we Mszy śpiewanej. Ewangelia przy poświęceniu palm przed Mszą ma własne przygotowanie.',
+		en: 'When the priest reads or chants the Passion himself, he quietly says Munda cor meum, asks God for a blessing with Iube, Domine, and says Dominus sit in corde meo. If appointed clergy who are at least deacons read or chant the Passion, each says Munda in a low voice. They then ask the celebrant together for his blessing. Either form of preparation is possible at sung Mass. The Gospel at the blessing of palms before Mass has its own preparation.'
 	},
 	evangelium: {
-		pl: 'Przed Pasją zachowuje się Munda cor meum oraz właściwą dla wykonujących ją odrębną prośbę o błogosławieństwo i błogosławieństwo. Nie odmawia się Dominus vobiscum ani nie znaczy krzyżem księgi i siebie. Nie stosuje się tu zwykłego wprowadzenia do Ewangelii.',
-		en: 'Before the Passion, Munda cor meum and the separate blessing request and blessing appropriate to its ministers remain. Dominus vobiscum is not said, and neither the book nor the reader is signed with the cross. The usual Gospel introduction does not apply here.'
+		pl: 'Przed Pasją odmawia się Munda cor meum. Gdy kapłan sam czyta lub śpiewa Pasję, prosi Boga o błogosławieństwo. Wyznaczeni do Pasji duchowni proszą o nie celebransa. Nie odmawia się Dominus vobiscum. Czytający nie kreśli znaku krzyża ani na księdze, ani na sobie. Kapłan, który odprawia tego dnia drugą lub trzecią Mszę cichą, może zamiast powtarzać Pasję odczytać w zwykły sposób Ewangelię Mt 27, 45–52.',
+		en: 'Before the Passion, those who read or chant it say Munda cor meum. A priest proclaiming the Passion himself asks God for a blessing. Appointed ministers ask the celebrant to bless them. Dominus vobiscum is not said. The reader makes no sign of the cross on the book or on himself. A priest celebrating a second or third Low Mass that day may read Matthew 27:45–52 in the usual manner instead of repeating the Passion.'
 	},
 	'laus-tibi-christe': {
 		pl: 'Po Pasji nie odpowiada się Laus tibi, Christe. Nie całuje się też księgi ani nie okadza celebransa.',
@@ -130,6 +130,12 @@ export function ordoContext(
 ): string | undefined {
 	const notes: string[] = [];
 	if (entry === 'ite-missa-est' && paschalDismissal) notes.push(PASCHAL_DISMISSAL[lang]);
+	if (entry === 'ite-missa-est' && mass === 'feria-v-in-cena-domini')
+		notes.push(
+			lang === 'pl'
+				? 'Przed uroczystym przeniesieniem Najświętszego Sakramentu śpiewa się Benedicámus Dómino. Odpowiedź brzmi Deo grátias. W dozwolonej Mszy cichej kapłan mówi zwykłe Ite, missa est.'
+				: 'Before the solemn transfer of the Blessed Sacrament the dismissal is sung as Benedicamus Domino. The response is Deo gratias. At a permitted Low Mass the priest says the usual Ite, missa est.'
+		);
 	if (mass === 'vigilia-paschalis' && VIGIL[entry]) notes.push(VIGIL[entry][lang]);
 	if (mass === 'dominica-ii-passionis' && PALM[entry]) notes.push(PALM[entry][lang]);
 	if (mass === 'vigilia-pentecostes' && PENTECOST_VIGIL[entry])
@@ -252,24 +258,24 @@ export function ordoBlessingContext(
 		return {
 			referenceOnly: true,
 			note: guidance(
-				'Nie potwierdzono formularza Mszy dla tego miejsca. Prośbę o błogosławieństwo i błogosławieństwo pokazano tylko do wglądu. We Mszach za zmarłych opuszcza się obie części. Poza nimi ten tekst dotyczy kapłana odprawiającego bez diakona i subdiakona.',
-				'The Mass formulary at this point has not been confirmed. The blessing request and blessing are shown for reference only. Both parts are omitted at Masses for the Dead. Otherwise this text is for the priest celebrating without a deacon and subdeacon.'
+				'Nie potwierdzono formularza wybranej Mszy. Obie modlitwy pokazano tylko do wglądu. Odmawia je kapłan odprawiający bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych.',
+				'The selected Mass formulary has not been confirmed. These two prayers are shown for reference only. A priest celebrating without a deacon and subdeacon says them except at Masses for the Dead.'
 			)
 		};
 	if (state.mass === null)
 		return {
 			referenceOnly: false,
 			note: guidance(
-				'Pokazano kompletne części stałe Mszy bez wybranego formularza. Ta prośba i błogosławieństwo należą do wariantu bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych. Sam wybór Mszy śpiewanej nie rozstrzyga o obecności tych posługujących.',
-				'The complete Ordinary is shown without a selected formulary. This request and blessing belong to the form without a deacon and subdeacon, except at Masses for the Dead. Selecting sung Mass alone does not determine whether these ministers are present.'
+				'Pokazano części stałe bez wybranego formularza. Obie modlitwy odmawia kapłan odprawiający bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych. Mszę śpiewaną można odprawiać także bez ich udziału.',
+				'The Ordinary is shown without a selected formulary. A priest celebrating without a deacon and subdeacon says both prayers, except at Masses for the Dead. Sung Mass can also be celebrated without these ministers.'
 			)
 		};
 	if (GOSPEL_BLESSING_REQUIEMS.includes(state.mass))
 		return {
 			referenceOnly: true,
 			note: guidance(
-				'Wybrano Mszę za zmarłych. Opuszcza się prośbę o błogosławieństwo i następującą po niej modlitwę. Cały tekst zachowano tu tylko do wglądu. Odrębne Munda cor meum wraz ze swoim zakończeniem pozostaje.',
-				'A Mass for the Dead is selected. The blessing request and the following prayer are omitted. The complete text is retained here for reference only. The separate Munda cor meum and its own conclusion remain.'
+				'We Mszy za zmarłych odmawia się Munda cor meum z zakończeniem Per Christum. Opuszcza się prośbę Iube, Domine i następującą po niej modlitwę Dominus sit in corde meo. Obie pokazano tu tylko do wglądu.',
+				'At Masses for the Dead, Munda cor meum is said through its conclusion, Per Christum. The petition Iube, Domine and the prayer Dominus sit in corde meo that follows it are omitted. Both are shown here for reference only.'
 			)
 		};
 	return { referenceOnly: false };
@@ -323,8 +329,8 @@ export function ordoMinisterBlessingContext(
 			return unconfirmed();
 		return palm
 			? result(
-					'Pokazano części stałe bez wybranego formularza. Ten wariant dotyczy Pasji Niedzieli Palmowej, nie dowolnej Ewangelii.',
-					'The Ordinary is shown without a selected formulary. This form belongs to the Palm Sunday Passion, not to any Gospel.'
+					'Pokazano części stałe bez wybranego formularza. Tę formę błogosławieństwa stosuje się przy śpiewie lub czytaniu Pasji w Niedzielę Palmową.',
+					'The Ordinary is shown without a selected formulary. This blessing is used when the Passion is chanted or read on Palm Sunday.'
 				)
 			: result(
 					'Pokazano części stałe bez wybranego formularza. Ten wariant dotyczy Ewangelii z udziałem diakona, z wyjątkiem Mszy za zmarłych.',
@@ -355,25 +361,25 @@ export function ordoMinisterBlessingContext(
 	if (passion)
 		return palm
 			? result(
-					'Ewangelią tej Mszy jest Pasja Niedzieli Palmowej. Ten wariant dotyczy jej śpiewu przez uprawnionych duchownych, jeśli są obecni.',
-					'The Gospel of this Mass is the Palm Sunday Passion. This form is for its singing by qualified ministers, if present.'
+					'Przy czytaniu lub śpiewie Pasji to błogosławieństwo otrzymują wyznaczeni do niej duchowni.',
+					'When the Passion is read or chanted, this blessing is for the appointed clergy who proclaim it.'
 				)
 			: result(
-					'Ewangelią tej Mszy jest Pasja Niedzieli Palmowej. Jeśli wykonują ją wyznaczeni duchowni, otrzymują osobne błogosławieństwo w liczbie mnogiej. Kapłan wykonujący Pasję sam ma własne przygotowanie.',
-					'The Gospel of this Mass is the Palm Sunday Passion. If appointed ministers deliver it, they receive the separate plural blessing. The priest delivering the Passion alone has his own preparation.'
+					'W Niedzielę Palmową duchowni wyznaczeni do Pasji otrzymują błogosławieństwo razem. Jeśli kapłan sam czyta lub śpiewa Pasję, prosi Boga o błogosławieństwo.',
+					'On Palm Sunday the celebrant blesses the appointed ministers of the Passion together. If the priest reads or chants the Passion himself, he asks God for a blessing.'
 				);
 	if (palm)
 		return result(
-			'Ewangelią tej Mszy nie jest Pasja Niedzieli Palmowej. Ten wariant nie ma tu zastosowania.',
-			'The Gospel of this Mass is not the Palm Sunday Passion. This form does not apply here.'
+			'Tę formę błogosławieństwa stosuje się tylko w Niedzielę Palmową, podczas przygotowania do Pasji.',
+			'This blessing is used only in preparation for the Palm Sunday Passion.'
 		);
 	if (state.mass === 'vigilia-paschalis')
 		return result(
-			'Przed Ewangelią Mszy Wigilii Paschalnej zachowuje się zwykłe przygotowanie. Jeśli Ewangelię głosi diakon, prosi celebransa o błogosławieństwo i je otrzymuje. Nie niesie się świateł.',
-			'The usual preparation is observed before the Gospel at the Easter Vigil Mass. If a deacon proclaims the Gospel, he asks for and receives the celebrant’s blessing. No lights are carried.'
+			'W Wigilię Paschalną diakon przed Ewangelią prosi celebransa o błogosławieństwo. Do Ewangelii nie niesie się świec.',
+			'At the Easter Vigil a deacon who proclaims the Gospel first asks the celebrant for a blessing. No candles are carried for the Gospel.'
 		);
 	return result(
-		'To przygotowanie dotyczy diakona wykonującego Ewangelię, jeśli jest obecny.',
-		'This preparation is for a deacon proclaiming the Gospel, if one is present.'
+		'Tę prośbę wypowiada diakon, jeśli to on głosi Ewangelię.',
+		'This petition is used when a deacon proclaims the Gospel.'
 	);
 }

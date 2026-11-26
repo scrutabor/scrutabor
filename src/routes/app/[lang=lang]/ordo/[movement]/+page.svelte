@@ -59,7 +59,11 @@
 	type VariantBody = { situation?: Situation; nonfinal?: boolean };
 	import type { IntroductionBody } from '$lib/introductiones';
 	import { orationInvitations, withOrationInvitations } from '$lib/oration-invitations';
-	import { ordinarySegmentView, omittedOrdinaryCitation } from '$lib/ordinary-segment-omissions';
+	import {
+		processionalDismissalView,
+		ordinarySegmentView,
+		omittedOrdinaryCitation
+	} from '$lib/ordinary-segment-omissions';
 	import { dayById } from '$lib/proprium';
 	import { bindOrphans } from '$lib/polish';
 	import type { CommemorationVariant } from '$lib/proper.svelte';
@@ -226,18 +230,27 @@
 	});
 
 	const omissionFor = $derived((e: OrdoEntry) => ordinaryOmission(e.id, applicabilityState, lang));
+	const processionalDismissal = $derived(
+		massForm.value === 'cantu' &&
+			applicabilityState.mass === 'feria-v-in-cena-domini' &&
+			readingPayloadReady(applicabilityState, lang)
+	);
 	const segmentViewsFor = $derived((e: OrdoEntry) =>
 		availableBodiesFor(e).map((body) =>
-			ordinarySegmentView(
-				e.id,
-				body,
-				proper.day ? dayById(proper.day)?.ordinary_omissions : undefined,
-				readingPayloadReady(applicabilityState, lang)
-			)
+			e.id === DISMISSAL_ROLE && processionalDismissal && body.doc.id === 'ordinarium.ite-missa-est'
+				? processionalDismissalView(body)
+				: ordinarySegmentView(
+						e.id,
+						body,
+						proper.day ? dayById(proper.day)?.ordinary_omissions : undefined,
+						readingPayloadReady(applicabilityState, lang)
+					)
 		)
 	);
 	const segmentOmissionFor = (e: OrdoEntry) =>
-		e.id === 'lavabo' ? segmentViewsFor(e).find((view) => view.omitted.length) : undefined;
+		e.id === 'lavabo' || (e.id === DISMISSAL_ROLE && processionalDismissal)
+			? segmentViewsFor(e).find((view) => view.omitted.length)
+			: undefined;
 	const bodiesFor = $derived((e: OrdoEntry) =>
 		omissionFor(e) ? [] : segmentViewsFor(e).map((view) => view.body)
 	);
@@ -672,6 +685,7 @@
 			{@const omission = omissionFor(e)}
 			{@const title =
 				responseContext?.title ??
+				(e.id === DISMISSAL_ROLE && processionalDismissal ? 'Benedicámus Dómino' : undefined) ??
 				(entry && (e.id === 'agnus-dei' || e.id === DISMISSAL_ROLE) ? entry.doc.title : e.title)}
 			{@const titleLanguage = responseContext?.titleLanguage ?? 'la'}
 			{@const headingEntry =
@@ -738,9 +752,9 @@
 				{#snippet segmentOmissionLead()}
 					{#if segmentOmissionFor(e)}
 						<p id={`ordinary-omission-${e.id}`} class="part-note ordinary-segment-omission">
-							{segmentOmissionNote}{' '}
+							{#if e.id === 'lavabo'}{segmentOmissionNote}{' '}{/if}
 							<a
-								href={textHref(lang, 'ordinarium/lavabo') +
+								href={textHref(lang, e.text!) +
 									(omittedCitation?.entry === e.id ? omittedCitation.query : '')}
 							>
 								{lang === 'pl' ? 'Pełny tekst' : 'Complete text'}</a
@@ -913,20 +927,25 @@
 								{/if}
 								{#if 'readingReference' in body && body.readingReference}
 									<p class="reading-reference" data-reading={body.slug} lang="la">
-										{body.readingReference}{#if 'referenceUncertain' in body && body.referenceUncertain}<span
-												{lang}
-												>{lang === 'pl'
-													? ' (odczyt ze skanu niepewny, czytanie: '
-													: ' (scan reading uncertain, passage: '}{'readingPericope' in body
-													? body.readingPericope
-													: ''})</span
-											>{:else if 'referenceMisprint' in body && body.referenceMisprint}<span {lang}
-												>{lang === 'pl'
-													? ' (jak w druku, czytanie: '
-													: ' (as printed, passage: '}{'readingPericope' in body
-													? body.readingPericope
-													: ''})</span
-											>{/if}
+										{#if 'readingPericope' in body && body.readingPericope}
+											{body.readingPericope}<span {lang}>
+												{#if 'referenceUncertain' in body && body.referenceUncertain}
+													{lang === 'pl'
+														? ' (na skanie prawdopodobnie „'
+														: ' (the scan appears to read “'}<span lang="la"
+														>{body.readingReference}</span
+													>”)
+												{:else}
+													{lang === 'pl'
+														? ' (w mszale wydrukowano „'
+														: ' (printed in the missal as “'}<span lang="la"
+														>{body.readingReference}</span
+													>”)
+												{/if}
+											</span>
+										{:else}
+											{body.readingReference}
+										{/if}
 									</p>
 								{/if}
 								<TextBody

@@ -145,14 +145,21 @@ it.each(pending)('keeps both alternatives unconfirmed for %s', (name, patch, key
 });
 
 const occasions = [
-	['usual Gospel', ordinary, '2026-04-26', gospel, 'if one is present', 'does not apply here'],
+	[
+		'usual Gospel',
+		ordinary,
+		'2026-04-26',
+		gospel,
+		'when a deacon proclaims the Gospel',
+		'only in preparation for the Palm Sunday Passion'
+	],
 	[
 		'Palm Passion',
 		passion,
 		'2026-03-29',
 		passionKey,
-		'separate plural blessing',
-		'qualified ministers, if present'
+		'blesses the appointed ministers of the Passion together',
+		'appointed clergy who proclaim it'
 	],
 	// A controlled context counterexample using a real other Gospel identity, not
 	// a new payload fixture or a claim that the present Palm catalogue offers it.
@@ -161,24 +168,24 @@ const occasions = [
 		passion,
 		'2026-03-29',
 		gospel,
-		'if one is present',
-		'does not apply here'
+		'when a deacon proclaims the Gospel',
+		'only in preparation for the Palm Sunday Passion'
 	],
 	[
 		'Easter Vigil',
 		'vigilia-paschalis',
 		'2026-04-04',
 		'proprium/vigilia-paschalis-evangelium',
-		'No lights are carried',
-		'does not apply here'
+		'No candles are carried',
+		'only in preparation for the Palm Sunday Passion'
 	],
 	[
 		'Pentecost Vigil',
 		'vigilia-pentecostes',
 		'2026-05-23',
 		'proprium/vigilia-pentecostes-evangelium',
-		'if one is present',
-		'does not apply here'
+		'when a deacon proclaims the Gospel',
+		'only in preparation for the Palm Sunday Passion'
 	],
 	...[
 		[
@@ -261,27 +268,27 @@ it.each(['pl', 'en'] as const)(
 			lang === 'pl' ? 'sam mówi końcowe Amen' : 'says the final Amen himself'
 		);
 		expect(notes[0]).toContain(
-			lang === 'pl' ? 'Prośbę wypowiada diakon' : 'The deacon makes the request'
+			lang === 'pl' ? 'diakon prosi celebransa' : 'the deacon asks the celebrant'
 		);
 		expect(notes[0]).toContain(
 			lang === 'pl'
-				? 'Nie odmawia się tej formuły po przygotowaniu kapłana'
-				: 'not said after the preparation of the priest'
+				? 'Gdy kapłan głosi Ewangelię bez diakona, odmawia własne modlitwy'
+				: 'proclaims the Gospel without a deacon says his own prayers'
 		);
 		for (const phrase of lang === 'pl'
 			? [
 					'co najmniej święcenia diakonatu',
-					'Ci duchowni odpowiadają Amen',
+					'a oni odpowiadają Amen',
 					'głosem umiarkowanym (media voce)',
-					'kapłana wykonującego Pasję sam',
-					'obrzędach palm przed Mszą'
+					'kapłan sam czyta lub śpiewa Pasję',
+					'poświęceniu palm przed Mszą'
 				]
 			: [
 					'at least deacons',
-					'Those ministers answer Amen',
+					'they answer Amen',
 					'in a moderate voice (media voce)',
-					'priest delivering the Passion alone',
-					'palm ceremonies before Mass'
+					'priest who reads or chants the Passion himself',
+					'blessing of palms before Mass'
 				])
 			expect(notes[1]).toContain(phrase);
 	}

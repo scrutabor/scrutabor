@@ -105,8 +105,8 @@ noScript.describe('no javascript', () => {
 	noScript('the downloaded copy says what it needs @folder', async ({ page }) => {
 		await page.goto('/app/');
 		const notice = page.locator('.noscript');
-		await expect(notice.locator('[lang="pl"]')).toContainText('potrzebuje JavaScriptu');
-		await expect(notice.locator('[lang="en"]')).toContainText('needs JavaScript');
+		await expect(notice.locator('[lang="pl"]')).toContainText('włącz JavaScript');
+		await expect(notice.locator('[lang="en"]')).toContainText('Turn on JavaScript');
 	});
 });
 

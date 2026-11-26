@@ -4,7 +4,7 @@
 // Its axe sweep lives with the others in a11y.spec.
 import pkg from '../package.json' with { type: 'json' };
 import type { Locator } from '@playwright/test';
-import { atRoute, expect, test } from './fixtures';
+import { atRoute, expect, setHelp, test } from './fixtures';
 
 async function analysisTree(locator: Locator) {
 	await expect(locator.locator('.lemma-sources [data-source-state="loaded"]')).toBeAttached();
@@ -108,7 +108,11 @@ test.describe('landing @online', () => {
 			'bilingual',
 			'interlinear'
 		]);
-		await page.locator('.specimen .help [data-level="2"]').click();
+		await setHelp(page, 1);
+		await expect(page.locator('.specimen .word-construction')).toHaveCount(2);
+		await expect(page.getByRole('button', { name: 'legem tuam: — Your law' })).toBeVisible();
+		await expect(page.getByRole('button', { name: 'corde meo. — my heart' })).toBeVisible();
+		await setHelp(page, 2);
 		await expect(page.locator('.specimen .translation')).toContainText('Give me understanding');
 	});
 
@@ -142,12 +146,14 @@ test.describe('landing @online', () => {
 			for (const lang of ['pl', 'en']) {
 				await page.goto(`/${lang}`);
 				await page.evaluate((step) => localStorage.setItem('scrutabor-reading', step), size);
-				await page.reload();
+				await page.goto(`/${lang}`);
 
-				const ids = await page
-					.locator('.specimen button[id^="w"]')
-					.evaluateAll((words) => words.map((word) => word.id));
-				expect(ids).toHaveLength(14);
+				// Latin gives each word its own button, including the two pairs that
+				// share a gloss in English. Measure after the saved size and fonts load.
+				await setHelp(page, 0);
+				const words = page.locator('.specimen button[id^="w"]');
+				await expect(words).toHaveCount(14);
+				const ids = await words.evaluateAll((buttons) => buttons.map((button) => button.id));
 
 				const readGeometry = () =>
 					page.evaluate(() => {
@@ -292,7 +298,7 @@ test.describe('landing @online', () => {
 		await expect(page.locator('.way.soon')).toHaveCount(3);
 		for (const channel of ['Google Play', 'App Store', 'F-Droid']) {
 			const tile = page.locator('.way.soon', { hasText: channel });
-			await expect(tile).toContainText('wkrótce');
+			await expect(tile).toContainText('jeszcze niedostępne');
 			expect(await tile.evaluate((el) => el.tagName)).toBe('DIV');
 		}
 	});
@@ -353,20 +359,23 @@ test.describe('landing @online', () => {
 		}
 	});
 
-	test('the download door points at its own version of the release asset', async ({ page }) => {
-		// The zip travels with each GitHub release under a versioned name,
-		// and the landing (deployed only on release) links the exact asset
-		// of its own version — so this asserts the address against the one
-		// source, package.json, and the release ritual owns the file.
+	test('the download link points to the published book for this build', async ({ page }) => {
 		const { version } = pkg;
 		await page.goto('/en');
 		const zip = page.locator('a.way', { hasText: 'ZIP file' });
-		await expect(zip).toHaveAttribute(
-			'href',
-			`https://github.com/scrutabor/scrutabor/releases/download/v${version}/Scrutabor-v${version}.zip`
-		);
-		await expect(zip).toContainText('a copy to keep');
-		await expect(zip).toContainText(`v${version}`);
+		const releases = 'https://github.com/scrutabor/scrutabor/releases';
+		if (process.env.CF_PAGES_BRANCH && process.env.CF_PAGES_BRANCH !== 'release') {
+			await expect(zip).toHaveAttribute('href', releases + '/latest');
+			await expect(zip).toContainText('from the GitHub release');
+			await expect(zip.locator('.way-version')).toHaveCount(0);
+		} else {
+			await expect(zip).toHaveAttribute(
+				'href',
+				releases + '/download/v' + version + '/Scrutabor-v' + version + '.zip'
+			);
+			await expect(zip).toContainText('a copy to keep');
+			await expect(zip.locator('.way-version')).toHaveText('v' + version);
+		}
 	});
 
 	test('the privacy page states the promise in both languages', async ({ page }) => {
@@ -403,13 +412,12 @@ test.describe('landing @online', () => {
 			'href',
 			'https://github.com/scrutabor/scrutabor-corpus/issues'
 		);
-		// the project's own address, not a personal one — the stores and
-		// the readers both get the same door
-		await expect(page.locator('a[href="mailto:contact@scrutabor.org"]')).toBeVisible();
+		await expect(page.getByText('Zgłoszenia na GitHubie są publiczne.')).toBeVisible();
 		await page.goto('/en/support');
 		await expect(page.locator('h1')).toHaveText('Contact');
 		await expect(page.getByRole('link', { name: 'app issues' })).toBeVisible();
 		await expect(page.getByRole('link', { name: 'text and translation issues' })).toBeVisible();
+		await expect(page.getByText('GitHub issues are public.')).toBeVisible();
 		expect((await page.request.get('/en/support')).status()).toBe(200);
 	});
 

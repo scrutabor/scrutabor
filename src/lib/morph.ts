@@ -269,7 +269,7 @@ const ANALYSIS_LABELS: Record<
 > = {
 	pl: {
 		confidence: 'pewność',
-		sources: 'potwierdzenie',
+		sources: 'źródła analizy',
 		values: {
 			high: 'wysoka',
 			medium: 'średnia',
@@ -285,7 +285,7 @@ const ANALYSIS_LABELS: Record<
 	},
 	en: {
 		confidence: 'confidence',
-		sources: 'confirmed by',
+		sources: 'analysis sources',
 		values: {
 			high: 'high',
 			medium: 'medium',

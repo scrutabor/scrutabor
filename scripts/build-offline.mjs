@@ -126,8 +126,8 @@ let shell = template
 		// route is a prerendered file; the folder is one document that builds
 		// the book from the corpus it carries, and that needs a script to run.
 		`<noscript><div class="noscript">
-			<p lang="pl">Ta kopia księgi potrzebuje JavaScriptu. Cały tekst jest tutaj, ale składa go przeglądarka.</p>
-			<p lang="en">This copy of the book needs JavaScript. The whole text is here, and the browser assembles it.</p>
+			<p lang="pl">Aby czytać tę kopię, włącz JavaScript w przeglądarce. Wszystkie teksty są w tym folderze.</p>
+			<p lang="en">Turn on JavaScript in your browser to read this copy. All the texts are in this folder.</p>
 		</div></noscript>
 		<div id="scrutabor"></div>
 		<script>window.__scrutabor_up = ${JSON.stringify(`${INNER}/`)};</script>
@@ -167,8 +167,8 @@ for (const path of walk(OUT)) {
 // file is what a reader opens BEFORE index.html.
 writeFileSync(
 	join(OUT, 'README.txt'),
-	`Scrutabor — łaciński mszalik i modlitewnik z warstwą słowo po słowie.
-Scrutabor — a Latin missal and prayer book with a word-by-word layer.
+	`Scrutabor — łaciński mszalik i modlitewnik z objaśnieniami do poszczególnych słów.
+Scrutabor — a Latin missal and prayer book with word-by-word explanations.
 Edition v${VERSION} · ${COMMIT.slice(0, 12)}${DIRTY ? ' (modified)' : ''}.
 
     Otwórz / Open: index.html
@@ -177,13 +177,13 @@ Kopię otwiera się w przeglądarce z włączonym JavaScriptem. Połączenie
 z internetem nie jest potrzebne. Dotknij słowa, aby zobaczyć jego hasło
 i analizę gramatyczną. Możesz czytać samą łacinę, łacinę z pełnym
 przekładem lub łacinę z podpisami słowo po słowie. We Mszy możesz
-wybrać rolę: wierni, usługujący albo kapłan.
+śledzić teksty wiernych, usługującego albo kapłana.
 
 Open the copy in a browser with JavaScript enabled. No internet
 connection is needed. Tap a word to see its dictionary entry and
 grammatical analysis. You can read Latin alone, Latin with a full
 translation, or Latin with word-by-word glosses. At Mass, you can
-choose a role: faithful, server, or priest.
+follow the part of the congregation, the server, or the priest.
 
 Zachowaj folder "app" obok pliku index.html. Są w nim dane książki
 i kod potrzebny do jej otwarcia. Plik OFL.txt zawiera licencję kroju

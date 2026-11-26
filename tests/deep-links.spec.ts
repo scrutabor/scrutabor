@@ -144,7 +144,7 @@ test.describe('selection interaction', () => {
 		await page.goto('/app/pl/ordinarium/iudica-me');
 		await page.locator('button.mark').first().click();
 		const instructions = page.getByText(
-			'Aby zaznaczyć zakres, przytrzymaj Shift i kliknij drugi werset.'
+			'Jeśli używasz klawiatury, przytrzymaj Shift i wybierz drugi werset, aby zaznaczyć cały fragment.'
 		);
 		await expect(instructions).toHaveCount(1);
 		await expect(instructions).toBeVisible();

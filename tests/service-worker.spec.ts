@@ -424,7 +424,7 @@ test.describe('two worker versions, one book @online', () => {
 		);
 		state.retired = `/_app/immutable/corpus/${searchChunk}`;
 		await page.goto(`${origin}/app/pl/search?q=zdrowas`);
-		const retry = page.getByRole('button', { name: /spróbuj ponownie|try again/ });
+		const retry = page.getByRole('button', { name: /Spróbuj ponownie|Try again/ });
 		await expect(retry).toBeVisible({ timeout: 15000 });
 		state.retired = null;
 		await retry.click();

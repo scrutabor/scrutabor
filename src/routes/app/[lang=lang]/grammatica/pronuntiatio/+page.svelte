@@ -31,8 +31,8 @@
 		{ s: 'j', pl: 'jak j w „jutro”', en: 'as y in yes' },
 		{
 			s: 'k g',
-			pl: 'jak k i g w „kot”, „góra” — g zawsze twarde',
-			en: 'as in kind, go — g always hard'
+			pl: 'jak k w „kot” i g w „góra”',
+			en: 'as k in kind and g in go'
 		},
 		{ s: 'tʃ', pl: 'jak cz w „czas”', en: 'as ch in church' },
 		{ s: 'ts', pl: 'jak c w „co”', en: 'as ts in cats' },
@@ -44,10 +44,14 @@
 		{ s: 's z v r', pl: 'jak s, z, w, r (r drżące)', en: 'as in sit, zeal, vine, with r rolled' },
 		{
 			s: 'kw gw',
-			pl: 'k lub g, po którym słychać polskie ł',
+			pl: 'jak k lub g z następującym po nim polskim ł',
 			en: 'as qu in quick and gw in Gwen'
 		},
-		{ s: 'kv', pl: 'k, po którym słychać polskie w', en: 'k followed by v as in vine' },
+		{
+			s: 'kv gv',
+			pl: 'k lub g z następującym po nim polskim w',
+			en: 'k or g followed by v as in vine'
+		},
 		{ s: 'ˈ', pl: 'akcent — pada na następną sylabę', en: 'stress — falls on the next syllable' },
 		{ s: '.', pl: 'granica sylaby', en: 'syllable boundary' }
 	]);
@@ -75,24 +79,24 @@
 				(polska). Poniższa tabela zestawia oba warianty.
 			</p>
 			<p class="what">
-				Kolumna „polska” przedstawia wybrany wariant tradycyjnej wymowy łaciny, nie wszystkie jej
-				odmiany. W&nbsp;obu transkrypcjach zachowujemy rozdzielne samogłoski w&nbsp;wyrazach takich
-				jak „grá-ti-a” — trzy sylaby, inaczej niż w&nbsp;polskim słowie „gracja”. Podział na sylaby
+				Kolumna „polska” pokazuje jedną z&nbsp;tradycyjnych odmian wymowy łaciny w&nbsp;Polsce.
+				W&nbsp;obu transkrypcjach zachowujemy rozdzielne samogłoski w&nbsp;wyrazach takich jak
+				„grá-ti-a” — trzy sylaby, inaczej niż w&nbsp;polskim słowie „gracja”. Podział na sylaby
 				wskazuje sposób odczytania słowa, nie liczbę nut w&nbsp;śpiewie.
 			</p>
 		{:else}
 			<p class="what">
-				The word cards show <strong>Roman</strong> pronunciation. In the Polish version of the
-				prayer book, some cards also show a Polish pronunciation. You’ll see the labels
+				The word cards show <strong>Roman</strong> pronunciation. In the Polish edition, cards that
+				give both pronunciations use the labels
 				<span class="smallcaps">rz.</span>
 				(Roman) and <span class="smallcaps">pol.</span>
 				(Polish). The table below compares the two readings.
 			</p>
 			<p class="what">
-				The Polish column represents one traditional way of reading Latin, not every variant. Both
-				transcriptions keep adjacent vowels separate in words such as “grá-ti-a”: three syllables,
-				unlike the Polish word “gracja”. Syllable divisions guide the reading of the word. They do
-				not specify how many notes it has in chant.
+				The Polish column gives one traditional pronunciation used in Poland. Both transcriptions
+				keep adjacent vowels separate in words such as “grá-ti-a”: three syllables, unlike the
+				Polish word “gracja”. Syllable divisions guide the reading of the word. They do not specify
+				how many notes it has in chant.
 			</p>
 		{/if}
 
@@ -111,7 +115,9 @@
 					<thead role="rowgroup">
 						<!-- svelte-ignore a11y_no_redundant_roles -->
 						<tr role="row">
-							<th role="columnheader" lang="la">littera</th>
+							<th role="columnheader"
+								>{lang === 'pl' ? 'litera lub grupa liter' : 'letter or combination'}</th
+							>
 							<th role="columnheader">{cols.roman}</th>
 							<th role="columnheader">{cols.polish}</th>
 							<th role="columnheader">{cols.example}</th>
@@ -122,8 +128,10 @@
 						{#each rules as r (r.grapheme)}
 							<!-- svelte-ignore a11y_no_redundant_roles -->
 							<tr role="row">
-								<td role="cell" lang="la">{r.grapheme}</td>
-								<td role="cell" data-label={cols.roman}>{r.roman}</td>
+								<td role="cell" lang={r.label ? lang : 'la'}>{r.label?.[lang] ?? r.grapheme}</td>
+								<td role="cell" data-label={cols.roman}
+									>{r.roman ?? (lang === 'pl' ? 'zwykle nieme' : 'usually silent')}</td
+								>
 								<td role="cell" data-label={cols.polish}>{r.polish}</td>
 								<td role="cell" data-label={cols.example}>
 									{#if r.href}
@@ -138,15 +146,57 @@
 					</tbody>
 				</table>
 			</div>
-			<p class="fine">
-				{lang === 'pl'
-					? 'Reguła „ti” nie działa po s, t, x ani na początku wyrazu. W\u00a0słowie hóstia po s wymawia się /ti/. S między samogłoskami dźwięcznieje w\u00a0obu tradycjach (Iesus). Spółgłoskowe „i” nie jest osobną sylabą: Ie-sus ma dwie, ma-ie-stá-tis cztery. Starsze mszaliki drukują w\u00a0tym miejscu j (Jesus, majestátis) — to ta sama głoska. Pozostałe litery czyta się jak po polsku.'
-					: 'The “ti” rule does not apply after s, t, or x or at the start of a word. In hóstia, the s is followed by /ti/. S between vowels is voiced in both traditions (Iesus). Consonantal i is not a syllable of its own: Ie-sus has two, ma-ie-stá-tis four. Older hand missals print j here (Jesus, majestátis) for the same sound. Other letters keep the Latin values of the symbols table.'}
-			</p>
+			{#if lang === 'pl'}
+				<p class="fine">
+					Na początku wyrazu oraz po s, t lub x grupa ti przed samogłoską zachowuje wymowę /ti/, jak
+					w&nbsp;hóstia. W&nbsp;słowie <a
+						href="/app/{lang}/ordinarium/offerimus-tibi?w=w018"
+						lang="la">totíus</a
+					>
+					również słychać /ti/. W&nbsp;wymowie rzymskiej h jest zwykle nieme. W&nbsp;słowach
+					<a href="/app/{lang}/ordinarium/quid-retribuam?w=w008" lang="la">mihi</a>
+					i&nbsp;<a
+						href="/app/{lang}/formularium/omnium-sanctorum?w=omnium-sanctorum-graduale.w007"
+						lang="la">nihil</a
+					>
+					oraz w&nbsp;wyrazach od nich pochodnych brzmi jak /k/.
+				</p>
+				<p class="fine">
+					Spółgłoskowe i&nbsp;łączy się z&nbsp;następną samogłoską. Ie-sus ma dwie sylaby,
+					a&nbsp;ma-ie-stá-tis cztery. W&nbsp;starszych mszalikach tę samą głoskę oznacza również
+					litera j (Jesus, majestátis). W&nbsp;tej tabeli pojedyncze s między samogłoskami
+					zapisujemy jako /z/. W&nbsp;wybranej tu polskiej wymowie ch brzmi jak w&nbsp;słowie
+					„chór”.
+				</p>
+			{:else}
+				<p class="fine">
+					At the start of a word and after s, t, or x, ti before a vowel keeps the sound /ti/, as in
+					hóstia. The same /ti/ is heard in
+					<a href="/app/{lang}/ordinarium/offerimus-tibi?w=w018" lang="la">totíus</a>. In Roman
+					pronunciation h is usually silent. In
+					<a href="/app/{lang}/ordinarium/quid-retribuam?w=w008" lang="la">mihi</a> and
+					<a
+						href="/app/{lang}/formularium/omnium-sanctorum?w=omnium-sanctorum-graduale.w007"
+						lang="la">nihil</a
+					>
+					and words derived from them, it sounds like /k/.
+				</p>
+				<p class="fine">
+					Consonantal i joins the following vowel. Ie-sus has two syllables and ma-ie-stá-tis has
+					four. Older hand missals also use j for the same sound (Jesus, majestátis). Here we
+					transcribe a single s between vowels as /z/. The Polish column gives ch as /x/, as in
+					Scots loch.
+				</p>
+			{/if}
 		</section>
 
 		<section>
 			<h2 class="smallcaps">{lang === 'pl' ? 'symbole' : 'the symbols'}</h2>
+			<p class="fine">
+				{lang === 'pl'
+					? 'Polskie przykłady podpowiadają, jak czytać zapis wymowy.'
+					: 'The examples below give approximate English equivalents for the sounds in the transcriptions.'}
+			</p>
 			<div class="table-wrap">
 				<table>
 					<tbody>

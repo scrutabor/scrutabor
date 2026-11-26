@@ -7,6 +7,7 @@ import {
 	ordoResponseContext
 } from './ordo-context';
 import { ORDO } from './ordo';
+import { ordoReferenceGroups } from './ordo-reference-groups';
 import { PROPER_DAYS } from './proprium';
 import { bindOrphans, bindPlFields } from './polish';
 
@@ -203,15 +204,7 @@ it('binds the one-letter words of the two Ordinary-alone Gospel-blessing notes',
 		'pl'
 	)!.note;
 	for (const [note, bound] of [
-		[
-			blessing,
-			[
-				'prośba i\u00a0błogosławieństwo',
-				'diakona i\u00a0subdiakona',
-				'z\u00a0wyjątkiem',
-				'o\u00a0obecności'
-			]
-		],
+		[blessing, ['diakona i\u00a0subdiakona', 'z\u00a0wyjątkiem']],
 		[deacon, ['z\u00a0udziałem', 'z\u00a0wyjątkiem']]
 	] as const) {
 		expect(note).not.toMatch(BREAKABLE_ORPHAN);
@@ -219,7 +212,7 @@ it('binds the one-letter words of the two Ordinary-alone Gospel-blessing notes',
 		for (const pair of bound) expect(note).toContain(pair);
 	}
 	expect(blessing.replaceAll('\u00a0', ' ')).toContain(
-		'Ta prośba i błogosławieństwo należą do wariantu bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych. Sam wybór Mszy śpiewanej nie rozstrzyga o obecności tych posługujących.'
+		'Obie modlitwy odmawia kapłan odprawiający bez diakona i subdiakona, z wyjątkiem Mszy za zmarłych. Mszę śpiewaną można odprawiać także bez ich udziału.'
 	);
 	expect(deacon.replaceAll('\u00a0', ' ')).toContain(
 		'Ten wariant dotyczy Ewangelii z udziałem diakona, z wyjątkiem Mszy za zmarłych.'
@@ -235,6 +228,28 @@ const SOURCE_LITERALS = [
 		.matchAll(/'((?:[^'\\\n]|\\.)*)'/g)
 ].map((match) => match[1]);
 const POLISH_LITERALS = SOURCE_LITERALS.filter((text) => /[ąćęłńóśźż]/i.test(text));
+
+it.each(['pl', 'en'] as const)('keeps the Last Gospel tied to the selected rite in %s', (lang) => {
+	const entries = ORDO.find((movement) => movement.id === 'conclusio')!.entries;
+	for (const [date, mass, form, parts] of [
+		['2026-12-25', 'nativitas-domini-in-die', 'lecta', ['evangelium-ultimum']],
+		['2026-12-25', 'nativitas-domini-in-nocte', 'lecta', []],
+		['2026-12-25', 'nativitas-domini-in-aurora', 'cantu', []],
+		['2026-03-29', 'dominica-ii-passionis', 'cantu', ['evangelium-ultimum']],
+		['2026-04-02', 'feria-v-in-cena-domini', 'cantu', ['benedictio', 'evangelium-ultimum']],
+		['2026-04-02', 'feria-v-in-cena-domini', 'lecta', []],
+		['2026-04-05', 'dominica-resurrectionis', 'cantu', []]
+	] as const) {
+		const state = preparation(date, mass, lang);
+		const grouped = (loading: boolean) =>
+			ordoReferenceGroups('conclusio', entries, { ...state, loading }, form, lang)
+				.filter((group) => group.id !== 'after-low-mass')
+				.flatMap((group) => group.entries.map((entry) => entry.id));
+		expect(grouped(false), mass).toEqual(parts);
+		expect(grouped(true), mass).toEqual([]);
+	}
+});
+
 function sourceSentences(note: string): string[] | undefined {
 	const plain = note.replaceAll('\u00a0', ' ');
 	if (!plain) return [];
@@ -249,6 +264,7 @@ function sourceSentences(note: string): string[] | undefined {
 it('binds every Polish note of every context helper without changing its wording', () => {
 	const occasions: [string | null, string | null, string[]][] = [
 		['2026-04-26', null, []],
+		['2026-04-02', 'feria-v-in-cena-domini', ['proprium/feria-v-in-cena-domini-evangelium']],
 		[null, 'dominica-iii-post-pascha', []],
 		['2026-04-26', 'dominica-iii-post-pascha', ['proprium/dominica-iii-post-pascha-evangelium']],
 		['2026-03-29', 'dominica-ii-passionis', ['proprium/dominica-ii-passionis-evangelium']],

@@ -26,9 +26,7 @@ describe('the three omission notes keep the actual Mass and inclusive endpoint',
 				} else {
 					expect(when).toContain('Masses of the season');
 					expect(when).toContain('Masses for the Dead');
-					expect(when).toContain(
-						'from the First Sunday of the Passion through Holy Thursday inclusive'
-					);
+					expect(when).toContain('from the First Sunday of the Passion through Holy Thursday');
 				}
 			});
 		}
@@ -66,8 +64,8 @@ describe('the three omission notes keep the actual Mass and inclusive endpoint',
 		const when = plain(entry('iudica-me').when?.[language]);
 		expect(when).toContain(
 			language === 'pl'
-				? 'wraz z doksologią i powtórzoną antyfoną'
-				: 'with its doxology and the repeated antiphon'
+				? 'Psalm, doksologię i powtórzenie antyfony opuszcza się'
+				: 'The psalm, the doxology and the repetition of the antiphon are omitted'
 		);
 		expect(when).not.toMatch(/(wszystkimi modlitwami|all the prayers)/);
 	});
@@ -82,7 +80,7 @@ describe('the three omission notes keep the actual Mass and inclusive endpoint',
 			);
 			expect(plain(entry('lavabo').when?.[language])).toContain(
 				language === 'pl'
-					? 'W Wigilię Paschalną odmawia się Chwała Ojcu.'
+					? 'W Wigilię Paschalną kapłan ją odmawia.'
 					: 'It is said at the Easter Vigil'
 			);
 		}

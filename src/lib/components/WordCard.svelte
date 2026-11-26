@@ -108,7 +108,7 @@
 			><i lang="la">{lemmaEntry?.head ?? item.lemma}</i>{#if gender}&nbsp;<span class="gender"
 					>{gender}</span
 				>{/if}</a
-		>{#if senseEntry}<span class="head-senses">— {senseEntry.senses.join(', ')}</span>{/if}
+		>{#if senseEntry}{' '}<span class="head-senses">— {senseEntry.senses.join(', ')}</span>{/if}
 	</p>
 	{#if senseEntry?.note}
 		<p class="note">{senseEntry.note}</p>
@@ -207,10 +207,6 @@
 
 	.head a:hover {
 		color: var(--rubric);
-	}
-
-	.head-senses {
-		margin-inline-start: 0.2em;
 	}
 
 	.gender {

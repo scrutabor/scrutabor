@@ -395,7 +395,7 @@ test('word panel separates context, dictionary, grammar and verification', async
 	// The dictionary identity is a separate layer.
 	await expect(panel.locator('.head a')).toHaveAttribute('href', '/app/pl/lemma?l=radix');
 	await expect(panel.locator('.head')).toContainText('radix, radícis');
-	await expect(panel.locator('.head')).toContainText('— korzeń');
+	await expect(panel.locator('.head')).toContainText(/\S — korzeń/);
 	// So is the strict parse, with its concept-linked term.
 	await expect(panel.locator('.morph')).toContainText('wołacz');
 	await expect(panel.locator('.morph a.concept')).toHaveAttribute(
@@ -522,7 +522,7 @@ test('the English locale renders its own gloss layer', async ({ page }) => {
 	await page.goto('/app/en/orationes/ave-maria');
 	await expect(page.locator('rt').first()).toHaveText('Hail');
 	await page.locator('#w019').click();
-	await expect(page.locator('aside .head')).toContainText('— mother');
+	await expect(page.locator('aside .head')).toContainText(/\S — mother/);
 });
 
 test('pronunciation line shows both traditions on the Polish interface', async ({ page }) => {
@@ -1256,13 +1256,13 @@ test('the part control appears only where it changes something', async ({ page }
 	// dialogue's delivery differs between sung and low Mass (the celebrant sings the
 	// three invitations), so the form control appears there too.
 	await page.goto('/app/en/ordinarium/praefatio-dialogus');
-	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.getByRole('radio', { name: 'the faithful', exact: true })).toBeVisible();
 	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(1);
 
 	// One missal speaker, but a real participation change: at Low Mass the
 	// faithful may say the ministers' Confiteor with the server (DMS 31 b).
 	await page.goto('/app/en/ordinarium/confiteor');
-	await expect(page.getByRole('radio', { name: 'faithful' })).toBeVisible();
+	await expect(page.getByRole('radio', { name: 'the faithful', exact: true })).toBeVisible();
 	await expect(page.getByRole('radio', { name: 'low' })).toBeVisible();
 
 	// Degree 2 versus 3 is documentary metadata until the reading page names
@@ -1278,7 +1278,7 @@ test('the part control appears only where it changes something', async ({ page }
 	await expect(page.locator('.picker[data-kind="mass"]')).toHaveCount(0);
 
 	await page.goto('/app/en/ordinarium/quod-ore-sumpsimus'); // the priest's, throughout
-	await expect(page.getByRole('radio', { name: 'faithful' })).toHaveCount(0);
+	await expect(page.getByRole('radio', { name: 'the faithful', exact: true })).toHaveCount(0);
 	// and the reading-mode control, which always does something, stays
 	await expect(page.locator('.help [role="radiogroup"]')).toBeVisible();
 });

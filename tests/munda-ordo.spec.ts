@@ -91,8 +91,8 @@ for (const lang of ['pl', 'en'] as const) {
 				if (choice.name.startsWith('Requiem'))
 					await expect(section.locator('.part-note')).toContainText(
 						lang === 'pl'
-							? 'Munda cor meum wraz ze swoim zakończeniem pozostaje'
-							: 'Munda cor meum and its own conclusion remain'
+							? 'Munda cor meum z zakończeniem Per Christum'
+							: 'Munda cor meum is said through its conclusion, Per Christum'
 					);
 				if (choice.name === 'Palm Passion') {
 					await expect(section.locator('.part-note')).toContainText(

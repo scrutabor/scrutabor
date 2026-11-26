@@ -9,7 +9,7 @@ for (const language of ['pl', 'en'] as const) {
 		const message =
 			language === 'pl'
 				? 'Przy doborze modlitw uwzględniamy wspomnienia Litanii Większych, św. Petroneli, niedziel i świąt, które ustępują innym obchodom, oraz dni powszednich Adwentu. W wybranych przypadkach uwzględniamy także wspomnienia świętych w Wigilię Wniebowstąpienia oraz wspomnienie samej Wigilii, gdy ustępuje świętu. Pozostałe wspomnienia i kalendarze lokalne czekają na uzupełnienie.'
-				: 'Prayer selection includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.';
+				: 'This edition includes commemorations of the Greater Litanies, Saint Petronilla, Sundays and feasts that give way to another observance, and Advent weekdays. In the cases listed here, it also includes commemorations of saints on the Vigil of the Ascension and of the Vigil itself when a feast takes precedence. Other commemorations and local calendars are still to be added.';
 		await page.setViewportSize({ width: 320, height: 900 });
 		await page.goto(`/app/${language}/ordo/offertorium?dies=2049-07-25`);
 		await expect(page.locator('.page > header .formulary-scope')).toHaveText(message);

@@ -21,6 +21,7 @@ for (const transport of ['', '@static-host '] as const) {
 				)
 				.first();
 			await expect(link).toBeVisible();
+			await expect(link.locator('..')).toHaveText(/.+ — \S/);
 			await link.click();
 			await expect(page.locator(`#text-proprium-${slug}`)).toBeVisible();
 			await expect(page.locator('.help')).toBeVisible();

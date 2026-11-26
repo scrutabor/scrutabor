@@ -43,8 +43,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'nominativus',
 		label: { pl: 'mianownik', en: 'nominative' },
 		what: {
-			pl: 'Mianownik to zwykle przypadek podmiotu zdania. W krótkich formułach modlitwy słowa „jest” często trzeba się domyślić.',
-			en: 'The subject of a sentence is usually in the nominative. In short prayer formulas, the verb “is” is often understood.'
+			pl: 'Mianownik to zwykle przypadek podmiotu zdania. W krótkich formułach modlitwy czasownik „być” często pozostaje domyślny.',
+			en: 'The subject of a sentence is usually in the nominative. In short prayer formulas, a form of “to be” is often understood.'
 		},
 		spot: {
 			pl: 'W słowniku rzeczownik znajdziesz zwykle pod mianownikiem liczby pojedynczej.',
@@ -66,7 +66,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w014',
 				note: {
 					pl: 'wola — podmiot prośby: co ma się stać?',
-					en: 'the will — the subject of the petition: what is to be done?'
+					en: 'In “Thy will be done,” the subject is “Thy will.”'
 				}
 			},
 			{
@@ -98,21 +98,27 @@ const CONCEPTS_SOURCE: Concept[] = [
 				la: 'fructus ventris tui',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w014',
-				note: { pl: 'owoc żywota — owoc czego.', en: 'the fruit of the womb — fruit of what.' }
+				note: {
+					pl: 'owoc żywota Twojego — „żywota” odpowiada na pytanie „owoc czego?”.',
+					en: '“Of thy womb” describes the fruit. Both “ventris” and “tui” are genitive.'
+				}
 			},
 			{
 				la: 'Mater Dei',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w020',
-				note: { pl: 'Matko Boga — Matko kogo.', en: 'Mother of God — Mother of whom.' }
+				note: {
+					pl: '„Boga” odpowiada na pytanie „czyją Matką jest Maryja?”.',
+					en: '“Of God” tells us whose mother Mary is.'
+				}
 			},
 			{
 				la: 'in hora mortis nostræ',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w029',
 				note: {
-					pl: 'w godzinie śmierci — w godzinie czego.',
-					en: 'at the hour of death — the hour of what.'
+					pl: 'w godzinie śmierci naszej — „śmierci” odpowiada na pytanie „w godzinie czego?”.',
+					en: '“Of our death” describes the hour. Both “mortis” and “nostræ” are genitive.'
 				}
 			},
 			{
@@ -120,8 +126,8 @@ const CONCEPTS_SOURCE: Concept[] = [
 				textKey: 'orationes/gloria-patri',
 				wordId: 'w019',
 				note: {
-					pl: 'wieki wieków — dopełniacz wzmacnia przez powtórzenie.',
-					en: 'ages of ages — the genitive intensifies by repetition.'
+					pl: 'W wyrażeniu „na wieki wieków” powtórzenie rzeczownika oznacza trwanie bez końca.',
+					en: 'In “ages of ages,” the repeated noun expresses time without end.'
 				}
 			}
 		]
@@ -141,21 +147,21 @@ const CONCEPTS_SOURCE: Concept[] = [
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w002',
 				note: {
-					pl: 'spowiadam się komu — Bogu. Pierwszy z długiej listy celowników.',
-					en: 'I confess to whom — to God. The first of a long chain of datives.'
+					pl: 'Komu się spowiadam? Bogu. „Deo” to pierwszy z szeregu celowników.',
+					en: 'To whom do I confess? To God. “Deo” is the first in a series of datives.'
 				}
 			},
 			{
 				la: 'Glória Patri',
 				textKey: 'orationes/gloria-patri',
 				wordId: 'w002',
-				note: { pl: 'chwała komu — Ojcu.', en: 'glory to whom — to the Father.' }
+				note: { pl: 'Komu należy się chwała? Ojcu.', en: 'To whom is glory given? To the Father.' }
 			},
 			{
 				la: 'da nobis hódie',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w026',
-				note: { pl: 'daj komu — nam.', en: 'give to whom — to us.' }
+				note: { pl: 'Komu? Nam.', en: 'To whom? To us.' }
 			}
 		]
 	},
@@ -165,21 +171,24 @@ const CONCEPTS_SOURCE: Concept[] = [
 		la: 'accusativus',
 		label: { pl: 'biernik', en: 'accusative' },
 		what: {
-			pl: 'Biernik często wskazuje dopełnienie bliższe. W „da panem” to chleb ma być dany. W wyrażeniach kierunku biernik stoi po przyimkach takich jak „ad” i „in”.',
-			en: 'The accusative often marks the direct object. In “da panem,” the bread is what is to be given. In phrases of direction, the accusative follows prepositions such as “ad” and “in.”'
+			pl: 'Biernik często wskazuje dopełnienie bliższe. W prośbie „Panem nostrum … da nobis” prosimy o chleb. W wyrażeniach kierunku biernik stoi po przyimkach takich jak „ad” i „in”.',
+			en: 'The accusative often marks the direct object. In “Panem nostrum … da nobis,” the bread is what we ask to be given. In phrases of direction, the accusative follows prepositions such as “ad” and “in.”'
 		},
 		examples: [
 			{
 				la: 'Panem nostrum quotidiánum da nobis',
 				textKey: 'orationes/pater-noster',
 				wordId: 'w022',
-				note: { pl: 'daj co — chleb.', en: 'give what — bread.' }
+				note: {
+					pl: 'O co prosimy? O chleb. „Panem” jest dopełnieniem czasownika „da”.',
+					en: 'What do we ask for? Our daily bread.'
+				}
 			},
 			{
 				la: 'precor beátam Maríam',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w041',
-				note: { pl: 'błagam kogo — Maryję.', en: 'I beseech whom — Mary.' }
+				note: { pl: 'Kogo błagam? Maryję.', en: 'Whom do I beseech? Mary.' }
 			},
 			{
 				la: 'ne nos indúcas in tentatiónem',
@@ -212,15 +221,18 @@ const CONCEPTS_SOURCE: Concept[] = [
 				la: 'grátia plena',
 				textKey: 'orationes/ave-maria',
 				wordId: 'w003',
-				note: { pl: 'pełna czym — łaską.', en: 'full of what — of grace.' }
+				note: {
+					pl: 'łaski pełna — po polsku „łaski” jest dopełniaczem. Łacińskie „grátia” to ablativus.',
+					en: 'full of grace — the ablative “grátia” tells us what Mary is full of.'
+				}
 			},
 			{
 				la: 'cogitatióne, verbo et ópere',
 				textKey: 'ordinarium/confiteor',
 				wordId: 'w027',
 				note: {
-					pl: 'zgrzeszyłem czym — myślą, mową, uczynkiem: trzy ablativy narzędzia.',
-					en: 'sinned by what — by thought, word, and deed: three ablatives of means.'
+					pl: '„Myślą, mową i uczynkiem” wskazuje trzy sposoby grzeszenia. Wszystkie trzy łacińskie rzeczowniki mają formę ablativu.',
+					en: '“In thought, word, and deed” names three ways of sinning. All three nouns are ablative.'
 				}
 			},
 			{
@@ -313,7 +325,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w042',
 				note: {
 					pl: 'z „ne” — prośba przecząca: abyś nie wiódł.',
-					en: 'with “ne” — a negative petition: that You not lead.'
+					en: '“Lead us not” is a negative petition introduced by “ne.”'
 				}
 			}
 		]
@@ -403,7 +415,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w010',
 				note: {
 					pl: 'Michałowi — Archaniołowi: ten sam celownik.',
-					en: 'to Michael — the Archangel: the same dative.'
+					en: '“To Michael the Archangel” — both his name and his title are dative.'
 				}
 			},
 			{
@@ -412,7 +424,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w016',
 				note: {
 					pl: 'owoc… — Jezus: apozycja w mianowniku.',
-					en: 'the fruit… — Jesus: an apposition in the nominative.'
+					en: '“Jesus” names the fruit of Mary’s womb. Both “Iesus” and “fructus” are nominative.'
 				}
 			},
 			{
@@ -421,7 +433,7 @@ const CONCEPTS_SOURCE: Concept[] = [
 				wordId: 'w019',
 				note: {
 					pl: 'Maryjo — Matko: dopowiedzenie w wołaczu.',
-					en: 'Mary — Mother: an apposition in the vocative.'
+					en: '“Mother of God” is another way of addressing Mary. Both “María” and “Mater” are vocative.'
 				}
 			},
 			{

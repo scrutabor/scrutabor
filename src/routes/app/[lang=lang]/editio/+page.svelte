@@ -20,10 +20,10 @@
 
 		{#if lang === 'pl'}
 			<p class="what">
-				Łacińskie teksty przepisujemy z&nbsp;publicznie dostępnych ksiąg liturgicznych
-				i&nbsp;sprawdzamy je z&nbsp;drukiem słowo po słowie. Zachowujemy zapis liter ze źródła.
-				Decyzje dotyczące interpunkcji i&nbsp;wielkich liter wyjaśniamy w&nbsp;aparacie krytycznym.
-				Źródła, aparat i&nbsp;dane wydania można znaleźć w&nbsp;<a
+				Teksty łacińskie podajemy według źródeł wskazanych przy poszczególnych modlitwach. Gdy
+				podstawą jest druk, porównujemy z&nbsp;nim tekst słowo po słowie. W&nbsp;aparacie krytycznym
+				wyjaśniamy decyzje dotyczące pisowni, wielkich liter i&nbsp;interpunkcji. Źródła, aparat
+				i&nbsp;dane wydania można znaleźć w&nbsp;<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
 					rel="external noopener">repozytorium korpusu</a
@@ -39,20 +39,25 @@
 					href="https://outils.biblissima.fr/en/collatinus/"
 					target="_blank"
 					rel="external noopener">Collatinus</a
-				>. W&nbsp;karcie słowa można sprawdzić, które źródła potwierdzają rozbiór. Oznaczeniem
-				„opracowanie” obejmujemy własne przekłady, podpisy pod słowami, objaśnienia i&nbsp;decyzje
-				redakcyjne.
+				>. Karta słowa podaje źródła jego analizy. Oznaczeniem „opracowanie” obejmujemy własne
+				przekłady, podpisy pod słowami, objaśnienia i&nbsp;decyzje redakcyjne.
 			</p>
 			<p class="what">
-				Analizatory pokazują, jakie rozbiory są możliwe dla danej formy. Samo „María” dopuszcza
-				dwanaście odczytań. Żeby wybrać właściwe, trzeba przeczytać słowo w&nbsp;zdaniu. To właśnie
-				wybór rozbioru w&nbsp;kontekście czeka na przegląd latynisty. Oba programy korzystają między
-				innymi ze słownika Lewis&nbsp;&amp; Short.
+				Analizatory pokazują możliwe rozbiory słowa. O&nbsp;przypadku często rozstrzyga zdanie.
+				W&nbsp;modlitwie <a href="/app/{lang}/orationes/ave-maria?w=w002" lang="la">Ave María</a>
+				zwracamy się do Maryi, więc jej imię jest w&nbsp;wołaczu. W&nbsp;słowach
+				<a
+					href="/app/{lang}/formularium/septem-dolorum-beatae-mariae-virginis?w=septem-dolorum-beatae-mariae-virginis-alleluia.w005"
+					lang="la">Stabat sancta María</a
+				>
+				(„stała święta Maryja”) to samo imię jest podmiotem i&nbsp;stoi w&nbsp;mianowniku. Oba programy
+				korzystają między innymi ze słownika Lewis&nbsp;&amp; Short.
 			</p>
 			<p class="what">
-				„Zaakceptowane” przy słowie oznacza, że analizatory potwierdzają podany rozbiór jako
-				możliwy. „Do przeglądu” oznacza, że dana część analizy jeszcze czeka na sprawdzenie.
-				Scrutabor pozostaje <strong>wydaniem roboczym</strong> do czasu przeglądu przez latynistę.
+				„Zaakceptowane” oznacza, że w&nbsp;tym wydaniu przyjęliśmy podany rozbiór. Oznaczenie „do
+				przeglądu” wskazuje analizę czekającą na sprawdzenie, a&nbsp;„sporne” — odczytanie, co do
+				którego pozostają wątpliwości. Scrutabor pozostaje <strong>wydaniem roboczym</strong> do czasu
+				przeglądu przez latynistę.
 			</p>
 			<p class="what">
 				Źródła zewnętrzne, na których opierają się objaśnienia, są podane bezpośrednio przy nich
@@ -60,10 +65,10 @@
 			</p>
 		{:else}
 			<p class="what">
-				We transcribe the Latin from publicly available liturgical books and check it against the
-				printed text word by word. We follow the source spelling and record decisions about
-				punctuation and capitalization in the critical apparatus. The sources, apparatus, and
-				edition data are available in the
+				Each prayer lists the sources of its Latin text. When we use a printed edition, we check the
+				text against it word by word. The critical apparatus records our decisions about spelling,
+				capitalization, and punctuation. The sources, apparatus, and edition data are available in
+				the
 				<a
 					href="https://github.com/scrutabor/scrutabor-corpus"
 					target="_blank"
@@ -71,8 +76,8 @@
 				>.
 			</p>
 			<p class="what">
-				We check each word’s dictionary form and grammar with two independent, open-source Latin
-				analyzers,
+				To check dictionary forms and grammatical analyses, we use two independent, open-source
+				Latin analyzers,
 				<a href="https://github.com/mk270/whitakers-words" target="_blank" rel="external noopener"
 					>Whitaker's Words</a
 				>
@@ -85,15 +90,20 @@
 				work on the translations, word captions, notes, and textual decisions.
 			</p>
 			<p class="what">
-				The analyzers list the possible grammatical forms. “María” alone has twelve possible
-				readings. The sentence tells us which one fits, and that choice still needs review by a
-				Latinist. Both analyzers draw on Lewis &amp; Short among their sources.
+				The analyzers list the possible grammatical forms. The sentence often tells us which case
+				fits. In <a href="/app/{lang}/orationes/ave-maria?w=w002" lang="la">Ave María</a>, Mary is
+				addressed directly, so her name is in the vocative. In
+				<a
+					href="/app/{lang}/formularium/septem-dolorum-beatae-mariae-virginis?w=septem-dolorum-beatae-mariae-virginis-alleluia.w005"
+					lang="la">Stabat sancta María</a
+				>
+				(“Holy Mary stood”), her name is the subject and takes the nominative. Both analyzers draw on
+				Lewis &amp; Short among their sources.
 			</p>
 			<p class="what">
-				“Accepted” means the analyzers recognize the analysis as possible. “Awaiting review” marks
-				part of the analysis that still needs checking. Scrutabor remains a <strong
-					>working edition</strong
-				>
+				“Accepted” means that this is the reading we have adopted in this edition. “Awaiting review”
+				marks an analysis that still needs checking. “Disputed” marks a reading that remains in
+				doubt. Scrutabor remains a <strong>working edition</strong>
 				until it has been reviewed by a Latinist.
 			</p>
 			<p class="what">

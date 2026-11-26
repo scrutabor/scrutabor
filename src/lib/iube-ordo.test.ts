@@ -63,17 +63,17 @@ it.each(['pl', 'en'] as const)(
 					'bez diakona i subdiakona',
 					'po cichu',
 					'sam śpiewa Ewangelię',
-					'odrębny obrzęd',
-					'Sam wybór Mszy śpiewanej',
+					'diakon prosi celebransa',
+					'We Mszy uroczystej',
 					'za zmarłych',
 					'przed ostatnią Ewangelią'
 				]
 			: [
 					'without a deacon and subdeacon',
 					'in a voice only he can hear',
-					'sings the Gospel himself',
-					'separate rite',
-					'Selecting sung Mass alone',
+					'singing the Gospel himself',
+					'the deacon asks the celebrant',
+					'At solemn Mass',
 					'Masses for the Dead',
 					'before the Last Gospel'
 				])
@@ -92,13 +92,13 @@ for (const lang of ['pl', 'en'] as const) {
 			expect(context.note).toContain(
 				lang === 'pl'
 					? 'Opuszcza się prośbę'
-					: 'blessing request and the following prayer are omitted'
+					: 'Dominus sit in corde meo that follows it are omitted'
 			);
 			expect(context.note).toContain(lang === 'pl' ? 'tylko do wglądu' : 'reference only');
 			expect(context.note).toContain(
 				lang === 'pl'
-					? 'Munda cor meum wraz ze swoim zakończeniem pozostaje'
-					: 'Munda cor meum and its own conclusion remain'
+					? bindOrphans('Munda cor meum z zakończeniem Per Christum')
+					: 'Munda cor meum is said through its conclusion, Per Christum'
 			);
 			expect(context.note).not.toContain(';');
 			expect(ordoBlessingContext('munda-cor-meum', state(mass, lang), lang)).toBeUndefined();
@@ -112,16 +112,19 @@ for (const lang of ['pl', 'en'] as const) {
 			referenceOnly: false
 		});
 		const munda = ordoContext('munda-cor-meum', mass, false, lang)!;
-		expect(munda).toContain(lang === 'pl' ? 'odręb' : 'separate');
+		expect(munda).toContain('Iube, Domine');
+		expect(munda).toContain('Dominus sit in corde meo');
 		if (mass === 'dominica-ii-passionis') {
 			expect(munda).toContain(
-				lang === 'pl' ? 'kapłan wykonuje Pasję sam' : 'priest delivers the Passion alone'
+				lang === 'pl'
+					? 'kapłan sam czyta lub śpiewa Pasję'
+					: 'priest reads or chants the Passion himself'
 			);
 			expect(ordoContext('evangelium', mass, false, lang)).toContain(
 				lang === 'pl' ? 'Nie odmawia się Dominus vobiscum' : 'Dominus vobiscum is not said'
 			);
 		} else
-			expect(munda).toContain(lang === 'pl' ? 'nie niesie się świateł' : 'No lights are carried');
+			expect(munda).toContain(lang === 'pl' ? 'nie niesie się świec' : 'No candles are carried');
 	});
 	it('shows complete Ordinary-alone words with conditional guidance in ' + lang, () => {
 		const context = ordoBlessingContext(id, state(null, lang), lang)!;

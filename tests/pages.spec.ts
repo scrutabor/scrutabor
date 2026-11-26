@@ -556,16 +556,15 @@ test('landing shows the catalog and separates reference pages from edition statu
 });
 
 bareTest('every reading names itself below its Latin title', async ({ page }, testInfo) => {
-	testInfo.setTimeout(
-		Math.max(
-			testInfo.timeout,
-			30_000 + CATALOG_ORDER.reduce((count, section) => count + section.texts.length, 0) * 2_000
-		)
-	);
+	const languages = ['pl', 'en'] as const;
+	const readings = CATALOG_ORDER.reduce((count, section) => count + section.texts.length, 0);
+	// Each language opens a fresh document, followed by one Ordo page.
+	const visits = readings * languages.length + 1;
+	testInfo.setTimeout(Math.max(testInfo.timeout, 30_000 + visits * 2_000));
 	for (const section of CATALOG_ORDER) {
 		for (const slug of section.texts) {
 			const key = `${section.category}/${slug}`;
-			for (const lang of ['pl', 'en'] as const) {
+			for (const lang of languages) {
 				await page.goto(`/app/${lang}/${section.category}/${slug}`);
 				await expect(page.locator('header .subtitle')).toHaveText(
 					LANGUAGE_TITLES[lang].get(key) ?? LATIN_TITLES.get(key)!
@@ -598,7 +597,7 @@ for (const lang of ['pl', 'en']) {
 		await expect(introduction.first()).toContainText('pol.');
 		await expect(introduction.last()).toContainText('grá-ti-a');
 		await expect(introduction.last()).toContainText(
-			lang === 'pl' ? 'nie wszystkie jej odmiany' : 'not every variant'
+			lang === 'pl' ? 'jedną z tradycyjnych odmian' : 'one traditional pronunciation used in Poland'
 		);
 		await expect(page.locator('table').first()).toContainText('cælis');
 		await page.locator(`a[href="/app/${lang}/orationes/pater-noster?w=w006"]`).click();

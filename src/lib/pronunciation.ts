@@ -105,9 +105,12 @@ function tokenize(word: string): Unit[] {
 			continue;
 		}
 		if (VOWELS.has(ch)) {
-			// au as a diphthong (lau-dá-mus, gáu-di-um); other pairs stay
-			// separate vowels
-			if ((ch === 'a' || ch === 'á') && word[i + 1] === 'u' && !VOWELS.has(word[i + 2] ?? '')) {
+			// The Greek eu- in Eucharístiæ is one syllable. Other e-u
+			// sequences retain their hiatus (De-us, e-um, e-ún-dem).
+			const eucharistic = i === 0 && bare(word).startsWith('eucharist');
+			const au =
+				(ch === 'a' || ch === 'á') && word[i + 1] === 'u' && !VOWELS.has(word[i + 2] ?? '');
+			if (eucharistic || au) {
 				units.push({ text: ch + 'u', vowel: true });
 				i += 2;
 				continue;
@@ -226,7 +229,9 @@ const VOWEL_IPA: Record<string, string> = {
 	ǽ: 'ɛ',
 	œ: 'ɛ',
 	au: 'au',
-	áu: 'au'
+	áu: 'au',
+	eu: 'ɛu',
+	éu: 'ɛu'
 };
 
 /** Convert one word to IPA phonemes, one entry per unit (empty string =
@@ -266,7 +271,7 @@ function phonemes(units: Unit[], tradition: Tradition): string[] {
 				out.push(tradition === 'roman' ? 'ɲ' : 'gn');
 				break;
 			case 'ch':
-				out.push('k');
+				out.push(tradition === 'roman' ? 'k' : 'x');
 				break;
 			case 'ph':
 				out.push('f');
@@ -358,7 +363,13 @@ function phonemes(units: Unit[], tradition: Tradition): string[] {
 /** IPA of a display form: /kɔn.fiˈtɛ.ɔr/ (without the slashes). */
 export function ipa(form: string, tradition: Tradition): string {
 	const lower = form.toLowerCase();
-	const units = tokenize(lower);
+	// In the Roman reading h sounds as k in mihi, nihil and their compounds
+	// (Liber Usualis, 1961, p. xxxviii). Keep the spelling for syllable display.
+	const spoken =
+		tradition === 'roman'
+			? lower.replace(/^m[ií]h(?=[ií])|n[ií]h(?=[ií]l)/g, (stem) => stem.replace('h', 'k'))
+			: lower;
+	const units = tokenize(spoken);
 	const sylls = syllabify(form);
 	const stress = stressIndex(sylls);
 	const phon = phonemes(units, tradition);

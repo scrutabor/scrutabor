@@ -9,15 +9,16 @@ import { loadText, narrowLexicon } from '$lib/corpus';
 import type { Lang } from '$lib/i18n';
 import { pickSpecimen } from '$lib/specimen';
 import pkg from '../../../package.json';
+import { isPreview } from '../../../scripts/pages-preview.mjs';
 import type { PageServerLoad } from './$types';
 
-// The zip travels with each GitHub release under a VERSIONED name — two
-// copies on a disk must tell themselves apart — and since the landing
-// deploys only on release, it can link the exact asset of its own
-// version instead of a latest-indirection. Single-sourced from
-// package.json; the release ritual bumps it with `npm version`, which
-// also cuts the tag this URL names.
-const ZIP = `https://github.com/scrutabor/scrutabor/releases/download/v${pkg.version}/Scrutabor-v${pkg.version}.zip`;
+// Published books link directly to their versioned archive. A preview can
+// precede that archive, so it offers the latest published release by name.
+const RELEASES = 'https://github.com/scrutabor/scrutabor/releases';
+const version = isPreview(process.env.CF_PAGES_BRANCH) ? null : pkg.version;
+const zip = version
+	? `${RELEASES}/download/v${version}/Scrutabor-v${version}.zip`
+	: `${RELEASES}/latest`;
 
 export const load: PageServerLoad = async ({ params }) => {
 	const lang = params.lang as Lang;
@@ -27,7 +28,7 @@ export const load: PageServerLoad = async ({ params }) => {
 			...specimen,
 			lex: await narrowLexicon([specimen.doc], lang)
 		},
-		zip: ZIP,
-		version: pkg.version
+		zip,
+		version
 	};
 };

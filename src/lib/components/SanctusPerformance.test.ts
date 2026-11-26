@@ -41,12 +41,12 @@ for (const lang of ['pl', 'en'] as const)
 						expect(html.match(/class="mark[" ]/g) ?? []).toHaveLength(0);
 						expect(html).not.toMatch(/class="verse[^"]*\bquiet\b/);
 						expect(html.split(labels[lang])).toHaveLength(form === 'cantu' ? 2 : 1);
-						expect(html.match(/class="who-performance"/g) ?? []).toHaveLength(
+						expect(html.match(/class="who-performance[" ]/g) ?? []).toHaveLength(
 							form === 'cantu' ? 1 : 0
 						);
 						if (form === 'cantu') {
-							expect(html).not.toContain('class="who-name"');
-							expect(html).not.toContain('class="who-voice"');
+							expect(html).not.toMatch(/class="who-name[" ]/);
+							expect(html).not.toMatch(/class="who-voice[" ]/);
 						}
 						for (const segment of entry!.text.segments) {
 							expect(html.match(new RegExp(`id="sanctus-${segment.id}"`, 'g'))).toHaveLength(1);

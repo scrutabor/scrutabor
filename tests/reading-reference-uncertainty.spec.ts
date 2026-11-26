@@ -31,17 +31,19 @@ for (const lang of ['pl', 'en'] as const)
 			await expect(section).toHaveCount(1);
 			const label = c.uncertain
 				? lang === 'pl'
-					? 'odczyt ze skanu niepewny, czytanie'
-					: 'scan reading uncertain, passage'
+					? 'na skanie prawdopodobnie „'
+					: 'the scan appears to read “'
 				: lang === 'pl'
-					? 'jak w druku, czytanie'
-					: 'as printed, passage';
+					? 'w mszale wydrukowano „'
+					: 'printed in the missal as “';
 			const reference = section.locator('.reading-reference');
-			await expect(reference).toHaveText(`${c.printed} (${label}: ${c.passage})`);
+			await expect(reference).toHaveText(`${c.passage} (${label}${c.printed}”)`);
 			await expect(reference.locator('> span')).toHaveAttribute('lang', lang);
 			if (c.uncertain)
-				await expect(reference).not.toContainText(/as printed|jak w druku|misprint|błąd druku/i);
+				await expect(reference).not.toContainText(
+					/printed in the missal|w mszale wydrukowano|misprint|błąd druku/i
+				);
 			await page.emulateMedia({ media: 'print' });
 			await expect(reference).toBeVisible();
-			await expect(reference).toHaveText(`${c.printed} (${label}: ${c.passage})`);
+			await expect(reference).toHaveText(`${c.passage} (${label}${c.printed}”)`);
 		});

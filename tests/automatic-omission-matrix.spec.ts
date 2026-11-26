@@ -64,7 +64,7 @@ for (const lang of ['pl', 'en'] as const) {
 		await expect(page.locator('[id="feria-v-in-cena-domini-collecta.w001"]')).toBeVisible();
 		const forms = lang === 'pl' ? ['śpiewana', 'cicha'] : ['sung', 'low'];
 		const roles =
-			lang === 'pl' ? ['wierni', 'usługujący', 'kapłan'] : ['faithful', 'server', 'priest'];
+			lang === 'pl' ? ['wierni', 'usługujący', 'kapłan'] : ['the faithful', 'server', 'priest'];
 		for (const form of forms) {
 			await page.getByRole('radio', { name: form, exact: true }).click();
 			for (const role of roles) {

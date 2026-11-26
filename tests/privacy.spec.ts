@@ -49,15 +49,15 @@ test.describe('the visit counter @online', () => {
 		// (owner, 2026-08-12).
 		await expect(page.getByText('consent banner')).toHaveCount(0);
 
-		await expect(page.getByText('measures their performance')).toBeVisible();
+		await expect(page.getByText('measures how long pages take to load')).toBeVisible();
 		await expect(page.getByText('We use aggregate statistics')).toBeVisible();
-		await expect(page.getByText('include the selected day or reading location')).toBeVisible();
+		await expect(page.getByText('your search terms, the selected day')).toBeVisible();
 
 		await page.goto('/pl/privacy');
 		await expect(page.getByText('Cloudflare Web Analytics')).toBeVisible();
 		await expect(page.getByText('Global Privacy Control')).toBeVisible();
-		await expect(page.getByText('pomiary ich wydajności')).toBeVisible();
+		await expect(page.getByText('mierzy między innymi czas ładowania stron')).toBeVisible();
 		await expect(page.getByText('Korzystamy ze zbiorczych statystyk')).toBeVisible();
-		await expect(page.getByText('umieścić wybrany dzień lub miejsce w lekturze')).toBeVisible();
+		await expect(page.getByText('szukane wyrażenie, wybrany dzień')).toBeVisible();
 	});
 });
