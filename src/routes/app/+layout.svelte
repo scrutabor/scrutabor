@@ -203,15 +203,23 @@
 <style>
 	/* Keep the update below the reader's open sheet. */
 	.update-notice {
+		--notice-width: 20.5rem;
+
 		position: fixed;
 		z-index: 9;
 		inset-inline: 0;
 		bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-		inline-size: min(24rem, 100% - 1.5rem);
+		display: grid;
+		gap: 1.125rem;
+		inline-size: min(var(--notice-width), 100% - 1.5rem);
+		max-block-size: calc(
+			100dvh - 1.5rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)
+		);
 		margin-inline: auto;
-		padding: 1.125rem 1rem 0.85rem;
+		padding: 1.375rem min(1.5rem, 6.25vmin);
+		overflow-y: auto;
 		border: 1px solid var(--border);
-		border-radius: 0.9rem;
+		border-radius: 0.75rem;
 		background: var(--surface);
 		box-shadow: var(--shadow-float);
 		color: var(--ink);
@@ -228,72 +236,60 @@
 	/* A copy that can no longer fetch its files: the same card, edged in
 	   the rubric, so the longer explanation reads as the warning it is. */
 	.update-notice.stale {
+		--notice-width: 23rem;
+
 		border-color: var(--rubric);
 	}
 
 	.update-notice p {
 		margin: 0;
-		font-size: 1rem;
-		line-height: 1.3;
+		font-size: 1.125rem;
+		line-height: 1.25;
 		font-weight: 600;
+		text-align: center;
+		text-wrap: balance;
+	}
+
+	.stale p {
+		font-size: 1rem;
+		line-height: 1.4;
+		font-weight: 500;
 	}
 
 	.actions {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-end;
-		gap: 0.5rem;
-		margin-block-start: 0.35rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 6.75rem), 1fr));
+		gap: 0.75rem;
+	}
+
+	.stale .actions {
+		inline-size: min(100%, 8.25rem);
+		justify-self: center;
 	}
 
 	.update-notice button {
-		/* Balance the visible letter shapes and their weight within the face. */
-		--label-shift: 0.035em;
-		--face-height: 2.375rem;
-
 		appearance: none;
 		display: grid;
 		place-items: center;
-		position: relative;
-		isolation: isolate;
-		min-block-size: var(--face-height);
-		padding: 0.3rem 0.7rem;
-		border: 0;
-		background: transparent;
-		color: var(--ink);
-		font-size: 0.9rem;
-		line-height: 1.2;
-		white-space: nowrap;
-		cursor: pointer;
-	}
-
-	/* Centre the visible face within the button's full touch target. */
-	.update-notice button::before {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		inset: 0;
-		box-sizing: border-box;
-		block-size: var(--face-height);
-		margin-block: auto;
+		min-inline-size: 0;
+		min-block-size: 2.75rem;
+		padding: 0.375rem;
 		border: 1px solid var(--border);
 		border-radius: 0.42rem;
 		background: var(--surface);
+		color: var(--ink);
+		font-size: 1rem;
+		line-height: 1.2;
+		overflow-wrap: anywhere;
+		cursor: pointer;
 	}
 
-	.update-notice button:lang(pl) {
-		--label-shift: -0.033em;
-	}
-
-	.update-notice .reload:disabled {
-		--label-shift: -0.037em;
-	}
-
+	/* Keep the capitals centred and let the descenders hang below the baseline. */
 	.update-notice button > span {
-		translate: 0 var(--label-shift);
+		translate: 0 0.15em;
 	}
 
-	.update-notice .later:hover::before {
+	.update-notice .later:hover {
 		background: var(--wash);
 	}
 
@@ -302,15 +298,10 @@
 	}
 
 	.update-notice .reload {
-		--label-shift: 0.065em;
-
-		color: var(--surface);
-		font-weight: 600;
-	}
-
-	.update-notice .reload::before {
 		border-color: var(--rubric);
 		background: var(--rubric);
+		color: var(--surface);
+		font-weight: 600;
 	}
 
 	/* Keep both labels in the same grid cell so pressing the button leaves it in place. */
@@ -322,7 +313,7 @@
 		visibility: hidden;
 	}
 
-	.update-notice .reload:not(:disabled):hover::before {
+	.update-notice .reload:not(:disabled):hover {
 		box-shadow: inset 0 0 0 999px rgb(0 0 0 / 8%);
 	}
 
@@ -333,13 +324,6 @@
 		opacity: 0.8;
 	}
 
-	/* Keep a 44 px target for touch. */
-	@media (pointer: coarse) {
-		.update-notice button {
-			min-block-size: 2.75rem;
-		}
-	}
-
 	/* Forced colours keep the one filled action, in the system's own pair.
 	   Without opting out of the adjustment the engine paints a Canvas
 	   backplate behind the label, which hides HighlightText on Highlight. */
@@ -347,9 +331,6 @@
 		.update-notice .reload {
 			forced-color-adjust: none;
 			color: HighlightText;
-		}
-
-		.update-notice .reload::before {
 			border-color: Highlight;
 			background: Highlight;
 		}

@@ -105,17 +105,23 @@ async function expectCentredLabel(label: Locator) {
 		await document.fonts.ready;
 		const canvas = document.createElement('canvas').getContext('2d')!;
 		canvas.font = getComputedStyle(el).font;
-		const ink = canvas.measureText(el.textContent!.trim());
+		// The cap line and the baseline locate the body of a title-case label.
+		// Descenders in Później and Wczytaj extend below that body.
+		const cap = canvas.measureText('H');
 		const range = document.createRange();
 		range.selectNodeContents(el);
 		const line = range.getBoundingClientRect();
 		const baseline =
-			(line.top + line.bottom + ink.fontBoundingBoxAscent - ink.fontBoundingBoxDescent) / 2;
-		const inkCentre = baseline + (ink.actualBoundingBoxDescent - ink.actualBoundingBoxAscent) / 2;
+			(line.top + line.bottom + cap.fontBoundingBoxAscent - cap.fontBoundingBoxDescent) / 2;
+		const capCentre = baseline - cap.actualBoundingBoxAscent / 2;
 		const button = el.closest('button')!.getBoundingClientRect();
-		return Math.abs(inkCentre - (button.top + button.bottom) / 2);
+		return {
+			horizontal: Math.abs((line.left + line.right - button.left - button.right) / 2),
+			vertical: Math.abs(capCentre - (button.top + button.bottom) / 2)
+		};
 	});
-	expect(offset).toBeLessThan(0.8);
+	expect(offset.horizontal).toBeLessThan(1);
+	expect(offset.vertical).toBeLessThan(0.8);
 }
 
 test.describe('two worker versions, one book @online', () => {
@@ -154,7 +160,7 @@ test.describe('two worker versions, one book @online', () => {
 		const notice = page.locator('.update-notice');
 		await expect(notice).toBeVisible();
 		// A card centred above the page's foot, inside the viewport, with
-		// compact controls, and not printed with the page.
+		// two evenly spaced actions and room around the message.
 		await notice.evaluate((el) => Promise.all(el.getAnimations().map((a) => a.finished)));
 		const layout = await page.evaluate(() => ({
 			width: document.documentElement.clientWidth,
@@ -165,20 +171,32 @@ test.describe('two worker versions, one book @online', () => {
 		expect(box.x + box.width).toBeLessThanOrEqual(layout.width - 8);
 		expect(Math.abs(box.x + box.width / 2 - layout.width / 2)).toBeLessThanOrEqual(1);
 		expect(layout.height - (box.y + box.height)).toBeGreaterThanOrEqual(8);
-		expect(box.width).toBeLessThan(400);
+		expect(box.width).toBeLessThan(360);
 		const status = notice.getByRole('status');
 		await expect(status).toHaveText('Nowa wersja jest dostępna.');
 		const message = (await status.boundingBox())!;
+		const titleCentre = await status.evaluate((paragraph) => {
+			const range = document.createRange();
+			range.selectNodeContents(paragraph);
+			const text = range.getBoundingClientRect();
+			return (text.left + text.right) / 2;
+		});
+		expect(titleCentre).toBeCloseTo(box.x + box.width / 2, 0);
 		const later = notice.getByRole('button', { name: /później|later/i });
 		const secondary = (await later.boundingBox())!;
 		const primary = (await notice.getByRole('button', { name: /wczytaj|reload/i }).boundingBox())!;
-		expect(message.y - box.y).toBeGreaterThan(18);
-		expect(secondary.y - message.y - message.height).toBeCloseTo(5.6, 0);
+		const paddingTop = message.y - box.y;
+		const paddingLeft = secondary.x - box.x;
+		expect(paddingTop).toBeGreaterThanOrEqual(20);
+		expect(paddingTop).toBeCloseTo(box.y + box.height - primary.y - primary.height, 0);
+		expect(secondary.y - message.y - message.height).toBeGreaterThanOrEqual(18);
 		expect(primary.y).toBeCloseTo(secondary.y, 0);
-		expect(primary.x).toBeGreaterThan(secondary.x + secondary.width);
-		expect(box.x + box.width - primary.x - primary.width).toBeLessThan(20);
+		expect(primary.width).toBeCloseTo(secondary.width, 0);
+		expect(primary.x - secondary.x - secondary.width).toBeGreaterThanOrEqual(12);
+		expect(paddingLeft).toBeGreaterThanOrEqual(24);
+		expect(paddingLeft).toBeCloseTo(box.x + box.width - primary.x - primary.width, 0);
 		for (const button of await notice.getByRole('button').all()) {
-			expect((await button.boundingBox())!.height).toBeCloseTo(38, 0);
+			expect((await button.boundingBox())!.height).toBeCloseTo(44, 0);
 			await expectCentredLabel(button.locator('span:not([aria-hidden])'));
 		}
 		await page.emulateMedia({ media: 'print' });
@@ -249,6 +267,14 @@ test.describe('two worker versions, one book @online', () => {
 			expect(Math.abs(after.x - before.x)).toBeLessThanOrEqual(1);
 			expect(Math.abs(after.width - before.width)).toBeLessThanOrEqual(1);
 			expect(Math.abs(after.height - before.height)).toBeLessThanOrEqual(1);
+
+			if (screen === 'phone') {
+				await page.setViewportSize({ width: 568, height: 320 });
+				await page.evaluate(() => (document.documentElement.style.fontSize = '200%'));
+				await expect(page.locator('html')).toHaveCSS('font-size', '32px');
+				await expect(notice).toBeInViewport({ ratio: 1 });
+				await expect(action).toBeInViewport({ ratio: 1 });
+			}
 		});
 	}
 
@@ -455,7 +481,12 @@ test.describe('two worker versions, one book @online', () => {
 
 		state.retired = `/_app/immutable/corpus/${plConcordance}`;
 		await page.goto(`${origin}/app/pl/search?q=zdrowas`);
-		await expect(page.locator('.update-notice')).toBeVisible({ timeout: 15000 });
-		await expect(page.locator('.update-notice')).toContainText(/nie może już|can no longer/);
+		await expect(notice).toBeVisible({ timeout: 15000 });
+		await expect(notice).toContainText(/nie może już|can no longer/);
+		const action = notice.getByRole('button');
+		await expect(action).toHaveCount(1);
+		const card = (await notice.boundingBox())!;
+		const reload = (await action.boundingBox())!;
+		expect(reload.x + reload.width / 2).toBeCloseTo(card.x + card.width / 2, 0);
 	});
 });
